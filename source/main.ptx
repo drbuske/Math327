@@ -24,6 +24,8 @@
       <xi:include href="./handouts/16PrepAutonomousEquations.ptx"/>
       <xi:include href="./handouts/17PrepEulersMethod.ptx"/>
       <xi:include href="./handouts/21PrepSecondOrderLinearODEs.ptx"/>
+      <xi:include href="./handouts/22PrepConstantCoefficientSecondOrderODEs.ptx"/>
+      <xi:include href="./handouts/23PrepHigherOrderLinearODEs.ptx"/>
 
     </chapter>
 

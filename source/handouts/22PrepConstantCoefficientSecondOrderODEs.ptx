@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 2.2 - Constant Coefficient Second Order ODEs</title>
+
+<section>
+    <title>Overview</title>
+
+  <p> 
+In this section, we learn how to solve homogeneous second‑order linear differential equations with 
+constant coefficients by assuming exponential solutions and reducing the problem to solving a 
+characteristic quadratic equation. Depending on whether the quadratic has distinct real roots, 
+repeated roots, or complex roots, we will see how each case leads to a different form of the 
+general solution. This method provides a unified and efficient way to analyze many physical systems, 
+setting the stage for deeper exploration of applied models in later sections.
+  </p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+              Recognize when a differential equation is a second‑order linear ODE with <em>constant coefficients</em>.
+            </p>
+          </li>
+
+<li>
+<p>
+Use the exponential <em>ansatz</em> <m>y=e^{rx}</m> to derive the characteristic equation. 
+</p>
+</li>
+
+          <li>
+            <p>
+     Classify solutions according to whether the <em>characteristic equation</em> has distinct real roots, 
+     repeated roots, or complex roots.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass22">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+<p>
+<alert>Watch</alert> video <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#constantcoefficients">Video 2.2.1: Constant Coefficients (Distinct Roots)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/16StgNi18KY?si=WRuhOTI3WusRf-Aq">Solve 2nd Order Linear Homogeneous ODEs with Constant
+ Coefficients (8:23)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/hGaWTIORel4?si=Z13T4O-r8qVLNCl3">Linear Second Order 
+  Homogeneous Differential Equations (two distinct real roots) (7:22)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/HOfQP6sD7Uk?si=jzZc4mj7fUkImfkq">Ex 1: Solve a Linear 
+  Second Order Homogeneous Differential Equation Initial Value Problem (7:12)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#subsection-33">Subsection 2.2.1: Solving constant coefficient equations</url>.   
+    </p>
+  </li>
+
+<li>
+<p>
+<alert>Watch</alert> video <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#constantcoefficients2">Video 2.2.2: The Constant 
+Coefficient Method (all cases)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/i4X7MNz0f0I?si=5l6ttr4A1Wdl2j5j">Linear Second
+  Order Homogeneous Differential Equations (two real equal roots) (9:09)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#subsection-34">Subsection 2.2.2: Complex numbers and Euler’s formula</url>.   
+    </p>
+  </li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/4ubu4zFh0wM?si=uNq_fZat23WaH10O">Linear Second
+  Order Homogeneous Differential Equations (complex roots) (8:58)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/BTcuyEbNZ7Y?si=T_lS-pl_USaG96aN">Ex: Solve a Linear Second
+  Order Homogeneous Differential Equation Initial Value Problem (complex) (8:49)</url> by Mathispower4u.  
+</p>
+</li>
+
+
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#subsection-35">Subsection 2.2.3: Complex roots</url>.   
+    </p>
+  </li>
+
+
+
+
+    <li>
+    <p>
+      <alert>Watch</alert> <url href="https://youtu.be/6wWr73Ho3vU?si=zBIbtpnNGpOTRm3I">Constant Coefficient Second Order Linear ODEs, part 1 (17:30)</url> for a lecture on section 2.2.  
+    </p>
+  </li>
+
+      <li>
+    <p>
+      <alert>Watch</alert> <url href="https://youtu.be/obHFZpHSddI?si=gGvneMBOr4LZXdXe">Constant Coefficient Second Order Linear ODEs, part 2 (25:21)</url> for a lecture on section 2.2.  
+    </p>
+  </li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#subsection-36">Subsection 2.2.4: Exercises 2.2.1, 2.2.2, 2.2.4, 2.2.6, 2.2.7
+2.2.8, 2.2.13, 2.2.18</url>.
+          </p>
+        </li>
+
+
+<li>
+  <p>
+    Try these additional questions.  If necessary, use AI to guide your thinking. 
+  </p>
+  <ol>
+              
+<li>
+<p>
+  Consider the IVP
+  <me>
+    y''-2y'+2y = 2x; y(0) = 4, y'(0) = 8.
+  </me>
+</p>
+
+<ol>
+  <li>
+    <p>
+      Show that <m>y_{p}(x) = x+1</m> solves the differential equation.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Verify that <m>y_{1}(x) = e^{x}\cos x</m> and <m>y_{2}(x) = e^{x}\sin x</m> solve the 
+      associated homogeneous equation.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use (a) and (b) to find a solution to the given IVP.
+    </p>
+  </li>
+</ol>
+</li>
+
+<li>
+  <p>
+Find the general solution to <m>y'' + 6y' + 13y = 0</m>.
+  </p>
+</li>
+
+<li>
+<p>
+Construct an equation such that <m>y = C_{1} e^{-2x}\cos(3x) + C_{2} e^{-2x}\sin(3x)</m> is the 
+general solution.
+</p>
+</li>
+
+  </ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+        
+        </ul>
+
+</section>
+
+<section xml:id="sec-Advancedlearningobjectives22">
+  <title>Advanced learning objectives</title>
+
+    <p>
+      In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          Construct the full general solution for each root type and understand why these functions are 
+          linearly independent.   
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Apply initial conditions to solve for unknown constants using algebraic or matrix methods.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Interpret the mathematical structure of solutions in applications such as mechanical or 
+          electrical systems, building intuition for later modeling chapters.
+        </p>
+      </li>
+
+    </ul>
+
+</section>
+
+
+</handout>

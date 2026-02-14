@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <handout>
-<title>Daily Prep 2.1 - Second Order Linear ODEs</title>
+<title>Daily Prep 2.3 - Higher Order Linear ODEs</title>
 
 <section>
     <title>Overview</title>
 
   <p> 
-
-In this section, we will learn how to recognize, interpret, and solve second‑order linear ordinary 
-differential equations, which take the general form 
-    <m>A(x) y'' + B(x) y' + C(x) y = F(x)</m>.  After rewriting such equations in the standardized form 
-    <m>y'' + p(x) y' + q(x) y = f(x)</m>, we will explore the foundational structure of linear ODEs, including 
-    the distinction between homogeneous and nonhomogeneous equations and the crucial fact that no powers 
-    or nonlinear functions of <m>y</m>, <m>y'</m>, or <m>y''</m> appear.
-A major focus is understanding the principle of superposition, which allows solutions of homogeneous 
-equations to be combined into new solutions, and learning how this principle, along with existence and 
-uniqueness results, gives linear ODEs a powerful and predictable solution theory.  We will also be introduced 
-to the operator viewpoint <m>L y = y'' + p y' + q y</m>, which provides an elegant framework for 
-understanding why linear equations behave so systematically.
+  In this section, we introduce the theory of <em>higher‑order linear homogeneous differential 
+  equations</em>,
+  extending familiar second‑order ideas to the general <m>n</m>th‑order case.
+  We learn that while most
+  real‑world models are second order, the same foundational principles—linearity, superposition, 
+  and
+  linear independence—carry over directly to higher order.
+  The section emphasizes how solutions are
+  built from sets of linearly independent functions and introduces the Wronskian as a computational
+  tool for verifying independence, preparing us to analyze more complex systems using methods
+  that generalize the second‑order theory.
   </p>
 
 </section>
@@ -36,19 +35,19 @@ understanding why linear equations behave so systematically.
         <ul>
           <li>
             <p>
-      Recognize the <em>standard form</em> of a second‑order linear ODE and identify its components.
+Understand the general form of an <m>n</m>th‑order linear homogeneous ODE and how it extends the second‑order case.
             </p>
           </li>
 
 <li>
 <p>
-Explain the difference between <em>homogeneous</em> and <em>nonhomogeneous</em> linear equations.
+Recognize the role of <em>linear independence</em> in constructing general solutions involving <m>n</m> fundamental functions.
 </p>
 </li>
 
           <li>
             <p>
-     Describe the principle of <em>superposition</em> for solutions of linear homogeneous ODEs.
+    Learn the definition and purpose of the <em>Wronskian</em> as a test for linear independence.
             </p>
           </li>
 
@@ -56,7 +55,7 @@ Explain the difference between <em>homogeneous</em> and <em>nonhomogeneous</em> 
 
 </section>
 
-<section xml:id="sec-Toprepareforclass21">
+<section xml:id="sec-Toprepareforclass23">
   <title>Learn!</title>
 
   <p>
@@ -65,33 +64,66 @@ Explain the difference between <em>homogeneous</em> and <em>nonhomogeneous</em> 
   <ul>
 
 <li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#sec_hol">Section 2.3 Introduction: Higher order linear ODEs</url>.   
+  </p>
+</li>
+
+<li>
 <p>
-<alert>Watch</alert> video <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#secondorder">Video 2.1.1: 2nd Order Linear Equations</url> by Trevor Bazett.
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherlinear">Video 2.3.1: Linear Independence</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/MafZG_gGycQ?si=TY_lkfVUP-3wFreV">Introduction to Higher Order Linear Differential Equations (7:44)</url> by Mathispower4u.  
 </p>
 </li>
 
   <li>
     <p>
       <alert>Read</alert> <url href="
-https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#solinear_section">Section 2.1: Second order linear ODEs</url>.   
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-37">Subsection 2.3.1: Linear independence</url>.   
     </p>
   </li>
 
-<li>
+  <li>
 <p>
-<alert>Watch</alert> <url href=" 
-https://youtu.be/uC0bJKah7SQ?si=usIsad03mMjXiAYK">Intro to Second Order Linear ODEs: Superposition, 
-Existence/Uniqueness/Linear Independence (6:20)</url> by Mathispower4u.  
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/yMrcG7AqlvQ?si=r53DqjrC8nvN8_hc">Determine if Four Functions are Linearly Independent or Linearly Dependent (3:42)</url> by Mathispower4u.  
 </p>
 </li>
 
-<li>
+  <li>
 <p>
-<alert>Watch</alert> <url href="https://youtu.be/WdN0h7atOlE?si=QyEK-YFpNupZDdJa">Determine if Two Functions are 
-  Linearly Dependent or Linearly Independent (5:05)</url> by Mathispower4u.  
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#highertheory">Video 2.3.2: Theory of Higher Order ODEs</url> by Trevor Bazett.
 </p>
 </li>
+
+    <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-38">Subsection 2.3.2: Theory of Higher Order ODEs</url>.   
+    </p>
+  </li>
+
+    <li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherorderconstant">Video 2.3.3: Higher Order Constant Coefficient ODEs</url> by Trevor Bazett.
+</p>
+</li>
+
+      <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-39">Subsection 2.3.3: Constant coefficient higher order ODEs</url>.   
+    </p>
+  </li>
 
 <li>
 <p>
@@ -103,8 +135,7 @@ Existence/Uniqueness/Linear Independence (6:20)</url> by Mathispower4u.
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=HnmRWsMOjcw">Second order 
-        linear ODEs (45:12)</url> for a lecture on section 2.1.  
+      <alert>Watch</alert> <url href="https://youtu.be/AzshfIf-qCA?si=Md6nEF685UYRiRTy">Higher Order Linear ODEs (36:16)</url> for a lecture on section 2.3.  
     </p>
   </li>
 
@@ -112,8 +143,8 @@ Existence/Uniqueness/Linear Independence (6:20)</url> by Mathispower4u.
         <li>
           <p>
             <alert>Do</alert> <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#subsection-32">Subsection 2.1.1: Exercises 2.1.2, 2.1.3, 2.1.4, 2.1.5, 
-2.1.7</url>.
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-40">Subsection 2.3.4: Exercises  
+2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.3.6, 2.3.7, 2.3.9, 2.3.13, 2.3.14</url>.
           </p>
         </li>
 
@@ -224,7 +255,7 @@ https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#subsection-32">Subsec
 
 </section>
 
-      <section xml:id="sec-Advancedlearningobjectives21">
+      <section xml:id="sec-Advancedlearningobjectives23">
         <title>Advanced learning objectives</title>
 
         <p>
@@ -235,19 +266,20 @@ https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#subsection-32">Subsec
         <ul>
           <li>
             <p>
-      Use linearity to verify that a linear combination of solutions to a homogeneous equation is again a solution.
+      Apply the Wronskian to determine whether a given set of functions forms a <em>fundamental solution set</em> on an interval.
             </p>
           </li>
 
           <li>
             <p>
-      Explain the operator viewpoint <m>L y = y'' + p y' + q y</m> and how linear operators encode the structure of ODEs.
+      Analyze how computational challenges increase when moving from second‑order equations to 
+      higher‑order equations and compare available solution methods.
             </p>
           </li>
 
           <li>
             <p>
-      Interpret the existence and uniqueness theorem in the context of second‑order linear ODEs.
+      Relate higher‑order ODE theory to system‑based methods (e.g., rewriting higher‑order equations as first‑order systems) as referenced later in the text.
             </p>
           </li>
 
