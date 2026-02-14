@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Daily Prep 1.3 - Separable Equations</title>
+<title>Daily Prep 2.3 - Higher Order Linear ODEs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -138,7 +138,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Textbook-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Textbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-Textbook-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Textbook-10.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Textbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -182,9 +182,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#sec-Advancedlearningobjectives12" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-handout contains-active">
+<li class="toc-item toc-handout">
 <div class="toc-title-box"><a href="ch-Textbook-5.html" class="internal"><span class="title">Daily Prep 1.3 - Separable Equations</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#ch-Textbook-5-2" class="internal"><span class="title">Overview</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#ch-Textbook-5-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#sec-Toprepareforclass13" class="internal"><span class="title">Learn!</span></a></div></li>
@@ -236,9 +236,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#sec-Advancedlearningobjectives22" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-handout">
+<li class="toc-item toc-handout contains-active">
 <div class="toc-title-box"><a href="ch-Textbook-11.html" class="internal"><span class="title">Daily Prep 2.3 - Higher Order Linear ODEs</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#ch-Textbook-11-2" class="internal"><span class="title">Overview</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#ch-Textbook-11-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#sec-Toprepareforclass23" class="internal"><span class="title">Learn!</span></a></div></li>
@@ -265,179 +265,171 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="ch-Textbook-5" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
-<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Daily Prep 1.3 - Separable Equations</span><div class="print-links"><a href="?printpreview=ch-Textbook-5" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<section class="handout" id="ch-Textbook-11" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Daily Prep 2.3 - Higher Order Linear ODEs</span><div class="print-links"><a href="?printpreview=ch-Textbook-11" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="section" id="ch-Textbook-5-2"><h3 class="heading hide-type">
+<section class="section" id="ch-Textbook-11-2"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Overview</span>
 </h3>
-<div class="para" id="ch-Textbook-5-2-2">This section introduces <dfn class="terminology">separable differential equations</dfn>, a class of first‑order ODEs that can be rewritten so that all <span class="process-math">\(y\)</span>-terms appear on one side and all <span class="process-math">\(x\)</span>-terms on the other. Once written in the form <span class="process-math">\(g(y)\,dy = f(x)\,dx\text{,}\)</span> both sides can be integrated to obtain a general (often implicit) solution. The section demonstrates how separation works, why special solutions like <span class="process-math">\(y=0\)</span> must be considered, and how implicit solutions arise naturally when solving the resulting integrals. It also clarifies that separation is justified rigorously through substitution rather than by treating <span class="process-math">\(dy/dx\)</span> as an algebraic fraction.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-Textbook-11-2-2">In this section, we introduce the theory of <em class="emphasis">higher‑order linear homogeneous differential equations</em>, extending familiar second‑order ideas to the general <span class="process-math">\(n\)</span>th‑order case. We learn that while most real‑world models are second order, the same foundational principles—linearity, superposition, and linear independence—carry over directly to higher order. The section emphasizes how solutions are built from sets of linearly independent functions and introduces the Wronskian as a computational tool for verifying independence, preparing us to analyze more complex systems using methods that generalize the second‑order theory.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-11-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Overview"><a href="#ch-Textbook-5-2" title="Copy heading and permalink for Section: Overview" aria-label="Copy heading and permalink for Section: Overview">🔗</a></div></section><section class="section" id="ch-Textbook-5-3"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Overview"><a href="#ch-Textbook-11-2" title="Copy heading and permalink for Section: Overview" aria-label="Copy heading and permalink for Section: Overview">🔗</a></div></section><section class="section" id="ch-Textbook-11-3"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic learning objectives</span>
 </h3>
-<div class="para" id="ch-Textbook-5-3-2">These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated <em class="emphasis">in italics</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-Textbook-11-3-2">These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated <em class="emphasis">in italics</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-11-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="ch-Textbook-5-3-3">
-<li id="ch-Textbook-5-3-3-1">
-<div class="para" id="ch-Textbook-5-3-3-1-1">Identify when a differential equation can be written in the separable form <span class="process-math">\(dy/dx = f(x)g(y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-5-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="ch-Textbook-11-3-3">
+<li id="ch-Textbook-11-3-3-1">
+<div class="para" id="ch-Textbook-11-3-3-1-1">Understand the general form of an <span class="process-math">\(n\)</span>th‑order linear homogeneous ODE and how it extends the second‑order case.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-11-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-5-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-11-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-Textbook-5-3-3-2">
-<div class="para" id="ch-Textbook-5-3-3-2-1">Correctly separate variables to obtain <span class="process-math">\(g(y)\,dy = f(x)\,dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-5-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-Textbook-11-3-3-2">
+<div class="para" id="ch-Textbook-11-3-3-2-1">Recognize the role of <em class="emphasis">linear independence</em> in constructing general solutions involving <span class="process-math">\(n\)</span> fundamental functions.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-11-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-5-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-11-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-Textbook-5-3-3-3">
-<div class="para" id="ch-Textbook-5-3-3-3-1">Integrate both sides to obtain the general (possibly implicit) solution.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-5-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-Textbook-11-3-3-3">
+<div class="para" id="ch-Textbook-11-3-3-3-1">Learn the definition and purpose of the <em class="emphasis">Wronskian</em> as a test for linear independence.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-11-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-5-3-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-11-3-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Section: Basic learning objectives"><a href="#ch-Textbook-5-3" title="Copy heading and permalink for Section: Basic learning objectives" aria-label="Copy heading and permalink for Section: Basic learning objectives">🔗</a></div></section><section class="section" id="sec-Toprepareforclass13"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Basic learning objectives"><a href="#ch-Textbook-11-3" title="Copy heading and permalink for Section: Basic learning objectives" aria-label="Copy heading and permalink for Section: Basic learning objectives">🔗</a></div></section><section class="section" id="sec-Toprepareforclass23"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learn!</span>
 </h3>
-<div class="para" id="sec-Toprepareforclass13-2">Complete the actions listed below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-Toprepareforclass23-2">Complete the actions listed below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="sec-Toprepareforclass13-3">
-<li id="sec-Toprepareforclass13-3-1">
-<div class="para" id="sec-Toprepareforclass13-3-1-1">
-<em class="alert">Watch</em> video <a class="external" href="https://youtu.be/k5EYbL1FU5k" target="_blank">Introduction to Separation of Variables to Solve <span class="process-math">\(y'=f(x,y)\)</span> (6:25)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="sec-Toprepareforclass23-3">
+<li id="sec-Toprepareforclass23-3-1">
+<div class="para" id="sec-Toprepareforclass23-3-1-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#sec_hol" target="_blank">Section 2.3 Introduction: Higher order linear ODEs</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-2">
-<div class="para" id="sec-Toprepareforclass13-3-2-1">
-<em class="alert">Watch</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#first-separable" target="_blank">Video 1.3.1: Separation of Variables</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-2">
+<div class="para" id="sec-Toprepareforclass23-3-2-1">
+<em class="alert">Watch</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherlinear" target="_blank">Video 2.3.1: Linear Independence</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-3">
-<div class="para" id="sec-Toprepareforclass13-3-3-1">
-<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#subsection-17" target="_blank">Subsection 1.3.1: Separable equations</a> and <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#subsection-18" target="_blank">Subsection 1.3.2: Implicit solutions</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-3">
+<div class="para" id="sec-Toprepareforclass23-3-3-1">(Optional) <em class="alert">Watch</em> video <a class="external" href="https://youtu.be/MafZG_gGycQ?si=TY_lkfVUP-3wFreV" target="_blank">Introduction to Higher Order Linear Differential Equations (7:44)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-4">
-<div class="para" id="sec-Toprepareforclass13-3-4-1">
-<em class="alert">Do</em> the computation left to the reader at the beginning of <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#subsection-18" target="_blank">Subsection 1.3.2: Implicit solutions</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-4">
+<div class="para" id="sec-Toprepareforclass23-3-4-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-37" target="_blank">Subsection 2.3.1: Linear independence</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-5">
-<div class="para" id="sec-Toprepareforclass13-3-5-1">
-<em class="alert">Watch</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#first-Newton" target="_blank">Video 1.3.2: Newton’s Law of Cooling</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-5">
+<div class="para" id="sec-Toprepareforclass23-3-5-1">(Optional) <em class="alert">Watch</em> video <a class="external" href="https://youtu.be/yMrcG7AqlvQ?si=r53DqjrC8nvN8_hc" target="_blank">Determine if Four Functions are Linearly Independent or Linearly Dependent (3:42)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-6">
-<div class="para" id="sec-Toprepareforclass13-3-6-1">
-<em class="alert">Watch</em> <a class="external" href="https://youtu.be/mg5kEO-XU8g" target="_blank">Example 1.3.2 Solve a Separable Differentiable Equation Using Factor by Grouping</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-6">
+<div class="para" id="sec-Toprepareforclass23-3-6-1">
+<em class="alert">Watch</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#highertheory" target="_blank">Video 2.3.2: Theory of Higher Order ODEs</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-7">
-<div class="para" id="sec-Toprepareforclass13-3-7-1">
-<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#subsection-19" target="_blank">Subsection 1.3.3: Examples of separable equations</a>.  Refer to <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#example-17" target="_blank">Example 1.3.5</a>.  What is a singular solution?<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-7">
+<div class="para" id="sec-Toprepareforclass23-3-7-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-38" target="_blank">Subsection 2.3.2: Theory of Higher Order ODEs</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-8">
-<div class="para" id="sec-Toprepareforclass13-3-8-1">
-<em class="alert">Watch</em> <a class="external" href="https://www.youtube.com/watch?v=2W1SNJrXgRc" target="_blank">Separable Equations (39:44)</a> for a lecture on section 1.3.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-8">
+<div class="para" id="sec-Toprepareforclass23-3-8-1">
+<em class="alert">Watch</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherorderconstant" target="_blank">Video 2.3.3: Higher Order Constant Coefficient ODEs</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-9">
-<div class="para" id="sec-Toprepareforclass13-3-9-1">
-<em class="alert">Do</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#subsection-20" target="_blank">Subsection 1.3.4: Exercises 1.3.1, 1.3.4, 1.3.9, 1.3.11.</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-9">
+<div class="para" id="sec-Toprepareforclass23-3-9-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-39" target="_blank">Subsection 2.3.3: Constant coefficient higher order ODEs</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-10">
-<div class="para" id="sec-Toprepareforclass13-3-10-1">Try these additional questions.  If necessary, use AI to guide your thinking.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-10">
+<div class="para" id="sec-Toprepareforclass23-3-10-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/5S9MKeviB6A?si=Jg9Yk3BnIf3LhLEJ" target="_blank">Intro to Higher Order Linear Homogeneous Differential Equations with Constant Coefficients (7:29)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ol class="decimal" id="sec-Toprepareforclass13-3-10-2">
-<li id="sec-Toprepareforclass13-3-10-2-1">
-<div class="para logical" id="sec-Toprepareforclass13-3-10-2-1-1">
-<div class="para">Solve the initial value problem</div>
-<div class="displaymath process-math" id="sec-Toprepareforclass13-3-10-2-1-1-1">
-\begin{equation*}
-\frac{dy}{dx} = -6xy, \ \ y(0) = -4.
-\end{equation*}
-</div>
-<div class="para">Hint: ’Separate’ the variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> by, informally, writing the equation as <span class="process-math">\(\displaystyle \frac{dy}{y} = -6x \ dx.\)</span>
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-10-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-10-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-10-2-2">
-<div class="para" id="sec-Toprepareforclass13-3-10-2-2-1">Consider the ODE <span class="process-math">\(\displaystyle \frac{dy}{dx} =-6xy\text{.}\)</span>  Using separation of variables, we earlier found a general solution to be <span class="process-math">\(y(x) = Ce^{-3x^2}\text{.}\)</span>  Hence, the IVP <span class="process-math">\(\displaystyle \frac{dy}{dx} =-6xy; y(0)=-4\)</span> has unique solution <span class="process-math">\(y(x) = -4e^{-3x^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-10-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-11">
+<div class="para" id="sec-Toprepareforclass23-3-11-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/DJO6ilwbWiI?si=Hh8NGJjqDqK6OGc2" target="_blank">Solving the Linear Equations L(y)=0 (19:47)</a> from MIT OpenCourseWare. This is Herbert Gross.  Black and white video and old school!<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ol class="lower-alpha lower-alpha-level-1" id="sec-Toprepareforclass13-3-10-2-2-2">
-<li id="sec-Toprepareforclass13-3-10-2-2-2-1">
-<div class="para logical" id="sec-Toprepareforclass13-3-10-2-2-2-1-1">
-<div class="para">What is the unique solution to the following IVP?</div>
-<div class="displaymath process-math" id="sec-Toprepareforclass13-3-10-2-2-2-1-1-1">
-\begin{equation*}
-\frac{dy}{dx} =-6xy; y(0)=0
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-10-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-10-2-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-11" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-10-2-2-2-2">
-<div class="para" id="sec-Toprepareforclass13-3-10-2-2-2-2-1">Why does the method of separation of variables `lose’ the solution found in (a)?<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-10-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-12">
+<div class="para" id="sec-Toprepareforclass23-3-12-1">
+<em class="alert">Watch</em> <a class="external" href="https://youtu.be/AzshfIf-qCA?si=Md6nEF685UYRiRTy" target="_blank">Higher Order Linear ODEs (36:16)</a> for a lecture on section 2.3.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-10-2-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-12" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-</ol>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-10-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-13">
+<div class="para" id="sec-Toprepareforclass23-3-13-1">
+<em class="alert">Do</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-40" target="_blank">Subsection 2.3.4: Exercises 2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.3.6, 2.3.7, 2.3.9, 2.3.13, 2.3.14</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-13" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass23-3-14">
+<div class="para" id="sec-Toprepareforclass23-3-14-1">Try these additional questions.  If necessary, use AI to guide your thinking.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-Toprepareforclass23-3-14-2">
+<li id="sec-Toprepareforclass23-3-14-2-1">
+<div class="para" id="sec-Toprepareforclass23-3-14-2-1-1">Find the general solution to <span class="process-math">\(y'''+2y''-y'-2y=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-14-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-14-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass23-3-14-2-2">
+<div class="para" id="sec-Toprepareforclass23-3-14-2-2-1">Find the general solution to <span class="process-math">\(y^{(iv)}-y'''+2y' = 0\text{.}\)</span> <em class="emphasis">Hint</em>: The characteristic equation factors as <span class="process-math">\(r(r+1)(r^{2}-2r+2) =0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-14-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-14-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass23-3-14-2-3">
+<div class="para" id="sec-Toprepareforclass23-3-14-2-3-1">Find the general solution to <span class="process-math">\(y^{(v)}+18y'''+81y'=0\text{.}\)</span> <em class="emphasis">Hint</em>: The characteristic equation factors as <span class="process-math">\(r(r^{2}+9)^{2} =0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-14-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-14-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-14" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass13-3-11">
-<div class="para" id="sec-Toprepareforclass13-3-11-1">(Optional) <em class="alert">Watch</em> more videos on solving separable equations via <a class="external" href="https://www.youtube.com/playlist?list=PLO1y6V1SXjjP4ghopetV97klD3hw3_-Ol" target="_blank">a YouTube playlist</a> of The Math Sorcerer.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass23-3-15">
+<div class="para" id="sec-Toprepareforclass23-3-15-1">
+<em class="alert">Do</em> MyOpenMath questions from this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass23-3-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-11" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="sec-Toprepareforclass13-3-12">
-<div class="para" id="sec-Toprepareforclass13-3-12-1">
-<em class="alert">Do</em> MyOpenMath questions from this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass13-3-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass13-3-12" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass23-3-15" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Section: Learn!"><a href="#sec-Toprepareforclass13" title="Copy heading and permalink for Section: Learn!" aria-label="Copy heading and permalink for Section: Learn!">🔗</a></div></section><section class="section" id="sec-Advancedlearningobjectives13"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Learn!"><a href="#sec-Toprepareforclass23" title="Copy heading and permalink for Section: Learn!" aria-label="Copy heading and permalink for Section: Learn!">🔗</a></div></section><section class="section" id="sec-Advancedlearningobjectives23"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Advanced learning objectives</span>
 </h3>
-<div class="para" id="sec-Advancedlearningobjectives13-2">In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-Advancedlearningobjectives23-2">In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives23-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="sec-Advancedlearningobjectives13-3">
-<li id="sec-Advancedlearningobjectives13-3-1">
-<div class="para" id="sec-Advancedlearningobjectives13-3-1-1">Justify separation using the chain rule and substitution rather than informal manipulation of <span class="process-math">\(dy/dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives13-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="sec-Advancedlearningobjectives23-3">
+<li id="sec-Advancedlearningobjectives23-3-1">
+<div class="para" id="sec-Advancedlearningobjectives23-3-1-1">Apply the Wronskian to determine whether a given set of functions forms a <em class="emphasis">fundamental solution set</em> on an interval.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives23-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives13-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives23-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Advancedlearningobjectives13-3-2">
-<div class="para" id="sec-Advancedlearningobjectives13-3-2-1">Identify and include singular or special solutions (such as <span class="process-math">\(y=0\)</span>) that arise when dividing by <span class="process-math">\(g(y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives13-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Advancedlearningobjectives23-3-2">
+<div class="para" id="sec-Advancedlearningobjectives23-3-2-1">Analyze how computational challenges increase when moving from second‑order equations to higher‑order equations and compare available solution methods.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives23-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives13-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives23-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Advancedlearningobjectives13-3-3">
-<div class="para" id="sec-Advancedlearningobjectives13-3-3-1">Recognize when the resulting integrals lead to solutions that must remain in implicit form and verify such solutions by differentiation.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives13-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Advancedlearningobjectives23-3-3">
+<div class="para" id="sec-Advancedlearningobjectives23-3-3-1">Relate higher‑order ODE theory to system‑based methods (e.g., rewriting higher‑order equations as first‑order systems) as referenced later in the text.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives23-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives13-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives23-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Section: Advanced learning objectives"><a href="#sec-Advancedlearningobjectives13" title="Copy heading and permalink for Section: Advanced learning objectives" aria-label="Copy heading and permalink for Section: Advanced learning objectives">🔗</a></div></section><div class="autopermalink" data-description="Handout: Daily Prep 1.3 - Separable Equations"><a href="#ch-Textbook-5" title="Copy heading and permalink for Handout: Daily Prep 1.3 - Separable Equations" aria-label="Copy heading and permalink for Handout: Daily Prep 1.3 - Separable Equations">🔗</a></div></section>
+<div class="autopermalink" data-description="Section: Advanced learning objectives"><a href="#sec-Advancedlearningobjectives23" title="Copy heading and permalink for Section: Advanced learning objectives" aria-label="Copy heading and permalink for Section: Advanced learning objectives">🔗</a></div></section><div class="autopermalink" data-description="Handout: Daily Prep 2.3 - Higher Order Linear ODEs"><a href="#ch-Textbook-11" title="Copy heading and permalink for Handout: Daily Prep 2.3 - Higher Order Linear ODEs" aria-label="Copy heading and permalink for Handout: Daily Prep 2.3 - Higher Order Linear ODEs">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-Textbook-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-Textbook-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-Textbook-10.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
