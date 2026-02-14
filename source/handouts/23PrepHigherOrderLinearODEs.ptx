@@ -93,21 +93,24 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-37">Subsection 2.3.
 
   <li>
 <p>
-(Optional) <alert>Watch</alert> video <url href="https://youtu.be/yMrcG7AqlvQ?si=r53DqjrC8nvN8_hc">Determine if Four Functions are Linearly Independent or Linearly Dependent (3:42)</url> by Mathispower4u.  
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/yMrcG7AqlvQ?si=r53DqjrC8nvN8_hc">
+  Determine if Four Functions are Linearly Independent or Linearly Dependent (3:42)</url> by Mathispower4u.  
 </p>
 </li>
 
   <li>
 <p>
 <alert>Watch</alert> <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#highertheory">Video 2.3.2: Theory of Higher Order ODEs</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#highertheory">
+Video 2.3.2: Theory of Higher Order ODEs</url> by Trevor Bazett.
 </p>
 </li>
 
     <li>
     <p>
       <alert>Read</alert> <url href="
-https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-38">Subsection 2.3.2: Theory of Higher Order ODEs</url>.   
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-38">
+Subsection 2.3.2: Theory of Higher Order ODEs</url>.   
     </p>
   </li>
 
@@ -127,15 +130,24 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-39">Subsection 2.3.
 
 <li>
 <p>
-(Optional) <alert>Watch</alert> <url href="https://youtu.be/fC3GEm58Nig?si=JbZqiuPe7EmbYecv">Ex 2.1B Find a 
-  General Solution to a 2nd Order Linear Homogeneous DE (Reduction of Order) (8:03)</url> by Mathispower4u.  
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/5S9MKeviB6A?si=Jg9Yk3BnIf3LhLEJ">
+Intro to Higher Order Linear Homogeneous Differential Equations with Constant Coefficients (7:29)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/DJO6ilwbWiI?si=Hh8NGJjqDqK6OGc2">
+Solving the Linear Equations L(y)=0 (19:47)</url> from MIT OpenCourseWare.  
+This is Herbert Gross.  Black and white video and old school!  
 </p>
 </li>
 
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/AzshfIf-qCA?si=Md6nEF685UYRiRTy">Higher Order Linear ODEs (36:16)</url> for a lecture on section 2.3.  
+      <alert>Watch</alert> <url href="https://youtu.be/AzshfIf-qCA?si=Md6nEF685UYRiRTy">
+        Higher Order Linear ODEs (36:16)</url> for a lecture on section 2.3.  
     </p>
   </li>
 
@@ -152,106 +164,42 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-40">Subsection 2.3.
         <li>
           <p>
             Try these additional questions.  If necessary, use AI to guide your thinking. 
-            <ol>
-              
-
-
-<li>
-<p>
-  Define <m>L</m> by <m>L(y) = y'' - y'</m>.
-  Let <m>y_{1}(x) = e^{x}</m> and <m>y_{2}(x) = e^{2x}</m>.
-</p>
-
-<ol>
-  <li>
-    <p>
-      Compute <m>L(y_{1}(x))</m>.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Compute <m>3\cdot L(y_{2}(x))</m>.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Compute <m>L(y_{1}(x) + 3 y_{2}(x))</m>.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      How does your answer to (c) compare to the sum of your answers to (a) and (b)? Is <m>L</m> linear?
-    </p>
-  </li>
-</ol>
-</li>
-
-<li>
-<p>
-  Consider the differential equation
-  <me>
-    y'' - 3 y' + 2y = 0.
-  </me>
-  Define the operator <m>L</m> by <m>L(y) = y'' - 3y' + 2y</m>.
-</p>
-
-<ol>
-  <li>
-    <p>
-      Show that <m>y_{1}(x) = e^{x}</m> and <m>y_{2}(x)=e^{2x}</m> both solve the differential equation by computing <m>L(y_{1})</m> and <m>L(y_{2})</m>.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      For any constants <m>c_{1}</m> and <m>c_{2}</m>, compute the value of <m>L(c_{1}y_{1}(x) + c_{2}y_{2}(x))</m>.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Does <m>y(x) = c_{1} e^{x} + c_{2} e^{2x}</m> solve the differential equation?
-    </p>
-  </li>
-</ol>
-</li>
-
-<li>
-<p>
-  Consider the differential equation <m>2y''-7y'+3y=0</m>.
-</p>
-
-<ol>
-  <li>
-    <p>
-      Are <m>y_{1}(x) = e^{x/2}</m> and <m>y_{2}(x) = e^{3x}</m> linearly dependent or linearly independent? How do you know?
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Describe the general solution <m>y(x)</m> to this DE.
-      That is, describe every solution to this DE.
-    </p>
-  </li>
-</ol>
-  </li>
-
-</ol>
-</p>
-</li>
-
-
-        <li>
-          <p>
-            <alert>Do</alert> MyOpenMath questions from this section. 
           </p>
-        </li>
+            <ol>
+
+<li>
+<p>
+  Find the general solution to <m>y'''+2y''-y'-2y=0.</m>
+</p>
+</li>
+
+<li>
+<p>
+Find the general solution to <m>y^{(iv)}-y'''+2y' = 0</m>.
+<em>Hint</em>: The characteristic equation factors as <m>r(r+1)(r^{2}-2r+2) =0</m>.
+</p>
+</li>
+
+<li>
+<p>
+Find the general solution to <m>y^{(v)}+18y'''+81y'=0</m>.
+<em>Hint</em>: The characteristic equation factors as <m>r(r^{2}+9)^{2} =0</m>.
+</p>
+</li>
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
         
-        </ul>
+</ul>
 
 </section>
 
