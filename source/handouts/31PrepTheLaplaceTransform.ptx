@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 3.1 - The Laplace Transform</title>
+
+<section>
+    <title>Overview</title>
+
+  <p> 
+  In this section, we introduce the Laplace transform as a powerful method for solving differential 
+  equations by converting them into algebraic equations. We explain how the transform takes a function 
+  of time and produces a new function of a frequency-like variable <m>s</m>, allowing difficult ODEs 
+  to become simpler algebraic expressions that can be solved and then inverted. We also see 
+  motivating examples, including its usefulness for handling discontinuous inputs and modeling 
+  physical systems such as forced oscillators and electrical circuits.
+  </p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Understand the definition of the Laplace transform and how it converts a time-domain function into an <m>s</m>-domain function.
+            </p>
+          </li>
+
+<li>
+<p>
+Explain how solving ODEs becomes easier by transforming them into algebraic equations.
+</p>
+</li>
+
+          <li>
+            <p>
+Recognize common Laplace transforms through simple examples such as constants and exponentials.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass31">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#la-intro">Video 3.1.1: Intro to Laplace Transform (11:52)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#subsection-52">Subsection 3.1.1: The transform</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#la-linear">Video 3.1.2: Linearity, Existence, and Inverses of the Laplace Transform (7:14)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/hof-gjhbCkk?si=qK6x1rg8Wy-73iv9">Introduction to The Laplace Transform (8:31)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/mEp3F-rf0iM?si=VtIJ7gtGyp4BbeuZ">Introduction Laplace Transforms (3:47)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/HOaA9GM_rX4?si=zUNXpj6rcO1JWw0m">The Laplace Transform of the Unit Step Function (3:50)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#subsection-53">Subsection 3.1.2: Existence and uniqueness</url>.   
+    </p>
+  </li>
+
+  <li>
+<p>
+<alert>Watch</alert> video <url href=" 
+https://youtu.be/YTtGgzK3rZo?si=2spCM44RKKeGT4WN">The Existence and Uniqueness of a Laplace Transform (5:34)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+<p>
+<alert>Watch</alert> video <url href="https://youtu.be/NfOf_7nd9S4?si=pfeOBeRk12W8IsjK">
+ Introduction to Inverse Laplace Transforms (8:56)</url> by Mathispower4u.  
+</p>
+</li>
+
+    <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#subsection-54">
+Subsection 3.1.3: The inverse transform</url>.   
+    </p>
+  </li>
+
+    <li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#la-inverse">
+Video 3.1.3: Translation and Inverse Laplace Transforms of Irreducible Factors (12:10)</url> by Trevor Bazett.
+</p>
+</li>
+
+    <li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#la-repeated">Video 3.1.4: Inverse Laplace Transform with Repeated Factors (8:29)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href="https://youtu.be/Fq5-3AQlNyw?si=U5boFohG4YJlyrpI">
+Find Basic Inverse Laplace Transforms (5:04)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/an5E940fqZQ?si=m0DaNZWZT0cFe3sQ">
+Laplace Transforms (38:34)</url> from MIT OpenCourseWare.  
+This is Herbert Gross.  Black and white video and old school but still quite good!  
+</p>
+</li>
+
+<li> 
+  <p>
+For an absolutely beautiful and insightful introduction to the subject via MIT,  
+  <alert>watch</alert> <url href="http://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/video-lectures/lecture-19-introduction-to-the-laplace-transform/">MIT 18.03 Differential Equations, Spring 2006 (47:40)</url>.  
+  The basic idea of this transform is to replace a DE with an algebraic equation, solve the 
+  algebraic equation, and then transform back to identify a solution.  It is particularly 
+  useful when solving IVPs having discontinuous terms.
+  </p>
+</li>
+
+    <li>
+    <p>
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/mEp3F-rf0iM?si=VtIJ7gtGyp4BbeuZ">
+        Laplace Transform, part 1 (34:15)</url> and 
+        <url href="https://youtu.be/rMUqSYo9C4o?si=VHg-tUK-YoDM1kZ9">Laplace Transform, part 2 (24:32)</url> 
+        for a lecture on section 3.1.  
+    </p>
+  </li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#subsection-55">Subsection 3.1.4: Exercises 
+3.1.5, 3.1.7, 3.1.9, 3.1.10, 3.1.12, 3.1.14, 3.1.15, 3.1.16, 3.1.19</url>.
+          </p>
+        </li>
+
+
+        <li>
+          <p>
+            Try these additional questions.  If necessary, use AI to guide your thinking. 
+          </p>
+            <ol>
+
+<li>
+<p>
+If <m>f(t)</m> is defined for <m>t \geq 0</m>, then its <alert>Laplace transform</alert> is defined by <m>{\cal{L}}[f(t)] = ?</m>.
+</p>
+</li>
+
+<li>
+<p>
+Draw a graph of the functions from <url href="
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#example-52">Example 3.1.4</url>. 
+</p>
+</li>
+
+<li>
+<p>
+In your own words, what does it mean for a function to be of <em>exponential order</em>? 
+</p>
+</li>
+
+<li>
+  <p>
+Suppose <m>f(t) \equiv 1</m> on <m>[0,\infty)</m>.
+Compute <m>{\cal{L}}[f(t)]</m>.
+What is the domain of <m>F(s)</m>? [Try not using <url href="
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#example-49">Example 3.1.1</url> as a crutch.]
+  </p>
+</li>
+
+<li>
+  <p>
+    Suppose <m>f(t) = e^{at}</m> on <m>[0,\infty)</m>.
+Compute <m>{\cal{L}}[f(t)]</m>.
+What is the domain of <m>F(s)</m>?
+  </p>
+</li>
+
+<li>
+  <p>
+    Using a table of Laplace transforms (<url href="
+https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#lt_table">Table 3.1</url>), compute
+<me>
+  {\cal{L}}[3e^{2t}+ 2\sin^{2} 3t].
+</me>
+</p>
+
+<p>
+  What is the domain of <m>F(s)</m>? <em>Hint:</em> <m>\displaystyle \sin^{2} x = \frac{1-\cos(2x)}{2}</m>.
+</p>
+</li>
+
+<li>
+  <p>
+   The <alert>unit step function</alert> is defined by
+<me>
+  u(t) = \left\{ \begin{array}{cc}0 &#x26; {\textrm{for }} t &#x3C; 0 \\ 1 &#x26; {\textrm{for }} t \geq 0\end{array} \right\}.
+</me>
+</p>
+
+<ol>
+  <li>
+    <p>
+      Graph the unit step function, <m>u(t)</m>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Define <m>u_{a}(t) = u(t-a)</m>.
+      Write <m>u_{a}(t)</m> as a piecewise-defined function and graph it.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute <m>{\cal{L}}[u_{a}(t)]</m>.
+    </p>
+  </li>
+</ol>
+</li>
+
+<li>
+  <p>
+Compute the inverse Laplace transform of <m>\displaystyle F(s) = \frac{2s-3}{(s-3)(s+2)}</m> by hand, 
+using partial fractions and tables.  Does AI agree with your result?
+  </p>
+</li>
+
+<li>
+  <p>
+Compute the inverse Laplace transform of <m>\displaystyle F(s) = \frac{3}{(s^{2}+4)(s^{2}+9)}</m> 
+using partial fractions and tables.  Does AI agree with your result?
+  </p>
+</li>
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives23">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+ Interpret the Laplace transform as moving between time and frequency domains, especially for systems governed by equations like <m>m x'' + c x' + kx = f(t)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Analyze why the Laplace method handles discontinuities and piecewise-defined inputs effectively.
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Apply the Laplace transform framework to understand applications in areas such as signal processing, electrical circuits, and physical modeling.
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>
