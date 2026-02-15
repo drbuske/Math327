@@ -215,6 +215,114 @@ var ptx_lunr_docs = [
   "number": "",
   "title": "Daily Prep 2.3 - Higher Order Linear ODEs",
   "body": " Daily Prep 2.3 - Higher Order Linear ODEs   Overview  In this section, we introduce the theory of higher‑order linear homogeneous differential equations , extending familiar second‑order ideas to the general th‑order case. We learn that while most real‑world models are second order, the same foundational principles—linearity, superposition, and linear independence—carry over directly to higher order. The section emphasizes how solutions are built from sets of linearly independent functions and introduces the Wronskian as a computational tool for verifying independence, preparing us to analyze more complex systems using methods that generalize the second‑order theory.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the general form of an th‑order linear homogeneous ODE and how it extends the second‑order case.    Recognize the role of linear independence in constructing general solutions involving fundamental functions.    Learn the definition and purpose of the Wronskian as a test for linear independence.      Learn!  Complete the actions listed below.     Read  Section 2.3 Introduction: Higher order linear ODEs .     Watch  Video 2.3.1: Linear Independence by Trevor Bazett.    (Optional) Watch video Introduction to Higher Order Linear Differential Equations (7:44) by Mathispower4u.     Read  Subsection 2.3.1: Linear independence .    (Optional) Watch video Determine if Four Functions are Linearly Independent or Linearly Dependent (3:42) by Mathispower4u.     Watch  Video 2.3.2: Theory of Higher Order ODEs by Trevor Bazett.     Read  Subsection 2.3.2: Theory of Higher Order ODEs .     Watch  Video 2.3.3: Higher Order Constant Coefficient ODEs by Trevor Bazett.     Read  Subsection 2.3.3: Constant coefficient higher order ODEs .    (Optional) Watch  Intro to Higher Order Linear Homogeneous Differential Equations with Constant Coefficients (7:29) by Mathispower4u.    (Optional) Watch  Solving the Linear Equations L(y)=0 (19:47) from MIT OpenCourseWare. This is Herbert Gross. Black and white video and old school!     Watch  Higher Order Linear ODEs (36:16) for a lecture on section 2.3.     Do  Subsection 2.3.4: Exercises 2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.3.6, 2.3.7, 2.3.9, 2.3.13, 2.3.14 .    Try these additional questions. If necessary, use AI to guide your thinking.    Find the general solution to     Find the general solution to . Hint : The characteristic equation factors as .    Find the general solution to . Hint : The characteristic equation factors as .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Apply the Wronskian to determine whether a given set of functions forms a fundamental solution set on an interval.    Analyze how computational challenges increase when moving from second‑order equations to higher‑order equations and compare available solution methods.    Relate higher‑order ODE theory to system‑based methods (e.g., rewriting higher‑order equations as first‑order systems) as referenced later in the text.     "
+},
+{
+  "id": "ch-Textbook-12",
+  "level": "1",
+  "url": "ch-Textbook-12.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 2.4 - Mechanical Vibrations",
+  "body": " Daily Prep 2.4 - Mechanical Vibrations   Overview  In this section, we explore how second‑order linear constant‑coefficient differential equations model real‑world physical systems, especially mechanical vibrations. The text introduces the mass‑spring‑damper system, explains how forces such as stiffness, damping, and external inputs shape the motion, and shows how Newton’s laws lead naturally to differential equations of the form . We then see how similar mathematical structures appear in electrical RLC circuits and pendulum motion, highlighting the unifying theme that diverse physical phenomena can be modeled and analyzed using the same ODE framework.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Identify how mass–spring–damper systems give rise to second‑order linear constant‑coefficient ODEs.    Distinguish between forced\/unforced and damped\/undamped motions in mechanical systems.    Recognize that electrical RLC circuits follow the same mathematical form as mechanical vibration models.      Learn!  Complete the actions listed below.     Read  Subsection 2.4.1: Some examples .     Watch  Video 2.4.1: Frictionless Mechanical Vibrations (8:02) by Trevor Bazett.    (Optional) Watch video Introduction to Mechanical Vibrations and Related Applications (6:39) by Mathispower4u.     Read  Subsection 2.4.2: Free undamped motion .    (Optional) Watch video Introduction to Free Undamped Motion (6:56) by Mathispower4u.     Watch  Video 2.4.2: Damped Mechanical Vibrations (10:41) by Trevor Bazett.     Watch  Introduction to Free Damped Motion: Overdamping, Critical Damping, and Underdamping (6:38) by Mathispower4u.     Read  Subsection 2.4.3: Free damped motion .     Watch  Introduction to Free Undamped Motion (Spring System) (10:57) by Mathispower4u.    (Optional) Watch  Ex 1: Undamped Motion IVP Problem (Spring System) (9:31) by Mathispower4u.     Watch  Mechanical Vibrations, part 1: free undamped motion (40:22) and Mechanical Vibrations, part 2: free damped motion (40:22) for a lecture on section 2.4.     Do  Subsection 2.4.4: Exercises 2.4.3, 2.4.6 .    Try these additional questions. If necessary, use AI to guide your thinking.    Consider the spring-mass system shown below. Here, an object of mass is attached to a spring which exerts a linear restorative force with spring constant . Assume also a damping coefficient (perhaps due to friction). Then, if denotes the displacement from equilibrium , we have    A dashpot.   A mass–spring–dashpot system: a wall on the left is connected to a zig‑zag spring, which is attached to a rectangular block labeled “m”; on the right side of the block a rod connects to a dashpot (damper) attached to another wall.    Note: A dashpot is a device (like a shock absorber) designed to exert a resistive force proportional to the velocity of the object. We study the different types of solutions which depend on the values of , and .     Undamped Motion. Suppose there is no friction or other damping factors (i.e. no dashpot). Then in equation  above. That is, . Since , define .     Determine a characteristic equation and roots for the resulting DE (when ).    Find a general solution to the DE. Try to state it in terms of rather than and .        Undamped Motion. A body with mass kilogram is attached to the end of a spring that is stretched 2 meters by a force of 100 newtons. It is set in motion with initial position meter and initial velocity meters per second.     Determine the value of the spring constant and the resulting DE that guides the motion of the mass.    Describe a DE that governs the motion of the mass.    Describe in words the meaning of these initial conditions.    With , the solution to this IVP is . This means the mass will oscillate (simple harmonic motion) with frequency  (measured in hertz; cycles per second). What is the frequency ? What is the period  ?    A solution in the form can be written into the more useful amplitude-phase form  where the amplitude  and the phase shift  .      . Determine the value of .     . Estimate the value of . [Careful: is in the fourth quadrant.]       The first peak in the graph of occurs at (called the time lag . Determine the time lag for the solution to this problem and sketch a graph of the motion .     With damping ( ), in equation  , we investigate the characteristic roots of . These are We have three cases:     Overdamped.  two distinct real roots.     Critically damped.  one repeated real root.     Underdamped.  two complex conjugate roots.       Overdamped Motion. If , the value of is relatively large and we are dealing with strong resistance in comparison to a relatively weak spring or a small mass. Note also that      The two (real, distinct) roots and solve . Explain why these roots are both negative.    Give a general solution to the DE     Compute .        Critically Damped Motion. Here, .     Explain why the one (real, repeated) root to is . Why this root is negative?    Give a general solution to the DE     Compute .        Underdamped Motion. If , the value of is relatively small and we are dealing with very little resistance in comparison to a relatively strong spring or a large mass. For example, suppose , , and .     The roots to the characteristic equation complex. What are they?    Given initial conditions of and , the solution to the DE is Compute . What does the plot of look like?            Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze how changing parameters  affects system behavior, including oscillations and decay rates.    Translate physical laws (Newton’s second law or Kirchhoff’s laws) into corresponding differential equations for mechanical and electrical systems.    Extend the vibration framework to approximate models such as pendulum motion and interpret when linearization is appropriate.     "
+},
+{
+  "id": "SpringMass4",
+  "level": "2",
+  "url": "ch-Textbook-12.html#SpringMass4",
+  "type": "Figure",
+  "number": "12",
+  "title": "",
+  "body": " A dashpot.   A mass–spring–dashpot system: a wall on the left is connected to a zig‑zag spring, which is attached to a rectangular block labeled “m”; on the right side of the block a rod connects to a dashpot (damper) attached to another wall.   "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-4",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dashpot "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-2",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "frequency period amplitude-phase form amplitude phase shift time lag "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-3",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "damping "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-4-1-1",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-4-1-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Overdamped. "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-4-2-1",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-4-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Critically damped. "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-4-3-1",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-4-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Underdamped. "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-3-1",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Overdamped Motion. "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-4-1",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-4-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Critically Damped Motion. "
+},
+{
+  "id": "sec-Toprepareforclass24-3-13-2-1-5-5-1",
+  "level": "2",
+  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-5-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Underdamped Motion. "
+},
+{
+  "id": "ch-Textbook-13",
+  "level": "1",
+  "url": "ch-Textbook-13.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 2.5 - Nonhomogeneous Equations",
+  "body": " Daily Prep 2.5 - Nonhomogeneous Equations   Overview  In this section, we learn how to solve nonhomogeneous linear differential equations by building on our knowledge of homogeneous equations. The core idea is that the general solution to a nonhomogeneous equation is obtained by adding any particular solution to the complementary (homogeneous) solution. We then explore why any two particular solutions differ by a homogeneous solution, and introduce the method of undetermined coefficients as a practical way to guess particular solutions when the forcing function has a familiar algebraic form.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the structure of a nonhomogeneous linear ODE and how it relates to its associated homogeneous equation.    Explain why the general solution is the sum of the complementary solution and any particular solution.    Recognize when the method of undetermined coefficients can be used to guess a particular solution.      Learn!  Complete the actions listed below.     Watch  Video 2.5.1: Solving Nonhomogeneous Equations using Undetermined Coefficients (12:25) by Trevor Bazett.     Read  Subsection 2.5.1: Solving nonhomogeneous equations .    (Optional) Watch video Prove the Form of he General Solution to a Linear Second Order Nonhomogeneous DE (7:32) by Mathispower4u.     Read  Subsection 2.5.2: Undetermined coefficients .    (Optional) Watch video The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 1 (7:25) by Mathispower4u.    (Optional) Watch video The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 2 (9:14) by Mathispower4u.    (Optional) Watch video Method of Undetermine Coefficients to Find a Particular Solution (trig) (9:23) by Mathispower4u.    (Optional) Watch  Ex 1: Method of Undetermined Coefficients to Find the the General Solution (exponential) (7:03) by Mathispower4u.    (Optional) Watch  Ex 2: Method of Undetermined Coefficients to Find the the General Solution (quadratic) (10:08) by Mathispower4u.    (Optional) Watch  Find a General Solution to a Nonhomogeneous DE Using Undetermined Coefficients (repeat term) (9:48) by Mathispower4u.     Read  Subsection 2.5.3: Variation of parameters .     Watch  Derive the Variation of Parameters Formula to Solve Linear Second Order Nonhomogeneous DEs (6:59) by Mathispower4u.    (Optional) Watch  Ex 1: General Solution to a Second Order DE Using Variation of Parameters (8:26) by Mathispower4u.     Watch  Nonhomogeneous Equations, part 1: Undetermined Coefficients (30:41) and Nonhomogeneous Equations, part 2: Variation of Parameters (17:33) for a lecture on section 2.5.     Do  Subsection 2.5.4: Exercises 2.5.1, 2.5.5, 2.5.7, 2.5.8, 2.5.9 .    Try these additional questions. If necessary, use AI to guide your thinking.    Respond to the following questions about the reading.     is called a complementary solution . What do you think it complements?    In your own words, summarize Theorem 2.5.1 .     Subsection 2.5.2 , on Undetermined Coefficients, mentions a hiccup . In a sentence or two, what is this hiccup? Can it be managed? If so, how?    Give an example of a second-order, linear, constant-coefficient, nonhomogeneous ODE for which Undetermined Coefficients will not work.      Find a particular solution of  Note: A first guess might be . However, the presence of on the left-hand side, signals that we probably need a term involving as well. So try .    Suppose we wish to find a particular solution to If we try , we find that no matter how the value of is chosen. Using a trial solution in which we multiple by , find a particular solution to .       Determine the appropriate form for a particular solution of     Determine the coefficients in the particular solution you guessed in (a). Use a computer algebra system such as Wolfram Alpha if you wish to do less algebra.       Find a particular solution of .    Solve the initial value problem for , .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Demonstrate, using operator notation, why any two particular solutions differ by a solution to the homogeneous equation.    Construct appropriate ansatz forms for particular solutions in polynomial forcing cases and justify parameter choices.    Analyze how different methods (guessing, undetermined coefficients, or other techniques) can yield equivalent general solutions despite producing different intermediate formulas.     "
 }
 ]
 
