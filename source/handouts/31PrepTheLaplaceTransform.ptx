@@ -288,6 +288,84 @@ using partial fractions and tables.  Does AI agree with your result?
   </p>
 </li>
 
+<li>
+  <p>
+   Use the definition of Laplace transform to compute <m>{\cal{L}}[f(t)]</m> for the 
+   function <m>f</m> graphed in <xref ref="GraphLaplaceTransformA"/>.
+
+   <figure xml:id="GraphLaplaceTransformA">
+    <caption>Function <m>f(t)</m>.</caption>
+    <image width="50%">
+      <description>A graph of a piecewise function f(t). For t less than 1, the function 
+        equals 0, shown by a horizontal line on the t-axis with a filled dot at t = 0 and an 
+        open circle at t = 1. For t greater than or equal to 1, the function increases linearly, 
+        passing through the points (1, 1) and (2, 2), and continues upward with an arrow.
+      </description>
+      <latex-image>
+        \begin{tikzpicture}
+           \draw [black!60,line width=0.3pt,-latex] (-1,0) -- (3,0) node [below] at (2.75,0) {$t$};
+           \draw [black!60,line width=0.3pt,-latex] (0,-1) -- (0,3) node [left] at (0,2.75) {$f(t)$};
+          \draw [linecolor,line width=2pt] (0,0) -- (1,0); 
+          \draw [linecolor,line width=2pt,-latex] (1,1) -- (2.75,2.75); 
+   \fill [linecolor] (0,0) circle (3pt);
+\fill [linecolor] (1,1) circle (3pt);
+\fill [linecolor] (2,2) circle (3pt) node [right] at (2.3,2,1) {$(2,2)$};
+\draw [linecolor] (1,0) circle (3pt);
+\foreach \x/\xtext in {1/1, 2/2}
+    \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
+\foreach \y/\ytext in {1/1, 2/2}
+    \draw[shift={(0,\y)}] (-2pt,0pt) -- (2pt,0pt) node[left] {$\ytext$};
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+   </figure>
+  </p>
+</li>
+
+<li>
+  <p>
+Use the definition of Laplace transform to compute <m>{\cal{L}}[g(t)]</m> for the function 
+<m>g</m> graphed in <xref ref="GraphLaplaceTransformB"/>.
+<figure xml:id="GraphLaplaceTransformB">
+    <caption>Function <m>g(t)</m>.</caption>
+    <image width="50%">
+      <description>A graph of a piecewise function g(t). Along the t‑axis, the function is 0 
+        from the origin up to t=a, shown by a horizontal line with a filled dot at t=0 
+        and an open circle at t=a. From t=a to t=b, the function jumps to a 
+        constant value c, represented by a horizontal line at height c, with a filled dot 
+        at t=a and an open circle at t=b. For t greater than b, the function returns to 0, 
+        indicated by a horizontal line on the t‑axis starting at a filled dot at t=b and 
+        extending to the right with an arrow.
+      </description>
+      <latex-image>
+        \begin{tikzpicture}
+            \draw [black!60,line width=0.3pt,-latex] (-1,0) -- (3,0) node [below] at (2.75,0) {$t$};
+   \draw [black!60,line width=0.3pt,-latex] (0,-1) -- (0,3) node [left] at (0,2.75) {$g(t)$};
+   \draw [linecolor,line width=2pt] (0,0) -- (0.9,0); 
+   \draw [linecolor,line width=2pt] (1,1) -- (1.9,1); 
+   \draw [linecolor,line width=2pt,-latex] (2,0) -- (3,0); 
+   \fill [linecolor] (0,0) circle (3pt);
+\fill [linecolor] (1,1) circle (3pt);
+\draw [linecolor] (2,1) circle (3pt);
+\fill [linecolor] (2,0) circle (3pt);
+\draw [linecolor] (1,0) circle (3pt);
+\foreach \x/\xtext in {1/a, 2/b}
+    \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
+\foreach \y/\ytext in {1/c}
+    \draw[shift={(0,\y)}] (-2pt,0pt) -- (2pt,0pt) node[left] at (-0.15,0) {$\ytext$};
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+   </figure>
+  </p>
+</li>
+
+<li>
+  <p>
+   Find the inverse Laplace transform of <m>\displaystyle F(s) = \frac{2s}{s^{2}-1}</m>.
+  </p>
+</li>
+
 </ol>
 </li>
 
@@ -304,7 +382,7 @@ using partial fractions and tables.  Does AI agree with your result?
 
 </section>
 
-      <section xml:id="sec-Advancedlearningobjectives23">
+      <section xml:id="sec-Advancedlearningobjectives31">
         <title>Advanced learning objectives</title>
 
         <p>
