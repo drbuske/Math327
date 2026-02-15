@@ -271,6 +271,18 @@ find a particular solution to <m>y''-4y=2e^{2x}</m>.
   </p>
 </li>
 
+<li>
+  <p>
+    Find a particular solution of <m>y''-4y' +4y = e^{2x}</m>.
+  </p>
+</li>
+
+<li>
+  <p>
+    Solve the initial value problem <m>y''+9y = \cos (3x) + \sin (3x)</m> for <m>y(0) = 2</m>, <m>y'(0) = 1</m>.
+  </p>
+</li>
+
 </ol>
 </li>
 
