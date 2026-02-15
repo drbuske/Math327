@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 2.5 - Nonhomogeneous Equations</title>
+
+<section>
+    <title>Overview</title>
+
+  <p> 
+  In this section, we learn how to solve nonhomogeneous linear differential equations by 
+  building on our knowledge of homogeneous equations. The core idea is that the general solution 
+  to a nonhomogeneous equation is obtained by adding any particular solution to the complementary 
+  (homogeneous) solution. We then explore why any two particular solutions differ by a homogeneous 
+  solution, and introduce the method of undetermined coefficients as a practical way 
+  to guess particular solutions when the forcing function has a familiar algebraic form.
+  </p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Understand the structure of a <em>nonhomogeneous</em> linear ODE and how it relates to its associated homogeneous equation.
+            </p>
+          </li>
+
+<li>
+<p>
+Explain why the general solution is the sum of the <em>complementary</em> solution and any particular solution.
+</p>
+</li>
+
+          <li>
+            <p>
+  Recognize when the method of <em>undetermined coefficients</em> can be used to guess a particular solution.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass25">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#undeterminedcoefficients">Video 2.5.1: Solving Nonhomogeneous Equations using Undetermined Coefficients (12:25)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-45">Subsection 2.5.1: Solving nonhomogeneous equations</url>.   
+  </p>
+</li>
+
+
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/4aLRvtb0M9A?si=xgEpOyLK22ajh1uD">
+Prove the Form of he General Solution to a Linear Second Order Nonhomogeneous DE (7:32)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-46">Subsection 2.5.2: Undetermined coefficients</url>.   
+    </p>
+  </li>
+
+  <li>
+<p>
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/C6yRd6S7kHo?si=clob-klp6oeP1Qcu">
+ The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 1 (7:25)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+<p>
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/KUkUYsm3oQs?si=LXjCHpGzpJQs7SDb">
+ The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 2 (9:14)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+<p>
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/lDezdWzeJ0M?si=ES8AENXZrOsKx1ok">
+ Method of Undetermine Coefficients to Find a Particular Solution (trig) (9:23)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/GitCd-GnO7k?si=hQ08KdXQ0EM1zVIX">
+Ex 1: Method of Undetermined Coefficients to Find the the General Solution (exponential) (7:03)</url> by Mathispower4u.
+</p>
+</li>
+
+  <li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/vOE5hTXaNvE?si=hY8hQ8uVATUZK0QI">
+Ex 2: Method of Undetermined Coefficients to Find the the General Solution (quadratic) (10:08)</url> by Mathispower4u.
+</p>
+</li>
+
+  <li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/8kDmOLmgyic?si=5ZuHUizkfBCgevx6">
+Find a General Solution to a Nonhomogeneous DE Using Undetermined Coefficients (repeat term) (9:48)</url> by Mathispower4u.
+</p>
+</li>
+
+    <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-47">
+Subsection 2.5.3: Variation of parameters</url>.   
+    </p>
+  </li>
+
+    <li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/RSbwcoyTxrM?si=mfh_w9bUUA4eZTSz">
+Derive the Variation of Parameters Formula to Solve Linear Second Order Nonhomogeneous DEs (6:59)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/a4_klzTF_z0?si=M7S-Vi9iTNI2vS1q">
+Ex 1: General Solution to a Second Order DE Using Variation of Parameters (8:26)</url> by Mathispower4u.  
+</p>
+</li>
+
+
+    <li>
+    <p>
+      <alert>Watch</alert> <url href="https://youtu.be/jRPuCCQqGXU?si=nrQAM6qzgvK54tNV">
+       Nonhomogeneous Equations, part 1: Undetermined Coefficients (30:41)</url> and <url href="https://youtu.be/YnxJnkbWud0?si=p7b5aypAucmNOWdZ">
+       Nonhomogeneous Equations, part 2: Variation of Parameters (17:33)</url> for a lecture on section 2.5.  
+    </p>
+  </li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-48">Subsection 2.5.4: Exercises   
+2.5.1, 2.5.5, 2.5.7, 2.5.8, 2.5.9</url>.
+          </p>
+        </li>
+
+
+        <li>
+          <p>
+            Try these additional questions.  If necessary, use AI to guide your thinking. 
+          </p>
+            <ol>
+
+
+
+<li>
+<p>
+  Respond to the following questions about the reading.
+</p>
+
+<ol>
+  <li>
+    <p>
+      <m>y_{c}</m> is called a <em>complementary solution</em>. What do you think it complements?
+    </p>
+  </li>
+
+  <li>
+    <p>
+      In your own words, summarize <url href="Theorem 2.5.1 
+https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#theorem-11">Theorem 2.5.1</url>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <url href="https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-46">Subsection 2.5.2</url>, on Undetermined Coefficients, mentions a <em>hiccup</em>.
+      In a sentence or two, what is this hiccup? Can it be managed? If so, how?
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Give an example of a second-order, linear, constant-coefficient, nonhomogeneous ODE for which Undetermined Coefficients will not work.
+    </p>
+  </li>
+</ol>
+</li>
+
+<li>
+  <p>
+Find a particular solution of
+<me>
+  3y''+y'-2y = 2\cos x.
+</me>
+<em>Note:</em> A first guess might be <m>y_{p}(x) = A\cos x</m>. However, the presence of <m>y'</m> on 
+the left-hand side, signals that we probably need a term involving <m>\sin x</m> as well. So try 
+<m>y_{p}(x) = A\cos x + B \sin x</m>.
+  </p>
+</li>
+
+<li>
+  <p>
+Suppose we wish to find a particular solution <m>y_{p}(x)</m> to
+<me>
+  y''-4y=2e^{2x}.
+</me>
+If we try <m>y_{p}(x) = Ae^{2x}</m>, we find that
+<me>
+  y_{p}'' - 4y_{p} = 4Ae^{2x}- 4Ae^{2x}= 0 \neq 2e^{2x}
+</me>
+no matter how the value of <m>A</m> is chosen.
+Using a trial solution in which we multiple by <m>x</m>,
+<me>
+  y_{p}(x) = Axe^{2x},
+</me>
+find a particular solution to <m>y''-4y=2e^{2x}</m>. 
+  </p>
+</li>
+
+<li>
+  <p>
+<ol>
+  <li>
+    <p>
+      Determine the appropriate form for a particular solution of
+      <me>
+        y''+6y'+13y=e^{-3x}\cos 2x.
+      </me>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Determine the coefficients in the particular solution you guessed in (a).
+      Use a computer algebra system such as <em>Wolfram Alpha</em> if you wish to do less algebra.
+    </p>
+  </li>
+</ol>
+  </p>
+</li>
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives25">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+    Demonstrate, using operator notation, why any two particular solutions differ by a solution to the homogeneous equation.
+            </p>
+          </li>
+
+          <li>
+            <p>
+   Construct appropriate ansatz forms for particular solutions in polynomial forcing cases and justify parameter choices.
+            </p>
+          </li>
+
+          <li>
+            <p>
+Analyze how different methods (guessing, undetermined coefficients, or other techniques) can yield 
+equivalent general solutions despite producing different intermediate formulas.
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>

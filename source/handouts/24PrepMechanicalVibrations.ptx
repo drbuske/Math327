@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 2.4 - Mechanical Vibrations</title>
+
+<section>
+    <title>Overview</title>
+
+  <p> 
+  In this section, we explore how second‑order linear constant‑coefficient differential equations 
+  model real‑world physical systems, especially mechanical vibrations. The text introduces the 
+  mass‑spring‑damper system, explains how forces such as stiffness, damping, and external inputs 
+  shape the motion, and shows how Newton’s laws lead naturally to differential equations of the 
+  form <m>m x'' + c x' + kx = F(t)</m>. We then see how similar mathematical structures appear 
+  in electrical RLC circuits and pendulum motion, highlighting the unifying theme that diverse 
+  physical phenomena can be modeled and analyzed using the same ODE framework.
+  </p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Identify how <em>mass–spring–damper systems</em> give rise to second‑order linear constant‑coefficient ODEs.
+            </p>
+          </li>
+
+<li>
+<p>
+Distinguish between <em>forced/unforced</em> and <em>damped/undamped</em> motions in mechanical systems.
+</p>
+</li>
+
+          <li>
+            <p>
+    Recognize that electrical RLC circuits follow the same mathematical form as mechanical vibration models.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass24">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#subsection-41">Subsection 2.4.1: Some examples</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#undampedmechanical">Video 2.4.1: Frictionless Mechanical Vibrations (8:02)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/XWVPauW8bnY?si=ia4m-4VoZQrW6zFo">
+Introduction to Mechanical Vibrations and Related Applications (6:39)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#subsection-42">Subsection 2.4.2: Free undamped motion</url>.   
+    </p>
+  </li>
+
+  <li>
+<p>
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/omJk8RlYV4M?si=jLKBmpnl3Mmlib4s">
+ Introduction to Free Undamped Motion (6:56)</url> by Mathispower4u.  
+</p>
+</li>
+
+  <li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#dampedmechanical">
+Video 2.4.2: Damped Mechanical Vibrations (10:41)</url> by Trevor Bazett.
+</p>
+</li>
+
+  <li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/BAcWwzNmPRA?si=goApmJChePCmn6HD">
+Introduction to Free Damped Motion: Overdamping, Critical Damping, and Underdamping (6:38)</url> by Mathispower4u.
+</p>
+</li>
+
+    <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#subsection-43">
+Subsection 2.4.3: Free damped motion</url>.   
+    </p>
+  </li>
+
+    <li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/f2wGE_n5xtA?si=pexmGRKHIxChB910">
+Introduction to Free Undamped Motion (Spring System) (10:57)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/f2wGE_n5xtA?si=pexmGRKHIxChB910">
+Ex 1: Undamped Motion IVP Problem (Spring System) (9:31)</url> by Mathispower4u.  
+</p>
+</li>
+
+
+    <li>
+    <p>
+      <alert>Watch</alert> <url href="https://youtu.be/f2wGE_n5xtA?si=pexmGRKHIxChB910">
+       Mechanical Vibrations, part 1: free undamped motion (40:22)</url> and <url href="https://youtu.be/Z6BR9aDPdy4?si=KtC3DP_4-NErp1CI">
+       Mechanical Vibrations, part 2: free damped motion (40:22)</url> for a lecture on section 2.4.  
+    </p>
+  </li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#subsection-44">Subsection 2.4.4: Exercises   
+2.4.3, 2.4.6</url>.
+          </p>
+        </li>
+
+
+        <li>
+          <p>
+            Try these additional questions.  If necessary, use AI to guide your thinking. 
+          </p>
+            <ol>
+
+
+
+<li>
+<p>
+  Consider the spring-mass system shown below.
+  Here, an object of mass <m>m</m> is attached to a spring which exerts a linear restorative force with spring constant <m>k</m>.
+  Assume also a damping coefficient <m>c</m> (perhaps due to friction).
+  Then, if <m>x</m> denotes the displacement from equilibrium <m>x=0</m>, we have
+</p>
+<men xml:id="dashpoteqn">
+  m\frac{d^{2}x}{dt^{2}}+ c\frac{dx}{dt}+ kx = 0.
+</men>
+
+<figure xml:id="SpringMass4" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>A dashpot.</caption>
+<image source="SpringMass4.jpg" width="50%">
+  <description>A mass–spring–dashpot system: a wall on the left is connected to a zig‑zag spring, 
+    which is attached to a rectangular block labeled “m”; on the right side of the block a rod 
+    connects to a dashpot (damper) attached to another wall. </description>
+</image>
+</figure>
+
+  <p>
+    Note: A <term>dashpot</term> is a device (like a shock absorber) designed to exert a resistive force 
+    proportional to the velocity of the object.
+    We study the different types of solutions which depend on the values of <m>m, k</m>, and <m>c</m>.
+  </p>
+
+  <ol>
+    <li>
+      <p>
+        <alert>Undamped Motion.</alert> Suppose there is no friction or other damping factors 
+        (i.e. no dashpot). Then <m>c=0</m> in equation <xref ref="dashpoteqn" text="global" /> above. 
+        That is, <m>\displaystyle m\frac{d^{2}x}{dt^{2}}+ kx = 0</m>. Since <m>k, m &gt; 0</m>, 
+        define <m>\displaystyle \omega_{0} = \sqrt{\frac{k}{m}}</m>.
+      </p>
+
+      <p>
+        <ol>
+          <li>
+            <p>
+              Determine a characteristic equation and roots for the resulting DE (when <m>c=0</m>).
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find a general solution <m>x(t)</m> to the DE.
+              Try to state it in terms of <m>\omega_{0}</m> rather than <m>k</m> and <m>m</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <alert>Undamped Motion.</alert> A body with mass <m>m = \frac{1}{2}</m> kilogram is attached to 
+        the end of a spring that is stretched 2 meters by a force of 100 newtons. It is set in motion 
+        with initial position <m>x_{0} = 1</m> meter and initial velocity <m>v_{0} = -5</m> meters 
+        per second.
+      </p>
+
+      <p>
+        <ol>
+          <li>
+            <p>
+              Determine the value of the spring constant <m>k</m> and the resulting DE that guides the 
+              motion of the mass.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Describe a DE that governs the motion of the mass.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Describe in words the meaning of these initial conditions.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              With <m>\omega_{0} = 10</m>, the solution to this IVP is 
+              <m>\displaystyle x(t) = \cos 10t - \frac{1}{2}\sin 10t</m>.
+              This means the mass will oscillate (simple harmonic motion) with <term>frequency</term> 
+              <m>\displaystyle \nu = \frac{\omega_{0}}{2\pi}</m> (measured in hertz; cycles per second).
+              What is the frequency <m>\nu</m>? What is the <term>period</term> <m>T</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A solution in the form <m>x(t) = c_{1}\cos \omega_{0} t + c_{2} \sin \omega_{0} t</m> 
+              can be written into the more useful <term>amplitude-phase form</term> 
+              <m>x(t) = A \cos (\omega_{0} t - \phi)</m> where the <term>amplitude</term> <m>A>0</m> 
+              and the <term>phase shift</term> <m>0 \leq \phi &#x3C; 2\pi</m>.
+            </p>
+
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    <m>A = \sqrt{c_{1}^{2} + c_{2}^{2}}</m>. Determine the value of <m>A</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\displaystyle \tan \phi = \frac{c_{2}}{c_{1}}</m>. Estimate the value of 
+                    <m>\phi</m>. [Careful: <m>\phi</m> is in the fourth quadrant.]
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The first peak in the graph of <m>x(t) = A \cos (\omega_{0} t - \phi)</m> occurs at 
+              <m>\displaystyle t^{*} = \frac{\phi}{\omega_{0}}</m> (called the <term>time lag</term>.
+              Determine the time lag for the solution to this problem and sketch a graph of the motion 
+              <m>x(t)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+   
+
+  <p>
+    With <term>damping</term> (<m>c>0</m>), in equation <xref ref="dashpoteqn" text="global" />, we 
+    investigate the characteristic roots of <m>mr^{2} + cr + k = 0</m>.
+    These are
+    <me>
+      r = \frac{-c \pm \sqrt{c^{2} - 4mk}}{2m}.
+    </me>
+    We have three cases:
+  </p>
+
+  <ul>
+    <li>
+      <p>
+        <term>Overdamped.</term> <m>c^{2} > 4mk \implies</m> two distinct real roots.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <term>Critically damped.</term> <m>c^{2} = 4mk \implies</m> one repeated real root.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <term>Underdamped.</term> <m>c^{2} &#x3C; 4mk \implies</m> two complex conjugate roots.
+      </p>
+    </li>
+  </ul>
+
+  </li>
+
+  <li>
+    <p>
+      <term>Overdamped Motion.</term> If <m>c^{2} > 4mk</m>, the value of <m>c</m> is relatively 
+      large and we are dealing with strong resistance in comparison to a relatively weak spring or 
+      a small mass. Note also that
+      <me>
+        0 &#x3C; \sqrt{c^{2} - 4mk}&#x3C; c.
+      </me>
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            The two (real, distinct) roots <m>r_{1}</m> and <m>r_{2}</m> solve <m>mr^{2} + cr+k=0</m>.
+            Explain why these roots are both negative.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Give a general solution <m>x(t)</m> to the DE <m>m\frac{d^{2}x}{dt^{2}}+ c\frac{dx}{dt}+ kx = 0.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Compute <m>\displaystyle \lim_{t \rightarrow \infty}x(t)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+
+    <p>
+      <term>Critically Damped Motion.</term> Here, <m>c^{2} = 4mk</m>.
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            Explain why the one (real, repeated) root to <m>mr^{2} + cr+k=0</m> is <m>\displaystyle r = -\frac{c}{2m}</m>.
+            Why this root is negative?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Give a general solution <m>x(t)</m> to the DE <m>m\frac{d^{2}x}{dt^{2}}+ c\frac{dx}{dt}+ kx = 0.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Compute <m>\displaystyle \lim_{t \rightarrow \infty}x(t)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+
+    <p>
+      <term>Underdamped Motion.</term> If <m>c^{2} &#x3C; 4mk</m>, the value of <m>c</m> is 
+      relatively small and we are dealing with very little resistance in comparison to a relatively 
+      strong spring or a large mass. For example, suppose <m>c=1</m>, <m>m = \frac{1}{2}</m>, and 
+      <m>k = 50</m>.
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            The roots to the characteristic equation <m>mr^{2} + cr+k=0</m> complex.
+            What are they?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Given initial conditions of <m>x(0)=1</m> and <m>x'(0)=-5</m>, the solution <m>x(t)</m> to the DE <m>m\frac{d^{2}x}{dt^{2}}+ c\frac{dx}{dt}+ kx = 0</m> is
+            <me>
+              x(t) = e^{-t}\left( \cos \sqrt{99}t - \frac{4}{\sqrt{99}}\sin \sqrt{99}t \right) \approx \sqrt{\frac{115}{99}}e^{-t}\cos \left( \sqrt{99}t - 5.9009 \right).
+            </me>
+            Compute <m>\displaystyle \lim_{t \rightarrow \infty}x(t)</m>.
+            What does the plot of <m>x(t)</m> look like?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+</li>
+
+
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives24">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+      Analyze how changing <em>parameters</em> <m>m, c, k</m> affects system behavior, including oscillations and decay rates.
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Translate physical laws (Newton’s second law or Kirchhoff’s laws) into corresponding differential 
+      equations for mechanical and electrical systems.
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Extend the vibration framework to approximate models such as pendulum motion and interpret when linearization is appropriate.
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>
