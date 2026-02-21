@@ -28,8 +28,10 @@
       <xi:include href="./handouts/23PrepHigherOrderLinearODEs.ptx"/> 
       <xi:include href="./handouts/24PrepMechanicalVibrations.ptx"/>
       <xi:include href="./handouts/25PrepNonhomogeneousEquations.ptx"/> 
-      <xi:include href="./handouts/31PrepTheLaplaceTransform.ptx"/>
+      <xi:include href="./handouts/31PrepTheLaplaceTransform.ptx"/> 
       <xi:include href="./handouts/32PrepTransformsOfDerivativesAndODEs.ptx"/>
+      <xi:include href="./handouts/33PrepConvolution.ptx"/>
+      <xi:include href="./handouts/34PrepDiracDelta.ptx"/>
 
     </chapter>
 

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 3.3 - Convolution</title>
+
+<section>
+    <title>Overview</title>
+
+  <p> 
+   In this section we learn about the <term>convolution</term> of two functions, a construction that lets us combine functions in a way that behaves very much like a 
+   product while being compatible with the Laplace transform. The section introduces the definition of convolution as an integral from 0 to <m>t</m>, works through examples 
+   such as convolving exponentials or trigonometric functions, and highlights key algebraic properties including commutativity and associativity. Most importantly, we will 
+   see that the Laplace transform of a convolution is the product of the individual Laplace transforms, a fact that allows us to compute inverse Laplace transforms and solve 
+   differential equations involving general forcing functions.
+  </p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Understand the definition of the <em>convolution</em> <m>(f*g)(t) = \int_{0}^{t} f(\tau)\,g(t-\tau)\,d\tau</m>.
+            </p>
+          </li>
+
+<li>
+<p>
+Compute simple convolutions using integration techniques such as integration by parts.
+</p>
+</li>
+
+          <li>
+            <p>
+Recognize and apply the basic algebraic properties of convolution (commutativity, scalar multiplication, associativity).
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass33">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/convolution_section.html#la-convolutions">
+Video 3.3.1: Convolutions (10:31)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/ctkAubz5gWE?si=Yiml6PGcT_sYMv5o">
+Intro to the Convolution and Using the Convolution to Find an Inverse Laplace Transform (10:56)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/convolution_section.html#subsection-62">Subsection 3.3.1: The convolution </url>.   
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/sFjo2U0i4FQ?si=HTXQCu_xSsIqw2Dl">
+Find the Convolution of Two Functions (Integration by Parts Twice) (5:47)</url> by Mathispower4u.  
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/LOh9OjzlfRM?si=KeQ854S2-3OfhIwE">
+Introduction to Using a Convolution to Solve an Initial Value Problem (5:58)</url> by Mathispower4u.
+</p>
+</li>
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/convolution_section.html#subsection-63">Subsection 3.3.2: Solving ODEs</url>.   
+    </p>
+  </li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/kmvkMnXJBXs?si=qxFkgz9BCKwFSY_S">
+Solve an Initial Value Problem Using Convolution (4:51)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/mwkZEUZ8iic?si=HFG_U9R8p-Fdzcj1">Solving a Volterra Integral Equation (5:58)</url> by Mathispower4u.
+</p>
+</li>
+
+    <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/convolution_section.html#subsection-64">
+Subsection 3.3.3: Volterra integral equation </url>.   
+    </p>
+  </li>
+
+
+
+
+
+<li>
+  <p>
+    (Optional) <alert>Watch</alert> <url href="https://youtu.be/GAgPt34sB2Y?si=MVfRIPmZgVeLXEvO">
+    Convolution (18:46)</url> for a lecture on section 3.3.  
+  </p>
+</li>
+
+
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/3K6PztvAUso?si=IAM8g6VG-8KLCJee">
+Using the Convolution Theorem to Do Laplace Transforms (18:09)</url> from Math Al lDay by Dr. George Sweeney.
+</p>
+</li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/convolution_section.html#subsection-65">Subsection 3.3.4: Exercises 
+3.3.1, 3.3.3, 3.3.7, 3.3.14, 3.3.16</url>.
+          </p>
+        </li>
+
+
+        <li>
+          <p>
+            Try these additional questions.  If necessary, use AI to guide your thinking. 
+          </p>
+            <ol>
+
+<li>
+  <p>
+    <url href="Theorem 3.3.1 
+https://web.uvic.ca/~tbazett/diffyqs/convolution_section.html#theorem-15">Theorem 3.3.1</url> sheds 
+light on why we care to bother defining the convolution.  In your own words, describe the purpose of 
+defining a convolution product.  
+  </p>
+</li>
+
+<li>
+<p>
+Let <m>f(t) = t^{2}</m> for <m>t \geq 0</m>, and <m>g(t) = u(t-1)</m>.
+Compute the convolution product <m>f * g</m>.
+</p>
+</li>
+
+<li>
+<p>
+<p>
+  Solve the Volterra Integral Equation
+</p>
+<me>
+  x(t) = e^{-t}+ \int_{0}^{t} \cos(t-\tau) x(\tau) \ d\tau.
+</me>
+</p>
+</li>
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives33">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Use the convolution theorem <m>\mathcal{L}\{f*g\} = \mathcal{L}\{f\}\mathcal{L}\{g\}</m> to compute inverse Laplace transforms.
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Apply convolution to solve linear ODEs with general forcing functions expressed through Laplace transforms.
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Decompose rational expressions into Laplace-transformable factors and interpret solutions as convolutions of known functions.
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>

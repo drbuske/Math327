@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <pretext xmlns="http://pretextbook.org/ns/1.0" xml:lang="en-US"> -->
+  <chapter xml:id="ch-vector-spaces">
+    <title>General Vector Spaces</title>
+
+    <introduction>
+      <p>
+        In earlier chapters we developed core ideas of linear algebra inside the concrete
+        setting of <m>\mathbb{R}^n</m>.  This chapter abstracts those ideas to
+        <em>general vector spaces</em>, where the “vectors” need not be geometric arrows
+        nor columns of numbers—often they are polynomials, matrices, functions, or
+        sequences.  We’ll see that the familiar notions of linear combination, span,
+        independence, subspace, basis, and dimension all extend seamlessly to this broader
+        setting and often make diverse applications look the same “up to structure.”
+      </p>
+      <objectives>
+        <ul>
+          <li>Recognize and use the vector space axioms to verify a structure is a vector space.</li>
+          <li>Work fluently with span and linear independence in abstract spaces.</li>
+          <li>Identify and test subspaces; compare spans of different generating sets.</li>
+          <li>Construct bases and compute dimensions in both finite‑ and infinite‑dimensional examples.</li>
+        </ul>
+      </objectives>
+    </introduction>
+
+    <!-- =========================================================
+         1. PREVIEW ACTIVITY
+    ========================================================== -->
+    <section xml:id="vs-preview">
+      <title>Preview Activity: “What counts as a vector?”</title>
+
+      <activity xml:id="act-vs-preview">
+        <p>
+          For each collection below, describe sensible notions of “vector addition” and
+          “scalar multiplication” (by real scalars), then decide whether the structure
+          plausibly behaves like <m>\mathbb{R}^n</m>.
+        </p>
+        <ol>
+          <li><m>P_2</m>, the polynomials of degree at most 2 with real coefficients.</li>
+          <li><m>M_{2,3}</m>, the <m>2\times 3</m> real matrices.</li>
+          <li><m>\mathrm{Func}_{[0,1],\mathbb{R}}</m>, the real‑valued functions on <m>[0,1]</m>.</li>
+          <li>The set of all infinite real sequences <m>(a_i)_{i\in\mathbb{N}}</m>.</li>
+        </ol>
+        <p>
+          For one of your choices, write down two specific elements and compute a sum and a
+          scalar multiple explicitly.  Share your findings with a neighbor: what structural
+          properties (commutativity, associativity, additive identity, etc.) seem to be
+          universally present?
+        </p>
+      </activity>
+    </section>
+
+    <!-- =========================================================
+         2. VECTOR SPACE AXIOMS
+    ========================================================== -->
+    <section xml:id="vs-axioms">
+      <title>Vector Space Axioms</title>
+
+      <p>
+        We now formulate the common structure you observed above.  Throughout, let
+        <m>K</m> be a field (e.g., <m>\mathbb{R}</m> or <m>\mathbb{C}</m>).
+      </p>
+
+      <definition xml:id="def-vector-space">
+        <title>Vector space over a field</title>
+        <statement>
+          <p>
+            A <em>vector space</em> over <m>K</m> consists of a set <m>V</m> together with
+            operations of addition <m>V\times V\to V</m>, <m>(u,v)\mapsto u+v</m>, and
+            scalar multiplication <m>K\times V\to V</m>, <m>(k,u)\mapsto ku</m>, such that
+            for all <m>u,v,w\in V</m> and <m>k,\ell\in K</m>, the following hold:
+          </p>
+          <ol label="(A1)">
+            <li><em>Commutativity:</em> <m>u+v=v+u</m>.</li>
+            <li><em>Associativity:</em> <m>(u+v)+w=u+(v+w)</m>.</li>
+            <li><em>Additive identity:</em> there is <m>0\in V</m> with <m>u+0=u</m>.</li>
+            <li><em>Additive inverse:</em> each <m>u</m> has <m>-u</m> with <m>u+(-u)=0</m>.</li>
+            <li><em>Distributivity (vectors):</em> <m>k(u+v)=ku+kv</m>.</li>
+            <li><em>Distributivity (scalars):</em> <m>(k+\ell)u=ku+\ell u</m>.</li>
+            <li><em>Associativity (scalars):</em> <m>k(\ell u)=(k\ell)u</m>.</li>
+            <li><em>Multiplicative identity:</em> <m>1u=u</m>.</li>
+          </ol>
+        </statement>
+      </definition>
+
+      <remark>
+        <p>
+          The scalars need not be real numbers; any field works.  We often say “<m>K</m>‑vector space”
+          to emphasize the underlying field.  Many examples below (polynomials, matrices,
+          functions, sequences) satisfy all axioms with standard operations.  See the Activities
+          for non‑standard operations that <em>break</em> an axiom and thus are not vector spaces.
+        </p>
+      </remark>
+
+      <subsection xml:id="vs-examples">
+        <title>Examples (and a non‑example)</title>
+
+        <example xml:id="ex-Rn">
+          <title><m>\mathbb{R}^n</m> and <m>K^n</m></title>
+          <p>
+            With component‑wise addition and scalar multiplication, <m>\mathbb{R}^n</m> (and more generally
+            <m>K^n</m>) is a vector space.  All axioms follow from ordinary arithmetic in <m>K</m>. 
+          </p>
+        </example>
+        <example xml:id="ex-P2">
+          <title>Quadratic polynomials</title>
+          <p>
+            <m>P_2=\{ax^2+bx+c: a,b,c\in K\}</m> with usual polynomial addition and scalar multiplication
+            is a vector space.  Axioms are verified coefficientwise. 
+          </p>
+        </example>
+
+        <example xml:id="ex-Mmn">
+          <title>Matrices</title>
+          <p>
+            <m>M_{m,n}(K)</m> with entrywise addition and scalar multiplication forms a vector space.
+          </p>
+        </example>
+
+        <example xml:id="ex-functions">
+          <title>Function spaces</title>
+          <p>
+            For any nonempty set <m>X</m>, the set <m>\mathrm{Func}_{X,K}</m> of functions <m>f:X\to K</m>,
+            with pointwise addition and scalar multiplication, is a vector space. 
+          </p>
+        </example>
+
+        <example xml:id="ex-sequences">
+          <title>Infinite sequences</title>
+          <p>
+            The set of sequences <m>(a_i)_{i\in\mathbb{N}}</m> with termwise addition and scalar
+            multiplication is a vector space; we denote it <m>\mathrm{Seq}_K</m>. 
+          </p>
+        </example>
+
+        <example xml:id="ex-nonexample">
+          <title>A non‑example via broken addition</title>
+          <p>
+            Let <m>V=M_{2,3}(\mathbb{R})</m> but define a “sum” by <m>A\oplus B=A</m> (ignore the second addend),
+            keeping usual scalar multiplication.  Then commutativity fails (<m>A\oplus B\neq B\oplus A</m> in general),
+            so this is <em>not</em> a vector space. 
+          </p>
+        </example>
+      </subsection>
+
+
+
+     <subsection xml:id="vs-consequences">
+        <title>Consequences of the axioms</title>
+        <proposition xml:id="prop-elementary-consequences">
+          <title>Elementary consequences</title>
+          <statement>
+            <ol>
+              <li>The additive identity is unique; if <m>u+v=u</m> then <m>v=0</m>.</li>
+              <li>Additive inverses are unique; if <m>u+v=0</m> then <m>v=-u</m>.</li>
+              <li><m>0u=0</m> for all <m>u\in V</m>.</li>
+              <li>(Cancellation) If <m>u+w=v+w</m> then <m>u=v</m>.</li>
+            </ol>
+          </statement>
+        </proposition>
+        <p>
+          These follow directly from the axioms by short algebraic manipulations. Assign your group to prove (1)–(3);
+          then use (1)–(3) to establish (4). 
+        </p>
+      </subsection>
+
+      <activities>
+        <activity xml:id="act-vs-axioms-check">
+          <title>Activity: Axioms in action</title>
+          <p>
+            On <m>\mathbb{R}^2</m> define <m>(a,b)\oplus(c,d)=(a+d,b+c)</m> with usual scalar multiplication.
+            Decide which axiom fails (if any).  Repeat with
+            <m>(a,b)\oplus(c,d)=(0,b+d)</m> and with <m>c\odot(a,b)=(a,cb)</m>, keeping the still‑usual operation
+            unchanged each time.  Justify each conclusion precisely. 
+          </p>
+        </activity>
+      </activities>
+    </section>
+
+
+    <section xml:id="vs-span-indep">
+      <title>Linear Combinations, Span, and Linear Independence</title>
+
+      <definition xml:id="def-linear-combination">
+        <title>Linear combination</title>
+        <statement>
+          <p>
+            In a <m>K</m>‑vector space <m>V</m>, a vector <m>v</m> is a linear combination of
+            <m>u_1,\dots,u_n</m> if <m>v=a_1u_1+\cdots+a_nu_n</m> for some scalars <m>a_i\in K</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </statement>
+      </definition>
+
+      <definition xml:id="def-span">
+        <title>Span</title>
+        <statement>
+          <p>
+            For a subset <m>S\subseteq V</m>, the <em>span</em> of <m>S</m> is
+            <m>\mathrm{span}(S)=\{a_1u_1+\cdots+a_ku_k: u_i\in S,\ a_i\in K,\ k\ge 1\}</m>.
+            Even when <m>S</m> is infinite, each individual vector in the span is a <em>finite</em>
+            linear combination. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </statement>
+      </definition>
+
+      <definition xml:id="def-linear-independence">
+        <title>Linear independence</title>
+        <statement>
+          <p>
+            A finite set <m>\{u_1,\dots,u_k\}</m> is linearly independent if
+            <m>a_1u_1+\cdots+a_ku_k=0</m> implies <m>a_1=\cdots=a_k=0</m>.  An infinite set
+            <m>S</m> is linearly independent if every finite subset is linearly independent. 
+          </p>
+        </statement>
+      </definition>
+
+        <example xml:id="ex-matrix-lc">
+          <title>Matrix as a linear combination</title>
+          <p>
+            Express <m>\begin{bmatrix}1&3\\-1&2\end{bmatrix}</m> as a linear combination of
+            <m>\begin{bmatrix}1&0\\0&1\end{bmatrix}</m>,
+            <m>\begin{bmatrix}1&0\\0&-1\end{bmatrix}</m>,
+            <m>\begin{bmatrix}0&1\\1&0\end{bmatrix}</m>,
+            <m>\begin{bmatrix}0&-1\\1&0\end{bmatrix}</m>.  Solve the corresponding 4×4 system to find the coefficients. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+
+        <example xml:id="ex-poly-lc">
+          <title>Polynomial as a linear combination</title>
+          <p>
+            Write <m>p(x)=7x^2+4x-3</m> as a combination of <m>x^2,(x+1)^2,(x+2)^2</m> by matching coefficients. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+
+        <example xml:id="ex-seq-span">
+          <title>Span in a sequence space</title>
+          <p>
+            Let <m>e_k</m> be the sequence with a single 1 in position <m>k</m> and zeros elsewhere.
+            The span of <m>\{e_0,e_1,e_2,\dots\}</m> equals the set of <em>finitely supported</em> sequences
+            (all but finitely many zeros).  In particular, the all‑ones sequence is not in the span. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+
+        <example xml:id="ex-sin-cos-indep">
+          <title><m>\sin</m> and <m>\cos</m> are independent</title>
+          <p>
+            If <m>a\sin x+b\cos x=0</m> for all <m>x</m>, then evaluating at <m>0</m> and <m>\pi/2</m>
+            forces <m>b=0</m> and <m>a=0</m>, so <m>\sin</m> and <m>\cos</m> are linearly independent in
+            <m>\mathrm{Func}_{\mathbb{R},\mathbb{R}}</m>. 
+        </example>
+      </examples>
+
+      <proposition xml:id="prop-redundant">
+        <title>Redundancy in a dependent list</title>
+        <statement>
+          <p>
+            If <m>u_1,u_2,\dots</m> is a (finite or infinite) linearly dependent sequence, then some
+            <m>u_j</m> is a linear combination of the earlier vectors <m>u_1,\dots,u_{j-1}</m>. 
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="prop-extend-indep">
+        <title>Extending a linearly independent set</title>
+        <statement>
+          <p>
+            If <m>\{u_1,\dots,u_k\}</m> is linearly independent and <m>v\notin \mathrm{span}\{u_1,\dots,u_k\}</m>,
+            then <m>\{u_1,\dots,u_k,v\}</m> is still linearly independent. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </statement>
+      </proposition>
+
+      <activities>
+        <activity xml:id="act-span-matrix-poly">
+          <title>Activity: Matching coefficients (two settings)</title>
+          <p>
+            (a) In <m>M_{2,2}</m>, determine coefficients to express
+            <m>\begin{bmatrix}1&3\\0&0\end{bmatrix}</m> as a linear combination of
+            <m>\begin{bmatrix}1&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix},\begin{bmatrix}1&0\\1&1\end{bmatrix},\begin{bmatrix}0&1\\1&1\end{bmatrix}</m>.
+          </p>
+          <p>
+            (b) In <m>P_2</m>, decide if <m>p(x)=-x^2+x+2</m> lies in <m>\mathrm{span}\{x^2+x+1,\ 2x^2+x\}</m>.
+            Explain via a solvable/unsolvable linear system. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </activity>
+
+        <activity xml:id="act-indep-transform">
+          <title>Activity: Independence under linear combinations</title>
+          <p>
+            Let <m>u,v,w</m> be linearly independent in <m>V</m>.  Analyze independence of
+            <m>\{2u-w,\ w+v,\ 3v+\tfrac12 u\}</m> by reducing a dependence relation to one in
+            <m>\{u,v,w\}</m>.  Justify each step clearly. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </activity>
+      </activities>
+
+          </section>
+</chapter>
+
+ <!--    <exercises xml:id="hw-span-indep">
+        <title>Exercises</title>
+        <exercise>
+          <p>Show that <m>0\in \mathrm{span}\{u_1,\dots,u_k\}</m> for any vectors <m>u_i</m>.</p>
+        </exercise>
+        <exercise>
+          <p>In <m>P_2</m>, determine whether <m>4x^2-x\in \mathrm{span}\{x^2+x,\ x^2-1,\ -x+2\}</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+        <exercise>
+          <p>Let <m>\mathrm{Seq}_K</m> and <m>e_k</m> be as above.  Prove that a sequence lies in
+          <m>\mathrm{span}\{e_0,e_1,\dots\}</m> iff it is finitely supported. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+        <exercise>
+          <p>Decide linear independence for the sets in Examples; if dependent, identify a redundant element explicitly. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+      </exercises>
+    </section>
+
+
+    <section xml:id="vs-subspaces">
+      <title>Subspaces</title>
+
+      <definition xml:id="def-subspace">
+        <title>Subspace</title>
+        <statement>
+          <p>
+            A subset <m>W\subseteq V</m> is a subspace if <m>0\in W</m>, <m>u,v\in W\Rightarrow u+v\in W</m>,
+            and <m>k\in K, u\in W\Rightarrow ku\in W</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </statement>
+      </definition>
+
+      <examples>
+        <example>
+          <title>Continuous and differentiable functions</title>
+          <p>
+            The continuous (respectively, differentiable) real‑valued functions on <m>\mathbb{R}</m> form
+            subspaces of <m>\mathrm{Func}_{\mathbb{R},\mathbb{R}}</m> by calculus closure laws. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+        <example>
+          <title>Linear recurrences</title>
+          <p>
+            The set of real sequences satisfying <m>a_{n+2}=a_{n+1}+a_n</m> is a subspace of
+            <m>\mathrm{Seq}_{\mathbb{R}}</m> (closed under addition and scalar multiplication). [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+        <example>
+          <title>Solution space of <m>f''=-f</m></title>
+          <p>
+            All solutions of <m>f''=-f</m> form a subspace of <m>\mathrm{Func}_{\mathbb{R},\mathbb{R}}</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+        <example>
+          <title>Polynomials vanishing at a point</title>
+          <p>
+            <m>W=\{p\in P_2: p(r)=0\}</m> is a subspace of <m>P_2</m> for any fixed <m>r\in K</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+      </examples>
+
+      <proposition xml:id="prop-span-smallest-subspace">
+        <title>Span as smallest subspace</title>
+        <statement>
+          <p>
+            For <m>S\subseteq V</m>, the span <m>\mathrm{span}(S)</m> is a subspace containing <m>S</m>,
+            and it is contained in any other subspace containing <m>S</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </statement>
+      </proposition>
+
+      <activity xml:id="act-equal-spans">
+        <title>Activity: Comparing spans</title>
+        <p>
+          In <m>P_2</m>, show that <m>\{x^2-2x+1,\ x-1\}</m> and <m>\{x^2-1,\ x^2-x\}</m> span the same subspace
+          by expressing each generator of one set as a combination of the other set.  Conclude the spans are equal. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+        </p>
+      </activity>
+
+      <exercises xml:id="hw-subspaces">
+        <title>Exercises</title>
+        <exercise>
+          <p>Show the symmetric <m>n\times n</m> matrices form a subspace of <m>M_{n,n}</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+        <exercise>
+          <p>Give an example where <m>U\cup W</m> (union of two subspaces) fails to be a subspace. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+        <exercise>
+          <p>Let <m>U,W</m> be subspaces of <m>V</m>.  Prove <m>U+W=\{u+w:u\in U,\ w\in W\}</m> is a subspace; show
+          <m>U\cap W</m> is also a subspace. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+      </exercises>
+    </section>
+
+
+    <section xml:id="vs-basis-dimension">
+      <title>Basis and Dimension</title>
+
+      <definition xml:id="def-basis">
+        <title>Basis</title>
+        <statement>
+          <p>
+            A set <m>B\subseteq V</m> is a <em>basis</em> if it is linearly independent and
+            <m>\mathrm{span}(B)=V</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </statement>
+      </definition>
+
+      <definition xml:id="def-dimension">
+        <title>Dimension</title>
+        <statement>
+          <p>
+            If <m>V</m> has a basis with <m>n</m> elements, then <m>\dim V=n</m>.  If every basis is infinite,
+            then <m>\dim V=\infty</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </statement>
+      </definition>
+
+      <examples>
+        <example>
+          <title>Common dimensions</title>
+          <p>
+            <m>\dim \mathbb{R}^n=n</m>; <m>\dim P_2=3</m>; <m>\dim M_{m,n}=mn</m>; if <m>|X|=n</m> is finite then
+            <m>\dim \mathrm{Func}_{X,K}=n</m>, but if <m>X</m> is infinite then the function space is infinite‑dimensional. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+
+        <example>
+          <title>An infinite basis for all polynomials</title>
+          <p>
+            In <m>P</m>, the set <m>\{1,x,x^2,\dots\}</m> is a basis; hence <m>\dim P=\infty</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+
+        <example>
+          <title>Recurrence and differential equation spaces</title>
+          <p>
+            The space of sequences satisfying <m>a_{n+2}=a_{n+1}+a_n</m> has dimension 2; one basis is
+            <m>\{(1,0,1,1,2,3,\dots),(0,1,1,2,3,5,\dots)\}</m>.  The solution space of <m>f''=-f</m> is
+            two‑dimensional with basis <m>\{\sin x,\cos x\}</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </example>
+      </examples>
+
+      <theorem xml:id="thm-existence-basis">
+        <title>Every vector space has a basis</title>
+        <statement>
+          <p>Every vector space admits a basis (proof uses the axiom of choice in general).</p>
+        </statement>
+      </theorem>
+
+      <theorem xml:id="thm-bases-same-size">
+        <title>Bases have equal cardinality</title>
+        <statement>
+          <p>Any two bases of a vector space have the same size (finite or infinite).</p>
+        </statement>
+      </theorem>
+
+      <proposition xml:id="prop-extend-shrink">
+        <title>Extending and shrinking to bases</title>
+        <statement>
+          <ol>
+            <li>Any linearly independent set can be extended to a basis of <m>V</m>.</li>
+            <li>Any spanning set contains a basis (cast‑out redundant vectors).</li>
+          </ol>
+        </statement>
+      </proposition>
+
+      <activities>
+        <activity xml:id="act-basis-castout">
+          <title>Activity: Casting out to a basis</title>
+          <p>
+            In <m>P_2</m>, start from <m>S=\{1,\ x,\ 2x+1,\ x^2+1,\ x^2+2\}</m>.  Scan left‑to‑right, removing vectors
+            that lie in the span of earlier ones, to produce a basis for <m>P_2</m>.  Explain each removal step. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </activity>
+
+        <activity xml:id="act-basis-extend">
+          <title>Activity: Extending to a basis</title>
+          <p>
+            In <m>M_{2,2}</m>, extend the independent set
+            <m>\{\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&1\\0&0\end{bmatrix}\}</m> to a basis
+            by adding two suitable matrices.  Justify that your final set spans <m>M_{2,2}</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)
+          </p>
+        </activity>
+      </activities>
+
+      <exercises xml:id="hw-basis-dimension">
+        <title>Exercises</title>
+        <exercise>
+          <p>Decide whether each of several 4‑tuples in <m>P_3</m> forms a basis (use rank or casting‑out). [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+        <exercise>
+          <p>Find a basis for the symmetric <m>3\times 3</m> matrices and compute its dimension.</p>
+        </exercise>
+        <exercise>
+          <p>Let <m>V=\{a+b\sqrt{2}:a,b\in\mathbb{Q}\}</m> as a vector space over <m>\mathbb{Q}</m>.  Prove it has basis
+          <m>\{1,\sqrt{2}\}</m> and <m>\dim V=2</m>. [1](https://mnscu-my.sharepoint.com/personal/jp9927jt_minnstate_edu/Documents/Microsoft%20Copilot%20Chat%20Files/BuskeVectorSpaceChapter.pdf)</p>
+        </exercise>
+      </exercises>
+    </section>
+
+    <conclusion>
+      <p>
+        Abstract vector spaces unify the many “looks” of linear algebra across contexts.
+        Once the axioms hold, the familiar theorems about span, independence, subspaces,
+        bases, and dimension follow and apply to matrices, functions, polynomials,
+        sequences, and beyond.
+      </p>
+    </conclusion> 
+
+  </chapter> -->
+<!-- </pretext> -->
