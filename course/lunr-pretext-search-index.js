@@ -377,6 +377,42 @@ var ptx_lunr_docs = [
   "number": "16",
   "title": "",
   "body": " Function .   A graph of a function f(t). The function is 0 up to t=1, shown by a horizontal line on the t‑axis ending at a filled dot at t=1. From that point, the graph rises linearly, passing through the point (2,2), and continues upward to the right with an arrow.    "
+},
+{
+  "id": "ch-Textbook-16",
+  "level": "1",
+  "url": "ch-Textbook-16.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 3.3 - Convolution",
+  "body": " Daily Prep 3.3 - Convolution   Overview  In this section we learn about the convolution of two functions, a construction that lets us combine functions in a way that behaves very much like a product while being compatible with the Laplace transform. The section introduces the definition of convolution as an integral from 0 to , works through examples such as convolving exponentials or trigonometric functions, and highlights key algebraic properties including commutativity and associativity. Most importantly, we will see that the Laplace transform of a convolution is the product of the individual Laplace transforms, a fact that allows us to compute inverse Laplace transforms and solve differential equations involving general forcing functions.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the definition of the convolution  .    Compute simple convolutions using integration techniques such as integration by parts.    Recognize and apply the basic algebraic properties of convolution (commutativity, scalar multiplication, associativity).      Learn!  Complete the actions listed below.     Watch  Video 3.3.1: Convolutions (10:31) by Trevor Bazett.    (Optional) Watch video Intro to the Convolution and Using the Convolution to Find an Inverse Laplace Transform (10:56) by Mathispower4u.     Read  Subsection 3.3.1: The convolution .    (Optional) Watch video Find the Convolution of Two Functions (Integration by Parts Twice) (5:47) by Mathispower4u.    (Optional) Watch  Introduction to Using a Convolution to Solve an Initial Value Problem (5:58) by Mathispower4u.     Read  Subsection 3.3.2: Solving ODEs .    (Optional) Watch  Solve an Initial Value Problem Using Convolution (4:51) by Mathispower4u.    (Optional) Watch  Solving a Volterra Integral Equation (5:58) by Mathispower4u.     Read  Subsection 3.3.3: Volterra integral equation .    (Optional) Watch  Convolution (18:46) for a lecture on section 3.3.    (Optional) Watch  Using the Convolution Theorem to Do Laplace Transforms (18:09) from Math Al lDay by Dr. George Sweeney.     Do  Subsection 3.3.4: Exercises 3.3.1, 3.3.3, 3.3.7, 3.3.14, 3.3.16 .    Try these additional questions. If necessary, use AI to guide your thinking.     Theorem 3.3.1 sheds light on why we care to bother defining the convolution. In your own words, describe the purpose of defining a convolution product.    Let for , and . Compute the convolution product .     Solve the Volterra Integral Equation         Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use the convolution theorem to compute inverse Laplace transforms.    Apply convolution to solve linear ODEs with general forcing functions expressed through Laplace transforms.    Decompose rational expressions into Laplace-transformable factors and interpret solutions as convolutions of known functions.     "
+},
+{
+  "id": "ch-Textbook-16-2-2",
+  "level": "2",
+  "url": "ch-Textbook-16.html#ch-Textbook-16-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "convolution "
+},
+{
+  "id": "ch-Textbook-17",
+  "level": "1",
+  "url": "ch-Textbook-17.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 3.4 - Dirac Delta and Impulse Response",
+  "body": " Daily Prep 3.4 - Dirac Delta and Impulse Response   Overview  In this section we explore the idea of modeling instantaneous “impulses” using the Dirac delta, a generalized function that concentrates all its mass at a single point. The section begins by examining short rectangular pulses and their Laplace transforms, then shows how letting the pulse width approach zero leads to the definition of the delta function, an object meaningful only under an integral sign. You will learn how captures the effect of a sudden input—analogous to striking a system with a hammer—and how its Laplace transform allows us to analyze impulse responses of differential‑equation models.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand how a short rectangular pulse is defined and how its Laplace transform is computed.    Explain why the Dirac delta is not a classical function but a generalized function defined via integrals.    Recognize that the delta function represents a unit‑mass impulse concentrated at a single point in time.      Learn!  Complete the actions listed below.     Watch  Video 3.4.1: The Delta Function (9:25) by Trevor Bazett.     Read  Subsection 3.4.1: Rectangular pulse .     Read  Subsection 3.4.2: The delta function .    (Optional) Watch video Dirac Delta Function (17:47) from Khan Academy.     Read  Subsection 3.4.3: Impulse response .     Watch  Video 3.4.2: Laplace Transform of Periodic Functions (7:48) by Trevor Bazett.     Watch  Video 3.4.3: The Laplace Transform of IVPs with Periodic Delta Functions (10:19) by Trevor Bazett.     Read  Subsection 3.4.3: Impulse response .     Do  Subsection 3.4.6: Exercises 3.4.1, 3.4.2, 3.4.4, 3.4.8 .    Try these additional questions. If necessary, use AI to guide your thinking.    Sometimes the dirac delta function of section 3.4 is called a distribution. Which terminology do you prefer and why?    Solve (find the impulse response) , , .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use limits of shrinking rectangular pulses to justify the formal properties of .    Apply the Laplace transform of the Dirac delta to solve differential equations with impulsive forcing.    Interpret impulse responses to understand how a system reacts to instantaneous inputs and generalize this to more complex inputs.     "
+},
+{
+  "id": "ch-Textbook-17-3-3-2-1",
+  "level": "2",
+  "url": "ch-Textbook-17.html#ch-Textbook-17-3-3-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "generalized function "
 }
 ]
 
