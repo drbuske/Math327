@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 4.1 - Vectors, Mappings, and Matrices</title>
+
+<section>
+    <title>Overview</title>
+
+  <p> 
+   In this section we will learn how vectors, linear mappings, and matrices provide a systematic way to 
+   organize and solve problems involving many variables. The text motivates linear algebra by showing 
+   how even simple systems of equations generalize to high‑dimensional settings, where matrices and 
+   vector operations become essential tools. You will explore n‑dimensional space, interpret vectors 
+   as geometric arrows, and see how linear equations, functions, and differential‑equation models all 
+   benefit from a unified matrix‑based framework.
+  </p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Understand <em>vectors</em> as n‑tuples representing points or arrows in n‑dimensional space.
+            </p>
+          </li>
+
+<li>
+<p>
+Recognize how systems of linear equations can be organized and solved more systematically using <em>matrices</em>.
+</p>
+</li>
+
+          <li>
+            <p>
+Interpret basic vector operations such as addition and <em>scalar multiplication</em>. 
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass41">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/ml4NSzCQobk?si=vs1kQljNRkdnhKm7">
+What is a Vector? (4:40)</url> by David Huynh.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/vecsandmaps_section.html#subsection-165">Subsection A.1.1: Vectors and operations on vectors</url>.   
+  </p>
+</li>
+
+<li>
+  <p>
+    (Optional) <alert>Do</alert> interact with the applet <url href="https://www.geogebra.org/m/tsBer5An">Adding Vectors Geometrically</url> by Tim Brzezinski.  
+  </p>
+</li>
+
+<li>
+  <p>
+    (Optional) <alert>Do</alert> interact with the applet <url href="https://www.geogebra.org/m/kkGXzvSK">Scalar Multiplication</url> by Peter Sassman.  
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/kYB8IZa5AuE?si=TU1RFfCfqWfcLgR2">
+Linear Transformations and Matrices (10:58)</url> by 3Blue1Brown.
+</p>
+</li>
+
+  <li>
+    <p>
+      <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/vecsandmaps_section.html#subsection-166">Subsection A.1.2: Linear mappings and matrices </url>.   
+    </p>
+  </li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> video <url href=" 
+https://youtu.be/is1cg5yhdds?si=U2YdT3hkNmEONv5E">
+Linear Tranformations on Vector Spaces (9:10)</url> by Professor Dave Explains.  
+</p>
+</li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/vecsandmaps_section.html#subsection-167">Subsection A.1.3: Exercises 
+A.1.1, A.1.3, A.1.4, A.1.5, A.1.6, A.1.7, A.1.8, A.1.10, A.1.11</url>.
+          </p>
+        </li>
+
+
+        <li>
+          <p>
+            Try these additional questions.  If necessary, use AI to guide your thinking. 
+          </p>
+            <ol>
+
+<li>
+<p>
+  In your own words, describe what a linear operator is.  
+</p>
+</li>
+
+<li>
+<p>
+Give another word for <term>magnitude</term> (as it pertains to vectors).  
+</p>
+</li>
+
+<li>
+<p>
+<url href="
+https://web.uvic.ca/~tbazett/diffyqs/vecsandmaps_section.html#p-2638">Here</url> the author makes a 
+completely false statement in the text: <em>The reason these are called a basis is that every other 
+  vector can be written as a linear combination of them.</em>  Use AI or do a Google search on 
+  `basis', `linearly independent', and `span' and attempt to explain what is wrong with this 
+  sentence in the textbook.  
+</p>
+</li>
+
+<li>
+<p>
+<url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/vecsandmaps_section.html#p-2643">At one point in the reading</url>, 
+the author states: <em>Hence, we may think of matrices being linear mappings,
+and linear mappings being matrices.</em>.  He is quick to correct this.  Thinking of the linear 
+mapping <m>L(f) = f'</m>, do you see why? Extra Credit: Can you describe an infinite-dimensional matrix
+  that could represent <m>L</m> for smooth functions <m>f</m>? Hint: Think Taylor series.
+</p>
+</li>
+
+<li>
+  <p>
+<p>
+  Label the vectors <m>{\mathbf{u}}= \left[ \begin{array}{c}1 \\ 3\end{array} \right]</m>, 
+  <m>{\mathbf{v}}= \left[ \begin{array}{c}2 \\ 1\end{array} \right]</m>, and 
+  <m>{\mathbf{u}}+{\mathbf{v}}</m> in <xref ref="ParallelogramRule"/>.
+</p>
+
+<figure xml:id="ParallelogramRule" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>Vectors <m>{\mathbf{u}}</m> and <m>{\mathbf{v}}</m>.</caption>
+<image source="ParallelogramRule.jpg" width="50%" >
+<description>A 2‑dimensional coordinate plot showing three arrows (vectors) originating from the origin. 
+  Each arrow points to a different point in the plane. The endpoints of the three arrows are connected with light line segments, forming a triangular shape. 
+  The horizontal axis is labeled x1x_1x1​ and the vertical axis is labeled x2x_2x2​. Tick marks along the axes show values from 1 to 4. </description>
+</image>
+</figure>
+  </p>
+</li>
+
+<li>
+  <p>
+Let <m>\displaystyle{\mathbf{u}}= \left[ \begin{array}{c}1 \\ 2\end{array} \right]</m>.
+Express <m>{\mathbf{u}}</m>, <m>2{\mathbf{u}}</m>, and <m>-\frac{3}{2}{\mathbf{u}}</m> on the graph.
+  </p>
+  <figure xml:id="Vectors1" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>Sketch vectors <m>\displaystyle{\mathbf{u}}= \left[ \begin{array}{c}1 \\ 2\end{array} \right]</m>, <m>2{\mathbf{u}}</m>, and <m>-\frac{3}{2}{\mathbf{u}}</m> on the graph.</caption>
+<image source="Vectors1.jpg" width="50%" >
+<description>A square grid covering the region from −2 to 2 on the horizontal axis labeled x1​ and from −3 to 4 on the vertical axis labeled x2​. 
+  The grid lines form evenly spaced horizontal and vertical lines. The axes intersect at the origin, which is centered in the image. 
+  Tick marks along both axes show integer values. </description>
+</image>
+</figure>
+</li>
+
+<li>
+  <p>
+Let <m>\displaystyle{\mathbf{v}}_{1} = \left[ \begin{array}{c}2 \\ 1\end{array} \right]</m> and <m>\displaystyle{\mathbf{v}}_{2} = \left[ \begin{array}{c}-2 \\ 2\end{array} \right]</m>.
+Express each of the following as a linear combination of <m>{\mathbf{v}}_{1}</m> and <m>{\mathbf{v}}_{2}</m>.
+  </p>
+<figure xml:id="Vectors2" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>An interesting grid for plotting vectors.</caption>
+<image source="Vectors2.jpg" width="75%">
+  <description>A coordinate plane labeled x1​ horizontally and x2​ vertically, extending from −8 to 8 on both axes. 
+    The grid is overlaid with a series of diagonal, evenly spaced parallel lines slanting upward from left to right, forming a diamond‑shaped lattice pattern across the plane.</description>
+</image>
+</figure>
+
+<ol>
+  <li>
+    <p>
+      <m>\displaystyle{\mathbf{a}}= \left[ \begin{array}{c}0 \\ 3\end{array} \right]</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>\displaystyle{\mathbf{b}}= \left[ \begin{array}{c}-4 \\ 1\end{array} \right]</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>\displaystyle{\mathbf{c}}= \left[ \begin{array}{c}6 \\ 6\end{array} \right]</m>
+    </p>
+  </li>
+</ol>
+</li>
+
+<li>
+  <p>
+    Suppose a linear mapping <m>F: \mathbb{R}^{2} \rightarrow \mathbb{R}^{3}</m> takes <m>(1,0)</m> to <m>(1,2,3)</m> and it takes
+  <m>(0,1)</m> to <m>(4,5,6)</m>. Write down the matrix representing the mapping <m>F</m>.
+  </p>
+</li>
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives41">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+     Analyze how linear mappings transform vectors and how these mappings can be represented using matrices.
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Apply matrix methods to organize and simplify large systems, including those arising from differential equations. 
+            </p>
+          </li>
+
+          <li>
+            <p>
+      Develop geometric and algebraic intuition for high‑dimensional vector spaces and the role of 
+      linear structure in modeling real‑world problems.
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>
