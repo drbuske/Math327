@@ -34,6 +34,8 @@
       <xi:include href="./handouts/34PrepDiracDelta.ptx"/> -->
       <xi:include href="./handouts/41PrepVectorsMappings.ptx"/>
       <xi:include href="./handouts/42PrepMatrixAlgebra.ptx"/>
+      <xi:include href="./handouts/43PrepElimination.ptx"/>
+      <xi:include href="./handouts/44PrepSubspaceDimensionKernel.ptx"/>
 
     </chapter>
 

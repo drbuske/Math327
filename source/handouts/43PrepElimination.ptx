@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 4.3 - Elimination</title>
+
+<section>
+    <title>Overview</title>
+<p>
+
+In this section we learn how systems of linear equations can be solved 
+    systematically using <em>elimination</em>, a method that rewrites equations in ways 
+    that preserve their solutions. You will see how a system can be expressed compactly 
+    as a matrix equation<m>A \vec{x}= \vec{b}</m>, why elimination helps even when the 
+    matrix is not invertible or not square, and how a small set of simple operations—
+    swapping equations, scaling equations, and adding multiples of one equation to another—
+    can always be used to reduce a system to a form where solutions can be read off 
+    directly. These ideas also motivate the construction of the augmented matrix, which 
+    provides a compact way to organize the elimination process and serves as the starting 
+    point for many linear-algebra algorithms.
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+ Recognize how a system of linear equations can be written in matrix form
+  as <m>A \vec{x}= \vec{b}</m>.
+            </p>
+          </li>
+
+<li>
+<p>
+Identify the three elementary equation operations: swapping equations, 
+      scaling an equation by a nonzero number, and adding a multiple of one 
+      equation to another.
+</p>
+</li>
+
+          <li>
+            <p>
+  Understand the purpose of the augmented matrix <m>[A \mid \vec{b}]</m>
+  as a compact representation of a linear system.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass43">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/elim_section.html#subsection-176">Subsection A.3.1: Linear systems of equations</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/AxgzzJposVo?si=Qg9yzId8y6wltWhP">
+Elementary Row Operations, Row Echelon Form, and Reduced Row Echelon Form (53:47)</url> by Christopher Lum.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/elim_section.html#subsection-177">Subsection A.3.2: Row echelon form and elementary operations</url>.
+  </p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/elim_section.html#subsection-178">Subsection A.3.3: Non-unique solutions and inconsistent systems</url>.
+  </p>
+</li>
+
+<li>
+  <p>
+    (Optional) <alert>Do</alert> interact with the applet <url href="https://www.geogebra.org/m/MDeAzHcN">The Reduced Row Echelon Form of a Matrix</url> by Ewan Kummel to visualize row reduction.  
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/OFALIHBY5Bw?si=Se3VQGPevs-LLtbc">
+Determining Linear Independence vs Linear Dependence (6:38)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/elim_section.html#subsection-179">Subsection A.3.4: Linear independence and rank</url>.
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/3Q17AuZ2ywk?si=8JNMh9m0b8CLg4hy">
+Introduction to Linear Independent and Linearly Dependent Sets of Vectors (8:49)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/elim_section.html#subsection-180">Subsection A.3.5: Computing the inverse</url>. 
+  </p>
+</li>
+
+<li>
+  <p>
+    <alert>Watch</alert> <url href="https://youtu.be/KBYvP6YG58g?si=6R8VnTx5f0orTi6S">Determining Inverse Matrices Using Augmented Matrices (9:57)</url> by Mathispower4u.  
+  </p>
+</li>
+
+<li>
+  <p>
+    (Optional) <alert>Watch</alert> <url href="https://youtu.be/NXCz9dw5Ce0?si=JlywsXzkt7Jk633h">Ex 1: Inverse of a 3x3 Matrix Using an Augmented Matrix (7:09)</url> by Mathispower4u.  
+  </p>
+</li>
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/elim_section.html#subsection-181">Subsection A.3.6: Exercises 
+A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108</url>.
+          </p>
+        </li>
+
+
+        <li>
+          <p>
+            Try these additional questions.  If necessary, use AI to guide your thinking. 
+          </p>
+            <ol>
+
+<li>
+<p>
+List the three <em>elementary row operations</em>.  What do these row operations preserve?  
+</p>
+</li>
+
+<li>
+<p>
+If a linear system has a <em>free variable</em>, what does that tell you about the solution space? 
+</p>
+</li>
+
+<li>
+<p>
+Is this system consistent?  If so, why?  If not, why not?
+<md>
+  <mrow> x_1 -2x_2 + x_3 \amp \mathstrut =  0 </mrow>
+  <mrow> 2x_2 - 8x_3 \amp \mathstrut =  8 </mrow>
+  <mrow> -4x_1 + 5x_2 + 9x_3 \amp \mathstrut = -9 </mrow>
+</md>
+This system can be reduced to the triangular form: 
+<md>
+  <mrow> x_1 -2x_2 + x_3 \amp \mathstrut =  0 </mrow>
+  <mrow> x_2 - 4x_3 \amp \mathstrut = 4 </mrow>
+  <mrow> x_3 \amp \mathstrut =  3 </mrow>
+</md>
+It can be written in augmented matrix form as 
+<me>\begin{bmatrix}1 \amp -2 \amp 1 \amp 0 \\ 0 \amp 1 \amp -4 \amp 4 \\ 0 \amp 0 \amp 3 \amp 3 \end{bmatrix} </me>
+</p>
+</li>
+
+<li>
+<p>
+Determine if the system below is consistent.  If so, why?  If not, why not?
+<md>
+  <mrow>3 x_2 -6x_3 \amp \mathstrut =  8 </mrow>
+  <mrow> x_1 - 2x_2 +3x_3 \amp \mathstrut = -1 </mrow>
+  <mrow> 5x*1 -7x_2 + 9x_3 \amp \mathstrut =  0 </mrow>
+</md> 
+The augmented matrix for this system can be row reduced to produce <me>\begin{bmatrix}0 \amp 3 \amp -6 \amp 8 \\ 1 \amp -2 \amp 3 \amp -1 \\ 5 \amp -7 \amp 9 \amp 0 \end{bmatrix} \sim \begin{bmatrix}1 \amp -2 \amp 3 \amp -1 \\ 0 \amp 3 \amp -6 \amp 8 \\ 0 \amp 3 \amp -6 \amp 5 \end{bmatrix} \sim \begin{bmatrix}1 \amp -2 \amp 3 \amp -1 \\ 0 \amp 3 \amp -6 \amp 8 \\ 0 \amp 0 \amp 0 \amp -3 \end{bmatrix} </me>
+</p>
+</li>
+
+<li>
+<p>
+For what values of <m>h</m> will the following system be consistent? 
+<md>
+  <mrow>3x_1 - 9x_2 \amp \mathstrut =  4 </mrow>
+  <mrow> -2x_1 +6x_2  \amp \mathstrut = h </mrow>
+</md> 
+</p>
+</li>
+
+<li>
+  <p>
+In this exercise, we reduce to row-echelon form (REF) and then to reduced row-echelon form (RREF).  State the row operations that do this. 
+<me>\begin{bmatrix}0 \amp 3 \amp -6 \amp 6 \amp 4 \amp -5 \\ 3 \amp -7 \amp 8 \amp -5 \amp 8 \amp 9 \\ 3 \amp -9 \amp 12 \amp -9 \amp 6 \amp 15 \end{bmatrix} \sim \begin{bmatrix}3 \amp -9 \amp 12 \amp -9 \amp 6 \amp 15 \\ 3 \amp -7 \amp 8 \amp -5 \amp 8 \amp 9 \\ 0 \amp 3 \amp -6 \amp 6 \amp 4 \amp -5 \end{bmatrix} \sim \begin{bmatrix}3 \amp -9 \amp 12 \amp -9 \amp 6 \amp 15 \\ 0 \amp 2 \amp -4 \amp 4 \amp 2 \amp -6 \\ 0 \amp 3 \amp -6 \amp 6 \amp 4 \amp -5 \end{bmatrix} </me>
+Cover the top row and look at the remaining two rows for the left-most nonzero column.
+<me>
+  \begin{bmatrix}3 \amp -9 \amp 12 \amp -9 \amp 6 \amp 15 \\ 0 \amp 2 \amp -4 \amp 4 \amp 2 \amp -6 \\ 0 \amp 3 \amp -6 \amp 6 \amp 4 \amp -5 \end{bmatrix} \sim \begin{bmatrix}3 \amp -9 \amp 12 \amp -9 \amp 6 \amp 15 \\ 0 \amp 1 \amp -2 \amp 2 \amp 1 \amp -3 \\ 0 \amp 3 \amp -6 \amp 6 \amp 4 \amp -5 \end{bmatrix} \sim \begin{bmatrix}3 \amp -9 \amp 12 \amp -9 \amp 6 \amp 15 \\ 0 \amp 1 \amp -2 \amp 2 \amp 1 \amp -3 \\ 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 4 \end{bmatrix}
+</me>
+<em>Final step to create the reduced row echelon form:</em> Beginning with the rightmost leading entry, and working upwards to the left, create zeros at each leading entry and scale rows to transform each leading entry into 1. 
+<me>
+  \begin{bmatrix}3 \amp -9 \amp 12 \amp -9 \amp 0 \amp -9 \\ 0 \amp 1 \amp -2 \amp 2 \amp 0 \amp -7 \\ 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 4 \end{bmatrix} \sim \begin{bmatrix}3 \amp 0 \amp -6 \amp 9 \amp 0 \amp -72 \\ 0 \amp 1 \amp -2 \amp 2 \amp 0 \amp -7 \\ 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 4 \end{bmatrix} \sim \begin{bmatrix}1 \amp 0 \amp -2 \amp 3 \amp 0 \amp -24 \\ 0 \amp 1 \amp -2 \amp 2 \amp 0 \amp -7 \\ 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 4 \end{bmatrix}
+</me>
+  </p>
+</li>
+
+<li>
+  <p>
+Identify the pivot columns, the basic variables, and the free variables for the system:
+<me> \begin{bmatrix} 1 \amp 6 \amp 0 \amp 3 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \amp -8 \amp 0 \amp 5 \\ 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 7 \end{bmatrix}
+</me> 
+which can also be written as 
+<md>
+  <mrow> x_1 + 6x_2 + 3x_4 \amp \mathstrut = 0 </mrow>
+  <mrow> x_3 - 8x_4 \amp \mathstrut = 5 </mrow>
+  <mrow> x_5 \amp \mathstrut = 7 </mrow>
+</md>
+  </p>
+</li>
+
+<li>
+  <p>
+For the linear system
+<md alignment="alignat" alignat-columns="5">
+   <mrow> 0x_1 \amp +3x_2 \amp - 6x_3 \amp  + 6x_4 \amp + 4x_5 \amp = -5 </mrow>
+   <mrow> 3x_1 \amp - 7x_2 \amp + 8x_3 \amp - 5x_4 \amp + 8x_5 \amp = 9 </mrow>
+   <mrow> 3x_1 \amp - 9x_2 \amp + 12x_3 \amp - 9x_4 \amp + 6x_5 \amp = 15 </mrow>
+</md>
+we obtain the REF
+<me> \begin{bmatrix} 3 \amp -9 \amp 12 \amp -9 \amp 6 \amp 15 \\ 0 \amp 2 \amp -4 \amp 4 \amp 2 \amp -6 \\ 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 4 \end{bmatrix}
+</me> 
+Is this system consistent?  If so, identify any free variables and state the number of solutions. 
+  </p>
+</li>
+
+<li>
+  <p>
+Let <m>\displaystyle A = \left[ \begin{array}{cc}1 &#x26; 2 \\ 3 &#x26; 1 \\ 0 &#x26; 5\end{array} \right]</m> and <m>\displaystyle{\mathbf{b}}= \left[ \begin{array}{c}8 \\ 3 \\ 17\end{array} \right]</m>.
+We determine whether <m>{\mathbf{b}}</m> is in the plane spanned by the columns of <m>A</m>. 
+<ol>
+  <li>
+    <p>
+      Finish rewriting this question in vector form: Do weights <m>x_{1}</m> and <m>x_{2}</m> exists so that...
+    </p>
+  </li>
+
+  <li>
+    <p>
+      The corresponding augmented matrix can be put in REF:
+      <me>\begin{bmatrix} 1 \amp 2 \amp 8 \\ 3 \amp 1 \amp 3 \\ 0 \amp 5 \amp 17 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 2 \amp 8 \\ 0 \amp -5 \amp -21 \\ 0 \amp 5 \amp 17 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 2 \amp 8 \\ 0 \amp -5 \amp -21 \\ 0 \amp 0 \amp -4 \end{bmatrix}
+      </me>
+      Is <m>{\mathbf{b}}</m> in the plane spanned by the columns of <m>A</m>?
+    </p>
+  </li>
+</ol>
+  </p>
+</li>
+
+<li>
+  <p>
+    Consider the augmented matrix below.
+    <me>\begin{bmatrix} 2 \amp 3 \amp 4 \amp 9 \\ -3 \amp 1 \amp 0 \amp -2 \end{bmatrix}</me>
+    <ol>
+      <li>
+        <p>
+          Write down the corresponding system of equations.
+        </p>
+      </li>
+      <li>
+        <p>
+          Fill in the missing elements of the corresponding vector equation:
+          <me>\begin{bmatrix} 2 \\ -3 \end{bmatrix} + \ \ \ \ \begin{bmatrix} 3 \\ 1 \end{bmatrix} + \ \ \ \ \ \begin{bmatrix} 4 \\ 0 \end{bmatrix} = \begin{bmatrix} 9 \\ -2 \end{bmatrix}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          Write this in the form of a matrix equation <m>A{\mathbf{x}}={\mathbf{b}}</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+</li>
+
+<li>
+  <p>
+    The equation <m>A{\mathbf{x}}={\mathbf{b}}</m> has a solution if and only if <m>{\mathbf{b}}</m> is a <fillin characters="10" />  <fillin characters="10" /> of the columns of <m>A</m>.
+  </p>
+</li>
+
+<li>
+  <p>
+   Use the inverse of <m>\displaystyle A = \left[ \begin{array}{cc}-7 &#x26; 3 \\ 5 &#x26; -2\end{array}\right]</m> to solve
+  <m>\displaystyle   \begin{array}{ccc}-7x_1 + 3x_2 &#x26; = &#x26; 2\\
+  5x_1 - 2x_2 &#x26; = &#x26; 1.\end{array}</m>
+  </p>
+</li>
+
+<li>
+  <p>
+    Use the augmented matrix below to determine the inverse of <m>\displaystyle A = \left[ \begin{array}{ccc}2 &#x26; 0 &#x26; 0 \\ -3 &#x26; 0 &#x26; 1 \\ 0 &#x26; 1 &#x26; 0\end{array}\right]</m>, if it exists.
+    <me> \begin{bmatrix} A \amp I \end{bmatrix} = \begin{bmatrix} 2 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\ -3 \amp 0 \amp 1 \amp 0 \amp 1 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1 \end{bmatrix} \sim \dots \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp \frac{1}{2} \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 1 \amp \frac{1}{2} \amp 1 \amp 0 \end{bmatrix} </me>
+  </p>
+</li>
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives43">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+<p>
+  Use elimination logically and systematically to reduce a system to a form
+  where one can read off variables, such as reaching an equation like
+  <m>x_{3} = 2</m>.
+</p>
+          </li>
+
+          <li>
+<p>
+  Explain how elimination is connected to finding matrix inverses by solving
+  multiple systems <m>A\vec{x}=\vec{b}</m> for different right-hand sides.
+</p>
+          </li>
+
+          <li>
+            <p>
+<p>
+  Analyze how elimination applies even when <m>A</m> is non-invertible or
+  non-square, and interpret what this implies about the possible solution
+  sets of the system.
+</p>
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>
