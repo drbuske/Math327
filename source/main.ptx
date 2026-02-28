@@ -33,6 +33,7 @@
       <xi:include href="./handouts/33PrepConvolution.ptx"/>
       <xi:include href="./handouts/34PrepDiracDelta.ptx"/> -->
       <xi:include href="./handouts/41PrepVectorsMappings.ptx"/>
+      <xi:include href="./handouts/42PrepMatrixAlgebra.ptx"/>
 
     </chapter>
 

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 4.2 - Matrix Algebra</title>
+
+<section>
+    <title>Overview</title>
+
+  <p> 
+This section introduces matrix algebra by beginning with the simplest case:
+    1×1 matrices, which behave just like real numbers under addition, scalar
+    multiplication, and composition. From this starting point, we see how
+    these familiar operations naturally generalize to larger matrices.
+  </p>
+
+<p>
+    We emphasize that matrices represent linear mappings between vector
+    spaces, and that matrix operations—such as addition, scalar multiplication,
+    and composition (matrix multiplication)—are defined so that they behave
+    consistently with the way linear mappings act on vectors. 
+  </p>
+
+
+<p>
+    We learn how to add matrices element‑wise, how scalar multiplication 
+    applies uniformly to every entry, and how matrix multiplication corresponds 
+    to composing linear transformations. Throughout, concrete numerical examples 
+    illustrate how these algebraic rules connect to the action of matrices on 
+    vectors and why mismatched matrix sizes make certain operations undefined.
+  </p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+
+Understand that matrices represent linear mappings and that 1×1 matrices
+      behave like real numbers.
+            </p>
+          </li>
+
+<li>
+<p>
+Perform <em>matrix addition</em> and <em>scalar multiplication</em> when matrix sizes match.
+</p>
+</li>
+
+          <li>
+            <p>
+
+Recognize when matrix operations are undefined due to incompatible
+      dimensions.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass42">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/matalg_section.html#matalg_section">Section A.2: Matrix algebra </url>.   
+  </p>
+</li>
+
+<li>
+  <p>
+    (Optional) <alert>Do</alert> interact with the applet <url href="https://www.geogebra.org/m/nrshpujr">Matrix Addition and Scalar Multiplication</url> by Heather Pierce for practice.  
+  </p>
+</li>
+
+<li>
+  <p>
+    (Optional) <alert>Do</alert> interact with the applet <url href="https://www.geogebra.org/m/KRwSUtRw">Multiplying Two Matrices</url> by Mathiyalagan.  
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/XkY2DOUCWMU?si=XvNtlt6gUL07kYs5">
+Matrix Multiplication as Composition (10:03)</url> by 3Blue1Brown.
+</p>
+</li>
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/matalg_section.html#subsection-175">Subsection A.2.8: Exercises 
+A.2.2, A.2.3, A.2.4, A.2.5, A.2.103, A.2.105</url>.
+          </p>
+        </li>
+
+
+        <li>
+          <p>
+            Try these additional questions.  If necessary, use AI to guide your thinking. 
+          </p>
+            <ol>
+
+<li>
+<p>
+What is the relationship between dot product and matrix multiplication? 
+</p>
+</li>
+
+<li>
+<p>
+What is the relationship between the product of a matrix <m>A</m> and a column vector and the product of matrix <m>A</m> with another matrix <m>B</m>?
+</p>
+</li>
+
+<li>
+<p>
+Are all <em>nonzero</em> matrices invertible?  If not, can you give an example? 
+</p>
+</li>
+
+<li>
+<p>
+Define <m>\displaystyle{A}= \left[ \begin{array}{cc}4 &#x26; -2 \\ 3 &#x26; -5 \\ 0 &#x26; 1\end{array} \right]</m> and <m>\displaystyle{B}= \left[ \begin{array}{cc}-4 &#x26; 2 \\ -24 &#x26; 26 \\ 6 &#x26; -7\end{array} \right]</m>.
+Compute <m>3{A}</m> and <m>{A}+{B}</m>.
+</p>
+</li>
+
+<li>
+<p>
+Compute <m>AB</m> where <m>\displaystyle A = \left[ \begin{array}{cc}4 &#x26; -2 \\ 3 &#x26; -5 \\ 0 &#x26; 1\end{array}\right]</m> and <m>\displaystyle B = \left[ \begin{array}{cc}2 &#x26; -3 \\ 6 &#x26; -7\end{array} \right]</m>.
+</p>
+</li>
+
+<li>
+  <p>
+If <m>A</m> is <m>4 \times 3</m> and <m>B</m> is <m>3 \times 2</m>, then what are the sizes of <m>AB</m> and <m>BA</m>?
+  </p>
+</li>
+
+<li>
+  <p>
+Suppose <m>\displaystyle A = \left[ \begin{array}{ccc}2 &#x26; 3 &#x26; 6 \\ -1 &#x26; 0 &#x26; 1\end{array} \right]</m> and <m>\displaystyle B = \left[ \begin{array}{cc}2 &#x26; -3 \\ 0 &#x26; 1 \\ 4 &#x26; -7\end{array} \right]</m>.
+Compute <m>AB</m>.
+  </p>
+</li>
+
+<li>
+  <p>
+Use <m>\displaystyle A = \left[ \begin{array}{ccc}1 &#x26; 2 &#x26; 3 \\ 4 &#x26; 5 &#x26; 6\end{array} \right]</m> and <m>\displaystyle B = \left[ \begin{array}{cc}1 &#x26; 0 \\ 1 &#x26; 0 \\ -1 &#x26; -1\end{array} \right]</m> to demonstrate that <m>AB \neq BA</m> can happen.
+  </p>
+</li>
+
+<li>
+  <p>
+Let <m>\displaystyle A = \left[ \begin{array}{ccc}1 &#x26; 2 &#x26; 0 \\ 3 &#x26; 0 &#x26; 1\end{array} \right]</m> and <m>B = \left[ \begin{array}{cc}1 &#x26; 2 \\ 0 &#x26; 1 \\ -2 &#x26; 4\end{array} \right]</m>.
+Compute <m>AB</m>, <m>(AB)^{T}</m>, <m>A^{T}B^{T}</m>, and <m>B^{T}A^{T}</m>.
+  </p>
+</li>
+
+</ol>
+</li>
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives42">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Explain conceptually how matrix multiplication corresponds to composition
+      of linear mappings.
+            </p>
+          </li>
+
+          <li>
+            <p> 
+Analyze examples illustrating how matrix operations affect the resulting
+      action on vectors, using algebraic structure to justify results rather
+      than computation alone.
+            </p>
+          </li>
+
+          <li>
+            <p>
+Relate familiar 1×1 mappings to higher‑dimensional cases and generalize
+      the underlying algebraic principles to arbitrary matrix sizes.
+
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>
