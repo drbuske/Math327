@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="-110 -110 220 220">
+  <rect x="-110" y="-110" width="220" height="220" fill="white"/>
+  <!-- Axes -->
+  <line x1="-100" y1="0" x2="100" y2="0" stroke="#666" stroke-width="1"/>
+  <line x1="0" y1="-100" x2="0" y2="100" stroke="#666" stroke-width="1"/>
+  <!-- Closed orbits -->
+  <circle cx="0" cy="0" r="30" stroke="#2a7" stroke-width="2" fill="none"/>
+  <circle cx="0" cy="0" r="60" stroke="#2a7" stroke-width="2" fill="none"/>
+  <circle cx="0" cy="0" r="90" stroke="#2a7" stroke-width="2" fill="none"/>
+  <circle cx="0" cy="0" r="3" fill="black"/>
+</svg>
