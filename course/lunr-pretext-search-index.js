@@ -584,6 +584,249 @@ var ptx_lunr_docs = [
   "number": "11",
   "title": "",
   "body": "  The kernel of a linear transformation is defined as the set .  Provide a conceptual explanation of why the kernel must always be a subspace, and describe what this tells us about the “shape” of solution sets to homogeneous linear equations.    Because is linear, and for all scalars .  If and are in the kernel, then and , so and . Thus the kernel contains every linear combination of its vectors; it is automatically a subspace.  Conceptually, this means the solution set to any homogeneous linear system “inherits” the geometry of a Euclidean subspace: it behaves like a flat space of some dimension , possibly much smaller than . The notes highlight this by explaining that kernels look and act like once a basis has been chosen, and vectors in the kernel have unique coordinate representations in terms of that basis.   "
+},
+{
+  "id": "ch-Textbook-22",
+  "level": "1",
+  "url": "ch-Textbook-22.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.1 - Introduction to Systems of ODEs",
+  "body": " Daily Prep 5.1 - Introduction to Systems of ODEs   Overview  We now introduce the idea of a system of ordinary differential equations, which arises whenever there are multiple dependent variables whose rates of change may influence one another. Instead of a single function , we may have several functions governed by multiple differential equations, each involving the variables and their derivatives. The section explains that systems can be of various orders—first‑order systems being the most common—and solutions consist of a collection of functions that simultaneously satisfy all equations in the system. Initial conditions must specify all dependent variables (and possibly their derivatives) at a given point. The section includes simple examples showing how some systems can be solved by decoupling: solving one equation first and then substituting into the others. This introduces the basic terminology and structure that lead naturally to matrix methods and linear systems in later sections.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize what it means to have multiple dependent variables in a system of ODEs and understand the notation used to describe such systems.    Distinguish between first‑order and higher‑order systems and describe what constitutes a solution to a system.    Explain the form and purpose of initial conditions for systems, including specifying values of all dependent variables (and possibly derivatives) at a given point.      Learn!  Complete the actions listed below.     Read  Subsection 7.1.1: Systems .    (Optional) Watch  Introduction to Linear Systems of Differential Equations (10:15) by Katherine Heller.     Read  Subsection 7.1.2: Applications .    (Optional) Watch  Systems of Differential Equations Part 1: Modeling and Elimination (7:49) by Professor Dave Explains.     Read  Subsection 7.1.3: Changing to first order .    (Optional) Watch  Converting ODEs into Systems (6:14) by Mike, the Mathematician.     Read  Subsection 7.1.4: Autonomous systems and vector fields .     Do  Subsection 7.1.6: Exercises 7.1.2, 7.1.4, 7.1.101, 7.1.103 .      Do MyOpenMath questions from this section.     Exercises   What is a system of ODEs?   Which of the following best describes a system of ODEs?      A collection of differential equations involving several dependent variables and their derivatives.    Correct. A system consists of multiple ODEs involving several dependent variables.      A single equation that has more than one independent variable.    Incorrect. Systems involve *several dependent variables*, not multiple independent variables.      Any ODE with order greater than one.    No. Higher-order ODEs are not necessarily systems.       What is a solution to a system?   For a first-order system , what does it mean to be a solution ?      A triple of functions that satisfies all three equations simultaneously.    Correct. A solution consists of functions that satisfy every equation in the system.      Any function that satisfies at least one equation.    No. A solution must satisfy *all* equations in the system.      Only must satisfy its equation; the other functions may be arbitrary.    Incorrect. Every dependent variable must satisfy its own ODE.       Initial Conditions for Systems   For a system with dependent variables , what do appropriate initial conditions look like?      Values for each dependent variable at a point, such as , , .    Correct. An initial condition must specify each variable’s value at the starting time.      Only one initial value is needed, since the equations are linked.    No. Each variable requires its own initial value.      Only derivatives need initial values.    Incorrect for first-order systems; values of the variables themselves must be specified.       Determining the Order of a System   Consider the system What is the order of this system?      Second-order, because the highest derivatives in the system are second derivatives.    Correct. The section explains that the order of a system is the highest derivative appearing in any of the equations.     First-order, because there are two equations.   No. The number of equations does not determine order.     Fourth-order, because two second derivatives add up to order four.   Incorrect. Orders are not added; the system’s order is simply the highest derivative that appears.       Understanding a General Solution   A system of two first-order ODEs has a general solution What does this general solution represent?      A family of solutions containing two arbitrary constants, one for each initial condition of the system.    Correct. For a system with two dependent variables, the general solution contains two constants so that any initial conditions and can be matched.     A single solution valid only for the initial condition .   No. This general solution works for any initial conditions.     A solution that is valid only when .   No. and are independent constants.        Consider the pair of equations Explain why this pair of equations forms a first-order system of ODEs, and identify the dependent and independent variables.    This is a first-order system because each equation involves only the first derivatives and and no higher derivatives. A system of ODEs consists of several differential equations involving multiple dependent variables.  The dependent variables are and , and the independent variable is the implied variable (typically or ) with respect to which the derivatives are taken.      Suppose we have a first-order system What does it mean for a pair of functions to be a solution to this system?    A solution to the system is a pair of functions and that satisfy both differential equations for all relevant values of . That is, and simultaneously.  Because the system has two dependent variables, both must satisfy their equations for the pair to count as a valid solution.      Consider the system from the section: with initial conditions and . Solve for and then use it to find .    We begin by observing that the first equation, , is independent of . This makes the system decoupled in the sense described in the section: we can solve for first and then substitute it into the equation for .  Solve : the general solution is . Apply the initial condition : , hence .  Therefore,   Next, substitute into the second equation . We obtain the first-order linear ODE:   Rewrite this in standard linear form: The integrating factor is Multiplying through by the integrating factor gives Integrating both sides yields   Solving for , we get Now apply the initial condition . When we have Hence .  Therefore,   Putting both components together, the solution to the system is        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Solve simple systems by decoupling , first solving one equation and then substituting its solution into the remaining equations.    Interpret how general solutions of systems depend on several arbitrary constants and compare this structure to the general solution of a single ODE.     Describe how a single higher‑order ODE can be rewritten as a first‑order system , motivating the matrix‑based viewpoint that follows in later sections.      "
+},
+{
+  "id": "mcqsysdefinition",
+  "level": "2",
+  "url": "ch-Textbook-22.html#mcqsysdefinition",
+  "type": "Exercise",
+  "number": "1",
+  "title": "What is a system of ODEs?",
+  "body": " What is a system of ODEs?   Which of the following best describes a system of ODEs?      A collection of differential equations involving several dependent variables and their derivatives.    Correct. A system consists of multiple ODEs involving several dependent variables.      A single equation that has more than one independent variable.    Incorrect. Systems involve *several dependent variables*, not multiple independent variables.      Any ODE with order greater than one.    No. Higher-order ODEs are not necessarily systems.     "
+},
+{
+  "id": "mcqsyssolution",
+  "level": "2",
+  "url": "ch-Textbook-22.html#mcqsyssolution",
+  "type": "Exercise",
+  "number": "2",
+  "title": "What is a solution to a system?",
+  "body": " What is a solution to a system?   For a first-order system , what does it mean to be a solution ?      A triple of functions that satisfies all three equations simultaneously.    Correct. A solution consists of functions that satisfy every equation in the system.      Any function that satisfies at least one equation.    No. A solution must satisfy *all* equations in the system.      Only must satisfy its equation; the other functions may be arbitrary.    Incorrect. Every dependent variable must satisfy its own ODE.     "
+},
+{
+  "id": "mcqsysic",
+  "level": "2",
+  "url": "ch-Textbook-22.html#mcqsysic",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Initial Conditions for Systems.",
+  "body": " Initial Conditions for Systems   For a system with dependent variables , what do appropriate initial conditions look like?      Values for each dependent variable at a point, such as , , .    Correct. An initial condition must specify each variable’s value at the starting time.      Only one initial value is needed, since the equations are linked.    No. Each variable requires its own initial value.      Only derivatives need initial values.    Incorrect for first-order systems; values of the variables themselves must be specified.     "
+},
+{
+  "id": "mcqsysorder",
+  "level": "2",
+  "url": "ch-Textbook-22.html#mcqsysorder",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Determining the Order of a System.",
+  "body": " Determining the Order of a System   Consider the system What is the order of this system?      Second-order, because the highest derivatives in the system are second derivatives.    Correct. The section explains that the order of a system is the highest derivative appearing in any of the equations.     First-order, because there are two equations.   No. The number of equations does not determine order.     Fourth-order, because two second derivatives add up to order four.   Incorrect. Orders are not added; the system’s order is simply the highest derivative that appears.     "
+},
+{
+  "id": "mcqsysgeneralsolution",
+  "level": "2",
+  "url": "ch-Textbook-22.html#mcqsysgeneralsolution",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Understanding a General Solution.",
+  "body": " Understanding a General Solution   A system of two first-order ODEs has a general solution What does this general solution represent?      A family of solutions containing two arbitrary constants, one for each initial condition of the system.    Correct. For a system with two dependent variables, the general solution contains two constants so that any initial conditions and can be matched.     A single solution valid only for the initial condition .   No. This general solution works for any initial conditions.     A solution that is valid only when .   No. and are independent constants.     "
+},
+{
+  "id": "sysbasicidentification",
+  "level": "2",
+  "url": "ch-Textbook-22.html#sysbasicidentification",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Consider the pair of equations Explain why this pair of equations forms a first-order system of ODEs, and identify the dependent and independent variables.    This is a first-order system because each equation involves only the first derivatives and and no higher derivatives. A system of ODEs consists of several differential equations involving multiple dependent variables.  The dependent variables are and , and the independent variable is the implied variable (typically or ) with respect to which the derivatives are taken.   "
+},
+{
+  "id": "syssolutionmeaning",
+  "level": "2",
+  "url": "ch-Textbook-22.html#syssolutionmeaning",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Suppose we have a first-order system What does it mean for a pair of functions to be a solution to this system?    A solution to the system is a pair of functions and that satisfy both differential equations for all relevant values of . That is, and simultaneously.  Because the system has two dependent variables, both must satisfy their equations for the pair to count as a valid solution.   "
+},
+{
+  "id": "syssimpledecoupling",
+  "level": "2",
+  "url": "ch-Textbook-22.html#syssimpledecoupling",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Consider the system from the section: with initial conditions and . Solve for and then use it to find .    We begin by observing that the first equation, , is independent of . This makes the system decoupled in the sense described in the section: we can solve for first and then substitute it into the equation for .  Solve : the general solution is . Apply the initial condition : , hence .  Therefore,   Next, substitute into the second equation . We obtain the first-order linear ODE:   Rewrite this in standard linear form: The integrating factor is Multiplying through by the integrating factor gives Integrating both sides yields   Solving for , we get Now apply the initial condition . When we have Hence .  Therefore,   Putting both components together, the solution to the system is    "
+},
+{
+  "id": "ch-Textbook-23",
+  "level": "1",
+  "url": "ch-Textbook-23.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.2 - Matrices and Linear Systems",
+  "body": " Daily Prep 5.2 - Matrices and Linear Systems   Overview  We now introduce matrices as essential tools for studying linear systems of ODEs. The section reviews the basic structure of a matrix as an array, defines vectors as column matrices, and recalls fundamental matrix operations such as scalar multiplication, addition, and transpose. With this foundation, the section develops matrix multiplication using the dot product and emphasizes the importance of compatible dimensions (e.g., multiplying an matrix by an matrix to obtain an matrix). These operations enable us to rewrite a system of linear ODEs concisely as a single vector equation , preparing the way for later methods such as the eigenvalue approach and matrix exponentials. The goal is to transform systems into a compact algebraic form that reveals structure and makes computations more systematic.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recall the definitions of a matrix, a column vector, and matrix size .    Perform scalar multiplication, matrix addition, and compute the transpose of a matrix.    Understand the definition of matrix multiplication using dot products and identify when the product is defined.      Learn!  Complete the actions listed below.     Read  Subsection 7.2.1: Matrices and vectors .     Read  Subsection 7.2.2: Matrix multiplication .    (Optional) Watch  Matrix Multiplication (9:35) by Mathispower4u.     Read  Subsection 7.2.3: The determinant .    (Optional) Read  Section A.6: Determinant for more details on the determinant.     Watch  Evaluating Determinants of a 2x2 and 3x2 Matrix (7:35) by Mathispower4u.     Read  Subsection 7.2.4: Solving linear systems .    (Optional) Watch  Solving a System of Linear Equations Using Inverses (6:27) by Patrick J.     Read  Subsection 7.2.5: Computing the inverse .     Do  Subsection 7.2.6: Exercises 7.2.3, 7.2.5, 7.2.6, 7.2.8, 7.2.9, 7.2.101, 7.2.103 .      Do MyOpenMath questions from this section.     Exercises   Matrix Size and Vectors   Which of the following correctly describes a column vector?      A column vector is an matrix.    Correct. A vector is treated as a column matrix in this section.     An matrix.   No—that is a row vector.     A square matrix with .   No—square matrices are unrelated to the definition of vectors.       Matrix Multiplication Rules   When is the matrix product defined?      When is and is .    Correct. The number of columns of must equal the number of rows of .     When both matrices have the same number of rows.   No. Matching rows is not the requirement.     Only when both matrices are square.   No. Matrix multiplication does not require square matrices.       Writing a System in Matrix Form   Suppose we have the system Which vector‑matrix form is correct?           Correct. The matrix is constructed from the coefficients of the system exactly as described in the section.           No. The matrix should contain constants, not variables.           This is simply rewriting the system, not expressing it as .       Understanding the Transpose   If is a matrix, what is the transpose ?      The matrix obtained by swapping rows and columns of .    Correct. The transpose flips rows into columns and vice versa.     The matrix formed by multiplying every entry of by .  No. That describes scalar multiplication by , not transposition.    The matrix you obtain by reversing the order of columns only.  No. Transpose reverses rows and columns.      Determinant and Invertibility   For a square matrix , which statement about its determinant is correct?       is invertible exactly when .    Correct. A nonzero determinant means the matrix is invertible, which is essential when rewriting or solving linear systems using .      must always be positive for to be invertible.    No. A determinant may be negative or positive; only zero prevents invertibility.      is invertible when .    Incorrect. A zero determinant means is singular and cannot be inverted.       Understanding Inverses   Suppose is a square matrix and exists. What property does satisfy?       and .    Correct. The inverse undoes the effect of , producing the identity matrix .      is obtained by transposing .    No. The transpose is generally unrelated to the inverse.      exists for every square matrix.    Incorrect. Only matrices with nonzero determinant are invertible.          Let Compute .    First compute by multiplying every entry of by 2:   Now add element‑wise:   Matrix addition and scalar multiplication work entry by entry.        Let Compute the transpose .    The transpose swaps rows and columns. So the first row of becomes the first column of , and the second row becomes the second column.         Let Compute .    Multiply each row of by the column vector using dot products, as defined in the section.  First row: .  Second row: .   This matches the definition of matrix multiplication using row–column dot products.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Rewrite a system of first-order linear ODEs in vector–matrix form and interpret the meaning of each component.    Verify algebraic properties of matrices (such as distributivity and compatibility with scalar multiplication) that support solving systems of ODEs.     Analyze how matrix structure (such as size and arrangement of entries) influences the behavior and solvability of linear systems.      "
+},
+{
+  "id": "mcqmatrixsize",
+  "level": "2",
+  "url": "ch-Textbook-23.html#mcqmatrixsize",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Matrix Size and Vectors.",
+  "body": " Matrix Size and Vectors   Which of the following correctly describes a column vector?      A column vector is an matrix.    Correct. A vector is treated as a column matrix in this section.     An matrix.   No—that is a row vector.     A square matrix with .   No—square matrices are unrelated to the definition of vectors.     "
+},
+{
+  "id": "mcq-matrix-multiplication",
+  "level": "2",
+  "url": "ch-Textbook-23.html#mcq-matrix-multiplication",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Matrix Multiplication Rules.",
+  "body": " Matrix Multiplication Rules   When is the matrix product defined?      When is and is .    Correct. The number of columns of must equal the number of rows of .     When both matrices have the same number of rows.   No. Matching rows is not the requirement.     Only when both matrices are square.   No. Matrix multiplication does not require square matrices.     "
+},
+{
+  "id": "mcq-vector-form-system",
+  "level": "2",
+  "url": "ch-Textbook-23.html#mcq-vector-form-system",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Writing a System in Matrix Form.",
+  "body": " Writing a System in Matrix Form   Suppose we have the system Which vector‑matrix form is correct?           Correct. The matrix is constructed from the coefficients of the system exactly as described in the section.           No. The matrix should contain constants, not variables.           This is simply rewriting the system, not expressing it as .     "
+},
+{
+  "id": "mcqtranspose",
+  "level": "2",
+  "url": "ch-Textbook-23.html#mcqtranspose",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Understanding the Transpose.",
+  "body": " Understanding the Transpose   If is a matrix, what is the transpose ?      The matrix obtained by swapping rows and columns of .    Correct. The transpose flips rows into columns and vice versa.     The matrix formed by multiplying every entry of by .  No. That describes scalar multiplication by , not transposition.    The matrix you obtain by reversing the order of columns only.  No. Transpose reverses rows and columns.    "
+},
+{
+  "id": "mcqdeterminantinvertibility",
+  "level": "2",
+  "url": "ch-Textbook-23.html#mcqdeterminantinvertibility",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Determinant and Invertibility.",
+  "body": " Determinant and Invertibility   For a square matrix , which statement about its determinant is correct?       is invertible exactly when .    Correct. A nonzero determinant means the matrix is invertible, which is essential when rewriting or solving linear systems using .      must always be positive for to be invertible.    No. A determinant may be negative or positive; only zero prevents invertibility.      is invertible when .    Incorrect. A zero determinant means is singular and cannot be inverted.     "
+},
+{
+  "id": "mcqmatrixinverse",
+  "level": "2",
+  "url": "ch-Textbook-23.html#mcqmatrixinverse",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Understanding Inverses.",
+  "body": " Understanding Inverses   Suppose is a square matrix and exists. What property does satisfy?       and .    Correct. The inverse undoes the effect of , producing the identity matrix .      is obtained by transposing .    No. The transpose is generally unrelated to the inverse.      exists for every square matrix.    Incorrect. Only matrices with nonzero determinant are invertible.     "
+},
+{
+  "id": "matrixcomputation1",
+  "level": "2",
+  "url": "ch-Textbook-23.html#matrixcomputation1",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "   Let Compute .    First compute by multiplying every entry of by 2:   Now add element‑wise:   Matrix addition and scalar multiplication work entry by entry.   "
+},
+{
+  "id": "matrixcomputation2",
+  "level": "2",
+  "url": "ch-Textbook-23.html#matrixcomputation2",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "   Let Compute the transpose .    The transpose swaps rows and columns. So the first row of becomes the first column of , and the second row becomes the second column.    "
+},
+{
+  "id": "matrixcomputation3",
+  "level": "2",
+  "url": "ch-Textbook-23.html#matrixcomputation3",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "   Let Compute .    Multiply each row of by the column vector using dot products, as defined in the section.  First row: .  Second row: .   This matches the definition of matrix multiplication using row–column dot products.   "
+},
+{
+  "id": "ch-Textbook-24",
+  "level": "1",
+  "url": "ch-Textbook-24.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.3 - Linear Systems of ODEs",
+  "body": " Daily Prep 5.3 - Linear Systems of ODEs   Overview  We now introduce linear systems of ODEs by viewing them through the lens of vector‑valued and matrix‑valued functions. A first‑order linear system can be written compactly in the vector form , where is a matrix-valued function and is a vector-valued function whose components are the dependent variables. This section emphasizes the rules for differentiating matrix products and sums, which mirror ordinary differentiation but preserve matrix multiplication order. It then focuses on homogeneous systems , especially in the constant‑coefficient case, where the superposition principle holds: any linear combination of solutions is again a solution. Linear independence of vector‑valued solutions plays a central role, and if an system admits linearly independent solutions, then every solution can be written as their linear combination. Examples illustrate how to classify solutions and identify dependence relations among vector‑valued functions.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize a first‑order linear system written in the vector form and identify its components.    Apply differentiation rules for matrix‑valued and vector‑valued functions, such as .    Distinguish between homogeneous systems and nonhomogeneous systems .      Learn!  Complete the actions listed below.     Read  Section 7.3: Linear systems of ODEs .    (Optional) Watch  Intro to Vector-Valued and Matrix-Valued Functions and Write a System of ODEs using Matrices (5:24) by Mathispower4u.    (Optional) Watch  Write a System of Two Differential Equations Using Matrix Notation (1:52) by Mathispower4u.    (Optional) Watch  Write a System of Three Differential Equations with Initial Values Using Matrices (3:18) by Mathispower4u.    (Optional) Watch  Intro to Solving First Order Linear Homogeneous Systems of Ordinary Differential Equations (7:48) by Mathispower4u.    (Optional) Watch  Determine if Vector-Valued Functions are Linearly Independent or Linearly Dependent (2:57) by Mathispower4u.     Do  Subsection 7.3.1: Exercises 7.3.1, 7.3.2, 7.3.3, 7.3.4, 7.3.103 .      Do MyOpenMath questions from this section.     Exercises   Identifying a Linear System   Which of the following is a valid linear first-order system of ODEs?           Correct. A linear system is defined exactly in this form.           No. Squaring the vector makes the system nonlinear.           These are first‑order ODEs but not linear .       Homogeneous vs. Nonhomogeneous   Which of the following systems is homogeneous ?           Correct. A homogeneous linear system has the form with no forcing term.           No. The presence of makes the system nonhomogeneous.           Not homogeneous; it contains nonzero added functions of .       Superposition Principle   Suppose and are solutions of the homogeneous system . Which statement is true?      Any linear combination is also a solution.    Correct. This is the superposition principle for homogeneous linear systems.      Only is a solution; scalar multiples are not.    No. All scalar multiples and linear combinations remain solutions.       is a solution only if .    No. The constants may be any real numbers.       Evaluating a Vector-Valued Function   Let Compute .           Correct. Differentiate each component: and . Then evaluate at to get and .           No. This evaluates , not its derivative.           No. The first component derivative was computed incorrectly.       Checking a Linear Combination of Solutions   Suppose are solutions to a homogeneous linear system . Compute            Correct. Multiply each vector by its scalar and add component‑wise: and . This also demonstrates the superposition principle.           No. This ignores the coefficients 3 and 2 in the linear combination.           Incorrect. The second component should include .          Consider the system Suppose two candidate solutions are Verify explicitly whether each vector‑valued function satisfies the differential equation.    For , compute the derivative:   Now compute   Since , the first function is indeed a solution of the system. This matches how we define a solution: a vector‑valued function that satisfies the matrix equation .   For , compute the derivative:   Now compute   Again we have , so the second function also satisfies the system.  Both and are valid solutions of this homogeneous linear system.        We define linear independence for vector‑valued functions using the condition for all . Consider the functions Determine whether these functions are linearly independent.    We test for constants and such that   The vector equation must hold for all . Equating components:   The second equation already forces . The first equation gives the same condition (because it must hold for all ).  Thus the solutions satisfy , giving a one‑parameter family of nontrivial combinations that equal the zero vector. Therefore, and are linearly dependent .  This matches the section’s definition: a set is dependent if a nontrivial linear combination yields for all .       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Rewrite a system of first-order linear ODEs in vector–matrix form and interpret the meaning of each component.    Determine whether vector‑valued functions are linearly independent by checking whether a relation holds only when all constants vanish.     Express any solution of an homogeneous linear system as a linear combination of independent solutions, when such a fundamental set exists.      "
+},
+{
+  "id": "mcqlinearsystemform",
+  "level": "2",
+  "url": "ch-Textbook-24.html#mcqlinearsystemform",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Identifying a Linear System.",
+  "body": " Identifying a Linear System   Which of the following is a valid linear first-order system of ODEs?           Correct. A linear system is defined exactly in this form.           No. Squaring the vector makes the system nonlinear.           These are first‑order ODEs but not linear .     "
+},
+{
+  "id": "mcqhomogeneoussystem",
+  "level": "2",
+  "url": "ch-Textbook-24.html#mcqhomogeneoussystem",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Homogeneous vs. Nonhomogeneous.",
+  "body": " Homogeneous vs. Nonhomogeneous   Which of the following systems is homogeneous ?           Correct. A homogeneous linear system has the form with no forcing term.           No. The presence of makes the system nonhomogeneous.           Not homogeneous; it contains nonzero added functions of .     "
+},
+{
+  "id": "mcqsuperposition",
+  "level": "2",
+  "url": "ch-Textbook-24.html#mcqsuperposition",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Superposition Principle.",
+  "body": " Superposition Principle   Suppose and are solutions of the homogeneous system . Which statement is true?      Any linear combination is also a solution.    Correct. This is the superposition principle for homogeneous linear systems.      Only is a solution; scalar multiples are not.    No. All scalar multiples and linear combinations remain solutions.       is a solution only if .    No. The constants may be any real numbers.     "
+},
+{
+  "id": "mcqevalvectorsolution",
+  "level": "2",
+  "url": "ch-Textbook-24.html#mcqevalvectorsolution",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Evaluating a Vector-Valued Function.",
+  "body": " Evaluating a Vector-Valued Function   Let Compute .           Correct. Differentiate each component: and . Then evaluate at to get and .           No. This evaluates , not its derivative.           No. The first component derivative was computed incorrectly.     "
+},
+{
+  "id": "mcqchecksuperpositioncomputation",
+  "level": "2",
+  "url": "ch-Textbook-24.html#mcqchecksuperpositioncomputation",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Checking a Linear Combination of Solutions.",
+  "body": " Checking a Linear Combination of Solutions   Suppose are solutions to a homogeneous linear system . Compute            Correct. Multiply each vector by its scalar and add component‑wise: and . This also demonstrates the superposition principle.           No. This ignores the coefficients 3 and 2 in the linear combination.           Incorrect. The second component should include .     "
+},
+{
+  "id": "linsysopen1",
+  "level": "2",
+  "url": "ch-Textbook-24.html#linsysopen1",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "   Consider the system Suppose two candidate solutions are Verify explicitly whether each vector‑valued function satisfies the differential equation.    For , compute the derivative:   Now compute   Since , the first function is indeed a solution of the system. This matches how we define a solution: a vector‑valued function that satisfies the matrix equation .   For , compute the derivative:   Now compute   Again we have , so the second function also satisfies the system.  Both and are valid solutions of this homogeneous linear system.   "
+},
+{
+  "id": "linsysopen2",
+  "level": "2",
+  "url": "ch-Textbook-24.html#linsysopen2",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "   We define linear independence for vector‑valued functions using the condition for all . Consider the functions Determine whether these functions are linearly independent.    We test for constants and such that   The vector equation must hold for all . Equating components:   The second equation already forces . The first equation gives the same condition (because it must hold for all ).  Thus the solutions satisfy , giving a one‑parameter family of nontrivial combinations that equal the zero vector. Therefore, and are linearly dependent .  This matches the section’s definition: a set is dependent if a nontrivial linear combination yields for all .   "
 }
 ]
 
