@@ -127,24 +127,12 @@ A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108
         </li>
 
 
-        <li>
+
           <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
           </p>
-            <ol>
 
-<li>
-<p>
-Add something?
-</p>
-</li>
-
-
-</ol>
-</li>
-
-
-<li>
+          <li>
   <p>
     <alert>Do</alert> MyOpenMath questions from this section. 
   </p>
@@ -153,6 +141,414 @@ Add something?
 
         
 </ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+  
+ <exercise label="mcsubspaceplane">
+    <title>Is this a subspace?</title>
+    <statement>
+      <p>
+        Consider the subset
+        <m>S=\{(x,y,z)\in\mathbb{R}^3 : x - y + z = 0\}</m>.
+        Is <m>S</m> a subspace of <m>\mathbb{R}^3</m>?
+      </p>
+    </statement>
+
+<choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>Yes.</p>
+        </statement>
+        <feedback>
+          <p>
+            Correct. <m>S</m> is the solution set to the homogeneous linear equation
+            <m>x - y + z = 0</m>, so it is closed under all linear combinations and therefore
+            is a subspace. (Homogeneous solution sets are kernels of linear maps.) 
+          </p>
+        </feedback>
+      </choice>
+
+
+  <choice>
+        <statement>
+          <p>No, because it is “just” a plane.</p>
+        </statement>
+        <feedback>
+          <p>
+            Not quite. Planes through the origin defined by a homogeneous linear equation are 
+            subspaces; the key property is closure under linear combinations. 
+          </p>
+        </feedback>
+      </choice>
+
+      
+ <choice>
+        <statement>
+          <p>No, because it is not all of <m>\mathbb{R}^3</m>.</p>
+        </statement>
+        <feedback>
+          <p>
+            Subspaces need not be the whole space—they just need to contain <m>\vec{0}</m>
+            and be closed under addition and scalar multiplication.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    
+ <hint>
+      <p>
+        Sets defined as solutions to homogeneous linear equations are kernels of linear maps—kernels
+        are subspaces. 
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise label="mcsubspacenonhomogeneous">
+  <title>Is this set a subspace?</title>
+
+  <statement>
+    <p>
+      Consider the subset 
+      <m>
+        S=\{(x,y,z)\in\mathbb{R}^3 : x + 2y + 3z = 5\}.
+      </m>
+      Does <m>S</m> form a subspace of <m>\mathbb{R}^3</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice>
+      <statement>
+        <p>Yes, because the defining equation is linear.</p>
+      </statement>
+      <feedback>
+        <p>
+          Not quite. Only <em>homogeneous</em> linear equations 
+          (right-hand side equal to zero) define subspaces.  
+          This plane does not pass through the origin.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement>
+        <p>No, because the set does not contain the zero vector.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A subspace must contain <m>\vec{0}</m> and must be closed 
+          under all linear combinations.  
+          A nonhomogeneous equation such as 
+          <m>x + 2y + 3z = 5</m> cannot define a subspace. 
+          (The section explains that subspaces arise as solution sets 
+          to <em>homogeneous</em> equations—kernels.)  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>No, because it contains infinitely many points.</p>
+      </statement>
+      <feedback>
+        <p>
+          Subspaces can be infinite.  
+          The issue is that this set is not closed under linear combinations.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>Yes, because it is a plane in <m>\mathbb{R}^3</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Only planes through the origin are subspaces.  
+          This one is shifted and does not contain <m>\vec{0}</m>.
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+
+  <hint>
+    <p>
+      Compare with a homogeneous equation like <m>x + 2y + 3z = 0</m>.
+      Kernels of linear maps are always subspaces.
+    </p>
+  </hint>
+</exercise>
+
+<exercise label="mcsubspacedimensionkernelchallenge">
+  <title>Dimension Reasoning with a Kernel</title>
+
+  <statement>
+    <p>
+      Let <m>L:\mathbb{R}^{4} \to \mathbb{R}^{3}</m> be a linear transformation.
+  Suppose the matrix of <m>L</m> (in standard coordinates) has rank <m>2</m>.
+  Which of the following statements must be true?
+</p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p>
+         <m>\ker(L)</m> is a <m>2</m>‑dimensional subspace of <m>\mathbb{R}^{4}</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. By the Rank–Nullity theorem,
+          <m>\dim(\ker(L)) = 4 - \operatorname{rank}(L) = 4 - 2 = 2.</m>
+          The section emphasizes that kernels are always subspaces and have a well‑defined dimension.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+         <m>\ker(L)</m> contains exactly one nonzero vector.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          No. A <m>2</m>‑dimensional subspace contains infinitely many nonzero vectors.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          Every vector in <m>\mathbb{R}^{4}</m> has a unique expression as
+  <m>\vec{x}= \vec{k}+ \vec{r}</m> with <m>\vec{k}\in\ker(L)</m> and <m>\vec{r}=0</m>.
+</p>
+      </statement>
+      <feedback>
+        <p>
+          No. This incorrectly suggests the range is trivial.  
+          Only the decomposition with a complementary subspace (not necessarily <m>\{0\}</m>)
+          is guaranteed.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+         <m>\ker(L)</m> must equal <m>\mathbb{R}^{2}</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect.
+<m>\ker(L)</m> is a <m>2</m>‑dimensional subspace of <m>\mathbb{R}^{4}</m>,
+  not literally <m>\mathbb{R}^{2}</m>.
+  Subspaces “look like” <m>\mathbb{R}^{k}</m> only in abstract structure,
+  not as literal coordinate spaces.
+</p>  
+      </feedback>
+    </choice>
+
+  </choices>
+
+  <hint>
+    <p>
+      Use <m>\dim(\ker(L)) + \operatorname{rank}(L) = 4</m> 
+      and recall that kernels are always subspaces.  
+    </p>
+  </hint>
+
+</exercise>
+
+
+<exercise>
+    <statement>
+      <p>
+        Let <m>S = \{(a,a) : a \in \mathbb{R}\} \subset \mathbb{R}^{2}</m>.
+  Compute two sample vectors in <m>S</m>, add them, and check whether the sum lies in <m>S</m>.
+  Then multiply one vector by a scalar and check whether the result lies in <m>S</m>.
+</p>
+    </statement>
+
+    
+<solution>
+      <p>
+        Pick two simple vectors in <m>S</m>, for instance <m>(1,1)</m> and <m>(3,3)</m>. 
+        Their sum is
+        <m>(1,1) + (3,3) = (4,4)</m>,
+        which is still of the form <m>(a,a)</m>, so it lies in <m>S</m>.  
+        Next take a scalar multiple, for example
+        <m>5(1,1) = (5,5)</m>,
+        which is again of the form <m>(a,a)</m>, so it also lies in <m>S</m>. 
+        These computations illustrate the closure properties that the section lists as defining a subspace.  
+      </p>
+    </solution>
+  </exercise>
+
+  
+ <exercise>
+    <statement>
+      <p>
+       Let <m>S = \{(a,a) : a \in \mathbb{R}\}</m> as above.
+  Express <m>(a,a)</m> as a scalar multiple of a single vector and use this to find a basis for <m>S</m>.
+  Then compute the dimension of <m>S</m>.
+</p>
+    </statement>
+
+<solution>
+      <p>
+        We can rewrite any vector in <m>S</m> as
+        <m>(a,a) = a(1,1)</m>.
+        Hence <m>S = \operatorname{span}\{(1,1)\}</m>.
+  Because <m>(1,1)</m> is nonzero, it
+ is linearly independent, so
+        <m>\{(1,1)\}</m> is a basis for <m>S</m>. 
+        A basis with one vector means
+        <m>\dim S = 1</m>, matching the section’s explanation that a <m>k</m>‑dimensional subspace behaves like <m>\mathbb{R}^{k}</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  
+<exercise>
+    <statement>
+      <p>
+        Consider the linear transformation <m>L : \mathbb{R}^{3} \to \mathbb{R}^{2}</m> defined by  
+        <m>
+        L(x,y,z) = (x + y,\; y + z).
+        </m>
+        Compute the kernel of <m>L</m> by solving the homogeneous system  
+        <m>x + y = 0</m> and <m>y + z = 0</m>.  
+        Then find a basis for <m>\ker(L)</m> and compute its dimension.
+      </p>
+    </statement>
+
+ <solution>
+      <p>
+        Solving the system:
+      </p>
+      <p>
+        From <m>x + y = 0</m> we get <m>x = -y</m>.  
+        From <m>y + z = 0</m> we get <m>z = -y</m>.  
+        Letting <m>y = t</m>, a free variable, we obtain
+        <m>(x,y,z) = (-t,\, t,\, -t) = t(-1,1,-1).</m>
+      </p>
+      <p>
+        Thus
+        <m>\ker(L) = \operatorname{span}\{(-1,1,-1)\}</m>.
+        The basis is <m>\{(-1,1,-1)\}</m>, and the dimension is  
+        <m>\dim \ker(L) = 1</m>, consistent with the theoretical description that kernels are subspaces of <m>\mathbb{R}^{n}</m> and have well-defined dimension.  
+
+      </p>
+    </solution>
+  </exercise>
+
+
+  <!-- EXERCISE 4 -->
+  <exercise>
+    <statement>
+      <p>
+        Consider an arbitrary subset <m>S \subset \mathbb{R}^{n}</m>.
+        Students often think that a subspace must “look geometric” (a line through the origin, a plane through the origin, etc.).  
+        Provide a conceptual explanation—without checking closure conditions on any specific examples—of <em>why</em> requiring closure under <em>all</em> linear combinations 
+        (not just addition or scalar multiplication alone) is the essential feature that distinguishes subspaces from general subsets. 
+      </p>
+    </statement>
+
+    
+<solution>
+      <p>
+        A subspace must behave like a smaller copy of <m>\mathbb{R}^{k}</m> living inside <m>\mathbb{R}^{n}</m>, meaning that vectors can be combined in
+  exactly the same ways we can combine ordinary vectors in <m>\mathbb{R}^{n}</m>—by forming <em>any</em> linear combination.
+</p>
+<p>
+        If a subset is closed under both addition and scalar multiplication, then it is automatically closed under <em>all</em> linear combinations 
+        (because <m>a\vec{x}+ b\vec{y}</m> is simply repeated use of these two operations).  
+        The section emphasizes that this “linear–combination stability” is what makes the solution set of a homogeneous linear system behave like a Euclidean space 
+        <m>\mathbb{R}^{k}</m> and justifies calling it a subspace.  
+        Without this full closure property, the set would not support the algebraic structure required for bases, dimension, or unique coordinate representations. 
+      </p>
+    </solution>
+  </exercise>
+
+  
+<!-- EXERCISE 2 -->
+  <exercise>
+    <statement>
+      <p>
+        The notes state that while the dimension of a subspace is unique, the basis is not.  
+        Explain conceptually—without doing any computations—<em>why</em> a subspace can have many different bases,  
+        but cannot have more than one dimension.  
+        Use ideas from the section to justify why different bases still span “the same amount of space.” 
+      </p>
+    </statement>
+    
+ <solution>
+      <p>
+        Every basis of a subspace <m>S</m> has two defining features: the vectors must be linearly independent,
+  and they must span all of <m>S</m>
+</p>. 
+<p> Many different choices of spanning vectors can achieve this job,  
+        because starting from one basis we can replace vectors with new ones obtained from linear combinations, 
+        as long as we maintain independence and still span the whole set.  
+        Therefore, many bases exist.  
+      </p>
+      <p>
+        However, the <em>number</em> of vectors in any basis is fixed: it is the dimension of the subspace.  
+        If one basis had more vectors than another, that would contradict the meaning of “linearly independent spanning set,”  
+        since the section explains that a subspace <m>S</m> has a unique positive integer <m>k</m> such that
+  every vector in <m>S</m> can be written uniquely as a combination of <m>k</m>
+ independent basis vectors.  
+        This uniqueness of representation forces the dimension to be unique, even though the choice of basis is not. 
+ </p>
+    </solution>
+  </exercise>
+
+  
+  <!-- EXERCISE 3 -->
+  <exercise>
+    <statement>
+      <p>
+        The kernel of a linear transformation <m>L : \mathbb{R}^{n} \to \mathbb{R}^{m}</m> is defined as the set <m>\ker(L) = \{\vec{x}: L\vec{x}= \vec{0}\}</m>.
+</p> 
+<p>
+        Provide a conceptual explanation of <em>why</em> the kernel must always be a subspace,  
+        and describe what this tells us about the “shape” of solution sets to homogeneous linear equations.
+      </p>
+    </statement>
+
+    
+  <solution>
+      <p>
+        Because <m>L</m> is linear, <m>L(\vec{x}+ \vec{y}) = L\vec{x}+ L\vec{y}</m> and <m>L(\alpha \vec{x}) = \alpha L\vec{x}</m> for all scalars <m>\alpha</m>.
+</p>
+
+<p>
+  If <m>\vec{x}</m> and <m>\vec{y}</m> are in the kernel, then <m>L\vec{x}= \vec{0}</m> and <m>L\vec{y}= \vec{0}</m>,
+  so <m>L(\vec{x}+ \vec{y}) = \vec{0}</m> and <m>L(\alpha \vec{x}) = \vec{0}</m>.
+        Thus the kernel contains every linear combination of its vectors; it is automatically a subspace.  
+      </p>
+      <p>
+        Conceptually, this means the solution set to any homogeneous linear system “inherits” the geometry of a Euclidean subspace:  it behaves like a flat space of some dimension <m>k</m>, possibly much smaller than <m>n</m>.
+  The notes highlight this by explaining that kernels look and act like <m>\mathbb{R}^{k}</m>
+once a basis has been chosen,  
+        and vectors in the kernel have unique coordinate representations in terms of that basis.  
+ </p>
+    </solution>
+  </exercise>
+
+</exercises>
+
+
+
+
+
 
 </section>
 
