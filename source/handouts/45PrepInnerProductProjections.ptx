@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 4.5 - Inner Product and Projections</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now introduce the inner product as a tool for doing geometry in 
+<m>\mathbb{R}^n</m>, beginning with the standard dot product and the 
+properties that characterize inner products.  The section explains how the 
+inner product determines vector length and provides a way to compute angles 
+via the cosine formula 
+<m>\langle \vec{x},\vec{y}\rangle = \|\vec{x}\|\,\|\vec{y}\|\cos(\theta)</m>, 
+which leads naturally to the concept of orthogonality—vectors whose inner 
+product is zero.  Using these ideas, the section develops the formula for the 
+orthogonal projection of a vector onto a given direction, and shows how 
+projections split a vector into components parallel and perpendicular to a 
+subspace.  Finally, the section highlights the usefulness of orthogonal and 
+orthonormal bases, where computations such as projections and coordinate 
+representations become especially simple. 
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Define the standard <em>inner product</em> in <m>\mathbb{R}^n</m> and list its key properties.
+            </p>
+          </li>
+
+<li>
+<p>
+Explain how the inner product determines vector length and the angle 
+      between two vectors. 
+
+</p>
+</li>
+
+          <li>
+            <p>
+Recognize when two vectors are <em>orthogonal</em> by checking whether their 
+      inner product is zero.
+
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass45">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/rgxyxcTwvuo?si=PDREpwodrrlq0nlU"> 
+Subpsaces are the Natural Subsets of Linear Algebra (6:25)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/innerproduct_section.html#subsection-185">Subsection A.5.1: Inner product and orthogonality</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/fo9wmJ0lzh8?si=15pVn1p5GnYDit1o">
+The Dimension of a Subspace (5:10)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/RFe3dEdV5M8?si=kYo-v4EqofQmUiyK">
+The Basis of a Subspace (3:52)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/subspaces_section.html#subsection-183">Subsection A.4.2: Kernel</url>.
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/YQRioQ1XUck?si=afFUeDo-cd_7V0uT">
+The Null Space and Column Space of a Matrix (10:40)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/xQeH2vrQ-5A?si=CqsPYSmeiVjqgxBu">
+Computing Dimension of Null Space and Column Space (3:26)</url> by Trevor Bazett.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/vpl8EZwrqPk?si=8WRMnflDnC8otson">
+The Dimension Theorem (4:01)</url> by Trevor Bazett.
+</p>
+</li>
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/subspaces_section.html#subsection-184">Subsection A.4.3: Exercises 
+A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108</url>.
+          </p>
+        </li>
+
+
+
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+
+          <li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+ <exercise label="mcqinnerproducttruefalse1">
+  <title>Orthogonality</title>
+  <statement>
+    <p>
+      True or False: Two vectors <m>\vec{x}</m> and <m>\vec{y}</m> in 
+      <m>\mathbb{R}^n</m> are orthogonal if 
+      <m>\langle \vec{x}, \vec{y} \rangle = 0</m>.
+    </p>
+  </statement>
+
+  <choices>
+    <choice correct="yes">
+      <statement><p>True</p></statement>
+      <feedback>
+        <p>
+          Correct. The section states that a right angle corresponds to <m> \langle \vec{x}, \vec{y} \rangle </m>.
+        </p>
+      </feedback>
+    </choice>
+    <choice>
+      <statement><p>False</p></statement>
+      <feedback>
+        <p>
+          Incorrect. Zero inner product exactly means a right angle.
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</exercise>
+
+
+<exercise label="mcqinnerproductangle">
+  <title>Angle Formula</title>
+  <statement>
+    <p>
+      Which formula correctly computes the cosine of the angle 
+      <m>\theta</m> between two nonzero vectors 
+      <m>\vec{x}</m> and <m>\vec{y}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>\displaystyle \cos(\theta) = 
+          \frac{\langle \vec{x}, \vec{y} \rangle}{\|\vec{x}\|\,\|\vec{y}\|}</m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This formula appears explicitly in the section. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>\displaystyle \cos(\theta) = \|\vec{x} - \vec{y}\|</m>
+        </p>
+      </statement>
+      <feedback><p>Incorrect.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>\displaystyle \cos(\theta) = \|\vec{x}\| + \|\vec{y}\|</m>
+        </p>
+      </statement>
+      <feedback><p>No, this sums lengths, not angles.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>\displaystyle \cos(\theta) = \langle \vec{x}, \vec{y} \rangle</m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Not quite. You must divide by the product of the lengths.
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</exercise>
+
+
+<exercise label="mcqprojectioneasy">
+  <title>Projection onto a Vector</title>
+  <statement>
+    <p>
+      The orthogonal projection of a vector 
+      <m>\vec{w}</m> onto a nonzero vector <m>\vec{v}</m> is:
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+          \displaystyle 
+          \operatorname{proj}_{\vec{v}}(\vec{w}) =
+          \frac{\langle \vec{w}, \vec{v} \rangle}{\langle \vec{v}, \vec{v} \rangle}
+          \,\vec{v}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This projection formula is given in the section's examples. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\vec{w} - \vec{v}</m></p>
+      </statement>
+      <feedback><p>No, that's just a difference of vectors.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\|\vec{w}\|\;\vec{v}</m></p>
+      </statement>
+      <feedback><p>No, this scales <m>\vec{v}</m> incorrectly.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\langle \vec{w}, \vec{v} \rangle</m></p>
+      </statement>
+      <feedback>
+        <p>
+          This is only the numerator of the projection coefficient.
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+</exercise> 
+ 
+
+
+
+</exercises>
+
+
+
+
+
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives45">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+<p>
+
+Compute the orthogonal projection of a vector onto another vector and 
+      interpret the geometric meaning of the projection formula.
+</p>
+          </li>
+
+          <li>
+<p>
+Decompose a vector into components parallel and perpendicular to a 
+      given subspace using projection methods.
+
+</p>
+          </li>
+
+          <li>
+            <p>
+<p>
+Describe why orthogonal and orthonormal bases simplify computations, 
+      including projections and coordinate representations.
+</p>
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>

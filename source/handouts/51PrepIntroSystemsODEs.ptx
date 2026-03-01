@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.1 - Introduction to Systems of ODEs</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now introduce the idea of a <em>system</em> of ordinary differential 
+equations, which arises whenever there are multiple dependent variables whose 
+rates of change may influence one another. Instead of a single function 
+<m>y(x)</m>, we may have several functions 
+<m>y_1, y_2, \ldots, y_n</m> governed by multiple differential equations, 
+each involving the variables and their derivatives. The section explains that 
+systems can be of various orders—first‑order systems being the most common—and 
+solutions consist of a collection of functions that simultaneously satisfy all 
+equations in the system. Initial conditions must specify all dependent variables 
+(and possibly their derivatives) at a given point. The section includes simple 
+examples showing how some systems can be solved by decoupling: solving one 
+equation first and then substituting into the others. This introduces the basic 
+terminology and structure that lead naturally to matrix methods and linear 
+systems in later sections.
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Recognize what it means to have multiple dependent variables
+      <m>y_1, y_2, \ldots, y_n</m> in a system of ODEs and understand the
+      notation used to describe such systems.
+            </p>
+          </li>
+
+<li>
+<p>
+Distinguish between first‑order and <em>higher‑order systems</em> and describe
+      what constitutes a solution to a system.
+</p>
+</li>
+
+          <li>
+            <p>
+Explain the form and purpose of initial conditions for systems, including
+      specifying values of all dependent variables (and possibly derivatives)
+      at a given point.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass51">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_introtosys.html#subsection-130">Subsection 7.1.1: Systems</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://www.youtube.com/watch?v=JyvA7EJQVto">
+Introduction to Linear Systems of Differential Equations (10:15)</url> by Katherine Heller.
+</p>
+</li>
+
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_introtosys.html#subsection-131">Subsection 7.1.2: Applications</url>.
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/MW97ZFavZ0g?si=whOb79cE1tl-fWpU">
+Systems of Differential Equations Part 1: Modeling and Elimination (7:49)</url> by Professor Dave Explains.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_introtosys.html#subsection-132">Subsection 7.1.3: Changing to first order</url>.
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/8i_83TxjBTA?si=Z9d_Wc6dSEIJr5IT">
+Converting ODEs into Systems (6:14)</url> by Mike, the Mathematician.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_introtosys.html#subsection-133">Subsection 7.1.4: Autonomous systems and vector fields</url>.
+  </p>
+</li>
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_introtosys.html#subsection-135">Subsection 7.1.6: Exercises 
+7.1.2, 7.1.4, 7.1.101, 7.1.103</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+ 
+ <exercise label="mcqsysdefinition">
+  <title>What is a system of ODEs?</title>
+
+  <statement>
+    <p>
+      Which of the following best describes a <em>system</em> of ODEs?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p>
+          A collection of differential equations involving several dependent
+          variables <m>y_1, y_2, \ldots, y_n</m> and their derivatives.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A system consists of multiple ODEs involving several 
+          dependent variables.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          A single equation that has more than one independent variable.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect. Systems involve *several dependent variables*, not 
+          multiple independent variables.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          Any ODE with order greater than one.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          No. Higher-order ODEs are not necessarily systems.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+
+<exercise label="mcqsyssolution">
+  <title>What is a solution to a system?</title>
+
+  <statement>
+    <p>
+      For a first-order system  
+      <m>
+        x_1' = g_1(x_1, x_2, x_3, t),\ 
+        x_2' = g_2(x_1, x_2, x_3, t),\ 
+        x_3' = g_3(x_1, x_2, x_3, t)
+      </m>,
+      what does it mean to be a <em>solution</em>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          A triple of functions <m>x_1(t), x_2(t), x_3(t)</m> that satisfies 
+          all three equations simultaneously.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A solution consists of functions that satisfy every 
+          equation in the system. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          Any function <m>x(t)</m> that satisfies at least one equation.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          No. A solution must satisfy *all* equations in the system.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          Only <m>x_1(t)</m> must satisfy its equation; the other functions 
+          may be arbitrary.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect. Every dependent variable must satisfy its own ODE.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+
+<exercise label="mcqsysic">
+  <title>Initial Conditions for Systems</title>
+
+  <statement>
+    <p>
+      For a system with dependent variables <m>x_1, x_2, x_3</m>,
+      what do appropriate initial conditions look like?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          Values for each dependent variable at a point, such as  
+          <m>x_1(0)=a_1</m>, <m>x_2(0)=a_2</m>, <m>x_3(0)=a_3</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. An initial condition must specify each variable’s value 
+          at the starting time.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          Only one initial value is needed, since the equations are linked.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          No. Each variable requires its own initial value.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          Only derivatives need initial values.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect for first-order systems; values of the variables themselves
+          must be specified.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqsysorder">
+  <title>Determining the Order of a System</title>
+
+  <statement>
+    <p>
+      Consider the system
+      <md>
+        <mrow> y_1'' \amp = y_2' + y_1, </mrow>
+        <mrow> y_2'' \amp = 3y_2. </mrow>
+      </md>
+      What is the order of this system?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>Second-order, because the highest derivatives in the system are second derivatives.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The section explains that the order of a system is the highest derivative
+          appearing in any of the equations. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>First-order, because there are two equations.</p></statement>
+      <feedback>
+        <p>No. The number of equations does not determine order.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Fourth-order, because two second derivatives add up to order four.</p></statement>
+      <feedback>
+        <p>
+          Incorrect. Orders are not added; the system’s order is simply the highest derivative
+          that appears.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+
+<exercise label="mcqsysgeneralsolution">
+  <title>Understanding a General Solution</title>
+
+  <statement>
+    <p>
+      A system of two first-order ODEs has a general solution
+      <md>
+        <mrow> x_1(t) \amp = C_1 e^{t}, </mrow>
+        <mrow> x_2(t) \amp = C_1 e^{t} + C_2 e^{2t}. </mrow>
+      </md>
+      What does this general solution represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          A family of solutions containing two arbitrary constants, one for each initial condition of the system.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. For a system with two dependent variables, the general solution contains
+          two constants so that any initial conditions <m>x_1(t_0)</m> and <m>x_2(t_0)</m> can be matched.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A single solution valid only for the initial condition <m>x_1(0)=1</m>.</p></statement>
+      <feedback>
+        <p>No. This general solution works for <em>any</em> initial conditions.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A solution that is valid only when <m>C_1 = C_2</m>.</p></statement>
+      <feedback>
+        <p>No. <m>C_1</m> and <m>C_2</m> are independent constants.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+  <exercise xml:id="sysbasicidentification">
+    <statement>
+      <p>
+        Consider the pair of equations
+        <md>
+          <mrow> y_1' \amp = 3y_1, </mrow>
+          <mrow> y_2' \amp = y_1 + y_2. </mrow>
+        </md>
+        Explain why this pair of equations forms a <em>first-order system</em> of ODEs, and
+        identify the dependent and independent variables.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        This is a first-order system because each equation involves only the
+        first derivatives <m>y_1'</m> and <m>y_2'</m> and no higher derivatives.
+        A system of ODEs consists of several differential equations involving
+        multiple dependent variables. 
+      </p>
+      <p>
+        The dependent variables are <m>y_1</m> and <m>y_2</m>, and the independent
+        variable is the implied variable (typically <m>t</m> or <m>x</m>) with
+        respect to which the derivatives are taken.
+      </p>
+    </solution>
+  </exercise>
+
+
+  <exercise xml:id="syssolutionmeaning">
+    <statement>
+      <p>
+        Suppose we have a first-order system
+        <md>
+          <mrow> x_1' \amp = g_1(x_1,x_2,t), </mrow>
+          <mrow> x_2' \amp = g_2(x_1,x_2,t). </mrow>
+        </md>
+        What does it mean for a pair of functions
+        <m>x_1(t), x_2(t)</m> to be a solution to this system?
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        A solution to the system is a pair of functions
+        <m>x_1(t)</m> and <m>x_2(t)</m> that satisfy both differential
+        equations for all relevant values of <m>t</m>. That is,
+        <m>x_1'(t) = g_1(x_1(t),x_2(t),t)</m> and
+        <m>x_2'(t) = g_2(x_1(t),x_2(t),t)</m> simultaneously. 
+      </p>
+      <p>
+        Because the system has two dependent variables, both must satisfy
+        their equations for the pair to count as a valid solution.
+      </p>
+    </solution>
+  </exercise>
+
+
+  <exercise xml:id="syssimpledecoupling">
+    <statement>
+      <p>
+        Consider the system from the section:
+        <md>
+          <mrow> y_1' \amp = y_1, </mrow>
+          <mrow> y_2' \amp = y_1 y_2, </mrow>
+        </md>
+        with initial conditions <m>y_1(0)=1</m> and <m>y_2(0)=2</m>.
+        Solve for <m>y_1(t)</m> and then use it to find <m>y_2(t)</m>.
+      </p>
+    </statement>
+
+    
+<solution>
+    <p>
+      We begin by observing that the first equation,
+      <m>y_1' = y_1</m>,
+      is independent of <m>y_2</m>.  This makes the system
+      <em>decoupled</em> in the sense described in the section:
+      we can solve for <m>y_1</m> first and then substitute it
+      into the equation for <m>y_2</m>.
+
+</p>
+
+    <p>
+      Solve <m>y_1' = y_1</m>:
+      the general solution is
+      <m>y_1(t) = C_1 e^{t}</m>.
+      Apply the initial condition <m>y_1(0) = 1</m>:
+      <m>1 = C_1 e^0</m>, hence <m>C_1 = 1</m>.
+    </p>
+
+<p>
+      Therefore,
+      <me>
+        y_1(t) = e^{t}.
+      </me>
+    </p>
+
+    
+   <p>
+      Next, substitute <m>y_1(t) = e^{t}</m> into the second equation
+      <m>y_2' = y_1\,y_2</m>.
+      We obtain the first-order linear ODE:
+      <m>
+        y_2' = e^{t} y_2.
+      </m>
+    </p>
+
+
+ <p>
+      Rewrite this in standard linear form:
+      <m>
+        y_2' - e^{t} y_2 = 0.
+      </m>
+      The integrating factor is
+      <m>\mu(t) = e^{-\int e^{t} \, dt} = e^{-e^{t}}.</m>
+      Multiplying through by the integrating factor gives
+      <m>
+        (e^{-e^{t}} y_2)' = 0.
+      </m>
+      Integrating both sides yields
+      <m>
+        e^{-e^{t}} y_2 = C_2.
+      </m>
+    </p>
+
+    
+  <p>
+      Solving for <m>y_2</m>, we get
+      <me>
+        y_2(t) = C_2\, e^{e^{t}}.
+      </me>
+      Now apply the initial condition <m>y_2(0)=2</m>.
+      When <m>t=0</m> we have
+      <m>
+        y_2(0) = C_2\, e^{e^{0}}
+               = C_2\, e^{1}
+               = C_2 e.
+      </m>
+      Hence <m>C_2 = 2/e</m>.
+    </p>
+
+    <p>
+      Therefore,
+      <me>
+        y_2(t)
+        = \frac{2}{e}\, e^{e^{t}}
+        = 2\, e^{\,e^{t}-1}.
+      </me>
+    </p>
+
+    
+  <p>
+      Putting both components together, the solution to the system is
+    </p>
+
+    <me>
+      y_1(t) = e^{t}, \qquad
+      y_2(t) = 2\, e^{\,e^{t}-1}.
+    </me>
+
+    </solution>
+  </exercise>
+
+
+
+
+</exercises>
+
+
+
+
+
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives51">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+<p>
+Solve simple systems by <em>decoupling</em>, first solving one equation
+      and then substituting its solution into the remaining equations.
+</p>
+          </li>
+
+          <li>
+<p>
+Interpret how general solutions of systems depend on several arbitrary
+      constants and compare this structure to the general solution of a single
+      ODE.
+</p>
+          </li>
+
+          <li>
+            <p>
+<p>
+ Describe how a single higher‑order ODE can be rewritten as a <em>first‑order
+      system</em>, motivating the matrix‑based viewpoint that follows in later
+      sections.
+</p>
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>

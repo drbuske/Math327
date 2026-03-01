@@ -366,6 +366,107 @@ A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108
 
 </exercise>
 
+<exercise label="fibkerneldimensioneasy">
+  <title>Dimension of a Kernel</title>
+
+  <statement>
+    <p>
+      Suppose a linear transformation 
+      <m>L:\mathbb{R}^3 \to \mathbb{R}^2</m> 
+      has rank <m>1</m>.  
+      By the Rank–Nullity Theorem, the dimension of 
+      <m>\ker(L)</m> is 
+      <fillin size="2" answer="2"/>.
+    </p>
+  </statement>
+
+  <feedback>
+    <p>
+      Because <m>\dim(\ker(L)) + \operatorname{rank}(L) = 3</m>,  
+      we have <m>\dim(\ker(L)) = 3 - 1 = 2</m>. 
+      The section emphasizes that kernels of linear maps are subspaces
+      with well‑defined dimension. 
+    </p>
+  </feedback>
+
+  <hint>
+    <p>
+      Use: <m>\dim(\ker(L)) + \operatorname{rank}(L) = \text{domain dimension}.</m>
+    </p>
+  </hint>
+</exercise>
+
+<exercise label="mcfillblanksubspace">
+  <title>Subspace Check</title>
+
+  <statement>
+    <p>
+      Fill in the blank by choosing the correct statement.  
+      A set is a subspace of <m>\mathbb{R}^n</m> if it is closed under
+      vector addition and scalar multiplication, and it must contain
+      <em>_____</em>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p>the zero vector</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct!  
+          A subspace must include <m>\vec{0}</m>, because closure under 
+          scalar multiplication requires that <m>0\vec{x} = \vec{0}</m> 
+          be in the set.  
+          This is emphasized in the subspaces section.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>all standard basis vectors</p>
+      </statement>
+      <feedback>
+        <p>
+          No. A subspace may or may not contain individual basis vectors 
+          like <m>e_1</m> or <m>e_2</m>; only closure properties matter.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>every vector of <m>\mathbb{R}^n</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect. That would describe the entire space, not a general subspace.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>all solutions to at least one linear equation</p>
+      </statement>
+      <feedback>
+        <p>
+          Not quite. Only <em>homogeneous</em> linear equations guarantee 
+          subspaces.  
+        </p>
+      </feedback>
+    </choice>
+  </choices>
+
+  <hint>
+    <p>
+      What vector must appear when you multiply any vector in the set by zero?
+    </p>
+  </hint>
+</exercise>
+
 
 <exercise>
     <statement>

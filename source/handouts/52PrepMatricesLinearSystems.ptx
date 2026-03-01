@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.2 - Matrices and Linear Systems</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now introduce matrices as essential tools for studying linear systems 
+of ODEs. The section reviews the basic structure of a matrix as an 
+<m>m \times n</m> array, defines vectors as column matrices, and recalls 
+fundamental matrix operations such as scalar multiplication, addition, and 
+transpose. With this foundation, the section develops matrix multiplication 
+using the dot product and emphasizes the importance of compatible dimensions 
+(e.g., multiplying an <m>m \times n</m> matrix by an <m>n \times p</m> matrix to 
+obtain an <m>m \times p</m> matrix). These operations enable us to rewrite a 
+system of linear ODEs concisely as a single vector equation 
+<m>\vec{x}' = A \vec{x}</m>, preparing the way for later methods such as the 
+eigenvalue approach and matrix exponentials. The goal is to transform systems 
+into a compact algebraic form that reveals structure and makes computations more 
+systematic. 
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Recall the definitions of a matrix, a column vector, and matrix size 
+      <m>m \times n</m>.
+            </p>
+          </li>
+
+<li>
+<p>
+Perform scalar multiplication, matrix addition, and compute the 
+      transpose of a matrix. 
+</p>
+</li>
+
+          <li>
+            <p>
+  Understand the definition of matrix multiplication using dot products 
+      and identify when the product <m>A B</m> is defined. 
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass52">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matrix.html#subsection-136">Subsection 7.2.1: Matrices and vectors</url>.   
+  </p>
+</li>
+
+
+<li>
+  <p>
+    <alert>Read</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_matrix.html#subsection-137">Subsection 7.2.2: Matrix multiplication</url>.
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/6Hmzu-WKCjc?si=KLvdHoyZVPRos_JI">
+Matrix Multiplication (9:35)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matrix.html#subsection-138">Subsection 7.2.3: The determinant</url>.
+  </p>
+</li>
+
+<li>
+  <p>
+    (Optional) <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/det_section.html#det_section">Section A.6: Determinant</url> for more details on the determinant.
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/OI07C1HsOuc?si=yPlukSG8ta9_UljS">
+Evaluating Determinants of a 2x2 and 3x2 Matrix (7:35)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matrix.html#subsection-139">Subsection 7.2.4: Solving linear systems</url>.
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/PTN8rganLWo?si=9tMDnRFtESXM4fmE">
+Solving a System of Linear Equations Using Inverses (6:27)</url> by Patrick J.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matrix.html#subsection-140">Subsection 7.2.5: Computing the inverse</url>.
+  </p>
+</li>
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_matrix.html#subsection-141">Subsection 7.2.6: Exercises 
+7.2.3, 7.2.5, 7.2.6, 7.2.8, 7.2.9, 7.2.101, 7.2.103</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+ <exercise label="mcqmatrixsize">
+  <title>Matrix Size and Vectors</title>
+
+  <statement>
+    <p>
+      Which of the following correctly describes a column vector?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p>
+          A column vector is an <m>m \times 1</m> matrix.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A vector is treated as a column matrix in this section.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>An <m>1 \times m</m> matrix.</p></statement>
+      <feedback>
+        <p>No—that is a row vector.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A square matrix with <m>m=n</m>.</p></statement>
+      <feedback>
+        <p>No—square matrices are unrelated to the definition of vectors.</p>
+      </feedback>
+    </choice>
+  </choices>
+</exercise>
+
+
+<exercise label="mcq-matrix-multiplication">
+  <title>Matrix Multiplication Rules</title>
+
+  <statement>
+    <p>
+      When is the matrix product <m>A B</m> defined?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          When <m>A</m> is <m>m \times n</m> and <m>B</m> is <m>n \times p</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The number of columns of <m>A</m> must equal the number of
+          rows of <m>B</m>. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>When both matrices have the same number of rows.</p></statement>
+      <feedback>
+        <p>No. Matching rows is not the requirement.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Only when both matrices are square.</p></statement>
+      <feedback>
+        <p>
+          No. Matrix multiplication does not require square matrices.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+
+<exercise label="mcq-vector-form-system">
+  <title>Writing a System in Matrix Form</title>
+
+  <statement>
+    <p>
+      Suppose we have the system
+      <md>
+        <mrow> x_1' \amp = 2x_1 + 3x_2, </mrow> 
+        <mrow> x_2' \amp = -x_1 + 4x_2. </mrow>
+      </md>
+      Which vector‑matrix form is correct?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            \vec{x}' =
+            \begin{bmatrix}
+              2 \amp 3 \\
+              -1 \amp 4
+            \end{bmatrix}
+            \vec{x}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The matrix is constructed from the coefficients of the system
+          exactly as described in the section.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \vec{x}' =
+            \begin{bmatrix}
+              x_1 \amp x_2 \\
+              x_1 \amp x_2
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>No. The matrix should contain constants, not variables.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \vec{x}' =
+            \begin{bmatrix}
+              2x_1 + 3x_2 \\
+              -x_1 + 4x_2
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          This is simply rewriting the system, not expressing it as 
+          <m>A \vec{x}</m>.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+ 
+<exercise label="mcqtranspose">
+  <title>Understanding the Transpose</title>
+
+  <statement>
+    <p>
+      If <m>A</m> is a matrix, what is the transpose <m>A^{T}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>The matrix obtained by swapping rows and columns of <m>A</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The transpose flips rows into columns and vice versa.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The matrix formed by multiplying every entry of <m>A</m> by <m>-1</m>.</p></statement>
+      <feedback><p>No. That describes scalar multiplication by <m>-1</m>, not transposition.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The matrix you obtain by reversing the order of columns only.</p></statement>
+      <feedback><p>No. Transpose reverses rows and columns.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqdeterminantinvertibility">
+  <title>Determinant and Invertibility</title>
+
+  <statement>
+    <p>
+      For a square matrix <m>A</m>, which statement about its determinant is correct?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>A</m> is invertible exactly when <m>\det(A) \neq 0</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A nonzero determinant means the matrix is invertible, which is
+          essential when rewriting or solving linear systems using 
+          <m>\vec{x}' = A\vec{x}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\det(A)</m> must always be positive for <m>A</m> to be invertible.</p>
+      </statement>
+      <feedback>
+        <p>
+          No. A determinant may be negative or positive; only zero prevents invertibility.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>A</m> is invertible when <m>\det(A) = 0</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect. A zero determinant means <m>A</m> is singular and cannot be inverted.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmatrixinverse">
+  <title>Understanding Inverses</title>
+
+  <statement>
+    <p>
+      Suppose <m>A</m> is a square matrix and <m>A^{-1}</m> exists.  
+      What property does <m>A^{-1}</m> satisfy?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>A A^{-1} = I</m> and <m>A^{-1} A = I</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The inverse undoes the effect of <m>A</m>, producing the 
+          identity matrix <m>I</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>A^{-1}</m> is obtained by transposing <m>A</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          No. The transpose <m>A^{T}</m> is generally unrelated to the inverse.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>A^{-1}</m> exists for every square matrix.</p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect. Only matrices with nonzero determinant are invertible.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+
+  <!-- Problem 1 -->
+  <exercise xml:id="matrixcomputation1">
+    <!-- <title>Matrix Addition and Scalar Multiplication</title> -->
+    <statement>
+      <p>
+        Let 
+        <m>
+          A = \begin{bmatrix}
+            1 \amp 2 \\
+            3 \amp 4
+          \end{bmatrix},
+          B = \begin{bmatrix}
+            2 \amp 0 \\
+            -1 \amp 5
+          \end{bmatrix}.
+        </m>
+        Compute <m>2A + B</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        First compute <m>2A</m> by multiplying every entry of <m>A</m> by 2:
+      </p>
+      <me>
+        2A = 
+        \begin{bmatrix}
+          2\cdot 1 \amp 2\cdot 2 \\
+          2\cdot 3 \amp 2\cdot 4
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          2 \amp 4 \\
+          6 \amp 8
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Now add <m>B</m> element‑wise:
+      </p>
+
+      <me>
+        2A + B =
+        \begin{bmatrix}
+          2 \amp 4 \\
+          6 \amp 8
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+          2 \amp 0 \\
+          -1 \amp 5
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          4 \amp 4 \\
+          5 \amp 13
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Matrix addition and scalar multiplication work entry by entry.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- Problem 2 -->
+  <exercise xml:id="matrixcomputation2">
+    <!-- <title>Transpose of a Matrix</title> -->
+    <statement>
+      <p>
+        Let
+        <m>
+          C =
+          \begin{bmatrix}
+            1 \amp 4 \amp 2 \\
+            -3 \amp 0 \amp 5
+          \end{bmatrix}.
+        </m>
+        Compute the transpose <m>C^{T}</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The transpose swaps rows and columns.  
+        So the first row of <m>C</m> becomes the first column of <m>C^{T}</m>,
+        and the second row becomes the second column.
+      </p>
+
+      <me>
+        C^{T} =
+        \begin{bmatrix}
+          1 \amp -3 \\
+          4 \amp 0 \\
+          2 \amp 5
+        \end{bmatrix}.
+      </me>
+    </solution>
+  </exercise>
+
+
+
+  <!-- Problem 3 -->
+  <exercise xml:id="matrixcomputation3">
+    <!-- <title>Matrix–Vector Multiplication</title> -->
+    <statement>
+      <p>
+        Let 
+        <m>
+          A = 
+          \begin{bmatrix}
+            2 \amp 3 \\
+            -1 \amp 4
+          \end{bmatrix},
+          \vec{x} =
+          \begin{bmatrix}
+            1 \\ 2
+          \end{bmatrix}.
+        </m>
+        Compute <m>A \vec{x}</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Multiply each row of <m>A</m> by the column vector <m>\vec{x}</m> 
+        using dot products, as defined in the section.
+      </p>
+
+      <p>
+        First row:
+        <m>2\cdot 1 + 3\cdot 2 = 2 + 6 = 8</m>.
+      </p>
+
+      <p>
+        Second row:
+        <m>-1\cdot 1 + 4\cdot 2 = -1 + 8 = 7</m>.
+      </p>
+
+      <me>
+        A \vec{x} =
+        \begin{bmatrix}
+          8 \\
+          7
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        This matches the definition of matrix multiplication using row–column 
+        dot products.
+      </p>
+    </solution>
+  </exercise>
+
+
+</exercises>
+
+
+
+
+
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives52">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+<p>
+ Rewrite a system of first-order linear ODEs in vector–matrix form 
+      <m>\vec{x}' = A \vec{x}</m> and interpret the meaning of each component.
+</p>
+          </li>
+
+          <li>
+<p>
+Verify algebraic properties of matrices (such as distributivity and 
+      compatibility with scalar multiplication) that support solving systems 
+      of ODEs.
+</p>
+          </li>
+
+          <li>
+            <p>
+<p>
+Analyze how matrix structure (such as size and arrangement of entries) 
+      influences the behavior and solvability of linear systems.
+</p>
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>

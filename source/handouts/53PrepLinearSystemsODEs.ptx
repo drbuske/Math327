@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.3 - Linear Systems of ODEs</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now introduce linear systems of ODEs by viewing them through the lens 
+of vector‑valued and matrix‑valued functions. A first‑order linear system can be 
+written compactly in the vector form <m>\vec{x}' = P(t)\vec{x} + \vec{f}(t)</m>, 
+where <m>P(t)</m> is a matrix-valued function and <m>\vec{x}(t)</m> is a 
+vector-valued function whose components are the dependent variables. This section 
+emphasizes the rules for differentiating matrix products and sums, which mirror 
+ordinary differentiation but preserve matrix multiplication order. It then 
+focuses on homogeneous systems <m>\vec{x}' = P\vec{x}</m>, especially in the 
+constant‑coefficient case, where the superposition principle holds: any linear 
+combination of solutions is again a solution. Linear independence of 
+vector‑valued solutions plays a central role, and if an <m>n \times n</m> system 
+admits <m>n</m> linearly independent solutions, then every solution can be 
+written as their linear combination. Examples illustrate how to classify 
+solutions and identify dependence relations among vector‑valued functions.
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+Recognize a first‑order linear system written in the vector form 
+      <m>\vec{x}' = P(t)\vec{x} + \vec{f}(t)</m> and identify its components.
+            </p>
+          </li>
+
+<li>
+<p>
+Apply differentiation rules for matrix‑valued and vector‑valued functions,
+      such as <m>(A B)' = A' B + A B'</m>.
+</p>
+</li>
+
+          <li>
+            <p>
+Distinguish between homogeneous systems <m>\vec{x}' = P\vec{x}</m> 
+      and nonhomogeneous systems <m>\vec{x}' = P\vec{x} + \vec{f}</m>.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass53">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/linsystems_section.html#linsystems_section">Section 7.3: Linear systems of ODEs</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/cJlnePo_UzE?si=FQ3bPU3uHZwuV1_F">
+Intro to Vector-Valued and Matrix-Valued Functions and Write a System of ODEs using Matrices (5:24)</url> by Mathispower4u.
+</p>
+</li>
+
+
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/Pt7p2Wq28bM?si=2msvfUY1mt4q8x5Y">
+Write a System of Two Differential Equations Using Matrix Notation (1:52)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/ZfKLDGD0BcE?si=Im-PxphvXe5WOoWZ">
+Write a System of Three Differential Equations with Initial Values Using Matrices (3:18)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/3_3-TRBgNwE?si=3FHhrYkM_A0i2Xy0">
+Intro to Solving First Order Linear Homogeneous Systems of Ordinary Differential Equations (7:48)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/h6ZK5znc0cs?si=zEnR6bHKwCwaCjjN">
+Determine if Vector-Valued Functions are Linearly Independent or Linearly Dependent (2:57)</url> by Mathispower4u.
+</p>
+</li>
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/linsystems_section.html#subsection-142">Subsection 7.3.1: Exercises 
+7.3.1, 7.3.2, 7.3.3, 7.3.4, 7.3.103</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+ <exercise label="mcqlinearsystemform">
+  <title>Identifying a Linear System</title>
+
+  <statement>
+    <p>
+      Which of the following is a valid linear first-order system of ODEs?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            \vec{x}' = P(t)\,\vec{x} + \vec{f}(t)
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A linear system is defined exactly in this form. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \vec{x}' = (\vec{x})^2 + t
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          No. Squaring the vector makes the system nonlinear.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <md>
+            <mrow> x_1' \amp = \sin(x_1),</mrow>
+            <mrow> x_2' \amp= e^{x_2} </mrow>
+          </md>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          These are first‑order ODEs but not <em>linear</em>.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqhomogeneoussystem">
+  <title>Homogeneous vs. Nonhomogeneous</title>
+
+  <statement>
+    <p>
+      Which of the following systems is <em>homogeneous</em>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            \vec{x}' = A\,\vec{x}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A homogeneous linear system has the form 
+          <m>\vec{x}' = P\vec{x}</m> with no forcing term. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \vec{x}' = A\,\vec{x} + \vec{f}(t)
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          No. The presence of <m>\vec{f}(t)</m> makes the system nonhomogeneous.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <md>
+            <mrow> x_1' \amp = t\,x_1 + 1,</mrow>
+            <mrow> x_2' \amp = x_1 + t^2 </mrow>
+          </md>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Not homogeneous; it contains nonzero added functions of <m>t</m>.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqsuperposition">
+  <title>Superposition Principle</title>
+
+  <statement>
+    <p>
+      Suppose <m>\vec{x}_1(t)</m> and <m>\vec{x}_2(t)</m> are solutions of the 
+      homogeneous system <m>\vec{x}' = P\,\vec{x}</m>.  
+      Which statement is true?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          Any linear combination <m>c_1\vec{x}_1 + c_2\vec{x}_2</m> is also a solution.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This is the superposition principle for homogeneous
+          linear systems. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          Only <m>\vec{x}_1 + \vec{x}_2</m> is a solution; scalar multiples are not.
+        </p>
+      </statement>
+      <feedback>
+        <p>No. All scalar multiples and linear combinations remain solutions.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>c_1\vec{x}_1 + c_2\vec{x}_2</m> is a solution only if <m>c_1 = c_2</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>No. The constants may be any real numbers.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqevalvectorsolution">
+  <title>Evaluating a Vector-Valued Function</title>
+
+  <statement>
+    <p>
+      Let 
+      <m>
+        \vec{x}(t) = 
+        \begin{bmatrix}
+          t^2 \\
+          3t
+        \end{bmatrix}.
+      </m>
+      Compute <m>\vec{x}'(2)</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            \begin{bmatrix}
+              4 \\
+              3
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Differentiate each component:
+          <m>\frac{d}{dt}(t^2)=2t</m> and <m>\frac{d}{dt}(3t)=3</m>.  
+          Then evaluate at <m>t=2</m> to get <m>2(2)=4</m> and <m>3</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \begin{bmatrix}
+              2 \\
+              6
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>No. This evaluates <m>\vec{x}(2)</m>, not its derivative.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \begin{bmatrix}
+              1 \\
+              3
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>No. The first component derivative was computed incorrectly.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqchecksuperpositioncomputation">
+  <title>Checking a Linear Combination of Solutions</title>
+
+  <statement>
+    <p>
+      Suppose 
+      <m>
+        \vec{x}_1(t) =
+        \begin{bmatrix}
+          e^{t} \\
+          0
+        \end{bmatrix},
+        \vec{x}_2(t) =
+        \begin{bmatrix}
+          0 \\
+          e^{2t}
+        \end{bmatrix},
+      </m>
+      are solutions to a homogeneous linear system <m>\vec{x}' = P\vec{x}</m>.  
+      Compute 
+      <m>
+        \vec{x}(t) = 3\vec{x}_1(t) + 2\vec{x}_2(t).
+      </m>
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            \vec{x}(t) =
+            \begin{bmatrix}
+              3e^{t} \\
+              2e^{2t}
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Multiply each vector by its scalar and add component‑wise:  
+          <m>3e^{t} + 0 = 3e^{t}</m> and <m>0 + 2e^{2t} = 2e^{2t}</m>.  
+          This also demonstrates the superposition principle. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \vec{x}(t) =
+            \begin{bmatrix}
+              e^{t} \\
+              e^{2t}
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          No. This ignores the coefficients 3 and 2 in the linear combination.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            \vec{x}(t) =
+            \begin{bmatrix}
+              5e^{t} \\
+              0
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Incorrect. The second component should include <m>2e^{2t}</m>.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="linsysopen1">
+    <!-- <title>Checking if Functions Form a Solution Set</title> -->
+
+    <statement>
+      <p>
+        Consider the system
+        <m>
+          \vec{x}' =
+          \begin{bmatrix}
+            2 \amp 1 \\
+            0 \amp 3
+          \end{bmatrix} \vec{x}.
+        </m>
+        Suppose two candidate solutions are
+        <m>
+          \vec{x}_1(t) =
+          \begin{bmatrix}
+            e^{2t} \\
+            0
+          \end{bmatrix},
+          \vec{x}_2(t) =
+          \begin{bmatrix}
+            e^{3t} \\
+            e^{3t}
+          \end{bmatrix}.
+        </m>
+        Verify explicitly whether each vector‑valued function satisfies the
+        differential equation.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        For <m>\vec{x}_1(t)</m>, compute the derivative:
+      </p>
+
+      <me>
+        \vec{x}_1'(t) =
+        \begin{bmatrix}
+          2e^{2t} \\
+          0
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Now compute
+        <m>
+          A \vec{x}_1(t) =
+          \begin{bmatrix}
+            2 \amp 1 \\
+            0 \amp 3
+          \end{bmatrix}
+          \begin{bmatrix}
+            e^{2t} \\ 0
+          \end{bmatrix}
+          =
+          \begin{bmatrix}
+            2e^{2t} \\ 0
+          \end{bmatrix}.
+        </m>
+      </p>
+
+      <p>
+        Since <m>\vec{x}_1'(t) = A\vec{x}_1(t)</m>, the first function is 
+        indeed a solution of the system.  
+        This matches how we define a solution:
+        a vector‑valued function that satisfies the matrix equation 
+        <m>\vec{x}' = P\vec{x}</m>. 
+      </p>
+
+      <hr/>
+
+      <p>
+        For <m>\vec{x}_2(t)</m>, compute the derivative:
+      </p>
+
+      <me>
+        \vec{x}_2'(t) =
+        \begin{bmatrix}
+          3e^{3t} \\
+          3e^{3t}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Now compute
+        <m>
+          A\vec{x}_2(t) =
+          \begin{bmatrix}
+            2 \amp 1 \\
+            0 \amp 3
+          \end{bmatrix}
+          \begin{bmatrix}
+            e^{3t} \\ e^{3t}
+          \end{bmatrix}
+          =
+          \begin{bmatrix}
+            3e^{3t} \\ 3e^{3t}
+          \end{bmatrix}.
+        </m>
+      </p>
+
+      <p>
+        Again we have <m>\vec{x}_2'(t) = A\vec{x}_2(t)</m>, so the second 
+        function also satisfies the system. 
+      </p>
+
+      <p>
+        Both <m>\vec{x}_1</m> and <m>\vec{x}_2</m> are valid solutions of this 
+        homogeneous linear system.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="linsysopen2">
+    <!-- <title>Testing Linear Independence of Vector‑Valued Solutions</title> -->
+
+    <statement>
+      <p>
+        We define linear independence for vector‑valued functions 
+        <m>\vec{x}_1, \vec{x}_2</m> using the condition
+        <m>
+          c_1\vec{x}_1(t) + c_2\vec{x}_2(t) = \vec{0}
+        </m>
+        for all <m>t</m>.
+        Consider the functions
+        <m>
+          \vec{x}_1(t) =
+          \begin{bmatrix}
+            t \\ 1
+          \end{bmatrix},
+          \vec{x}_2(t) =
+          \begin{bmatrix}
+            2t \\ 2
+          \end{bmatrix}.
+        </m>
+        Determine whether these functions are linearly independent.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        We test for constants <m>c_1</m> and <m>c_2</m> such that
+      </p>
+
+      <me>
+        c_1 \vec{x}_1(t) + c_2 \vec{x}_2(t)
+        =
+        \begin{bmatrix}
+          c_1 t + 2c_2 t \\
+          c_1 + 2c_2
+        \end{bmatrix}
+        =
+        \vec{0}
+      </me>
+
+      <p>
+        The vector equation must hold for all <m>t</m>.  
+        Equating components:
+      </p>
+
+      <md>
+        <mrow> (c_1 + 2c_2)t \amp = 0, </mrow>
+        <mrow> c_1 + 2c_2 \amp = 0. </mrow>
+      </md>
+
+      <p>
+        The second equation already forces <m>c_1 + 2c_2 = 0</m>.  
+        The first equation gives the same condition (because it must hold for all <m>t</m>).  
+      </p>
+
+      <p>
+        Thus the solutions satisfy
+        <m>c_1 = -2c_2</m>, giving a one‑parameter family of nontrivial 
+        combinations that equal the zero vector.  
+        Therefore, <m>\vec{x}_1</m> and <m>\vec{x}_2</m> are 
+        <em>linearly dependent</em>.
+      </p>
+
+      <p>
+        This matches the section’s definition: a set is dependent if a nontrivial 
+        linear combination yields <m>\vec{0}</m> for all <m>t</m>.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+</exercises>
+
+
+
+
+
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives53">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+        <ul>
+          <li>
+<p>
+ Rewrite a system of first-order linear ODEs in vector–matrix form 
+      <m>\vec{x}' = A \vec{x}</m> and interpret the meaning of each component.
+</p>
+          </li>
+
+          <li>
+<p>
+Determine whether vector‑valued functions 
+      <m>\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_n</m> 
+      are linearly independent by checking whether a relation 
+      <m>c_1\vec{x}_1 + \cdots + c_n\vec{x}_n = \vec{0}</m> 
+      holds only when all constants vanish.
+</p>
+          </li>
+
+          <li>
+            <p>
+<p>
+Express any solution of an <m>n \times n</m> homogeneous linear system 
+      as a linear combination of <m>n</m> independent solutions, when such a 
+      fundamental set exists.
+</p>
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+</handout>

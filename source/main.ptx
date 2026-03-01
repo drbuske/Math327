@@ -31,11 +31,14 @@
       <xi:include href="./handouts/31PrepTheLaplaceTransform.ptx"/> 
       <xi:include href="./handouts/32PrepTransformsOfDerivativesAndODEs.ptx"/>
       <xi:include href="./handouts/33PrepConvolution.ptx"/>
-      <xi:include href="./handouts/34PrepDiracDelta.ptx"/> -->
+      <xi:include href="./handouts/34PrepDiracDelta.ptx"/> 
       <xi:include href="./handouts/41PrepVectorsMappings.ptx"/>
       <xi:include href="./handouts/42PrepMatrixAlgebra.ptx"/>
-      <xi:include href="./handouts/43PrepElimination.ptx"/>
-      <xi:include href="./handouts/44PrepSubspaceDimensionKernel.ptx"/>
+      <xi:include href="./handouts/43PrepElimination.ptx"/> 
+      <xi:include href="./handouts/44PrepSubspaceDimensionKernel.ptx"/> -->
+      <xi:include href="./handouts/51PrepIntroSystemsODEs.ptx"/>
+      <xi:include href="./handouts/52PrepMatricesLinearSystems.ptx"/>
+      <xi:include href="./handouts/53PrepLinearSystemsODEs.ptx"/>
 
     </chapter>
 
