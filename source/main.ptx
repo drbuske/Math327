@@ -16,7 +16,7 @@
         <chapter xml:id="ch-Textbook">
       <title>Daily Prep</title>
       
-      <!-- <xi:include href="./handouts/02PrepWhatAreDifferentialEquations.ptx"/>
+      <xi:include href="./handouts/02PrepWhatAreDifferentialEquations.ptx"/>
       <xi:include href="./handouts/11PrepIntegralsAsSolutions.ptx"/>
       <xi:include href="./handouts/12PrepSlopeFields.ptx"/>
       <xi:include href="./handouts/13PrepSeparableEquations.ptx"/>
@@ -35,10 +35,11 @@
       <xi:include href="./handouts/41PrepVectorsMappings.ptx"/>
       <xi:include href="./handouts/42PrepMatrixAlgebra.ptx"/>
       <xi:include href="./handouts/43PrepElimination.ptx"/> 
-      <xi:include href="./handouts/44PrepSubspaceDimensionKernel.ptx"/> -->
+      <xi:include href="./handouts/44PrepSubspaceDimensionKernel.ptx"/> 
       <xi:include href="./handouts/51PrepIntroSystemsODEs.ptx"/>
       <xi:include href="./handouts/52PrepMatricesLinearSystems.ptx"/>
       <xi:include href="./handouts/53PrepLinearSystemsODEs.ptx"/>
+      <xi:include href="./handouts/54PrepEigenvalueMethod.ptx"/>
 
     </chapter>
 

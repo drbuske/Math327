@@ -44,7 +44,7 @@ Recall the definitions of a matrix, a column vector, and matrix size
 <li>
 <p>
 Perform scalar multiplication, matrix addition, and compute the 
-      transpose of a matrix. 
+      transpose of a matrix.  
 </p>
 </li>
 
@@ -59,7 +59,7 @@ Perform scalar multiplication, matrix addition, and compute the
 
 </section>
 
-<section xml:id="sec-Toprepareforclass52">
+<section>
   <title>Learn!</title>
 
   <p>
@@ -628,7 +628,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_matrix.html#subsection-141">Subsection 
 
 </section>
 
-      <section xml:id="sec-Advancedlearningobjectives52">
+      <section>
         <title>Advanced learning objectives</title>
 
         <p>
