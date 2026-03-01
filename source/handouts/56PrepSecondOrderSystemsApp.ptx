@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.6 - Second Order Systems and Applications</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now introduce second-order systems of differential equations, with a 
+central focus on physical applications such as undamped mass–spring systems. 
+Instead of rewriting these problems as large first-order systems, the section 
+treats them directly in their natural second-order form, where the displacement 
+vector <m>\vec{x}</m> satisfies an equation of the type <m>M \vec{x}'' = K \vec{x}</m>, 
+with <m>M</m> the mass matrix and <m>K</m> the stiffness matrix.  Using Hooke’s 
+law and Newton’s second law, the dynamics of several coupled masses can be 
+expressed compactly in matrix notation, revealing structural patterns that 
+generalize to an arbitrary number of masses.  Because <m>M</m> is diagonal and 
+invertible, the system can be rewritten as <m>\vec{x}'' = M^{-1} K \vec{x}</m>, 
+which leads to oscillatory behavior governed by the eigenvalues and eigenvectors 
+of <m>M^{-1}K</m>.  The section highlights how these ideas connect discrete 
+mass–spring models to continuum models such as the wave equation, showing how 
+second-order systems arise naturally in many physical contexts. 
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+   Understand how to model a <em>multi‑mass spring system</em> using Newton’s 
+      second law and Hooke’s law to obtain a second‑order system of the form 
+      <m>M \vec{x}'' = K \vec{x}</m>.
+            </p>
+          </li>
+
+<li>
+<p>
+  Identify the roles of the <em>mass matrix</em> <m>M</m> and <em>stiffness matrix</em> 
+      <m>K</m> and explain why <m>M</m> is invertible in typical applications. 
+</p>
+</li>
+
+          <li>
+            <p>
+   Rewrite the system as the standard form 
+      <m>\vec{x}'' = M^{-1} K \vec{x}</m> and recognize it as a linear, 
+      constant‑coefficient second-order system.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass56">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sol_section.html#subsection-148">Subsection 7.6.1: Undamped mass-spring systems</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/NGmpn6R-9-0?si=YFUjLEpjMVtiSQjv">
+Intro to Undamped Mass-Spring Systems: Second Order Systems of Ordinary Diff Equations (8:59)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/dV8-doVQf40?si=zvjUwdtya_oa7zjw">
+Set-up and Solve an Undamped Mass Spring System: Second Order System of ODEs (10:32)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sol_section.html#subsection-149">Subsection 7.6.2: Examples</url>.   
+  </p>
+</li>
+
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/WINqMSFqkoo?si=tbnClkc0dshUU0Ud">
+Intro to Undamped Mass-Spring Systems with Periodic Forcing: 2nd Order Systems of ODEs (9:44)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sol_section.html#subsection-150">Subsection 7.6.3: Forced oscillations </url>.   
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/XbrhVrAYNoA?si=FGHdP2L8dW5Tqr6W">
+Solve a Linear Second Order Nonhomogeneous System of ODEs (9:28)</url> by Mathispower4u.
+</p>
+</li>
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sol_section.html#subsection-151">Subsection 7.6.4: Exercises 
+7.6.3, 7.6.101, 7.6.102</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+<exercise label="mcqsecondordersetup">
+  <title>Setting Up a Second-Order System</title>
+
+  <statement>
+    <p>
+      In the three‑mass spring system, which equation
+      correctly represents the mathematical model obtained from Newton’s second
+      law and Hooke’s law?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>M \vec{x}'' = K \vec{x}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The section derives the system 
+          <m>M \vec{x}'' = K \vec{x}</m>, where <m>M</m> is the mass matrix 
+          and <m>K</m> is the stiffness matrix.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>M \vec{x}' = K \vec{x}</m></p></statement>
+      <feedback><p>No—this would describe a first‑order system, not a second‑order one.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>K \vec{x}'' = M \vec{x}</m></p></statement>
+      <feedback><p>No—Newton’s law leads to mass times acceleration on the left.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqsecondorderinversion">
+  <title>Inverting the Mass Matrix</title>
+
+  <statement>
+    <p>
+      Why is it easy to compute <m>M^{-1}</m> for the mass matrix <m>M</m> in
+      these models?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          Because <m>M</m> is diagonal with nonzero entries.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Each mass is nonzero, and <m>M</m> is diagonal, so 
+          <m>M^{-1}</m> is obtained by inverting each diagonal entry.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because <m>M = I</m> for any mass–spring system.</p></statement>
+      <feedback><p>No. The diagonal entries are the masses, not ones.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because <m>M</m> is symmetric.</p></statement>
+      <feedback>
+        <p>
+          Symmetry alone does not make inversion easy; diagonal form does.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqsecondordereigen">
+  <title>Meaning of <m>M^{-1}K</m></title>
+
+  <statement>
+    <p>
+      After rewriting the system as 
+      <m>\vec{x}'' = M^{-1} K \vec{x}</m>, 
+      what is the significance of the matrix <m>M^{-1}K</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          Its eigenvalues determine the natural frequencies of the system.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The section explains that the eigenvalues of 
+          <m>M^{-1}K</m> give the oscillation frequencies (normal modes)
+          of the mass–spring system.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>It measures how quickly the masses grow without bound.</p>
+      </statement>
+      <feedback>
+        <p>No. The system models oscillations, not exponential growth.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>It determines whether <m>M</m> is invertible.</p>
+      </statement>
+      <feedback>
+        <p>No. <m>M</m> is invertible because the masses are nonzero.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqsecondordercomputeMinvK1">
+  <title>Computing One Entry of <m>M^{-1}K</m></title>
+
+  <statement>
+    <p>
+      Consider a two‑mass system with
+      <m>
+        M =
+        \begin{bmatrix}
+          2 \amp 0 \\
+          0 \amp 3
+        \end{bmatrix},
+        K =
+        \begin{bmatrix}
+          -5 \amp 4 \\
+          4 \amp -6
+        \end{bmatrix}.
+      </m>
+      What is the <m>(1,2)</m> entry of <m>M^{-1}K</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>2</m></p></statement>
+      <feedback>
+        <p>
+          Correct. 
+          <m>M^{-1} = \begin{bmatrix} \tfrac{1}{2} \amp 0 \\ 0 \amp \tfrac{1}{3} \end{bmatrix}</m>,
+          so the <m>(1,2)</m> entry is 
+          <m>\tfrac{1}{2} \cdot 4 = 2</m>.
+          This matches how second‑order systems become 
+          <m>\vec{x}'' = M^{-1}K \vec{x}</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p><m>4</m></p></statement>
+      <feedback><p>No—this is the <m>(1,2)</m> entry of <m>K</m>, not <m>M^{-1}K</m>.</p></feedback>
+    </choice>
+
+    <choice><statement><p><m>\tfrac{4}{3}</m></p></statement>
+      <feedback><p>No—the second row would use <m>\tfrac{1}{3}</m>, not the first.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqsecondordereigenvaluesign">
+  <title>Interpreting a Computed Eigenvalue</title>
+
+  <statement>
+    <p>
+      Suppose a second‑order system
+      <m>\vec{x}'' = M^{-1}K \vec{x}</m>
+      for some two‑mass model yields an eigenvalue 
+      <m>\lambda = -9</m>.
+      What does this tell you about the behavior of the mode corresponding
+      to this eigenvalue?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>The mode oscillates with natural frequency <m>3</m>.</p></statement>
+      <feedback>
+        <p>
+          Correct. For <m>\vec{x}'' = \lambda \vec{x}</m>, a negative 
+          <m>\lambda</m> produces oscillations with frequency 
+          <m>\sqrt{-\lambda} = 3</m>.  
+          The section explains how eigenvalues of <m>M^{-1}K</m> encode
+          natural frequencies.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The mode grows exponentially without bound.</p></statement>
+      <feedback><p>No. Exponential growth occurs when <m>\lambda>0</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The mode decays exponentially to zero.</p></statement>
+      <feedback><p>No. Negative eigenvalues in this setup produce oscillations, not decay.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="secondorderopennew1">
+    <title>Energy Interpretation of a Second-Order System</title>
+
+    <statement>
+      <p>
+        Consider a second-order system of the form 
+        <m>M \vec{x}'' = K \vec{x}</m>, where <m>M</m> is the mass matrix 
+        and <m>K</m> is the stiffness matrix of an undamped mass–spring 
+        system. 
+      </p>
+      <p>
+        (a) Explain why this system conserves mechanical energy when there is 
+        no damping.  
+        <br/>
+        (b) Describe the physical meaning of the matrices <m>M</m> and 
+        <m>K</m> in terms of kinetic and potential energy.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        In an undamped mass–spring system, no forces remove energy from the 
+        system. The springs store <em>potential energy</em> and the masses 
+        carry <em>kinetic energy</em>, and energy simply transfers back and 
+        forth between these two forms.  
+        The equation <m>M \vec{x}'' = K \vec{x}</m> results from applying 
+        Newton’s second law and Hooke’s law to the system, and because no 
+        damping forces are present, the total mechanical energy
+      </p>
+
+      <me>
+        E(t) = \tfrac12 (\vec{x}')^{\!T} M \vec{x}' 
+              + \tfrac12 \vec{x}^{T} K \vec{x}
+      </me>
+
+      <p>
+        remains constant.  
+        This conservation reflects exactly the behavior of the undamped 
+        multi-mass system.  
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        The matrix <m>M</m> represents the distribution of <em>inertia</em> 
+        in the system. Because it is diagonal with entries <m>m_i</m>, the 
+        kinetic energy term  
+      </p>
+
+      <me>
+        \tfrac12 (\vec{x}')^{\!T} M \vec{x}'
+      </me>
+
+      <p>
+        is exactly 
+        <m>\tfrac12 ( m_1 x_1'^2 + m_2 x_2'^2 + \cdots )</m>.  
+        The stiffness matrix <m>K</m> encodes how the springs resist 
+        displacement. The potential energy stored in the system is
+      </p>
+
+      <me>
+        \tfrac12 \vec{x}^{T} K \vec{x}.
+      </me>
+
+      <p>
+        Off-diagonal entries of <m>K</m> represent coupling between masses 
+        (neighboring displacements affect each other), while diagonal entries 
+        reflect how strongly the system resists stretching at each mass 
+        location.  
+        This matches the physical interpretation provided alongside the 
+        construction of <m>M</m> and <m>K</m> in the text.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="secondorderopennew2">
+    <title>Understanding Normal Modes Without Calculation</title>
+
+    <statement>
+      <p>
+        Suppose a three-mass undamped spring system is modeled by 
+        <m>M \vec{x}'' = K \vec{x}</m>.  
+        Let the eigenvalues and eigenvectors of <m>M^{-1}K</m> be 
+        <m>(-\omega_1^2, \vec{v}_1)</m>, <m>(-\omega_2^2, \vec{v}_2)</m>, 
+        and <m>(-\omega_3^2, \vec{v}_3)</m>.
+      </p>
+      <p>
+        Explain, in words and without doing any computation, what the motion 
+        <em>looks like</em> when the system is started exactly in the shape of 
+        the eigenvector <m>\vec{v}_2</m> with some initial velocity along 
+        <m>\vec{v}_2</m>.  
+        Why does no other mode appear in the motion?
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        If the initial displacement and velocity are both multiples of 
+        <m>\vec{v}_2</m>, then the system begins in the exact shape of the 
+        <em>second normal mode</em>.  
+        Each eigenpair produces an independent 
+        oscillatory solution <m>\vec{v}_i e^{\pm i\omega_i t}</m>, and that 
+        the general motion is a linear combination of these normal modes.
+      </p>
+
+      <p>
+        Because <m>\vec{v}_1, \vec{v}_2, \vec{v}_3</m> form a basis of 
+        independent modes, any displacement can be written as a combination 
+        of them.  
+        But if the initial state lies <em>entirely</em> in the direction of 
+        <m>\vec{v}_2</m>, there is no component of <m>\vec{v}_1</m> or 
+        <m>\vec{v}_3</m> in the initial condition.  
+        Therefore the solution must remain a pure oscillation of the form
+      </p>
+
+      <me>
+        \vec{x}(t) = A \vec{v}_2 \cos(\omega_2 t)
+                    + B \vec{v}_2 \sin(\omega_2 t),
+      </me>
+
+      <p>
+        with frequency <m>\omega_2</m>.  
+        No other frequency can appear because there is no component of the 
+        initial state aligned with the other eigenvectors.  
+        This is exactly the decoupling property of normal modes.
+      </p>
+    </solution>
+  </exercise>
+
+
+</exercises>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives56">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+<ul>
+
+<li>
+<p>
+  Analyze the oscillatory behavior of the system by studying the 
+      eigenvalues and eigenvectors of <m>M^{-1} K</m>, interpreting them as 
+      natural frequencies and normal modes.
+</p>
+</li>
+
+<li>
+<p>
+Extend the mass–spring formulation to larger numbers of masses and 
+      identify the matrix patterns that generalize to <m>n</m>-mass systems. 
+</p>
+</li>
+
+<li>
+<p>
+Explain how discrete multi‑mass models converge conceptually to 
+      continuum models such as the one‑dimensional wave equation by letting 
+      the number of masses grow large. 
+</p>
+</li>
+
+</ul>
+
+</section>
+
+
+</handout>

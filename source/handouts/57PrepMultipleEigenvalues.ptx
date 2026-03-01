@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.7 - Multiple Eigenvalues</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now examine what happens in linear systems of ODEs when the coefficient 
+matrix possesses <em>multiple eigenvalues</em>, especially repeated real eigenvalues.  
+The section explains that having a repeated eigenvalue <m>\lambda</m> does not 
+guarantee that the system has enough linearly independent eigenvectors to form a 
+complete solution set.  When only one eigenvector exists for a repeated 
+eigenvalue, the system is called <em>defective</em>, and a generalized eigenvector 
+must be found to construct a second linearly independent solution of the form 
+<m>(\vec{v} t + \vec{w}) e^{\lambda t}</m>.  The method parallels the procedure 
+for repeated roots of constant‑coefficient scalar equations but must be handled 
+in vector form.  The section shows how generalized eigenvectors arise from 
+solving <m>(A - \lambda I) \vec{w} = \vec{v}</m>, and illustrates how the resulting 
+solutions produce phase‑plane behavior distinct from the simple node cases with 
+two eigenvectors.  These ideas are essential for completing the eigenvalue 
+method when the matrix is not diagonalizable.
+
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+  Recognize when a matrix has a repeated eigenvalue and determine when it 
+      lacks a full set of independent eigenvectors.
+            </p>
+          </li>
+
+<li>
+<p>
+   Understand the difference between a <em>diagonalizable matrix</em> (with enough 
+      eigenvectors) and a <em>defective matrix</em> (with fewer eigenvectors than its 
+      algebraic multiplicity).
+</p>
+</li>
+
+          <li>
+            <p>
+Identify the need for <em>generalized eigenvectors</em> when a repeated 
+      eigenvalue does not produce enough independent solutions.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass57">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_multeigen.html#subsection-152">Subsection 7.7.1: Geometric multiplicity</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/McGEK8dEgCA?si=z-CwAsjrF5SpTvjU">
+Intro to Solving a Linear System of ODEs using the Eigenvalue Method: Repeated Eigenvalues (9:47)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_multeigen.html#subsection-153">Subsection 7.7.2: Defective eigenvalues</url>.   
+  </p>
+</li>
+
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/8BwamlzRKLs?si=eD0U-NgN97M441XW">
+Solve a Linear System of ODEs using the Eigenvalue Method: Repeated Eigenvalues, 1 Defect (5:27)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/mRCdFdzYVmo?si=gFXusGjElUvo9lrd">Multiple Eigenvalue Solutions, Part 1 (31:29)</url> by Susan Brooks.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/ypKX6lmm9Qg?si=fY-Mz1W1HSReFIQ3">Dealing with deficient eigenvalues (51:50)</url> by Steve Butler (Beard Meets Calculus) of Iowa State University.
+</p>
+</li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_multeigen.html#subsection-154">Subsection 7.7.3: Exercises 
+7.7.2, 7.7.3, 7.7.5, 7.7.101, 7.7.102, 7.7.103</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+<exercise label="mcqmulteigenrepeated">
+  <title>Recognizing a Repeated Eigenvalue</title>
+
+  <statement>
+    <p>
+      The matrix 
+      <m>
+        A =
+        \begin{bmatrix}
+          3 \amp 1 \\
+          0 \amp 3
+        \end{bmatrix}
+      </m>
+      has which eigenvalues?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>A repeated eigenvalue <m>\lambda = 3</m>.</p></statement>
+      <feedback>
+        <p>
+          Correct. The characteristic polynomial is 
+          <m>(3-\lambda)^2</m>, so the eigenvalue <m>3</m> has multiplicity 2.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Eigenvalues <m>3</m> and <m>1</m>.</p></statement>
+      <feedback><p>No—the diagonal entries do not directly give distinct eigenvalues in this case.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Eigenvalues <m>1</m> and <m>3</m> with multiplicity one each.</p></statement>
+      <feedback><p>No—the eigenvalue is repeated, not distinct.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmulteigendefective">
+  <title>Determining When a Matrix Is Defective</title>
+
+  <statement>
+    <p>
+      A matrix with a repeated eigenvalue <m>\lambda</m> is called 
+      <em>defective</em> when:
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>It has fewer independent eigenvectors than the multiplicity of <m>\lambda</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A repeated eigenvalue requires enough eigenvectors; 
+          if only one exists, the matrix is defective.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Its characteristic polynomial cannot be factored.</p></statement>
+      <feedback><p>No. This has nothing to do with being defective.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Its trace is zero.</p></statement>
+      <feedback><p>No. The trace does not determine diagonalizability.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmulteigengeneralized">
+  <title>Purpose of a Generalized Eigenvector</title>
+
+  <statement>
+    <p>
+      If a matrix has only one eigenvector <m>\vec{v}</m> for a repeated eigenvalue,
+      why do we introduce a generalized eigenvector <m>\vec{w}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>To construct a second independent solution of the form <m>(t\vec{v} + \vec{w}) e^{\lambda t}</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A generalized eigenvector provides the missing second solution 
+          when only one eigenvector exists.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>To find a new eigenvalue.</p></statement>
+      <feedback><p>No—generalized eigenvectors do not create new eigenvalues.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>To force the matrix to become diagonalizable.</p></statement>
+      <feedback>
+        <p>No. A defective matrix cannot be made diagonalizable by choosing more vectors.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmulteigenequation">
+  <title>Equation for Finding a Generalized Eigenvector</title>
+
+  <statement>
+    <p>
+      If <m>\vec{v}</m> is an eigenvector for a repeated eigenvalue <m>\lambda</m>, 
+      which equation must a generalized eigenvector <m>\vec{w}</m> satisfy?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>(A - \lambda I)\vec{w} = \vec{v}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. This equation produces a vector <m>\vec{w}</m> that generates 
+          the second independent solution.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p><m>A\vec{w} = \lambda\vec{w}</m></p></statement>
+      <feedback><p>No—that would make <m>\vec{w}</m> another eigenvector, which does not exist.</p></feedback>
+    </choice>
+
+    <choice><statement><p><m>(A - \lambda I)^2 \vec{w} = 0</m></p></statement>
+      <feedback><p>
+        Not the defining equation—the generalized eigenvector is found using 
+        <m>(A-\lambda I)\vec{w} = \vec{v}</m>.
+      </p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmulteigensolutionform">
+  <title>Structure of the General Solution for a Defective Matrix</title>
+
+  <statement>
+    <p>
+      If a matrix has a repeated eigenvalue <m>\lambda</m> with only one eigenvector
+      <m>\vec{v}</m> and a generalized eigenvector <m>\vec{w}</m>, what does the
+      general solution to <m>\vec{x}' = A\vec{x}</m> look like?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>\vec{x}(t) = C_1 \vec{v} e^{\lambda t} + C_2 (\vec{v} t + \vec{w}) e^{\lambda t}</m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This is the full solution when only one 
+          eigenvector exists.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\vec{x}(t) = C_1 \vec{v} e^{\lambda t} + C_2 \vec{w} e^{\lambda t}</m></p></statement>
+      <feedback><p>No—this does not produce two independent solutions.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\vec{x}(t) = (C_1 + C_2)t\, e^{\lambda t}</m></p></statement>
+      <feedback><p>No—solutions must be vector‑valued and use <m>\vec{v}</m> and <m>\vec{w}</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="multeigennew1">
+    <title>Checking Whether a Matrix Is Defective</title>
+
+    <statement>
+      <p>
+        Consider the matrix  
+        <m>
+          A =
+          \begin{bmatrix}
+            4 \amp 2 \\
+            0 \amp 4
+          \end{bmatrix}.
+        </m>
+      </p>
+        <ol> 
+          <li> 
+            <p> Compute the eigenvalue(s) of <m>A</m>.  
+            </p>
+          </li>
+          <li>
+              <p>Find all eigenvectors of <m>A</m> and determine whether the matrix
+        is defective.
+            </p>
+          </li> 
+        </ol>
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        The characteristic polynomial is  
+        <m>\det(A - \lambda I) = (4-\lambda)^2</m>,  
+        so the only eigenvalue is the repeated eigenvalue  
+        <m>\lambda = 4</m>.  
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        To find the eigenvectors, solve  
+        <m>(A - 4I)\vec{v} = 0</m>.  
+        That matrix is  
+      </p>
+
+      <me>
+        A - 4I =
+        \begin{bmatrix}
+          0 \amp 2 \\
+          0 \amp 0
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        The equation <m>2v_2 = 0</m> implies <m>v_2 = 0</m>, while <m>v_1</m> is
+        free.  
+        Thus every eigenvector has the form  
+      </p>
+
+      <me>
+        \vec{v} =
+        \begin{bmatrix}
+          1 \\
+          0
+        \end{bmatrix} c.
+      </me>
+
+      <p>
+        There is only <em>one</em> linearly independent eigenvector, even
+        though the eigenvalue has algebraic multiplicity 2.  
+        Hence <m>A</m> is <em>defective</em>.   
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="multeigennew2">
+    <title>Finding a Generalized Eigenvector</title>
+
+    <statement>
+      <p>
+        Let  
+        <m>
+          A =
+          \begin{bmatrix}
+            5 \amp 1 \\
+            0 \amp 5
+          \end{bmatrix},
+        </m>
+        which has a repeated eigenvalue <m>\lambda = 5</m>.  
+        The unique eigenvector (up to scaling) is  
+        <m>\vec{v} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}</m>.  
+      </p>
+      <p>
+        Find a generalized eigenvector <m>\vec{w}</m> satisfying  
+        <m>(A - 5I)\vec{w} = \vec{v}</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Compute  
+      </p>
+
+      <me>
+        A - 5I =
+        \begin{bmatrix}
+          0 \amp 1 \\
+          0 \amp 0
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        We seek <m>\vec{w} = \begin{bmatrix} w_1 \\ w_2 \end{bmatrix}</m> such that  
+      </p>
+
+      <me>
+        (A - 5I)\vec{w}
+        =
+        \begin{bmatrix}
+          w_2 \\
+          0
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          1 \\
+          0
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Thus <m>w_2 = 1</m>, and <m>w_1</m> is arbitrary.  
+        The simplest choice is  
+      </p>
+
+      <me>
+        \vec{w} =
+        \begin{bmatrix}
+          0 \\
+          1
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        This exactly matches the definition of a generalized eigenvector: solve <m>(A - \lambda I)\vec{w} = \vec{v}</m>.  
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 3 -->
+  <exercise xml:id="multeigennew3">
+    <title>Constructing the Full Solution for a Defective Matrix</title>
+
+    <statement>
+      <p>
+        For the matrix  
+        <m>
+          A =
+          \begin{bmatrix}
+            2 \amp 1 \\
+            0 \amp 2
+          \end{bmatrix},
+        </m>
+        the eigenvalue is <m>\lambda = 2</m> with eigenvector  
+        <m>\vec{v} = \begin{bmatrix}1 \\ 0\end{bmatrix}</m>.  
+        A generalized eigenvector is  
+        <m>\vec{w} = \begin{bmatrix}0 \\ 1\end{bmatrix}</m>.
+      </p>
+
+      <p>
+        Write the general solution to <m>\vec{x}' = A\vec{x}</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        A defective matrix with one eigenvector and one
+        generalized eigenvector yields solutions  
+      </p>
+
+      <me>
+        \vec{x}_1(t) = \vec{v} e^{2t},
+        \vec{x}_2(t) = (\vec{v} t + \vec{w}) e^{2t}.
+      </me>
+
+      <p>
+        Therefore the general solution is  
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        C_1
+        \begin{bmatrix}
+          1 \\ 0
+        \end{bmatrix}
+        e^{2t}
+        +
+        C_2
+        \left(
+          t
+          \begin{bmatrix}
+            1 \\ 0
+          \end{bmatrix}
+          +
+          \begin{bmatrix}
+            0 \\ 1
+          \end{bmatrix}
+        \right)
+        e^{2t}.
+      </me>
+
+      <p>
+        This is the standard repeated‑eigenvalue solution for a defective system.
+      </p>
+    </solution>
+  </exercise>
+
+</exercises>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives57">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+<ul>
+
+<li>
+<p>
+  Find a generalized eigenvector <m>\vec{w}</m> by solving 
+      <m>(A - \lambda I)\vec{w} = \vec{v}</m> when only one eigenvector 
+      <m>\vec{v}</m> exists for a repeated eigenvalue.
+</p>
+</li>
+
+<li>
+<p>
+Construct a complete solution for a defective system of the form 
+      <m>\vec{x}(t) = \vec{v} e^{\lambda t} + t\,\vec{w} e^{\lambda t}</m> 
+      and explain why these solutions remain linearly independent.
+</p>
+</li>
+
+<li>
+<p>
+  Analyze how repeated eigenvalues and generalized eigenvectors affect 
+      qualitative phase‑plane behavior, distinguishing these cases from 
+      ordinary nodes with two eigenvectors.
+</p>
+</li>
+
+</ul>
+
+</section>
+
+
+</handout>

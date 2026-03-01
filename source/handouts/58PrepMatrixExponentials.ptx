@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.8 - Matrix Exponentials</title>
+
+<section>
+    <title>Overview</title>
+<p>
+It is time to introduce the <em>matrix exponential</em> -- a powerful method for solving 
+linear constant‑coefficient systems of differential equations of the form 
+<m>\vec{x}' = P \vec{x}</m>.  Motivated by the scalar solution 
+<m>x = e^{pt}</m>, the section defines the matrix exponential 
+<m>e^{tP}</m> via its convergent Taylor series 
+<m>I + tP + \tfrac{1}{2}t^2 P^2 + \cdots</m>, and demonstrates that this 
+function satisfies the key identity 
+<m>\tfrac{d}{dt}(e^{tP}) = P e^{tP}</m>.  
+This establishes <m>\vec{x}(t) = e^{tP} \vec{c}</m> as the general solution to the 
+system, and in particular <m>\vec{x}(0)=\vec{c}</m>.  
+The section explains that matrix exponentials provide a fundamental matrix 
+solution and give a clean way to solve initial value problems directly.  
+It also highlights an important subtlety: in contrast to real numbers, 
+matrices do not generally commute, so <m>e^{A+B} \neq e^{A} e^{B}</m> unless 
+<m>A</m> and <m>B</m> satisfy <m>AB = BA</m>.  
+Finally, the section explores simple cases—especially diagonal and triangular 
+matrices—where matrix exponentials can be computed efficiently.
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+  Understand the definition of the <em>matrix exponential</em> 
+      <m>e^{tP} = I + tP + \tfrac{1}{2} t^2 P^2 + \cdots</m>  
+      and recognize it as a convergent power series for any square matrix <m>P</m>.
+            </p>
+          </li>
+
+<li>
+<p>
+Verify that <m>\tfrac{d}{dt}(e^{tP}) = P e^{tP}</m> and conclude that 
+      <m>e^{tP}\vec{c}</m> solves the system <m>\vec{x}' = P\vec{x}</m>.
+</p>
+</li>
+
+          <li>
+            <p>
+ Use the formula <m>\vec{x}(t) = e^{tP} \vec{x}(0)</m> to solve initial value 
+      problems for linear homogeneous constant‑coefficient systems.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass58">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matexp.html#subsection-155">Subsection 7.8.1: Definition</url>.   
+  </p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matexp.html#subsection-156">Subsection 7.8.2: Simple cases</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/XuHouNQU4l4?si=tZo6AiBmVG7BnviN">
+Intro to Matrix Exponentials and Determining Matrix Exponentials for Simple Cases (10:35)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/LwSk9M5lJx4?si=31UDOBf7jHlnwYjB">
+The Matrix Exponential (15:31)</url> by Gilbert Strang (from MIT OpenCourseWare).
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matexp.html#subsection-157">Subsection 7.8.3: General matrices</url>.   
+  </p>
+</li>
+
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/ybsD72PUemk?si=lT1VVpAdXcCVFzMg">
+Matrix Exponentials for the General Case: N by N with N Linearly Indep Eigenvectors (7:40)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_matexp.html#subsection-158">Subsection 7.8.4: Fundamental matrix solutions</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/8nvH7ZnfSFg?si=si96z_S21KGojUTt">
+Determine a Matrix Exponential and General Solution to x'=Ax: 3 by 3 General Case (5:49)</url> by Mathispower4u.
+</p>
+</li>
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/O85OWBJ2ayo?si=LWCwXgYzAm-6VpfB">
+How (and why) to raise e to the power of a matrix (27:06)</url> by 3Blue1Brown.
+</p>
+</li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href="  
+https://web.uvic.ca/~tbazett/diffyqs/sec_matexp.html#subsection-160">Subsection 7.8.6: Exercises
+7.8.2, 7.8.3, 7.8.4, 7.8.5, 7.8.101, 7.8.103</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+<exercise label="mcqmatexpdefinition">
+  <title>Definition of the Matrix Exponential</title>
+
+  <statement>
+    <p>
+      Which of the following correctly defines the matrix exponential 
+      <m>e^{tP}</m> for a square matrix <m>P</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            e^{tP} = I + tP + \frac{t^2}{2!} P^2 + \frac{t^3}{3!} P^3 + \cdots
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct.  The matrix exponential is defined using the 
+          power‑series expansion.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>e^{tP} = (I - tP)^{-1}</m></p></statement>
+      <feedback><p>No—this only works for special matrices, not in general.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>e^{tP} = P^t</m></p></statement>
+      <feedback><p>No—raising a matrix to a real power is unrelated to the exponential.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmatexpsatisfiesode">
+  <title>Why <m>e^{tP}</m> Solves the System</title>
+
+  <statement>
+    <p>
+      Why does <m>\vec{x}(t) = e^{tP} \vec{c}</m> solve the system 
+      <m>\vec{x}' = P\vec{x}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          Because <m>\frac{d}{dt}(e^{tP}) = P e^{tP}</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Differentiating the series term‑by‑term gives 
+          <m>\frac{d}{dt}(e^{tP}) = P e^{tP}</m>, so multiplying by <m>\vec{c}</m> 
+          yields a solution.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because <m>e^{tP}</m> diagonalizes every matrix <m>P</m>.</p></statement>
+      <feedback><p>No—only some matrices are diagonalizable.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because <m>e^{tP}\vec{c} = \vec{c}</m> for all <m>t</m>.</p></statement>
+      <feedback><p>No—this is only true when <m>P = 0</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmatexpivp">
+  <title>Solving an IVP with the Matrix Exponential</title>
+
+  <statement>
+    <p>
+      For the system <m>\vec{x}' = P\vec{x}</m> with initial condition 
+      <m>\vec{x}(0) = \vec{b}</m>, what is the solution?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\vec{x}(t) = e^{tP}\vec{b}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The general solution is <m>\vec{x}(t)=e^{tP}\vec{c}</m>, and 
+          <m>\vec{x}(0)=\vec{b}</m> implies <m>\vec{c} = \vec{b}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\vec{x}(t) = P^t \vec{b}</m></p></statement>
+      <feedback><p>No—this expression is not defined and is not the solution.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\vec{x}(t) = e^{t} P \vec{b}</m></p></statement>
+      <feedback><p>No—the exponential must apply to the matrix, not to a scalar.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmatexpdiagonal">
+  <title>Matrix Exponential of a Diagonal Matrix</title>
+
+  <statement>
+    <p>
+      If 
+      <m>
+        P =
+        \begin{bmatrix}
+          2 \amp 0 \\
+          0 \amp -1
+        \end{bmatrix},
+      </m>
+      what is <m>e^{tP}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            e^{tP} =
+            \begin{bmatrix}
+              e^{2t} \amp 0 \\
+              0 \amp e^{-t}
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. For diagonal matrices, the exponential is taken on each 
+          diagonal entry.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>e^{tP} = e^{t} P</m></p></statement>
+      <feedback><p>No—the exponential does not distribute in that way.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>
+          <m>
+            e^{tP} =
+            \begin{bmatrix}
+              2e^{t} \amp 0 \\
+              0 \amp -e^{t}
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback><p>No—the exponentials must be applied directly to the diagonal entries.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcqmatexpcommutation">
+  <title>When Does <m>e^{A+B} = e^{A} e^{B}</m> Hold?</title>
+
+  <statement>
+    <p>
+      When is the identity 
+      <m>e^{A+B} = e^{A} e^{B}</m> true?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>When <m>A</m> and <m>B</m> commute: <m>AB = BA</m>.</p></statement>
+      <feedback>
+        <p>
+          Correct. The section warns that the identity generally fails unless 
+          <m>A</m> and <m>B</m> commute.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Always, for all square matrices.</p></statement>
+      <feedback><p>No—this is false even for simple 2×2 matrices.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Only when both <m>A</m> and <m>B</m> are diagonal.</p></statement>
+      <feedback><p>
+        Not quite—diagonal matrices commute, but commutativity (not diagonality) 
+        is the real requirement.
+      </p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="matexpnew1">
+    <title>Using the Series Definition to Compute a Simple Matrix Exponential</title>
+
+    <statement>
+      <p>
+        Let 
+        <m>
+          P = 
+          \begin{bmatrix}
+            0 \amp 1 \\
+            0 \amp 0
+          \end{bmatrix}.
+        </m>
+        Compute <m>e^{tP}</m> directly from the power series definition of the 
+        matrix exponential:
+        <m>
+          e^{tP} = I + tP + \frac{t^2}{2!} P^2 + \frac{t^3}{3!} P^3 + \cdots.
+        </m>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        First compute powers of <m>P</m>.  
+        Since 
+        <m>
+          P =
+          \begin{bmatrix}
+            0 \amp 1 \\
+            0 \amp 0
+          \end{bmatrix},
+        </m>
+        we find:
+      </p>
+
+      <me>
+        P^2 =
+        \begin{bmatrix}
+          0 \amp 0 \\
+          0 \amp 0
+        \end{bmatrix},
+        P^3 = 0,
+        \qquad
+        \text{and all higher powers are also zero.}
+      </me>
+
+      <p>
+        Thus the power series truncates after the first term involving <m>P</m>:
+      </p>
+
+      <me>
+        e^{tP}
+        =
+        I + tP
+        =
+        \begin{bmatrix}
+          1 \amp 0 \\
+          0 \amp 1
+        \end{bmatrix}
+        +
+        t
+        \begin{bmatrix}
+          0 \amp 1 \\
+          0 \amp 0
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          1 \amp t \\
+          0 \amp 1
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Nilpotent matrices make the exponential easy to compute using the series.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="matexpnew2">
+    <title>Solving an Initial Value Problem Using the Matrix Exponential</title>
+
+    <statement>
+      <p>
+        Consider the system 
+        <m>
+          \vec{x}' =
+          \begin{bmatrix}
+            2 \amp 0 \\
+            0 \amp -3
+          \end{bmatrix}
+          \vec{x},
+          \vec{x}(0) =
+          \begin{bmatrix}
+            5 \\
+            -2
+          \end{bmatrix}.
+        </m>
+        Use the matrix exponential to solve for <m>\vec{x}(t)</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Because the matrix is diagonal, the matrix 
+        exponential is computed by exponentiating each diagonal entry:  
+      </p>
+
+      <me>
+        e^{tP}
+        =
+        e^{t
+        \begin{bmatrix}
+          2 \amp 0 \\
+          0 \amp -3
+        \end{bmatrix}}
+        =
+        \begin{bmatrix}
+          e^{2t} \amp 0 \\
+          0 \amp e^{-3t}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        The solution to <m>\vec{x}' = P\vec{x}</m> with  
+        <m>\vec{x}(0) = \vec{b}</m> is  
+        <m>\vec{x}(t) = e^{tP}\vec{b}</m>.  
+        Therefore:
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        \begin{bmatrix}
+          e^{2t} \amp 0 \\
+          0 \amp e^{-3t}
+        \end{bmatrix}
+        \begin{bmatrix}
+          5 \\
+          -2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          5 e^{2t} \\
+          -2 e^{-3t}
+        \end{bmatrix}.
+      </me>
+
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 3 -->
+  <exercise xml:id="matexp-new-3">
+    <title>Understanding Commutativity and Matrix Exponential Identities</title>
+
+    <statement>
+      <p>
+        Let 
+        <m>
+          A =
+          \begin{bmatrix}
+            1 \amp 0 \\
+            0 \amp 2
+          \end{bmatrix},
+          B =
+          \begin{bmatrix}
+            3 \amp 0 \\
+            0 \amp -1
+          \end{bmatrix}.
+        </m>
+              </p>
+              <ol>
+                <li>
+                  <p>
+                    Show that <m>A</m> and <m>B</m> commute.  
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Use this fact to compute <m>e^{A+B}</m> in terms of 
+        <m>e^{A}</m> and <m>e^{B}</m>.
+                  </p>
+                </li>
+              </ol>
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        Compute <m>AB</m> and <m>BA</m>:
+      </p>
+
+      <me>
+        AB =
+        \begin{bmatrix}
+          1 \amp 0 \\
+          0 \amp 2
+        \end{bmatrix}
+        \begin{bmatrix}
+          3 \amp 0 \\
+          0 \amp -1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          3 \amp 0 \\
+          0 \amp -2
+        \end{bmatrix},
+      </me>
+
+      <me>
+        BA =
+        \begin{bmatrix}
+          3 \amp 0 \\
+          0 \amp -1
+        \end{bmatrix}
+        \begin{bmatrix}
+          1 \amp 0 \\
+          0 \amp 2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          3 \amp 0 \\
+          0 \amp -2
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Thus <m>AB = BA</m>.  
+        When matrices commute, the exponential identity 
+        <m>e^{A+B} = e^{A} e^{B}</m> holds.  
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        Since <m>A+B</m> is diagonal,
+      </p>
+
+      <me>
+        A+B =
+        \begin{bmatrix}
+          4 \amp 0 \\
+          0 \amp 1
+        \end{bmatrix},
+        e^{A+B} =
+        \begin{bmatrix}
+          e^{4} \amp 0 \\
+          0 \amp e^{1}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Also,
+      </p>
+
+      <me>
+        e^{A} =
+        \begin{bmatrix}
+          e^{1} \amp 0 \\
+          0 \amp e^{2}
+        \end{bmatrix},
+        e^{B} =
+        \begin{bmatrix}
+          e^{3} \amp 0 \\
+          0 \amp e^{-1}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Multiply them:
+      </p>
+
+      <me>
+        e^{A} e^{B}
+        =
+        \begin{bmatrix}
+          e^{4} \amp 0 \\
+          0 \amp e^{1}
+        \end{bmatrix}
+        =
+        e^{A+B}.
+      </me>
+
+      <p>
+        This confirms the commutativity‑dependent identity emphasized in the 
+        section.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="matexp3x3problem1">
+    <title>Matrix Exponential of a Diagonal 3×3 Matrix</title>
+
+    <statement>
+      <p>
+        Compute the matrix exponential  
+        <m>
+          e^{tA}
+        </m>
+        for the diagonal matrix
+        <m>
+          A =
+          \begin{bmatrix}
+            -2 \amp 0 \amp 0 \\
+            0 \amp 1 \amp 0 \\
+            0 \amp 0 \amp 4
+          \end{bmatrix}.
+        </m>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        For a diagonal matrix, the matrix exponential 
+        is obtained by exponentiating each diagonal entry individually.  
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        \begin{bmatrix}
+          e^{-2t} \amp 0 \amp 0 \\
+          0 \amp e^{t} \amp 0 \\
+          0 \amp 0 \amp e^{4t}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        No off‑diagonal terms appear since powers of a diagonal matrix remain 
+        diagonal and the Taylor series keeps all entries separated.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="matexp3x3problem2">
+    <title>Solving a 3×3 System Using the Matrix Exponential</title>
+
+    <statement>
+      <p>
+        Consider the system
+        <m>
+          \vec{x}' =
+          A \vec{x},
+          \qquad
+          A =
+          \begin{bmatrix}
+            0 \amp 1 \amp 0 \\
+            0 \amp 0 \amp 1 \\
+            0 \amp 0 \amp 0
+          \end{bmatrix},
+        </m>
+        with initial condition
+        <m>
+          \vec{x}(0) =
+          \begin{bmatrix}
+            3 \\
+            0 \\
+            2
+          \end{bmatrix}.
+        </m>
+        Compute <m>e^{tA}</m> and then find <m>\vec{x}(t)</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        First compute powers of <m>A</m>.  
+        This matrix is strictly upper triangular, so it is nilpotent:  
+      </p>
+
+      <me>
+        A^2 =
+        \begin{bmatrix}
+          0 \amp 0 \amp 1 \\
+          0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix},
+        A^3 = 0,
+        A^k = 0 \text{ for all } k \ge 3.
+      </me>
+
+      <p>
+        By the series definition of the matrix exponential  
+        <m>
+          e^{tA} = I + tA + \frac{t^2}{2}A^2,
+        </m>
+        since all higher powers vanish.  
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        \begin{bmatrix}
+          1 \amp 0 \amp 0 \\
+          0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}
+        +
+        t
+        \begin{bmatrix}
+          0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 1 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix}
+        +
+        \frac{t^2}{2}
+        \begin{bmatrix}
+          0 \amp 0 \amp 1 \\
+          0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Adding these gives
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        \begin{bmatrix}
+          1 \amp t \amp \tfrac{1}{2}t^2 \\
+          0 \amp 1 \amp t \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Now compute  
+        <m>\vec{x}(t) = e^{tA} \vec{x}(0)</m>:
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        \begin{bmatrix}
+          1 \amp t \amp \tfrac12 t^2 \\
+          0 \amp 1 \amp t \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}
+          3 \\ 0 \\ 2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          3 + \tfrac12 t^2 \cdot 2 \\
+          0 + t \cdot 2 \\
+          2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          3 + t^2 \\
+          2t \\
+          2
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Therefore the solution to the system is  
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        \begin{bmatrix}
+          3 + t^2 \\
+          2t \\
+          2
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        This illustrates how matrix exponentials solve triangular (nilpotent)
+        systems.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="matexp-3by3-repeated-1">
+    <title>Matrix Exponential via Jordan Form (One Jordan Block)</title>
+
+    <statement>
+      <p>
+        Consider the matrix
+        <m>
+          A =
+          \begin{bmatrix}
+            2 \amp 1 \amp 0 \\
+            0 \amp 2 \amp 1 \\
+            0 \amp 0 \amp 2
+          \end{bmatrix}.
+        </m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Explain why <m>A</m> has a repeated eigenvalue and why it is not diagonalizable. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Compute <m>e^{tA}</m> using the identity
+        <m>e^{tA} = S e^{tJ} S^{-1}</m>,
+        where <m>J</m> is the Jordan form of <m>A</m>.
+            </p>
+          </li>
+        </ol> 
+
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        The characteristic polynomial is
+      </p>
+
+      <me>
+        \det(A - \lambda I)
+        = (2 - \lambda)^3,
+      </me>
+
+      <p>
+        so <m>\lambda = 2</m> is a repeated eigenvalue of multiplicity 3.  
+        The matrix has only <em>one</em> independent eigenvector because it is a single
+        Jordan block. Therefore <m>A</m> is not diagonalizable.
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        Since <m>A</m> is already in Jordan form, we have <m>J = A</m> and 
+        <m>S = I</m>.  
+        A size‑3 Jordan block satisfies
+      </p>
+
+      <me>
+        e^{tJ}
+        =
+        e^{2t}
+        \left(
+        I + t N + \tfrac12 t^2 N^2
+        \right),
+      </me>
+
+      <p>
+        where <m>N = A - 2I</m> is the nilpotent part:
+      </p>
+
+      <me>
+        N =
+        \begin{bmatrix}
+          0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 1 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix},
+        \qquad
+        N^2 =
+        \begin{bmatrix}
+          0 \amp 0 \amp 1 \\
+          0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Therefore,
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        e^{2t}
+        \left(
+        \begin{bmatrix}
+          1 \amp 0 \amp 0 \\
+          0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}
+        +
+        t
+        \begin{bmatrix}
+          0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 1 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix}
+        +
+        \frac{t^2}{2}
+        \begin{bmatrix}
+          0 \amp 0 \amp 1 \\
+          0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix}
+        \right)
+        =
+        \begin{bmatrix}
+          e^{2t} \amp t e^{2t} \amp \tfrac12 t^2 e^{2t} \\
+          0 \amp e^{2t} \amp t e^{2t} \\
+          0 \amp 0 \amp e^{2t}
+        \end{bmatrix}.
+      </me>
+
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="matexp-3by3-repeated-2">
+    <title>Similarity Transform Required: Block with Repeated Eigenvalue</title>
+
+    <statement>
+      <p>
+        Consider the matrix
+        <m>
+          A =
+          \begin{bmatrix}
+            3 \amp 1 \amp 0 \\
+            0 \amp 3 \amp 0 \\
+            0 \amp 0 \amp -1
+          \end{bmatrix}.
+        </m>
+              </p>
+       <ol>
+        <li>
+          <p>
+ Find a matrix <m>S</m> such that <m>S^{-1} A S</m> is a Jordan matrix 
+        consisting of a <m>2\times 2</m> Jordan block and one <m>1\times 1</m> block.
+          </p>
+        </li>
+        <li>
+          <p>
+            Compute <m>e^{tA}</m> using 
+        <m>e^{tA} = S e^{tJ} S^{-1}</m>.
+          </p>
+        </li>
+       </ol>
+
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        The eigenvalues of <m>A</m> are <m>3</m> (multiplicity 2) and <m>-1</m>.  
+        For <m>\lambda = 3</m>, we find:
+      </p>
+
+      <me>
+        A - 3I =
+        \begin{bmatrix}
+          0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp -4
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Solving <m>(A - 3I)\vec{v} = 0</m> gives an eigenvector  
+        <m>\vec{v}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}</m>.  
+        To find a generalized eigenvector <m>\vec{v}_2</m>, solve  
+        <m>(A - 3I)\vec{v}_2 = \vec{v}_1</m>:
+      </p>
+
+      <me>
+        (A - 3I)
+        \begin{bmatrix}
+          a \\ b \\ c
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          b \\ 0 \\ -4c
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          1 \\ 0 \\ 0
+        \end{bmatrix},
+      </me>
+
+      <p>
+        giving <m>b = 1</m>, <m>c = 0</m>, and <m>a</m> free.  
+        Choose <m>\vec{v}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}</m>.  
+      </p>
+
+      <p>
+        For <m>\lambda = -1</m>, the eigenvector is  
+      </p>
+
+      <me>
+        \vec{v}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}.
+      </me>
+
+      <p>
+        Thus a convenient choice is
+      </p>
+
+      <me>
+        S = 
+        \begin{bmatrix}
+          1 \amp 0 \amp 0 \\
+          0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix},
+      </me>
+
+      <p>
+        which already puts <m>A</m> into Jordan form:
+      </p>
+
+      <me>
+        J =
+        \begin{bmatrix}
+          3 \amp 1 \amp 0 \\
+          0 \amp 3 \amp 0 \\
+          0 \amp 0 \amp -1
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        <strong>(b)</strong>  
+        The Jordan block for eigenvalue <m>3</m> yields
+      </p>
+
+      <me>
+        e^{t 
+        \begin{bmatrix}
+          3 \amp 1 \\
+          0 \amp 3
+        \end{bmatrix}
+        }
+        =
+        e^{3t}
+        \begin{bmatrix}
+          1 \amp t \\
+          0 \amp 1
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        For the <m>-1</m> block we get <m>e^{-t}</m>.  
+        Therefore
+      </p>
+
+      <me>
+        e^{tJ}
+        =
+        \begin{bmatrix}
+          e^{3t} \amp t e^{3t} \amp 0 \\
+          0 \amp e^{3t} \amp 0 \\
+          0 \amp 0 \amp e^{-t}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Since <m>S = I</m>, we have <m>e^{tA} = e^{tJ}</m>, hence:
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        \begin{bmatrix}
+          e^{3t} \amp t e^{3t} \amp 0 \\
+          0 \amp e^{3t} \amp 0 \\
+          0 \amp 0 \amp e^{-t}
+        \end{bmatrix}.
+      </me>
+
+    </solution>
+  </exercise>
+
+</exercises>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives58">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+<ul>
+
+<li>
+<p>
+Compute matrix exponentials in special cases, including diagonal matrices 
+      (applying the exponential entrywise) and triangular matrices (where powers 
+      of <m>P</m> can be computed systematically).
+</p>
+</li>
+
+<li>
+<p>
+Explain why <m>e^{A+B} = e^{A} e^{B}</m> only when <m>A</m> and <m>B</m> 
+      commute, and understand how this affects solving systems by splitting the 
+      matrix into simpler parts.
+</p>
+</li>
+
+<li>
+<p>
+Recognize the matrix exponential as a <em>fundamental matrix solution</em> 
+      and understand how it relates to the theory of diagonalization, 
+      generalized eigenvectors, and the eigenvalue method for solving systems.
+</p>
+</li>
+
+</ul>
+
+</section>
+
+
+</handout>

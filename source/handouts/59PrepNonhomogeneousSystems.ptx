@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.9 - Nonhomogeneous Systems</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now develop methods for solving nonhomogeneous linear systems of the form 
+<m>\vec{x}' = A \vec{x} + \vec{f}(t)</m>. Building on the matrix exponential from 
+earlier, the section introduces the variation‑of‑parameters formula, which 
+expresses the general solution as the sum of a homogeneous solution 
+<m>e^{tA}\vec{c}</m> and a particular solution obtained through an integral involving 
+<em>left‑multiplication</em> by <m>e^{(t-s)A}</m>. Specifically, the solution is 
+<m>\vec{x}(t) = e^{tA}\vec{x}(0) + \int_0^t e^{(t-s)A}\vec{f}(s)\,ds</m>.  The section 
+emphasizes that the exponential acts on the nonhomogeneous forcing by “propagating” 
+its influence forward through time, mirroring the convolution structure familiar 
+from single‑equation ODEs.  Several examples—especially involving exponential, 
+polynomial, and sinusoidal forcing—demonstrate how this integral formula provides 
+a systematic approach even when guessing a particular solution would be difficult 
+or impossible.  
+
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+  Recognize a nonhomogeneous linear system of the form 
+      <m>\vec{x}' = A\vec{x} + \vec{f}(t)</m> and understand how it differs 
+      from the homogeneous case. 
+            </p>
+          </li>
+
+<li>
+<p>
+ Understand that the homogeneous solution is <m>e^{tA}\vec{c}</m> and that a particular solution must be added to form the 
+      general solution.
+</p>
+</li>
+
+          <li>
+            <p>
+  Know the <em>variation‑of‑parameters</em> formula  
+      <m>\vec{x}(t) = e^{tA}\vec{x}(0) + \int_0^t e^{(t-s)A}\vec{f}(s)\,ds</m>  
+      as the standard method of solving nonhomogeneous systems.
+
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass59">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-161">Subsection 7.9.1: First order constant coefficient</url>.   
+  </p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsubsection-6">Subsubsection 7.9.1.3: Undetermined coefficients</url>.   
+  </p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-162">Subsection 7.9.2: First order variable coefficient</url>.   
+  </p>
+</li>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-163">Subsection 7.9.3: Second order constant coefficients</url>.   
+  </p>
+</li>
+
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/oGo3l5dH97Q?si=SAvp_msjfMd0VoQ8">
+Nonhomogeneous ODE systems (50:05)</url> by Steve Butler (Beard Meets Calculus).
+</p>
+</li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-164">Subsection 7.9.4: Exercises 
+7.9.101, 7.9.102</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+  <exercise label="mcq-nonhomog-basic-form">
+  <title>Identifying a Nonhomogeneous System</title>
+
+  <statement>
+    <p>
+      Which of the following is a <em>nonhomogeneous</em> linear system?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>\vec{x}' = A\vec{x} + \vec{f}(t)</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A nonhomogeneous system includes an external forcing term 
+          <m>\vec{f}(t)</m>. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\vec{x}' = A\vec{x}</m></p></statement>
+      <feedback><p>No forcing term is present—this is the homogeneous case.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\vec{x}' = \vec{f}(t)</m></p></statement>
+      <feedback>
+        <p>No—this system has no matrix term and is not linear in the usual sense of Section 7.9.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-nonhomog-solution-form">
+  <title>General Solution Formula</title>
+
+  <statement>
+    <p>
+      What is the general solution to the nonhomogeneous system 
+      <m>\vec{x}' = A\vec{x} + \vec{f}(t)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            \vec{x}(t) = e^{tA}\vec{x}(0)
+            + \int_{0}^{t} e^{(t-s)A}\vec{f}(s)\,ds
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This is the variation‑of‑parameters formula.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\vec{x}(t) = e^{tA}\vec{x}(0) + \vec{f}(t)</m></p>
+      </statement>
+      <feedback><p>No—the forcing term must be integrated, not simply added.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\vec{x}(t) = e^{tA}\vec{f}(t)</m></p>
+      </statement>
+      <feedback><p>No—this does not solve the differential equation.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-nonhomog-epropagation">
+  <title>Meaning of <m>e^{(t-s)A}</m> in the Integral</title>
+
+  <statement>
+    <p>
+      In the variation‑of‑parameters integral
+      <m>\displaystyle \int_0^t e^{(t-s)A}\vec{f}(s)\,ds</m>,
+      what does <m>e^{(t-s)A}</m> represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>The propagation of the forcing <m>\vec{f}(s)</m> forward to time <m>t</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The exponential transports the effect of the forcing from the 
+          earlier time <m>s</m> to the current time <m>t</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The derivative of <m>\vec{f}(s)</m>.</p></statement>
+      <feedback><p>No—nothing in the integral computes a derivative of the forcing.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>An antiderivative of <m>A</m>.</p></statement>
+      <feedback><p>No—<m>e^{(t-s)A}</m> is the matrix exponential of <m>A</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-nonhomog-diagonal-case">
+  <title>Simple Computation in the Diagonal Case</title>
+
+  <statement>
+    <p>
+      Suppose 
+      <m>
+        A = 
+        \begin{bmatrix}
+          2 \amp 0 \\
+          0 \amp -1
+        \end{bmatrix},
+        \vec{f}(t) =
+        \begin{bmatrix}
+          e^{t} \\
+          1
+        \end{bmatrix}.
+      </m>
+      Which expression correctly represents the integrand 
+      <m>e^{(t-s)A}\vec{f}(s)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>
+            \begin{bmatrix}
+              e^{2(t-s)} \amp 0 \\
+              0 \amp e^{-(t-s)}
+            \end{bmatrix}
+            \begin{bmatrix}
+              e^{s} \\[3pt]
+              1
+            \end{bmatrix}
+          </m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. For diagonal <m>A</m>, the exponential is diagonal, and the 
+          integrand is a product of this exponential and <m>\vec{f}(s)</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\begin{bmatrix} e^{2t} \\ e^{-t} \end{bmatrix}</m></p>
+      </statement>
+      <feedback><p>No—this ignores the dependence on <m>s</m> and the forcing vector.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>e^{tA}\vec{f}(t)</m></p>
+      </statement>
+      <feedback><p>No—the integral requires <m>e^{(t-s)A}\vec{f}(s)</m>, not evaluation at <m>t</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-nonhomog-initial-value">
+  <title>Solving an IVP Conceptually</title>
+
+  <statement>
+    <p>
+      To solve the initial value problem  
+      <m>
+        \vec{x}' = A\vec{x} + \vec{f}(t), 
+        \vec{x}(0) = \vec{b},
+      </m>
+      which of the following steps is correct?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          Compute <m>\vec{x}(t) = e^{tA}\vec{b} + \int_0^t e^{(t-s)A}\vec{f}(s)\,ds</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This is precisely the initial‑value formula. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Solve only the homogeneous system and ignore <m>\vec{f}(t)</m>.</p></statement>
+      <feedback><p>No—this omits the contribution of the forcing term.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Integrate <m>\vec{f}(t)</m> alone and multiply by <m>A</m>.</p></statement>
+      <feedback><p>No—this does not account for the system dynamics.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="nonhomog-open-1">
+    <title>Solving a Nonhomogeneous System with Diagonal A</title>
+
+    <statement>
+      <p>
+        Consider the system
+        <m>
+          \vec{x}' =
+          \begin{bmatrix}
+            2 \amp 0 \\
+            0 \amp -1
+          \end{bmatrix}
+          \vec{x}
+          +
+          \begin{bmatrix}
+            e^{-t} \\
+            3
+          \end{bmatrix},
+          \vec{x}(0) =
+          \begin{bmatrix}
+            1 \\
+            0
+          \end{bmatrix}.
+        </m>
+        Use the variation-of-parameters formula to find an explicit expression 
+        for <m>\vec{x}(t)</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The solution of 
+        <m>\vec{x}' = A\vec{x} + \vec{f}(t)</m>
+        with <m>\vec{x}(0)=\vec{b}</m> is  
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        e^{tA} \vec{b}
+        +
+        \int_0^t e^{(t-s)A} \vec{f}(s)\,ds.
+      </me>
+
+      <p>
+        For the diagonal matrix <m>A</m>,
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        \begin{bmatrix}
+          e^{2t} \amp 0 \\
+          0 \amp e^{-t}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Therefore,
+      </p>
+
+      <me>
+        e^{(t-s)A}
+        =
+        \begin{bmatrix}
+          e^{2(t-s)} \amp 0 \\
+          0 \amp e^{-(t-s)}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        The homogeneous part is:
+      </p>
+
+      <me>
+        e^{tA}\vec{x}(0)
+        =
+        \begin{bmatrix}
+          e^{2t} \\
+          0
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        The particular part is:
+      </p>
+
+      <me>
+        \int_0^t 
+        \begin{bmatrix}
+          e^{2(t-s)} \amp 0 \\
+          0 \amp e^{-(t-s)}
+        \end{bmatrix}
+        \begin{bmatrix}
+          e^{-s} \\
+          3
+        \end{bmatrix}
+        ds
+        =
+        \int_0^t
+        \begin{bmatrix}
+          e^{2t - 3s} \\
+          3 e^{-(t-s)}
+        \end{bmatrix} ds.
+      </me>
+
+      <p>
+        Compute the integrals:
+      </p>
+
+      <me>
+        \int_0^t e^{2t - 3s}\,ds
+        = e^{2t}\int_0^t e^{-3s}\,ds
+        = e^{2t} \frac{1 - e^{-3t}}{3},
+      </me>
+
+      <me>
+        \int_0^t 3e^{-(t-s)}\,ds
+        = 3e^{-t} \int_0^t e^{s}\,ds
+        = 3e^{-t}(e^{t}-1)
+        = 3(1 - e^{-t}).
+      </me>
+
+      <p>
+        Putting everything together:
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        \begin{bmatrix}
+          e^{2t} \\
+          0
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+          \tfrac{1}{3} e^{2t}(1 - e^{-3t}) \\
+          3(1-e^{-t})
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Hence the solution is
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        \begin{bmatrix}
+          e^{2t} + \tfrac{1}{3}(e^{2t} - e^{-t}) \\
+          3 - 3e^{-t}
+        \end{bmatrix}.
+      </me>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="nonhomog-open-2">
+    <title>Constant Forcing with Triangular Matrix</title>
+
+    <statement>
+      <p>
+        Solve the system  
+        <m>
+          \vec{x}' =
+          \begin{bmatrix}
+            1 \amp 1 \\
+            0 \amp 1
+          \end{bmatrix}\vec{x}
+          +
+          \begin{bmatrix}
+            0 \\
+            e^{t}
+          \end{bmatrix},
+          \vec{x}(0) =
+          \begin{bmatrix}
+            2 \\
+            -1
+          \end{bmatrix}.
+        </m>
+        Use variation of parameters; do <em>not</em> use undetermined coefficients.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The matrix exponential for an upper triangular matrix with repeated 
+        eigenvalue <m>1</m> is:
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        e^{t}
+        \begin{bmatrix}
+          1 \amp t \\
+          0 \amp 1
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Consider the formula
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        e^{tA}\vec{x}(0)
+        +
+        \int_0^t e^{(t-s)A}\vec{f}(s)\,ds.
+      </me>
+
+      <p>
+        Compute the homogeneous part:
+      </p>
+
+      <me>
+        e^{tA}\vec{x}(0)
+        =
+        e^{t}
+        \begin{bmatrix}
+          1 \amp t \\
+          0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}
+          2 \\ -1
+        \end{bmatrix}
+        =
+        e^{t}
+        \begin{bmatrix}
+          2 - t \\ -1
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Next compute the integrand:
+      </p>
+
+      <me>
+        e^{(t-s)A}\vec{f}(s)
+        =
+        e^{t-s}
+        \begin{bmatrix}
+          1 \amp (t-s) \\
+          0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}
+          0 \\ e^{s}
+        \end{bmatrix}
+        =
+        e^{t-s}
+        \begin{bmatrix}
+          (t-s)e^{s} \\
+          e^{s}
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          (t-s)e^{t} \\
+          e^{t}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Integrate from <m>0</m> to <m>t</m>:
+      </p>
+
+      <me>
+        \int_0^t (t-s)e^{t}\,ds
+        = e^{t}\int_0^t (t-s)\,ds
+        = e^{t}\left(\tfrac12 t^2\right),
+      </me>
+
+      <me>
+        \int_0^t e^{t}\,ds
+        = e^{t} t.
+      </me>
+
+      <p>
+        Thus the particular solution is:
+      </p>
+
+      <me>
+        \begin{bmatrix}
+          \tfrac12 t^2 e^{t} \\
+          t e^{t}
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        Combining homogeneous and particular parts:
+      </p>
+
+      <me>
+        \vec{x}(t)
+        =
+        e^{t}
+        \begin{bmatrix}
+          2 - t \\
+          -1
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+          \tfrac12 t^2 e^{t} \\
+          t e^{t}
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          (2 - t + \tfrac12 t^2)e^{t} \\
+          (-1 + t)e^{t}
+        \end{bmatrix}.
+      </me>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 3 -->
+  <exercise xml:id="nonhomog-open-3">
+    <title>Interpreting the Forcing Term Through the Matrix Exponential</title>
+
+    <statement>
+      <p>
+        Consider the nonhomogeneous system
+        <m>
+          \vec{x}' = A\vec{x} + \vec{f}(t),
+          A =
+          \begin{bmatrix}
+            0 \amp -1 \\
+            1 \amp 0
+          \end{bmatrix},
+        </m>
+        where <m>\vec{f}(t) = \begin{bmatrix} 0 \\ \cos t \end{bmatrix}</m>.
+      </p>
+<ol>
+  <li>
+    <p>
+      Describe qualitatively how the forcing term influences the motion  
+        using the matrix exponential <m>e^{(t-s)A}</m>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Compute <m>e^{tA}</m>.
+    </p>
+  </li>
+</ol> 
+
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        The forcing enters through the integral
+      </p>
+
+      <me>
+        \int_0^t e^{(t-s)A}\vec{f}(s)\,ds,
+      </me>
+
+      <p>
+        where <m>e^{(t-s)A}</m> “propagates” the contribution of 
+        <m>\vec{f}(s)</m> forward from time <m>s</m> to <m>t</m>.  
+        Since <m>A</m> is a rotation matrix, <m>e^{(t-s)A}</m> is a rotation by 
+        <m>t-s</m>.  
+        Thus the forcing term <m>\vec{f}(s)</m> (a vertical oscillation) gets 
+        rotated and accumulated over time.  
+        The net effect is that the system experiences a continuously rotating 
+        contribution from <m>\cos s</m>, producing a driven rotational motion.
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        Because <m>A</m> represents a 90-degree rotation, its exponential is the usual 
+        rotation matrix:
+      </p>
+
+      <me>
+        e^{tA}
+        =
+        \begin{bmatrix}
+          \cos t \amp -\sin t \\
+          \sin t \amp \cos t
+        \end{bmatrix}.
+      </me>
+
+      <p>
+        This follows from the Taylor series expansion and is used 
+        directly inside the nonhomogeneous integral.  
+      </p>
+    </solution>
+  </exercise>
+
+</exercises>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives59">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+<ul>
+
+<li>
+<p>
+  Compute particular solutions by evaluating 
+      <m>\displaystyle \int_0^t e^{(t-s)A}\vec{f}(s)\,ds</m>, 
+      including cases where <m>\vec{f}(t)</m> is exponential, polynomial, or 
+      sinusoidal.
+</p>
+</li>
+
+<li>
+<p>
+Use properties of the matrix exponential (e.g., behavior under commuting 
+      matrices, simplifications for triangular or diagonalizable matrices) to 
+      streamline the computation of <m>e^{(t-s)A}</m> inside the variation‑of‑parameters 
+      integral.  
+</p>
+</li>
+
+<li>
+<p>
+ Interpret the integral formula as a matrix‑valued convolution that 
+      “accumulates” the forcing term <m>\vec{f}(t)</m> over time, explaining how 
+      the effect of forcing is propagated forward through the dynamics defined 
+      by <m>A</m>.
+</p>
+</li>
+
+</ul>
+
+</section>
+
+
+</handout>
