@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Daily Prep 5.4 - Eigenvalue Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Equations with Linear Algebra">
+<meta property="book:author" content="Dale Buske">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.16';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.0f480e95eedd3cd4.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.75d8d8257df1449f.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://drbuske.github.io/Math327"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Differential Equations with Linear Algebra</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Textbook-24.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Textbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\N}{\mathbb N}
+  \newcommand{\Z}{\mathbb Z}
+  \newcommand{\Q}{\mathbb Q}
+  \newcommand{\R}{\mathbb R}
+
+  \newcommand{\avec}{{\mathbf a}}
+  \newcommand{\bvec}{{\mathbf b}}
+  \newcommand{\cvec}{{\mathbf c}}
+  \newcommand{\dvec}{{\mathbf d}}
+  \newcommand{\dtil}{\widetilde{\mathbf d}}
+  \newcommand{\evec}{{\mathbf e}}
+  \newcommand{\fvec}{{\mathbf f}}
+  \newcommand{\nvec}{{\mathbf n}}
+  \newcommand{\pvec}{{\mathbf p}}
+  \newcommand{\qvec}{{\mathbf q}}
+  \newcommand{\svec}{{\mathbf s}}
+  \newcommand{\tvec}{{\mathbf t}}
+  \newcommand{\uvec}{{\mathbf u}}
+  \newcommand{\vvec}{{\mathbf v}}
+  \newcommand{\wvec}{{\mathbf w}}
+  \newcommand{\xvec}{{\mathbf x}}
+  \newcommand{\yvec}{{\mathbf y}}
+  \newcommand{\zvec}{{\mathbf z}}
+  \newcommand{\rvec}{{\mathbf r}}
+  \newcommand{\mvec}{{\mathbf m}}
+  \newcommand{\zerovec}{{\mathbf 0}}
+  \newcommand{\onevec}{{\mathbf 1}}
+  \newcommand{\real}{{\mathbb R}}
+  \newcommand{\twovec}[2]{\left[\begin{array}{r}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\ctwovec}[2]{\left[\begin{array}{c}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\threevec}[3]{\left[\begin{array}{r}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\cthreevec}[3]{\left[\begin{array}{c}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\fourvec}[4]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\cfourvec}[4]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\fivevec}[5]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\mattwo}[4]{\left[\begin{array}{rr}#1 \amp #2 \\ #3 \amp #4 \\ \end{array}\right]}
+  \newcommand{\laspan}[1]{\text{Span}\left\{#1\right\}}
+  \newcommand{\bcal}{{\cal B}}
+  \newcommand{\ccal}{{\cal C}}
+  \newcommand{\scal}{{\cal S}}
+  \newcommand{\wcal}{{\cal W}}
+  \newcommand{\ecal}{{\cal E}}
+  \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
+  \newcommand{\gray}[1]{\color{gray}{#1}}
+  \newcommand{\lgray}[1]{\color{lightgray}{#1}}
+  \newcommand{\rank}{\operatorname{rank}}
+  \newcommand{\row}{\text{Row}}
+  \newcommand{\col}{\text{Col}}
+  \renewcommand{\row}{\text{Row}}
+  \newcommand{\nul}{\text{Nul}}
+  \newcommand{\var}{\text{Var}}
+  \newcommand{\corr}{\text{corr}}
+  \newcommand{\len}[1]{\left|#1\right|}
+  \newcommand{\bbar}{\overline{\bvec}}
+  \newcommand{\bhat}{\widehat{\bvec}}
+  \newcommand{\bperp}{\bvec^\perp}
+  \newcommand{\xhat}{\widehat{\xvec}}
+  \newcommand{\vhat}{\widehat{\vvec}}
+  \newcommand{\uhat}{\widehat{\uvec}}
+  \newcommand{\what}{\widehat{\wvec}}
+  \newcommand{\Sighat}{\widehat{\Sigma}}
+  \newcommand{\basis}[2]{#1_1,#1_2,\ldots,#1_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-Textbook.html" class="internal"><span class="title">Daily Prep</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-2.html" class="internal"><span class="title">Daily Prep 0.2 - What are Differential Equations?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#ch-Textbook-2-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#ch-Textbook-2-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#sec-Toprepareforclass52" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#sec-Advancedlearningobjectives52" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-3.html" class="internal"><span class="title">Daily Prep 1.1 - Integrals as Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#ch-Textbook-3-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#ch-Textbook-3-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#sec-Toprepareforclass11" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#sec-Advancedlearningobjectives11" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-4.html" class="internal"><span class="title">Daily Prep 1.2 - Slope Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#ch-Textbook-4-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#ch-Textbook-4-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#sec-Toprepareforclass12" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#sec-Advancedlearningobjectives12" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-5.html" class="internal"><span class="title">Daily Prep 1.3 - Separable Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#ch-Textbook-5-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#ch-Textbook-5-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#sec-Toprepareforclass13" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#sec-Advancedlearningobjectives13" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-6.html" class="internal"><span class="title">Daily Prep 1.4 - Linear Equations and the Integrating Factor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#ch-Textbook-6-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#ch-Textbook-6-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#sec-Toprepareforclass14" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#sec-Advancedlearningobjectives14" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-7.html" class="internal"><span class="title">Daily Prep 1.6 - Autonomous Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#ch-Textbook-7-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#ch-Textbook-7-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#sec-Toprepareforclass16" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#sec-Advancedlearningobjectives16" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-8.html" class="internal"><span class="title">Daily Prep 1.7 - Numerical Methods: Euler’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#ch-Textbook-8-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#ch-Textbook-8-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#sec-Toprepareforclass17" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#sec-Advancedlearningobjectives17" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-9.html" class="internal"><span class="title">Daily Prep 2.1 - Second Order Linear ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#ch-Textbook-9-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#ch-Textbook-9-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#sec-Toprepareforclass21" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#sec-Advancedlearningobjectives21" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-10.html" class="internal"><span class="title">Daily Prep 2.2 - Constant Coefficient Second Order ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#ch-Textbook-10-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#ch-Textbook-10-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#sec-Toprepareforclass22" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#sec-Advancedlearningobjectives22" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-11.html" class="internal"><span class="title">Daily Prep 2.3 - Higher Order Linear ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#ch-Textbook-11-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#ch-Textbook-11-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#sec-Toprepareforclass23" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#sec-Advancedlearningobjectives23" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-12.html" class="internal"><span class="title">Daily Prep 2.4 - Mechanical Vibrations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#ch-Textbook-12-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#ch-Textbook-12-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#sec-Toprepareforclass24" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#sec-Advancedlearningobjectives24" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-13.html" class="internal"><span class="title">Daily Prep 2.5 - Nonhomogeneous Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#ch-Textbook-13-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#ch-Textbook-13-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#sec-Toprepareforclass25" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#sec-Advancedlearningobjectives25" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-14.html" class="internal"><span class="title">Daily Prep 3.1 - The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#ch-Textbook-14-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#ch-Textbook-14-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#sec-Toprepareforclass31" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#sec-Advancedlearningobjectives31" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-15.html" class="internal"><span class="title">Daily Prep 3.2 - Transforms of Derivatives and ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#ch-Textbook-15-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#ch-Textbook-15-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#sec-Toprepareforclass32" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#sec-Advancedlearningobjectives32" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-16.html" class="internal"><span class="title">Daily Prep 3.3 - Convolution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#ch-Textbook-16-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#ch-Textbook-16-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#sec-Toprepareforclass33" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#sec-Advancedlearningobjectives33" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-17.html" class="internal"><span class="title">Daily Prep 3.4 - Dirac Delta and Impulse Response</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#ch-Textbook-17-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#ch-Textbook-17-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#sec-Toprepareforclass34" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#sec-Advancedlearningobjectives34" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-18.html" class="internal"><span class="title">Daily Prep 4.1 - Vectors, Mappings, and Matrices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#ch-Textbook-18-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#ch-Textbook-18-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#sec-Toprepareforclass41" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#sec-Advancedlearningobjectives41" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-19.html" class="internal"><span class="title">Daily Prep 4.2 - Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#ch-Textbook-19-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#ch-Textbook-19-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#sec-Toprepareforclass42" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#sec-Advancedlearningobjectives42" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-20.html" class="internal"><span class="title">Daily Prep 4.3 - Elimination</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#ch-Textbook-20-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#ch-Textbook-20-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#sec-Toprepareforclass43" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#sec-Advancedlearningobjectives43" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-21.html" class="internal"><span class="title">Daily Prep 4.4 - Subspaces, Dimension, and the Kernel</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-21.html#ch-Textbook-21-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-21.html#ch-Textbook-21-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-Textbook-21.html#sec-Toprepareforclass44" class="internal"><span class="title">Learn!</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-Textbook-21.html#sec-Toprepareforclass44-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-21.html#sec-Advancedlearningobjectives44" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-22.html" class="internal"><span class="title">Daily Prep 5.1 - Introduction to Systems of ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-22.html#ch-Textbook-22-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-22.html#ch-Textbook-22-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-Textbook-22.html#sec-Toprepareforclass51" class="internal"><span class="title">Learn!</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-Textbook-22.html#sec-Toprepareforclass51-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-22.html#sec-Advancedlearningobjectives51" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-23.html" class="internal"><span class="title">Daily Prep 5.2 - Matrices and Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-23.html#ch-Textbook-23-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-23.html#ch-Textbook-23-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-Textbook-23.html#ch-Textbook-23-4" class="internal"><span class="title">Learn!</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-Textbook-23.html#ch-Textbook-23-4-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-23.html#ch-Textbook-23-5" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-24.html" class="internal"><span class="title">Daily Prep 5.3 - Linear Systems of ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-24.html#ch-Textbook-24-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-24.html#ch-Textbook-24-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-Textbook-24.html#sec-Toprepareforclass53" class="internal"><span class="title">Learn!</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-Textbook-24.html#sec-Toprepareforclass53-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-24.html#sec-Advancedlearningobjectives53" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout contains-active">
+<div class="toc-title-box"><a href="ch-Textbook-25.html" class="internal"><span class="title">Daily Prep 5.4 - Eigenvalue Method</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-25.html#ch-Textbook-25-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-25.html#ch-Textbook-25-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-Textbook-25.html#sec-Toprepareforclass54" class="internal"><span class="title">Learn!</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-Textbook-25.html#sec-Toprepareforclass54-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-25.html#sec-Advancedlearningobjectives54" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="handout" id="ch-Textbook-25" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Daily Prep 5.4 - Eigenvalue Method</span><div class="print-links"><a href="?printpreview=ch-Textbook-25" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h2>
+<section class="section" id="ch-Textbook-25-2"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Overview</span>
+</h3>
+<div class="para" id="ch-Textbook-25-2-2">We now introduce the eigenvalue method as a powerful technique for solving linear homogeneous constant‑coefficient systems of ODEs of the form <span class="process-math">\(\vec{x}' = P\vec{x}\text{,}\)</span> where <span class="process-math">\(P\)</span> is a constant square matrix. Motivated by the scalar case, the method tries solutions of the form <span class="process-math">\(\vec{x}(t) = \vec{v} e^{\lambda t}\text{,}\)</span> where <span class="process-math">\(\lambda\)</span> is a scalar and <span class="process-math">\(\vec{v}\)</span> is a constant vector.  Substituting this trial form into the system reduces the differential equation to the algebraic eigenvalue problem <span class="process-math">\(P\vec{v} = \lambda \vec{v}\text{.}\)</span>  Thus, eigenvalues are found by solving <span class="process-math">\(\det(P - \lambda I) = 0\text{,}\)</span> and each eigenvector yields a corresponding solution <span class="process-math">\(\vec{v} e^{\lambda t}\text{.}\)</span>  Since an <span class="process-math">\(n \times n\)</span> matrix typically has <span class="process-math">\(n\)</span> eigenvalues (possibly repeated or complex), the section shows that a collection of linearly independent eigenvector solutions forms a fundamental solution set, and all solutions are linear combinations of these. The method connects linear algebra and differential equations, enabling systematic and elegant solution of multi‑dimensional linear systems.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-25-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Overview"><a href="#ch-Textbook-25-2" title="Copy heading and permalink for Section: Overview" aria-label="Copy heading and permalink for Section: Overview">🔗</a></div></section><section class="section" id="ch-Textbook-25-3"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic learning objectives</span>
+</h3>
+<div class="para" id="ch-Textbook-25-3-2">These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated <em class="emphasis">in italics</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-25-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="ch-Textbook-25-3-3">
+<li id="ch-Textbook-25-3-3-1">
+<div class="para" id="ch-Textbook-25-3-3-1-1">Recognize that the eigenvalue method applies to linear homogeneous constant‑coefficient systems <span class="process-math">\(\vec{x}' = P\vec{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-25-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-25-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-Textbook-25-3-3-2">
+<div class="para" id="ch-Textbook-25-3-3-2-1">Understand the trial solution <span class="process-math">\(\vec{x}(t) = \vec{v} e^{\lambda t}\)</span> and how substituting it leads to the eigenvalue equation <span class="process-math">\(P\vec{v} = \lambda \vec{v}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-25-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-25-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-Textbook-25-3-3-3">
+<div class="para" id="ch-Textbook-25-3-3-3-1">Define eigenvalues and eigenvectors of a matrix and compute eigenvalues using <span class="process-math">\(\det(P - \lambda I) = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-25-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-25-3-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Section: Basic learning objectives"><a href="#ch-Textbook-25-3" title="Copy heading and permalink for Section: Basic learning objectives" aria-label="Copy heading and permalink for Section: Basic learning objectives">🔗</a></div></section><section class="section" id="sec-Toprepareforclass54"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learn!</span>
+</h3>
+<div class="para" id="sec-Toprepareforclass54-2">Complete the actions listed below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="sec-Toprepareforclass54-3">
+<li id="sec-Toprepareforclass54-3-1">
+<div class="para" id="sec-Toprepareforclass54-3-1-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/eigenmethod_section.html#subsection-143" target="_blank">Subsection 7.4.1: Eigenvalues and eigenvectors of a matrix</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-2">
+<div class="para" id="sec-Toprepareforclass54-3-2-1">
+<em class="alert">Watch</em> <a class="external" href="https://youtu.be/hD1hmDEpl40?si=iAmmHtQJLKXWlk3_" target="_blank">Intro to Solving a Linear System of ODEs using the Eigenvalue Method: Eigenvalues and Eigenvectors (7:17)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-3">
+<div class="para" id="sec-Toprepareforclass54-3-3-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/eigenmethod_section.html#subsection-144" target="_blank">Subsection 7.4.2: The eigenvalue method with distinct real eigenvalues</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-4">
+<div class="para" id="sec-Toprepareforclass54-3-4-1">
+<em class="alert">Watch</em> <a class="external" href="https://youtu.be/COyxONaZsvg?si=8lgRIxsFtceTzWdu" target="_blank">Solve a Linear System of ODEs using the Eigenvalue Method: Real, Distinct Eigenvalues (7:28)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-5">
+<div class="para" id="sec-Toprepareforclass54-3-5-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/JXXUjsXs-4Y?si=DyyGPBay9TM4ZDij" target="_blank">Find Eigenvalues, Eigenvectors, and Solve a Linear System of ODEs with Constant Coefficents: Homogeneous (6:35)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-6">
+<div class="para" id="sec-Toprepareforclass54-3-6-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/JXXUjsXs-4Y?si=HpHKXxxydOqRiQcU" target="_blank">Solve a Linear System of ODEs using the Eigenvalue Method: Real, Distinct Eigenvalues (4:08)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-7">
+<div class="para" id="sec-Toprepareforclass54-3-7-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/eigenmethod_section.html#subsection-145" target="_blank">Subsection 7.4.3: Complex eigenvalues</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-8">
+<div class="para" id="sec-Toprepareforclass54-3-8-1">
+<em class="alert">Watch</em> <a class="external" href="https://youtu.be/tvKDyqkiJT4?si=-mCy8vNy7JvcBqmq" target="_blank">Solve a Linear System of ODEs using the Eigenvalue Method: Complex Eigenvalues (9:44)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-9">
+<div class="para" id="sec-Toprepareforclass54-3-9-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/NBnHOPTGOzY?si=DMKg6uguzINiondT" target="_blank">Solve a Linear System of ODEs using the Eigenvalue Method: Imaginary Eigenvalues (6:38)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-10">
+<div class="para" id="sec-Toprepareforclass54-3-10-1">
+<em class="alert">Do</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/eigenmethod_section.html#subsection-146" target="_blank">Subsection 7.4.4: Exercises 7.4.1, 7.4.5, 7.4.6, 7.4.7, 7.4.9, 7.4.101, 7.4.104</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass54-3-11">
+<div class="para" id="sec-Toprepareforclass54-3-11-1">
+<em class="alert">Do</em> MyOpenMath questions from this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass54-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass54-3-11" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<section class="exercises" id="sec-Toprepareforclass54-4"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="mcqeigentrialsolution"><h5 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Trial Solutions for the Eigenvalue Method.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcqeigentrialsolution-2-1">For a linear homogeneous constant‑coefficient system <span class="process-math">\(\vec{x}' = P\vec{x}\text{,}\)</span> what trial solution does the eigenvalue method use?<div class="autopermalink" data-description="Paragraph"><a href="#mcqeigentrialsolution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqeigentrialsolution" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcqeigentrialsolution_opt_a" data-correct=""><div class="para" id="mcqeigentrialsolution-3-1-1-1"><span class="process-math">\(\vec{x}(t) = \vec{v} e^{\lambda t}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigentrialsolution_opt_a"><div class="para" id="mcqeigentrialsolution-3-1-2-1">Correct. The method assumes a solution of the form <span class="process-math">\(\vec{v} e^{\lambda t}\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcqeigentrialsolution_opt_b"><div class="para" id="mcqeigentrialsolution-3-2-1-1"><span class="process-math">\(\vec{x}(t) = \lambda t + \vec{v}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigentrialsolution_opt_b"><div class="para" id="mcqeigentrialsolution-3-2-2-1">No—the method uses exponential solutions, not linear ones.</div></li>
+<li data-component="answer" id="rs-mcqeigentrialsolution_opt_c"><div class="para" id="mcqeigentrialsolution-3-3-1-1"><span class="process-math">\(\vec{x}(t) = \vec{v}\,\sin(\lambda t)\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigentrialsolution_opt_c"><div class="para" id="mcqeigentrialsolution-3-3-2-1">Not in the first step. Sinusoidal behavior only appears later when eigenvalues are complex.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 1: Trial Solutions for the Eigenvalue Method"><a href="#mcqeigentrialsolution" title="Copy heading and permalink for Exercise 1: Trial Solutions for the Eigenvalue Method" aria-label="Copy heading and permalink for Exercise 1: Trial Solutions for the Eigenvalue Method">🔗</a></div></article><article class="exercise exercise-like" id="mcqeigenvalueequation"><h5 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Obtaining the Eigenvalue Equation.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcqeigenvalueequation-2-1">After substituting <span class="process-math">\(\vec{x}(t) = \vec{v} e^{\lambda t}\)</span> into <span class="process-math">\(\vec{x}' = P\vec{x}\text{,}\)</span> which equation must the constants <span class="process-math">\(\lambda\)</span> and <span class="process-math">\(\vec{v}\)</span> satisfy?<div class="autopermalink" data-description="Paragraph"><a href="#mcqeigenvalueequation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqeigenvalueequation" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcqeigenvalueequation_opt_a" data-correct=""><div class="para" id="mcqeigenvalueequation-3-1-1-1"><span class="process-math">\(P\vec{v} = \lambda \vec{v}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigenvalueequation_opt_a"><div class="para" id="mcqeigenvalueequation-3-1-2-1">Correct. The substitution leads directly to the eigenvalue equation.</div></li>
+<li data-component="answer" id="rs-mcqeigenvalueequation_opt_b"><div class="para" id="mcqeigenvalueequation-3-2-1-1"><span class="process-math">\(P\vec{v} = \vec{0}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigenvalueequation_opt_b"><div class="para" id="mcqeigenvalueequation-3-2-2-1">No—that equation is used to find eigenvectors once <span class="process-math">\(\lambda\)</span> is known.</div></li>
+<li data-component="answer" id="rs-mcqeigenvalueequation_opt_c"><div class="para" id="mcqeigenvalueequation-3-3-1-1"><span class="process-math">\(P = \lambda I\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigenvalueequation_opt_c"><div class="para" id="mcqeigenvalueequation-3-3-2-1">No. This only holds when <span class="process-math">\(P\)</span> is a scalar matrix.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 2: Obtaining the Eigenvalue Equation"><a href="#mcqeigenvalueequation" title="Copy heading and permalink for Exercise 2: Obtaining the Eigenvalue Equation" aria-label="Copy heading and permalink for Exercise 2: Obtaining the Eigenvalue Equation">🔗</a></div></article><article class="exercise exercise-like" id="mcqcharacteristicequation"><h5 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Computing Eigenvalues.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcqcharacteristicequation-2-1">To find the eigenvalues of a matrix <span class="process-math">\(P\)</span> in the system <span class="process-math">\(\vec{x}' = P\vec{x}\text{,}\)</span> which equation should be solved?<div class="autopermalink" data-description="Paragraph"><a href="#mcqcharacteristicequation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqcharacteristicequation" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcqcharacteristicequation_opt_a" data-correct=""><div class="para" id="mcqcharacteristicequation-3-1-1-1"><span class="process-math">\(\det(P - \lambda I) = 0\)</span></div></li>
+<li data-component="feedback" id="rs-mcqcharacteristicequation_opt_a"><div class="para" id="mcqcharacteristicequation-3-1-2-1">Correct. Eigenvalues are roots of the characteristic equation <span class="process-math">\(\det(P - \lambda I)=0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcqcharacteristicequation_opt_b"><div class="para" id="mcqcharacteristicequation-3-2-1-1"><span class="process-math">\(\det(P) = 0\)</span></div></li>
+<li data-component="feedback" id="rs-mcqcharacteristicequation_opt_b"><div class="para" id="mcqcharacteristicequation-3-2-2-1">No. This would test whether <span class="process-math">\(P\)</span> is singular, not find eigenvalues.</div></li>
+<li data-component="answer" id="rs-mcqcharacteristicequation_opt_c"><div class="para" id="mcqcharacteristicequation-3-3-1-1"><span class="process-math">\(P\vec{x} = \vec{0}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqcharacteristicequation_opt_c"><div class="para" id="mcqcharacteristicequation-3-3-2-1">This computes the nullspace, not the eigenvalues.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 3: Computing Eigenvalues"><a href="#mcqcharacteristicequation" title="Copy heading and permalink for Exercise 3: Computing Eigenvalues" aria-label="Copy heading and permalink for Exercise 3: Computing Eigenvalues">🔗</a></div></article><article class="exercise exercise-like" id="mcqeigenvaluecomputationsmall"><h5 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Computing an Eigenvalue.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcqeigenvaluecomputationsmall-2-1">Let <span class="process-math">\(P =
+\begin{bmatrix}
+3 \amp 0 \\
+0 \amp 5
+\end{bmatrix}.\)</span> What are the eigenvalues of <span class="process-math">\(P\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcqeigenvaluecomputationsmall-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqeigenvaluecomputationsmall" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcqeigenvaluecomputationsmall_opt_a" data-correct=""><div class="para" id="mcqeigenvaluecomputationsmall-3-1-1-1"><span class="process-math">\(\lambda = 3,\ 5\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigenvaluecomputationsmall_opt_a"><div class="para" id="mcqeigenvaluecomputationsmall-3-1-2-1">Correct. Diagonal matrices have eigenvalues equal to their diagonal entries, consistent with solving <span class="process-math">\(\det(P - \lambda I)=0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcqeigenvaluecomputationsmall_opt_b"><div class="para" id="mcqeigenvaluecomputationsmall-3-2-1-1"><span class="process-math">\(\lambda = 0,\ 15\)</span></div></li>
+<li data-component="feedback" id="rs-mcqeigenvaluecomputationsmall_opt_b"><div class="para" id="mcqeigenvaluecomputationsmall-3-2-2-1">No—the determinant equation does not give these roots.</div></li>
+<li data-component="answer" id="rs-mcqeigenvaluecomputationsmall_opt_c"><div class="para" id="mcqeigenvaluecomputationsmall-3-3-1-1">
+<span class="process-math">\(\lambda = 4\)</span> only</div></li>
+<li data-component="feedback" id="rs-mcqeigenvaluecomputationsmall_opt_c"><div class="para" id="mcqeigenvaluecomputationsmall-3-3-2-1">No. A 2×2 matrix must have two eigenvalues (including repeats).</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 4: Computing an Eigenvalue"><a href="#mcqeigenvaluecomputationsmall" title="Copy heading and permalink for Exercise 4: Computing an Eigenvalue" aria-label="Copy heading and permalink for Exercise 4: Computing an Eigenvalue">🔗</a></div></article><article class="exercise exercise-like" id="mcqcheckeigenvector"><h5 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Checking an Eigenvector.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcqcheckeigenvector-2-1">Let <span class="process-math">\(P =
+\begin{bmatrix}
+2 \amp 1 \\
+0 \amp 2
+\end{bmatrix},
+\vec{v} =
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}.\)</span> Compute <span class="process-math">\(P\vec{v}\)</span> and determine the corresponding eigenvalue.<div class="autopermalink" data-description="Paragraph"><a href="#mcqcheckeigenvector-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqcheckeigenvector" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcqcheckeigenvector_opt_a" data-correct=""><div class="para" id="mcqcheckeigenvector-3-1-1-1"><span class="process-math">\(P\vec{v} =
+\begin{bmatrix}
+2 \\
+0
+\end{bmatrix},
+\lambda = 2\)</span></div></li>
+<li data-component="feedback" id="rs-mcqcheckeigenvector_opt_a"><div class="para" id="mcqcheckeigenvector-3-1-2-1">Correct. Because <span class="process-math">\(P\vec{v} = \begin{bmatrix}2 \\ 0\end{bmatrix} = 2\vec{v}\text{,}\)</span> the eigenvalue is <span class="process-math">\(\lambda = 2\text{.}\)</span> This matches the equation <span class="process-math">\(P\vec{v} = \lambda \vec{v}\)</span> used in the eigenvalue method.</div></li>
+<li data-component="answer" id="rs-mcqcheckeigenvector_opt_b"><div class="para" id="mcqcheckeigenvector-3-2-1-1"><span class="process-math">\(P\vec{v} =
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix},
+\lambda = 1\)</span></div></li>
+<li data-component="feedback" id="rs-mcqcheckeigenvector_opt_b"><div class="para" id="mcqcheckeigenvector-3-2-2-1">No. This incorrectly multiplies the matrix and vector.</div></li>
+<li data-component="answer" id="rs-mcqcheckeigenvector_opt_c"><div class="para" id="mcqcheckeigenvector-3-3-1-1"><span class="process-math">\(P\vec{v} =
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix},
+\lambda = 2\)</span></div></li>
+<li data-component="feedback" id="rs-mcqcheckeigenvector_opt_c"><div class="para" id="mcqcheckeigenvector-3-3-2-1">No. The second component should remain zero when multiplying by this matrix.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 5: Checking an Eigenvector"><a href="#mcqcheckeigenvector" title="Copy heading and permalink for Exercise 5: Checking an Eigenvector" aria-label="Copy heading and permalink for Exercise 5: Checking an Eigenvector">🔗</a></div></article><article class="exercise exercise-like" id="mcqeigenvectordirection"><h5 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Checking Whether a Vector is an Eigenvector.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcqeigenvectordirection-2-1">Let <span class="process-math">\(P =
+\begin{bmatrix}
+4 \amp 0 \\
+0 \amp 1
+\end{bmatrix},
+\vec{v} =
+\begin{bmatrix}
+1 \\
+3
+\end{bmatrix}.\)</span> Compute <span class="process-math">\(P\vec{v}\)</span> and determine whether <span class="process-math">\(\vec{v}\)</span> is an eigenvector of <span class="process-math">\(P\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcqeigenvectordirection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqeigenvectordirection" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcqeigenvectordirection_opt_a" data-correct=""><div class="para" id="mcqeigenvectordirection-3-1-1-1">
+<span class="process-math">\(P\vec{v} =
+\begin{bmatrix}
+4 \\
+3
+\end{bmatrix},\)</span> so <span class="process-math">\(\vec{v}\)</span> is <em class="emphasis">not</em> an eigenvector.</div></li>
+<li data-component="feedback" id="rs-mcqeigenvectordirection_opt_a"><div class="para" id="mcqeigenvectordirection-3-1-2-1">Correct. Because <span class="process-math">\(P\vec{v} = (4,\,3)^{T}\)</span> is not a scalar multiple of <span class="process-math">\((1,\,3)^{T}\text{,}\)</span> <span class="process-math">\(\vec{v}\)</span> is not an eigenvector. Eigenvectors must satisfy <span class="process-math">\(P\vec{v} = \lambda \vec{v}\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcqeigenvectordirection_opt_b"><div class="para" id="mcqeigenvectordirection-3-2-1-1">
+<span class="process-math">\(P\vec{v} =
+\begin{bmatrix}
+4 \\
+3
+\end{bmatrix},\)</span> so <span class="process-math">\(\vec{v}\)</span> is an eigenvector with <span class="process-math">\(\lambda = 4\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcqeigenvectordirection_opt_b"><div class="para" id="mcqeigenvectordirection-3-2-2-1">No. <span class="process-math">\((4,3)^{T}\)</span> is not equal to <span class="process-math">\(4(1,3)^{T} = (4,12)^{T}\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcqeigenvectordirection_opt_c"><div class="para" id="mcqeigenvectordirection-3-3-1-1">
+<span class="process-math">\(P\vec{v} =
+\begin{bmatrix}
+1 \\
+3
+\end{bmatrix}\text{,}\)</span> so <span class="process-math">\(\vec{v}\)</span> is an eigenvector with <span class="process-math">\(\lambda = 1\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcqeigenvectordirection_opt_c"><div class="para" id="mcqeigenvectordirection-3-3-2-1">No—the computation of <span class="process-math">\(P\vec{v}\)</span> is incorrect.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 6: Checking Whether a Vector is an Eigenvector"><a href="#mcqeigenvectordirection" title="Copy heading and permalink for Exercise 6: Checking Whether a Vector is an Eigenvector" aria-label="Copy heading and permalink for Exercise 6: Checking Whether a Vector is an Eigenvector">🔗</a></div></article><article class="exercise exercise-like" id="mcqchecksolutionform"><h5 class="heading">
+<span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Verifying a Solution from an Eigenpair.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcqchecksolutionform-2-1">Suppose <span class="process-math">\(\lambda = 3\)</span> is an eigenvalue of a constant matrix <span class="process-math">\(P\)</span> with eigenvector <span class="process-math">\(\vec{v} =
+\begin{bmatrix}
+2 \\
+-1
+\end{bmatrix}.\)</span> Which of the following is a solution of the system <span class="process-math">\(\vec{x}' = P\vec{x}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcqchecksolutionform-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqchecksolutionform" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcqchecksolutionform_opt_a" data-correct=""><div class="para" id="mcqchecksolutionform-3-1-1-1"><span class="process-math">\(\vec{x}(t) =
+\begin{bmatrix}
+2 \\ -1
+\end{bmatrix}
+e^{3t}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqchecksolutionform_opt_a"><div class="para" id="mcqchecksolutionform-3-1-2-1">Correct. Every eigenpair <span class="process-math">\((\lambda,\vec{v})\)</span> yields a solution <span class="process-math">\(\vec{x}(t)=\vec{v}e^{\lambda t}\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcqchecksolutionform_opt_b"><div class="para" id="mcqchecksolutionform-3-2-1-1"><span class="process-math">\(\vec{x}(t) =
+\begin{bmatrix}
+2 \\ -1
+\end{bmatrix}
+e^{t}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqchecksolutionform_opt_b"><div class="para" id="mcqchecksolutionform-3-2-2-1">No. This uses <span class="process-math">\(e^{t}\)</span> instead of <span class="process-math">\(e^{3t}\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcqchecksolutionform_opt_c"><div class="para" id="mcqchecksolutionform-3-3-1-1"><span class="process-math">\(\vec{x}(t) =
+\begin{bmatrix}
+6 \\ -3
+\end{bmatrix}
+e^{t}\)</span></div></li>
+<li data-component="feedback" id="rs-mcqchecksolutionform_opt_c"><div class="para" id="mcqchecksolutionform-3-3-2-1">No. Even though the vector is a scalar multiple of <span class="process-math">\(\vec{v}\text{,}\)</span> the exponential must be <span class="process-math">\(e^{3t}\text{.}\)</span>
+</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 7: Verifying a Solution from an Eigenpair"><a href="#mcqchecksolutionform" title="Copy heading and permalink for Exercise 7: Verifying a Solution from an Eigenpair" aria-label="Copy heading and permalink for Exercise 7: Verifying a Solution from an Eigenpair">🔗</a></div></article><article class="exercise exercise-like" id="eigenmethod-open-1"><h5 class="heading">
+<span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Deriving the Eigenvalue Equation.</span>
+</h5>
+<div class="para" id="eigenmethod-open-1-2-1">Consider a linear homogeneous constant-coefficient system <span class="process-math">\(\vec{x}' = P\vec{x}\text{.}\)</span> Starting from the trial solution <span class="process-math">\(\vec{x}(t) = \vec{v} e^{\lambda t}\text{,}\)</span> derive the algebraic eigenvalue equation that <span class="process-math">\(\lambda\)</span> and <span class="process-math">\(\vec{v}\)</span> must satisfy. Explain each step clearly.<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethod-open-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eigenmethod-open-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eigenmethod-open-1-3-1">The trial solution used is <span class="process-math">\(\vec{x}(t) = \vec{v} e^{\lambda t}\text{,}\)</span> where <span class="process-math">\(\lambda\)</span> is a scalar and <span class="process-math">\(\vec{v}\)</span> is a constant vector. We substitute this into <span class="process-math">\(\vec{x}' = P\vec{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eigenmethod-open-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eigenmethod-open-1-3-2">First compute the derivative:<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethod-open-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="eigenmethod-open-1-3-3">
+\begin{equation*}
+\vec{x}'(t) = \lambda \vec{v} e^{\lambda t}.
+\end{equation*}
+</div>
+<div class="para" id="eigenmethod-open-1-3-4">Substitute both expressions into the differential equation:<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethod-open-1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="eigenmethod-open-1-3-5">
+\begin{equation*}
+\lambda \vec{v} e^{\lambda t}
+=
+P(\vec{v} e^{\lambda t})
+=
+(P\vec{v}) e^{\lambda t}.
+\end{equation*}
+</div>
+<div class="para" id="eigenmethod-open-1-3-6">Since <span class="process-math">\(e^{\lambda t}\)</span> is never zero, canceling it yields the purely algebraic condition:<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethod-open-1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="eigenmethod-open-1-3-7">
+\begin{equation*}
+\lambda \vec{v} = P\vec{v}.
+\end{equation*}
+</div>
+<div class="para" id="eigenmethod-open-1-3-8">This is exactly the eigenvalue equation. It states that <span class="process-math">\(\vec{v}\)</span> must be an eigenvector of <span class="process-math">\(P\)</span> with eigenvalue <span class="process-math">\(\lambda\text{.}\)</span> The section emphasizes this derivation as the foundation of the eigenvalue method.<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethod-open-1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#eigenmethod-open-1-3" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8: Deriving the Eigenvalue Equation"><a href="#eigenmethod-open-1" title="Copy heading and permalink for Exercise 8: Deriving the Eigenvalue Equation" aria-label="Copy heading and permalink for Exercise 8: Deriving the Eigenvalue Equation">🔗</a></div></article><article class="exercise exercise-like" id="eigenmethodopen2"><h5 class="heading">
+<span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Verifying an Eigenvector Solution.</span>
+</h5>
+<div class="para" id="eigenmethodopen2-2-1">Let <span class="process-math">\(P =
+\begin{bmatrix}
+1 \amp 2 \\
+0 \amp 3
+\end{bmatrix},
+\vec{v} =
+\begin{bmatrix}
+2 \\
+1
+\end{bmatrix},
+\lambda = 3.\)</span> Verify that <span class="process-math">\(\vec{x}(t) = \vec{v} e^{\lambda t}\)</span> is a solution of the system <span class="process-math">\(\vec{x}' = P\vec{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eigenmethodopen2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eigenmethodopen2-3-1">We must check whether <span class="process-math">\(\vec{x}'(t) = P\vec{x}(t)\text{.}\)</span> Start by computing <span class="process-math">\(P\vec{v}\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="eigenmethodopen2-3-2">
+\begin{equation*}
+P\vec{v}
+=
+\begin{bmatrix}
+1 \amp 2 \\
+0 \amp 3
+\end{bmatrix}
+\begin{bmatrix}
+2 \\ 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\cdot 2 + 2\cdot 1 \\
+0\cdot 2 + 3\cdot 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+4 \\ 3
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para" id="eigenmethodopen2-3-3">Compute <span class="process-math">\(\lambda \vec{v}\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="eigenmethodopen2-3-4">
+\begin{equation*}
+\lambda \vec{v}
+=
+3
+\begin{bmatrix}
+2 \\ 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+6 \\ 3
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para" id="eigenmethodopen2-3-5">Since <span class="process-math">\(P\vec{v} \neq \lambda \vec{v}\text{,}\)</span> the vector <span class="process-math">\(\vec{v}\)</span> is <em class="emphasis">not</em> an eigenvector of <span class="process-math">\(P\text{,}\)</span> and therefore <span class="process-math">\(\vec{x}(t) = \vec{v} e^{3t}\)</span> is <em class="emphasis">not</em> a solution.<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eigenmethodopen2-3-6">This exercise illustrates a key requirement: a solution of the form <span class="process-math">\(\vec{v} e^{\lambda t}\)</span> exists only when <span class="process-math">\(P\vec{v} = \lambda \vec{v}\)</span> holds.<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#eigenmethodopen2-3" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 9: Verifying an Eigenvector Solution"><a href="#eigenmethodopen2" title="Copy heading and permalink for Exercise 9: Verifying an Eigenvector Solution" aria-label="Copy heading and permalink for Exercise 9: Verifying an Eigenvector Solution">🔗</a></div></article><article class="exercise exercise-like" id="eigenmethodopen3"><h5 class="heading">
+<span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constructing a General Solution from Two Eigenpairs.</span>
+</h5>
+<div class="para" id="eigenmethodopen3-2-1">Suppose a system <span class="process-math">\(\vec{x}' = P\vec{x}\)</span> has two distinct eigenvalues <span class="process-math">\(\lambda_1 = 1\)</span> and <span class="process-math">\(\lambda_2 = 4\)</span> with corresponding eigenvectors <span class="process-math">\(\vec{v}_1 =
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix},
+\vec{v}_2 =
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}.\)</span> Write down the general solution to the system and briefly explain why these two solutions form a fundamental set.<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eigenmethodopen3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eigenmethodopen3-3-1">Since each eigenpair <span class="process-math">\((\lambda_i, \vec{v}_i)\)</span> gives a solution <span class="process-math">\(\vec{x}_i(t) = \vec{v}_i e^{\lambda_i t}\text{,}\)</span> we have two independent solutions:<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="eigenmethodopen3-3-2">
+\begin{equation*}
+\vec{x}_1(t) = 
+\begin{bmatrix}
+1 \\ 0
+\end{bmatrix}
+e^{t},
+\vec{x}_2(t) = 
+\begin{bmatrix}
+1 \\ 1
+\end{bmatrix}
+e^{4t}.
+\end{equation*}
+</div>
+<div class="para" id="eigenmethodopen3-3-3">The general solution is the linear combination:<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="eigenmethodopen3-3-4">
+\begin{equation*}
+\vec{x}(t) =
+C_1
+\begin{bmatrix}
+1 \\ 0
+\end{bmatrix}
+e^{t}
++
+C_2
+\begin{bmatrix}
+1 \\ 1
+\end{bmatrix}
+e^{4t}.
+\end{equation*}
+</div>
+<div class="para" id="eigenmethodopen3-3-5">Because the eigenvalues <span class="process-math">\(1\)</span> and <span class="process-math">\(4\)</span> are distinct, the corresponding eigenvectors are automatically linearly independent. Hence these two solutions form a fundamental set, and every solution to the system is their linear combination, exactly as described in the theory.<div class="autopermalink" data-description="Paragraph"><a href="#eigenmethodopen3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.1"><a href="#eigenmethodopen3-3" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 10: Constructing a General Solution from Two Eigenpairs"><a href="#eigenmethodopen3" title="Copy heading and permalink for Exercise 10: Constructing a General Solution from Two Eigenpairs" aria-label="Copy heading and permalink for Exercise 10: Constructing a General Solution from Two Eigenpairs">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Exercises"><a href="#sec-Toprepareforclass54-4" title="Copy heading and permalink for Exercises: Exercises" aria-label="Copy heading and permalink for Exercises: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section: Learn!"><a href="#sec-Toprepareforclass54" title="Copy heading and permalink for Section: Learn!" aria-label="Copy heading and permalink for Section: Learn!">🔗</a></div></section><section class="section" id="sec-Advancedlearningobjectives54"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Advanced learning objectives</span>
+</h3>
+<div class="para" id="sec-Advancedlearningobjectives54-2">In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives54-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="sec-Advancedlearningobjectives54-3">
+<li id="sec-Advancedlearningobjectives54-3-1">
+<div class="para" id="sec-Advancedlearningobjectives54-3-1-1">Solve a linear system by computing eigenvectors corresponding to each eigenvalue and forming solutions of the form <span class="process-math">\(\vec{v} e^{\lambda t}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives54-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives54-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Advancedlearningobjectives54-3-2">
+<div class="para" id="sec-Advancedlearningobjectives54-3-2-1">Construct the general solution of an <span class="process-math">\(n \times n\)</span> system by forming linear combinations of <span class="process-math">\(n\)</span> linearly independent eigenvector solutions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives54-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives54-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Advancedlearningobjectives54-3-3">
+<div class="para" id="sec-Advancedlearningobjectives54-3-3-1">Analyze repeated or complex eigenvalues and determine the structure of the solution set when the eigenvectors do not provide a full set of linearly independent solutions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives54-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives54-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Section: Advanced learning objectives"><a href="#sec-Advancedlearningobjectives54" title="Copy heading and permalink for Section: Advanced learning objectives" aria-label="Copy heading and permalink for Section: Advanced learning objectives">🔗</a></div></section><div class="autopermalink" data-description="Handout: Daily Prep 5.4 - Eigenvalue Method"><a href="#ch-Textbook-25" title="Copy heading and permalink for Handout: Daily Prep 5.4 - Eigenvalue Method" aria-label="Copy heading and permalink for Handout: Daily Prep 5.4 - Eigenvalue Method">🔗</a></div></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-Textbook-24.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

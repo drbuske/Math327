@@ -827,6 +827,105 @@ var ptx_lunr_docs = [
   "number": "7",
   "title": "",
   "body": "   We define linear independence for vector‑valued functions using the condition for all . Consider the functions Determine whether these functions are linearly independent.    We test for constants and such that   The vector equation must hold for all . Equating components:   The second equation already forces . The first equation gives the same condition (because it must hold for all ).  Thus the solutions satisfy , giving a one‑parameter family of nontrivial combinations that equal the zero vector. Therefore, and are linearly dependent .  This matches the section’s definition: a set is dependent if a nontrivial linear combination yields for all .   "
+},
+{
+  "id": "ch-Textbook-25",
+  "level": "1",
+  "url": "ch-Textbook-25.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.4 - Eigenvalue Method",
+  "body": " Daily Prep 5.4 - Eigenvalue Method   Overview  We now introduce the eigenvalue method as a powerful technique for solving linear homogeneous constant‑coefficient systems of ODEs of the form , where is a constant square matrix. Motivated by the scalar case, the method tries solutions of the form , where is a scalar and is a constant vector. Substituting this trial form into the system reduces the differential equation to the algebraic eigenvalue problem . Thus, eigenvalues are found by solving , and each eigenvector yields a corresponding solution . Since an matrix typically has eigenvalues (possibly repeated or complex), the section shows that a collection of linearly independent eigenvector solutions forms a fundamental solution set, and all solutions are linear combinations of these. The method connects linear algebra and differential equations, enabling systematic and elegant solution of multi‑dimensional linear systems.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize that the eigenvalue method applies to linear homogeneous constant‑coefficient systems .    Understand the trial solution and how substituting it leads to the eigenvalue equation .    Define eigenvalues and eigenvectors of a matrix and compute eigenvalues using .      Learn!  Complete the actions listed below.     Read  Subsection 7.4.1: Eigenvalues and eigenvectors of a matrix .     Watch  Intro to Solving a Linear System of ODEs using the Eigenvalue Method: Eigenvalues and Eigenvectors (7:17) by Mathispower4u.     Read  Subsection 7.4.2: The eigenvalue method with distinct real eigenvalues .     Watch  Solve a Linear System of ODEs using the Eigenvalue Method: Real, Distinct Eigenvalues (7:28) by Mathispower4u.    (Optional) Watch  Find Eigenvalues, Eigenvectors, and Solve a Linear System of ODEs with Constant Coefficents: Homogeneous (6:35) by Mathispower4u.    (Optional) Watch  Solve a Linear System of ODEs using the Eigenvalue Method: Real, Distinct Eigenvalues (4:08) by Mathispower4u.     Read  Subsection 7.4.3: Complex eigenvalues .     Watch  Solve a Linear System of ODEs using the Eigenvalue Method: Complex Eigenvalues (9:44) by Mathispower4u.    (Optional) Watch  Solve a Linear System of ODEs using the Eigenvalue Method: Imaginary Eigenvalues (6:38) by Mathispower4u.     Do  Subsection 7.4.4: Exercises 7.4.1, 7.4.5, 7.4.6, 7.4.7, 7.4.9, 7.4.101, 7.4.104 .      Do MyOpenMath questions from this section.     Exercises   Trial Solutions for the Eigenvalue Method   For a linear homogeneous constant‑coefficient system , what trial solution does the eigenvalue method use?         Correct. The method assumes a solution of the form .      No—the method uses exponential solutions, not linear ones.     Not in the first step. Sinusoidal behavior only appears later when eigenvalues are complex.      Obtaining the Eigenvalue Equation   After substituting into , which equation must the constants and satisfy?       Correct. The substitution leads directly to the eigenvalue equation.      No—that equation is used to find eigenvectors once is known.     No. This only holds when is a scalar matrix.      Computing Eigenvalues   To find the eigenvalues of a matrix in the system , which equation should be solved?         Correct. Eigenvalues are roots of the characteristic equation .      No. This would test whether is singular, not find eigenvalues.     This computes the nullspace, not the eigenvalues.      Computing an Eigenvalue   Let What are the eigenvalues of ?         Correct. Diagonal matrices have eigenvalues equal to their diagonal entries, consistent with solving .      No—the determinant equation does not give these roots.    only  No. A 2×2 matrix must have two eigenvalues (including repeats).      Checking an Eigenvector   Let Compute and determine the corresponding eigenvalue.           Correct. Because , the eigenvalue is . This matches the equation used in the eigenvalue method.           No. This incorrectly multiplies the matrix and vector.           No. The second component should remain zero when multiplying by this matrix.       Checking Whether a Vector is an Eigenvector   Let Compute and determine whether is an eigenvector of .       so is not an eigenvector.    Correct. Because is not a scalar multiple of , is not an eigenvector. Eigenvectors must satisfy .       so is an eigenvector with .    No. is not equal to .       , so is an eigenvector with .    No—the computation of is incorrect.       Verifying a Solution from an Eigenpair   Suppose is an eigenvalue of a constant matrix with eigenvector Which of the following is a solution of the system ?           Correct. Every eigenpair yields a solution .           No. This uses instead of .           No. Even though the vector is a scalar multiple of , the exponential must be .        Deriving the Eigenvalue Equation   Consider a linear homogeneous constant-coefficient system . Starting from the trial solution , derive the algebraic eigenvalue equation that and must satisfy. Explain each step clearly.    The trial solution used is , where is a scalar and is a constant vector. We substitute this into .  First compute the derivative:   Substitute both expressions into the differential equation:   Since is never zero, canceling it yields the purely algebraic condition:   This is exactly the eigenvalue equation. It states that must be an eigenvector of with eigenvalue . The section emphasizes this derivation as the foundation of the eigenvalue method.      Verifying an Eigenvector Solution   Let Verify that is a solution of the system .    We must check whether . Start by computing :   Compute :   Since , the vector is not an eigenvector of , and therefore is not a solution.  This exercise illustrates a key requirement: a solution of the form exists only when holds.      Constructing a General Solution from Two Eigenpairs   Suppose a system has two distinct eigenvalues and with corresponding eigenvectors Write down the general solution to the system and briefly explain why these two solutions form a fundamental set.    Since each eigenpair gives a solution , we have two independent solutions:   The general solution is the linear combination:   Because the eigenvalues and are distinct, the corresponding eigenvectors are automatically linearly independent. Hence these two solutions form a fundamental set, and every solution to the system is their linear combination, exactly as described in the theory.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Solve a linear system by computing eigenvectors corresponding to each eigenvalue and forming solutions of the form .    Construct the general solution of an system by forming linear combinations of linearly independent eigenvector solutions.    Analyze repeated or complex eigenvalues and determine the structure of the solution set when the eigenvectors do not provide a full set of linearly independent solutions.     "
+},
+{
+  "id": "mcqeigentrialsolution",
+  "level": "2",
+  "url": "ch-Textbook-25.html#mcqeigentrialsolution",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Trial Solutions for the Eigenvalue Method.",
+  "body": " Trial Solutions for the Eigenvalue Method   For a linear homogeneous constant‑coefficient system , what trial solution does the eigenvalue method use?         Correct. The method assumes a solution of the form .      No—the method uses exponential solutions, not linear ones.     Not in the first step. Sinusoidal behavior only appears later when eigenvalues are complex.    "
+},
+{
+  "id": "mcqeigenvalueequation",
+  "level": "2",
+  "url": "ch-Textbook-25.html#mcqeigenvalueequation",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Obtaining the Eigenvalue Equation.",
+  "body": " Obtaining the Eigenvalue Equation   After substituting into , which equation must the constants and satisfy?       Correct. The substitution leads directly to the eigenvalue equation.      No—that equation is used to find eigenvectors once is known.     No. This only holds when is a scalar matrix.    "
+},
+{
+  "id": "mcqcharacteristicequation",
+  "level": "2",
+  "url": "ch-Textbook-25.html#mcqcharacteristicequation",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Computing Eigenvalues.",
+  "body": " Computing Eigenvalues   To find the eigenvalues of a matrix in the system , which equation should be solved?         Correct. Eigenvalues are roots of the characteristic equation .      No. This would test whether is singular, not find eigenvalues.     This computes the nullspace, not the eigenvalues.    "
+},
+{
+  "id": "mcqeigenvaluecomputationsmall",
+  "level": "2",
+  "url": "ch-Textbook-25.html#mcqeigenvaluecomputationsmall",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Computing an Eigenvalue.",
+  "body": " Computing an Eigenvalue   Let What are the eigenvalues of ?         Correct. Diagonal matrices have eigenvalues equal to their diagonal entries, consistent with solving .      No—the determinant equation does not give these roots.    only  No. A 2×2 matrix must have two eigenvalues (including repeats).    "
+},
+{
+  "id": "mcqcheckeigenvector",
+  "level": "2",
+  "url": "ch-Textbook-25.html#mcqcheckeigenvector",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Checking an Eigenvector.",
+  "body": " Checking an Eigenvector   Let Compute and determine the corresponding eigenvalue.           Correct. Because , the eigenvalue is . This matches the equation used in the eigenvalue method.           No. This incorrectly multiplies the matrix and vector.           No. The second component should remain zero when multiplying by this matrix.     "
+},
+{
+  "id": "mcqeigenvectordirection",
+  "level": "2",
+  "url": "ch-Textbook-25.html#mcqeigenvectordirection",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Checking Whether a Vector is an Eigenvector.",
+  "body": " Checking Whether a Vector is an Eigenvector   Let Compute and determine whether is an eigenvector of .       so is not an eigenvector.    Correct. Because is not a scalar multiple of , is not an eigenvector. Eigenvectors must satisfy .       so is an eigenvector with .    No. is not equal to .       , so is an eigenvector with .    No—the computation of is incorrect.     "
+},
+{
+  "id": "mcqchecksolutionform",
+  "level": "2",
+  "url": "ch-Textbook-25.html#mcqchecksolutionform",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Verifying a Solution from an Eigenpair.",
+  "body": " Verifying a Solution from an Eigenpair   Suppose is an eigenvalue of a constant matrix with eigenvector Which of the following is a solution of the system ?           Correct. Every eigenpair yields a solution .           No. This uses instead of .           No. Even though the vector is a scalar multiple of , the exponential must be .     "
+},
+{
+  "id": "eigenmethod-open-1",
+  "level": "2",
+  "url": "ch-Textbook-25.html#eigenmethod-open-1",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Deriving the Eigenvalue Equation.",
+  "body": " Deriving the Eigenvalue Equation   Consider a linear homogeneous constant-coefficient system . Starting from the trial solution , derive the algebraic eigenvalue equation that and must satisfy. Explain each step clearly.    The trial solution used is , where is a scalar and is a constant vector. We substitute this into .  First compute the derivative:   Substitute both expressions into the differential equation:   Since is never zero, canceling it yields the purely algebraic condition:   This is exactly the eigenvalue equation. It states that must be an eigenvector of with eigenvalue . The section emphasizes this derivation as the foundation of the eigenvalue method.   "
+},
+{
+  "id": "eigenmethodopen2",
+  "level": "2",
+  "url": "ch-Textbook-25.html#eigenmethodopen2",
+  "type": "Exercise",
+  "number": "9",
+  "title": "Verifying an Eigenvector Solution.",
+  "body": " Verifying an Eigenvector Solution   Let Verify that is a solution of the system .    We must check whether . Start by computing :   Compute :   Since , the vector is not an eigenvector of , and therefore is not a solution.  This exercise illustrates a key requirement: a solution of the form exists only when holds.   "
+},
+{
+  "id": "eigenmethodopen3",
+  "level": "2",
+  "url": "ch-Textbook-25.html#eigenmethodopen3",
+  "type": "Exercise",
+  "number": "10",
+  "title": "Constructing a General Solution from Two Eigenpairs.",
+  "body": " Constructing a General Solution from Two Eigenpairs   Suppose a system has two distinct eigenvalues and with corresponding eigenvectors Write down the general solution to the system and briefly explain why these two solutions form a fundamental set.    Since each eigenpair gives a solution , we have two independent solutions:   The general solution is the linear combination:   Because the eigenvalues and are distinct, the corresponding eigenvectors are automatically linearly independent. Hence these two solutions form a fundamental set, and every solution to the system is their linear combination, exactly as described in the theory.   "
 }
 ]
 
