@@ -989,6 +989,357 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Classifying a System Using Eigenvalues and Eigenvectors.",
   "body": " Classifying a System Using Eigenvalues and Eigenvectors   Consider the system (a) Compute the eigenvalues and classify the equilibrium at the origin. (b) Based on the eigenvalues and eigenvectors, describe qualitatively what the phase portrait looks like (e.g., rotation, spiraling, or approach\/escape behavior).     (a) The characteristic equation is Therefore the eigenvalues are , a pair of purely imaginary conjugates. Purely imaginary eigenvalues correspond to a center at the origin.   (b) With purely imaginary eigenvalues, solutions neither grow nor decay in magnitude. Instead, they rotate in closed or nearly closed orbits around the origin. The vector field shows arrows tangent to ellipses or circles, depending on the eigenvector geometry. In this case, the system behaves like a constant‑speed rotation, so the phase portrait consists of closed curves (center behavior). Such systems have trajectories that circle the equilibrium rather than approaching or diverging from it.   "
+},
+{
+  "id": "ch-Textbook-27",
+  "level": "1",
+  "url": "ch-Textbook-27.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.6 - Second Order Systems and Applications",
+  "body": " Daily Prep 5.6 - Second Order Systems and Applications   Overview  We now introduce second-order systems of differential equations, with a central focus on physical applications such as undamped mass–spring systems. Instead of rewriting these problems as large first-order systems, the section treats them directly in their natural second-order form, where the displacement vector satisfies an equation of the type , with the mass matrix and the stiffness matrix. Using Hooke’s law and Newton’s second law, the dynamics of several coupled masses can be expressed compactly in matrix notation, revealing structural patterns that generalize to an arbitrary number of masses. Because is diagonal and invertible, the system can be rewritten as , which leads to oscillatory behavior governed by the eigenvalues and eigenvectors of . The section highlights how these ideas connect discrete mass–spring models to continuum models such as the wave equation, showing how second-order systems arise naturally in many physical contexts.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand how to model a multi‑mass spring system using Newton’s second law and Hooke’s law to obtain a second‑order system of the form .    Identify the roles of the mass matrix  and stiffness matrix  and explain why is invertible in typical applications.    Rewrite the system as the standard form and recognize it as a linear, constant‑coefficient second-order system.      Learn!  Complete the actions listed below.     Read  Subsection 7.6.1: Undamped mass-spring systems .     Watch  Intro to Undamped Mass-Spring Systems: Second Order Systems of Ordinary Diff Equations (8:59) by Mathispower4u.     Watch  Set-up and Solve an Undamped Mass Spring System: Second Order System of ODEs (10:32) by Mathispower4u.     Read  Subsection 7.6.2: Examples .     Watch  Intro to Undamped Mass-Spring Systems with Periodic Forcing: 2nd Order Systems of ODEs (9:44) by Mathispower4u.     Read  Subsection 7.6.3: Forced oscillations .    (Optional) Watch  Solve a Linear Second Order Nonhomogeneous System of ODEs (9:28) by Mathispower4u.     Do  Subsection 7.6.4: Exercises 7.6.3, 7.6.101, 7.6.102 .      Do MyOpenMath questions from this section.     Exercises   Setting Up a Second-Order System   In the three‑mass spring system, which equation correctly represents the mathematical model obtained from Newton’s second law and Hooke’s law?         Correct. The section derives the system , where is the mass matrix and is the stiffness matrix.      No—this would describe a first‑order system, not a second‑order one.     No—Newton’s law leads to mass times acceleration on the left.      Inverting the Mass Matrix   Why is it easy to compute for the mass matrix in these models?      Because is diagonal with nonzero entries.    Correct. Each mass is nonzero, and is diagonal, so is obtained by inverting each diagonal entry.     Because for any mass–spring system.  No. The diagonal entries are the masses, not ones.    Because is symmetric.   Symmetry alone does not make inversion easy; diagonal form does.       Meaning of   After rewriting the system as , what is the significance of the matrix ?      Its eigenvalues determine the natural frequencies of the system.    Correct. The section explains that the eigenvalues of give the oscillation frequencies (normal modes) of the mass–spring system.      It measures how quickly the masses grow without bound.    No. The system models oscillations, not exponential growth.      It determines whether is invertible.    No. is invertible because the masses are nonzero.       Computing One Entry of   Consider a two‑mass system with What is the entry of ?       Correct. , so the entry is . This matches how second‑order systems become .     No—this is the entry of , not .    No—the second row would use , not the first.      Interpreting a Computed Eigenvalue   Suppose a second‑order system for some two‑mass model yields an eigenvalue . What does this tell you about the behavior of the mode corresponding to this eigenvalue?     The mode oscillates with natural frequency .   Correct. For , a negative produces oscillations with frequency . The section explains how eigenvalues of encode natural frequencies.     The mode grows exponentially without bound.  No. Exponential growth occurs when .    The mode decays exponentially to zero.  No. Negative eigenvalues in this setup produce oscillations, not decay.       Energy Interpretation of a Second-Order System   Consider a second-order system of the form , where is the mass matrix and is the stiffness matrix of an undamped mass–spring system.  (a) Explain why this system conserves mechanical energy when there is no damping. (b) Describe the physical meaning of the matrices and in terms of kinetic and potential energy.     (a) In an undamped mass–spring system, no forces remove energy from the system. The springs store potential energy and the masses carry kinetic energy , and energy simply transfers back and forth between these two forms. The equation results from applying Newton’s second law and Hooke’s law to the system, and because no damping forces are present, the total mechanical energy   remains constant. This conservation reflects exactly the behavior of the undamped multi-mass system.   (b) The matrix represents the distribution of inertia in the system. Because it is diagonal with entries , the kinetic energy term   is exactly . The stiffness matrix encodes how the springs resist displacement. The potential energy stored in the system is   Off-diagonal entries of represent coupling between masses (neighboring displacements affect each other), while diagonal entries reflect how strongly the system resists stretching at each mass location. This matches the physical interpretation provided alongside the construction of and in the text.      Understanding Normal Modes Without Calculation   Suppose a three-mass undamped spring system is modeled by . Let the eigenvalues and eigenvectors of be , , and .  Explain, in words and without doing any computation, what the motion looks like when the system is started exactly in the shape of the eigenvector with some initial velocity along . Why does no other mode appear in the motion?    If the initial displacement and velocity are both multiples of , then the system begins in the exact shape of the second normal mode . Each eigenpair produces an independent oscillatory solution , and that the general motion is a linear combination of these normal modes.  Because form a basis of independent modes, any displacement can be written as a combination of them. But if the initial state lies entirely in the direction of , there is no component of or in the initial condition. Therefore the solution must remain a pure oscillation of the form   with frequency . No other frequency can appear because there is no component of the initial state aligned with the other eigenvectors. This is exactly the decoupling property of normal modes.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze the oscillatory behavior of the system by studying the eigenvalues and eigenvectors of , interpreting them as natural frequencies and normal modes.    Extend the mass–spring formulation to larger numbers of masses and identify the matrix patterns that generalize to -mass systems.    Explain how discrete multi‑mass models converge conceptually to continuum models such as the one‑dimensional wave equation by letting the number of masses grow large.     "
+},
+{
+  "id": "mcqsecondordersetup",
+  "level": "2",
+  "url": "ch-Textbook-27.html#mcqsecondordersetup",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Setting Up a Second-Order System.",
+  "body": " Setting Up a Second-Order System   In the three‑mass spring system, which equation correctly represents the mathematical model obtained from Newton’s second law and Hooke’s law?         Correct. The section derives the system , where is the mass matrix and is the stiffness matrix.      No—this would describe a first‑order system, not a second‑order one.     No—Newton’s law leads to mass times acceleration on the left.    "
+},
+{
+  "id": "mcqsecondorderinversion",
+  "level": "2",
+  "url": "ch-Textbook-27.html#mcqsecondorderinversion",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Inverting the Mass Matrix.",
+  "body": " Inverting the Mass Matrix   Why is it easy to compute for the mass matrix in these models?      Because is diagonal with nonzero entries.    Correct. Each mass is nonzero, and is diagonal, so is obtained by inverting each diagonal entry.     Because for any mass–spring system.  No. The diagonal entries are the masses, not ones.    Because is symmetric.   Symmetry alone does not make inversion easy; diagonal form does.     "
+},
+{
+  "id": "mcqsecondordereigen",
+  "level": "2",
+  "url": "ch-Textbook-27.html#mcqsecondordereigen",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Meaning of <span class=\"process-math\">\\(M^{-1}K\\)<\/span>.",
+  "body": " Meaning of   After rewriting the system as , what is the significance of the matrix ?      Its eigenvalues determine the natural frequencies of the system.    Correct. The section explains that the eigenvalues of give the oscillation frequencies (normal modes) of the mass–spring system.      It measures how quickly the masses grow without bound.    No. The system models oscillations, not exponential growth.      It determines whether is invertible.    No. is invertible because the masses are nonzero.     "
+},
+{
+  "id": "mcqsecondordercomputeMinvK1",
+  "level": "2",
+  "url": "ch-Textbook-27.html#mcqsecondordercomputeMinvK1",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Computing One Entry of <span class=\"process-math\">\\(M^{-1}K\\)<\/span>.",
+  "body": " Computing One Entry of   Consider a two‑mass system with What is the entry of ?       Correct. , so the entry is . This matches how second‑order systems become .     No—this is the entry of , not .    No—the second row would use , not the first.    "
+},
+{
+  "id": "mcqsecondordereigenvaluesign",
+  "level": "2",
+  "url": "ch-Textbook-27.html#mcqsecondordereigenvaluesign",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Interpreting a Computed Eigenvalue.",
+  "body": " Interpreting a Computed Eigenvalue   Suppose a second‑order system for some two‑mass model yields an eigenvalue . What does this tell you about the behavior of the mode corresponding to this eigenvalue?     The mode oscillates with natural frequency .   Correct. For , a negative produces oscillations with frequency . The section explains how eigenvalues of encode natural frequencies.     The mode grows exponentially without bound.  No. Exponential growth occurs when .    The mode decays exponentially to zero.  No. Negative eigenvalues in this setup produce oscillations, not decay.    "
+},
+{
+  "id": "secondorderopennew1",
+  "level": "2",
+  "url": "ch-Textbook-27.html#secondorderopennew1",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Energy Interpretation of a Second-Order System.",
+  "body": " Energy Interpretation of a Second-Order System   Consider a second-order system of the form , where is the mass matrix and is the stiffness matrix of an undamped mass–spring system.  (a) Explain why this system conserves mechanical energy when there is no damping. (b) Describe the physical meaning of the matrices and in terms of kinetic and potential energy.     (a) In an undamped mass–spring system, no forces remove energy from the system. The springs store potential energy and the masses carry kinetic energy , and energy simply transfers back and forth between these two forms. The equation results from applying Newton’s second law and Hooke’s law to the system, and because no damping forces are present, the total mechanical energy   remains constant. This conservation reflects exactly the behavior of the undamped multi-mass system.   (b) The matrix represents the distribution of inertia in the system. Because it is diagonal with entries , the kinetic energy term   is exactly . The stiffness matrix encodes how the springs resist displacement. The potential energy stored in the system is   Off-diagonal entries of represent coupling between masses (neighboring displacements affect each other), while diagonal entries reflect how strongly the system resists stretching at each mass location. This matches the physical interpretation provided alongside the construction of and in the text.   "
+},
+{
+  "id": "secondorderopennew2",
+  "level": "2",
+  "url": "ch-Textbook-27.html#secondorderopennew2",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Understanding Normal Modes Without Calculation.",
+  "body": " Understanding Normal Modes Without Calculation   Suppose a three-mass undamped spring system is modeled by . Let the eigenvalues and eigenvectors of be , , and .  Explain, in words and without doing any computation, what the motion looks like when the system is started exactly in the shape of the eigenvector with some initial velocity along . Why does no other mode appear in the motion?    If the initial displacement and velocity are both multiples of , then the system begins in the exact shape of the second normal mode . Each eigenpair produces an independent oscillatory solution , and that the general motion is a linear combination of these normal modes.  Because form a basis of independent modes, any displacement can be written as a combination of them. But if the initial state lies entirely in the direction of , there is no component of or in the initial condition. Therefore the solution must remain a pure oscillation of the form   with frequency . No other frequency can appear because there is no component of the initial state aligned with the other eigenvectors. This is exactly the decoupling property of normal modes.   "
+},
+{
+  "id": "ch-Textbook-28",
+  "level": "1",
+  "url": "ch-Textbook-28.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.7 - Multiple Eigenvalues",
+  "body": " Daily Prep 5.7 - Multiple Eigenvalues   Overview  We now examine what happens in linear systems of ODEs when the coefficient matrix possesses multiple eigenvalues , especially repeated real eigenvalues. The section explains that having a repeated eigenvalue does not guarantee that the system has enough linearly independent eigenvectors to form a complete solution set. When only one eigenvector exists for a repeated eigenvalue, the system is called defective , and a generalized eigenvector must be found to construct a second linearly independent solution of the form . The method parallels the procedure for repeated roots of constant‑coefficient scalar equations but must be handled in vector form. The section shows how generalized eigenvectors arise from solving , and illustrates how the resulting solutions produce phase‑plane behavior distinct from the simple node cases with two eigenvectors. These ideas are essential for completing the eigenvalue method when the matrix is not diagonalizable.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize when a matrix has a repeated eigenvalue and determine when it lacks a full set of independent eigenvectors.    Understand the difference between a diagonalizable matrix (with enough eigenvectors) and a defective matrix (with fewer eigenvectors than its algebraic multiplicity).    Identify the need for generalized eigenvectors when a repeated eigenvalue does not produce enough independent solutions.      Learn!  Complete the actions listed below.     Read  Subsection 7.7.1: Geometric multiplicity .     Watch  Intro to Solving a Linear System of ODEs using the Eigenvalue Method: Repeated Eigenvalues (9:47) by Mathispower4u.     Read  Subsection 7.7.2: Defective eigenvalues .    (Optional) Watch  Solve a Linear System of ODEs using the Eigenvalue Method: Repeated Eigenvalues, 1 Defect (5:27) by Mathispower4u.    (Optional) Watch  Multiple Eigenvalue Solutions, Part 1 (31:29) by Susan Brooks.    (Optional) Watch  Dealing with deficient eigenvalues (51:50) by Steve Butler (Beard Meets Calculus) of Iowa State University.     Do  Subsection 7.7.3: Exercises 7.7.2, 7.7.3, 7.7.5, 7.7.101, 7.7.102, 7.7.103 .      Do MyOpenMath questions from this section.     Exercises   Recognizing a Repeated Eigenvalue   The matrix has which eigenvalues?     A repeated eigenvalue .   Correct. The characteristic polynomial is , so the eigenvalue has multiplicity 2.     Eigenvalues and .  No—the diagonal entries do not directly give distinct eigenvalues in this case.    Eigenvalues and with multiplicity one each.  No—the eigenvalue is repeated, not distinct.      Determining When a Matrix Is Defective   A matrix with a repeated eigenvalue is called defective when:      It has fewer independent eigenvectors than the multiplicity of .    Correct. A repeated eigenvalue requires enough eigenvectors; if only one exists, the matrix is defective.     Its characteristic polynomial cannot be factored.  No. This has nothing to do with being defective.    Its trace is zero.  No. The trace does not determine diagonalizability.      Purpose of a Generalized Eigenvector   If a matrix has only one eigenvector for a repeated eigenvalue, why do we introduce a generalized eigenvector ?      To construct a second independent solution of the form .    Correct. A generalized eigenvector provides the missing second solution when only one eigenvector exists.     To find a new eigenvalue.  No—generalized eigenvectors do not create new eigenvalues.    To force the matrix to become diagonalizable.   No. A defective matrix cannot be made diagonalizable by choosing more vectors.       Equation for Finding a Generalized Eigenvector   If is an eigenvector for a repeated eigenvalue , which equation must a generalized eigenvector satisfy?       Correct. This equation produces a vector that generates the second independent solution.     No—that would make another eigenvector, which does not exist.    Not the defining equation—the generalized eigenvector is found using .      Structure of the General Solution for a Defective Matrix   If a matrix has a repeated eigenvalue with only one eigenvector and a generalized eigenvector , what does the general solution to look like?           Correct. This is the full solution when only one eigenvector exists.      No—this does not produce two independent solutions.     No—solutions must be vector‑valued and use and .       Checking Whether a Matrix Is Defective   Consider the matrix     Compute the eigenvalue(s) of .    Find all eigenvectors of and determine whether the matrix is defective.       (a) The characteristic polynomial is , so the only eigenvalue is the repeated eigenvalue .   (b) To find the eigenvectors, solve . That matrix is   The equation implies , while is free. Thus every eigenvector has the form   There is only one linearly independent eigenvector, even though the eigenvalue has algebraic multiplicity 2. Hence is defective .      Finding a Generalized Eigenvector   Let which has a repeated eigenvalue . The unique eigenvector (up to scaling) is .  Find a generalized eigenvector satisfying .    Compute   We seek such that   Thus , and is arbitrary. The simplest choice is   This exactly matches the definition of a generalized eigenvector: solve .      Constructing the Full Solution for a Defective Matrix   For the matrix the eigenvalue is with eigenvector . A generalized eigenvector is .  Write the general solution to .    A defective matrix with one eigenvector and one generalized eigenvector yields solutions   Therefore the general solution is   This is the standard repeated‑eigenvalue solution for a defective system.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Find a generalized eigenvector by solving when only one eigenvector exists for a repeated eigenvalue.    Construct a complete solution for a defective system of the form and explain why these solutions remain linearly independent.    Analyze how repeated eigenvalues and generalized eigenvectors affect qualitative phase‑plane behavior, distinguishing these cases from ordinary nodes with two eigenvectors.     "
+},
+{
+  "id": "mcqmulteigenrepeated",
+  "level": "2",
+  "url": "ch-Textbook-28.html#mcqmulteigenrepeated",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Recognizing a Repeated Eigenvalue.",
+  "body": " Recognizing a Repeated Eigenvalue   The matrix has which eigenvalues?     A repeated eigenvalue .   Correct. The characteristic polynomial is , so the eigenvalue has multiplicity 2.     Eigenvalues and .  No—the diagonal entries do not directly give distinct eigenvalues in this case.    Eigenvalues and with multiplicity one each.  No—the eigenvalue is repeated, not distinct.    "
+},
+{
+  "id": "mcqmulteigendefective",
+  "level": "2",
+  "url": "ch-Textbook-28.html#mcqmulteigendefective",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Determining When a Matrix Is Defective.",
+  "body": " Determining When a Matrix Is Defective   A matrix with a repeated eigenvalue is called defective when:      It has fewer independent eigenvectors than the multiplicity of .    Correct. A repeated eigenvalue requires enough eigenvectors; if only one exists, the matrix is defective.     Its characteristic polynomial cannot be factored.  No. This has nothing to do with being defective.    Its trace is zero.  No. The trace does not determine diagonalizability.    "
+},
+{
+  "id": "mcqmulteigengeneralized",
+  "level": "2",
+  "url": "ch-Textbook-28.html#mcqmulteigengeneralized",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Purpose of a Generalized Eigenvector.",
+  "body": " Purpose of a Generalized Eigenvector   If a matrix has only one eigenvector for a repeated eigenvalue, why do we introduce a generalized eigenvector ?      To construct a second independent solution of the form .    Correct. A generalized eigenvector provides the missing second solution when only one eigenvector exists.     To find a new eigenvalue.  No—generalized eigenvectors do not create new eigenvalues.    To force the matrix to become diagonalizable.   No. A defective matrix cannot be made diagonalizable by choosing more vectors.     "
+},
+{
+  "id": "mcqmulteigenequation",
+  "level": "2",
+  "url": "ch-Textbook-28.html#mcqmulteigenequation",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Equation for Finding a Generalized Eigenvector.",
+  "body": " Equation for Finding a Generalized Eigenvector   If is an eigenvector for a repeated eigenvalue , which equation must a generalized eigenvector satisfy?       Correct. This equation produces a vector that generates the second independent solution.     No—that would make another eigenvector, which does not exist.    Not the defining equation—the generalized eigenvector is found using .    "
+},
+{
+  "id": "mcqmulteigensolutionform",
+  "level": "2",
+  "url": "ch-Textbook-28.html#mcqmulteigensolutionform",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Structure of the General Solution for a Defective Matrix.",
+  "body": " Structure of the General Solution for a Defective Matrix   If a matrix has a repeated eigenvalue with only one eigenvector and a generalized eigenvector , what does the general solution to look like?           Correct. This is the full solution when only one eigenvector exists.      No—this does not produce two independent solutions.     No—solutions must be vector‑valued and use and .    "
+},
+{
+  "id": "multeigennew1",
+  "level": "2",
+  "url": "ch-Textbook-28.html#multeigennew1",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Checking Whether a Matrix Is Defective.",
+  "body": " Checking Whether a Matrix Is Defective   Consider the matrix     Compute the eigenvalue(s) of .    Find all eigenvectors of and determine whether the matrix is defective.       (a) The characteristic polynomial is , so the only eigenvalue is the repeated eigenvalue .   (b) To find the eigenvectors, solve . That matrix is   The equation implies , while is free. Thus every eigenvector has the form   There is only one linearly independent eigenvector, even though the eigenvalue has algebraic multiplicity 2. Hence is defective .   "
+},
+{
+  "id": "multeigennew2",
+  "level": "2",
+  "url": "ch-Textbook-28.html#multeigennew2",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Finding a Generalized Eigenvector.",
+  "body": " Finding a Generalized Eigenvector   Let which has a repeated eigenvalue . The unique eigenvector (up to scaling) is .  Find a generalized eigenvector satisfying .    Compute   We seek such that   Thus , and is arbitrary. The simplest choice is   This exactly matches the definition of a generalized eigenvector: solve .   "
+},
+{
+  "id": "multeigennew3",
+  "level": "2",
+  "url": "ch-Textbook-28.html#multeigennew3",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Constructing the Full Solution for a Defective Matrix.",
+  "body": " Constructing the Full Solution for a Defective Matrix   For the matrix the eigenvalue is with eigenvector . A generalized eigenvector is .  Write the general solution to .    A defective matrix with one eigenvector and one generalized eigenvector yields solutions   Therefore the general solution is   This is the standard repeated‑eigenvalue solution for a defective system.   "
+},
+{
+  "id": "ch-Textbook-29",
+  "level": "1",
+  "url": "ch-Textbook-29.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.8 - Matrix Exponentials",
+  "body": " Daily Prep 5.8 - Matrix Exponentials   Overview  It is time to introduce the matrix exponential -- a powerful method for solving linear constant‑coefficient systems of differential equations of the form . Motivated by the scalar solution , the section defines the matrix exponential via its convergent Taylor series , and demonstrates that this function satisfies the key identity . This establishes as the general solution to the system, and in particular . The section explains that matrix exponentials provide a fundamental matrix solution and give a clean way to solve initial value problems directly. It also highlights an important subtlety: in contrast to real numbers, matrices do not generally commute, so unless and satisfy . Finally, the section explores simple cases—especially diagonal and triangular matrices—where matrix exponentials can be computed efficiently.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the definition of the matrix exponential  and recognize it as a convergent power series for any square matrix .    Verify that and conclude that solves the system .    Use the formula to solve initial value problems for linear homogeneous constant‑coefficient systems.      Learn!  Complete the actions listed below.     Read  Subsection 7.8.1: Definition .     Read  Subsection 7.8.2: Simple cases .     Watch  Intro to Matrix Exponentials and Determining Matrix Exponentials for Simple Cases (10:35) by Mathispower4u.    (Optional) Watch  The Matrix Exponential (15:31) by Gilbert Strang (from MIT OpenCourseWare).     Read  Subsection 7.8.3: General matrices .     Watch  Matrix Exponentials for the General Case: N by N with N Linearly Indep Eigenvectors (7:40) by Mathispower4u.     Read  Subsection 7.8.4: Fundamental matrix solutions .    (Optional) Watch  Determine a Matrix Exponential and General Solution to x'=Ax: 3 by 3 General Case (5:49) by Mathispower4u.    (Optional) Watch  How (and why) to raise e to the power of a matrix (27:06) by 3Blue1Brown.     Do  Subsection 7.8.6: Exercises 7.8.2, 7.8.3, 7.8.4, 7.8.5, 7.8.101, 7.8.103 .      Do MyOpenMath questions from this section.     Exercises   Definition of the Matrix Exponential   Which of the following correctly defines the matrix exponential for a square matrix ?           Correct. The matrix exponential is defined using the power‑series expansion.      No—this only works for special matrices, not in general.     No—raising a matrix to a real power is unrelated to the exponential.      Why Solves the System   Why does solve the system ?      Because .    Correct. Differentiating the series term‑by‑term gives , so multiplying by yields a solution.     Because diagonalizes every matrix .  No—only some matrices are diagonalizable.    Because for all .  No—this is only true when .      Solving an IVP with the Matrix Exponential   For the system with initial condition , what is the solution?       Correct. The general solution is , and implies .      No—this expression is not defined and is not the solution.     No—the exponential must apply to the matrix, not to a scalar.      Matrix Exponential of a Diagonal Matrix   If what is ?           Correct. For diagonal matrices, the exponential is taken on each diagonal entry.      No—the exponential does not distribute in that way.         No—the exponentials must be applied directly to the diagonal entries.      When Does Hold?   When is the identity true?     When and commute: .   Correct. The section warns that the identity generally fails unless and commute.     Always, for all square matrices.  No—this is false even for simple 2×2 matrices.    Only when both and are diagonal.  Not quite—diagonal matrices commute, but commutativity (not diagonality) is the real requirement.       Using the Series Definition to Compute a Simple Matrix Exponential   Let Compute directly from the power series definition of the matrix exponential:     First compute powers of . Since we find:   Thus the power series truncates after the first term involving :   Nilpotent matrices make the exponential easy to compute using the series.      Solving an Initial Value Problem Using the Matrix Exponential   Consider the system Use the matrix exponential to solve for .    Because the matrix is diagonal, the matrix exponential is computed by exponentiating each diagonal entry:   The solution to with is . Therefore:       Understanding Commutativity and Matrix Exponential Identities   Let     Show that and commute.    Use this fact to compute in terms of and .       (a) Compute and :    Thus . When matrices commute, the exponential identity holds.   (b) Since is diagonal,   Also,   Multiply them:   This confirms the commutativity‑dependent identity emphasized in the section.      Matrix Exponential of a Diagonal 3×3 Matrix   Compute the matrix exponential for the diagonal matrix     For a diagonal matrix, the matrix exponential is obtained by exponentiating each diagonal entry individually.   No off‑diagonal terms appear since powers of a diagonal matrix remain diagonal and the Taylor series keeps all entries separated.      Solving a 3×3 System Using the Matrix Exponential   Consider the system with initial condition Compute and then find .    First compute powers of . This matrix is strictly upper triangular, so it is nilpotent:   By the series definition of the matrix exponential since all higher powers vanish.   Adding these gives   Now compute :   Therefore the solution to the system is   This illustrates how matrix exponentials solve triangular (nilpotent) systems.      Matrix Exponential via Jordan Form (One Jordan Block)   Consider the matrix     Explain why has a repeated eigenvalue and why it is not diagonalizable.    Compute using the identity , where is the Jordan form of .       (a) The characteristic polynomial is   so is a repeated eigenvalue of multiplicity 3. The matrix has only one independent eigenvector because it is a single Jordan block. Therefore is not diagonalizable.   (b) Since is already in Jordan form, we have and . A size‑3 Jordan block satisfies   where is the nilpotent part:   Therefore,       Similarity Transform Required: Block with Repeated Eigenvalue   Consider the matrix     Find a matrix such that is a Jordan matrix consisting of a Jordan block and one block.    Compute using .       (a) The eigenvalues of are (multiplicity 2) and . For , we find:   Solving gives an eigenvector . To find a generalized eigenvector , solve :   giving , , and free. Choose .  For , the eigenvector is   Thus a convenient choice is   which already puts into Jordan form:    (b) The Jordan block for eigenvalue yields   For the block we get . Therefore   Since , we have , hence:        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Compute matrix exponentials in special cases, including diagonal matrices (applying the exponential entrywise) and triangular matrices (where powers of can be computed systematically).    Explain why only when and commute, and understand how this affects solving systems by splitting the matrix into simpler parts.    Recognize the matrix exponential as a fundamental matrix solution and understand how it relates to the theory of diagonalization, generalized eigenvectors, and the eigenvalue method for solving systems.     "
+},
+{
+  "id": "mcqmatexpdefinition",
+  "level": "2",
+  "url": "ch-Textbook-29.html#mcqmatexpdefinition",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Definition of the Matrix Exponential.",
+  "body": " Definition of the Matrix Exponential   Which of the following correctly defines the matrix exponential for a square matrix ?           Correct. The matrix exponential is defined using the power‑series expansion.      No—this only works for special matrices, not in general.     No—raising a matrix to a real power is unrelated to the exponential.    "
+},
+{
+  "id": "mcqmatexpsatisfiesode",
+  "level": "2",
+  "url": "ch-Textbook-29.html#mcqmatexpsatisfiesode",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Why <span class=\"process-math\">\\(e^{tP}\\)<\/span> Solves the System.",
+  "body": " Why Solves the System   Why does solve the system ?      Because .    Correct. Differentiating the series term‑by‑term gives , so multiplying by yields a solution.     Because diagonalizes every matrix .  No—only some matrices are diagonalizable.    Because for all .  No—this is only true when .    "
+},
+{
+  "id": "mcqmatexpivp",
+  "level": "2",
+  "url": "ch-Textbook-29.html#mcqmatexpivp",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Solving an IVP with the Matrix Exponential.",
+  "body": " Solving an IVP with the Matrix Exponential   For the system with initial condition , what is the solution?       Correct. The general solution is , and implies .      No—this expression is not defined and is not the solution.     No—the exponential must apply to the matrix, not to a scalar.    "
+},
+{
+  "id": "mcqmatexpdiagonal",
+  "level": "2",
+  "url": "ch-Textbook-29.html#mcqmatexpdiagonal",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Matrix Exponential of a Diagonal Matrix.",
+  "body": " Matrix Exponential of a Diagonal Matrix   If what is ?           Correct. For diagonal matrices, the exponential is taken on each diagonal entry.      No—the exponential does not distribute in that way.         No—the exponentials must be applied directly to the diagonal entries.    "
+},
+{
+  "id": "mcqmatexpcommutation",
+  "level": "2",
+  "url": "ch-Textbook-29.html#mcqmatexpcommutation",
+  "type": "Exercise",
+  "number": "5",
+  "title": "When Does <span class=\"process-math\">\\(e^{A+B} = e^{A} e^{B}\\)<\/span> Hold?",
+  "body": " When Does Hold?   When is the identity true?     When and commute: .   Correct. The section warns that the identity generally fails unless and commute.     Always, for all square matrices.  No—this is false even for simple 2×2 matrices.    Only when both and are diagonal.  Not quite—diagonal matrices commute, but commutativity (not diagonality) is the real requirement.    "
+},
+{
+  "id": "matexpnew1",
+  "level": "2",
+  "url": "ch-Textbook-29.html#matexpnew1",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Using the Series Definition to Compute a Simple Matrix Exponential.",
+  "body": " Using the Series Definition to Compute a Simple Matrix Exponential   Let Compute directly from the power series definition of the matrix exponential:     First compute powers of . Since we find:   Thus the power series truncates after the first term involving :   Nilpotent matrices make the exponential easy to compute using the series.   "
+},
+{
+  "id": "matexpnew2",
+  "level": "2",
+  "url": "ch-Textbook-29.html#matexpnew2",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Solving an Initial Value Problem Using the Matrix Exponential.",
+  "body": " Solving an Initial Value Problem Using the Matrix Exponential   Consider the system Use the matrix exponential to solve for .    Because the matrix is diagonal, the matrix exponential is computed by exponentiating each diagonal entry:   The solution to with is . Therefore:    "
+},
+{
+  "id": "matexp-new-3",
+  "level": "2",
+  "url": "ch-Textbook-29.html#matexp-new-3",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Understanding Commutativity and Matrix Exponential Identities.",
+  "body": " Understanding Commutativity and Matrix Exponential Identities   Let     Show that and commute.    Use this fact to compute in terms of and .       (a) Compute and :    Thus . When matrices commute, the exponential identity holds.   (b) Since is diagonal,   Also,   Multiply them:   This confirms the commutativity‑dependent identity emphasized in the section.   "
+},
+{
+  "id": "matexp3x3problem1",
+  "level": "2",
+  "url": "ch-Textbook-29.html#matexp3x3problem1",
+  "type": "Exercise",
+  "number": "9",
+  "title": "Matrix Exponential of a Diagonal 3×3 Matrix.",
+  "body": " Matrix Exponential of a Diagonal 3×3 Matrix   Compute the matrix exponential for the diagonal matrix     For a diagonal matrix, the matrix exponential is obtained by exponentiating each diagonal entry individually.   No off‑diagonal terms appear since powers of a diagonal matrix remain diagonal and the Taylor series keeps all entries separated.   "
+},
+{
+  "id": "matexp3x3problem2",
+  "level": "2",
+  "url": "ch-Textbook-29.html#matexp3x3problem2",
+  "type": "Exercise",
+  "number": "10",
+  "title": "Solving a 3×3 System Using the Matrix Exponential.",
+  "body": " Solving a 3×3 System Using the Matrix Exponential   Consider the system with initial condition Compute and then find .    First compute powers of . This matrix is strictly upper triangular, so it is nilpotent:   By the series definition of the matrix exponential since all higher powers vanish.   Adding these gives   Now compute :   Therefore the solution to the system is   This illustrates how matrix exponentials solve triangular (nilpotent) systems.   "
+},
+{
+  "id": "matexp-3by3-repeated-1",
+  "level": "2",
+  "url": "ch-Textbook-29.html#matexp-3by3-repeated-1",
+  "type": "Exercise",
+  "number": "11",
+  "title": "Matrix Exponential via Jordan Form (One Jordan Block).",
+  "body": " Matrix Exponential via Jordan Form (One Jordan Block)   Consider the matrix     Explain why has a repeated eigenvalue and why it is not diagonalizable.    Compute using the identity , where is the Jordan form of .       (a) The characteristic polynomial is   so is a repeated eigenvalue of multiplicity 3. The matrix has only one independent eigenvector because it is a single Jordan block. Therefore is not diagonalizable.   (b) Since is already in Jordan form, we have and . A size‑3 Jordan block satisfies   where is the nilpotent part:   Therefore,    "
+},
+{
+  "id": "matexp-3by3-repeated-2",
+  "level": "2",
+  "url": "ch-Textbook-29.html#matexp-3by3-repeated-2",
+  "type": "Exercise",
+  "number": "12",
+  "title": "Similarity Transform Required: Block with Repeated Eigenvalue.",
+  "body": " Similarity Transform Required: Block with Repeated Eigenvalue   Consider the matrix     Find a matrix such that is a Jordan matrix consisting of a Jordan block and one block.    Compute using .       (a) The eigenvalues of are (multiplicity 2) and . For , we find:   Solving gives an eigenvector . To find a generalized eigenvector , solve :   giving , , and free. Choose .  For , the eigenvector is   Thus a convenient choice is   which already puts into Jordan form:    (b) The Jordan block for eigenvalue yields   For the block we get . Therefore   Since , we have , hence:    "
+},
+{
+  "id": "ch-Textbook-30",
+  "level": "1",
+  "url": "ch-Textbook-30.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Daily Prep 5.9 - Nonhomogeneous Systems",
+  "body": " Daily Prep 5.9 - Nonhomogeneous Systems   Overview  We now develop methods for solving nonhomogeneous linear systems of the form . Building on the matrix exponential from earlier, the section introduces the variation‑of‑parameters formula, which expresses the general solution as the sum of a homogeneous solution and a particular solution obtained through an integral involving left‑multiplication by . Specifically, the solution is . The section emphasizes that the exponential acts on the nonhomogeneous forcing by “propagating” its influence forward through time, mirroring the convolution structure familiar from single‑equation ODEs. Several examples—especially involving exponential, polynomial, and sinusoidal forcing—demonstrate how this integral formula provides a systematic approach even when guessing a particular solution would be difficult or impossible.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize a nonhomogeneous linear system of the form and understand how it differs from the homogeneous case.    Understand that the homogeneous solution is and that a particular solution must be added to form the general solution.    Know the variation‑of‑parameters formula as the standard method of solving nonhomogeneous systems.      Learn!  Complete the actions listed below.     Read  Subsection 7.9.1: First order constant coefficient .     Read  Subsubsection 7.9.1.3: Undetermined coefficients .     Read  Subsection 7.9.2: First order variable coefficient .     Read  Subsection 7.9.3: Second order constant coefficients .    (Optional) Watch  Nonhomogeneous ODE systems (50:05) by Steve Butler (Beard Meets Calculus).     Do  Subsection 7.9.4: Exercises 7.9.101, 7.9.102 .      Do MyOpenMath questions from this section.     Exercises   Identifying a Nonhomogeneous System   Which of the following is a nonhomogeneous linear system?         Correct. A nonhomogeneous system includes an external forcing term .      No forcing term is present—this is the homogeneous case.      No—this system has no matrix term and is not linear in the usual sense of Section 7.9.       General Solution Formula   What is the general solution to the nonhomogeneous system ?           Correct. This is the variation‑of‑parameters formula.        No—the forcing term must be integrated, not simply added.       No—this does not solve the differential equation.      Meaning of in the Integral   In the variation‑of‑parameters integral , what does represent?      The propagation of the forcing forward to time .    Correct. The exponential transports the effect of the forcing from the earlier time to the current time .     The derivative of .  No—nothing in the integral computes a derivative of the forcing.    An antiderivative of .  No— is the matrix exponential of .      Simple Computation in the Diagonal Case   Suppose Which expression correctly represents the integrand ?           Correct. For diagonal , the exponential is diagonal, and the integrand is a product of this exponential and .        No—this ignores the dependence on and the forcing vector.       No—the integral requires , not evaluation at .      Solving an IVP Conceptually   To solve the initial value problem which of the following steps is correct?      Compute .    Correct. This is precisely the initial‑value formula.     Solve only the homogeneous system and ignore .  No—this omits the contribution of the forcing term.    Integrate alone and multiply by .  No—this does not account for the system dynamics.       Solving a Nonhomogeneous System with Diagonal A   Consider the system Use the variation-of-parameters formula to find an explicit expression for .    The solution of with is   For the diagonal matrix ,   Therefore,   The homogeneous part is:   The particular part is:   Compute the integrals:    Putting everything together:   Hence the solution is       Constant Forcing with Triangular Matrix   Solve the system Use variation of parameters; do not use undetermined coefficients.    The matrix exponential for an upper triangular matrix with repeated eigenvalue is:   Consider the formula   Compute the homogeneous part:   Next compute the integrand:   Integrate from to :    Thus the particular solution is:   Combining homogeneous and particular parts:       Interpreting the Forcing Term Through the Matrix Exponential   Consider the nonhomogeneous system where .    Describe qualitatively how the forcing term influences the motion using the matrix exponential .    Compute .       (a) The forcing enters through the integral   where “propagates” the contribution of forward from time to . Since is a rotation matrix, is a rotation by . Thus the forcing term (a vertical oscillation) gets rotated and accumulated over time. The net effect is that the system experiences a continuously rotating contribution from , producing a driven rotational motion.   (b) Because represents a 90-degree rotation, its exponential is the usual rotation matrix:   This follows from the Taylor series expansion and is used directly inside the nonhomogeneous integral.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Compute particular solutions by evaluating , including cases where is exponential, polynomial, or sinusoidal.    Use properties of the matrix exponential (e.g., behavior under commuting matrices, simplifications for triangular or diagonalizable matrices) to streamline the computation of inside the variation‑of‑parameters integral.    Interpret the integral formula as a matrix‑valued convolution that “accumulates” the forcing term over time, explaining how the effect of forcing is propagated forward through the dynamics defined by .     "
+},
+{
+  "id": "mcq-nonhomog-basic-form",
+  "level": "2",
+  "url": "ch-Textbook-30.html#mcq-nonhomog-basic-form",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Identifying a Nonhomogeneous System.",
+  "body": " Identifying a Nonhomogeneous System   Which of the following is a nonhomogeneous linear system?         Correct. A nonhomogeneous system includes an external forcing term .      No forcing term is present—this is the homogeneous case.      No—this system has no matrix term and is not linear in the usual sense of Section 7.9.     "
+},
+{
+  "id": "mcq-nonhomog-solution-form",
+  "level": "2",
+  "url": "ch-Textbook-30.html#mcq-nonhomog-solution-form",
+  "type": "Exercise",
+  "number": "2",
+  "title": "General Solution Formula.",
+  "body": " General Solution Formula   What is the general solution to the nonhomogeneous system ?           Correct. This is the variation‑of‑parameters formula.        No—the forcing term must be integrated, not simply added.       No—this does not solve the differential equation.    "
+},
+{
+  "id": "mcq-nonhomog-epropagation",
+  "level": "2",
+  "url": "ch-Textbook-30.html#mcq-nonhomog-epropagation",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Meaning of <span class=\"process-math\">\\(e^{(t-s)A}\\)<\/span> in the Integral.",
+  "body": " Meaning of in the Integral   In the variation‑of‑parameters integral , what does represent?      The propagation of the forcing forward to time .    Correct. The exponential transports the effect of the forcing from the earlier time to the current time .     The derivative of .  No—nothing in the integral computes a derivative of the forcing.    An antiderivative of .  No— is the matrix exponential of .    "
+},
+{
+  "id": "mcq-nonhomog-diagonal-case",
+  "level": "2",
+  "url": "ch-Textbook-30.html#mcq-nonhomog-diagonal-case",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Simple Computation in the Diagonal Case.",
+  "body": " Simple Computation in the Diagonal Case   Suppose Which expression correctly represents the integrand ?           Correct. For diagonal , the exponential is diagonal, and the integrand is a product of this exponential and .        No—this ignores the dependence on and the forcing vector.       No—the integral requires , not evaluation at .    "
+},
+{
+  "id": "mcq-nonhomog-initial-value",
+  "level": "2",
+  "url": "ch-Textbook-30.html#mcq-nonhomog-initial-value",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Solving an IVP Conceptually.",
+  "body": " Solving an IVP Conceptually   To solve the initial value problem which of the following steps is correct?      Compute .    Correct. This is precisely the initial‑value formula.     Solve only the homogeneous system and ignore .  No—this omits the contribution of the forcing term.    Integrate alone and multiply by .  No—this does not account for the system dynamics.    "
+},
+{
+  "id": "nonhomog-open-1",
+  "level": "2",
+  "url": "ch-Textbook-30.html#nonhomog-open-1",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Solving a Nonhomogeneous System with Diagonal A.",
+  "body": " Solving a Nonhomogeneous System with Diagonal A   Consider the system Use the variation-of-parameters formula to find an explicit expression for .    The solution of with is   For the diagonal matrix ,   Therefore,   The homogeneous part is:   The particular part is:   Compute the integrals:    Putting everything together:   Hence the solution is    "
+},
+{
+  "id": "nonhomog-open-2",
+  "level": "2",
+  "url": "ch-Textbook-30.html#nonhomog-open-2",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Constant Forcing with Triangular Matrix.",
+  "body": " Constant Forcing with Triangular Matrix   Solve the system Use variation of parameters; do not use undetermined coefficients.    The matrix exponential for an upper triangular matrix with repeated eigenvalue is:   Consider the formula   Compute the homogeneous part:   Next compute the integrand:   Integrate from to :    Thus the particular solution is:   Combining homogeneous and particular parts:    "
+},
+{
+  "id": "nonhomog-open-3",
+  "level": "2",
+  "url": "ch-Textbook-30.html#nonhomog-open-3",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Interpreting the Forcing Term Through the Matrix Exponential.",
+  "body": " Interpreting the Forcing Term Through the Matrix Exponential   Consider the nonhomogeneous system where .    Describe qualitatively how the forcing term influences the motion using the matrix exponential .    Compute .       (a) The forcing enters through the integral   where “propagates” the contribution of forward from time to . Since is a rotation matrix, is a rotation by . Thus the forcing term (a vertical oscillation) gets rotated and accumulated over time. The net effect is that the system experiences a continuously rotating contribution from , producing a driven rotational motion.   (b) Because represents a 90-degree rotation, its exponential is the usual rotation matrix:   This follows from the Taylor series expansion and is used directly inside the nonhomogeneous integral.   "
 }
 ]
 

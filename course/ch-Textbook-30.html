@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Daily Prep 5.3 - Linear Systems of ODEs</title>
+<title>Daily Prep 5.9 - Nonhomogeneous Systems</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -138,7 +138,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Textbook-23.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Textbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-Textbook-25.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Textbook-29.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Textbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\N}{\mathbb N}
   \newcommand{\Z}{\mathbb Z}
   \newcommand{\Q}{\mathbb Q}
@@ -429,9 +429,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-23.html#ch-Textbook-23-5" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-handout contains-active">
+<li class="toc-item toc-handout">
 <div class="toc-title-box"><a href="ch-Textbook-24.html" class="internal"><span class="title">Daily Prep 5.3 - Linear Systems of ODEs</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-24.html#ch-Textbook-24-2" class="internal"><span class="title">Overview</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-24.html#ch-Textbook-24-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
 <li class="toc-item toc-section">
@@ -501,9 +501,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-29.html#sec-Advancedlearningobjectives58" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-handout">
+<li class="toc-item toc-handout contains-active">
 <div class="toc-title-box"><a href="ch-Textbook-30.html" class="internal"><span class="title">Daily Prep 5.9 - Nonhomogeneous Systems</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-30.html#ch-Textbook-30-2" class="internal"><span class="title">Overview</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-30.html#ch-Textbook-30-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
 <li class="toc-item toc-section">
@@ -536,356 +536,544 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="ch-Textbook-24" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
-<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Daily Prep 5.3 - Linear Systems of ODEs</span><div class="print-links"><a href="?printpreview=ch-Textbook-24" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<section class="handout" id="ch-Textbook-30" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Daily Prep 5.9 - Nonhomogeneous Systems</span><div class="print-links"><a href="?printpreview=ch-Textbook-30" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="section" id="ch-Textbook-24-2"><h3 class="heading hide-type">
+<section class="section" id="ch-Textbook-30-2"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Overview</span>
 </h3>
-<div class="para" id="ch-Textbook-24-2-2">We now introduce linear systems of ODEs by viewing them through the lens of vector‑valued and matrix‑valued functions. A first‑order linear system can be written compactly in the vector form <span class="process-math">\(\vec{x}' = P(t)\vec{x} + \vec{f}(t)\text{,}\)</span> where <span class="process-math">\(P(t)\)</span> is a matrix-valued function and <span class="process-math">\(\vec{x}(t)\)</span> is a vector-valued function whose components are the dependent variables. This section emphasizes the rules for differentiating matrix products and sums, which mirror ordinary differentiation but preserve matrix multiplication order. It then focuses on homogeneous systems <span class="process-math">\(\vec{x}' = P\vec{x}\text{,}\)</span> especially in the constant‑coefficient case, where the superposition principle holds: any linear combination of solutions is again a solution. Linear independence of vector‑valued solutions plays a central role, and if an <span class="process-math">\(n \times n\)</span> system admits <span class="process-math">\(n\)</span> linearly independent solutions, then every solution can be written as their linear combination. Examples illustrate how to classify solutions and identify dependence relations among vector‑valued functions.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-24-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-Textbook-30-2-2">We now develop methods for solving nonhomogeneous linear systems of the form <span class="process-math">\(\vec{x}' = A \vec{x} + \vec{f}(t)\text{.}\)</span> Building on the matrix exponential from earlier, the section introduces the variation‑of‑parameters formula, which expresses the general solution as the sum of a homogeneous solution <span class="process-math">\(e^{tA}\vec{c}\)</span> and a particular solution obtained through an integral involving <em class="emphasis">left‑multiplication</em> by <span class="process-math">\(e^{(t-s)A}\text{.}\)</span> Specifically, the solution is <span class="process-math">\(\vec{x}(t) = e^{tA}\vec{x}(0) + \int_0^t e^{(t-s)A}\vec{f}(s)\,ds\text{.}\)</span>  The section emphasizes that the exponential acts on the nonhomogeneous forcing by “propagating” its influence forward through time, mirroring the convolution structure familiar from single‑equation ODEs.  Several examples—especially involving exponential, polynomial, and sinusoidal forcing—demonstrate how this integral formula provides a systematic approach even when guessing a particular solution would be difficult or impossible.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-30-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Overview"><a href="#ch-Textbook-24-2" title="Copy heading and permalink for Section: Overview" aria-label="Copy heading and permalink for Section: Overview">🔗</a></div></section><section class="section" id="ch-Textbook-24-3"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Overview"><a href="#ch-Textbook-30-2" title="Copy heading and permalink for Section: Overview" aria-label="Copy heading and permalink for Section: Overview">🔗</a></div></section><section class="section" id="ch-Textbook-30-3"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic learning objectives</span>
 </h3>
-<div class="para" id="ch-Textbook-24-3-2">These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated <em class="emphasis">in italics</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-24-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-Textbook-30-3-2">These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated <em class="emphasis">in italics</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-30-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="ch-Textbook-24-3-3">
-<li id="ch-Textbook-24-3-3-1">
-<div class="para" id="ch-Textbook-24-3-3-1-1">Recognize a first‑order linear system written in the vector form <span class="process-math">\(\vec{x}' = P(t)\vec{x} + \vec{f}(t)\)</span> and identify its components.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-24-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="ch-Textbook-30-3-3">
+<li id="ch-Textbook-30-3-3-1">
+<div class="para" id="ch-Textbook-30-3-3-1-1">Recognize a nonhomogeneous linear system of the form <span class="process-math">\(\vec{x}' = A\vec{x} + \vec{f}(t)\)</span> and understand how it differs from the homogeneous case.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-30-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-24-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-30-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-Textbook-24-3-3-2">
-<div class="para" id="ch-Textbook-24-3-3-2-1">Apply differentiation rules for matrix‑valued and vector‑valued functions, such as <span class="process-math">\((A B)' = A' B + A B'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-24-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-Textbook-30-3-3-2">
+<div class="para" id="ch-Textbook-30-3-3-2-1">Understand that the homogeneous solution is <span class="process-math">\(e^{tA}\vec{c}\)</span> and that a particular solution must be added to form the general solution.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-30-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-24-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-30-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-Textbook-24-3-3-3">
-<div class="para" id="ch-Textbook-24-3-3-3-1">Distinguish between homogeneous systems <span class="process-math">\(\vec{x}' = P\vec{x}\)</span> and nonhomogeneous systems <span class="process-math">\(\vec{x}' = P\vec{x} + \vec{f}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-24-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-Textbook-30-3-3-3">
+<div class="para" id="ch-Textbook-30-3-3-3-1">Know the <em class="emphasis">variation‑of‑parameters</em> formula <span class="process-math">\(\vec{x}(t) = e^{tA}\vec{x}(0) + \int_0^t e^{(t-s)A}\vec{f}(s)\,ds\)</span> as the standard method of solving nonhomogeneous systems.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-30-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-24-3-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-30-3-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Section: Basic learning objectives"><a href="#ch-Textbook-24-3" title="Copy heading and permalink for Section: Basic learning objectives" aria-label="Copy heading and permalink for Section: Basic learning objectives">🔗</a></div></section><section class="section" id="sec-Toprepareforclass53"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Basic learning objectives"><a href="#ch-Textbook-30-3" title="Copy heading and permalink for Section: Basic learning objectives" aria-label="Copy heading and permalink for Section: Basic learning objectives">🔗</a></div></section><section class="section" id="sec-Toprepareforclass59"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learn!</span>
 </h3>
-<div class="para" id="sec-Toprepareforclass53-2">Complete the actions listed below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-Toprepareforclass59-2">Complete the actions listed below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="sec-Toprepareforclass53-3">
-<li id="sec-Toprepareforclass53-3-1">
-<div class="para" id="sec-Toprepareforclass53-3-1-1">
-<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/linsystems_section.html#linsystems_section" target="_blank">Section 7.3: Linear systems of ODEs</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="sec-Toprepareforclass59-3">
+<li id="sec-Toprepareforclass59-3-1">
+<div class="para" id="sec-Toprepareforclass59-3-1-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-161" target="_blank">Subsection 7.9.1: First order constant coefficient</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass59-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass53-3-2">
-<div class="para" id="sec-Toprepareforclass53-3-2-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/cJlnePo_UzE?si=FQ3bPU3uHZwuV1_F" target="_blank">Intro to Vector-Valued and Matrix-Valued Functions and Write a System of ODEs using Matrices (5:24)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass59-3-2">
+<div class="para" id="sec-Toprepareforclass59-3-2-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsubsection-6" target="_blank">Subsubsection 7.9.1.3: Undetermined coefficients</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass59-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass53-3-3">
-<div class="para" id="sec-Toprepareforclass53-3-3-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/Pt7p2Wq28bM?si=2msvfUY1mt4q8x5Y" target="_blank">Write a System of Two Differential Equations Using Matrix Notation (1:52)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass59-3-3">
+<div class="para" id="sec-Toprepareforclass59-3-3-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-162" target="_blank">Subsection 7.9.2: First order variable coefficient</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass59-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass53-3-4">
-<div class="para" id="sec-Toprepareforclass53-3-4-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/ZfKLDGD0BcE?si=Im-PxphvXe5WOoWZ" target="_blank">Write a System of Three Differential Equations with Initial Values Using Matrices (3:18)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass59-3-4">
+<div class="para" id="sec-Toprepareforclass59-3-4-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-163" target="_blank">Subsection 7.9.3: Second order constant coefficients</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass59-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass53-3-5">
-<div class="para" id="sec-Toprepareforclass53-3-5-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/3_3-TRBgNwE?si=3FHhrYkM_A0i2Xy0" target="_blank">Intro to Solving First Order Linear Homogeneous Systems of Ordinary Differential Equations (7:48)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass59-3-5">
+<div class="para" id="sec-Toprepareforclass59-3-5-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/oGo3l5dH97Q?si=SAvp_msjfMd0VoQ8" target="_blank">Nonhomogeneous ODE systems (50:05)</a> by Steve Butler (Beard Meets Calculus).<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass59-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass53-3-6">
-<div class="para" id="sec-Toprepareforclass53-3-6-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/h6ZK5znc0cs?si=zEnR6bHKwCwaCjjN" target="_blank">Determine if Vector-Valued Functions are Linearly Independent or Linearly Dependent (2:57)</a> by Mathispower4u.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass59-3-6">
+<div class="para" id="sec-Toprepareforclass59-3-6-1">
+<em class="alert">Do</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/nonhomogsys_section.html#subsection-164" target="_blank">Subsection 7.9.4: Exercises 7.9.101, 7.9.102</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass59-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Toprepareforclass53-3-7">
-<div class="para" id="sec-Toprepareforclass53-3-7-1">
-<em class="alert">Do</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/linsystems_section.html#subsection-142" target="_blank">Subsection 7.3.1: Exercises 7.3.1, 7.3.2, 7.3.3, 7.3.4, 7.3.103</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Toprepareforclass59-3-7">
+<div class="para" id="sec-Toprepareforclass59-3-7-1">
+<em class="alert">Do</em> MyOpenMath questions from this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass59-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="sec-Toprepareforclass53-3-8">
-<div class="para" id="sec-Toprepareforclass53-3-8-1">
-<em class="alert">Do</em> MyOpenMath questions from this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass53-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass53-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass59-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<section class="exercises" id="sec-Toprepareforclass53-4"><h4 class="heading hide-type">
+<section class="exercises" id="sec-Toprepareforclass59-4"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h4>
-<article class="exercise exercise-like" id="mcqlinearsystemform"><h5 class="heading">
-<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identifying a Linear System.</span>
+<article class="exercise exercise-like" id="mcq-nonhomog-basic-form"><h5 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identifying a Nonhomogeneous System.</span>
 </h5>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="mcqlinearsystemform-2-1">Which of the following is a valid linear first-order system of ODEs?<div class="autopermalink" data-description="Paragraph"><a href="#mcqlinearsystemform-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercise-statement"><div class="para" id="mcq-nonhomog-basic-form-2-1">Which of the following is a <em class="emphasis">nonhomogeneous</em> linear system?<div class="autopermalink" data-description="Paragraph"><a href="#mcq-nonhomog-basic-form-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
-<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqlinearsystemform" data-multipleanswers="false" data-random="">
-<li data-component="answer" id="rs-mcqlinearsystemform_opt_a" data-correct=""><div class="para" id="mcqlinearsystemform-3-1-1-1"><span class="process-math">\(\vec{x}' = P(t)\,\vec{x} + \vec{f}(t)\)</span></div></li>
-<li data-component="feedback" id="rs-mcqlinearsystemform_opt_a"><div class="para" id="mcqlinearsystemform-3-1-2-1">Correct. A linear system is defined exactly in this form.</div></li>
-<li data-component="answer" id="rs-mcqlinearsystemform_opt_b"><div class="para" id="mcqlinearsystemform-3-2-1-1"><span class="process-math">\(\vec{x}' = (\vec{x})^2 + t\)</span></div></li>
-<li data-component="feedback" id="rs-mcqlinearsystemform_opt_b"><div class="para" id="mcqlinearsystemform-3-2-2-1">No. Squaring the vector makes the system nonlinear.</div></li>
-<li data-component="answer" id="rs-mcqlinearsystemform_opt_c"><div class="para logical" id="mcqlinearsystemform-3-3-1-1"><div class="displaymath process-math" id="mcqlinearsystemform-3-3-1-1-1">
-\begin{align*}
-x_1' \amp = \sin(x_1),\\
-x_2' \amp= e^{x_2} 
-\end{align*}
-</div></div></li>
-<li data-component="feedback" id="rs-mcqlinearsystemform_opt_c"><div class="para" id="mcqlinearsystemform-3-3-2-1">These are first‑order ODEs but not <em class="emphasis">linear</em>.</div></li>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcq-nonhomog-basic-form" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcq-nonhomog-basic-form_opt_a" data-correct=""><div class="para" id="mcq-nonhomog-basic-form-3-1-1-1"><span class="process-math">\(\vec{x}' = A\vec{x} + \vec{f}(t)\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-basic-form_opt_a"><div class="para" id="mcq-nonhomog-basic-form-3-1-2-1">Correct. A nonhomogeneous system includes an external forcing term <span class="process-math">\(\vec{f}(t)\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-basic-form_opt_b"><div class="para" id="mcq-nonhomog-basic-form-3-2-1-1"><span class="process-math">\(\vec{x}' = A\vec{x}\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-basic-form_opt_b"><div class="para" id="mcq-nonhomog-basic-form-3-2-2-1">No forcing term is present—this is the homogeneous case.</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-basic-form_opt_c"><div class="para" id="mcq-nonhomog-basic-form-3-3-1-1"><span class="process-math">\(\vec{x}' = \vec{f}(t)\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-basic-form_opt_c"><div class="para" id="mcq-nonhomog-basic-form-3-3-2-1">No—this system has no matrix term and is not linear in the usual sense of Section 7.9.</div></li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Exercise 1: Identifying a Linear System"><a href="#mcqlinearsystemform" title="Copy heading and permalink for Exercise 1: Identifying a Linear System" aria-label="Copy heading and permalink for Exercise 1: Identifying a Linear System">🔗</a></div></article><article class="exercise exercise-like" id="mcqhomogeneoussystem"><h5 class="heading">
-<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous vs. Nonhomogeneous.</span>
+<div class="autopermalink" data-description="Exercise 1: Identifying a Nonhomogeneous System"><a href="#mcq-nonhomog-basic-form" title="Copy heading and permalink for Exercise 1: Identifying a Nonhomogeneous System" aria-label="Copy heading and permalink for Exercise 1: Identifying a Nonhomogeneous System">🔗</a></div></article><article class="exercise exercise-like" id="mcq-nonhomog-solution-form"><h5 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">General Solution Formula.</span>
 </h5>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="mcqhomogeneoussystem-2-1">Which of the following systems is <em class="emphasis">homogeneous</em>?<div class="autopermalink" data-description="Paragraph"><a href="#mcqhomogeneoussystem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercise-statement"><div class="para" id="mcq-nonhomog-solution-form-2-1">What is the general solution to the nonhomogeneous system <span class="process-math">\(\vec{x}' = A\vec{x} + \vec{f}(t)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcq-nonhomog-solution-form-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
-<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqhomogeneoussystem" data-multipleanswers="false" data-random="">
-<li data-component="answer" id="rs-mcqhomogeneoussystem_opt_a" data-correct=""><div class="para" id="mcqhomogeneoussystem-3-1-1-1"><span class="process-math">\(\vec{x}' = A\,\vec{x}\)</span></div></li>
-<li data-component="feedback" id="rs-mcqhomogeneoussystem_opt_a"><div class="para" id="mcqhomogeneoussystem-3-1-2-1">Correct. A homogeneous linear system has the form <span class="process-math">\(\vec{x}' = P\vec{x}\)</span> with no forcing term.</div></li>
-<li data-component="answer" id="rs-mcqhomogeneoussystem_opt_b"><div class="para" id="mcqhomogeneoussystem-3-2-1-1"><span class="process-math">\(\vec{x}' = A\,\vec{x} + \vec{f}(t)\)</span></div></li>
-<li data-component="feedback" id="rs-mcqhomogeneoussystem_opt_b"><div class="para" id="mcqhomogeneoussystem-3-2-2-1">No. The presence of <span class="process-math">\(\vec{f}(t)\)</span> makes the system nonhomogeneous.</div></li>
-<li data-component="answer" id="rs-mcqhomogeneoussystem_opt_c"><div class="para logical" id="mcqhomogeneoussystem-3-3-1-1"><div class="displaymath process-math" id="mcqhomogeneoussystem-3-3-1-1-1">
-\begin{align*}
-x_1' \amp = t\,x_1 + 1,\\
-x_2' \amp = x_1 + t^2 
-\end{align*}
-</div></div></li>
-<li data-component="feedback" id="rs-mcqhomogeneoussystem_opt_c"><div class="para" id="mcqhomogeneoussystem-3-3-2-1">Not homogeneous; it contains nonzero added functions of <span class="process-math">\(t\text{.}\)</span>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcq-nonhomog-solution-form" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcq-nonhomog-solution-form_opt_a" data-correct=""><div class="para" id="mcq-nonhomog-solution-form-3-1-1-1"><span class="process-math">\(\vec{x}(t) = e^{tA}\vec{x}(0)
++ \int_{0}^{t} e^{(t-s)A}\vec{f}(s)\,ds\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-solution-form_opt_a"><div class="para" id="mcq-nonhomog-solution-form-3-1-2-1">Correct. This is the variation‑of‑parameters formula.</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-solution-form_opt_b"><div class="para" id="mcq-nonhomog-solution-form-3-2-1-1"><span class="process-math">\(\vec{x}(t) = e^{tA}\vec{x}(0) + \vec{f}(t)\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-solution-form_opt_b"><div class="para" id="mcq-nonhomog-solution-form-3-2-2-1">No—the forcing term must be integrated, not simply added.</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-solution-form_opt_c"><div class="para" id="mcq-nonhomog-solution-form-3-3-1-1"><span class="process-math">\(\vec{x}(t) = e^{tA}\vec{f}(t)\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-solution-form_opt_c"><div class="para" id="mcq-nonhomog-solution-form-3-3-2-1">No—this does not solve the differential equation.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 2: General Solution Formula"><a href="#mcq-nonhomog-solution-form" title="Copy heading and permalink for Exercise 2: General Solution Formula" aria-label="Copy heading and permalink for Exercise 2: General Solution Formula">🔗</a></div></article><article class="exercise exercise-like" id="mcq-nonhomog-epropagation"><h5 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Meaning of <span class="process-math">\(e^{(t-s)A}\)</span> in the Integral.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcq-nonhomog-epropagation-2-1">In the variation‑of‑parameters integral <span class="process-math">\(\displaystyle \int_0^t e^{(t-s)A}\vec{f}(s)\,ds\text{,}\)</span> what does <span class="process-math">\(e^{(t-s)A}\)</span> represent?<div class="autopermalink" data-description="Paragraph"><a href="#mcq-nonhomog-epropagation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcq-nonhomog-epropagation" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcq-nonhomog-epropagation_opt_a" data-correct=""><div class="para" id="mcq-nonhomog-epropagation-3-1-1-1">The propagation of the forcing <span class="process-math">\(\vec{f}(s)\)</span> forward to time <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-epropagation_opt_a"><div class="para" id="mcq-nonhomog-epropagation-3-1-2-1">Correct. The exponential transports the effect of the forcing from the earlier time <span class="process-math">\(s\)</span> to the current time <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-epropagation_opt_b"><div class="para" id="mcq-nonhomog-epropagation-3-2-1-1">The derivative of <span class="process-math">\(\vec{f}(s)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-epropagation_opt_b"><div class="para" id="mcq-nonhomog-epropagation-3-2-2-1">No—nothing in the integral computes a derivative of the forcing.</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-epropagation_opt_c"><div class="para" id="mcq-nonhomog-epropagation-3-3-1-1">An antiderivative of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-epropagation_opt_c"><div class="para" id="mcq-nonhomog-epropagation-3-3-2-1">No—<span class="process-math">\(e^{(t-s)A}\)</span> is the matrix exponential of <span class="process-math">\(A\text{.}\)</span>
 </div></li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Exercise 2: Homogeneous vs. Nonhomogeneous"><a href="#mcqhomogeneoussystem" title="Copy heading and permalink for Exercise 2: Homogeneous vs. Nonhomogeneous" aria-label="Copy heading and permalink for Exercise 2: Homogeneous vs. Nonhomogeneous">🔗</a></div></article><article class="exercise exercise-like" id="mcqsuperposition"><h5 class="heading">
-<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Superposition Principle.</span>
+<div class="autopermalink" data-description="Exercise 3: Meaning of e^{(t-s)A} in the Integral"><a href="#mcq-nonhomog-epropagation" title="Copy heading and permalink for Exercise 3: Meaning of e^{(t-s)A} in the Integral" aria-label="Copy heading and permalink for Exercise 3: Meaning of e^{(t-s)A} in the Integral">🔗</a></div></article><article class="exercise exercise-like" id="mcq-nonhomog-diagonal-case"><h5 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simple Computation in the Diagonal Case.</span>
 </h5>
 <div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="mcqsuperposition-2-1">Suppose <span class="process-math">\(\vec{x}_1(t)\)</span> and <span class="process-math">\(\vec{x}_2(t)\)</span> are solutions of the homogeneous system <span class="process-math">\(\vec{x}' = P\,\vec{x}\text{.}\)</span> Which statement is true?<div class="autopermalink" data-description="Paragraph"><a href="#mcqsuperposition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqsuperposition" data-multipleanswers="false" data-random="">
-<li data-component="answer" id="rs-mcqsuperposition_opt_a" data-correct=""><div class="para" id="mcqsuperposition-3-1-1-1">Any linear combination <span class="process-math">\(c_1\vec{x}_1 + c_2\vec{x}_2\)</span> is also a solution.</div></li>
-<li data-component="feedback" id="rs-mcqsuperposition_opt_a"><div class="para" id="mcqsuperposition-3-1-2-1">Correct. This is the superposition principle for homogeneous linear systems.</div></li>
-<li data-component="answer" id="rs-mcqsuperposition_opt_b"><div class="para" id="mcqsuperposition-3-2-1-1">Only <span class="process-math">\(\vec{x}_1 + \vec{x}_2\)</span> is a solution; scalar multiples are not.</div></li>
-<li data-component="feedback" id="rs-mcqsuperposition_opt_b"><div class="para" id="mcqsuperposition-3-2-2-1">No. All scalar multiples and linear combinations remain solutions.</div></li>
-<li data-component="answer" id="rs-mcqsuperposition_opt_c"><div class="para" id="mcqsuperposition-3-3-1-1">
-<span class="process-math">\(c_1\vec{x}_1 + c_2\vec{x}_2\)</span> is a solution only if <span class="process-math">\(c_1 = c_2\text{.}\)</span>
-</div></li>
-<li data-component="feedback" id="rs-mcqsuperposition_opt_c"><div class="para" id="mcqsuperposition-3-3-2-1">No. The constants may be any real numbers.</div></li>
-</ul>
-</div></div>
-<div class="autopermalink" data-description="Exercise 3: Superposition Principle"><a href="#mcqsuperposition" title="Copy heading and permalink for Exercise 3: Superposition Principle" aria-label="Copy heading and permalink for Exercise 3: Superposition Principle">🔗</a></div></article><article class="exercise exercise-like" id="mcqevalvectorsolution"><h5 class="heading">
-<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Vector-Valued Function.</span>
-</h5>
-<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="mcqevalvectorsolution-2-1">Let <span class="process-math">\(\vec{x}(t) = 
+<div class="exercise-statement"><div class="para" id="mcq-nonhomog-diagonal-case-2-1">Suppose <span class="process-math">\(A = 
 \begin{bmatrix}
-t^2 \\
-3t
-\end{bmatrix}.\)</span> Compute <span class="process-math">\(\vec{x}'(2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcqevalvectorsolution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqevalvectorsolution" data-multipleanswers="false" data-random="">
-<li data-component="answer" id="rs-mcqevalvectorsolution_opt_a" data-correct=""><div class="para" id="mcqevalvectorsolution-3-1-1-1"><span class="process-math">\(\begin{bmatrix}
-4 \\
-3
-\end{bmatrix}\)</span></div></li>
-<li data-component="feedback" id="rs-mcqevalvectorsolution_opt_a"><div class="para" id="mcqevalvectorsolution-3-1-2-1">Correct. Differentiate each component: <span class="process-math">\(\frac{d}{dt}(t^2)=2t\)</span> and <span class="process-math">\(\frac{d}{dt}(3t)=3\text{.}\)</span> Then evaluate at <span class="process-math">\(t=2\)</span> to get <span class="process-math">\(2(2)=4\)</span> and <span class="process-math">\(3\text{.}\)</span>
-</div></li>
-<li data-component="answer" id="rs-mcqevalvectorsolution_opt_b"><div class="para" id="mcqevalvectorsolution-3-2-1-1"><span class="process-math">\(\begin{bmatrix}
-2 \\
-6
-\end{bmatrix}\)</span></div></li>
-<li data-component="feedback" id="rs-mcqevalvectorsolution_opt_b"><div class="para" id="mcqevalvectorsolution-3-2-2-1">No. This evaluates <span class="process-math">\(\vec{x}(2)\text{,}\)</span> not its derivative.</div></li>
-<li data-component="answer" id="rs-mcqevalvectorsolution_opt_c"><div class="para" id="mcqevalvectorsolution-3-3-1-1"><span class="process-math">\(\begin{bmatrix}
-1 \\
-3
-\end{bmatrix}\)</span></div></li>
-<li data-component="feedback" id="rs-mcqevalvectorsolution_opt_c"><div class="para" id="mcqevalvectorsolution-3-3-2-1">No. The first component derivative was computed incorrectly.</div></li>
-</ul>
-</div></div>
-<div class="autopermalink" data-description="Exercise 4: Evaluating a Vector-Valued Function"><a href="#mcqevalvectorsolution" title="Copy heading and permalink for Exercise 4: Evaluating a Vector-Valued Function" aria-label="Copy heading and permalink for Exercise 4: Evaluating a Vector-Valued Function">🔗</a></div></article><article class="exercise exercise-like" id="mcqchecksuperpositioncomputation"><h5 class="heading">
-<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Checking a Linear Combination of Solutions.</span>
-</h5>
-<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
-<div class="exercise-statement"><div class="para" id="mcqchecksuperpositioncomputation-2-1">Suppose <span class="process-math">\(\vec{x}_1(t) =
-\begin{bmatrix}
-e^{t} \\
-0
+2 \amp 0 \\
+0 \amp -1
 \end{bmatrix},
-\vec{x}_2(t) =
-\begin{bmatrix}
-0 \\
-e^{2t}
-\end{bmatrix},\)</span> are solutions to a homogeneous linear system <span class="process-math">\(\vec{x}' = P\vec{x}\text{.}\)</span> Compute <span class="process-math">\(\vec{x}(t) = 3\vec{x}_1(t) + 2\vec{x}_2(t).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcqchecksuperpositioncomputation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcqchecksuperpositioncomputation" data-multipleanswers="false" data-random="">
-<li data-component="answer" id="rs-mcqchecksuperpositioncomputation_opt_a" data-correct=""><div class="para" id="mcqchecksuperpositioncomputation-3-1-1-1"><span class="process-math">\(\vec{x}(t) =
-\begin{bmatrix}
-3e^{t} \\
-2e^{2t}
-\end{bmatrix}\)</span></div></li>
-<li data-component="feedback" id="rs-mcqchecksuperpositioncomputation_opt_a"><div class="para" id="mcqchecksuperpositioncomputation-3-1-2-1">Correct. Multiply each vector by its scalar and add component‑wise: <span class="process-math">\(3e^{t} + 0 = 3e^{t}\)</span> and <span class="process-math">\(0 + 2e^{2t} = 2e^{2t}\text{.}\)</span> This also demonstrates the superposition principle.</div></li>
-<li data-component="answer" id="rs-mcqchecksuperpositioncomputation_opt_b"><div class="para" id="mcqchecksuperpositioncomputation-3-2-1-1"><span class="process-math">\(\vec{x}(t) =
+\vec{f}(t) =
 \begin{bmatrix}
 e^{t} \\
-e^{2t}
-\end{bmatrix}\)</span></div></li>
-<li data-component="feedback" id="rs-mcqchecksuperpositioncomputation_opt_b"><div class="para" id="mcqchecksuperpositioncomputation-3-2-2-1">No. This ignores the coefficients 3 and 2 in the linear combination.</div></li>
-<li data-component="answer" id="rs-mcqchecksuperpositioncomputation_opt_c"><div class="para" id="mcqchecksuperpositioncomputation-3-3-1-1"><span class="process-math">\(\vec{x}(t) =
+1
+\end{bmatrix}.\)</span> Which expression correctly represents the integrand <span class="process-math">\(e^{(t-s)A}\vec{f}(s)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcq-nonhomog-diagonal-case-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcq-nonhomog-diagonal-case" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcq-nonhomog-diagonal-case_opt_a" data-correct=""><div class="para" id="mcq-nonhomog-diagonal-case-3-1-1-1"><span class="process-math">\(\begin{bmatrix}
+e^{2(t-s)} \amp 0 \\
+0 \amp e^{-(t-s)}
+\end{bmatrix}
 \begin{bmatrix}
-5e^{t} \\
-0
+e^{s} \\[3pt]
+1
 \end{bmatrix}\)</span></div></li>
-<li data-component="feedback" id="rs-mcqchecksuperpositioncomputation_opt_c"><div class="para" id="mcqchecksuperpositioncomputation-3-3-2-1">Incorrect. The second component should include <span class="process-math">\(2e^{2t}\text{.}\)</span>
+<li data-component="feedback" id="rs-mcq-nonhomog-diagonal-case_opt_a"><div class="para" id="mcq-nonhomog-diagonal-case-3-1-2-1">Correct. For diagonal <span class="process-math">\(A\text{,}\)</span> the exponential is diagonal, and the integrand is a product of this exponential and <span class="process-math">\(\vec{f}(s)\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-diagonal-case_opt_b"><div class="para" id="mcq-nonhomog-diagonal-case-3-2-1-1"><span class="process-math">\(\begin{bmatrix} e^{2t} \\ e^{-t} \end{bmatrix}\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-diagonal-case_opt_b"><div class="para" id="mcq-nonhomog-diagonal-case-3-2-2-1">No—this ignores the dependence on <span class="process-math">\(s\)</span> and the forcing vector.</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-diagonal-case_opt_c"><div class="para" id="mcq-nonhomog-diagonal-case-3-3-1-1"><span class="process-math">\(e^{tA}\vec{f}(t)\)</span></div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-diagonal-case_opt_c"><div class="para" id="mcq-nonhomog-diagonal-case-3-3-2-1">No—the integral requires <span class="process-math">\(e^{(t-s)A}\vec{f}(s)\text{,}\)</span> not evaluation at <span class="process-math">\(t\text{.}\)</span>
 </div></li>
 </ul>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5: Checking a Linear Combination of Solutions"><a href="#mcqchecksuperpositioncomputation" title="Copy heading and permalink for Exercise 5: Checking a Linear Combination of Solutions" aria-label="Copy heading and permalink for Exercise 5: Checking a Linear Combination of Solutions">🔗</a></div></article><article class="exercise exercise-like" id="linsysopen1"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="linsysopen1-1-1">Consider the system <span class="process-math">\(\vec{x}' =
+<div class="autopermalink" data-description="Exercise 4: Simple Computation in the Diagonal Case"><a href="#mcq-nonhomog-diagonal-case" title="Copy heading and permalink for Exercise 4: Simple Computation in the Diagonal Case" aria-label="Copy heading and permalink for Exercise 4: Simple Computation in the Diagonal Case">🔗</a></div></article><article class="exercise exercise-like" id="mcq-nonhomog-initial-value"><h5 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving an IVP Conceptually.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcq-nonhomog-initial-value-2-1">To solve the initial value problem <span class="process-math">\(\vec{x}' = A\vec{x} + \vec{f}(t), 
+\vec{x}(0) = \vec{b},\)</span> which of the following steps is correct?<div class="autopermalink" data-description="Paragraph"><a href="#mcq-nonhomog-initial-value-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcq-nonhomog-initial-value" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcq-nonhomog-initial-value_opt_a" data-correct=""><div class="para" id="mcq-nonhomog-initial-value-3-1-1-1">Compute <span class="process-math">\(\vec{x}(t) = e^{tA}\vec{b} + \int_0^t e^{(t-s)A}\vec{f}(s)\,ds\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-initial-value_opt_a"><div class="para" id="mcq-nonhomog-initial-value-3-1-2-1">Correct. This is precisely the initial‑value formula.</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-initial-value_opt_b"><div class="para" id="mcq-nonhomog-initial-value-3-2-1-1">Solve only the homogeneous system and ignore <span class="process-math">\(\vec{f}(t)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-initial-value_opt_b"><div class="para" id="mcq-nonhomog-initial-value-3-2-2-1">No—this omits the contribution of the forcing term.</div></li>
+<li data-component="answer" id="rs-mcq-nonhomog-initial-value_opt_c"><div class="para" id="mcq-nonhomog-initial-value-3-3-1-1">Integrate <span class="process-math">\(\vec{f}(t)\)</span> alone and multiply by <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcq-nonhomog-initial-value_opt_c"><div class="para" id="mcq-nonhomog-initial-value-3-3-2-1">No—this does not account for the system dynamics.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 5: Solving an IVP Conceptually"><a href="#mcq-nonhomog-initial-value" title="Copy heading and permalink for Exercise 5: Solving an IVP Conceptually" aria-label="Copy heading and permalink for Exercise 5: Solving an IVP Conceptually">🔗</a></div></article><article class="exercise exercise-like" id="nonhomog-open-1"><h5 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving a Nonhomogeneous System with Diagonal A.</span>
+</h5>
+<div class="para" id="nonhomog-open-1-2-1">Consider the system <span class="process-math">\(\vec{x}' =
 \begin{bmatrix}
-2 \amp 1 \\
-0 \amp 3
-\end{bmatrix} \vec{x}.\)</span> Suppose two candidate solutions are <span class="process-math">\(\vec{x}_1(t) =
+2 \amp 0 \\
+0 \amp -1
+\end{bmatrix}
+\vec{x}
++
+\begin{bmatrix}
+e^{-t} \\
+3
+\end{bmatrix},
+\vec{x}(0) =
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}.\)</span> Use the variation-of-parameters formula to find an explicit expression for <span class="process-math">\(\vec{x}(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="nonhomog-open-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="nonhomog-open-1-3-1">The solution of <span class="process-math">\(\vec{x}' = A\vec{x} + \vec{f}(t)\)</span> with <span class="process-math">\(\vec{x}(0)=\vec{b}\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-1-3-2">
+\begin{equation*}
+\vec{x}(t)
+=
+e^{tA} \vec{b}
++
+\int_0^t e^{(t-s)A} \vec{f}(s)\,ds.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-1-3-3">For the diagonal matrix <span class="process-math">\(A\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-1-3-4">
+\begin{equation*}
+e^{tA}
+=
+\begin{bmatrix}
+e^{2t} \amp 0 \\
+0 \amp e^{-t}
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-1-3-5">Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-1-3-6">
+\begin{equation*}
+e^{(t-s)A}
+=
+\begin{bmatrix}
+e^{2(t-s)} \amp 0 \\
+0 \amp e^{-(t-s)}
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-1-3-7">The homogeneous part is:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-1-3-8">
+\begin{equation*}
+e^{tA}\vec{x}(0)
+=
 \begin{bmatrix}
 e^{2t} \\
 0
-\end{bmatrix},
-\vec{x}_2(t) =
-\begin{bmatrix}
-e^{3t} \\
-e^{3t}
-\end{bmatrix}.\)</span> Verify explicitly whether each vector‑valued function satisfies the differential equation.<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\end{bmatrix}.
+\end{equation*}
 </div>
-<div class="solutions"><details id="linsysopen1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="linsysopen1-2-1">For <span class="process-math">\(\vec{x}_1(t)\text{,}\)</span> compute the derivative:<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="nonhomog-open-1-3-9">The particular part is:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="linsysopen1-2-2">
+<div class="displaymath process-math" id="nonhomog-open-1-3-10">
 \begin{equation*}
-\vec{x}_1'(t) =
+\int_0^t 
 \begin{bmatrix}
-2e^{2t} \\
+e^{2(t-s)} \amp 0 \\
+0 \amp e^{-(t-s)}
+\end{bmatrix}
+\begin{bmatrix}
+e^{-s} \\
+3
+\end{bmatrix}
+ds
+=
+\int_0^t
+\begin{bmatrix}
+e^{2t - 3s} \\
+3 e^{-(t-s)}
+\end{bmatrix} ds.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-1-3-11">Compute the integrals:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-1-3-12">
+\begin{equation*}
+\int_0^t e^{2t - 3s}\,ds
+= e^{2t}\int_0^t e^{-3s}\,ds
+= e^{2t} \frac{1 - e^{-3t}}{3},
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="nonhomog-open-1-3-13">
+\begin{equation*}
+\int_0^t 3e^{-(t-s)}\,ds
+= 3e^{-t} \int_0^t e^{s}\,ds
+= 3e^{-t}(e^{t}-1)
+= 3(1 - e^{-t}).
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-1-3-14">Putting everything together:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-1-3-15">
+\begin{equation*}
+\vec{x}(t)
+=
+\begin{bmatrix}
+e^{2t} \\
 0
+\end{bmatrix}
++
+\begin{bmatrix}
+\tfrac{1}{3} e^{2t}(1 - e^{-3t}) \\
+3(1-e^{-t})
 \end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para" id="linsysopen1-2-3">Now compute <span class="process-math">\(A \vec{x}_1(t) =
-\begin{bmatrix}
-2 \amp 1 \\
-0 \amp 3
-\end{bmatrix}
-\begin{bmatrix}
-e^{2t} \\ 0
-\end{bmatrix}
-=
-\begin{bmatrix}
-2e^{2t} \\ 0
-\end{bmatrix}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="nonhomog-open-1-3-16">Hence the solution is<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-1-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linsysopen1-2-4">Since <span class="process-math">\(\vec{x}_1'(t) = A\vec{x}_1(t)\text{,}\)</span> the first function is indeed a solution of the system. This matches how we define a solution: a vector‑valued function that satisfies the matrix equation <span class="process-math">\(\vec{x}' = P\vec{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="linsysopen1-2-6">For <span class="process-math">\(\vec{x}_2(t)\text{,}\)</span> compute the derivative:<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="linsysopen1-2-7">
+<div class="displaymath process-math" id="nonhomog-open-1-3-17">
 \begin{equation*}
-\vec{x}_2'(t) =
+\vec{x}(t)
+=
 \begin{bmatrix}
-3e^{3t} \\
-3e^{3t}
+e^{2t} + \tfrac{1}{3}(e^{2t} - e^{-t}) \\
+3 - 3e^{-t}
 \end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para" id="linsysopen1-2-8">Now compute <span class="process-math">\(A\vec{x}_2(t) =
-\begin{bmatrix}
-2 \amp 1 \\
-0 \amp 3
-\end{bmatrix}
-\begin{bmatrix}
-e^{3t} \\ e^{3t}
-\end{bmatrix}
-=
-\begin{bmatrix}
-3e^{3t} \\ 3e^{3t}
-\end{bmatrix}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="linsysopen1-2-9">Again we have <span class="process-math">\(\vec{x}_2'(t) = A\vec{x}_2(t)\text{,}\)</span> so the second function also satisfies the system.<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="linsysopen1-2-10">Both <span class="process-math">\(\vec{x}_1\)</span> and <span class="process-math">\(\vec{x}_2\)</span> are valid solutions of this homogeneous linear system.<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen1-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 6.1"><a href="#linsysopen1-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#nonhomog-open-1-3" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Exercise 6"><a href="#linsysopen1" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="linsysopen2"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="linsysopen2-1-1">We define linear independence for vector‑valued functions <span class="process-math">\(\vec{x}_1, \vec{x}_2\)</span> using the condition <span class="process-math">\(c_1\vec{x}_1(t) + c_2\vec{x}_2(t) = \vec{0}\)</span> for all <span class="process-math">\(t\text{.}\)</span> Consider the functions <span class="process-math">\(\vec{x}_1(t) =
+<div class="autopermalink" data-description="Exercise 6: Solving a Nonhomogeneous System with Diagonal A"><a href="#nonhomog-open-1" title="Copy heading and permalink for Exercise 6: Solving a Nonhomogeneous System with Diagonal A" aria-label="Copy heading and permalink for Exercise 6: Solving a Nonhomogeneous System with Diagonal A">🔗</a></div></article><article class="exercise exercise-like" id="nonhomog-open-2"><h5 class="heading">
+<span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constant Forcing with Triangular Matrix.</span>
+</h5>
+<div class="para" id="nonhomog-open-2-2-1">Solve the system <span class="process-math">\(\vec{x}' =
 \begin{bmatrix}
-t \\ 1
+1 \amp 1 \\
+0 \amp 1
+\end{bmatrix}\vec{x}
++
+\begin{bmatrix}
+0 \\
+e^{t}
 \end{bmatrix},
-\vec{x}_2(t) =
+\vec{x}(0) =
 \begin{bmatrix}
-2t \\ 2
-\end{bmatrix}.\)</span> Determine whether these functions are linearly independent.<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+2 \\
+-1
+\end{bmatrix}.\)</span> Use variation of parameters; do <em class="emphasis">not</em> use undetermined coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="linsysopen2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="linsysopen2-2-1">We test for constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> such that<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="nonhomog-open-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="nonhomog-open-2-3-1">The matrix exponential for an upper triangular matrix with repeated eigenvalue <span class="process-math">\(1\)</span> is:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="linsysopen2-2-2">
+<div class="displaymath process-math" id="nonhomog-open-2-3-2">
 \begin{equation*}
-c_1 \vec{x}_1(t) + c_2 \vec{x}_2(t)
+e^{tA}
 =
+e^{t}
 \begin{bmatrix}
-c_1 t + 2c_2 t \\
-c_1 + 2c_2
-\end{bmatrix}
-=
-\vec{0}
+1 \amp t \\
+0 \amp 1
+\end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para" id="linsysopen2-2-3">The vector equation must hold for all <span class="process-math">\(t\text{.}\)</span> Equating components:<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="nonhomog-open-2-3-3">Consider the formula<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="linsysopen2-2-4">
-\begin{align*}
-(c_1 + 2c_2)t \amp = 0, \\
-c_1 + 2c_2 \amp = 0. 
-\end{align*}
+<div class="displaymath process-math" id="nonhomog-open-2-3-4">
+\begin{equation*}
+\vec{x}(t)
+=
+e^{tA}\vec{x}(0)
++
+\int_0^t e^{(t-s)A}\vec{f}(s)\,ds.
+\end{equation*}
 </div>
-<div class="para" id="linsysopen2-2-5">The second equation already forces <span class="process-math">\(c_1 + 2c_2 = 0\text{.}\)</span> The first equation gives the same condition (because it must hold for all <span class="process-math">\(t\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="nonhomog-open-2-3-5">Compute the homogeneous part:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linsysopen2-2-6">Thus the solutions satisfy <span class="process-math">\(c_1 = -2c_2\text{,}\)</span> giving a one‑parameter family of nontrivial combinations that equal the zero vector. Therefore, <span class="process-math">\(\vec{x}_1\)</span> and <span class="process-math">\(\vec{x}_2\)</span> are <em class="emphasis">linearly dependent</em>.<div class="autopermalink" data-description="Paragraph"><a href="#linsysopen2-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="displaymath process-math" id="nonhomog-open-2-3-6">
+\begin{equation*}
+e^{tA}\vec{x}(0)
+=
+e^{t}
+\begin{bmatrix}
+1 \amp t \\
+0 \amp 1
+\end{bmatrix}
+\begin{bmatrix}
+2 \\ -1
+\end{bmatrix}
+=
+e^{t}
+\begin{bmatrix}
+2 - t \\ -1
+\end{bmatrix}.
+\end{equation*}
 </div>
-<div class="para" id="linsysopen2-2-7">This matches the section’s definition: a set is dependent if a nontrivial linear combination yields <span class="process-math">\(\vec{0}\)</span> for all <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#linsysopen2-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="nonhomog-open-2-3-7">Next compute the integrand:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 7.1"><a href="#linsysopen2-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+<div class="displaymath process-math" id="nonhomog-open-2-3-8">
+\begin{equation*}
+e^{(t-s)A}\vec{f}(s)
+=
+e^{t-s}
+\begin{bmatrix}
+1 \amp (t-s) \\
+0 \amp 1
+\end{bmatrix}
+\begin{bmatrix}
+0 \\ e^{s}
+\end{bmatrix}
+=
+e^{t-s}
+\begin{bmatrix}
+(t-s)e^{s} \\
+e^{s}
+\end{bmatrix}
+=
+\begin{bmatrix}
+(t-s)e^{t} \\
+e^{t}
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-2-3-9">Integrate from <span class="process-math">\(0\)</span> to <span class="process-math">\(t\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-2-3-10">
+\begin{equation*}
+\int_0^t (t-s)e^{t}\,ds
+= e^{t}\int_0^t (t-s)\,ds
+= e^{t}\left(\tfrac12 t^2\right),
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="nonhomog-open-2-3-11">
+\begin{equation*}
+\int_0^t e^{t}\,ds
+= e^{t} t.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-2-3-12">Thus the particular solution is:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-2-3-13">
+\begin{equation*}
+\begin{bmatrix}
+\tfrac12 t^2 e^{t} \\
+t e^{t}
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-2-3-14">Combining homogeneous and particular parts:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-2-3-15">
+\begin{equation*}
+\vec{x}(t)
+=
+e^{t}
+\begin{bmatrix}
+2 - t \\
+-1
+\end{bmatrix}
++
+\begin{bmatrix}
+\tfrac12 t^2 e^{t} \\
+t e^{t}
+\end{bmatrix}
+=
+\begin{bmatrix}
+(2 - t + \tfrac12 t^2)e^{t} \\
+(-1 + t)e^{t}
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#nonhomog-open-2-3" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Exercise 7"><a href="#linsysopen2" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Exercises"><a href="#sec-Toprepareforclass53-4" title="Copy heading and permalink for Exercises: Exercises" aria-label="Copy heading and permalink for Exercises: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section: Learn!"><a href="#sec-Toprepareforclass53" title="Copy heading and permalink for Section: Learn!" aria-label="Copy heading and permalink for Section: Learn!">🔗</a></div></section><section class="section" id="sec-Advancedlearningobjectives53"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Exercise 7: Constant Forcing with Triangular Matrix"><a href="#nonhomog-open-2" title="Copy heading and permalink for Exercise 7: Constant Forcing with Triangular Matrix" aria-label="Copy heading and permalink for Exercise 7: Constant Forcing with Triangular Matrix">🔗</a></div></article><article class="exercise exercise-like" id="nonhomog-open-3"><h5 class="heading">
+<span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpreting the Forcing Term Through the Matrix Exponential.</span>
+</h5>
+<div class="para" id="nonhomog-open-3-2-1">Consider the nonhomogeneous system <span class="process-math">\(\vec{x}' = A\vec{x} + \vec{f}(t),
+A =
+\begin{bmatrix}
+0 \amp -1 \\
+1 \amp 0
+\end{bmatrix},\)</span> where <span class="process-math">\(\vec{f}(t) = \begin{bmatrix} 0 \\ \cos t \end{bmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="nonhomog-open-3-2-2">
+<li id="nonhomog-open-3-2-2-1">
+<div class="para" id="nonhomog-open-3-2-2-1-1">Describe qualitatively how the forcing term influences the motion using the matrix exponential <span class="process-math">\(e^{(t-s)A}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-3-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.a"><a href="#nonhomog-open-3-2-2-1" title="Copy heading and permalink for Item 8.a" aria-label="Copy heading and permalink for Item 8.a">🔗</a></div>
+</li>
+<li id="nonhomog-open-3-2-2-2">
+<div class="para" id="nonhomog-open-3-2-2-2-1">Compute <span class="process-math">\(e^{tA}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-3-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.b"><a href="#nonhomog-open-3-2-2-2" title="Copy heading and permalink for Item 8.b" aria-label="Copy heading and permalink for Item 8.b">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="nonhomog-open-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="nonhomog-open-3-3-1">(a) The forcing enters through the integral<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-3-3-2">
+\begin{equation*}
+\int_0^t e^{(t-s)A}\vec{f}(s)\,ds,
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-3-3-3">where <span class="process-math">\(e^{(t-s)A}\)</span> “propagates” the contribution of <span class="process-math">\(\vec{f}(s)\)</span> forward from time <span class="process-math">\(s\)</span> to <span class="process-math">\(t\text{.}\)</span> Since <span class="process-math">\(A\)</span> is a rotation matrix, <span class="process-math">\(e^{(t-s)A}\)</span> is a rotation by <span class="process-math">\(t-s\text{.}\)</span> Thus the forcing term <span class="process-math">\(\vec{f}(s)\)</span> (a vertical oscillation) gets rotated and accumulated over time. The net effect is that the system experiences a continuously rotating contribution from <span class="process-math">\(\cos s\text{,}\)</span> producing a driven rotational motion.<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="nonhomog-open-3-3-4">(b) Because <span class="process-math">\(A\)</span> represents a 90-degree rotation, its exponential is the usual rotation matrix:<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="nonhomog-open-3-3-5">
+\begin{equation*}
+e^{tA}
+=
+\begin{bmatrix}
+\cos t \amp -\sin t \\
+\sin t \amp \cos t
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para" id="nonhomog-open-3-3-6">This follows from the Taylor series expansion and is used directly inside the nonhomogeneous integral.<div class="autopermalink" data-description="Paragraph"><a href="#nonhomog-open-3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#nonhomog-open-3-3" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8: Interpreting the Forcing Term Through the Matrix Exponential"><a href="#nonhomog-open-3" title="Copy heading and permalink for Exercise 8: Interpreting the Forcing Term Through the Matrix Exponential" aria-label="Copy heading and permalink for Exercise 8: Interpreting the Forcing Term Through the Matrix Exponential">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Exercises"><a href="#sec-Toprepareforclass59-4" title="Copy heading and permalink for Exercises: Exercises" aria-label="Copy heading and permalink for Exercises: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section: Learn!"><a href="#sec-Toprepareforclass59" title="Copy heading and permalink for Section: Learn!" aria-label="Copy heading and permalink for Section: Learn!">🔗</a></div></section><section class="section" id="sec-Advancedlearningobjectives59"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Advanced learning objectives</span>
 </h3>
-<div class="para" id="sec-Advancedlearningobjectives53-2">In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives53-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-Advancedlearningobjectives59-2">In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives59-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="sec-Advancedlearningobjectives53-3">
-<li id="sec-Advancedlearningobjectives53-3-1">
-<div class="para" id="sec-Advancedlearningobjectives53-3-1-1">Rewrite a system of first-order linear ODEs in vector–matrix form <span class="process-math">\(\vec{x}' = A \vec{x}\)</span> and interpret the meaning of each component.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives53-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="sec-Advancedlearningobjectives59-3">
+<li id="sec-Advancedlearningobjectives59-3-1">
+<div class="para" id="sec-Advancedlearningobjectives59-3-1-1">Compute particular solutions by evaluating <span class="process-math">\(\displaystyle \int_0^t e^{(t-s)A}\vec{f}(s)\,ds\text{,}\)</span> including cases where <span class="process-math">\(\vec{f}(t)\)</span> is exponential, polynomial, or sinusoidal.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives59-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives53-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives59-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Advancedlearningobjectives53-3-2">
-<div class="para" id="sec-Advancedlearningobjectives53-3-2-1">Determine whether vector‑valued functions <span class="process-math">\(\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_n\)</span> are linearly independent by checking whether a relation <span class="process-math">\(c_1\vec{x}_1 + \cdots + c_n\vec{x}_n = \vec{0}\)</span> holds only when all constants vanish.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives53-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Advancedlearningobjectives59-3-2">
+<div class="para" id="sec-Advancedlearningobjectives59-3-2-1">Use properties of the matrix exponential (e.g., behavior under commuting matrices, simplifications for triangular or diagonalizable matrices) to streamline the computation of <span class="process-math">\(e^{(t-s)A}\)</span> inside the variation‑of‑parameters integral.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives59-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives53-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives59-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-Advancedlearningobjectives53-3-3">
-<div class="para" id="sec-Advancedlearningobjectives53-3-3-1">
-<div class="para" id="sec-Advancedlearningobjectives53-3-3-1-1">Express any solution of an <span class="process-math">\(n \times n\)</span> homogeneous linear system as a linear combination of <span class="process-math">\(n\)</span> independent solutions, when such a fundamental set exists.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives53-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-Advancedlearningobjectives59-3-3">
+<div class="para" id="sec-Advancedlearningobjectives59-3-3-1">Interpret the integral formula as a matrix‑valued convolution that “accumulates” the forcing term <span class="process-math">\(\vec{f}(t)\)</span> over time, explaining how the effect of forcing is propagated forward through the dynamics defined by <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives59-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives53-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives53-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives59-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Section: Advanced learning objectives"><a href="#sec-Advancedlearningobjectives53" title="Copy heading and permalink for Section: Advanced learning objectives" aria-label="Copy heading and permalink for Section: Advanced learning objectives">🔗</a></div></section><div class="autopermalink" data-description="Handout: Daily Prep 5.3 - Linear Systems of ODEs"><a href="#ch-Textbook-24" title="Copy heading and permalink for Handout: Daily Prep 5.3 - Linear Systems of ODEs" aria-label="Copy heading and permalink for Handout: Daily Prep 5.3 - Linear Systems of ODEs">🔗</a></div></section>
+<div class="autopermalink" data-description="Section: Advanced learning objectives"><a href="#sec-Advancedlearningobjectives59" title="Copy heading and permalink for Section: Advanced learning objectives" aria-label="Copy heading and permalink for Section: Advanced learning objectives">🔗</a></div></section><div class="autopermalink" data-description="Handout: Daily Prep 5.9 - Nonhomogeneous Systems"><a href="#ch-Textbook-30" title="Copy heading and permalink for Handout: Daily Prep 5.9 - Nonhomogeneous Systems" aria-label="Copy heading and permalink for Handout: Daily Prep 5.9 - Nonhomogeneous Systems">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-Textbook-23.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-Textbook-25.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-Textbook-29.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
