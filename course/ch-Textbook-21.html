@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Daily Prep 4.4 - Subspaces, Dimension, and the Kernel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Equations with Linear Algebra">
+<meta property="book:author" content="Dale Buske">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.16';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.0f480e95eedd3cd4.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.75d8d8257df1449f.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://drbuske.github.io/Math327"><img src="external/SCSU_StC_Pri_DkBlkBG.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Differential Equations with Linear Algebra</span></a></h1>
+<p class="byline">Dale Buske</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Textbook-20.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Textbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\N}{\mathbb N}
+  \newcommand{\Z}{\mathbb Z}
+  \newcommand{\Q}{\mathbb Q}
+  \newcommand{\R}{\mathbb R}
+
+  \newcommand{\avec}{{\mathbf a}}
+  \newcommand{\bvec}{{\mathbf b}}
+  \newcommand{\cvec}{{\mathbf c}}
+  \newcommand{\dvec}{{\mathbf d}}
+  \newcommand{\dtil}{\widetilde{\mathbf d}}
+  \newcommand{\evec}{{\mathbf e}}
+  \newcommand{\fvec}{{\mathbf f}}
+  \newcommand{\nvec}{{\mathbf n}}
+  \newcommand{\pvec}{{\mathbf p}}
+  \newcommand{\qvec}{{\mathbf q}}
+  \newcommand{\svec}{{\mathbf s}}
+  \newcommand{\tvec}{{\mathbf t}}
+  \newcommand{\uvec}{{\mathbf u}}
+  \newcommand{\vvec}{{\mathbf v}}
+  \newcommand{\wvec}{{\mathbf w}}
+  \newcommand{\xvec}{{\mathbf x}}
+  \newcommand{\yvec}{{\mathbf y}}
+  \newcommand{\zvec}{{\mathbf z}}
+  \newcommand{\rvec}{{\mathbf r}}
+  \newcommand{\mvec}{{\mathbf m}}
+  \newcommand{\zerovec}{{\mathbf 0}}
+  \newcommand{\onevec}{{\mathbf 1}}
+  \newcommand{\real}{{\mathbb R}}
+  \newcommand{\twovec}[2]{\left[\begin{array}{r}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\ctwovec}[2]{\left[\begin{array}{c}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\threevec}[3]{\left[\begin{array}{r}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\cthreevec}[3]{\left[\begin{array}{c}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\fourvec}[4]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\cfourvec}[4]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\fivevec}[5]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\mattwo}[4]{\left[\begin{array}{rr}#1 \amp #2 \\ #3 \amp #4 \\ \end{array}\right]}
+  \newcommand{\laspan}[1]{\text{Span}\left\{#1\right\}}
+  \newcommand{\bcal}{{\cal B}}
+  \newcommand{\ccal}{{\cal C}}
+  \newcommand{\scal}{{\cal S}}
+  \newcommand{\wcal}{{\cal W}}
+  \newcommand{\ecal}{{\cal E}}
+  \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
+  \newcommand{\gray}[1]{\color{gray}{#1}}
+  \newcommand{\lgray}[1]{\color{lightgray}{#1}}
+  \newcommand{\rank}{\operatorname{rank}}
+  \newcommand{\row}{\text{Row}}
+  \newcommand{\col}{\text{Col}}
+  \renewcommand{\row}{\text{Row}}
+  \newcommand{\nul}{\text{Nul}}
+  \newcommand{\var}{\text{Var}}
+  \newcommand{\corr}{\text{corr}}
+  \newcommand{\len}[1]{\left|#1\right|}
+  \newcommand{\bbar}{\overline{\bvec}}
+  \newcommand{\bhat}{\widehat{\bvec}}
+  \newcommand{\bperp}{\bvec^\perp}
+  \newcommand{\xhat}{\widehat{\xvec}}
+  \newcommand{\vhat}{\widehat{\vvec}}
+  \newcommand{\uhat}{\widehat{\uvec}}
+  \newcommand{\what}{\widehat{\wvec}}
+  \newcommand{\Sighat}{\widehat{\Sigma}}
+  \newcommand{\basis}[2]{#1_1,#1_2,\ldots,#1_{#2}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-Textbook.html" class="internal"><span class="title">Daily Prep</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-2.html" class="internal"><span class="title">Daily Prep 0.2 - What are Differential Equations?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#ch-Textbook-2-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#ch-Textbook-2-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#sec-Toprepareforclass52" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-2.html#sec-Advancedlearningobjectives52" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-3.html" class="internal"><span class="title">Daily Prep 1.1 - Integrals as Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#ch-Textbook-3-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#ch-Textbook-3-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#sec-Toprepareforclass11" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-3.html#sec-Advancedlearningobjectives11" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-4.html" class="internal"><span class="title">Daily Prep 1.2 - Slope Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#ch-Textbook-4-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#ch-Textbook-4-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#sec-Toprepareforclass12" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-4.html#sec-Advancedlearningobjectives12" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-5.html" class="internal"><span class="title">Daily Prep 1.3 - Separable Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#ch-Textbook-5-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#ch-Textbook-5-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#sec-Toprepareforclass13" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-5.html#sec-Advancedlearningobjectives13" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-6.html" class="internal"><span class="title">Daily Prep 1.4 - Linear Equations and the Integrating Factor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#ch-Textbook-6-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#ch-Textbook-6-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#sec-Toprepareforclass14" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-6.html#sec-Advancedlearningobjectives14" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-7.html" class="internal"><span class="title">Daily Prep 1.6 - Autonomous Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#ch-Textbook-7-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#ch-Textbook-7-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#sec-Toprepareforclass16" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-7.html#sec-Advancedlearningobjectives16" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-8.html" class="internal"><span class="title">Daily Prep 1.7 - Numerical Methods: Euler’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#ch-Textbook-8-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#ch-Textbook-8-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#sec-Toprepareforclass17" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-8.html#sec-Advancedlearningobjectives17" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-9.html" class="internal"><span class="title">Daily Prep 2.1 - Second Order Linear ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#ch-Textbook-9-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#ch-Textbook-9-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#sec-Toprepareforclass21" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-9.html#sec-Advancedlearningobjectives21" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-10.html" class="internal"><span class="title">Daily Prep 2.2 - Constant Coefficient Second Order ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#ch-Textbook-10-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#ch-Textbook-10-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#sec-Toprepareforclass22" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-10.html#sec-Advancedlearningobjectives22" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-11.html" class="internal"><span class="title">Daily Prep 2.3 - Higher Order Linear ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#ch-Textbook-11-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#ch-Textbook-11-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#sec-Toprepareforclass23" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-11.html#sec-Advancedlearningobjectives23" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-12.html" class="internal"><span class="title">Daily Prep 2.4 - Mechanical Vibrations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#ch-Textbook-12-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#ch-Textbook-12-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#sec-Toprepareforclass24" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-12.html#sec-Advancedlearningobjectives24" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-13.html" class="internal"><span class="title">Daily Prep 2.5 - Nonhomogeneous Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#ch-Textbook-13-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#ch-Textbook-13-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#sec-Toprepareforclass25" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-13.html#sec-Advancedlearningobjectives25" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-14.html" class="internal"><span class="title">Daily Prep 3.1 - The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#ch-Textbook-14-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#ch-Textbook-14-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#sec-Toprepareforclass31" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-14.html#sec-Advancedlearningobjectives31" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-15.html" class="internal"><span class="title">Daily Prep 3.2 - Transforms of Derivatives and ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#ch-Textbook-15-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#ch-Textbook-15-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#sec-Toprepareforclass32" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-15.html#sec-Advancedlearningobjectives32" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-16.html" class="internal"><span class="title">Daily Prep 3.3 - Convolution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#ch-Textbook-16-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#ch-Textbook-16-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#sec-Toprepareforclass33" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-16.html#sec-Advancedlearningobjectives33" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-17.html" class="internal"><span class="title">Daily Prep 3.4 - Dirac Delta and Impulse Response</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#ch-Textbook-17-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#ch-Textbook-17-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#sec-Toprepareforclass34" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-17.html#sec-Advancedlearningobjectives34" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-18.html" class="internal"><span class="title">Daily Prep 4.1 - Vectors, Mappings, and Matrices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#ch-Textbook-18-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#ch-Textbook-18-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#sec-Toprepareforclass41" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-18.html#sec-Advancedlearningobjectives41" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-19.html" class="internal"><span class="title">Daily Prep 4.2 - Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#ch-Textbook-19-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#ch-Textbook-19-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#sec-Toprepareforclass42" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-19.html#sec-Advancedlearningobjectives42" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="ch-Textbook-20.html" class="internal"><span class="title">Daily Prep 4.3 - Elimination</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#ch-Textbook-20-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#ch-Textbook-20-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#sec-Toprepareforclass43" class="internal"><span class="title">Learn!</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-20.html#sec-Advancedlearningobjectives43" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-handout contains-active">
+<div class="toc-title-box"><a href="ch-Textbook-21.html" class="internal"><span class="title">Daily Prep 4.4 - Subspaces, Dimension, and the Kernel</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-21.html#ch-Textbook-21-2" class="internal"><span class="title">Overview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-21.html#ch-Textbook-21-3" class="internal"><span class="title">Basic learning objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-Textbook-21.html#sec-Toprepareforclass44" class="internal"><span class="title">Learn!</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-Textbook-21.html#sec-Toprepareforclass44-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-Textbook-21.html#sec-Advancedlearningobjectives44" class="internal"><span class="title">Advanced learning objectives</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options">
+<div class="hide-option">
+<label for="hide-hint-checkbox">Hide hints</label><input type="checkbox" id="hide-hint-checkbox">
+</div>
+<div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="handout" id="ch-Textbook-21" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Daily Prep 4.4 - Subspaces, Dimension, and the Kernel</span><div class="print-links"><a href="?printpreview=ch-Textbook-21" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h2>
+<section class="section" id="ch-Textbook-21-2"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Overview</span>
+</h3>
+<div class="para" id="ch-Textbook-21-2-2">This section introduces the idea that certain collections of vectors arising in linear algebra—particularly the set of solutions to a homogeneous linear equation—form what are known as <em class="emphasis">subspaces</em> of <span class="process-math">\(\mathbb{R}^{n}\text{.}\)</span> A subspace is any subset closed under vector addition and scalar multiplication, so every linear combination of its vectors remains inside it. The notes show that familiar examples such as <span class="process-math">\(\mathbb{R}^{n}\text{,}\)</span> the zero vector alone, or sets like <span class="process-math">\(\{(a,a): a \in \mathbb{R}\}\)</span> in <span class="process-math">\(\mathbb{R}^{2}\)</span> all satisfy these properties. A subspace can always be described as the span of some set of vectors, and if that spanning set is linearly independent, it forms a <em class="emphasis">basis</em>. The number of basis vectors defines the subspace’s <em class="emphasis">dimension</em>, a quantity that is unique even though many different bases may exist. This viewpoint emphasizes that subspaces behave like smaller Euclidean spaces embedded inside higher-dimensional ones and that vectors in a <span class="process-math">\(k\)</span>‑dimensional subspace can be coordinatized using <span class="process-math">\(k\)</span> numbers once a basis is chosen.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-21-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Overview"><a href="#ch-Textbook-21-2" title="Copy heading and permalink for Section: Overview" aria-label="Copy heading and permalink for Section: Overview">🔗</a></div></section><section class="section" id="ch-Textbook-21-3"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic learning objectives</span>
+</h3>
+<div class="para" id="ch-Textbook-21-3-2">These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated <em class="emphasis">in italics</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-21-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="ch-Textbook-21-3-3">
+<li id="ch-Textbook-21-3-3-1">
+<div class="para" id="ch-Textbook-21-3-3-1-1">Define a <em class="emphasis">subspace</em> and explain the closure properties required for a subset of <span class="process-math">\(\mathbb{R}^{n}\)</span> to be a subspace.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-21-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-21-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-Textbook-21-3-3-2">
+<div class="para" id="ch-Textbook-21-3-3-2-1">Recognize simple examples of subspaces, including <span class="process-math">\(\mathbb{R}^{n}\text{,}\)</span> the zero subspace, and spans of given vectors.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-21-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-21-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-Textbook-21-3-3-3">
+<div class="para" id="ch-Textbook-21-3-3-3-1">Describe what it means for a set of vectors to form a <em class="emphasis">basis</em> of a subspace.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Textbook-21-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-Textbook-21-3-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Section: Basic learning objectives"><a href="#ch-Textbook-21-3" title="Copy heading and permalink for Section: Basic learning objectives" aria-label="Copy heading and permalink for Section: Basic learning objectives">🔗</a></div></section><section class="section" id="sec-Toprepareforclass44"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learn!</span>
+</h3>
+<div class="para" id="sec-Toprepareforclass44-2">Complete the actions listed below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="sec-Toprepareforclass44-3">
+<li id="sec-Toprepareforclass44-3-1">
+<div class="para" id="sec-Toprepareforclass44-3-1-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/rgxyxcTwvuo?si=PDREpwodrrlq0nlU" target="_blank">Subpsaces are the Natural Subsets of Linear Algebra (6:25)</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-2">
+<div class="para" id="sec-Toprepareforclass44-3-2-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/subspaces_section.html#subsection-182" target="_blank">Subsection A.4.1: Subspaces, basis, and dimension</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-3">
+<div class="para" id="sec-Toprepareforclass44-3-3-1">
+<em class="alert">Watch</em> <a class="external" href="https://youtu.be/fo9wmJ0lzh8?si=15pVn1p5GnYDit1o" target="_blank">The Dimension of a Subspace (5:10)</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-4">
+<div class="para" id="sec-Toprepareforclass44-3-4-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/RFe3dEdV5M8?si=kYo-v4EqofQmUiyK" target="_blank">The Basis of a Subspace (3:52)</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-5">
+<div class="para" id="sec-Toprepareforclass44-3-5-1">
+<em class="alert">Read</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/subspaces_section.html#subsection-183" target="_blank">Subsection A.4.2: Kernel</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-6">
+<div class="para" id="sec-Toprepareforclass44-3-6-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/YQRioQ1XUck?si=afFUeDo-cd_7V0uT" target="_blank">The Null Space and Column Space of a Matrix (10:40)</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-7">
+<div class="para" id="sec-Toprepareforclass44-3-7-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/xQeH2vrQ-5A?si=CqsPYSmeiVjqgxBu" target="_blank">Computing Dimension of Null Space and Column Space (3:26)</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-8">
+<div class="para" id="sec-Toprepareforclass44-3-8-1">(Optional) <em class="alert">Watch</em> <a class="external" href="https://youtu.be/vpl8EZwrqPk?si=8WRMnflDnC8otson" target="_blank">The Dimension Theorem (4:01)</a> by Trevor Bazett.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-9">
+<div class="para" id="sec-Toprepareforclass44-3-9-1">
+<em class="alert">Do</em> <a class="external" href="https://web.uvic.ca/~tbazett/diffyqs/subspaces_section.html#subsection-184" target="_blank">Subsection A.4.3: Exercises A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Toprepareforclass44-3-11">
+<div class="para" id="sec-Toprepareforclass44-3-11-1">
+<em class="alert">Do</em> MyOpenMath questions from this section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Toprepareforclass44-3-11" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<section class="exercises" id="sec-Toprepareforclass44-4"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="mcsubspaceplane"><h5 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Is this a subspace?</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcsubspaceplane-2-1">Consider the subset <span class="process-math">\(S=\{(x,y,z)\in\mathbb{R}^3 : x - y + z = 0\}\text{.}\)</span> Is <span class="process-math">\(S\)</span> a subspace of <span class="process-math">\(\mathbb{R}^3\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcsubspaceplane-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcsubspaceplane" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcsubspaceplane_opt_a" data-correct=""><div class="para" id="mcsubspaceplane-3-1-1-1">Yes.</div></li>
+<li data-component="feedback" id="rs-mcsubspaceplane_opt_a"><div class="para" id="mcsubspaceplane-3-1-2-1">Correct. <span class="process-math">\(S\)</span> is the solution set to the homogeneous linear equation <span class="process-math">\(x - y + z = 0\text{,}\)</span> so it is closed under all linear combinations and therefore is a subspace. (Homogeneous solution sets are kernels of linear maps.)</div></li>
+<li data-component="answer" id="rs-mcsubspaceplane_opt_b"><div class="para" id="mcsubspaceplane-3-2-1-1">No, because it is “just” a plane.</div></li>
+<li data-component="feedback" id="rs-mcsubspaceplane_opt_b"><div class="para" id="mcsubspaceplane-3-2-2-1">Not quite. Planes through the origin defined by a homogeneous linear equation are subspaces; the key property is closure under linear combinations.</div></li>
+<li data-component="answer" id="rs-mcsubspaceplane_opt_c"><div class="para" id="mcsubspaceplane-3-3-1-1">No, because it is not all of <span class="process-math">\(\mathbb{R}^3\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcsubspaceplane_opt_c"><div class="para" id="mcsubspaceplane-3-3-2-1">Subspaces need not be the whole space—they just need to contain <span class="process-math">\(\vec{0}\)</span> and be closed under addition and scalar multiplication.</div></li>
+</ul>
+</div></div>
+<div class="solutions"><details id="mcsubspaceplane-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="mcsubspaceplane-4-1">Sets defined as solutions to homogeneous linear equations are kernels of linear maps—kernels are subspaces.<div class="autopermalink" data-description="Paragraph"><a href="#mcsubspaceplane-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.1"><a href="#mcsubspaceplane-4" title="Copy heading and permalink for Hint 1.1" aria-label="Copy heading and permalink for Hint 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1: Is this a subspace?"><a href="#mcsubspaceplane" title="Copy heading and permalink for Exercise 1: Is this a subspace?" aria-label="Copy heading and permalink for Exercise 1: Is this a subspace?">🔗</a></div></article><article class="exercise exercise-like" id="mcsubspacenonhomogeneous"><h5 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Is this set a subspace?</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcsubspacenonhomogeneous-2-1">Consider the subset <span class="process-math">\(S=\{(x,y,z)\in\mathbb{R}^3 : x + 2y + 3z = 5\}.\)</span> Does <span class="process-math">\(S\)</span> form a subspace of <span class="process-math">\(\mathbb{R}^3\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#mcsubspacenonhomogeneous-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcsubspacenonhomogeneous" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcsubspacenonhomogeneous_opt_a"><div class="para" id="mcsubspacenonhomogeneous-3-1-1-1">Yes, because the defining equation is linear.</div></li>
+<li data-component="feedback" id="rs-mcsubspacenonhomogeneous_opt_a"><div class="para" id="mcsubspacenonhomogeneous-3-1-2-1">Not quite. Only <em class="emphasis">homogeneous</em> linear equations (right-hand side equal to zero) define subspaces. This plane does not pass through the origin.</div></li>
+<li data-component="answer" id="rs-mcsubspacenonhomogeneous_opt_b" data-correct=""><div class="para" id="mcsubspacenonhomogeneous-3-2-1-1">No, because the set does not contain the zero vector.</div></li>
+<li data-component="feedback" id="rs-mcsubspacenonhomogeneous_opt_b"><div class="para" id="mcsubspacenonhomogeneous-3-2-2-1">Correct. A subspace must contain <span class="process-math">\(\vec{0}\)</span> and must be closed under all linear combinations. A nonhomogeneous equation such as <span class="process-math">\(x + 2y + 3z = 5\)</span> cannot define a subspace. (The section explains that subspaces arise as solution sets to <em class="emphasis">homogeneous</em> equations—kernels.)</div></li>
+<li data-component="answer" id="rs-mcsubspacenonhomogeneous_opt_c"><div class="para" id="mcsubspacenonhomogeneous-3-3-1-1">No, because it contains infinitely many points.</div></li>
+<li data-component="feedback" id="rs-mcsubspacenonhomogeneous_opt_c"><div class="para" id="mcsubspacenonhomogeneous-3-3-2-1">Subspaces can be infinite. The issue is that this set is not closed under linear combinations.</div></li>
+<li data-component="answer" id="rs-mcsubspacenonhomogeneous_opt_d"><div class="para" id="mcsubspacenonhomogeneous-3-4-1-1">Yes, because it is a plane in <span class="process-math">\(\mathbb{R}^3\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcsubspacenonhomogeneous_opt_d"><div class="para" id="mcsubspacenonhomogeneous-3-4-2-1">Only planes through the origin are subspaces. This one is shifted and does not contain <span class="process-math">\(\vec{0}\text{.}\)</span>
+</div></li>
+</ul>
+</div></div>
+<div class="solutions"><details id="mcsubspacenonhomogeneous-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="mcsubspacenonhomogeneous-4-1">Compare with a homogeneous equation like <span class="process-math">\(x + 2y + 3z = 0\text{.}\)</span> Kernels of linear maps are always subspaces.<div class="autopermalink" data-description="Paragraph"><a href="#mcsubspacenonhomogeneous-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.1"><a href="#mcsubspacenonhomogeneous-4" title="Copy heading and permalink for Hint 2.1" aria-label="Copy heading and permalink for Hint 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2: Is this set a subspace?"><a href="#mcsubspacenonhomogeneous" title="Copy heading and permalink for Exercise 2: Is this set a subspace?" aria-label="Copy heading and permalink for Exercise 2: Is this set a subspace?">🔗</a></div></article><article class="exercise exercise-like" id="mcsubspacedimensionkernelchallenge"><h5 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dimension Reasoning with a Kernel.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcsubspacedimensionkernelchallenge-2-1">Let <span class="process-math">\(L:\mathbb{R}^{4} \to \mathbb{R}^{3}\)</span> be a linear transformation. Suppose the matrix of <span class="process-math">\(L\)</span> (in standard coordinates) has rank <span class="process-math">\(2\text{.}\)</span> Which of the following statements must be true?<div class="autopermalink" data-description="Paragraph"><a href="#mcsubspacedimensionkernelchallenge-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcsubspacedimensionkernelchallenge" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcsubspacedimensionkernelchallenge_opt_a" data-correct=""><div class="para" id="mcsubspacedimensionkernelchallenge-3-1-1-1">
+<span class="process-math">\(\ker(L)\)</span> is a <span class="process-math">\(2\)</span>‑dimensional subspace of <span class="process-math">\(\mathbb{R}^{4}\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcsubspacedimensionkernelchallenge_opt_a"><div class="para" id="mcsubspacedimensionkernelchallenge-3-1-2-1">Correct. By the Rank–Nullity theorem, <span class="process-math">\(\dim(\ker(L)) = 4 - \operatorname{rank}(L) = 4 - 2 = 2.\)</span> The section emphasizes that kernels are always subspaces and have a well‑defined dimension.</div></li>
+<li data-component="answer" id="rs-mcsubspacedimensionkernelchallenge_opt_b"><div class="para" id="mcsubspacedimensionkernelchallenge-3-2-1-1">
+<span class="process-math">\(\ker(L)\)</span> contains exactly one nonzero vector.</div></li>
+<li data-component="feedback" id="rs-mcsubspacedimensionkernelchallenge_opt_b"><div class="para" id="mcsubspacedimensionkernelchallenge-3-2-2-1">No. A <span class="process-math">\(2\)</span>‑dimensional subspace contains infinitely many nonzero vectors.</div></li>
+<li data-component="answer" id="rs-mcsubspacedimensionkernelchallenge_opt_c"><div class="para" id="mcsubspacedimensionkernelchallenge-3-3-1-1">Every vector in <span class="process-math">\(\mathbb{R}^{4}\)</span> has a unique expression as <span class="process-math">\(\vec{x}= \vec{k}+ \vec{r}\)</span> with <span class="process-math">\(\vec{k}\in\ker(L)\)</span> and <span class="process-math">\(\vec{r}=0\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcsubspacedimensionkernelchallenge_opt_c"><div class="para" id="mcsubspacedimensionkernelchallenge-3-3-2-1">No. This incorrectly suggests the range is trivial. Only the decomposition with a complementary subspace (not necessarily <span class="process-math">\(\{0\}\)</span>) is guaranteed.</div></li>
+<li data-component="answer" id="rs-mcsubspacedimensionkernelchallenge_opt_d"><div class="para" id="mcsubspacedimensionkernelchallenge-3-4-1-1">
+<span class="process-math">\(\ker(L)\)</span> must equal <span class="process-math">\(\mathbb{R}^{2}\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcsubspacedimensionkernelchallenge_opt_d"><div class="para" id="mcsubspacedimensionkernelchallenge-3-4-2-1">Incorrect. <span class="process-math">\(\ker(L)\)</span> is a <span class="process-math">\(2\)</span>‑dimensional subspace of <span class="process-math">\(\mathbb{R}^{4}\text{,}\)</span> not literally <span class="process-math">\(\mathbb{R}^{2}\text{.}\)</span> Subspaces “look like” <span class="process-math">\(\mathbb{R}^{k}\)</span> only in abstract structure, not as literal coordinate spaces.</div></li>
+</ul>
+</div></div>
+<div class="solutions"><details id="mcsubspacedimensionkernelchallenge-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="mcsubspacedimensionkernelchallenge-4-1">Use <span class="process-math">\(\dim(\ker(L)) + \operatorname{rank}(L) = 4\)</span> and recall that kernels are always subspaces.<div class="autopermalink" data-description="Paragraph"><a href="#mcsubspacedimensionkernelchallenge-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.1"><a href="#mcsubspacedimensionkernelchallenge-4" title="Copy heading and permalink for Hint 3.1" aria-label="Copy heading and permalink for Hint 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3: Dimension Reasoning with a Kernel"><a href="#mcsubspacedimensionkernelchallenge" title="Copy heading and permalink for Exercise 3: Dimension Reasoning with a Kernel" aria-label="Copy heading and permalink for Exercise 3: Dimension Reasoning with a Kernel">🔗</a></div></article><article class="exercise exercise-like" id="fibkerneldimensioneasy"><h5 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dimension of a Kernel.</span>
+</h5>
+<div class="para" id="fibkerneldimensioneasy-2-1">Suppose a linear transformation <span class="process-math">\(L:\mathbb{R}^3 \to \mathbb{R}^2\)</span> has rank <span class="process-math">\(1\text{.}\)</span> By the Rank–Nullity Theorem, the dimension of <span class="process-math">\(\ker(L)\)</span> is <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.<div class="autopermalink" data-description="Paragraph"><a href="#fibkerneldimensioneasy-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fibkerneldimensioneasy-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="fibkerneldimensioneasy-4-1">Use: <span class="process-math">\(\dim(\ker(L)) + \operatorname{rank}(L) = \text{domain dimension}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fibkerneldimensioneasy-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.1"><a href="#fibkerneldimensioneasy-4" title="Copy heading and permalink for Hint 4.1" aria-label="Copy heading and permalink for Hint 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4: Dimension of a Kernel"><a href="#fibkerneldimensioneasy" title="Copy heading and permalink for Exercise 4: Dimension of a Kernel" aria-label="Copy heading and permalink for Exercise 4: Dimension of a Kernel">🔗</a></div></article><article class="exercise exercise-like" id="mcfillblanksubspace"><h5 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subspace Check.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mcfillblanksubspace-2-1">Fill in the blank by choosing the correct statement. A set is a subspace of <span class="process-math">\(\mathbb{R}^n\)</span> if it is closed under vector addition and scalar multiplication, and it must contain <em class="emphasis">_____</em>.<div class="autopermalink" data-description="Paragraph"><a href="#mcfillblanksubspace-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mcfillblanksubspace" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-mcfillblanksubspace_opt_a" data-correct=""><div class="para" id="mcfillblanksubspace-3-1-1-1">the zero vector</div></li>
+<li data-component="feedback" id="rs-mcfillblanksubspace_opt_a"><div class="para" id="mcfillblanksubspace-3-1-2-1">Correct! A subspace must include <span class="process-math">\(\vec{0}\text{,}\)</span> because closure under scalar multiplication requires that <span class="process-math">\(0\vec{x} = \vec{0}\)</span> be in the set. This is emphasized in the subspaces section.</div></li>
+<li data-component="answer" id="rs-mcfillblanksubspace_opt_b"><div class="para" id="mcfillblanksubspace-3-2-1-1">all standard basis vectors</div></li>
+<li data-component="feedback" id="rs-mcfillblanksubspace_opt_b"><div class="para" id="mcfillblanksubspace-3-2-2-1">No. A subspace may or may not contain individual basis vectors like <span class="process-math">\(e_1\)</span> or <span class="process-math">\(e_2\text{;}\)</span> only closure properties matter.</div></li>
+<li data-component="answer" id="rs-mcfillblanksubspace_opt_c"><div class="para" id="mcfillblanksubspace-3-3-1-1">every vector of <span class="process-math">\(\mathbb{R}^n\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mcfillblanksubspace_opt_c"><div class="para" id="mcfillblanksubspace-3-3-2-1">Incorrect. That would describe the entire space, not a general subspace.</div></li>
+<li data-component="answer" id="rs-mcfillblanksubspace_opt_d"><div class="para" id="mcfillblanksubspace-3-4-1-1">all solutions to at least one linear equation</div></li>
+<li data-component="feedback" id="rs-mcfillblanksubspace_opt_d"><div class="para" id="mcfillblanksubspace-3-4-2-1">Not quite. Only <em class="emphasis">homogeneous</em> linear equations guarantee subspaces.</div></li>
+</ul>
+</div></div>
+<div class="solutions"><details id="mcfillblanksubspace-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="mcfillblanksubspace-4-1">What vector must appear when you multiply any vector in the set by zero?<div class="autopermalink" data-description="Paragraph"><a href="#mcfillblanksubspace-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.1"><a href="#mcfillblanksubspace-4" title="Copy heading and permalink for Hint 5.1" aria-label="Copy heading and permalink for Hint 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5: Subspace Check"><a href="#mcfillblanksubspace" title="Copy heading and permalink for Exercise 5: Subspace Check" aria-label="Copy heading and permalink for Exercise 5: Subspace Check">🔗</a></div></article><article class="exercise exercise-like" id="sec-Toprepareforclass44-4-7"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="sec-Toprepareforclass44-4-7-1-1">Let <span class="process-math">\(S = \{(a,a) : a \in \mathbb{R}\} \subset \mathbb{R}^{2}\text{.}\)</span> Compute two sample vectors in <span class="process-math">\(S\text{,}\)</span> add them, and check whether the sum lies in <span class="process-math">\(S\text{.}\)</span> Then multiply one vector by a scalar and check whether the result lies in <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Toprepareforclass44-4-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Toprepareforclass44-4-7-2-1">Pick two simple vectors in <span class="process-math">\(S\text{,}\)</span> for instance <span class="process-math">\((1,1)\)</span> and <span class="process-math">\((3,3)\text{.}\)</span> Their sum is <span class="process-math">\((1,1) + (3,3) = (4,4)\text{,}\)</span> which is still of the form <span class="process-math">\((a,a)\text{,}\)</span> so it lies in <span class="process-math">\(S\text{.}\)</span> Next take a scalar multiple, for example <span class="process-math">\(5(1,1) = (5,5)\text{,}\)</span> which is again of the form <span class="process-math">\((a,a)\text{,}\)</span> so it also lies in <span class="process-math">\(S\text{.}\)</span> These computations illustrate the closure properties that the section lists as defining a subspace.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#sec-Toprepareforclass44-4-7-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6"><a href="#sec-Toprepareforclass44-4-7" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="sec-Toprepareforclass44-4-8"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="sec-Toprepareforclass44-4-8-1-1">Let <span class="process-math">\(S = \{(a,a) : a \in \mathbb{R}\}\)</span> as above. Express <span class="process-math">\((a,a)\)</span> as a scalar multiple of a single vector and use this to find a basis for <span class="process-math">\(S\text{.}\)</span> Then compute the dimension of <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Toprepareforclass44-4-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Toprepareforclass44-4-8-2-1">We can rewrite any vector in <span class="process-math">\(S\)</span> as <span class="process-math">\((a,a) = a(1,1)\text{.}\)</span> Hence <span class="process-math">\(S = \operatorname{span}\{(1,1)\}\text{.}\)</span> Because <span class="process-math">\((1,1)\)</span> is nonzero, it is linearly independent, so <span class="process-math">\(\{(1,1)\}\)</span> is a basis for <span class="process-math">\(S\text{.}\)</span> A basis with one vector means <span class="process-math">\(\dim S = 1\text{,}\)</span> matching the section’s explanation that a <span class="process-math">\(k\)</span>‑dimensional subspace behaves like <span class="process-math">\(\mathbb{R}^{k}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#sec-Toprepareforclass44-4-8-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 7"><a href="#sec-Toprepareforclass44-4-8" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="sec-Toprepareforclass44-4-9"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="sec-Toprepareforclass44-4-9-1-1">Consider the linear transformation <span class="process-math">\(L : \mathbb{R}^{3} \to \mathbb{R}^{2}\)</span> defined by <span class="process-math">\(L(x,y,z) = (x + y,\; y + z).\)</span> Compute the kernel of <span class="process-math">\(L\)</span> by solving the homogeneous system <span class="process-math">\(x + y = 0\)</span> and <span class="process-math">\(y + z = 0\text{.}\)</span> Then find a basis for <span class="process-math">\(\ker(L)\)</span> and compute its dimension.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Toprepareforclass44-4-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Toprepareforclass44-4-9-2-1">Solving the system:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Toprepareforclass44-4-9-2-2">From <span class="process-math">\(x + y = 0\)</span> we get <span class="process-math">\(x = -y\text{.}\)</span> From <span class="process-math">\(y + z = 0\)</span> we get <span class="process-math">\(z = -y\text{.}\)</span> Letting <span class="process-math">\(y = t\text{,}\)</span> a free variable, we obtain <span class="process-math">\((x,y,z) = (-t,\, t,\, -t) = t(-1,1,-1).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Toprepareforclass44-4-9-2-3">Thus <span class="process-math">\(\ker(L) = \operatorname{span}\{(-1,1,-1)\}\text{.}\)</span> The basis is <span class="process-math">\(\{(-1,1,-1)\}\text{,}\)</span> and the dimension is <span class="process-math">\(\dim \ker(L) = 1\text{,}\)</span> consistent with the theoretical description that kernels are subspaces of <span class="process-math">\(\mathbb{R}^{n}\)</span> and have well-defined dimension.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-9-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#sec-Toprepareforclass44-4-9-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8"><a href="#sec-Toprepareforclass44-4-9" title="Copy heading and permalink for Exercise 8" aria-label="Copy heading and permalink for Exercise 8">🔗</a></div></article><article class="exercise exercise-like" id="sec-Toprepareforclass44-4-10"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="sec-Toprepareforclass44-4-10-1-1">Consider an arbitrary subset <span class="process-math">\(S \subset \mathbb{R}^{n}\text{.}\)</span> Students often think that a subspace must “look geometric” (a line through the origin, a plane through the origin, etc.). Provide a conceptual explanation—without checking closure conditions on any specific examples—of <em class="emphasis">why</em> requiring closure under <em class="emphasis">all</em> linear combinations (not just addition or scalar multiplication alone) is the essential feature that distinguishes subspaces from general subsets.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Toprepareforclass44-4-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Toprepareforclass44-4-10-2-1">A subspace must behave like a smaller copy of <span class="process-math">\(\mathbb{R}^{k}\)</span> living inside <span class="process-math">\(\mathbb{R}^{n}\text{,}\)</span> meaning that vectors can be combined in exactly the same ways we can combine ordinary vectors in <span class="process-math">\(\mathbb{R}^{n}\)</span>—by forming <em class="emphasis">any</em> linear combination.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Toprepareforclass44-4-10-2-2">If a subset is closed under both addition and scalar multiplication, then it is automatically closed under <em class="emphasis">all</em> linear combinations (because <span class="process-math">\(a\vec{x}+ b\vec{y}\)</span> is simply repeated use of these two operations). The section emphasizes that this “linear–combination stability” is what makes the solution set of a homogeneous linear system behave like a Euclidean space <span class="process-math">\(\mathbb{R}^{k}\)</span> and justifies calling it a subspace. Without this full closure property, the set would not support the algebraic structure required for bases, dimension, or unique coordinate representations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-10-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#sec-Toprepareforclass44-4-10-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 9"><a href="#sec-Toprepareforclass44-4-10" title="Copy heading and permalink for Exercise 9" aria-label="Copy heading and permalink for Exercise 9">🔗</a></div></article><article class="exercise exercise-like" id="sec-Toprepareforclass44-4-11"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="sec-Toprepareforclass44-4-11-1-1">The notes state that while the dimension of a subspace is unique, the basis is not. Explain conceptually—without doing any computations—<em class="emphasis">why</em> a subspace can have many different bases, but cannot have more than one dimension. Use ideas from the section to justify why different bases still span “the same amount of space.”<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Toprepareforclass44-4-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Toprepareforclass44-4-11-2-1">Every basis of a subspace <span class="process-math">\(S\)</span> has two defining features: the vectors must be linearly independent, and they must span all of <span class="process-math">\(S\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Toprepareforclass44-4-11-2-2">Many different choices of spanning vectors can achieve this job, because starting from one basis we can replace vectors with new ones obtained from linear combinations, as long as we maintain independence and still span the whole set. Therefore, many bases exist.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-11-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Toprepareforclass44-4-11-2-3">However, the <em class="emphasis">number</em> of vectors in any basis is fixed: it is the dimension of the subspace. If one basis had more vectors than another, that would contradict the meaning of “linearly independent spanning set,” since the section explains that a subspace <span class="process-math">\(S\)</span> has a unique positive integer <span class="process-math">\(k\)</span> such that every vector in <span class="process-math">\(S\)</span> can be written uniquely as a combination of <span class="process-math">\(k\)</span> independent basis vectors. This uniqueness of representation forces the dimension to be unique, even though the choice of basis is not.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-11-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.1"><a href="#sec-Toprepareforclass44-4-11-2" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 10"><a href="#sec-Toprepareforclass44-4-11" title="Copy heading and permalink for Exercise 10" aria-label="Copy heading and permalink for Exercise 10">🔗</a></div></article><article class="exercise exercise-like" id="sec-Toprepareforclass44-4-12"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="sec-Toprepareforclass44-4-12-1-1">The kernel of a linear transformation <span class="process-math">\(L : \mathbb{R}^{n} \to \mathbb{R}^{m}\)</span> is defined as the set <span class="process-math">\(\ker(L) = \{\vec{x}: L\vec{x}= \vec{0}\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-Toprepareforclass44-4-12-1-2">Provide a conceptual explanation of <em class="emphasis">why</em> the kernel must always be a subspace, and describe what this tells us about the “shape” of solution sets to homogeneous linear equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-12-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Toprepareforclass44-4-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Toprepareforclass44-4-12-2-1">Because <span class="process-math">\(L\)</span> is linear, <span class="process-math">\(L(\vec{x}+ \vec{y}) = L\vec{x}+ L\vec{y}\)</span> and <span class="process-math">\(L(\alpha \vec{x}) = \alpha L\vec{x}\)</span> for all scalars <span class="process-math">\(\alpha\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Toprepareforclass44-4-12-2-2">If <span class="process-math">\(\vec{x}\)</span> and <span class="process-math">\(\vec{y}\)</span> are in the kernel, then <span class="process-math">\(L\vec{x}= \vec{0}\)</span> and <span class="process-math">\(L\vec{y}= \vec{0}\text{,}\)</span> so <span class="process-math">\(L(\vec{x}+ \vec{y}) = \vec{0}\)</span> and <span class="process-math">\(L(\alpha \vec{x}) = \vec{0}\text{.}\)</span> Thus the kernel contains every linear combination of its vectors; it is automatically a subspace.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-12-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Toprepareforclass44-4-12-2-3">Conceptually, this means the solution set to any homogeneous linear system “inherits” the geometry of a Euclidean subspace:  it behaves like a flat space of some dimension <span class="process-math">\(k\text{,}\)</span> possibly much smaller than <span class="process-math">\(n\text{.}\)</span> The notes highlight this by explaining that kernels look and act like <span class="process-math">\(\mathbb{R}^{k}\)</span> once a basis has been chosen, and vectors in the kernel have unique coordinate representations in terms of that basis.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Toprepareforclass44-4-12-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.1"><a href="#sec-Toprepareforclass44-4-12-2" title="Copy heading and permalink for Solution 11.1" aria-label="Copy heading and permalink for Solution 11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 11"><a href="#sec-Toprepareforclass44-4-12" title="Copy heading and permalink for Exercise 11" aria-label="Copy heading and permalink for Exercise 11">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Exercises"><a href="#sec-Toprepareforclass44-4" title="Copy heading and permalink for Exercises: Exercises" aria-label="Copy heading and permalink for Exercises: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section: Learn!"><a href="#sec-Toprepareforclass44" title="Copy heading and permalink for Section: Learn!" aria-label="Copy heading and permalink for Section: Learn!">🔗</a></div></section><section class="section" id="sec-Advancedlearningobjectives44"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Advanced learning objectives</span>
+</h3>
+<div class="para" id="sec-Advancedlearningobjectives44-2">In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives44-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="sec-Advancedlearningobjectives44-3">
+<li id="sec-Advancedlearningobjectives44-3-1">
+<div class="para" id="sec-Advancedlearningobjectives44-3-1-1">Determine whether a given subset of <span class="process-math">\(\mathbb{R}^{n}\)</span> is a subspace by verifying closure under linear combinations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives44-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives44-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Advancedlearningobjectives44-3-2">
+<div class="para" id="sec-Advancedlearningobjectives44-3-2-1">Construct a basis for a subspace by extracting a linearly independent spanning set from a larger (possibly redundant) list of vectors.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives44-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives44-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-Advancedlearningobjectives44-3-3">
+<div class="para" id="sec-Advancedlearningobjectives44-3-3-1">
+<div class="para" id="sec-Advancedlearningobjectives44-3-3-1-1">Explain why every nontrivial subspace has a unique dimension and how different bases represent vectors using different coordinate tuples.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives44-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-Advancedlearningobjectives44-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-Advancedlearningobjectives44-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Section: Advanced learning objectives"><a href="#sec-Advancedlearningobjectives44" title="Copy heading and permalink for Section: Advanced learning objectives" aria-label="Copy heading and permalink for Section: Advanced learning objectives">🔗</a></div></section><div class="autopermalink" data-description="Handout: Daily Prep 4.4 - Subspaces, Dimension, and the Kernel"><a href="#ch-Textbook-21" title="Copy heading and permalink for Handout: Daily Prep 4.4 - Subspaces, Dimension, and the Kernel" aria-label="Copy heading and permalink for Handout: Daily Prep 4.4 - Subspaces, Dimension, and the Kernel">🔗</a></div></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-Textbook-20.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
