@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Daily Prep 5.5 - Two-Dimensional Systems and their Vector Fields</title>
+
+<section>
+    <title>Overview</title>
+<p>
+We now use two-dimensional autonomous systems of the form 
+<m>\vec{x}' = P\vec{x}</m> and show how their qualitative behavior can be 
+understood through vector fields in the phase plane. Each point 
+<m>(x_1, x_2)</m> in the plane determines a direction vector <m>P\vec{x}</m>, 
+producing a picture of how solutions move over time. Because the underlying 
+system is linear and autonomous, equilibrium points occur where 
+<m>P\vec{x} = \vec{0}</m>, typically the origin, and the eigenvalues and 
+eigenvectors of <m>P</m> determine the geometry of nearby trajectories.  
+Solutions tangent to eigenvectors form principal solution curves, while the 
+signs and types of eigenvalues (real, repeated, or complex) determine whether 
+the origin behaves as a node, saddle, spiral, or center. We then illustrate
+how the eigenvalue method combines with vector-field intuition to classify the 
+qualitative behavior of all solutions in the plane. 
+</p>
+
+</section>
+
+<section>
+  <title>Basic learning objectives</title>
+
+        <p>
+          These are the tasks you should be able to perform with reasonable
+          fluency when you arrive at our next class meeting.
+          Important new
+          vocabulary words are indicated <em>in italics</em>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+ Understand how a two-dimensional system <m>\vec{x}' = P\vec{x}</m> 
+      defines a vector field in the plane by assigning the vector 
+      <m>P\vec{x}</m> to each point <m>\vec{x}</m>.
+            </p>
+          </li>
+
+<li>
+<p>
+Identify <em>equilibrium points</em> as solutions of <m>P\vec{x} = \vec{0}</m> 
+      and recognize that the origin is typically the unique equilibrium in a 
+      homogeneous linear system.
+</p>
+</li>
+
+          <li>
+            <p>
+ Describe how eigenvalues and eigenvectors of <m>P</m> determine basic 
+      trajectory directions and qualitative motion in the <em>phase plane</em>.
+            </p>
+          </li>
+
+        </ul>
+
+</section>
+
+<section xml:id="sec-Toprepareforclass55">
+  <title>Learn!</title>
+
+  <p>
+    Complete the actions listed below.
+  </p>
+  <ul>
+
+<li>
+  <p>
+    <alert>Read</alert> <url href="
+https://web.uvic.ca/~tbazett/diffyqs/sec_twodimaut.html#sec_twodimaut">Section 7.5: Two-dimensional systems and their vector fields</url>.   
+  </p>
+</li>
+
+<li>
+<p>
+<alert>Watch</alert> <url href=" 
+https://youtu.be/pg2AkYmDCoQ?si=9vmByll7A8nmYGvW">
+Types of Behavior of 2D Linear Homogeneous Const Coefficient Systems of ODEs Using Eigenvalues (7:55)</url> by Mathispower4u.
+</p>
+</li>
+
+
+<li>
+<p>
+(Optional) <alert>Watch</alert> <url href=" 
+https://youtu.be/zfiJjj4dwjQ?si=IIIC1uPY4PGP2Ofb">
+Describe the Behavior of 2D Lin Homogeneous Const Coefficient Systems of ODEs: Eigenvalues (5:12)</url> by Mathispower4u.
+</p>
+</li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> <url href=" 
+https://web.uvic.ca/~tbazett/diffyqs/sec_twodimaut.html#subsection-147">Subsection 7.5.1: Exercises 
+7.5.1, 7.5.2, 7.5.101, 7.5.102</url>.
+          </p>
+        </li>
+
+
+<!-- <li>
+          <p>
+            Try the exercises below.  If necessary, use AI to guide your thinking. 
+          </p>
+        </li> -->
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+ 
+<exercises>
+  <title>Exercises</title>
+
+ <exercise label="mcq2dvectorfielddefinition">
+  <title>Understanding the Vector Field</title>
+
+  <statement>
+    <p>
+      For a two-dimensional linear system <m>\vec{x}' = P\vec{x}</m>, what does the
+      vector field in the phase plane represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          At each point <m>\vec{x}</m>, the vector field assigns the direction
+          vector <m>P\vec{x}</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The flow direction at each point in the
+          plane is given by <m>P\vec{x}</m>. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>It assigns the length <m>\|\vec{x}\|</m> at each point.</p>
+      </statement>
+      <feedback>
+        <p>No. Vector fields assign direction vectors, not lengths.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>It assigns the scalar <m>\det(P)</m> to every point.</p>
+      </statement>
+      <feedback>
+        <p>No. The determinant plays a role in stability, not in defining the field.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise> 
+
+<exercise label="mcq2dequilibrium">
+  <title>Identifying the Equilibrium Point</title>
+
+  <statement>
+    <p>
+      For the homogeneous linear system <m>\vec{x}' = P\vec{x}</m>, what is the
+      equilibrium point?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>\vec{x} = \vec{0}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. In a homogeneous system, the equilibrium is the solution to
+          <m>P\vec{x} = \vec{0}</m>, which is typically only the origin.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\vec{x} = \vec{v}_1</m>, where <m>\vec{v}_1</m> is any eigenvector.</p>
+      </statement>
+      <feedback>
+        <p>No. Eigenvectors describe trajectory directions, not equilibria.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>Every point in the plane is an equilibrium.</p>
+      </statement>
+      <feedback>
+        <p>No. That occurs only in the trivial zero matrix system.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq2dclassificationeigenvalues">
+  <title>Classifying the Equilibrium</title>
+
+  <statement>
+    <p>
+      Consider the system <m>\vec{x}' = P\vec{x}</m> where
+      <m>
+        P =
+        \begin{bmatrix}
+          3 \amp 0 \\
+          0 \amp 1
+        \end{bmatrix}.
+      </m>
+      How is the equilibrium at the origin classified?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          An unstable node.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Both eigenvalues <m>3</m> and <m>1</m> are positive real numbers,
+          so solutions grow away from the origin along eigenvector directions,
+          forming an unstable node.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A saddle point.</p></statement>
+      <feedback>
+        <p>No. A saddle requires one positive and one negative eigenvalue.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A center.</p></statement>
+      <feedback>
+        <p>No. Centers require purely imaginary eigenvalues.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-phase-plane-images">
+  <title>Choose the Correct Phase Plane</title>
+
+  <statement>
+    <p>
+      Consider the system
+      <m>
+        \vec{x}' =
+        \begin{bmatrix}
+          3 \amp 0 \\
+          0 \amp 1
+        \end{bmatrix}
+        \vec{x}.
+      </m>
+      Which of the following phase portraits corresponds to this system?
+    </p>
+  </statement>
+
+  <choices randomize="no">
+
+    <choice correct="yes">
+      <statement>
+        <p><strong>(A)</strong> Unstable node</p>
+      
+      <figure xml:id="fig-unstable-node-img">
+        <image source="images/unstable-node.svg" width="42%"/>
+        <caption>Phase portrait (A): Trajectories flow out along eigen-directions.</caption>
+      </figure>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Both eigenvalues are positive (<m>3</m> and <m>1</m>) so the origin
+          is an <em>unstable node</em>; trajectories move outward along the eigenvector
+          directions (the coordinate axes).
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><strong>(B)</strong> Saddle</p>
+      
+      <figure xml:id="fig-saddle-img">
+        <image source="images/saddle.svg" width="42%"/>
+        <caption>Phase portrait (B): Saddle structure (in/out along different axes).</caption>
+      </figure>
+      </statement>
+      <feedback>
+        <p>
+          Not this one. A saddle requires eigenvalues of opposite signs, which is not
+          the case here.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><strong>(C)</strong> Center</p>
+      
+      <figure xml:id="fig-center-img">
+        <image source="images/center.svg" width="42%"/>
+        <caption>Phase portrait (C): Closed orbits (center).</caption>
+      </figure>
+      </statement>
+      <feedback>
+        <p>
+          Not this one. Centers correspond to purely imaginary eigenvalues (no real part),
+          whereas both eigenvalues here are positive and real.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+  <!-- PROBLEM 1 -->
+  <exercise xml:id="twodim-open-1">
+    <title>Describing the Vector Field and Trajectory Behavior</title>
+
+    <statement>
+      <p>
+        Consider the two-dimensional linear system
+        <m>
+          \vec{x}' =
+          \begin{bmatrix}
+            -2 \amp 0 \\
+            0 \amp -5
+          \end{bmatrix}
+          \vec{x}.
+        </m>
+        (a) Describe the vector field in the phase plane, including how the
+        direction vectors <m>P\vec{x}</m> behave at various points.
+        <br/>
+        (b) Classify the equilibrium at the origin and explain the qualitative 
+        behavior of trajectories as <m>t \to \infty</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        The vector field assigns to each point <m>(x_1,x_2)</m> the direction 
+        vector <m>P\vec{x} = (-2x_1,\,-5x_2)</m>.  
+        Because each component is a negative multiple of the coordinate,  
+        arrows everywhere in the plane point <em>toward</em> the origin.  
+        Along the <m>x_1</m>-axis, the flow is horizontal toward the origin 
+        at a rate proportional to <m>-2x_1</m>.  
+        Along the <m>x_2</m>-axis, the flow is vertical toward the origin but 
+        at a faster rate proportional to <m>-5x_2</m>.  
+        Off the axes, arrows point diagonally inward, with the 
+        <m>x_2</m>-component shrinking more quickly due to the larger magnitude 
+        eigenvalue.  
+        This interpretation follows the definition of the vector field 
+        as assigning <m>P\vec{x}</m> to each point. 
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        The eigenvalues of <m>P</m> are <m>-2</m> and <m>-5</m>, both negative.  
+        According to the classification in Section 7.5, a system with two negative 
+        real eigenvalues has a <em>stable node</em> at the origin.  
+        Hence all trajectories approach the origin as <m>t \to \infty</m>.  
+        Because <m>-5</m> has larger magnitude, the <m>x_2</m>-component decays 
+        faster, so trajectories tilt toward the <m>x_1</m>-axis as they approach 
+        the origin.  
+        This is consistent with the node behavior described in the section.  
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- PROBLEM 2 -->
+  <exercise xml:id="twodim-open-2">
+    <title>Classifying a System Using Eigenvalues and Eigenvectors</title>
+
+    <statement>
+      <p>
+        Consider the system
+        <m>
+          \vec{x}' =
+          \begin{bmatrix}
+            0 \amp -4 \\
+            1 \amp 0
+          \end{bmatrix}
+          \vec{x}.
+        </m>
+        (a) Compute the eigenvalues and classify the equilibrium at the origin.
+        <br/>
+        (b) Based on the eigenvalues and eigenvectors, describe qualitatively 
+        what the phase portrait looks like (e.g., rotation, spiraling, or 
+        approach/escape behavior).
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        The characteristic equation is  
+        <m>
+          \det\!\left(
+          \begin{bmatrix}
+            0 \amp -4 \\
+            1 \amp 0
+          \end{bmatrix}
+          - \lambda I
+          \right)
+          =
+          \det
+          \begin{bmatrix}
+            -\lambda \amp -4 \\
+            1 \amp -\lambda
+          \end{bmatrix}
+          = \lambda^2 + 4 = 0.
+        </m>
+        Therefore the eigenvalues are <m>\lambda = \pm 2i</m>, a pair of 
+        purely imaginary conjugates.  
+        Purely imaginary eigenvalues correspond to a 
+        <em>center</em> at the origin.  
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        With purely imaginary eigenvalues, solutions neither grow nor decay in 
+        magnitude.  Instead, they rotate in closed or nearly closed orbits around 
+        the origin.  The vector field shows arrows tangent to ellipses or circles, 
+        depending on the eigenvector geometry.  
+        In this case, the system behaves like a constant‑speed rotation, so the 
+        phase portrait consists of closed curves (center behavior).  
+        Such systems have trajectories that circle 
+        the equilibrium rather than approaching or diverging from it.  
+      </p>
+    </solution>
+  </exercise>
+
+
+</exercises>
+
+</section>
+
+      <section xml:id="sec-Advancedlearningobjectives55">
+        <title>Advanced learning objectives</title>
+
+        <p>
+          In addition to mastering the basic objectives, here are the tasks you should be able 
+          to perform, with practice:
+        </p>
+
+<ul>
+
+<li>
+<p>
+ Classify the behavior of the equilibrium point (node, saddle, spiral, 
+      or center) using the signs and types of eigenvalues of <m>P</m>.
+</p>
+</li>
+
+<li>
+<p>
+  Explain how eigenvectors generate principal solution curves and how 
+      all other trajectories are organized around these directions in 
+      two-dimensional linear systems.
+</p>
+</li>
+
+<li>
+<p>
+ Relate the qualitative structure of the vector field to the general 
+      solution <m>\vec{x}(t) = C_1 \vec{v}_1 e^{\lambda_1 t} + C_2 \vec{v}_2 e^{\lambda_2 t}</m> 
+      for distinct eigenvalues, including how the relative growth rates affect 
+      long-term behavior.  
+</p>
+</li>
+
+</ul>
+
+</section>
+
+
+</handout>

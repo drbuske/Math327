@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="-110 -110 220 220">
+  <rect x="-110" y="-110" width="220" height="220" fill="white"/>
+  <!-- Axes -->
+  <line x1="-100" y1="0" x2="100" y2="0" stroke="#666" stroke-width="1"/>
+  <line x1="0" y1="-100" x2="0" y2="100" stroke="#666" stroke-width="1"/>
+
+  <!-- Stable/unstable manifolds -->
+  <!-- Unstable along x-axis -->
+  <line x1="0" y1="0" x2="95" y2="0" stroke="#c33" stroke-width="2"/>
+  <line x1="0" y1="0" x2="-95" y2="0" stroke="#c33" stroke-width="2"/>
+  <!-- Stable along y-axis (toward origin) -->
+  <line x1="0" y1="95" x2="0" y2="0" stroke="#3a3" stroke-width="2"/>
+  <line x1="0" y1="-95" x2="0" y2="0" stroke="#3a3" stroke-width="2"/>
+
+  <!-- Saddle trajectories (hyperbolic arcs approaching/escaping) -->
+  <path d="M20,90 C60,45 60,10 95,0" stroke="#c33" fill="none" stroke-width="2"/>
+  <path d="M-20,90 C-60,45 -60,10 -95,0" stroke="#c33" fill="none" stroke-width="2"/>
+  <path d="M20,-90 C60,-45 60,-10 95,0" stroke="#c33" fill="none" stroke-width="2"/>
+  <path d="M-20,-90 C-60,-45 -60,-10 -95,0" stroke="#c33" fill="none" stroke-width="2"/>
+
+  <circle cx="0" cy="0" r="3" fill="black"/>
+</svg>

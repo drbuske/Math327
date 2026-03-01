@@ -38,8 +38,9 @@
       <xi:include href="./handouts/44PrepSubspaceDimensionKernel.ptx"/> 
       <xi:include href="./handouts/51PrepIntroSystemsODEs.ptx"/>
       <xi:include href="./handouts/52PrepMatricesLinearSystems.ptx"/>
-      <xi:include href="./handouts/53PrepLinearSystemsODEs.ptx"/>
+      <xi:include href="./handouts/53PrepLinearSystemsODEs.ptx"/> 
       <xi:include href="./handouts/54PrepEigenvalueMethod.ptx"/>
+      <xi:include href="./handouts/55PrepTwoDimensionalSystemsVF.ptx"/>
 
     </chapter>
 
