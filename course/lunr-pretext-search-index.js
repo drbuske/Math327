@@ -7,7 +7,97 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 0.2 - What are Differential Equations?",
-  "body": " Daily Prep 0.2 - What are Differential Equations?   Overview  Differential equations are central to science and engineering because the laws of physics are written in this form and they describe how quantities change over time. You have already encountered and even solved simple differential equations in calculus, even if you did not recognize them. This section illustrates what a differential equation looks like and clarifies key ideas like dependent and independent variables. It also demonstrates that many differential equations can have multiple valid solutions, showing how to check a proposed solution by substitution.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize what a differential equation is and identify the dependent and independent variables in an example.    Understand that differential equations arise naturally from physical laws such as Newton’s law of cooling.    Verify whether a proposed function is a solution by computing its derivative and substituting into the equation.      Learn!  Complete the actions listed below.     Watch video Intro to Differential Equations .     Read  Subsection 0.2.1: Differential equations .     Watch video The Key Definitions of Differential Equations .     Read  Subsection 0.2.2: Solutions of differential equations .     Read  Subsection 0.2.3: Differential equations in practice and Subsection 0.2.4: Four fundamental equations .     Watch  Introduction to differential equations (34:13) for a lecture on section 0.2.     Do  Exercise 0.2.1 , Exercise 0.2.2 .     Do  Subsection 0.2.5: Exercises 0.2.5, 0.2.6, 0.2.7, 0.2.8, 0.2.19 .     Read  Section 0.3: Classification of differential equations .     Watch  Classification of differential equations (31:23) for a lecture on section 0.3.     Do  Subsection 0.3.1: Exercises 0.3.1, 0.3.5 .    Try these additional questions. If necessary, use AI to guide your thinking.   What does the order of a differential equation refer to?    Values are typical solutions to algebraic equations (e.g. solves ). What objects are typical solutions to differential equations?    Give a specific example of a differential equation that is autonomous and one that is not.    (Newton’s Law of Cooling)  The time rate of change of the temperature of a body is proportional to the difference between and the temperature of the surrounding medium. That is, where is a positive constant.    If , is positive, negative, or zero? Is the body warming or cooling?    What can be said if ?      State the order of each differential equation and determine whether it is linear or nonlinear.                              Do MyOpenMath questions from these sections.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Explain why differential equations can have infinitely many solutions and interpret how solution families arise (e.g., from arbitrary constants).    Analyze an integral function using the usual techniques from differential calculus.    Analyze how different solutions correspond to different physical scenarios or initial conditions.    Interpret the structure of a first‑order linear differential equation and understand how it models time‑varying physical processes (such as oscillating ambient temperature).     "
+  "body": " Daily Prep 0.2 - What are Differential Equations?   Overview  Differential equations are central to science and engineering because the laws of physics are written in this form and they describe how quantities change over time. You have already encountered and even solved simple differential equations in calculus, even if you did not recognize them. This section illustrates what a differential equation looks like and clarifies key ideas like dependent and independent variables. It also demonstrates that many differential equations can have multiple valid solutions, showing how to check a proposed solution by substitution.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize what a differential equation is and identify the dependent and independent variables in an example.    Understand that differential equations arise naturally from physical laws such as Newton’s law of cooling.    Verify whether a proposed function is a solution by computing its derivative and substituting into the equation.      Learn!  Complete the actions listed below.     Watch video Intro to Differential Equations (10:38) by Trevor Bazett.     Read  Subsection 0.2.1: Differential equations .     Watch video The Key Definitions of Differential Equations (8:42) by Trevor Bazett.     Read  Subsection 0.2.2: Solutions of differential equations .     Read  Subsection 0.2.3: Differential equations in practice and Subsection 0.2.4: Four fundamental equations .    (Optional) Watch  Introduction to differential equations (34:13) for a lecture on section 0.2.      Do  Subsection 0.2.5: Exercises 0.2.1, 0.2.2, 0.2.5, 0.2.6, 0.2.7, 0.2.8, 0.2.19 .     Read  Section 0.3: Classification of differential equations .    (Optional) Watch  Classification of differential equations (31:23) for a lecture on section 0.3.     Do  Subsection 0.3.1: Exercises 0.3.1, 0.3.5 .     Do MyOpenMath questions from these sections.     Exercises   What Is a Differential Equation?   Which statement correctly describes a differential equation?      An equation involving an unknown function and one or more of its derivatives.    Correct. A differential equation is an equation that includes an unknown function and its derivatives.     An equation involving only algebraic expressions of .  No—this would be an ordinary algebraic equation.    An equation that always has a unique solution.  No. Differential equations may have many solutions or none.      Identifying Dependent and Independent Variables   In the differential equation which is the dependent variable?       Correct. depends on , so it is the dependent variable.      No— is the independent variable.     No—this is part of the forcing term.      ODE or PDE?   Is the equation an ODE or a PDE?     A partial differential equation (PDE)   Correct. It involves partial derivatives with respect to different variables ( and ).     An ordinary differential equation (ODE)  No—an ODE has derivatives with respect to a single variable.    Neither: it is algebraic.  No—it clearly contains derivatives.      Determining the Order of a Differential Equation   What is the order of the differential equation ?     Second order   Correct. The highest derivative appearing is .     First order  No—the equation includes a second derivative.    Third order  No third derivative appears.      System or Single Equation?   Consider the pair How should this be classified?     A system of ordinary differential equations   Correct. There are two equations and two dependent variables ( and ), each depending on the same independent variable.     A single ordinary differential equation  No—it consists of two linked equations.    A partial differential equation  No—it contains no partial derivatives.       What does the order of a differential equation refer to?    The order of a differential equation is the order of the highest derivative that appears in the equation. For example, if the largest derivative present is , then the equation is second order; if the highest derivative is , then it is fourth order.       Values such as are typical solutions to algebraic equations (for example, solves ). What objects are typical solutions to differential equations?    Differential equations involve an unknown function and its derivatives, so their solutions are functions , not numbers. These functions must satisfy the relationship between derivatives given in the equation. Solving a differential equation means finding a function that makes the equation true when substituted.       Give a specific example of a differential equation that is autonomous and one that is not autonomous.    An autonomous differential equation is one in which the independent variable (often ) does not appear explicitly. For example:   is autonomous because the right-hand side depends only on . A non-autonomous example is:   because the independent variable appears explicitly. Differential equations are classified according to such features.      Newton’s Law of Cooling   The time rate of change of the temperature of a body is proportional to the difference between and the surrounding temperature . That is,   Answer the following:    If , is positive, negative, or zero? Is the body warming or cooling?    What can be said if ?       (a) If , then , so . Thus the temperature is decreasing: the body is cooling .   (b) If , then , so . The temperature increases: the body is warming .  These ideas reflect the interpretation of differential equations as describing how quantities change.       State the order of each differential equation and determine whether it is linear or nonlinear.                          Using the definitions, the order is the highest derivative present, and the equation is linear if the dependent variable and its derivatives appear only to the first power and are not composed inside nonlinear functions.    Highest derivative is ⇒ second order . All terms are linear in ⇒ linear .    Highest derivative is ⇒ third order . The term makes it nonlinear .    Highest derivative is ⇒ second order . The term depends nonlinearly on ⇒ nonlinear .    Highest derivative is ⇒ third order . The equation is linear in and its derivatives ⇒ linear .         Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Explain why differential equations can have infinitely many solutions and interpret how solution families arise (e.g., from arbitrary constants).    Analyze an integral function using the usual techniques from differential calculus.    Analyze how different solutions correspond to different physical scenarios or initial conditions.    Interpret the structure of a first‑order linear differential equation and understand how it models time‑varying physical processes (such as oscillating ambient temperature).     "
+},
+{
+  "id": "mcq-de-definition",
+  "level": "2",
+  "url": "ch-Textbook-2.html#mcq-de-definition",
+  "type": "Exercise",
+  "number": "1",
+  "title": "What Is a Differential Equation?",
+  "body": " What Is a Differential Equation?   Which statement correctly describes a differential equation?      An equation involving an unknown function and one or more of its derivatives.    Correct. A differential equation is an equation that includes an unknown function and its derivatives.     An equation involving only algebraic expressions of .  No—this would be an ordinary algebraic equation.    An equation that always has a unique solution.  No. Differential equations may have many solutions or none.    "
+},
+{
+  "id": "mcq-dependent-independent",
+  "level": "2",
+  "url": "ch-Textbook-2.html#mcq-dependent-independent",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Identifying Dependent and Independent Variables.",
+  "body": " Identifying Dependent and Independent Variables   In the differential equation which is the dependent variable?       Correct. depends on , so it is the dependent variable.      No— is the independent variable.     No—this is part of the forcing term.    "
+},
+{
+  "id": "mcq-ode-vs-pde",
+  "level": "2",
+  "url": "ch-Textbook-2.html#mcq-ode-vs-pde",
+  "type": "Exercise",
+  "number": "3",
+  "title": "ODE or PDE?",
+  "body": " ODE or PDE?   Is the equation an ODE or a PDE?     A partial differential equation (PDE)   Correct. It involves partial derivatives with respect to different variables ( and ).     An ordinary differential equation (ODE)  No—an ODE has derivatives with respect to a single variable.    Neither: it is algebraic.  No—it clearly contains derivatives.    "
+},
+{
+  "id": "mcq-order-of-de",
+  "level": "2",
+  "url": "ch-Textbook-2.html#mcq-order-of-de",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Determining the Order of a Differential Equation.",
+  "body": " Determining the Order of a Differential Equation   What is the order of the differential equation ?     Second order   Correct. The highest derivative appearing is .     First order  No—the equation includes a second derivative.    Third order  No third derivative appears.    "
+},
+{
+  "id": "mcq-system-or-single",
+  "level": "2",
+  "url": "ch-Textbook-2.html#mcq-system-or-single",
+  "type": "Exercise",
+  "number": "5",
+  "title": "System or Single Equation?",
+  "body": " System or Single Equation?   Consider the pair How should this be classified?     A system of ordinary differential equations   Correct. There are two equations and two dependent variables ( and ), each depending on the same independent variable.     A single ordinary differential equation  No—it consists of two linked equations.    A partial differential equation  No—it contains no partial derivatives.    "
+},
+{
+  "id": "order-of-de",
+  "level": "2",
+  "url": "ch-Textbook-2.html#order-of-de",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  What does the order of a differential equation refer to?    The order of a differential equation is the order of the highest derivative that appears in the equation. For example, if the largest derivative present is , then the equation is second order; if the highest derivative is , then it is fourth order.   "
+},
+{
+  "id": "de-solutions-vs-values",
+  "level": "2",
+  "url": "ch-Textbook-2.html#de-solutions-vs-values",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Values such as are typical solutions to algebraic equations (for example, solves ). What objects are typical solutions to differential equations?    Differential equations involve an unknown function and its derivatives, so their solutions are functions , not numbers. These functions must satisfy the relationship between derivatives given in the equation. Solving a differential equation means finding a function that makes the equation true when substituted.   "
+},
+{
+  "id": "autonomous-vs-not",
+  "level": "2",
+  "url": "ch-Textbook-2.html#autonomous-vs-not",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Give a specific example of a differential equation that is autonomous and one that is not autonomous.    An autonomous differential equation is one in which the independent variable (often ) does not appear explicitly. For example:   is autonomous because the right-hand side depends only on . A non-autonomous example is:   because the independent variable appears explicitly. Differential equations are classified according to such features.   "
+},
+{
+  "id": "newton-law-cooling-conceptual",
+  "level": "2",
+  "url": "ch-Textbook-2.html#newton-law-cooling-conceptual",
+  "type": "Exercise",
+  "number": "9",
+  "title": "Newton’s Law of Cooling.",
+  "body": " Newton’s Law of Cooling   The time rate of change of the temperature of a body is proportional to the difference between and the surrounding temperature . That is,   Answer the following:    If , is positive, negative, or zero? Is the body warming or cooling?    What can be said if ?       (a) If , then , so . Thus the temperature is decreasing: the body is cooling .   (b) If , then , so . The temperature increases: the body is warming .  These ideas reflect the interpretation of differential equations as describing how quantities change.   "
+},
+{
+  "id": "order-and-linearity",
+  "level": "2",
+  "url": "ch-Textbook-2.html#order-and-linearity",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  State the order of each differential equation and determine whether it is linear or nonlinear.                          Using the definitions, the order is the highest derivative present, and the equation is linear if the dependent variable and its derivatives appear only to the first power and are not composed inside nonlinear functions.    Highest derivative is ⇒ second order . All terms are linear in ⇒ linear .    Highest derivative is ⇒ third order . The term makes it nonlinear .    Highest derivative is ⇒ second order . The term depends nonlinearly on ⇒ nonlinear .    Highest derivative is ⇒ third order . The equation is linear in and its derivatives ⇒ linear .     "
 },
 {
   "id": "ch-Textbook-3",
@@ -16,7 +106,124 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 1.1 - Integrals as Solutions",
-  "body": " Daily Prep 1.1 - Integrals as Solutions   Overview  This section shows how certain first-order differential equations can be solved simply by antidifferentiating. When the equation has the form , its general solution is just an antiderivative of plus a constant. The text also clarifies the difference between definite and indefinite integrals and explains how initial conditions lead to a definite‑integral formula for the solution.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand that a first-order ODE of the form is solved by finding an antiderivative of .    Recognize the role of initial conditions in determining the specific constant .    Distinguish between definite and indefinite integrals and know that the definite integral gives a computable expression for solutions.      Learn!  Complete the actions listed below.     Watch video Integrals as Solutions (6:23) by Mathispower4u.     Read  Section 1.1: Integrals as solutions up to Example 1.1.4.     Read  Example 1.1.4 and then think about the following question. In this example, is treated as a solution separately. Why? Plot this solution. Then, verify that is indeed a solution.     Read  Example 1.1.5 .     Do the following for Example 1.1.5. Plot the speed against time of the car (labeling your axes with appropriate units). Then, plot the distance traveled against time . Label your axes.     Read  Example 1.1.6 .     Do the exercise mentioned at the end of Example 1.1.6.     Watch  Integrals as Solutions (34:22) for a lecture on section 1.1.     Do  Subsection 1.1.1: Exercises 1.1.2, 1.1.4, 1.1.15, 1.1.18 .    Try these additional questions. If necessary, use AI to guide your thinking.   Write a differential equation that is a model for the following: In a city with a fixed population of persons, the time rate of change of the number of those persons infected with a certain contagious disease is proportional to the product of the number who have the disease and the number who do not.    Substitute into the differential equation to determine all values of the constant for which is a solution.    Write a differential equation that is a mathematical model for each situation.   The acceleration of a Lamborghini is proportional to the difference between 250 km\/h and the velocity of the car.  In a city having a fixed of population persons, the time rate of change of the number of those persons who have heard a certain rumor is proportional to the number of those who have not yet heard the rumor.     Suppose that a football coach gets a salary of one million dollars now, and a raise of every year (so exponential model, like population of bacteria). Let be the salary in millions of dollars, and is time in years.    What is and .    Approximately how many years will it take for the salary to be 10 million?    Approximately how many years will it take for the salary to be 20 million?      Sid is in a car traveling at speed miles per hour away from Las Vegas, where is in hours. At , Sid is 10 miles away from Vegas. How far from Vegas is Sid 2 hours later?       (Optional) Watch  a video on chapter 0 and section 1.1 by Mark Sullivan (43:05) .     Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Explain why antidifferentiation works as a universal method when depends only on , using the Fundamental Theorem of Calculus.    Express solutions with initial conditions using definite-integral form .    Articulate the conceptual difference between the definite integral (a number) and the indefinite integral (a family of antiderivatives).     "
+  "body": " Daily Prep 1.1 - Integrals as Solutions   Overview  This section shows how certain first-order differential equations can be solved simply by antidifferentiating. When the equation has the form , its general solution is just an antiderivative of plus a constant. The text also clarifies the difference between definite and indefinite integrals and explains how initial conditions lead to a definite‑integral formula for the solution.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand that a first-order ODE of the form is solved by finding an antiderivative of .    Recognize the role of initial conditions in determining the specific constant .    Distinguish between definite and indefinite integrals and know that the definite integral gives a computable expression for solutions.      Learn!  Complete the actions listed below.     Watch video Integrals as Solutions (6:23) by Mathispower4u.     Read  Section 1.1: Integrals as solutions up to Example 1.1.4.     Read  Example 1.1.4 and then think about the following question. In this example, is treated as a solution separately. Why? Plot this solution. Then, verify that is indeed a solution.     Read  Example 1.1.5 .     Do the following for Example 1.1.5. Plot the speed against time of the car (labeling your axes with appropriate units). Then, plot the distance traveled against time . Label your axes.     Read  Example 1.1.6 .     Do the exercise mentioned at the end of Example 1.1.6.    (Optional) Watch  Integrals as Solutions (34:22) for a lecture on section 1.1.     Do  Subsection 1.1.1: Exercises 1.1.2, 1.1.4, 1.1.15, 1.1.18 .    (Optional) Watch  a video on chapter 0 and section 1.1 (43:05) by Mark Sullivan.     Do MyOpenMath questions from this section.     Exercises   Solving y' = f(x)   For a differential equation of the form , what is the general solution?       Correct. When depends only on , we solve by antidifferentiation.      No—this reverses the derivative and integral roles.     No—this applies only to very special equations.      Checking a Solution   Which function is a solution of ?       Correct. Differentiating gives . Any constant works.      No—its derivative is constant, not .     No—the derivative is .      Meaning of the Constant C   In the general solution , what does the constant represent?     An arbitrary constant describing the whole family of solutions.   Correct. Integrating yields an entire one‑parameter family.     A fixed number determined by the derivative of .  No— is independent of .    A constant that must equal zero.  No—the constant can be any real number.      Initial Value Problem   If and , which formula gives the solution?         Correct. Definite integrals give the unique solution satisfying the initial condition.        Only correct if and .       No—this does not involve integrating .      Indefinite vs. Definite Integrals   Which statement describes the difference between indefinite and definite integrals?      An indefinite integral represents a family of antiderivatives; a definite integral evaluates to a number.    Correct. The definite integral is the actual integral, while the indefinite integral is notation for antiderivatives.     Both always produce numbers.  No—indefinite integrals produce families of functions.    An indefinite integral computes area, while a definite integral finds derivatives.  No—this reverses the roles completely.      Using the Fundamental Theorem of Calculus   In the solution , why does differentiating yield ?      Because the Fundamental Theorem of Calculus states that the derivative of a definite integral with variable upper limit is the integrand evaluated at that limit.    Correct. The Fundamental Theorem shows that differentiating recovers .     Because integrals and derivatives always cancel each other for any expression.  No—this is only true under specific FTC conditions.    Because must be constant.  No—the method works for any integrable function.      Finding a Solution Using a Definite Integral   Consider the initial value problem Use the definite-integral formula to write the solution directly as an integral and then simplify your answer.    If and , then the solution is   Here , , and . Therefore,   Compute the integral:   Therefore,   This solution matches the initial value and satisfies .     Using Antidifferentiation to Find a General Solution   Solve the differential equation . Show each step and explain why your answer represents the general solution .    When depends only on , the solution is obtained by antidifferentiating:   Here , so integrate term by term:   Therefore,   The constant appears because any antiderivative differs by a constant. Including ensures we obtain the entire one‑parameter family of solutions—what is called the general solution .       Write a differential equation that is a model for the following: In a city with a fixed population of persons, the time rate of change of the number of those persons infected with a certain contagious disease is proportional to the product of the number who have the disease and the number who do not.    The number infected is , and the number not infected is . If the rate is proportional to the product of these two quantities, then   where is a positive proportionality constant. This is the standard logistic-type infection model.       Substitute into the differential equation to determine all values of the constant for which is a solution.    Compute derivatives:   Substitute into the equation:   Factor out (never zero):   Solve the quadratic:   so the values are and .       Write a differential equation that is a mathematical model for each situation.    The acceleration of a Lamborghini is proportional to the difference between 250 km\/h and the velocity of the car.    In a city having a fixed population persons, the time rate of change of the number of those persons who have heard a certain rumor is proportional to the number of those who have not yet heard it.       (a) If acceleration is proportional to the difference between the top speed and the current speed , we write:   where is a positive constant.   (b) The number who have not heard the rumor is . If the rate of growth of is proportional to this quantity, then:   where is again a positive proportionality constant.       Suppose that a football coach gets a salary of one million dollars now, and a raise of every year (so exponential model, like population). Let be the salary in millions of dollars, and be time in years.    What is and ?    Approximately how many years will it take for the salary to be 10 million?    Approximately how many years will it take for the salary to be 20 million?      Since the salary grows by each year, the exponential model is    (a)  (one million now). (a 10% raise).   (b) Solve :    (c) Solve :   Because exponential growth is slow at first but accelerates, the jump from 10 million to 20 million takes less additional time than the jump from 1 million to 10 million.       Sid is in a car traveling at speed miles per hour away from Las Vegas, where is in hours. At , Sid is 10 miles away from Vegas. How far from Vegas is Sid 2 hours later?    Distance traveled is the integral of velocity. Sid’s speed is . The distance traveled in the first 2 hours is   Since Sid started 10 miles away, his distance from Vegas at is        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Explain why antidifferentiation works as a universal method when depends only on , using the Fundamental Theorem of Calculus.    Express solutions with initial conditions using definite-integral form .    Articulate the conceptual difference between the definite integral (a number) and the indefinite integral (a family of antiderivatives).     "
+},
+{
+  "id": "mcq-intsol-1",
+  "level": "2",
+  "url": "ch-Textbook-3.html#mcq-intsol-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Solving y’ = f(x).",
+  "body": " Solving y' = f(x)   For a differential equation of the form , what is the general solution?       Correct. When depends only on , we solve by antidifferentiation.      No—this reverses the derivative and integral roles.     No—this applies only to very special equations.    "
+},
+{
+  "id": "mcq-intsol-2",
+  "level": "2",
+  "url": "ch-Textbook-3.html#mcq-intsol-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Checking a Solution.",
+  "body": " Checking a Solution   Which function is a solution of ?       Correct. Differentiating gives . Any constant works.      No—its derivative is constant, not .     No—the derivative is .    "
+},
+{
+  "id": "mcq-intsol-3",
+  "level": "2",
+  "url": "ch-Textbook-3.html#mcq-intsol-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Meaning of the Constant C.",
+  "body": " Meaning of the Constant C   In the general solution , what does the constant represent?     An arbitrary constant describing the whole family of solutions.   Correct. Integrating yields an entire one‑parameter family.     A fixed number determined by the derivative of .  No— is independent of .    A constant that must equal zero.  No—the constant can be any real number.    "
+},
+{
+  "id": "mcq-intsol-4",
+  "level": "2",
+  "url": "ch-Textbook-3.html#mcq-intsol-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Initial Value Problem.",
+  "body": " Initial Value Problem   If and , which formula gives the solution?         Correct. Definite integrals give the unique solution satisfying the initial condition.        Only correct if and .       No—this does not involve integrating .    "
+},
+{
+  "id": "mcq-intsol-5",
+  "level": "2",
+  "url": "ch-Textbook-3.html#mcq-intsol-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Indefinite vs. Definite Integrals.",
+  "body": " Indefinite vs. Definite Integrals   Which statement describes the difference between indefinite and definite integrals?      An indefinite integral represents a family of antiderivatives; a definite integral evaluates to a number.    Correct. The definite integral is the actual integral, while the indefinite integral is notation for antiderivatives.     Both always produce numbers.  No—indefinite integrals produce families of functions.    An indefinite integral computes area, while a definite integral finds derivatives.  No—this reverses the roles completely.    "
+},
+{
+  "id": "mcq-intsol-6",
+  "level": "2",
+  "url": "ch-Textbook-3.html#mcq-intsol-6",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Using the Fundamental Theorem of Calculus.",
+  "body": " Using the Fundamental Theorem of Calculus   In the solution , why does differentiating yield ?      Because the Fundamental Theorem of Calculus states that the derivative of a definite integral with variable upper limit is the integrand evaluated at that limit.    Correct. The Fundamental Theorem shows that differentiating recovers .     Because integrals and derivatives always cancel each other for any expression.  No—this is only true under specific FTC conditions.    Because must be constant.  No—the method works for any integrable function.    "
+},
+{
+  "id": "integralsols-open-new-1",
+  "level": "2",
+  "url": "ch-Textbook-3.html#integralsols-open-new-1",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Finding a Solution Using a Definite Integral.",
+  "body": " Finding a Solution Using a Definite Integral   Consider the initial value problem Use the definite-integral formula to write the solution directly as an integral and then simplify your answer.    If and , then the solution is   Here , , and . Therefore,   Compute the integral:   Therefore,   This solution matches the initial value and satisfies .   "
+},
+{
+  "id": "integralsols-open-new-2",
+  "level": "2",
+  "url": "ch-Textbook-3.html#integralsols-open-new-2",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Using Antidifferentiation to Find a General Solution.",
+  "body": " Using Antidifferentiation to Find a General Solution   Solve the differential equation . Show each step and explain why your answer represents the general solution .    When depends only on , the solution is obtained by antidifferentiating:   Here , so integrate term by term:   Therefore,   The constant appears because any antiderivative differs by a constant. Including ensures we obtain the entire one‑parameter family of solutions—what is called the general solution .   "
+},
+{
+  "id": "disease-modeling",
+  "level": "2",
+  "url": "ch-Textbook-3.html#disease-modeling",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Write a differential equation that is a model for the following: In a city with a fixed population of persons, the time rate of change of the number of those persons infected with a certain contagious disease is proportional to the product of the number who have the disease and the number who do not.    The number infected is , and the number not infected is . If the rate is proportional to the product of these two quantities, then   where is a positive proportionality constant. This is the standard logistic-type infection model.   "
+},
+{
+  "id": "substitute-exponential",
+  "level": "2",
+  "url": "ch-Textbook-3.html#substitute-exponential",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Substitute into the differential equation to determine all values of the constant for which is a solution.    Compute derivatives:   Substitute into the equation:   Factor out (never zero):   Solve the quadratic:   so the values are and .   "
+},
+{
+  "id": "modeling-two-parts",
+  "level": "2",
+  "url": "ch-Textbook-3.html#modeling-two-parts",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  Write a differential equation that is a mathematical model for each situation.    The acceleration of a Lamborghini is proportional to the difference between 250 km\/h and the velocity of the car.    In a city having a fixed population persons, the time rate of change of the number of those persons who have heard a certain rumor is proportional to the number of those who have not yet heard it.       (a) If acceleration is proportional to the difference between the top speed and the current speed , we write:   where is a positive constant.   (b) The number who have not heard the rumor is . If the rate of growth of is proportional to this quantity, then:   where is again a positive proportionality constant.   "
+},
+{
+  "id": "salary-exponential",
+  "level": "2",
+  "url": "ch-Textbook-3.html#salary-exponential",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Suppose that a football coach gets a salary of one million dollars now, and a raise of every year (so exponential model, like population). Let be the salary in millions of dollars, and be time in years.    What is and ?    Approximately how many years will it take for the salary to be 10 million?    Approximately how many years will it take for the salary to be 20 million?      Since the salary grows by each year, the exponential model is    (a)  (one million now). (a 10% raise).   (b) Solve :    (c) Solve :   Because exponential growth is slow at first but accelerates, the jump from 10 million to 20 million takes less additional time than the jump from 1 million to 10 million.   "
+},
+{
+  "id": "distance-from-vegas",
+  "level": "2",
+  "url": "ch-Textbook-3.html#distance-from-vegas",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  Sid is in a car traveling at speed miles per hour away from Las Vegas, where is in hours. At , Sid is 10 miles away from Vegas. How far from Vegas is Sid 2 hours later?    Distance traveled is the integral of velocity. Sid’s speed is . The distance traveled in the first 2 hours is   Since Sid started 10 miles away, his distance from Vegas at is    "
 },
 {
   "id": "ch-Textbook-4",
@@ -25,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 1.2 - Slope Fields",
-  "body": " Daily Prep 1.2 - Slope Fields   Overview  In this section, we are introduced to slope fields as a geometric way to visualize first‑order differential equations of the form . A slope field assigns a small line segment with slope at each point of the plane, allowing us to see how solution curves must behave without solving the equation analytically. By following these slopes, we can sketch approximate solutions that satisfy various initial conditions and observe how small changes in starting points can lead to noticeably different solution behaviors.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand that a slope field represents the slope at each point for an ODE .    Be able to interpret slope fields to sketch approximate solution curves passing through given initial conditions.    Recognize that slope fields allow qualitative predictions when explicit solutions are difficult or impossible to obtain.      Learn!  Complete the actions listed below.     Watch video Introduction to Slope Fields (7:11) by Mathispower4u.     Watch video Video 1.2.1: Slope Fields by Trevor Bazett.     Read  Subsection 1.2.1: Slope fields . Be sure to experiment with the GeoGebra activity found in Example 1.2.1 .     Watch  Video 1.2.2: Existence and Uniqueness by Trevor Bazett.     Read  Subsection 1.2.2: Existence and uniqueness .    Try these additional questions. If necessary, use AI to guide your thinking.   What do you see as the value in slope fields? What role does technology play in this concept?    In your own words, what does Picard's theorem say?        Watch  Slope Field (30:34) for a lecture on section 1.2.     Watch  Create Slope Fields Using GeoGebra (2:49) .     Do  Subsection 1.2.3: Exercises 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.10, 1.2.11, 1.2.14, 1.2.16, 1.2.18. .    Try these additional questions. If necessary, use AI to guide your thinking.   Consider the differential equation    Fill in the table below with the slopes at various values of and .  Slopes at various values of and for .                                                                                                   Plot the slopes in the table above to form a slope field.    On the given slope field in , sketch a solution curve to the initial value problem    Slope field for .   A slope field for y' = x-2y.        In is a slope field for .    Sketch a solution to the initial value problem , .    Sketch a solution to the initial value problem , .    Sketch a solution to the initial value problem , .    Does the IVP , have a solution for every ? If so, is that solution unique?   Slope field for .   A slope field for y' = 1.5y.        The initial value problem has no solution. Explain why this is the case in words using the slope field shown in .   Slope field for .   A slope field for y' = 1 over x.      The initial value problem has two solutions: and . Verify, algebraically, that both of these are indeed solutions. Then, draw both of these solutions on the direction field shown in .   Slope field for .   A slope field for y' = 2 times the square root of y.      [Multiple-choice] The slope field in indicates the differential equation has which form?   A mystery slope field.   A mystery slope field.                 [Multiple-choice] The slope field in indicates the differential equation has which form?   Another mystery slope field.   Another mystery slope field.                 [Multiple-choice] The slope field in indicates the differential equation has which form?   And yet another mystery slope field.   And yet another mystery slope field.                 Solve the initial value problem Hint: 'Separate' the variables and by, informally, writing the equation as     Use technology to generate the slope field of . Then, sketch likely solution curves for each of the following initial-value problems.                     Repeat the above question for the differential equation and the initial-value problems below.                   (Optional) Watch  a video on section 1.2 by Math Matt (18:38) .     Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze how small changes in initial conditions can yield significantly different solution behaviors by examining the slope field.    Compare slope fields for two different differential equations to deduce how the structure of influences long‑term solution behavior.    Use geometric reasoning from slope fields to anticipate qualitative features such as stability, divergence, and monotonicity of solutions.     "
+  "body": " Daily Prep 1.2 - Slope Fields   Overview  In this section, we are introduced to slope fields as a geometric way to visualize first‑order differential equations of the form . A slope field assigns a small line segment with slope at each point of the plane, allowing us to see how solution curves must behave without solving the equation analytically. By following these slopes, we can sketch approximate solutions that satisfy various initial conditions and observe how small changes in starting points can lead to noticeably different solution behaviors.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand that a slope field represents the slope at each point for an ODE .    Be able to interpret slope fields to sketch approximate solution curves passing through given initial conditions.    Recognize that slope fields allow qualitative predictions when explicit solutions are difficult or impossible to obtain.      Learn!  Complete the actions listed below.     Watch video Introduction to Slope Fields (7:11) by Mathispower4u.     Watch video Video 1.2.1: Slope Fields by Trevor Bazett.     Read  Subsection 1.2.1: Slope fields . Be sure to experiment with the GeoGebra activity found in Example 1.2.1 .     Watch  Video 1.2.2: Existence and Uniqueness by Trevor Bazett.     Read  Subsection 1.2.2: Existence and uniqueness .     Watch  Slope Field (30:34) for a lecture on section 1.2.     Watch video Create Slope Fields Using GeoGebra (2:49) .     Do  Subsection 1.2.3: Exercises 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.10, 1.2.11, 1.2.14, 1.2.16, 1.2.18. .     (Optional) Watch  a video on section 1.2 (18:38) by Math Matt.     Do MyOpenMath questions from this section.     Exercises   What a Slope Field Represents   What does each little line segment in a slope field for the equation represent?      The slope of a solution curve passing through that point.    Correct. A slope field assigns a tiny line with slope at each point .     The value of at that point.  No—the line segment encodes slope, not height.    The second derivative .  No—slope fields visualize only the first derivative.      Reading Solution Behavior   When sketching a solution curve on a slope field, what rule should you follow?      Draw a curve that stays tangent to the nearby line segments.    Correct. A solution must follow the slopes shown in the field.     Draw any smooth curve that goes through the initial point.  No—the slope field dictates the direction the curve must follow.    Draw a horizontal line through the initial point.  No—only equations with would behave like this.      Using an Initial Condition   What does an initial condition like represent on a slope field?     The point where the solution curve must begin.   Correct. From that point, the solution must follow the slopes in the field.     A point where the slope must be zero.  No—the slope there is given by , not necessarily zero.    A value of where the solution does not exist.  No—initial conditions specify where the solution does exist and begin.      Interpreting a Slope Field Example   For the equation , what does the slope field suggest about the solution with initial condition ?     The solution remains the constant function .   Correct. At all points where , the slope , so the zero solution stays horizontal.     The solution grows rapidly for .  No—this happens only for initial conditions with .    The solution decreases for all .  No—zero slope implies constant behavior.        What do you see as the value in slope fields? What role does technology play in this concept?    Slope fields allow us to visualize the behavior of solutions to a first‑order differential equation even when no explicit formula for the solution is available. Each short line segment in the field shows the slope that a solution curve must follow at that point, helping us understand qualitative features such as growth, decay, stability, or how tiny changes in an initial condition affect the solution. Slope fields provide insight “even when we cannot explicitly solve the equation.”  Technology plays an essential role because manually drawing enough slope segments to reveal meaningful structure is impractical. The text notes that “in practice, one does not do this by hand; a computer can do the drawing,” allowing us to plot dense slope fields and overlay solution curves quickly and accurately.       In your own words, what does Picard's theorem say?    Picard’s theorem guarantees that if the function in the differential equation behaves nicely—specifically, if it is continuous and satisfies a suitable condition ensuring it doesn’t change too abruptly—then two important things happen near a chosen point :    There exists a solution curve passing through .    That solution is unique; no other solution curve through that same initial point can exist.    In other words, the theorem formalizes what slope fields visually suggest: given a starting point, the direction field forms a single “path” the solution must follow. This connects the geometric picture to a rigorous existence‑and‑uniqueness guarantee.      Consider the differential equation    Fill in the table below with the slopes at various values of and .  Slopes at various values of and for .                                                                                                   Plot the slopes in the table above to form a slope field.    On the given slope field in , sketch a solution curve to the initial value problem    Slope field for .   A slope field for y' = x-2y.          In is a slope field for .    Sketch a solution to the initial value problem , .    Sketch a solution to the initial value problem , .    Sketch a solution to the initial value problem , .    Does the IVP , have a solution for every ? If so, is that solution unique?   Slope field for .   A slope field for y' = 1.5y.          The initial value problem has no solution. Explain why this is the case in words using the slope field shown in .   Slope field for .   A slope field for y' = 1 over x.        The initial value problem has two solutions: and . Verify, algebraically, that both of these are indeed solutions. Then, draw both of these solutions on the direction field shown in .   Slope field for .   A slope field for y' = 2 times the square root of y.       Mystery slope field   The slope field in indicates the differential equation has which form?   A mystery slope field.   A mystery slope field.           Correct. The slope depends on vertical location.        No—the slope does not depend on the horizontal location.       No—the slope only depends on the vertical location.      Mystery slope field 2   The slope field in indicates the differential equation has which form?   Another mystery slope field.   Another mystery slope field.           Correct. The slope depends on the horizontal and vertical location.        No—the slope depends on the horizontal location.       No—the slope depends on the vertical location.      Mystery slope field 3   The slope field in indicates the differential equation has which form?   And yet another mystery slope field.   And yet another mystery slope field.          Correct. The slope depends only on the horizontal location.        No—the slope depends on the horizontal location.       No—the slope does not depend on the vertical location.       Use technology to generate the slope field of . Then, sketch likely solution curves for each of the following initial-value problems.                       Repeat the above question for the differential equation and the initial-value problems below.                   Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze how small changes in initial conditions can yield significantly different solution behaviors by examining the slope field.    Compare slope fields for two different differential equations to deduce how the structure of influences long‑term solution behavior.    Use geometric reasoning from slope fields to anticipate qualitative features such as stability, divergence, and monotonicity of solutions.     "
 },
 {
   "id": "ch-Textbook-4-2-2",
@@ -37,76 +244,139 @@ var ptx_lunr_docs = [
   "body": "slope fields "
 },
 {
-  "id": "SlopeFieldData",
+  "id": "mcq-slopefields-1",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeFieldData",
-  "type": "Table",
+  "url": "ch-Textbook-4.html#mcq-slopefields-1",
+  "type": "Exercise",
   "number": "1",
-  "title": "Slopes at various values of <span class=\"process-math\">\\(x\\)<\/span> and <span class=\"process-math\">\\(y\\)<\/span> for <span class=\"process-math\">\\(\\frac{dy}{dx} = x - 2y\\text{.}\\)<\/span>",
-  "body": " Slopes at various values of and for .                                                                                                "
+  "title": "What a Slope Field Represents.",
+  "body": " What a Slope Field Represents   What does each little line segment in a slope field for the equation represent?      The slope of a solution curve passing through that point.    Correct. A slope field assigns a tiny line with slope at each point .     The value of at that point.  No—the line segment encodes slope, not height.    The second derivative .  No—slope fields visualize only the first derivative.    "
 },
 {
-  "id": "SlopeField2026a",
+  "id": "mcq-slopefields-2",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeField2026a",
-  "type": "Figure",
+  "url": "ch-Textbook-4.html#mcq-slopefields-2",
+  "type": "Exercise",
   "number": "2",
-  "title": "",
-  "body": " Slope field for .   A slope field for y' = x-2y.   "
+  "title": "Reading Solution Behavior.",
+  "body": " Reading Solution Behavior   When sketching a solution curve on a slope field, what rule should you follow?      Draw a curve that stays tangent to the nearby line segments.    Correct. A solution must follow the slopes shown in the field.     Draw any smooth curve that goes through the initial point.  No—the slope field dictates the direction the curve must follow.    Draw a horizontal line through the initial point.  No—only equations with would behave like this.    "
 },
 {
-  "id": "SlopeField2026b",
+  "id": "mcq-slopefields-3",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeField2026b",
-  "type": "Figure",
+  "url": "ch-Textbook-4.html#mcq-slopefields-3",
+  "type": "Exercise",
   "number": "3",
-  "title": "",
-  "body": " Slope field for .   A slope field for y' = 1.5y.   "
+  "title": "Using an Initial Condition.",
+  "body": " Using an Initial Condition   What does an initial condition like represent on a slope field?     The point where the solution curve must begin.   Correct. From that point, the solution must follow the slopes in the field.     A point where the slope must be zero.  No—the slope there is given by , not necessarily zero.    A value of where the solution does not exist.  No—initial conditions specify where the solution does exist and begin.    "
 },
 {
-  "id": "SlopeField2026c",
+  "id": "mcq-slopefields-4",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeField2026c",
-  "type": "Figure",
+  "url": "ch-Textbook-4.html#mcq-slopefields-4",
+  "type": "Exercise",
   "number": "4",
-  "title": "",
-  "body": " Slope field for .   A slope field for y' = 1 over x.   "
+  "title": "Interpreting a Slope Field Example.",
+  "body": " Interpreting a Slope Field Example   For the equation , what does the slope field suggest about the solution with initial condition ?     The solution remains the constant function .   Correct. At all points where , the slope , so the zero solution stays horizontal.     The solution grows rapidly for .  No—this happens only for initial conditions with .    The solution decreases for all .  No—zero slope implies constant behavior.    "
 },
 {
-  "id": "SlopeField2026d",
+  "id": "value-of-slopefields",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeField2026d",
-  "type": "Figure",
+  "url": "ch-Textbook-4.html#value-of-slopefields",
+  "type": "Exercise",
   "number": "5",
   "title": "",
-  "body": " Slope field for .   A slope field for y' = 2 times the square root of y.   "
+  "body": "  What do you see as the value in slope fields? What role does technology play in this concept?    Slope fields allow us to visualize the behavior of solutions to a first‑order differential equation even when no explicit formula for the solution is available. Each short line segment in the field shows the slope that a solution curve must follow at that point, helping us understand qualitative features such as growth, decay, stability, or how tiny changes in an initial condition affect the solution. Slope fields provide insight “even when we cannot explicitly solve the equation.”  Technology plays an essential role because manually drawing enough slope segments to reveal meaningful structure is impractical. The text notes that “in practice, one does not do this by hand; a computer can do the drawing,” allowing us to plot dense slope fields and overlay solution curves quickly and accurately.   "
 },
 {
-  "id": "SlopeField2026e",
+  "id": "picards-theorem",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeField2026e",
-  "type": "Figure",
+  "url": "ch-Textbook-4.html#picards-theorem",
+  "type": "Exercise",
   "number": "6",
   "title": "",
-  "body": " A mystery slope field.   A mystery slope field.   "
+  "body": "  In your own words, what does Picard's theorem say?    Picard’s theorem guarantees that if the function in the differential equation behaves nicely—specifically, if it is continuous and satisfies a suitable condition ensuring it doesn’t change too abruptly—then two important things happen near a chosen point :    There exists a solution curve passing through .    That solution is unique; no other solution curve through that same initial point can exist.    In other words, the theorem formalizes what slope fields visually suggest: given a starting point, the direction field forms a single “path” the solution must follow. This connects the geometric picture to a rigorous existence‑and‑uniqueness guarantee.   "
 },
 {
-  "id": "SlopeField2026f",
+  "id": "sec-Toprepareforclass12-4-8",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeField2026f",
-  "type": "Figure",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-8",
+  "type": "Exercise",
   "number": "7",
   "title": "",
-  "body": " Another mystery slope field.   Another mystery slope field.   "
+  "body": "  Consider the differential equation    Fill in the table below with the slopes at various values of and .  Slopes at various values of and for .                                                                                                   Plot the slopes in the table above to form a slope field.    On the given slope field in , sketch a solution curve to the initial value problem    Slope field for .   A slope field for y' = x-2y.       "
 },
 {
-  "id": "SlopeField2026g",
+  "id": "sec-Toprepareforclass12-4-9",
   "level": "2",
-  "url": "ch-Textbook-4.html#SlopeField2026g",
-  "type": "Figure",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-9",
+  "type": "Exercise",
   "number": "8",
   "title": "",
-  "body": " And yet another mystery slope field.   And yet another mystery slope field.   "
+  "body": "  In is a slope field for .    Sketch a solution to the initial value problem , .    Sketch a solution to the initial value problem , .    Sketch a solution to the initial value problem , .    Does the IVP , have a solution for every ? If so, is that solution unique?   Slope field for .   A slope field for y' = 1.5y.       "
+},
+{
+  "id": "sec-Toprepareforclass12-4-10",
+  "level": "2",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-10",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  The initial value problem has no solution. Explain why this is the case in words using the slope field shown in .   Slope field for .   A slope field for y' = 1 over x.     "
+},
+{
+  "id": "sec-Toprepareforclass12-4-11",
+  "level": "2",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-11",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  The initial value problem has two solutions: and . Verify, algebraically, that both of these are indeed solutions. Then, draw both of these solutions on the direction field shown in .   Slope field for .   A slope field for y' = 2 times the square root of y.     "
+},
+{
+  "id": "sec-Toprepareforclass12-4-12",
+  "level": "2",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-12",
+  "type": "Exercise",
+  "number": "11",
+  "title": "Mystery slope field.",
+  "body": " Mystery slope field   The slope field in indicates the differential equation has which form?   A mystery slope field.   A mystery slope field.           Correct. The slope depends on vertical location.        No—the slope does not depend on the horizontal location.       No—the slope only depends on the vertical location.    "
+},
+{
+  "id": "sec-Toprepareforclass12-4-13",
+  "level": "2",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-13",
+  "type": "Exercise",
+  "number": "12",
+  "title": "Mystery slope field 2.",
+  "body": " Mystery slope field 2   The slope field in indicates the differential equation has which form?   Another mystery slope field.   Another mystery slope field.           Correct. The slope depends on the horizontal and vertical location.        No—the slope depends on the horizontal location.       No—the slope depends on the vertical location.    "
+},
+{
+  "id": "sec-Toprepareforclass12-4-14",
+  "level": "2",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-14",
+  "type": "Exercise",
+  "number": "13",
+  "title": "Mystery slope field 3.",
+  "body": " Mystery slope field 3   The slope field in indicates the differential equation has which form?   And yet another mystery slope field.   And yet another mystery slope field.          Correct. The slope depends only on the horizontal location.        No—the slope depends on the horizontal location.       No—the slope does not depend on the vertical location.    "
+},
+{
+  "id": "sec-Toprepareforclass12-4-15",
+  "level": "2",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-15",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  Use technology to generate the slope field of . Then, sketch likely solution curves for each of the following initial-value problems.                    "
+},
+{
+  "id": "sec-Toprepareforclass12-4-16",
+  "level": "2",
+  "url": "ch-Textbook-4.html#sec-Toprepareforclass12-4-16",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "  Repeat the above question for the differential equation and the initial-value problems below.               "
 },
 {
   "id": "ch-Textbook-5",
@@ -115,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 1.3 - Separable Equations",
-  "body": " Daily Prep 1.3 - Separable Equations   Overview  This section introduces separable differential equations , a class of first‑order ODEs that can be rewritten so that all -terms appear on one side and all -terms on the other. Once written in the form , both sides can be integrated to obtain a general (often implicit) solution. The section demonstrates how separation works, why special solutions like must be considered, and how implicit solutions arise naturally when solving the resulting integrals. It also clarifies that separation is justified rigorously through substitution rather than by treating as an algebraic fraction.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Identify when a differential equation can be written in the separable form .    Correctly separate variables to obtain .    Integrate both sides to obtain the general (possibly implicit) solution.      Learn!  Complete the actions listed below.     Watch video Introduction to Separation of Variables to Solve (6:25) by Mathispower4u.     Watch  Video 1.3.1: Separation of Variables by Trevor Bazett.     Read  Subsection 1.3.1: Separable equations and Subsection 1.3.2: Implicit solutions .     Do the computation left to the reader at the beginning of Subsection 1.3.2: Implicit solutions .     Watch  Video 1.3.2: Newton’s Law of Cooling by Trevor Bazett.     Watch  Example 1.3.2 Solve a Separable Differentiable Equation Using Factor by Grouping by Mathispower4u.     Read  Subsection 1.3.3: Examples of separable equations . Refer to Example 1.3.5 . What is a singular solution?     Watch  Separable Equations (39:44) for a lecture on section 1.3.     Do  Subsection 1.3.4: Exercises 1.3.1, 1.3.4, 1.3.9, 1.3.11. .    Try these additional questions. If necessary, use AI to guide your thinking.    Solve the initial value problem Hint: 'Separate' the variables and by, informally, writing the equation as     Consider the ODE . Using separation of variables, we earlier found a general solution to be . Hence, the IVP has unique solution .   What is the unique solution to the following IVP?   Why does the method of separation of variables `lose' the solution found in (a)?       (Optional) Watch more videos on solving separable equations via a YouTube playlist of The Math Sorcerer.     Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Justify separation using the chain rule and substitution rather than informal manipulation of .    Identify and include singular or special solutions (such as ) that arise when dividing by .    Recognize when the resulting integrals lead to solutions that must remain in implicit form and verify such solutions by differentiation.     "
+  "body": " Daily Prep 1.3 - Separable Equations   Overview  This section introduces separable differential equations , a class of first‑order ODEs that can be rewritten so that all -terms appear on one side and all -terms on the other. Once written in the form , both sides can be integrated to obtain a general (often implicit) solution. The section demonstrates how separation works, why special solutions like must be considered, and how implicit solutions arise naturally when solving the resulting integrals. It also clarifies that separation is justified rigorously through substitution rather than by treating as an algebraic fraction.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Identify when a differential equation can be written in the separable form .    Correctly separate variables to obtain .    Integrate both sides to obtain the general (possibly implicit) solution.      Learn!  Complete the actions listed below.     Watch video Introduction to Separation of Variables to Solve (6:25) by Mathispower4u.     Watch  Video 1.3.1: Separation of Variables by Trevor Bazett.     Read  Subsection 1.3.1: Separable equations and Subsection 1.3.2: Implicit solutions .     Do the computation left to the reader at the beginning of Subsection 1.3.2: Implicit solutions .     Watch  Video 1.3.2: Newton’s Law of Cooling by Trevor Bazett.     Watch  Example 1.3.2 Solve a Separable Differentiable Equation Using Factor by Grouping by Mathispower4u.     Read  Subsection 1.3.3: Examples of separable equations . Refer to Example 1.3.5 . What is a singular solution?     Watch  Separable Equations (39:44) for a lecture on section 1.3.     Do  Subsection 1.3.4: Exercises 1.3.1, 1.3.4, 1.3.9, 1.3.11. .    (Optional) Watch more videos on solving separable equations via a YouTube playlist of The Math Sorcerer.     Do MyOpenMath questions from this section.     Exercises   Recognizing a Separable Equation   Which of the following differential equations is separable?       Correct. This can be written as , which separates and .         Not separable; the and terms cannot be isolated into separate factors.         Not separable because and are entangled inside one function.       Identifying the Separation Step   To solve , which of the following is the correct next step?         Correct. This isolates terms on one side and terms on the other—exactly the method used in separable equations.      No separation has occurred yet.     This changes the equation incorrectly.      Solving a Simple Separable Equation   Solve the separable equation . What is the general solution?       Correct. Separating gives ; integrating yields , so .      The exponent must be , and a constant factor must remain arbitrary.     No, that would satisfy , not .      Solving With an Initial Condition   Solve the IVP What is ?       Correct. Separation gives . Integrating: . Applying gives , so .      Incorrect exponent; integrate carefully.     No—this would satisfy , missing the factor of .      Conceptual Meaning of Separation   Why is separating variables a valid method for solving ?      Because we can treat like a fraction and rearrange to , then integrate both sides.    Correct. Separate all -terms on one side and all -terms on the other, then integrate.     Because any differential equation can always be separated.  No—many important ODEs are not separable.    Because separation avoids integration entirely.  No—integrating both sides is the essential step.       Solve the initial value problem Hint: 'Separate' the variables and by, informally, writing the equation as     We begin with the separable differential equation To separate variables, we (informally) rewrite this as   Integrate both sides:   This yields   Exponentiating gives the general solution   Now apply the initial condition :   Therefore the particular solution is       Consider the ODE . Using separation of variables, we earlier found a general solution to be . Hence, the IVP has unique solution .   What is the unique solution to the following IVP?   Why does the method of separation of variables `lose' the solution found in (a)?     We are told that the differential equation has the general solution     To solve the IVP substitute into the general solution:   Since , it follows that . Therefore the unique solution to the IVP is     In the separation‑of‑variables method, we informally write as   This step requires dividing by . When , this division is not valid. Because the constant‑zero function satisfies the ODE but makes undefined, the separation process loses this solution. Thus the algebraic manipulation excludes the zero solution even though it is a perfectly valid solution of the original differential equation.         Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Justify separation using the chain rule and substitution rather than informal manipulation of .    Identify and include singular or special solutions (such as ) that arise when dividing by .    Recognize when the resulting integrals lead to solutions that must remain in implicit form and verify such solutions by differentiation.     "
 },
 {
   "id": "ch-Textbook-5-2-2",
@@ -125,6 +395,69 @@ var ptx_lunr_docs = [
   "number": "",
   "title": "",
   "body": "separable differential equations "
+},
+{
+  "id": "mcq-sep-1",
+  "level": "2",
+  "url": "ch-Textbook-5.html#mcq-sep-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Recognizing a Separable Equation.",
+  "body": " Recognizing a Separable Equation   Which of the following differential equations is separable?       Correct. This can be written as , which separates and .         Not separable; the and terms cannot be isolated into separate factors.         Not separable because and are entangled inside one function.     "
+},
+{
+  "id": "mcq-sep-2",
+  "level": "2",
+  "url": "ch-Textbook-5.html#mcq-sep-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Identifying the Separation Step.",
+  "body": " Identifying the Separation Step   To solve , which of the following is the correct next step?         Correct. This isolates terms on one side and terms on the other—exactly the method used in separable equations.      No separation has occurred yet.     This changes the equation incorrectly.    "
+},
+{
+  "id": "mcq-sep-3",
+  "level": "2",
+  "url": "ch-Textbook-5.html#mcq-sep-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Solving a Simple Separable Equation.",
+  "body": " Solving a Simple Separable Equation   Solve the separable equation . What is the general solution?       Correct. Separating gives ; integrating yields , so .      The exponent must be , and a constant factor must remain arbitrary.     No, that would satisfy , not .    "
+},
+{
+  "id": "mcq-sep-4",
+  "level": "2",
+  "url": "ch-Textbook-5.html#mcq-sep-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Solving With an Initial Condition.",
+  "body": " Solving With an Initial Condition   Solve the IVP What is ?       Correct. Separation gives . Integrating: . Applying gives , so .      Incorrect exponent; integrate carefully.     No—this would satisfy , missing the factor of .    "
+},
+{
+  "id": "mcq-sep-5",
+  "level": "2",
+  "url": "ch-Textbook-5.html#mcq-sep-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Conceptual Meaning of Separation.",
+  "body": " Conceptual Meaning of Separation   Why is separating variables a valid method for solving ?      Because we can treat like a fraction and rearrange to , then integrate both sides.    Correct. Separate all -terms on one side and all -terms on the other, then integrate.     Because any differential equation can always be separated.  No—many important ODEs are not separable.    Because separation avoids integration entirely.  No—integrating both sides is the essential step.    "
+},
+{
+  "id": "sec-Toprepareforclass13-4-7",
+  "level": "2",
+  "url": "ch-Textbook-5.html#sec-Toprepareforclass13-4-7",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Solve the initial value problem Hint: 'Separate' the variables and by, informally, writing the equation as     We begin with the separable differential equation To separate variables, we (informally) rewrite this as   Integrate both sides:   This yields   Exponentiating gives the general solution   Now apply the initial condition :   Therefore the particular solution is    "
+},
+{
+  "id": "sec-Toprepareforclass13-4-8",
+  "level": "2",
+  "url": "ch-Textbook-5.html#sec-Toprepareforclass13-4-8",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Consider the ODE . Using separation of variables, we earlier found a general solution to be . Hence, the IVP has unique solution .   What is the unique solution to the following IVP?   Why does the method of separation of variables `lose' the solution found in (a)?     We are told that the differential equation has the general solution     To solve the IVP substitute into the general solution:   Since , it follows that . Therefore the unique solution to the IVP is     In the separation‑of‑variables method, we informally write as   This step requires dividing by . When , this division is not valid. Because the constant‑zero function satisfies the ODE but makes undefined, the separation process loses this solution. Thus the algebraic manipulation excludes the zero solution even though it is a perfectly valid solution of the original differential equation.     "
 },
 {
   "id": "ch-Textbook-6",
