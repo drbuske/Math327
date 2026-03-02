@@ -53,7 +53,7 @@
 
 </section>
 
-<section xml:id="sec-Toprepareforclass52">
+<section xml:id="sec-Toprepareforclass02">
   <title>Learn!</title>
 
   <p>
@@ -64,7 +64,7 @@
   <li>
     <p>
       <alert>Watch</alert> video <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#introode">Intro to Differential Equations</url>.
+https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#introode">Intro to Differential Equations (10:38)</url> by Trevor Bazett.
     </p>
   </li>
 
@@ -78,7 +78,7 @@ https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#subsection-7">Subsecti
           <li>
           <p>
             <alert>Watch</alert> video <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#keydefs">The Key Definitions of Differential Equations</url>.
+https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#keydefs">The Key Definitions of Differential Equations (8:42)</url> by Trevor Bazett.
           </p>
         </li>
 
@@ -100,26 +100,22 @@ https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#subsection_fourfundame
 
           <li>
     <p>
-      <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=xQreuKvHFIo&amp;list=PLRfQb6m35rf5E7QllafnyOXD0tHHI_N9E&amp;index=2">Introduction to differential equations (34:13)</url> for a lecture on section 0.2.  
+      (Optional) <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=xQreuKvHFIo&amp;list=PLRfQb6m35rf5E7QllafnyOXD0tHHI_N9E&amp;index=2">Introduction to differential equations (34:13)</url> for a lecture on section 0.2.  
     </p>
   </li>
 
-        <li>
+ <!--    <li>
           <p>
             <alert>Do</alert> <url href="
 https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#exercise-1">Exercise 0.2.1</url>, <url href="
 https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#exercise-2">Exercise 0.2.2</url>. 
           </p>
-        </li>
-
-
-
-
+        </li> -->   
 
         <li>
           <p>
             <alert>Do</alert> <url href="
-https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#subsection-11">Subsection 0.2.5: Exercises 0.2.5, 0.2.6, 0.2.7, 0.2.8, 0.2.19</url>.
+https://web.uvic.ca/~tbazett/diffyqs/introde_section.html#subsection-11">Subsection 0.2.5: Exercises 0.2.1, 0.2.2, 0.2.5, 0.2.6, 0.2.7, 0.2.8, 0.2.19</url>.
           </p>
         </li>
 
@@ -132,7 +128,7 @@ https://web.uvic.ca/~tbazett/diffyqs/classification_section.html#classification_
 
                   <li>
     <p>
-      <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=ybg8dWlgtts&amp;list=PLRfQb6m35rf5E7QllafnyOXD0tHHI_N9E&amp;index=3&amp;pp=iAQB0gcJCZEKAYcqIYzv">Classification of differential equations (31:23)</url> for a lecture on section 0.3.  
+      (Optional) <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=ybg8dWlgtts&amp;list=PLRfQb6m35rf5E7QllafnyOXD0tHHI_N9E&amp;index=3&amp;pp=iAQB0gcJCZEKAYcqIYzv">Classification of differential equations (31:23)</url> for a lecture on section 0.3.  
     </p>
   </li>
 
@@ -143,95 +139,7 @@ https://web.uvic.ca/~tbazett/diffyqs/classification_section.html#subsection-12">
           </p>
         </li>
 
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-            <ol>
-              <li>
-                <p>
-What does the <em>order</em> of a differential equation refer to? 
-                </p>
-              </li>
-              
-              <li>
-                <p>
-                  Values are typical solutions to algebraic equations (e.g.
-<m>x=2</m> solves <m>3x=6</m>).
-What objects are typical solutions to differential equations?
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  Give a specific example of a differential equation that is autonomous and one that is not.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                (Newton’s Law of Cooling)
-                </p>
-
-                <p>
-                  The time rate of change of the temperature <m>T(t)</m> of a body is proportional to the difference between <m>T</m> and the temperature <m>A</m> of the surrounding medium.
-                  That is,
-                    <me>
-                      \frac{dT}{dt}= -k (T-A)
-                    </me>
-                  where <m>k</m> is a positive constant.
-                </p>
-
-<ol>
-  <li>
-    <p>
-      If <m>T > A</m>, is <m>\frac{dT}{dt}</m> positive, negative, or zero? Is the body warming or cooling?
-    </p>
-  </li>
-
-  <li>
-    <p>
-      What can be said if <m>T &#x3C; A</m>?
-    </p>
-  </li>
-</ol>
-              </li>
-
-<li>
-  <p>
-    State the order of each differential equation and determine whether it is linear or nonlinear.
-</p>
-
-<ol>
-  <li>
-    <p>
-      <m>(1-x)y'' - 4xy' + 5y = \cos x</m>
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <m>\displaystyle x\frac{d^{3}y}{dx^{3}}- \left( \frac{dy}{dx}\right)^{4} + y = 0</m>
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <m>\displaystyle \frac{d^{2}u}{dr^{2}}+ \frac{du}{dr}+ u = \cos (r+u)</m>
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <m>\displaystyle (\sin \theta)y'''-(\cos \theta)y' = 2</m>
-    </p>
-  </li>
-</ol>
-
-</li>
-
-            </ol>
-          </p>
-        </li>
+        
 
         <li>
           <p>
@@ -241,9 +149,421 @@ What objects are typical solutions to differential equations?
         
         </ul>
 
+
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise label="mcq-de-definition">
+  <title>What Is a Differential Equation?</title>
+
+  <statement>
+    <p>
+      Which statement correctly describes a differential equation?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>An equation involving an unknown function and one or more of its derivatives.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A differential equation is an equation that includes an 
+          unknown function and its derivatives.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>An equation involving only algebraic expressions of <m>x</m>.</p></statement>
+      <feedback><p>No—this would be an ordinary algebraic equation.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>An equation that always has a unique solution.</p></statement>
+      <feedback><p>No. Differential equations may have many solutions or none.  
+      </p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-dependent-independent">
+  <title>Identifying Dependent and Independent Variables</title>
+
+  <statement>
+    <p>
+      In the differential equation  
+      <m>\frac{dx}{dt} + x = 2\cos t,</m>  
+      which is the dependent variable?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>x</m></p></statement>
+      <feedback>
+        <p>
+          Correct. <m>x</m> depends on <m>t</m>, so it is the dependent variable.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>t</m></p></statement>
+      <feedback><p>No—<m>t</m> is the independent variable.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\cos t</m></p></statement>
+      <feedback><p>No—this is part of the forcing term.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-ode-vs-pde">
+  <title>ODE or PDE?</title>
+
+  <statement>
+    <p>
+      Is the equation  
+      <m>\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}</m>  
+      an ODE or a PDE?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>A partial differential equation (PDE)</p></statement>
+      <feedback>
+        <p>
+          Correct. It involves partial derivatives with respect to different 
+          variables (<m>t</m> and <m>x</m>).
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>An ordinary differential equation (ODE)</p></statement>
+      <feedback><p>No—an ODE has derivatives with respect to a single variable.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Neither: it is algebraic.</p></statement>
+      <feedback><p>No—it clearly contains derivatives.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-order-of-de">
+  <title>Determining the Order of a Differential Equation</title>
+
+  <statement>
+    <p>
+      What is the order of the differential equation  
+      <m>m\,x'' + c\,x' + kx = f(t)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>Second order</p></statement>
+      <feedback>
+        <p>
+          Correct. The highest derivative appearing is <m>x''</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>First order</p></statement>
+      <feedback><p>No—the equation includes a second derivative.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Third order</p></statement>
+      <feedback><p>No third derivative appears.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-system-or-single">
+  <title>System or Single Equation?</title>
+
+  <statement>
+    <p>
+      Consider the pair  
+      <m>y' = x, x' = y.</m>  
+      How should this be classified?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>A system of ordinary differential equations</p></statement>
+      <feedback>
+        <p>
+          Correct. There are two equations and two dependent variables 
+          (<m>x</m> and <m>y</m>), each depending on the same independent variable.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A single ordinary differential equation</p></statement>
+      <feedback><p>No—it consists of two linked equations.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A partial differential equation</p></statement>
+      <feedback><p>No—it contains no partial derivatives.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="order-of-de">
+  <statement>
+    <p>
+      What does the <em>order</em> of a differential equation refer to?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The <em>order</em> of a differential equation is the order of the
+      highest derivative that appears in the equation.  
+      For example, if the largest derivative present is <m>x''</m>, then the
+      equation is second order; if the highest derivative is <m>y^{(4)}</m>,
+      then it is fourth order.  
+    </p>
+  </solution>
+</exercise>
+
+  <!-- EXERCISE 1 -->
+  <exercise xml:id="de-solutions-vs-values">
+    <statement>
+      <p>
+        Values such as <m>x = 2</m> are typical solutions to algebraic equations 
+        (for example, <m>x = 2</m> solves <m>3x = 6</m>).  
+        What objects are typical solutions to differential equations?
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Differential equations involve an unknown function and its derivatives, 
+        so their solutions are <em>functions</em>, not numbers.  
+        These functions must satisfy the relationship between derivatives given 
+        in the equation.  
+        Solving a differential equation means finding 
+        a function <m>x(t)</m> that makes the equation true when substituted.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- EXERCISE 2 -->
+  <exercise xml:id="autonomous-vs-not">
+    <statement>
+      <p>
+        Give a specific example of a differential equation that is 
+        <em>autonomous</em> and one that is <em>not</em> autonomous.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        An autonomous differential equation is one in which the independent 
+        variable (often <m>t</m>) does not appear explicitly.  
+        For example:
+      </p>
+
+      <me>
+        \frac{dy}{dt} = y(1 - y)
+      </me>
+
+      <p>
+        is autonomous because the right-hand side depends only on <m>y</m>.  
+        A non-autonomous example is:
+      </p>
+
+      <me>
+        \frac{dy}{dt} = t + y
+      </me>
+
+      <p>
+        because the independent variable <m>t</m> appears explicitly.  
+        Differential equations are classified according 
+        to such features.  
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- EXERCISE 3 -->
+  <exercise xml:id="newton-law-cooling-conceptual">
+    <title>Newton’s Law of Cooling</title>
+
+    <statement>
+      <p>
+        The time rate of change of the temperature <m>T(t)</m> of a body is 
+        proportional to the difference between <m>T</m> and the surrounding 
+        temperature <m>A</m>.  
+        That is,
+      </p>
+
+      <me>
+        \frac{dT}{dt} = -k (T - A), k &gt; 0.
+      </me>
+
+      <p>Answer the following:</p>
+
+      <ol label="(a)">
+        <li>
+          <p>
+            If <m>T &gt; A</m>, is <m>\frac{dT}{dt}</m> positive, negative, or zero?  
+            Is the body warming or cooling?
+          </p>
+        </li>
+        <li>
+          <p>
+            What can be said if <m>T &lt; A</m>?
+          </p>
+        </li>
+      </ol>
+    </statement>
+
+    <solution>
+      <p>
+        <strong>(a)</strong>  
+        If <m>T > A</m>, then <m>(T - A) &gt; 0</m>, so  
+        <m>\frac{dT}{dt} = -k(T - A) &lt; 0</m>.  
+        Thus the temperature is decreasing: the body is <em>cooling</em>.
+      </p>
+
+      <p>
+        <strong>(b)</strong>  
+        If <m>T &lt; A</m>, then <m>(T - A) &lt; 0</m>, so  
+        <m>\frac{dT}{dt} = -k(T - A) &gt; 0</m>.  
+        The temperature increases: the body is <em>warming</em>.
+      </p>
+
+      <p>
+        These ideas reflect the interpretation of differential equations as 
+        describing how quantities change.  
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- EXERCISE 4 -->
+  <exercise xml:id="order-and-linearity">
+    <statement>
+      <p>
+        State the order of each differential equation and determine whether it 
+        is linear or nonlinear.
+      </p>
+
+      <ol label="(a)">
+        <li>
+          <p>
+            <m>(1-x)y'' - 4xy' + 5y = \cos x</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>
+              x\frac{d^3 y}{dx^3}
+              - \left(\frac{dy}{dx}\right)^4
+              + y = 0
+            </m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>
+              \frac{d^2 u}{dr^2}
+              + \frac{du}{dr}
+              + u
+              = \cos(r + u)
+            </m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>
+              (\sin\theta) y''' - (\cos\theta) y' = 2
+            </m>
+          </p>
+        </li>
+      </ol>
+    </statement>
+
+    <solution>
+      <p>
+        Using the definitions,  
+        the <em>order</em> is the highest derivative present, and the equation is 
+        <em>linear</em> if the dependent variable and its derivatives appear only 
+        to the first power and are not composed inside nonlinear functions.
+      </p>
+
+      <ol label="(a)">
+        <li>
+          <p>
+            Highest derivative is <m>y''</m> ⇒ <strong>second order</strong>.  
+            All terms are linear in <m>y, y', y''</m> ⇒ <strong>linear</strong>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Highest derivative is <m>y'''</m> ⇒ <strong>third order</strong>.  
+            The term <m>(y')^4</m> makes it <strong>nonlinear</strong>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Highest derivative is <m>u''</m> ⇒ <strong>second order</strong>.  
+            The term <m>\cos(r+u)</m> depends nonlinearly on <m>u</m> ⇒ 
+            <strong>nonlinear</strong>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Highest derivative is <m>y'''</m> ⇒ <strong>third order</strong>.  
+            The equation is linear in <m>y</m> and its derivatives ⇒ 
+            <strong>linear</strong>.
+          </p>
+        </li>
+      </ol>
+    </solution>
+  </exercise>
+
+
+</exercises>
+
 </section>
 
-      <section xml:id="sec-Advancedlearningobjectives52">
+      <section xml:id="sec-Advancedlearningobjectives02">
         <title>Advanced learning objectives</title>
 
         <p>

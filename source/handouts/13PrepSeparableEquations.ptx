@@ -121,32 +121,6 @@ https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#subsection-20">Subse
         </li>
 
 
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-          </p>
-            <ol>
-              
-
-
-<li>
-<p>
- Solve the initial value problem <me>\frac{dy}{dx} = -6xy, \ \ y(0) = -4.</me>  Hint: 'Separate' the variables <m>x</m> and <m>y</m> by, informally, writing the equation as <m>\displaystyle \frac{dy}{y} = -6x \ dx.</m>
-</p>  
-</li>
-
-<li>
-<p> Consider the ODE <m>\displaystyle \frac{dy}{dx} =-6xy</m>.  Using separation of variables, we earlier found a general solution to be <m>y(x) = Ce^{-3x^2}</m>.  Hence, the IVP <m>\displaystyle \frac{dy}{dx} =-6xy; y(0)=-4</m> has unique solution <m>y(x) = -4e^{-3x^2}</m>. 
-</p> 
-<ol>
-<li><p> What is the unique solution to the following IVP? <me>\frac{dy}{dx} =-6xy; y(0)=0</me> </p></li>
-<li><p> Why does the method of separation of variables `lose' the solution found in (a)?  </p></li>
-</ol>
-</li>
-
-
-</ol>
-</li>
 
 
 <li>
@@ -163,6 +137,332 @@ https://web.uvic.ca/~tbazett/diffyqs/separable_section.html#subsection-20">Subse
         </li>
         
         </ul>
+
+<exercises>
+  <title>Exercises</title>
+  
+<exercise label="mcq-sep-1">
+  <title>Recognizing a Separable Equation</title>
+
+  <statement>
+    <p>
+      Which of the following differential equations is separable?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\displaystyle \frac{dy}{dx} = x(1+y^2)</m></p></statement>
+      <feedback>
+        <p>
+          Correct. This can be written as 
+          <m>\frac{dy}{1+y^2} = x\,dx</m>,  
+          which separates <m>x</m> and <m>y</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\displaystyle \frac{dy}{dx} = x + y</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Not separable; the <m>x</m> and <m>y</m> terms cannot be isolated into 
+          separate factors.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>\displaystyle \frac{dy}{dx} = \sin(x+y)</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Not separable because <m>x</m> and <m>y</m> are entangled inside one function.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-sep-2">
+  <title>Identifying the Separation Step</title>
+
+  <statement>
+    <p>
+      To solve <m>\frac{dy}{dx} = y e^x</m>, which of the following is the correct next step?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>\displaystyle \frac{1}{y}\,dy = e^x\,dx</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This isolates <m>y</m> terms on one side and <m>x</m> terms on the other—exactly the method used in separable equations.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\displaystyle dy = ye^{x}\,dx</m></p></statement>
+      <feedback><p>No separation has occurred yet.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\displaystyle dy = e^{xy}\,dx</m></p></statement>
+      <feedback><p>This changes the equation incorrectly.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-sep-3">
+  <title>Solving a Simple Separable Equation</title>
+
+  <statement>
+    <p>
+      Solve the separable equation <m>\frac{dy}{dx} = 3y</m>.  
+      What is the general solution?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y = Ce^{3x}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Separating gives <m>\frac{1}{y}dy = 3\,dx</m>; integrating yields 
+          <m>\ln|y| = 3x + C</m>, so <m>y=Ce^{3x}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 3e^x</m></p></statement>
+      <feedback><p>The exponent must be <m>3x</m>, and a constant factor must remain arbitrary.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = Cx^3</m></p></statement>
+      <feedback><p>No, that would satisfy <m>y' = 3Cx^2</m>, not <m>3y</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-sep-4">
+  <title>Solving With an Initial Condition</title>
+
+  <statement>
+    <p>
+      Solve the IVP  
+      <m>\frac{dy}{dx} = x^2 y,\qquad y(0)=2.</m>  
+      What is <m>y(x)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y = 2\, e^{x^{3}/3}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Separation gives <m>\frac{1}{y}dy = x^2 dx</m>.  
+          Integrating: <m>\ln|y| = x^3/3 + C</m>.  
+          Applying <m>y(0)=2</m> gives <m>C=\ln 2</m>, so  
+          <m>y = 2 e^{x^3/3}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 2e^{x^{2}/2}</m></p></statement>
+      <feedback><p>Incorrect exponent; integrate <m>x^2</m> carefully.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 2 + x^3/3</m></p></statement>
+      <feedback><p>No—this would satisfy <m>y' = x^2/1</m>, missing the factor of <m>y</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-sep-5">
+  <title>Conceptual Meaning of Separation</title>
+
+  <statement>
+    <p>
+      Why is separating variables a valid method for solving  
+      <m>\frac{dy}{dx}=f(x)g(y)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>Because we can treat <m>dy/dx</m> like a fraction and rearrange to <m>\frac{1}{g(y)}dy = f(x)dx</m>, then integrate both sides.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Separate all <m>y</m>-terms on one side 
+          and all <m>x</m>-terms on the other, then integrate.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because any differential equation can always be separated.</p></statement>
+      <feedback><p>No—many important ODEs are not separable.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because separation avoids integration entirely.</p></statement>
+      <feedback><p>No—integrating both sides is the essential step.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+   
+<exercise>
+<statement>
+<p>
+ Solve the initial value problem <me>\frac{dy}{dx} = -6xy, \ \ y(0) = -4.</me>  Hint: 'Separate' the variables <m>x</m> and <m>y</m> by, informally, writing the equation as <m>\displaystyle \frac{dy}{y} = -6x \ dx.</m>
+</p>  
+</statement>
+
+<solution>
+  <p>
+    We begin with the separable differential equation
+    <m>\frac{dy}{dx} = -6xy.</m>
+    To separate variables, we (informally) rewrite this as
+    <m>\displaystyle \frac{1}{y}\,dy = -6x\,dx.</m>
+  </p>
+
+  <p>
+    Integrate both sides:
+  </p>
+
+  <me>
+    \int \frac{1}{y}\,dy = \int -6x\,dx.
+  </me>
+
+  <p>
+    This yields
+  </p>
+
+  <me>
+    \ln|y| = -3x^{2} + C.
+  </me>
+
+  <p>
+    Exponentiating gives the general solution
+  </p>
+
+  <me>
+    y = C e^{-3x^{2}}.
+  </me>
+
+  <p>
+    Now apply the initial condition <m>y(0) = -4</m>:
+  </p>
+
+  <me>
+    -4 = C e^{0} = C.
+  </me>
+
+  <p>
+    Therefore the particular solution is
+  </p>
+
+  <me>
+    y(x) = -4\, e^{-3x^{2}}.
+  </me>
+</solution>
+</exercise>
+
+<exercise>
+  <statement>
+<p> Consider the ODE <m>\displaystyle \frac{dy}{dx} =-6xy</m>.  Using separation of variables, we earlier found a general solution to be <m>y(x) = Ce^{-3x^2}</m>.  Hence, the IVP <m>\displaystyle \frac{dy}{dx} =-6xy; y(0)=-4</m> has unique solution <m>y(x) = -4e^{-3x^2}</m>. 
+</p> 
+<ol>
+<li><p> What is the unique solution to the following IVP? <me>\frac{dy}{dx} =-6xy; y(0)=0</me> </p></li>
+<li><p> Why does the method of separation of variables `lose' the solution found in (a)?  </p></li>
+</ol>
+</statement>
+
+<solution>
+
+  <p>
+    We are told that the differential equation
+    <m>\dfrac{dy}{dx} = -6xy</m>
+    has the general solution
+    <m>y(x) = C e^{-3x^{2}}.</m>
+  </p>
+
+  <ol>
+
+    <li>
+      <p>
+        To solve the IVP
+        <me>
+          \frac{dy}{dx} = -6xy, \qquad y(0)=0,
+        </me>
+        substitute <m>x=0</m> into the general solution:
+      </p>
+
+      <me>
+        y(0) = C e^{-3\cdot 0^{2}} = C.
+      </me>
+
+      <p>
+        Since <m>y(0)=0</m>, it follows that <m>C=0</m>.  
+        Therefore the unique solution to the IVP is
+      </p>
+
+      <me>
+        y(x) \equiv 0.
+      </me>
+    </li>
+
+    <li>
+      <p>
+        In the separation‑of‑variables method, we informally write
+        <m>\dfrac{dy}{dx} = -6xy</m> as
+      </p>
+
+      <me>
+        \frac{1}{y}\,dy = -6x\,dx.
+      </me>
+
+      <p>
+        This step requires dividing by <m>y</m>.  
+        When <m>y=0</m>, this division is not valid.  
+        Because the constant‑zero function <m>y(x)\equiv 0</m> satisfies the ODE but
+        makes <m>\tfrac{1}{y}</m> undefined, the separation process
+        <em>loses</em> this solution.  
+        Thus the algebraic manipulation excludes the zero solution even though it is a
+        perfectly valid solution of the original differential equation.
+      </p>
+    </li>
+
+  </ol>
+
+</solution>
+</exercise>
+
+
+</exercises>
 
 </section>
 

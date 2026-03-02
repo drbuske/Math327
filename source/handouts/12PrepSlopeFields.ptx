@@ -89,30 +89,6 @@ https://web.uvic.ca/~tbazett/diffyqs/slopefields_section.html#subsection-15">Sub
 </p>
 </li>
 
-<li>
-<p>
-Try these additional questions.  If necessary, use AI to guide your thinking. 
-<ol>
-
-<li>
-<p> 
-What do you see as the value in slope fields?  What role does technology play in this concept?  
-</p>
-</li>
-
-<li>
-<p> 
-In your own words, what does <url href="https://web.uvic.ca/~tbazett/diffyqs/slopefields_section.html#slope_picardthm">Picard's theorem</url> say?  
-</p>
-</li>
-
-</ol>
-</p>
-</li>
-
-
-   
-
     <li>
     <p>
       <alert>Watch</alert> <url href="https://youtu.be/LoO_zg4Ohzo?list=PLRfQb6m35rf5E7QllafnyOXD0tHHI_N9E">Slope Field (30:34)</url> for a lecture on section 1.2.  
@@ -121,7 +97,7 @@ In your own words, what does <url href="https://web.uvic.ca/~tbazett/diffyqs/slo
 
 <li>
 <p>
-<alert>Watch</alert> <url href="https://youtu.be/Al7lCMutqmg">Create Slope Fields Using GeoGebra (2:49)</url>.  
+<alert>Watch</alert> video <url href="https://youtu.be/Al7lCMutqmg">Create Slope Fields Using GeoGebra (2:49)</url>.  
 </p>
 </li>
 
@@ -134,14 +110,251 @@ https://web.uvic.ca/~tbazett/diffyqs/slopefields_section.html#subsection-16">Sub
         </li>
 
 
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-            <ol>
-              
+    
+<!-- <li>
+<p> Solve the initial value problem <me>\frac{dy}{dx} = -6xy, \ \ y(0) = -4.</me>  Hint: 'Separate' the variables <m>x</m> and <m>y</m> by, informally, writing the equation as <m>\displaystyle \frac{dy}{y} = -6x \ dx.</m>
+</p>
+</li> -->
+
 
 
 <li>
+<p>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/XE7I_yPMmsc">a video on section 1.2 (18:38)</url> by Math Matt.
+</p>
+</li>
+
+
+        <li>
+          <p>
+            <alert>Do</alert> MyOpenMath questions from this section. 
+          </p>
+        </li>
+        
+        </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="mcq-slopefields-1">
+  <title>What a Slope Field Represents</title>
+
+  <statement>
+    <p>
+      What does each little line segment in a slope field for the equation 
+      <m>y' = f(x,y)</m> represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>The slope <m>f(x,y)</m> of a solution curve passing through that point.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A slope field assigns a tiny line with slope <m>f(x,y)</m> at 
+          each point <m>(x,y)</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The value of <m>y</m> at that point.</p></statement>
+      <feedback><p>No—the line segment encodes slope, not height.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The second derivative <m>y''</m>.</p></statement>
+      <feedback><p>No—slope fields visualize only the first derivative.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-slopefields-2">
+  <title>Reading Solution Behavior</title>
+
+  <statement>
+    <p>
+      When sketching a solution curve on a slope field, what rule should you follow?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>Draw a curve that stays tangent to the nearby line segments.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A solution must follow the slopes shown in the field.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Draw any smooth curve that goes through the initial point.</p></statement>
+      <feedback><p>No—the slope field dictates the direction the curve must follow.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Draw a horizontal line through the initial point.</p></statement>
+      <feedback><p>No—only equations with <m>y'=0</m> would behave like this.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-slopefields-3">
+  <title>Using an Initial Condition</title>
+
+  <statement>
+    <p>
+      What does an initial condition like <m>y(x_0)=y_0</m> represent on a slope field?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>The point where the solution curve must begin.</p></statement>
+      <feedback>
+        <p>
+          Correct. From that point, the solution must follow the slopes in the 
+          field.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A point where the slope must be zero.</p></statement>
+      <feedback><p>No—the slope there is given by <m>f(x_0,y_0)</m>, not necessarily zero.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A value of <m>x</m> where the solution does not exist.</p></statement>
+      <feedback><p>No—initial conditions specify where the solution <em>does</em> exist and begin.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-slopefields-4">
+  <title>Interpreting a Slope Field Example</title>
+
+  <statement>
+    <p>
+      For the equation <m>y' = xy</m>, what does the slope field suggest about 
+      the solution with initial condition <m>y(0)=0</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>The solution remains the constant function <m>y=0</m>.</p></statement>
+      <feedback>
+        <p>
+          Correct. At all points where <m>y=0</m>, the slope <m>xy = 0</m>, so the 
+          zero solution stays horizontal.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The solution grows rapidly for <m>x&gt;0</m>.</p></statement>
+      <feedback><p>No—this happens only for initial conditions with <m>y&gt;0</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The solution decreases for all <m>x</m>.</p></statement>
+      <feedback><p>No—zero slope implies constant behavior.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+  <!-- EXERCISE 1 -->
+  <exercise xml:id="value-of-slopefields">
+    <statement>
+      <p>
+        What do you see as the value in slope fields?  
+        What role does technology play in this concept?
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Slope fields allow us to visualize the behavior of solutions to a 
+        first‑order differential equation <m>y' = f(x,y)</m> even when 
+        no explicit formula for the solution is available.  
+        Each short line segment in the field shows the slope that a solution 
+        curve must follow at that point, helping us understand qualitative 
+        features such as growth, decay, stability, or how tiny changes in an
+        initial condition affect the solution.  
+        Slope fields provide insight “even when we cannot explicitly solve 
+        the equation.”
+      </p>
+
+      <p>
+        Technology plays an essential role because manually drawing enough
+        slope segments to reveal meaningful structure is impractical.  
+        The text notes that “in practice, one does not do this by hand;  
+        a computer can do the drawing,” allowing us to plot dense slope fields 
+        and overlay solution curves quickly and accurately.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <!-- EXERCISE 2 -->
+  <exercise xml:id="picards-theorem">
+    <statement>
+      <p>
+        In your own words, what does 
+        <url href="https://web.uvic.ca/~tbazett/diffyqs/slopefields_section.html#slope_picardthm">Picard's theorem</url>
+        say?
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Picard’s theorem guarantees that if the function <m>f(x,y)</m> in the 
+        differential equation <m>y' = f(x,y)</m> behaves nicely—specifically,
+        if it is continuous and satisfies a suitable condition ensuring it 
+        doesn’t change too abruptly—then two important things happen near a chosen 
+        point <m>(x_0, y_0)</m>:  
+      </p>
+
+      <ul>
+        <li>
+          <p>
+            There exists a solution curve passing through <m>(x_0, y_0)</m>.  
+          </p>
+        </li>
+        <li>
+          <p>
+            That solution is unique; no other solution curve through that same 
+            initial point can exist.  
+          </p>
+        </li>
+      </ul>
+
+      <p>
+        In other words, the theorem formalizes what slope fields visually suggest:
+        given a starting point, the direction field forms a single “path” the 
+        solution must follow.  This connects the geometric picture to a rigorous 
+        existence‑and‑uniqueness guarantee.  
+      </p>
+    </solution>
+</exercise>
+
+<exercise>
+<statement>
 <p>
  Consider the differential equation <me>\frac{dy}{dx} = x - 2y.</me>
 </p>  
@@ -225,20 +438,18 @@ https://web.uvic.ca/~tbazett/diffyqs/slopefields_section.html#subsection-16">Sub
       </image>
 </figure>
 
-
 </li>
 
 </ol>
-</li>
+</statement>
+</exercise>
 
-
-
-
-<li>
+<exercise>
+  <statement>
 <p> In <xref ref="SlopeField2026b"/> is a slope field for <m>\frac{dy}{dx} = 1.5y</m>. 
 </p>
 
-<ol>
+<ol label="(a)">
 <li>
 <p> 
 Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y(0)= 1</m>. 
@@ -267,18 +478,13 @@ Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y
         <description>A slope field for y' = 1.5y.</description>
       </image>
 </figure>
-
 </li>
-
-
 </ol>
-</li>
+</statement>
+</exercise>
 
-
-
-
- 
-<li>
+<exercise>
+  <statement>
 <p> The initial value problem <me>y' = \frac{1}{x}, \ \ \ y(0) = 0</me> has no solution.  Explain why this is the case in words using the slope field shown in <xref ref="SlopeField2026c"/>. 
 </p>
 
@@ -288,9 +494,11 @@ Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y
         <description>A slope field for y' = 1 over x.</description>
       </image>
 </figure>
-</li>
+</statement>
+</exercise>
 
-<li>
+<exercise>
+  <statement>
 <p> The initial value problem <me>y' = 2\sqrt{y}, \ \ \ y(0) = 0</me> has <em>two</em> solutions: <m>y_1(x) = x^2</m> and <m>y_2(x) \equiv 0</m>.  Verify, algebraically, that both of these are indeed solutions.  Then, draw both of these solutions on the direction field shown in <xref ref="SlopeField2026d"/>. 
 </p>
  
@@ -301,10 +509,13 @@ Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y
       </image>
 </figure>
 
-</li>
+</statement>
+</exercise>
 
-<li>
-<p> [Multiple-choice] The slope field in <xref ref="SlopeField2026e"/> indicates the differential equation has which form? </p>
+<exercise>
+  <title>Mystery slope field</title>
+  <statement>
+<p>The slope field in <xref ref="SlopeField2026e"/> indicates the differential equation has which form? </p>
 
 <figure xml:id="SlopeField2026e" xmlns:xi="http://www.w3.org/2001/XInclude">
       <caption>A mystery slope field.</caption>
@@ -312,16 +523,35 @@ Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y
         <description>A mystery slope field.</description>
       </image>
 </figure>
+  </statement>
 
-<ol marker="A.">
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(y)</m> </p></li>
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(t)</m> </p></li>
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(t,y)</m> </p></li>
-</ol>
-</li>
+  <choices randomize="yes">
 
-<li>
-<p> [Multiple-choice] The slope field in <xref ref="SlopeField2026f"/> indicates the differential equation has which form? </p>
+    <choice correct="yes">
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(y)</m> </p></statement>
+      <feedback>
+        <p>
+          Correct. The slope depends on vertical location.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(t)</m> </p></statement>
+      <feedback><p>No—the slope does not depend on the horizontal location.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(t,y)</m> </p></statement>
+      <feedback><p>No—the slope only depends on the vertical location.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise>
+  <title>Mystery slope field 2</title>
+  <statement>
+<p>The slope field in <xref ref="SlopeField2026f"/> indicates the differential equation has which form? </p>
 
 <figure xml:id="SlopeField2026f" xmlns:xi="http://www.w3.org/2001/XInclude">
       <caption>Another mystery slope field.</caption>
@@ -329,42 +559,70 @@ Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y
         <description>Another mystery slope field.</description>
       </image>
 </figure>
+  </statement>
 
-<ol marker="A.">
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(y)</m> </p></li>
+  <choices randomize="yes">
 
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(t)</m> </p></li>
+    <choice correct="yes">
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(t,y)</m> </p></statement>
+      <feedback>
+        <p>
+          Correct. The slope depends on the horizontal and vertical location.  
+        </p>
+      </feedback>
+    </choice>
 
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(t,y)</m> </p></li>
-</ol>
-</li>
+    <choice>
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(y)</m> </p></statement>
+      <feedback><p>No—the slope depends on the horizontal location.</p></feedback>
+    </choice>
 
+    <choice>
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(t)</m> </p></statement>
+      <feedback><p>No—the slope depends on the vertical location.</p></feedback>
+    </choice>
 
-<li>
-<p> [Multiple-choice] The slope field in <xref ref="SlopeField2026g"/> indicates the differential equation has which form? </p>
+  </choices>
+</exercise>
+
+<exercise>
+  <title>Mystery slope field 3</title>
+  <statement>
+<p>The slope field in <xref ref="SlopeField2026g"/> indicates the differential equation has which form? </p>
 <figure xml:id="SlopeField2026g" xmlns:xi="http://www.w3.org/2001/XInclude">
       <caption>And yet another mystery slope field.</caption>
       <image source="SlopeField2026g.jpg" width="50%">
         <description>And yet another mystery slope field.</description>
       </image>
 </figure> 
+  </statement>
 
-<ol marker="A.">
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(y)</m> </p></li>
+  <choices randomize="yes">
 
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(t)</m> </p></li>
+    <choice correct="yes">
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(t)</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The slope depends only on the horizontal location.  
+        </p>
+      </feedback>
+    </choice>
 
-<li><p> <m>\displaystyle \frac{dy}{dt} = f(t,y)</m> </p></li>
-</ol>
-</li>
+    <choice>
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(y)</m> </p></statement>
+      <feedback><p>No—the slope depends on the horizontal location.</p></feedback>
+    </choice>
 
+    <choice>
+      <statement><p> <m>\displaystyle \frac{dy}{dt} = f(t,y)</m> </p></statement>
+      <feedback><p>No—the slope does not depend on the vertical location.</p></feedback>
+    </choice>
 
-<li>
-<p> Solve the initial value problem <me>\frac{dy}{dx} = -6xy, \ \ y(0) = -4.</me>  Hint: 'Separate' the variables <m>x</m> and <m>y</m> by, informally, writing the equation as <m>\displaystyle \frac{dy}{y} = -6x \ dx.</m>
-</p>
-</li>
+  </choices>
+</exercise>
 
-<li>
+<exercise>
+  <statement>
   <p>
     Use technology to generate the slope field of <m>\frac{dy}{dx} = -y-\sin x</m>. Then, 
     sketch likely
@@ -391,16 +649,18 @@ Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y
   </li>
 </ol>
 
-</li>
+</statement>
+</exercise>
 
-<li>
+<exercise>
+<statement>
   <p>
     Repeat the above question for the differential
   equation <m>\frac{dy}{dx}= x^{2} - y</m> and the
   initial-value problems below.
 </p>
 
-<ol>
+<ol label="(a)">
   <li>
     <p>
       <m>\frac{dy}{dx}= x^{2} - y, y(0) = 2</m>
@@ -414,26 +674,10 @@ Sketch a solution to the initial value problem <m>\frac{dy}{dx} = 1.5y</m>, <m>y
   </li>
 </ol>
 
-</li>
+</statement>
+</exercise>
 
-            </ol>
-          </p>
-        </li>
-
-<li>
-<p>
-(Optional) <alert>Watch</alert> <url href="https://youtu.be/XE7I_yPMmsc">a video on section 1.2 by Math Matt (18:38)</url>.
-</p>
-</li>
-
-
-        <li>
-          <p>
-            <alert>Do</alert> MyOpenMath questions from this section. 
-          </p>
-        </li>
-        
-        </ul>
+</exercises>
 
 </section>
 
