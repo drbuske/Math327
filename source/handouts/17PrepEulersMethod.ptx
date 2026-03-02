@@ -377,44 +377,6 @@ https://web.uvic.ca/~tbazett/diffyqs/numer_section.html#subsection-27">Subsectio
   </choices>
 </exercise>
 
-<exercise xml:id="euler-concept-svg">
-  <statement>
-    <p>
-      Euler’s method constructs an approximate solution by taking small steps along tangent
-      lines to the solution curve.  
-      Explain conceptually why using a smaller step size <m>h</m> tends to produce a better
-      approximation.  
-      Refer to the following SVG illustration showing a single Euler step compared to the true
-      solution curve.
-    </p>
-
-    <figure xml:id="EulerSVGExample">
-      <caption>A single Euler step and the exact solution curve.</caption>
-      <image source="images/EulerSVGExample" width="75%">
-        <description>Euler's method.</description>
-      </image>
-    </figure>
-  </statement>
-
-  <solution>
-    <p>
-      Euler’s method replaces the actual solution curve with a straight-line (tangent) approximation
-      over a short interval of length <m>h</m>.  
-      When <m>h</m> is small, the true solution has little time to “curve away” from the tangent
-      line, so the straight segment stays close to the real path.  
-      When <m>h</m> is large, the true solution may bend significantly before the method recalculates
-      a new slope, causing accumulated error.
-    </p>
-
-    <p>
-      In the diagram, the blue curve shows the true solution and the red dashed line shows the
-      Euler prediction.  
-      If the red step were shorter (smaller <m>h</m>), it would end closer to the blue curve.  
-      Thus smaller <m>h</m> generally yields a more accurate approximation.
-    </p>
-  </solution>
-</exercise>
-
 <exercise xml:id="euler-concept-theory">
   <statement>
     <p>
