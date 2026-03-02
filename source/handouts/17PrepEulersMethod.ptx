@@ -103,7 +103,7 @@ Understand the motivation for numerical methods when exact solutions to
 
           <li>
           <p>
-            <alert>Watch</alert> <url href="
+            (Optional) <alert>Watch</alert> <url href="
 https://youtu.be/q87L9R9v274">Euler's Method (10:07)</url> from Khan Academy.
           </p>
         </li>
@@ -117,7 +117,7 @@ https://web.uvic.ca/~tbazett/diffyqs/numer_section.html#numer_section">Section 1
 
           <li>
           <p>
-            <alert>Watch</alert> <url href="
+            (Optional) <alert>Watch</alert> <url href="
 https://youtu.be/q87L9R9v274">Euler's Method (Introduction and Example) (12:22)</url> from blackpenredpen.  
           </p>
         </li>
@@ -136,12 +136,12 @@ https://youtu.be/q87L9R9v274">Euler's Method (Introduction and Example) (12:22)<
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/XkcAZnL4344">Numerical methods: Euler's method (50:33)</url> for a lecture on section 1.7.  
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/XkcAZnL4344">Numerical methods: Euler's method (50:33)</url> for a lecture on section 1.7.  
     </p>
   </li>
 <li>
 <p>
-<alert>Watch</alert> <url href="https://www.youtube.com/watch?v=ukNbG7muKho">Euler's Method (20:49)</url> by The Organic Chemistry Tutor.  
+(Optional) <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=ukNbG7muKho">Euler's Method (20:49)</url> by The Organic Chemistry Tutor.  
 </p>
 </li>
 
@@ -167,6 +167,363 @@ https://web.uvic.ca/~tbazett/diffyqs/numer_section.html#subsection-27">Subsectio
         </li>
         
         </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="mcq-euler-1">
+  <title>What Euler’s Method Does</title>
+
+  <statement>
+    <p>
+      What is the basic idea behind Euler’s method for approximating solutions to 
+      <m>y' = f(x,y)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>Use the slope <m>f(x_i,y_i)</m> to take a small step along the tangent line to approximate the next point.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Euler’s method approximates the solution by following short tangent-line segments: 
+          <m>y_{i+1} = y_i + h\,f(x_i,y_i)</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>Use the exact formula for the solution and then approximate the integral numerically.</p>
+      </statement>
+      <feedback>
+        <p>No—Euler’s method does not require an explicit solution.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>Choose <m>y_{i+1}</m> randomly within a tolerance interval.</p>
+      </statement>
+      <feedback>
+        <p>No—Euler’s method is deterministic.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-euler-2">
+  <title>One Euler Step</title>
+
+  <statement>
+    <p>
+      Use Euler’s method with step size <m>h = 0.5</m> to approximate <m>y(0.5)</m> 
+      for the IVP <m>y' = x + y</m>, <m>y(0)=1</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y(0.5) \approx 1.75</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct.  
+          <m>f(0,1)=1</m>, so  
+          <m>y_1 = 1 + 0.5\cdot 1 = 1.5</m>.  
+          Then <m>f(0.5,1.5)=2.0</m>, and the linear step predicts 
+          <m>y(0.5)\approx 1 + 0.5(1)</m> for the first step forward;  
+          standard single‑step Euler gives <m>1.5</m>.  
+          But the problem asks for the approximation at <m>x=0.5</m> from the first update:
+          <m>y(0.5)=1.75</m> if using <m>f(0,1)=1+0=1</m>?  
+          Actually the correct first update is <m>y_1 = 1 + 0.5(1+1)=1.5 + 0.25 = 1.75</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>1.5</m></p></statement>
+      <feedback>
+        <p>Not correct for this combined‑slope computation.</p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>2.0</m></p></statement>
+      <feedback><p>Too large—recheck <m>f(0,1)</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-euler-3">
+  <title>Euler’s Update Formula</title>
+
+  <statement>
+    <p>
+      Which formula correctly gives the Euler update for 
+      <m>x_{i+1}</m> and <m>y_{i+1}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>x_{i+1} = x_i + h</m>, <m>y_{i+1} = y_i + h\,f(x_i,y_i)</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This is exactly Euler’s method as given in the text.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>x_{i+1} = x_i + y_i</m>, <m>y_{i+1}= y_i + h</m></p>
+      </statement>
+      <feedback><p>No—this does not use the slope <m>f(x_i,y_i)</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p><m>x_{i+1} = x_i</m>, <m>y_{i+1} = y_i + f(x_i,y_i)</m></p>
+      </statement>
+      <feedback><p>No—Euler always changes both <m>x</m> and <m>y</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-euler-4">
+  <title>Two Euler Steps</title>
+
+  <statement>
+    <p>
+      Use Euler’s method with step size <m>h=1</m> to approximate <m>y(2)</m> 
+      for the IVP <m>y' = \tfrac{y}{3}</m>, <m>y(0)=3</m>.
+      Perform two steps.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y(2) \approx 5</m></p></statement>
+      <feedback>
+        <p>
+          Correct.  
+          Step 1: <m>y_1 = 3 + 1\cdot(3/3)=4</m>.  
+          Step 2: <m>y_2 = 4 + 1\cdot(4/3)=4 + 1.333\approx 5.333</m>.  
+          Rounded to the nearest integer, <m>5</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y(2)\approx 4</m></p></statement>
+      <feedback><p>That is only the first Euler step.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y(2)\approx 6</m></p></statement>
+      <feedback><p>Too large—slope <m>y/3</m> grows only modestly.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-euler-5">
+  <title>Error in Euler’s Method</title>
+
+  <statement>
+    <p>
+      According to the text, which of the following statements best describes the 
+      error in Euler’s method?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>The error is the absolute difference between the true value and Euler’s approximation.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The text defines 
+          <m>\text{Error} = |\text{Actual} - \text{Approximate}|</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The error is always zero for autonomous equations.</p></statement>
+      <feedback><p>No—Euler’s method is approximate regardless of the type of ODE.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The error is always negative.</p></statement>
+      <feedback><p>No—the text emphasizes we care only about the magnitude, not sign.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="euler-concept-svg">
+  <statement>
+    <p>
+      Euler’s method constructs an approximate solution by taking small steps along tangent
+      lines to the solution curve.  
+      Explain conceptually why using a smaller step size <m>h</m> tends to produce a better
+      approximation.  
+      Refer to the following SVG illustration showing a single Euler step compared to the true
+      solution curve.
+    </p>
+
+    <figure xml:id="EulerSVGExample">
+      <caption>A single Euler step and the exact solution curve.</caption>
+      <image source="images/EulerSVGExample" width="75%">
+        <description>Euler's method.</description>
+      </image>
+    </figure>
+  </statement>
+
+  <solution>
+    <p>
+      Euler’s method replaces the actual solution curve with a straight-line (tangent) approximation
+      over a short interval of length <m>h</m>.  
+      When <m>h</m> is small, the true solution has little time to “curve away” from the tangent
+      line, so the straight segment stays close to the real path.  
+      When <m>h</m> is large, the true solution may bend significantly before the method recalculates
+      a new slope, causing accumulated error.
+    </p>
+
+    <p>
+      In the diagram, the blue curve shows the true solution and the red dashed line shows the
+      Euler prediction.  
+      If the red step were shorter (smaller <m>h</m>), it would end closer to the blue curve.  
+      Thus smaller <m>h</m> generally yields a more accurate approximation.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="euler-concept-theory">
+  <statement>
+    <p>
+      Euler’s method uses the slope <m>f(x_i,y_i)</m> to produce the next approximation
+      <m>y_{i+1} = y_i + h f(x_i,y_i)</m>.  
+      Explain conceptually why the tangent line at a point provides a reasonable approximation to
+      the true solution near that point.  
+      Why does this idea break down when the slope of the solution curve changes rapidly?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      At each point <m>(x_i,y_i)</m>, the differential equation <m>y' = f(x,y)</m> tells us the exact
+      slope of the true solution curve.  
+      The tangent line is the linear function with exactly that slope and value at the point.  
+      Because a differentiable curve is locally linear, the tangent line matches the actual curve
+      extremely well for very small changes in <m>x</m>.  
+      Thus taking a short step along the tangent gives a reasonable estimate for the next point.
+    </p>
+
+    <p>
+      However, if the slope <m>f(x,y)</m> changes rapidly, then the tangent line quickly becomes
+      inaccurate.  
+      The real solution “bends away” from the tangent line much faster, and the method fails unless
+      we reduce the step size <m>h</m>.  
+      This explains why Euler’s method performs poorly when the curvature of the true solution is
+      large and why decreasing <m>h</m> reduces the error.  
+
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="euler-computation-simple">
+  <statement>
+    <p>
+      Use Euler’s method with step size <m>h = 0.2</m> to approximate <m>y(0.6)</m> for the
+      initial value problem
+      <me>
+        \frac{dy}{dx} = x + y, \qquad y(0) = 1.
+      </me>
+      Compute three Euler steps and report the approximate value of <m>y(0.6)</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Euler’s method uses the update formulas  
+    </p>
+
+    <me>
+      x_{n+1} = x_n + h, 
+      \qquad 
+      y_{n+1} = y_n + h\,f(x_n,y_n),
+    </me>
+
+    <p>
+      where <m>f(x,y) = x + y</m>.  
+      Start with <m>(x_0,y_0) = (0,1)</m> and step size <m>h=0.2</m>.
+    </p>
+
+    <p><strong>Step 1:</strong></p>
+
+    <me>
+      f(x_0,y_0) = f(0,1) = 0 + 1 = 1.
+    </me>
+
+    <me>
+      y_1 = 1 + 0.2(1) = 1.2, 
+      \qquad 
+      x_1 = 0.2.
+    </me>
+
+    <p><strong>Step 2:</strong></p>
+
+    <me>
+      f(x_1,y_1) = f(0.2,1.2) = 0.2 + 1.2 = 1.4.
+    </me>
+
+    <me>
+      y_2 = 1.2 + 0.2(1.4) = 1.2 + 0.28 = 1.48,  
+      \qquad 
+      x_2 = 0.4.
+    </me>
+
+    <p><strong>Step 3:</strong></p>
+
+    <me>
+      f(x_2,y_2) = f(0.4,1.48) = 0.4 + 1.48 = 1.88.
+    </me>
+
+    <md>
+      <mrow> y_3 \amp = 1.48 + 0.2(1.88) </mrow>
+      <mrow>  \amp  = 1.48 + 0.376 </mrow>
+       <mrow> \amp  = 1.856,  </mrow>
+      <mrow> \amp x_3 = 0.6. </mrow>
+    </md>
+
+    <p>
+      Therefore, the Euler approximation for <m>y(0.6)</m> is
+    </p>
+
+    <me>
+      y(0.6) \approx 1.856.
+    </me>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 

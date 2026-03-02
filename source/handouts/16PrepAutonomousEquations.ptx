@@ -70,7 +70,7 @@ Identify equilibrium (constant) solutions by finding critical points where <m>f(
           <li>
           <p>
             <alert>Watch</alert> <url href="
-https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#first-autonomous">Video 1.6.1: Autonomous Equations </url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#first-autonomous">Video 1.6.1: Autonomous Equations (10:12)</url> by Trevor Bazett.
           </p>
         </li>
 
@@ -84,29 +84,24 @@ https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#auteq_section">Section 1
           <li>
           <p>
             <alert>Watch</alert> <url href="
-https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#first-logistic">Video 1.6.2: Logistic Equation</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#first-logistic">Video 1.6.2: Logistic Equation (8:56)</url> by Trevor Bazett.
           </p>
         </li>
 
-     <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking.
-          </p>
-            <ol>
+
               
-<li>
+<!-- <li>
 <p>
 In <url href="
 https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#auteq_section">section 1.6</url>, you read the following sentence: <em>Note also, by looking at the graph, that the solution <m>x=A</m> is ``stable” in that small perturbations in <m>x</m> do not lead to substantially different solutions as <m>t</m> grows.</em>  What is meant by the word `perturbation' in this context?   
 </p>  
-</li>
+</li> -->
 
-</ol>
-</li>
+
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/szxt1dpRpvg?si=3QEAGbQfoo96vDLf">Autonomous equations (39:07)</url> for a lecture on section 1.6.  
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/szxt1dpRpvg?si=3QEAGbQfoo96vDLf">Autonomous equations (39:07)</url> for a lecture on section 1.6.  
     </p>
   </li>
 
@@ -118,15 +113,7 @@ https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#subsection-26">Subsectio
           </p>
         </li>
 
-
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-            <ol>
-              
-
-
-<li>
+<!-- <li>
 <p>
 How does the solution to the autonomous IVP <m>\frac{dy}{dx} = \sin(y), y(-3) = 1</m> compare to the solution of the IVP <m>\frac{dy}{dx} = \sin(y), y(1) = 1</m>?  Can you generalize this idea for any autonomous equation?  A slope field for <m>\frac{dy}{dx} = \sin(y)</m> is given in <xref ref="AutonomousSlopeField2026a"/>.  </p> 
 
@@ -186,13 +173,8 @@ what is
 <m>\displaystyle \lim_{t\to\infty} x(t)</m>.</p></li>
 <li><p> Does the solution to part (b) agree with your intuition?  Why or why not?</p></li>
 </ol>
-</li> 
+</li> -->
 
-
-
-            </ol>
-          </p>
-        </li>
 
 <li>
 <p>
@@ -208,6 +190,458 @@ what is
         </li>
         
         </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="perturbation-definition">
+  <statement>
+    <p>
+      In 
+      <url href="https://web.uvic.ca/~tbazett/diffyqs/auteq_section.html#auteq_section">
+        Section 1.6
+      </url>, you read the following sentence:
+    </p>
+
+    <blockquote>
+    <p>
+      <m>x = A</m> is “stable” in that small perturbations in <m>x</m> do not lead to substantially
+      different solutions as <m>t</m> grows.
+    </p>
+    </blockquote>
+    
+      <p>
+      What is meant by the word <em>perturbation</em> in this context?
+      </p>
+
+  </statement>
+
+  <solution>
+    <p>
+      In this context, a <em>perturbation</em> means a small change in the initial value of the solution.
+      That is, instead of starting exactly at the equilibrium value <m>x(0)=A</m>, we begin with a
+      nearby initial condition such as <m>x(0)=A+\varepsilon</m> for some small number
+      <m>\varepsilon</m>.  The question is how this small deviation affects the long‑term behavior
+      of the solution curve.
+    </p>
+
+    <p>
+      When an equilibrium <m>x=A</m> is described as “stable,” it means that these small
+      perturbations—small changes to the starting value—do <em>not</em> lead to solutions that drift far
+      away from <m>A</m> as <m>t</m> increases.  The nearby solutions remain close to the equilibrium
+      curve, reflecting the intuitive idea that the system “pulls” the solution back toward
+       </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="mcq-autonomous-1">
+  <title>Identifying an Autonomous Equation</title>
+
+  <statement>
+    <p>
+      Which of the following differential equations is <em>autonomous</em>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p><m>\displaystyle y' = y(3 - y)</m></p></statement>
+      <feedback>
+        <p>
+          Correct. An autonomous equation has the form <m>y' = f(y)</m>, depending only on <m>y</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y' = x + y</m></p></statement>
+      <feedback><p>This depends explicitly on <m>x</m>, so it is not autonomous.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y' = e^{x} y^{2}</m></p></statement>
+      <feedback><p>Not autonomous because of the <m>e^{x}</m> factor.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-autonomous-2">
+  <title>Equilibrium Solutions</title>
+
+  <statement>
+    <p>
+      For the autonomous equation <m>y' = y(2-y)</m>, which of the following are equilibrium solutions?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p><m>y = 0</m> and <m>y = 2</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Equilibria occur where <m>f(y)=0</m>, so <m>y(2-y)=0</m> gives <m>y=0,2</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 1</m></p></statement>
+      <feedback><p>At <m>y=1</m>, <m>y'=1(1)=1</m>, so it is not an equilibrium.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>No equilibrium solutions</p></statement>
+      <feedback><p>Incorrect—two exist.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-autonomous-3">
+  <title>Stability From the Sign of <m>f'(y)</m></title>
+
+  <statement>
+    <p>
+      Consider <m>y' = y(3-y)</m>.  Determine the stability of the equilibrium <m>y = 3</m>.
+      Use the sign of <m>f'(y)</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>Stable, because <m>f'(3) = -3</m> is negative.</p></statement>
+      <feedback>
+        <p>
+          Correct. For autonomous equations, an equilibrium <m>y=A</m> is stable if <m>f'(A)&lt;0</m>.  
+          Here <m>f(y)=y(3-y)</m> gives <m>f'(y)=3-2y</m>, so <m>f'(3)=-3&lt;0</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Unstable, because <m>f'(3) = 3</m></p></statement>
+      <feedback><p>No—this computes the derivative incorrectly.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Neither stable nor unstable</p></statement>
+      <feedback><p>Incorrect—its stability is determined by <m>f'(3)</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-autonomous-4">
+  <title>Solving a Simple Autonomous ODE</title>
+
+  <statement>
+    <p>
+      Solve the IVP <m>y' = 2y</m>, <m>y(0)=5</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y = 5e^{2x}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Integrate <m>y'/y = 2</m> to get <m>y=Ce^{2x}</m>,  
+          then apply <m>y(0)=5</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 5e^{x/2}</m></p></statement>
+      <feedback><p>Incorrect exponent.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 2e^{5x}</m></p></statement>
+      <feedback><p>Incorrect constant and exponent.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-autonomous-5">
+  <title>Interpreting a Phase Line</title>
+
+  <statement>
+    <p>
+      For an autonomous equation <m>y' = f(y)</m>, suppose the phase line shows arrows pointing 
+      toward <m>y=1</m> from both above and below.  What does this indicate?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y = 1</m> is a stable equilibrium.</p></statement>
+      <feedback>
+        <p>
+          Correct. When trajectories move toward an equilibrium from both sides, 
+          that equilibrium is stable.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 1</m> is an unstable equilibrium.</p></statement>
+      <feedback><p>No—unstable equilibria repel nearby solutions.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>There is no equilibrium at <m>y=1</m>.</p></statement>
+      <feedback><p>No—the phase line arrows imply an equilibrium there.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="autonomous-compare-solns">
+  <statement>
+    <p>
+      How does the solution to the autonomous IVP 
+      <m>\frac{dy}{dx}=\sin(y),\; y(-3)=1</m> 
+      compare to the solution of the IVP 
+      <m>\frac{dy}{dx}=\sin(y),\; y(1)=1</m>?  
+      Can you generalize this idea for any autonomous equation?  
+      A slope field for <m>y'=\sin(y)</m> is given in <xref ref="AutonomousSlopeField2026a"/>.
+    </p>
+
+    <figure xml:id="AutonomousSlopeField2026a" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>A slope field for <m>y'=\sin(y)</m>.</caption>
+      <image source="AutonomousSlopeField2026a.jpg" width="50%">
+        <description>
+          A slope field with horizontal direction depending only on <m>y</m>; slopes vary by the 
+          vertical position but are constant along horizontal lines, as is typical for autonomous 
+          equations.
+        </description>
+      </image>
+    </figure>
+  </statement>
+
+  <solution>
+    <p>
+      Because the equation is autonomous (the slope depends only on <m>y</m> and not on <m>x</m>), 
+      the two solutions differ only by a horizontal shift.  
+      Both IVPs start with <m>y=1</m>, and all solution curves through <m>y=1</m> follow exactly 
+      the same shape in the slope field.  
+      The only difference is <em>where</em> on the <m>x</m>-axis the solution meets that level.
+    </p>
+
+    <p>
+      In general, for any autonomous equation <m>y'=f(y)</m>, if two initial values share the same 
+      <m>y</m>-coordinate but occur at different <m>x</m>-values, then the corresponding solutions 
+      are identical up to horizontal translation.  
+      This is because the slope at each point depends only on <m>y</m>, so moving left or right 
+      simply shifts the solution curve without changing its shape.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="autonomous-equilibrium-constant">
+  <statement>
+    <p>
+      Values of <m>y_0</m> for which <m>f(y_0)=0</m> are called 
+      <term>critical points</term>.  
+      They provide <term>equilibrium</term> solutions of the autonomous equation 
+      <m>\frac{dy}{dx}=f(y)</m>, i.e. <m>y(x)\equiv y_0</m>.
+    </p>
+
+    <p>
+      Why are equilibrium solutions constant solutions?  
+      (Hint: Remember the result of the previous problem.)
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      If <m>f(y_0)=0</m>, then substituting <m>y(x)\equiv y_0</m> gives
+    </p>
+
+    <me>
+      y'(x) = f(y_0) = 0.
+    </me>
+
+    <p>
+      This differential equation says the slope is zero for all <m>x</m>, so the function must 
+      remain constant.  
+      Geometrically (as in the previous problem), the slope field has horizontal segments at that 
+      <m>y</m>-value, and any solution starting there stays on that horizontal line for all time.  
+      Thus equilibrium solutions are constant solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="autonomous-equilibria-stability">
+  <statement>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Determine the equilibrium solutions to 
+            <m>\displaystyle \frac{dy}{dx} = y^{2} - y - 2.</m>  
+            Use the slope field shown in <xref ref="AutonomousSlopeField2026b"/> 
+            to confirm your finding.
+          </p>
+
+          <figure xml:id="AutonomousSlopeField2026b" xmlns:xi="http://www.w3.org/2001/XInclude">
+            <caption>A slope field for <m>y'=y^2 - y -2</m>.</caption>
+            <image source="AutonomousSlopeField2026b.jpg" width="50%">
+              <description>
+                A slope field with nearly horizontal slopes at the equilibrium levels, and steeper 
+                slopes further away, typical of a cubic‑like autonomous ODE.
+              </description>
+            </image>
+          </figure>
+        </li>
+
+        <li>
+          <p>
+            Solution curves often approach or move away from equilibrium solutions as <m>x</m> 
+            increases; this is called <term>stability</term>.
+          </p>
+          <ol maker="(a)">
+            <li><p>If nearby solutions approach <m>y_0</m>, the equilibrium is a <term>sink</term> (stable).</p></li>
+            <li><p>If some nearby solutions do not approach <m>y_0</m>, the equilibrium is <term>unstable</term>.</p></li>
+            <li><p>If all nearby solutions move away, the equilibrium is a <term>source</term> (unstable).</p></li>
+          </ol>
+
+          <p>
+            Determine the stability of the two equilibrium solutions 
+            <m>y_1(x)\equiv -1</m> and <m>y_2(x)\equiv 2</m> for 
+            <m>\displaystyle y'=y^2 - y -2.</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <solution>
+    <ol>
+
+      <li>
+        <p>
+          Solve <m>y^{2}-y-2=0</m>:
+        </p>
+
+        <me>
+          (y-2)(y+1)=0.
+        </me>
+
+        <p>
+          Thus the equilibrium solutions are <m>y=-1</m> and <m>y=2</m>.  
+          In the slope field, horizontal segments occur at exactly these values.
+        </p>
+      </li>
+
+      <li>
+        <p><strong>Stability analysis.</strong></p>
+
+        <p>
+          Let <m>f(y)=y^{2}-y-2</m>. Then <m>f'(y)=2y-1</m>.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+              At <m>y=-1</m>:
+            </p>
+            <me>
+              f'(-1) = -2 - 1 = -3 &lt; 0.
+            </me>
+            <p>
+              Negative derivative means nearby solutions move <em>toward</em> <m>-1</m>;  
+              thus <m>y=-1</m> is a <strong>stable equilibrium</strong> (sink).
+            </p>
+          </li>
+
+          <li>
+            <p>
+              At <m>y=2</m>:
+            </p>
+            <me>
+              f'(2) = 4 - 1 = 3 &gt; 0.
+            </me>
+            <p>
+              Positive derivative means nearby solutions move <em>away</em> from <m>2</m>;  
+              thus <m>y=2</m> is an <strong>unstable equilibrium</strong> (source).
+            </p>
+          </li>
+        </ul>
+
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="infection-model-autonomous">
+  <statement>
+    <p>
+      A disease is spreading through a country.  
+      Let <m>x</m> be the number of infected people, and <m>S</m> the number of susceptible 
+      people.  
+      The infection rate <m>\frac{dx}{dt}</m> is proportional to the product of the number of 
+      infected people <m>x</m> and the number of susceptible people <m>S - x</m>.
+    </p>
+
+    <ol marker="(a)">
+      <li><p>Write down the differential equation.</p></li>
+      <li><p>Suppose <m>x(0)&gt;0</m>.  Compute <m>\displaystyle \lim_{t\to\infty} x(t)</m>.</p></li>
+      <li><p>Does this result agree with your intuition?  Explain.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+
+    <ol marker="(a)">
+
+      <li>
+        <p>
+          The rate is proportional to <m>x(S-x)</m>, so the model is
+        </p>
+
+        <me>
+          \frac{dx}{dt} = k\, x(S-x),
+        </me>
+
+        <p>
+          where <m>k&gt;0</m> is the infection constant.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          This logistic‑type equation has equilibria at <m>x=0</m> and <m>x=S</m>.  
+          For <m>x(0)&gt;0</m>, the solution increases and approaches the carrying capacity 
+          <m>S</m>.
+        </p>
+
+        <me>
+          \lim_{t\to\infty} x(t) = S.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Yes—this matches intuition.  
+          As long as some people are initially infected, eventually everyone susceptible 
+          becomes infected in this simplified model, so the number of infected tends toward 
+          <m>S</m>.  
+          Real disease dynamics can be more complicated, but in this autonomous model 
+          the infection saturates the susceptible population.
+        </p>
+      </li>
+
+    </ol>
+
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 

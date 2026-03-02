@@ -60,14 +60,14 @@ Understand the purpose of an integrating factor <m>r(x)</m> and how it is used t
 
 <li>
 <p>
-<alert>Watch</alert> video <url href="https://youtu.be/HL7SXsOHNYQ">Introduction to Solving a First Order Linear Differential Equation Using an Integrating Factor (5:43)</url> by Mathispower4u.
+(Optional) <alert>Watch</alert> video <url href="https://youtu.be/HL7SXsOHNYQ">Introduction to Solving a First Order Linear Differential Equation Using an Integrating Factor (5:43)</url> by Mathispower4u.
 </p>
 </li>
 
           <li>
           <p>
             <alert>Watch</alert> <url href="
-https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#first-linear">Video 1.4.1: Linear Equations and Integrating Factors</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#first-linear">Video 1.4.1: Linear Equations and Integrating Factors (11:27)</url> by Trevor Bazett.
           </p>
         </li>
 
@@ -81,64 +81,19 @@ https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#intfactor_section">S
           <li>
           <p>
             <alert>Watch</alert> <url href="
-https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#first-linear2">Video 1.4.2: Integrating Factor Examples</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#first-linear2">Video 1.4.2: Integrating Factor Examples (4:39)</url> by Trevor Bazett.
           </p>
         </li>
 
-     <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-            <ol>
-              
 <li>
 <p>
-There is a `trick' to solving linear first order differential equations described in this section that involves multiplying by a function <m>r(x)</m>.  What differentiation rule lies at the heart of this trick?  [Hint: It is not the power rule.]  
-</p>  
-</li>
-
-<li>
-<p> In <url href="
-https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#example-18">Example 1.4.1</url>, <m>p(x) = 2x</m>.  Note that <m>\int p(x) \ dx = \int 2x \ dx = x^2 + C</m>.  However, the text simply writes <m>r(x) = e^{\int p(x) \ dx} = e^{x^2}</m> and does not write the arbitrary constant of integration <m>C</m>?  Why is this not necessary?  
-</p> 
-</li>
-
-<li>
-<p> Multiply <me>y'+p(x)y = q(x)</me> on both sides by by <m>I(x)</m>. </p>
-<ol>
-<li><p> What is the left-hand side? </p></li>
-<li><p> Compute <m>\left[ I(x)y(x) \right]'</m>.  </p></li>
-<li><p> How should $I(x)$ be chosen so that (a) and (b) are always equal?  That is, what (differential) equation must it solve?  </p></li>
-<li><p> Solve <m>\displaystyle \frac{dI}{dx} = I(x)\cdot p(x)</m> for <m>I(x)</m> in terms of <m>\int p(x) \ dx</m> using separation of variables. </p></li>
-</ol> 
-</li>
-
-<li>
-<p> Here, we solve the initial value problem <me>\frac{dy}{dx} - y = \frac{11}{8}e^{-x/3}, \ \ y(0) = -1.</me> </p>
-<ol>
-<li><p> Identify the integrating factor <m>I(x)</m>. </p></li>
-<li><p> Upon multiplying both sides of the differential equation by <m>I(x)</m>, the left-hand side can be written as <m>\displaystyle \frac{d}{dx} \left( ? \right)</m>. </p></li>
-<li><p> What is the general solution to the differential equation?  </p></li>
-</ol>
-</li>
-
-
-</ol>
+(Optional) <alert>Watch</alert> <url href="https://youtu.be/eWLgWazTc-0">Integrating Factor to Solve a Differential Equation (3:29)</url> by Patrick JMT.  
 </p>
 </li>
-
-
-<li>
-<p>
-<alert>Watch</alert> <url href="https://youtu.be/eWLgWazTc-0">Integrating Factor to Solve a Differential Equation (3:29)</url> by Patrick JMT.  
-</p>
-</li>
-
-
-   
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/rmRCqxwjSkk?si=JdUlcMmNw-Q_y6mE">Linear equations and the integrating factor (28:49)</url> for a lecture on section 1.4.  
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/rmRCqxwjSkk?si=JdUlcMmNw-Q_y6mE">Linear equations and the integrating factor (28:49)</url> for a lecture on section 1.4.  
     </p>
   </li>
 
@@ -150,15 +105,7 @@ https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#subsection-21">Subse
           </p>
         </li>
 
-
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-            <ol>
-              
-
-
-<li>
+<!-- <li>
 <p>
 A nitric acid solution flows at a constant rate of 6 L/min into a large tank that initially held 200 L of a 0.5% nitric acid solution.  The solution inside the tank remains stirred and flows out at a rate of 8 L/min.  If the solution entering the tank is 20% nitric acid, determine the volume of nitric acid in the tank after <m>t</m> minutes.  </p>
 
@@ -178,7 +125,7 @@ A nitric acid solution flows at a constant rate of 6 L/min into a large tank tha
 <li><p> After how many minutes <m>T</m> is the tank empty?  </p></li>
 <li><p> It stands to reason that <m>V(T)=0</m> should hold and our model should be valid for <m>0 \leq t \leq T</m>.  Does the graph of <m>V(t)</m> suggest this to be true? </p></li>
 </ol> 
-</li>
+</li> 
 
 <li>
 <p>
@@ -212,13 +159,8 @@ each minute filters out half the salt in a single gallon from the mixture in the
 <li><p> Compute <m>\displaystyle \lim_{t \rightarrow \infty} y(t)</m>.  </p></li>
 
 </ol>
-</li>
+</li> -->
 
-
-
-            </ol>
-          </p>
-        </li>
 
 <li>
 <p>
@@ -234,6 +176,978 @@ each minute filters out half the salt in a single gallon from the mixture in the
         </li>
         
         </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise label="mcq-intfactor-2">
+  <title>The Integrating Factor</title>
+
+  <statement>
+    <p>
+      For the linear ODE  
+      <m>y' + 4y = e^{-x}</m>,  
+      what is the integrating factor?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p><m>\mu(x) = e^{\int 4\,dx} = e^{4x}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The integrating factor is 
+          <m>\mu(x) = e^{\int p(x)dx}</m>. Here <m>p(x)=4</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\mu(x) = e^{-4x}</m></p></statement>
+      <feedback><p>Incorrect sign in the exponent.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\mu(x) = 4e^{x}</m></p></statement>
+      <feedback><p>Not of the correct exponential form <m>e^{\int p(x)dx}</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-intfactor-3">
+  <title>Solving a Linear ODE</title>
+
+  <statement>
+    <p>
+      Solve the ODE  
+      <m>y' + 2y = 6</m>.  
+      What is the general solution?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p><m>y = 3 + Ce^{-2x}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. With <m>p(x)=2</m>, the integrating factor is <m>e^{2x}</m>.  
+          Multiply to get <m>\frac{d}{dx}(e^{2x}y)=6e^{2x}</m>;  
+          integrate to obtain <m>e^{2x}y = 3e^{2x} + C</m>,  
+          giving <m>y = 3 + Ce^{-2x}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 6 + Ce^{-2x}</m></p></statement>
+      <feedback><p>Incorrect steady‑state value; check the integral of <m>6e^{2x}</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = Ce^{2x}</m></p></statement>
+      <feedback><p>Misses the particular solution term.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-intfactor-4">
+  <title>Solving an IVP</title>
+
+  <statement>
+    <p>
+      Solve the IVP  
+      <m>y' - y = e^{x}, y(0)=2.</m>  
+      What is <m>y(x)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        <p><m>y = e^{x}(x+2)</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Write the ODE as <m>y' + (-1)y = e^{x}</m>,  
+          so <m>p(x)=-1</m> and <m>\mu(x)=e^{\int -1\,dx}=e^{-x}</m>.  
+          Multiply through to obtain <m>\frac{d}{dx}(e^{-x}y)=1</m>,  
+          integrate to get <m>e^{-x}y = x + C</m>, and use <m>y(0)=2</m>  
+          to find <m>C=2</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = e^{x}(x+1)</m></p></statement>
+      <feedback><p>This choice uses an incorrect constant.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = 2e^{-x} + e^{x}</m></p></statement>
+      <feedback><p>This does not satisfy the ODE; recompute the integrating‑factor step.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise label="mcq-intfactor-5">
+  <title>Understanding the Integrating Factor Method</title>
+
+  <statement>
+    <p>
+      Why do we multiply both sides of <m>y' + p(x)y = f(x)</m> by the integrating factor 
+      <m>\mu(x)=e^{\int p(x)\,dx}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>Because it turns the left-hand side into <m>\frac{d}{dx}(\mu(x)y)</m>, making the equation directly integrable.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The integrating factor is chosen so that  
+          <m>\mu(x)y' + \mu(x)p(x)y = \frac{d}{dx}(\mu y)</m>,  
+          enabling immediate integration.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because it eliminates <m>f(x)</m> from the equation.</p></statement>
+      <feedback><p>No—<m>f(x)</m> remains on the right-hand side.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Because it ensures the solution will always be exponential.</p></statement>
+      <feedback><p>No—only the integrating factor itself is exponential.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="intfactor-concept-1">
+  <statement>
+    <p>
+      There is a “trick” to solving linear first-order differential equations described in this 
+      section that involves multiplying by a function <m>r(x)</m>.  
+      What differentiation rule lies at the heart of this trick?  
+      [Hint: It is not the power rule.]
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The trick relies on the <em>product rule</em>:
+    </p>
+    <me>
+      \frac{d}{dx}\bigl(r(x)\,y(x)\bigr)
+      = r(x)\,y'(x) + r'(x)\,y(x).
+    </me>
+
+    <p>
+      We use this identity to rewrite the left-hand side of a linear equation
+      <m>y' + p(x)y = f(x)</m> as the derivative of a product after multiplying by the 
+      integrating factor <m>r(x)</m>.  The key idea is to choose <m>r(x)</m> so that 
+      <m>r'(x) = p(x) r(x)</m>, causing the left-hand side to collapse into a single derivative.  
+    </p>
+  </solution>
+</exercise>
+
+
+
+<exercise xml:id="intfactor-concept-2">
+  <statement>
+    <p>
+      In 
+      <url href="https://web.uvic.ca/~tbazett/diffyqs/intfactor_section.html#example-18">
+        Example 1.4.1
+      </url>, 
+      <m>p(x)=2x</m>.  Note that 
+      <m>\int p(x)\,dx = \int 2x\,dx = x^{2} + C</m>.  
+      However, the text simply writes 
+      <m>r(x)=e^{\int p(x)\,dx}=e^{x^{2}}</m> and does not include the constant <m>C</m>.  
+      Why is this not necessary?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Because adding a constant <m>C</m> to the exponent simply multiplies the integrating 
+      factor by a nonzero constant:
+    </p>
+
+    <me>
+      e^{\,x^{2} + C} = e^{C}\, e^{x^{2}}.
+    </me>
+
+    <p>
+      Multiplying the entire linear equation by a nonzero constant does not change the set 
+      of solutions, since that factor cancels when solving for <m>y</m>.  
+      Therefore, any constant of integration is irrelevant in the integrating factor.  
+    </p>
+  </solution>
+</exercise>
+
+
+
+<exercise xml:id="intfactor-derivation">
+  <statement>
+    <p>
+      Multiply 
+      <me>y' + p(x)\,y = q(x)</me>
+      on both sides by a function <m>I(x)</m>.
+    </p>
+
+    <ol marker="(a)">
+      <li><p>What is the left-hand side?</p></li>
+      <li><p>Compute <m>\bigl[I(x)\,y(x)\bigr]'</m>.</p></li>
+      <li><p>How should <m>I(x)</m> be chosen so that (a) and (b) are always equal?  That is, what differential equation must it satisfy?</p></li>
+      <li><p>Solve <m>\dfrac{dI}{dx} = I(x)\,p(x)</m> for <m>I(x)</m> using separation of variables.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+
+      <li>
+        <p>
+          Multiplying both sides of the equation by <m>I(x)</m> gives the left-hand side
+        </p>
+        <me>
+          I(x)\,y' + I(x)\,p(x)\,y.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Using the product rule,
+        </p>
+        <me>
+          \bigl[I(x)\,y(x)\bigr]'
+          = I(x)\,y'(x) + I'(x)\,y(x).
+        </me>
+      </li>
+
+      <li>
+        <p>
+          For the expressions in (a) and (b) to match for all <m>y</m>, we need
+        </p>
+
+        <me>
+          I'(x)\,y(x) = I(x)\,p(x)\,y(x),
+        </me>
+
+        <p>
+          which simplifies (assuming <m>I(x)\neq 0</m>) to the differential equation
+        </p>
+
+        <me>
+          I'(x) = p(x)\,I(x).
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Solve the differential equation using separation of variables:
+        </p>
+
+        <me>
+          \frac{dI}{I} = p(x)\,dx.
+        </me>
+
+        <p>Integrate both sides:</p>
+
+        <me>
+          \ln|I| = \int p(x)\,dx + C.
+        </me>
+
+        <p>Exponentiate:</p>
+
+        <me>
+          I(x) = e^{\int p(x)\,dx + C}
+               = e^{C}\, e^{\int p(x)\,dx}.
+        </me>
+
+        <p>
+          Since <m>e^{C}</m> is a nonzero constant and irrelevant to the method, we write the 
+          integrating factor simply as
+        </p>
+
+        <me>
+          I(x) = e^{\int p(x)\,dx}.
+        </me>
+
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+
+
+<exercise xml:id="intfactor-IVP">
+  <statement>
+    <p>
+      Here we solve the initial value problem
+      <me>
+        \frac{dy}{dx} - y = \frac{11}{8}e^{-x/3}, y(0) = -1.
+      </me>
+    </p>
+
+    <ol marker="(a)">
+      <li><p>Identify the integrating factor <m>I(x)</m>.</p></li>
+      <li><p>
+        After multiplying both sides by <m>I(x)</m>, the left-hand side can be written as  
+        <m>\dfrac{d}{dx}\bigl( ? \bigr)</m>.  
+        What expression belongs inside the parentheses?
+      </p></li>
+      <li><p>Find the general solution <m>y(x)</m>.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+
+    <ol marker="(a)">
+      <li>
+        <p>
+          Rewrite the ODE as <m>y' + (-1)y = \frac{11}{8}e^{-x/3}</m>, so <m>p(x) = -1</m>.  
+          The integrating factor is:
+        </p>
+        <me>
+          I(x) = e^{\int -1\,dx} = e^{-x}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Multiplying the ODE by <m>I(x)=e^{-x}</m> gives
+        </p>
+
+        <me>
+          e^{-x}y' - e^{-x}y.
+        </me>
+
+        <p>
+          By Section 1.4’s product‑rule identity, this equals
+        </p>
+
+        <me>
+          \frac{d}{dx}\bigl(e^{-x}y\bigr).
+        </me>
+
+        <p>
+          So the missing expression is <m>e^{-x}y</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The equation becomes
+        </p>
+        <me>
+          \frac{d}{dx}\bigl(e^{-x}y\bigr)
+            = \frac{11}{8} e^{-x} e^{-x/3}
+            = \frac{11}{8} e^{-4x/3}.
+        </me>
+
+        <p>Integrate both sides:</p>
+
+        <md>
+          <mrow> e^{-x}y
+          \amp = \frac{11}{8} \int e^{-4x/3}\,dx + C </mrow>
+          <mrow> \amp = \frac{11}{8}\left(-\frac{3}{4} e^{-4x/3}\right) + C </mrow>
+          <mrow> \amp = -\frac{33}{32} e^{-4x/3} + C. </mrow>
+        </md>
+
+        <p>Multiply by <m>e^{x}</m>:</p>
+
+        <me>
+          y
+          = -\frac{33}{32}e^{x}e^{-4x/3} + C e^{x}
+          = -\frac{33}{32}e^{-x/3} + C e^{x}.
+        </me>
+
+        <p>Apply the initial condition <m>y(0)=-1</m>:</p>
+
+        <me>
+          -1 = -\frac{33}{32} + C \quad\Longrightarrow\quad C = \frac{1}{32}.
+        </me>
+
+        <p>
+          Therefore, the specific solution is
+        </p>
+
+        <me> y(x)
+          = -\frac{33}{32}e^{-x/3}
+            + \frac{1}{32} e^{x}.
+        </me>
+      </li>
+
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="nitric-acid-tank">
+  <statement>
+    <p>
+      A nitric acid solution flows at a constant rate of 6 L/min into a large tank that 
+      initially held 200 L of a 0.5% nitric acid solution.  
+      The solution inside the tank remains stirred and flows out at a rate of 8 L/min.  
+      If the solution entering the tank is 20% nitric acid, determine the volume 
+      <m>V(t)</m> of nitric acid in the tank after <m>t</m> minutes.
+    </p>
+
+    <figure xml:id="BrineTank1" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>Nitric acid in a tank.</caption>
+      <image source="BrineTank1.jpg" width="50%">
+        <description>
+          Diagram of a mixing tank showing a 20% acid solution entering at 
+          6 L/min, and a mixed solution leaving at 8 L/min. Inside the tank, 
+          <m>V(t)</m> is the amount of nitric acid, and 
+          the initial condition is <m>V(0)=1</m> liter.
+        </description>
+      </image>
+    </figure>
+
+    <p>
+      Initially,
+      <m>V(0) = 0.005 \cdot 200\ \mathrm{L} = 1\ \mathrm{L}.</m>  
+      The tank volume decreases because more flows out than in:
+      <m>200 - 2t</m> liters after <m>t</m> minutes.  
+      The differential equation is
+    </p>
+
+    <me>
+      \frac{dV}{dt}
+      = 1.2 \;-\; \frac{4}{100 - t}\,V.
+    </me>
+
+    <ol marker="(a)">
+      <li>
+        <p>
+          Show that the solution to the IVP  
+          <me>
+            \frac{dV}{dt} = 1.2 - \frac{4}{100-t}\,V, \qquad V(0)=1,
+          </me>
+          obtained using an integrating factor, is
+          <me>
+            V(t)
+            = 0.4(100 - t)
+              \;-\;
+              \frac{39}{100^{4}}(100 - t)^{4}.
+          </me>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          After how many minutes <m>T</m> is the tank empty?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Since the tank empties at time <m>T</m>, one expects <m>V(T)=0</m> and that the 
+          model is valid for <m>0 \le t \le T</m>.  
+          Does the graph of <m>V(t)</m> support this?
+        </p>
+      </li>
+    </ol>
+  </statement>
+
+  <solution>
+
+    <ol marker="(a)">
+
+      <!-- PART (a) -->
+      <li>
+        <p>
+          Rewrite the ODE in linear form:
+        </p>
+
+        <me>
+          \frac{dV}{dt} + \frac{4}{100 - t}V = 1.2.
+        </me>
+
+        <p>
+          The integrating factor is
+        </p>
+
+        <md>
+          <mrow> I(t)
+          \amp = \exp\!\left(\int \frac{4}{100 - t}\,dt\right) </mrow>
+          <mrow> \amp = \exp\!\left(-4\ln(100 - t)\right) </mrow>
+          <mrow> \amp = (100 - t)^{-4}. </mrow>
+        </md>
+
+        <p>
+          Multiply both sides of the ODE by <m>(100 - t)^{-4}</m>:
+        </p>
+
+        <me>
+          (100 - t)^{-4}\frac{dV}{dt}
+          + (100 - t)^{-5}(-4)V
+          = 1.2(100 - t)^{-4}.
+        </me>
+
+        <p>
+          The left-hand side is the derivative of the product:
+        </p>
+
+        <me>
+          \frac{d}{dt}\!\left( (100 - t)^{-4} V \right)
+          = 1.2(100 - t)^{-4}.
+        </me>
+
+        <p>Integrate both sides:</p>
+
+        <me>
+          (100 - t)^{-4} V
+          =
+          \int 1.2(100 - t)^{-4}\,dt + C.
+        </me>
+
+        <p>
+          Let <m>u = 100 - t</m>, so <m>du = -dt</m>. Then
+        </p>
+
+        <md>
+          <mrow> \int 1.2(100 - t)^{-4}\,dt 
+          \amp = -1.2\int u^{-4}\,du </mrow>
+          <mrow> \amp = -1.2\left(\frac{u^{-3}}{-3}\right) </mrow>
+          <mrow> \amp = 0.4\,u^{-3} </mrow>
+          <mrow> \amp = 0.4(100 - t)^{-3}. </mrow>
+        </md>
+
+        <p>
+          Hence:
+        </p>
+
+        <me>
+          (100 - t)^{-4} V
+            = 0.4(100 - t)^{-3} + C.
+        </me>
+
+        <p>
+          Multiply both sides by <m>(100 - t)^{4}</m>:
+        </p>
+
+        <me>
+          V(t)
+          = 0.4(100 - t)
+            + C(100 - t)^{4}.
+        </me>
+
+        <p>
+          Apply <m>V(0) = 1</m>:
+        </p>
+
+        <me>
+          1
+          = 0.4(100)
+            + C(100)^{4}
+          = 40 + C\cdot 100^{4}.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          C = -\frac{39}{100^{4}}.
+        </me>
+
+        <p>
+          The solution is thus
+        </p>
+
+        <me>
+          V(t)
+          = 0.4(100 - t)
+            \;-\;
+            \frac{39}{100^{4}}(100 - t)^{4}.
+        </me>
+      </li>
+
+
+      <!-- PART (b) -->
+      <li>
+        <p>
+          The tank is empty when its total volume becomes zero.  
+          Since the tank starts with 200 L and loses 2 L/min (because outflow is 8 L/min and 
+          inflow is 6 L/min), we solve:
+        </p>
+
+        <me>
+          200 - 2T = 0 \Longrightarrow T = 100\ \text{minutes}.
+        </me>
+
+        <p>
+          Thus the tank becomes empty after <m>T = 100</m> minutes.
+        </p>
+      </li>
+
+
+      <!-- PART (c) -->
+      <li>
+        <p>
+          Evaluate <m>V(t)</m> at <m>t=100</m>:
+        </p>
+
+        <me>
+          V(100)
+          = 0.4(100 - 100)
+            - \frac{39}{100^{4}}(100 - 100)^{4}
+          = 0,
+        </me>
+
+        <p>
+          as expected.  
+          On the interval <m>0 \le t \le 100</m>, the expression
+          <m>100 - t</m> remains nonnegative, so the graph of <m>V(t)</m> looks physically 
+          reasonable: it starts at <m>V(0)=1</m>, rises initially (since the inflow is very 
+          concentrated relative to tank volume), and eventually decreases as the tank drains.  
+          The graph approaches 0 smoothly as <m>t\to 100</m>.  
+          The behavior is fully consistent with the mixing model.
+        </p>
+      </li>
+
+    </ol>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="tank-mixing-changing-volume">
+  <statement>
+    <p>
+      At noon, a tank contains 100 L of solution in which 10 kg of chemical is dissolved.  
+      Solution containing 2 kg of the chemical per liter flows into the tank at 
+      5 L/min.  
+      The mixture is well-stirred and drawn off at a rate of 4 L/min.  
+      If the tank holds 500 L, when does it overflow?  
+      If <m>t</m> measures minutes after noon, find the mass of chemical 
+      <m>x(t)</m> (in kg) in the tank at time <m>t</m>.  
+      (Set up and solve a linear initial-value problem.)
+    </p>
+  </statement>
+
+  <solution>
+
+    <p><strong>Step 1. Tank volume.</strong></p>
+
+    <p>
+      Inflow is 5 L/min, outflow is 4 L/min, so volume increases at  
+      <m>1\ \mathrm{L/min}</m>.
+    </p>
+
+    <me>
+      V(t) = 100 + t.
+    </me>
+
+    <p>
+      The tank overflows when <m>V(t)=500</m>:
+    </p>
+
+    <me>
+      100 + t = 500 \quad\Longrightarrow\quad t = 400\ \text{minutes}.
+    </me>
+
+    <p><strong>Step 2. Differential equation for mass of chemical.</strong></p>
+
+    <p>
+      Chemical entering: <m>(2\ \mathrm{kg/L})(5\ \mathrm{L/min}) = 10\ \mathrm{kg/min}</m>.
+    </p>
+
+    <p>
+      Chemical leaving: concentration in tank is <m>x(t)/V(t)</m>, so  
+      outflow chemical rate is
+    </p>
+
+    <me>
+      \frac{x(t)}{100+t}\,(4\ \mathrm{L/min}).
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      \frac{dx}{dt}
+      = 10 \;-\; \frac{4}{100+t}\,x(t),
+      \qquad
+      x(0)=10.
+    </me>
+
+    <p><strong>Step 3. Solve the linear ODE using an integrating factor.</strong></p>
+
+    <p>
+      Write in standard form:
+    </p>
+
+    <me>
+      x' + \frac{4}{100+t}x = 10.
+    </me>
+
+    <p>
+      Integrating factor:
+    </p>
+
+    <md>
+      <mrow> \mu(t)
+      \amp = \exp\!\left(\int \frac{4}{100+t}\,dt\right) </mrow>
+      <mrow> \amp = (100+t)^{4}. </mrow>
+    </md>
+
+    <p>Multiply the ODE by <m>(100+t)^{4}</m>:</p>
+
+    <me>
+      \frac{d}{dt}\!\bigl((100+t)^{4} x\bigr)
+      = 10(100+t)^{4}.
+    </me>
+
+    <p>Integrate:</p>
+
+    <md>
+      <mrow> (100+t)^{4} x
+      \amp = 10\int (100+t)^{4}\,dt + C </mrow>
+      <mrow> \amp = 10\left(\frac{(100+t)^{5}}{5}\right) + C </mrow>
+      <mrow> \amp = 2(100+t)^{5} + C. </mrow>
+    </md>
+
+    <p>Divide by <m>(100+t)^{4}</m>:</p>
+
+    <me>
+      x(t)
+      = 2(100+t) + C(100+t)^{-4}.
+    </me>
+
+    <p>Use <m>x(0)=10</m>:</p>
+
+    <me>
+      10 = 200 + C(100)^{-4}
+      \quad\Longrightarrow\quad
+      C = -190\cdot 100^{4}.
+    </me>
+
+    <p>Final expression:</p>
+
+    <me>
+      x(t)
+      = 2(100+t)
+        \;-\;
+        190\left(\frac{100}{100+t}\right)^{4}.
+    </me>
+
+    <p><strong>Answer summary:</strong></p>
+    <ul>
+      <li>The tank overflows at <m>t=400</m> minutes after noon.</li>
+      <li>The mass of chemical is 
+        <m>
+          x(t)
+          =
+          2(100+t)
+          -190\left(\frac{100}{100+t}\right)^{4}.
+        </m>
+      </li>
+    </ul>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="salt-filtering-tank">
+  <statement>
+    <p>
+      A tank initially contains 200 gallons of pure water.  
+      Saltwater with concentration 3 ounces of salt per gallon enters at  
+      <m>\tfrac12</m> gallon per minute.  
+      The mixture drains at the same rate.  
+      Additionally, a filtering device removes half the salt contained in 
+      <em>one gallon</em> of the mixture per minute.
+    </p>
+
+    <p>
+      Let <m>y(t)</m> be the number of ounces of salt in the tank at time <m>t</m> minutes.
+    </p>
+
+    <ol marker="(a)">
+      <li><p>Find the initial-value problem (IVP) modeling this situation.</p></li>
+
+      <li>
+        <p>
+          Use technology to sketch a slope field 
+          (<m>-200 \le t \le 1440,\; -80 \le y \le 800</m>).  
+          Do any equilibrium solutions appear?  If so, where?
+        </p>
+      </li>
+
+      <li>
+        <p>Solve the IVP for <m>y(t)</m>.  Plot <m>y(t)</m> for the first 24 hours.</p>
+      </li>
+
+      <li>
+        <p>Compute <m>\displaystyle \lim_{t\to\infty} y(t)</m>.</p>
+      </li>
+    </ol>
+  </statement>
+
+  <solution>
+
+    <ol marker="(a)">
+
+      <li>
+        <p><strong>Modeling the IVP.</strong></p>
+
+        <p>
+          Inflow salt rate:
+        </p>
+        <me>
+          (3\ \mathrm{oz/gal})(\tfrac12\ \mathrm{gal/min})
+          = 1.5\ \mathrm{oz/min}.
+        </me>
+
+        <p>
+          Outflow salt rate:
+          volume stays 200 gallons,
+          so concentration is <m>y/200</m>, and outflow rate <m>\tfrac12</m> gal/min gives
+        </p>
+
+        <me>
+          \frac{y}{200}\cdot \tfrac12 
+          = \frac{y}{400}\ \mathrm{oz/min}.
+        </me>
+
+        <p>
+          Filtering device removes “half the salt in one gallon per minute”:
+        </p>
+
+        <me>
+          \frac12\cdot \frac{y}{200}
+          = \frac{y}{400}\ \mathrm{oz/min}.
+        </me>
+
+        <p>
+          Total removal rate is 
+          <m>y/400 + y/400 = y/200</m>.
+        </p>
+
+        <p>
+          Therefore, the initial-value problem is
+        </p>
+
+        <me>
+          \frac{dy}{dt}
+          = 1.5 - \frac{y}{200},
+          \qquad
+          y(0)=0.
+        </me>
+      </li>
+
+      <li>
+        <p><strong>Equilibrium solution.</strong></p>
+
+        <p>
+          Set <m>y'=0</m>:
+        </p>
+
+        <me>
+          1.5 - \frac{y}{200} = 0
+          \quad\Longrightarrow\quad
+          y = 300.
+        </me>
+
+        <p>
+          Thus an equilibrium appears at <m>y=300</m> ounces.  
+          The slope field (using any technology) will show horizontal segments near <m>y=300</m>.
+        </p>
+      </li>
+
+      <li>
+        <p><strong>Solve the IVP.</strong></p>
+
+        <p>
+          Rewrite:
+        </p>
+        <me>
+          y' + \frac{1}{200}y = 1.5.
+        </me>
+
+        <p>Integrating factor:</p>
+
+        <me>
+          \mu(t) = e^{t/200}.
+        </me>
+
+        <p>Multiply through:</p>
+
+        <me>
+          \frac{d}{dt}\!\bigl(e^{t/200} y\bigr)
+          = 1.5 e^{t/200}.
+        </me>
+
+        <p>Integrate:</p>
+
+        <md>
+          <mrow> e^{t/200} y
+          \amp = 1.5(200)\,e^{t/200} + C </mrow>
+          <mrow> \amp = 300 e^{t/200} + C. </mrow>
+        </md>
+
+        <p>Divide by <m>e^{t/200}</m>:</p>
+
+        <me>
+          y(t) = 300 + C e^{-t/200}.
+        </me>
+
+        <p>Use <m>y(0)=0</m>:</p>
+
+        <me>
+          0 = 300 + C
+          \quad\Longrightarrow\quad C=-300.
+        </me>
+
+        <p>
+          Final expression:
+        </p>
+
+        <me>
+          y(t) = 300\bigl(1 - e^{-t/200}\bigr).
+        </me>
+
+        <p>
+          A 24‑hour plot (over <m>0 \le t \le 1440</m>) shows a rising curve approaching 300.
+        </p>
+      </li>
+
+      <li>
+        <p><strong>Long-term behavior.</strong></p>
+
+        <p>
+          Compute the limit:
+        </p>
+
+        <md>
+          <mrow> \lim_{t\to\infty} y(t)
+          \amp = 300\left(1 - \lim_{t\to\infty} e^{-t/200}\right) </mrow>
+          <mrow> \amp = 300. </mrow>
+        </md>
+
+        <p>
+          The amount of salt approaches the equilibrium value 300 ounces.
+        </p>
+      </li>
+
+    </ol>
+
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 
