@@ -103,7 +103,7 @@ Existence/Uniqueness/Linear Independence (6:20)</url> by Mathispower4u.
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=HnmRWsMOjcw">Second order 
+      (Optional) <alert>Watch</alert> <url href="https://www.youtube.com/watch?v=HnmRWsMOjcw">Second order 
         linear ODEs (45:12)</url> for a lecture on section 2.1.  
     </p>
   </li>
@@ -118,7 +118,7 @@ https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#subsection-32">Subsec
         </li>
 
 
-        <li>
+<!--        <li>
           <p>
             Try these additional questions.  If necessary, use AI to guide your thinking. 
             <ol>
@@ -211,7 +211,7 @@ https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#subsection-32">Subsec
 
 </ol>
 </p>
-</li>
+</li> -->
 
 
         <li>
@@ -221,6 +221,370 @@ https://web.uvic.ca/~tbazett/diffyqs/solinear_section.html#subsection-32">Subsec
         </li>
         
         </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="mcq-sol2-1">
+  <title>Definition of a Second-Order Linear ODE</title>
+
+  <statement>
+    <p>
+      Which of the following differential equations is linear and second‑order?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y'' + p(x)\,y' + q(x)\,y = f(x)</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. A general second‑order linear ODE is defined as  
+          <m>A(x)y'' + B(x)y' + C(x)y = F(x)</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y'' = (y')^{2} + x</m></p></statement>
+      <feedback><p>Not linear: it contains <m>(y')^{2}</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y' + p(x)\,y = f(x)</m></p></statement>
+      <feedback><p>This is first‑order, not second‑order.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-sol2-2">
+  <title>Homogeneous vs. Nonhomogeneous</title>
+
+  <statement>
+    <p>
+      Which of the following is a <em>homogeneous</em> second‑order linear equation?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p><m>y'' + p(x)y' + q(x)y = 0</m></p></statement>
+      <feedback>
+        <p>
+          Correct. A homogeneous equation has <m>f(x)=0</m> on the right-hand side.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y'' + 3y' + y = \sin x</m></p></statement>
+      <feedback><p>Not homogeneous: <m>\sin x</m> is a forcing term.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y'' = y\cos x + 1</m></p></statement>
+      <feedback><p>Also nonhomogeneous due to the “+1”.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-sol2-3">
+  <title>Recognizing Solutions of a Homogeneous Equation</title>
+
+  <statement>
+    <p>
+      Suppose <m>y'' + k^{2}y = 0</m>.  
+      Which pair of functions forms a fundamental set of solutions?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\cos(kx)</m> and <m>\sin(kx)</m></p></statement>
+      <feedback>
+        <p>
+          Correct. <m>y_1=\cos(kx)</m> and <m>y_2=\sin(kx)</m> are two solutions of this equation.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>e^{kx}</m> and <m>1</m></p></statement>
+      <feedback><p>This pair does not satisfy <m>y''+k^{2}y=0</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>e^{kx}</m> and <m>e^{-kx}</m></p></statement>
+      <feedback>
+        <p>
+          These solve <m>y'' - k^{2}y = 0</m>, not <m>y'' + k^{2}y = 0</m>.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-sol2-4">
+  <title>The Superposition Principle</title>
+
+  <statement>
+    <p>
+      If <m>y_1</m> and <m>y_2</m> are solutions to the homogeneous equation  
+      <m>y'' + p(x)y' + q(x)y = 0</m>, what else must be a solution?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>C_1 y_1 + C_2 y_2</m> for any constants <m>C_1, C_2</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The superposition principle states that  
+          any linear combination of solutions is also a solution.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_1 y_2</m></p></statement>
+      <feedback><p>Products of solutions do <em>not</em> generally solve the equation.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_1 - y_2^2</m></p></statement>
+      <feedback><p>Nonlinear combinations break linearity of the operator.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-sol2-5">
+  <title>Checking a Proposed Solution</title>
+
+  <statement>
+    <p>
+      Check whether <m>y(x)=e^{2x}</m> is a solution of  
+      <m>y'' - 4y = 0</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>Yes, because <m>y'' - 4y = (4e^{2x}) - 4e^{2x} = 0</m>.</p></statement>
+      <feedback>
+        <p>
+          Correct. Differentiating twice gives <m>y''=4e^{2x}</m>, and the equation is satisfied.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>No, because <m>y'' - 4y = 8e^{2x}</m>.</p></statement>
+      <feedback><p>Incorrect computation of the derivatives.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>No, exponentials cannot solve homogeneous equations.</p></statement>
+      <feedback><p>False—exponentials are key solutions in Section 2.1.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="secondorder-linear-operator-1">
+  <statement>
+    <p>
+      Define <m>L</m> by <m>L(y) = y'' - y'</m>.  
+      Let <m>y_{1}(x) = e^{x}</m> and <m>y_{2}(x) = e^{2x}</m>.
+    </p>
+
+    <ol marker="(a)">
+      <li><p>Compute <m>L(y_{1}(x))</m>.</p></li>
+      <li><p>Compute <m>3 \cdot L(y_{2}(x))</m>.</p></li>
+      <li><p>Compute <m>L\!\bigl(y_{1}(x) + 3y_{2}(x)\bigr)</m>.</p></li>
+      <li><p>How does your answer to (c) compare to the sum of your answers to (a) and (b)?  Is <m>L</m> linear?</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          Compute <m>L(y_1)</m>.  
+          Since <m>y_1' = e^{x}</m> and <m>y_1'' = e^{x}</m>,
+        </p>
+        <me>
+          L(y_1) = y_1'' - y_1' = e^{x} - e^{x} = 0.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          For <m>y_2(x)=e^{2x}</m>, we have <m>y_2' = 2e^{2x}</m> and <m>y_2'' = 4e^{2x}</m>.  
+          So
+        </p>
+        <me>
+          L(y_2) = y_2'' - y_2' = 4e^{2x} - 2e^{2x} = 2e^{2x}.
+        </me>
+        <p>
+          Therefore,
+        </p>
+        <me>
+          3L(y_2) = 6e^{2x}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>L(y_1 + 3y_2)</m>.
+        </p>
+
+        <me>
+          (y_1 + 3y_2)' = e^{x} + 6e^{2x}, \qquad
+          (y_1 + 3y_2)'' = e^{x} + 12e^{2x}.
+        </me>
+
+        <md>
+          <mrow> L(y_1 + 3y_2) 
+          \amp = (e^{x} + 12e^{2x}) - (e^{x} + 6e^{2x}) </mrow>
+          <mrow> \amp = 6e^{2x}. </mrow>
+        </md>
+      </li>
+
+      <li>
+        <p>
+          The answer to (c) equals the sum of (a) and (b):
+        </p>
+
+        <me>
+          0 + 6e^{2x} = 6e^{2x}.
+        </me>
+
+        <p>
+          Thus <m>L</m> satisfies  
+          <m>L(y_1 + 3y_2) = L(y_1) + 3L(y_2)</m>,  
+          showing that <m>L</m> is linear.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="secondorder-linear-operator-2">
+  <statement>
+    <p>
+      Consider the differential equation
+      <me>y'' - 3y' + 2y = 0.</me>
+      Define the operator <m>L</m> by <m>L(y) = y'' - 3y' + 2y</m>.
+    </p>
+
+    <ol marker="(a)">
+      <li><p>Show that <m>y_{1}(x)=e^{x}</m> and <m>y_{2}(x)=e^{2x}</m> solve the equation by computing <m>L(y_{1})</m> and <m>L(y_{2})</m>.</p></li>
+
+      <li><p>For constants <m>c_1,c_2</m>, compute <m>L(c_1y_1 + c_2y_2)</m>.</p></li>
+
+      <li><p>Does <m>y(x)=c_1 e^{x} + c_2 e^{2x}</m> solve the differential equation?</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          For <m>y_1=e^{x}</m>,  
+          <m>y_1'=e^{x},\;y_1''=e^{x}</m>.  
+          Thus:
+        </p>
+        <me>
+          L(y_1) = e^{x} - 3e^{x} + 2e^{x} = 0.
+        </me>
+
+        <p>
+          For <m>y_2=e^{2x}</m>,  
+          <m>y_2'=2e^{2x},\;y_2''=4e^{2x}</m>.  
+          So:
+        </p>
+        <me>
+          L(y_2) = 4e^{2x} - 6e^{2x} + 2e^{2x} = 0.
+        </me>
+
+        <p>Both functions satisfy the differential equation.</p>
+      </li>
+
+      <li>
+        <p>
+          Use linearity of derivatives:
+        </p>
+
+        <md>
+          <mrow> L(c_1 y_1 + c_2 y_2)
+          \amp = c_1 L(y_1) + c_2 L(y_2) </mrow>
+          <mrow> \amp = c_1 \cdot 0 + c_2 \cdot 0 </mrow>
+          <mrow> \amp = 0. </mrow>
+        </md>
+      </li>
+
+      <li>
+        <p>
+          Yes. Because <m>L(c_1y_1 + c_2y_2)=0</m> for any constants <m>c_1,c_2</m>,  
+          the general solution of this linear second‑order homogeneous equation is  
+          <m>y(x) = c_1 e^{x} + c_2 e^{2x}</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="secondorder-linear-operator-3">
+  <statement>
+    <p>
+      Consider the differential equation <m>2y'' - 7y' + 3y = 0</m>.
+    </p>
+
+    <ol marker="(a)">
+      <li><p>Are <m>y_1(x)=e^{x/2}</m> and <m>y_2(x)=e^{3x}</m> linearly dependent or independent?  Explain.</p></li>
+      <li><p>Describe the general solution <m>y(x)</m> to this differential equation.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          The functions <m>e^{x/2}</m> and <m>e^{3x}</m> cannot be constant multiples of each other, 
+          since <m>\frac{x}{2} \ne 3x</m> for all <m>x</m>.  
+          Therefore they are <strong>linearly independent</strong>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          For a second‑order homogeneous linear ODE, any two linearly independent solutions form a basis.  
+          Hence the general solution is
+        </p>
+
+        <me>
+          y(x) = C_1 e^{x/2} + C_2 e^{3x}.
+        </me>
+
+        <p>
+          This describes every solution to <m>2y'' - 7y' + 3y = 0</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 

@@ -8,7 +8,7 @@
   <book>
     <title>Differential Equations with Linear Algebra</title>
 
-    <!-- <subtitle>MATH 327</subtitle> -->
+    <subtitle>MATH 327</subtitle> 
 
     <!-- Optional: include frontmatter with author info and date -->
     <xi:include href="./frontmatter.ptx" />
@@ -19,20 +19,20 @@
       <!-- <xi:include href="./handouts/02PrepWhatAreDifferentialEquations.ptx"/>
       <xi:include href="./handouts/11PrepIntegralsAsSolutions.ptx"/>
       <xi:include href="./handouts/12PrepSlopeFields.ptx"/>
-      <xi:include href="./handouts/13PrepSeparableEquations.ptx"/> -->
+      <xi:include href="./handouts/13PrepSeparableEquations.ptx"/> 
       <xi:include href="./handouts/14PrepLinearEquations.ptx"/>
       <xi:include href="./handouts/16PrepAutonomousEquations.ptx"/>
-      <xi:include href="./handouts/17PrepEulersMethod.ptx"/>
-      <!-- <xi:include href="./handouts/21PrepSecondOrderLinearODEs.ptx"/>
+      <xi:include href="./handouts/17PrepEulersMethod.ptx"/> 
+      <xi:include href="./handouts/21PrepSecondOrderLinearODEs.ptx"/>
       <xi:include href="./handouts/22PrepConstantCoefficientSecondOrderODEs.ptx"/>
       <xi:include href="./handouts/23PrepHigherOrderLinearODEs.ptx"/> 
-      <xi:include href="./handouts/24PrepMechanicalVibrations.ptx"/>
+      <xi:include href="./handouts/24PrepMechanicalVibrations.ptx"/> -->
       <xi:include href="./handouts/25PrepNonhomogeneousEquations.ptx"/> 
       <xi:include href="./handouts/31PrepTheLaplaceTransform.ptx"/> 
       <xi:include href="./handouts/32PrepTransformsOfDerivativesAndODEs.ptx"/>
       <xi:include href="./handouts/33PrepConvolution.ptx"/>
       <xi:include href="./handouts/34PrepDiracDelta.ptx"/> 
-      <xi:include href="./handouts/41PrepVectorsMappings.ptx"/>
+      <!-- <xi:include href="./handouts/41PrepVectorsMappings.ptx"/>
       <xi:include href="./handouts/42PrepMatrixAlgebra.ptx"/>
       <xi:include href="./handouts/43PrepElimination.ptx"/> 
       <xi:include href="./handouts/44PrepSubspaceDimensionKernel.ptx"/> 

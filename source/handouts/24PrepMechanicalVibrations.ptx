@@ -153,7 +153,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#subsection-44">Subsection 2.4.4
         </li>
 
 
-        <li>
+ <!--     <li>
           <p>
             Try these additional questions.  If necessary, use AI to guide your thinking. 
           </p>
@@ -424,7 +424,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#subsection-44">Subsection 2.4.4
 
 
 </ol>
-</li>
+</li> -->
 
 
 <li>
@@ -436,6 +436,577 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_mv.html#subsection-44">Subsection 2.4.4
 
         
 </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="mv-mcq-1">
+  <title>Understanding the Basic Model</title>
+
+  <statement>
+    <p>
+      The differential equation for a mass–spring–damper system is
+      <m>m x'' + c x' + k x = F(t)</m>.  
+      What does the constant <m>c</m> represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p>The damping coefficient.</p></statement>
+      <feedback>
+        <p>
+          Correct. <m>c \ge 0</m> is the friction/damping term.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The spring stiffness.</p></statement>
+      <feedback><p>No—that is <m>k</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The external forcing strength.</p></statement>
+      <feedback><p>No—forcing is represented by <m>F(t)</m>.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="mv-mcq-2">
+  <title>Forced vs. Unforced Motion</title>
+
+  <statement>
+    <p>
+      In the model <m>m x'' + c x' + k x = F(t)</m>, when is the motion called <em>unforced</em>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p>When <m>F(t) \equiv 0</m>.</p></statement>
+      <feedback>
+        <p>
+          Correct. If <m>F(t)</m> is identically zero, the motion is unforced (free).
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>When <m>c=0</m>.</p></statement>
+      <feedback><p>No—that corresponds to undamped, not unforced.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>When <m>k=0</m>.</p></statement>
+      <feedback><p>No—that would eliminate the spring.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="mv-mcq-3">
+  <title>Damped vs. Undamped</title>
+
+  <statement>
+    <p>
+      In the ODE <m>m x'' + c x' + k x = 0</m>, how do we know whether the system is damped?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p>If <m>c &gt; 0</m>, the motion is damped.</p></statement>
+      <feedback>
+        <p>
+          Correct. <m>c &gt; 0</m> means damping is present.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>If <m>m=0</m>.</p></statement>
+      <feedback><p>No—a mass must be positive in the model.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>If <m>k=0</m>.</p></statement>
+      <feedback><p>No—the spring constant has nothing to do with damping.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="mv-mcq-4">
+  <title>Qualitative Behavior of Undamped Motion</title>
+
+  <statement>
+    <p>
+      Consider the unforced, undamped equation <m>m x'' + k x = 0</m>.  
+      What type of motion does it describe?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p>Simple harmonic oscillations with constant amplitude.</p></statement>
+      <feedback>
+        <p>
+          Correct. With <m>c=0</m> and <m>F(t)=0</m>, the solution is sinusoidal.  
+          This is undamped harmonic motion.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Damped oscillations that decay over time.</p></statement>
+      <feedback><p>No—that requires <m>c>0</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Exponential growth without oscillations.</p></statement>
+      <feedback><p>No—the restoring force <m>k x</m> prevents runaway motion.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="mv-mcq-5">
+  <title>Natural Frequency</title>
+
+  <statement>
+    <p>
+      For the undamped, unforced system <m>m x'' + k x = 0</m>, the angular frequency of oscillation is
+      <m>\omega = \sqrt{\frac{k}{m}}</m>.  
+      If <m>m = 4</m> and <m>k = 36</m>, what is <m>\omega</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\omega = 3</m></p></statement>
+      <feedback>
+        <p>
+          Correct.  
+          <m>\omega = \sqrt{36/4} = \sqrt{9} = 3.</m>  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\omega = 6</m></p></statement>
+      <feedback><p>This corresponds to forgetting the division by <m>m</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\omega = \sqrt{40}</m></p></statement>
+      <feedback><p>Incorrect substitution into the formula.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="spring-mass-dashpot">
+  <statement>
+
+    <p>
+      Consider the spring–mass system shown in <xref ref="SpringMass4"/>.  
+      An object of mass <m>m</m> is attached to a spring with spring constant <m>k</m>, 
+      and a dashpot provides damping with coefficient <m>c</m>.  
+      If <m>x(t)</m> denotes displacement from equilibrium, then
+    </p>
+
+    <men xml:id="dashpoteqn">
+      m \frac{d^{2}x}{dt^{2}} + c \frac{dx}{dt} + kx = 0.
+    </men>
+
+    <figure xml:id="SpringMass4" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>A dashpot.</caption>
+      <image source="SpringMass4.jpg" width="50%">
+        <description>
+          A mass–spring–dashpot system: a wall on the left, a spring attached to a block of mass m,
+          and a damper connected from the block to another wall.
+        </description>
+      </image>
+    </figure>
+
+    <p>
+      A <term>dashpot</term> exerts a resistive force proportional to the velocity.  
+      We investigate several cases of the equation depending on <m>m</m>, <m>c</m>, and <m>k</m>.
+    </p>
+
+    <ol marker="(a)">
+
+      <li>
+        <p>
+          <alert>Undamped Motion.</alert>  
+          Suppose <m>c=0</m>.  
+          Then the model becomes  
+        </p>
+        <me>
+          m x'' + kx = 0.
+        </me>
+        <p>
+          With <m>\omega_0 = \sqrt{k/m}</m>:
+        </p>
+
+        <ol marker="(i)">
+          <li>
+            <p>Find the characteristic equation and its roots.</p>
+          </li>
+
+          <li>
+            <p>
+              Find the general solution <m>x(t)</m> written in terms of <m>\omega_0</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <p>
+          <alert>Undamped Motion (Example).</alert>  
+          A mass <m>m=\tfrac12</m> kg is attached to a spring that is stretched 2 m by a force of 100 N.  
+          Initial conditions: <m>x(0)=1</m>, <m>x'(0)=-5</m>.
+        </p>
+
+        <ol marker="(i)">
+          <li><p>Find the spring constant <m>k</m> and write the resulting DE.</p></li>
+
+          <li><p>Interpret the differential equation in words.</p></li>
+
+          <li><p>Explain what the initial conditions mean physically.</p></li>
+
+          <li>
+            <p>
+              Given <m>\omega_0 = 10</m>, the solution is  
+              <m>x(t) = \cos(10t) - \tfrac12 \sin(10t)</m>.  
+              Compute the frequency <m>\nu = \omega_0/(2\pi)</m> and the period <m>T</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Convert <m>x(t) = c_1 \cos(\omega_0 t) + c_2 \sin(\omega_0 t)</m> into  
+              <m>x(t) = A \cos(\omega_0 t - \phi)</m>.
+            </p>
+
+            <ol marker="(A)">
+              <li><p>Compute <m>A = \sqrt{c_1^2 + c_2^2}</m>.</p></li>
+              <li><p>Compute <m>\phi</m> from <m>\tan\phi = c_2/c_1</m> (noting it lies in quadrant IV).</p></li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              The first peak occurs at <m>t^* = \phi/\omega_0</m>.  
+              Determine <m>t^*</m> and describe/sketch the motion.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <p>
+          With damping (<m>c &gt; 0</m>), the characteristic equation is  
+        </p>
+        <me>
+          m r^2 + c r + k = 0,
+        </me>
+        <p>
+          with roots  
+        </p>
+        <me>
+          r = \frac{-c \pm \sqrt{c^2 - 4mk}}{2m}.
+        </me>
+
+        <ul>
+          <li><term>Overdamped:</term> <m>c^2 &gt; 4mk</m></li>
+          <li><term>Critically damped:</term> <m>c^2 = 4mk</m></li>
+          <li><term>Underdamped:</term> <m>c^2 &lt; 4mk</m></li>
+        </ul>
+      </li>
+
+      <li>
+        <p><term>Overdamped Motion.</term> Assume <m>c^2 &gt; 4mk</m>.</p>
+
+        <ol marker="(i)">
+          <li>
+            <p>
+              Explain why both roots <m>r_1,r_2</m> are negative.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Give the general solution.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\lim_{t\to\infty} x(t)</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <p><term>Critically Damped Motion.</term>  Assume <m>c^2 = 4mk</m>.</p>
+
+        <ol marker="(i)">
+          <li>
+            <p>
+              Explain why the repeated root is <m>r=-c/(2m)</m> and why it is negative.
+            </p>
+          </li>
+
+          <li><p>Give the general solution.</p></li>
+
+          <li><p>Compute <m>\lim_{t\to\infty} x(t)</m>.</p></li>
+        </ol>
+      </li>
+
+      <li>
+        <p>
+          <term>Underdamped Motion.</term>  
+          Suppose <m>c=1</m>, <m>m=\tfrac12</m>, <m>k=50</m>.
+        </p>
+
+        <ol marker="(i)">
+          <li><p>Find the complex roots of the characteristic equation.</p></li>
+
+          <li>
+            <p>
+              Given the solution  
+            </p>
+            <me>
+              x(t) = e^{-t}\!\Bigl( \cos(\sqrt{99}t) 
+              - \frac{4}{\sqrt{99}}\sin(\sqrt{99}t) \Bigr),
+            </me>
+            <p>
+              Compute <m>\lim_{t\to\infty} x(t)</m> and describe the qualitative shape of the graph.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+    </ol>
+  </statement>
+
+  <solution>
+
+    <p><strong>(a) Undamped Motion (c = 0)</strong></p>
+
+    <ol marker="(i)">
+      <li>
+        <p>
+          The DE is  
+          <m>m x'' + kx = 0</m>.  
+          Characteristic equation:
+        </p>
+        <me>
+          mr^{2} + k = 0
+          \quad\Rightarrow\quad
+          r^{2} = -\frac{k}{m}.
+        </me>
+        <p>
+          Thus <m>r = \pm i\sqrt{k/m} = \pm i\omega_0</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The general solution is
+        </p>
+        <me>
+          x(t) = C_1 \cos(\omega_0 t) + C_2 \sin(\omega_0 t).
+        </me>
+      </li>
+    </ol>
+
+    <p><strong>(b) Undamped Example</strong></p>
+
+    <ol marker="(i)">
+      <li>
+        <p>
+          Hooke’s law: a force of 100 N stretches the spring 2 m, so  
+        </p>
+        <me>
+          k = \frac{100}{2} = 50.
+        </me>
+        <p>
+          The DE is  
+        </p>
+        <me>
+          \tfrac12 x'' + 50 x = 0
+          \quad\Rightarrow\quad
+          x'' + 100 x = 0.
+        </me>
+      </li>
+
+      <li>
+        <p>The DE states: acceleration is proportional to displacement toward equilibrium.</p>
+      </li>
+
+      <li>
+        <p>
+          The initial conditions mean the mass starts 1 m to the right of equilibrium and moving left at 5 m/s.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Frequency:  
+        </p>
+        <me>
+          \nu = \omega_{0}/(2\pi) = 10/(2\pi) = \frac{5}{\pi} \approx 1.59\ \text{Hz}.
+        </me>
+        <p>Period:</p>
+        <me>
+          T = 1/\nu = \frac{\pi}{5} \approx 0.628.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Here <m>c_1 = 1</m>, <m>c_2 = -\tfrac12</m>.
+        </p>
+        <ol marker="(A)">
+          <li>
+            <md>
+              <mrow> A \amp = \sqrt{1^2 + \left(-\tfrac12\right)^2} </mrow>
+               <mrow> \amp = \sqrt{1 + \tfrac14} </mrow>
+                <mrow> \amp = \sqrt{\tfrac54} </mrow>
+               <mrow> \amp = \tfrac{\sqrt5}{2}. </mrow>
+            </md>
+          </li>
+
+          <li>
+            <p>
+              <m>\tan\phi = c_2/c_1 = -\tfrac12</m>.  
+              Quadrant IV → <m>\phi \approx -0.46365</m> radians  
+              or equivalently <m>\phi = 2\pi - 0.46365 \approx 5.8195</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <p>
+          Time lag:
+        </p>
+        <me>
+          t^{*} = \phi/\omega_{0} \approx 5.8195 / 10 = 0.58195.
+        </me>
+        <p>
+          The graph is a cosine‑like oscillation of amplitude <m>A</m> and frequency <m>\nu</m>, shifted right.
+        </p>
+      </li>
+    </ol>
+
+    <p><strong>(c) Overdamped Motion</strong></p>
+
+    <ol marker="(i)">
+      <li>
+        <p>
+          For <m>c^{2} &gt; 4mk</m>,  
+          <m>r = \frac{-c \pm \sqrt{c^{2}-4mk}}{2m}</m>.  
+          Since <m>c &gt; \sqrt{c^{2}-4mk} &gt; 0</m>, both numerator terms are negative ⇒ both roots negative.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          General solution:
+        </p>
+        <me>
+          x(t) = C_1 e^{r_1 t} + C_2 e^{r_2 t}
+          \quad (r_1,r_2 &lt; 0).
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Limit:
+        </p>
+        <me>
+          \lim_{t\to\infty} x(t) = 0.
+        </me>
+      </li>
+    </ol>
+
+    <p><strong>(d) Critically Damped Motion</strong></p>
+
+    <ol marker="(i)">
+      <li>
+        <p>
+          If <m>c^2 = 4mk</m>,  
+          <m>r = \frac{-c}{2m}</m>.  
+          Since <m>c &gt; 0,m &gt; 0</m>, the root is negative.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          General solution:
+        </p>
+        <me>
+          x(t) = (C_1 + C_2 t)e^{rt}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          Limit:
+        </p>
+        <me>
+          \lim_{t\to\infty} x(t) = 0.
+        </me>
+      </li>
+    </ol>
+
+    <p><strong>(e) Underdamped Motion</strong></p>
+
+    <ol marker="(i)">
+      <li>
+        <p>
+          Characteristic equation:
+        </p>
+        <me>
+          \tfrac12 r^{2} + 1 r + 50 = 0.
+        </me>
+        <p>
+          Multiply by 2: <m>r^{2} + 2r + 100 = 0</m>.  
+          Roots:
+        </p>
+        <me>
+          r = -1 \pm i\sqrt{99}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          For the solution
+        </p>
+        <me>
+          x(t) = e^{-t}\!\left( \cos\sqrt{99}t - \frac{4}{\sqrt{99}}\sin\sqrt{99}t \right),
+        </me>
+        <p>
+          the exponential factor dominates:
+        </p>
+        <me>
+          \lim_{t\to\infty} x(t) = 0.
+        </me>
+
+        <p>
+          Qualitatively, the plot shows oscillations whose amplitude decays exponentially.
+        </p>
+      </li>
+    </ol>
+
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 

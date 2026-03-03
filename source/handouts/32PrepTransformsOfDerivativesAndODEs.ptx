@@ -77,16 +77,16 @@ https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#subsection-56
 <li>
 <p>
 <alert>Watch</alert> <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#la-odeexample">
-Video 3.2.3: Solving an ODE using Laplace Transforms Example (7:31)</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#la-solve">
+Video 3.2.2: How to solve ODEs with the Laplace Transform (9:15)</url> by Trevor Bazett.
 </p>
 </li>
 
 <li>
 <p>
 <alert>Watch</alert> <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#la-solve">
-Video 3.2.2: How to solve ODEs with the Laplace Transform </url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#la-odeexample">
+Video 3.2.3: Solving an ODE using Laplace Transforms Example (7:31)</url> by Trevor Bazett.
 </p>
 </li>
 
@@ -361,6 +361,178 @@ using the Laplace transform.  Verify the result using appropriate technology.
 
         
 </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="laplace-deriv-mcq-1">
+  <title>Laplace Transform of a First Derivative</title>
+
+  <statement>
+    <p>
+      What is the Laplace transform of <m>y'(t)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p><m>sY(s) - y(0)</m></p></statement>
+      <feedback>
+        <p>
+          Correct. <m>{\cal L}\{y'\} = sY(s) - y(0)</m>, which is crucial when solving ODEs with initial conditions.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>sY(s)</m></p></statement>
+      <feedback><p>Missing the important term <m>-y(0)</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>Y(s) - y(0)</m></p></statement>
+      <feedback><p>Incorrect scaling—the factor <m>s</m> is essential.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-deriv-mcq-2">
+  <title>Laplace Transform of a Second Derivative</title>
+
+  <statement>
+    <p>
+      What is <m>{\cal L}\{y''(t)\}</m> in terms of <m>Y(s)</m>, <m>y(0)</m>, and <m>y'(0)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement><p><m>s^{2}Y(s) - s\,y(0) - y'(0)</m></p></statement>
+      <feedback>
+        <p>
+          Correct. <m>{\cal L}\{y''\} = s^2Y(s) - s y(0) - y'(0)</m>, used directly when turning ODEs into algebraic equations in <m>s</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>s^{2}Y(s) - y(0)</m></p></statement>
+      <feedback><p>Missing the critical <m>-s y(0)</m> and <m>-y'(0)</m> terms.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>sY(s) - y'(0)</m></p></statement>
+      <feedback><p>This is the formula for <em>first</em> derivatives, not second.</p></feedback>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-deriv-mcq-3">
+  <title>Converting an ODE to an Algebraic Equation</title>
+
+  <statement>
+    <p>
+      Consider the IVP <m>y'' + y = 0</m> with <m>y(0)=2</m>, <m>y'(0)=0</m>.  
+      After taking Laplace transforms and using derivative rules, which algebraic equation in <m>Y(s)</m> results?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>(s^{2}+1)Y(s) - 2s = 0</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Using <m>{\cal L}\{y''\}=s^2Y - s y(0) - y'(0) = s^2Y -2s</m> and <m>{\cal L}\{y\}=Y</m>.  
+          So <m>(s^2+1)Y - 2s = 0</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>(s^{2}+1)Y(s)=0</m></p></statement>
+      <feedback><p>Initial conditions were not incorporated.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>(s^{2}-1)Y(s)=2</m></p></statement>
+      <feedback><p>Incorrect signs and missing <m>s</m>-term.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-deriv-mcq-4">
+  <title>Solve for <m>Y(s)</m></title>
+
+  <statement>
+    <p>
+      From the algebraic equation <m>(s^{2}+1)Y(s) - 2s = 0</m>, what is <m>Y(s)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>Y(s) = \dfrac{2s}{s^{2}+1}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Divide both sides by <m>s^{2}+1</m>.  
+          This corresponds to the transform of <m>2\cos t</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>Y(s)=\dfrac{2}{s^{2}+1}</m></p></statement>
+      <feedback><p>Missing a factor of <m>s</m> in the numerator.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>Y(s)=\dfrac{2s}{s^{2}-1}</m></p></statement>
+      <feedback><p>Incorrect denominator.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-deriv-mcq-5">
+  <title>Inverse Laplace Identification</title>
+
+  <statement>
+    <p>
+      Which of the following time‑domain functions have Laplace transforms equal to 
+      <m>\dfrac{2s}{s^{2}+1}</m>?  
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>2\cos t</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Since <m>{\cal L}\{\cos t\} = s/(s^{2}+1)</m>, multiplying by 2 gives the target transform.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>2\sin t</m></p></statement>
+      <feedback><p>No—its transform is <m>2/(s^{2}+1)</m>, not <m>2s/(s^{2}+1)</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>e^{-t}</m></p></statement>
+      <feedback><p>No—its transform is <m>1/(s+1)</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+</exercises>
 
 </section>
 

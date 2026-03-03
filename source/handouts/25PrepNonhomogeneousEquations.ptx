@@ -78,7 +78,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-45">Subsection 2
 <p>
 (Optional) <alert>Watch</alert> video <url href=" 
 https://youtu.be/4aLRvtb0M9A?si=xgEpOyLK22ajh1uD">
-Prove the Form of he General Solution to a Linear Second Order Nonhomogeneous DE (7:32)</url> by Mathispower4u.  
+Prove the Form of the General Solution to a Linear Second Order Nonhomogeneous DE (7:32)</url> by Mathispower4u.  
 </p>
 </li>
 
@@ -157,10 +157,17 @@ Ex 1: General Solution to a Second Order DE Using Variation of Parameters (8:26)
 </p>
 </li>
 
+    <li>
+    <p>
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/dzKnv4ntH2g?si=RIi9O8LHp_rJano0">
+       Undetermined Coefficients (29:26)</url> and <url href="https://youtu.be/IYKULUq6YPQ?si=sFUzPpzFDutIBGwz">
+       Variation of Parameters (24:53)</url> from MIT OpenCourseWare.  Yes, from 1971, but gold from Herb Gross.  
+    </p>
+  </li>
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/jRPuCCQqGXU?si=nrQAM6qzgvK54tNV">
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/jRPuCCQqGXU?si=nrQAM6qzgvK54tNV">
        Nonhomogeneous Equations, part 1: Undetermined Coefficients (30:41)</url> and <url href="https://youtu.be/YnxJnkbWud0?si=p7b5aypAucmNOWdZ">
        Nonhomogeneous Equations, part 2: Variation of Parameters (17:33)</url> for a lecture on section 2.5.  
     </p>
@@ -176,7 +183,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-48">Subsection 2
         </li>
 
 
-        <li>
+ <!--        <li>
           <p>
             Try these additional questions.  If necessary, use AI to guide your thinking. 
           </p>
@@ -284,7 +291,7 @@ find a particular solution to <m>y''-4y=2e^{2x}</m>.
 </li>
 
 </ol>
-</li>
+</li> -->
 
 
 <li>
@@ -296,6 +303,796 @@ find a particular solution to <m>y''-4y=2e^{2x}</m>.
 
         
 </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+  <exercise xml:id="nonhom-concept-1">
+  <statement>
+    <p>
+      <m>y_{c}</m> is called a <em>complementary solution</em>.  
+      What do you think it complements?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The complementary solution <m>y_c</m> solves the associated homogeneous equation <m>L[y]=0</m>.  
+      It is called “complementary” because it complements a single particular solution <m>y_p</m> 
+      to produce the full general solution to the nonhomogeneous equation:
+    </p>
+    <me>
+      y = y_c + y_p.
+    </me>
+    <p>
+      In other words, <m>y_c</m> fills in <em>all the homogeneous pieces</em> required to describe 
+      every possible solution, complementing the specific contribution coming from the forcing term.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonhom-concept-2">
+  <statement>
+    <p>
+      In your own words, summarize 
+      <url href="https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#theorem-11">Theorem 2.5.1</url>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Theorem 2.5.1 says that to solve a linear nonhomogeneous ODE <m>L[y]=f(x)</m>:
+    </p>
+
+    <ul>
+      <li><p>Find <m>y_c</m>, the general solution of the homogeneous equation <m>L[y]=0</m>.</p></li>
+      <li><p>Find <m>y_p</m>, any single particular solution of <m>L[y]=f(x)</m>.</p></li>
+    </ul>
+
+    <p>
+      Then the full general solution is simply
+    </p>
+    <me>
+      y = y_c + y_p.
+    </me>
+
+    <p>
+      The theorem also guarantees that any two solutions differ by a homogeneous solution, 
+      so this formula captures <em>all</em> solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonhom-concept-3">
+  <statement>
+    <p>
+      <url href="https://web.uvic.ca/~tbazett/diffyqs/sec_nonhom.html#subsection-46">
+        Subsection 2.5.2
+      </url>, on Undetermined Coefficients, mentions a <em>hiccup</em>.
+      What is this hiccup?  
+      Can it be managed?  
+      If so, how?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The “hiccup” occurs when the forcing term is itself a solution of the homogeneous equation.  
+      In that case, the usual trial function for <m>y_p</m> gives zero when substituted into the left‑hand side.
+    </p>
+
+    <p>
+      Yes, it can be managed: multiply the entire trial solution by <m>x</m> (or by <m>x^2</m> if one 
+      multiplication still conflicts) until the guess is no longer a solution of the homogeneous equation.  
+      This ensures a valid particular solution.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonhom-concept-4">
+  <statement>
+    <p>
+      Give an example of a second‑order, linear, constant‑coefficient, nonhomogeneous ODE 
+      for which Undetermined Coefficients will <em>not</em> work.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Undetermined coefficients works only for forcing terms that are exponentials, polynomials, 
+      sines, and cosines (or finite sums/products of these).
+    </p>
+
+    <p>
+      A forcing term like <m>\ln x</m> or <m>\tan x</m> does <em>not</em> fit that pattern.  
+      For example:
+    </p>
+
+    <me>
+      y'' + 4y = \ln x
+    </me>
+
+    <p>
+      cannot be solved by undetermined coefficients.  
+      We would need variation of parameters instead.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-1">
+  <title>Structure of the General Solution</title>
+
+  <statement>
+    <p>
+      For a nonhomogeneous linear ODE <m>L[y] = f(x)</m>, which formula describes the general solution?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y = y_c + y_p</m>, where <m>y_c</m> solves <m>L[y] = 0</m> and <m>y_p</m> is any particular solution.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Every solution is the sum of the complementary solution 
+          and <em>any</em> particular solution.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = y_c \cdot y_p</m></p></statement>
+      <feedback><p>No—solutions are added, not multiplied.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = y_p</m> only</p></statement>
+      <feedback><p>No—the complementary solution is needed for the full family of solutions.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-2">
+  <title>Why the Method Works</title>
+
+  <statement>
+    <p>
+      Suppose <m>y_{p_1}</m> and <m>y_{p_2}</m> are both particular solutions to <m>L[y] = f(x)</m>.  
+      What can be said about <m>w = y_{p_1} - y_{p_2}</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>w</m> solves the associated homogeneous equation <m>L[w] = 0</m>.</p></statement>
+      <feedback>
+        <p>
+          Correct. The difference of two particular solutions always satisfies 
+          <m>L[w]=0</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>w</m> is another particular solution.</p></statement>
+      <feedback><p>No—its right‑hand side is zero, not <m>f(x)</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>w = 0</m> always.</p></statement>
+      <feedback><p>Not true—different particular solutions differ by a homogeneous solution, not necessarily zero.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-3">
+  <title>Undetermined Coefficients for a Polynomial</title>
+
+  <statement>
+    <p>
+      Consider <m>y'' + 5y' + 6y = 2x + 1</m>.  
+      Using undetermined coefficients, what form should you try for <m>y_p</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y_p = Ax + B</m></p></statement>
+      <feedback>
+        <p>
+          Correct. When <m>f(x)</m> is a polynomial, we try a polynomial of 
+          the same degree.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = Ce^{x}</m></p></statement>
+      <feedback><p>No—that form is for exponential forcing.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = A\cos x + B\sin x</m></p></statement>
+      <feedback><p>No—this corresponds to sinusoidal forcing.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-4">
+  <title>Complementary Solution Identification</title>
+
+  <statement>
+    <p>
+      For the equation <m>y'' + 5y' + 6y = 2x + 1</m>, what is the complementary solution <m>y_c</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y_c = C_1 e^{-2x} + C_2 e^{-3x}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Solve <m>r^2 + 5r + 6 = 0</m> → <m>(r+2)(r+3)=0</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_c = Ax + B</m></p></statement>
+      <feedback><p>No—that form is for a polynomial forcing, not the homogeneous solution.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_c = C_1 \cos x + C_2 \sin x</m></p></statement>
+      <feedback><p>No—this form corresponds to complex roots.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-5">
+  <title>Determining a Particular Solution Coefficient</title>
+
+  <statement>
+    <p>
+      In solving <m>y'' + 5y' + 6y = 2x + 1</m>, suppose you try <m>y_p = Ax + B</m>.  
+      Plugging into the left side gives <m>(6A)x + (5A + 6B)</m>.  
+      What must <m>A</m> equal?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>A = \tfrac{1}{3}</m></p></statement>
+      <feedback>
+        <p>
+          Correct, because matching coefficients requires <m>6A = 2</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>A = 2</m></p></statement>
+      <feedback><p>No—this would give <m>6A = 12</m>, not <m>2</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>A = \tfrac12</m></p></statement>
+      <feedback><p>No—plugging in yields <m>6A = 3</m>, not <m>2</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-6">
+  <title>Avoiding Resonance in Undetermined Coefficients</title>
+
+  <statement>
+    <p>
+      Consider the ODE
+      <m>y'' + 4y = \cos(2x).</m>
+      When using the method of undetermined coefficients, what form should you try for the particular solution <m>y_p</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y_p = x\,(A\cos 2x + B\sin 2x)</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Because <m>\cos 2x</m> and <m>\sin 2x</m> already solve the homogeneous equation
+          (the system is in resonance), we multiply the usual guess by <m>x</m>.  
+          We shift the guess when it conflicts with the complementary solution.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = A\cos 2x + B\sin 2x</m></p></statement>
+      <feedback><p>No—this duplicates the complementary solution, yielding no new information.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = A x^2 + Bx + C</m></p></statement>
+      <feedback><p>No—this form is used for polynomial forcing, not trigonometric forcing.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-7">
+  <title>Choosing a Particular Solution for an Exponential Forcing</title>
+
+  <statement>
+    <p>
+      Consider the equation
+      <m>y'' - 3y' + 2y = e^{x}.</m>
+      The complementary solution is <m>y_c = C_1 e^{x} + C_2 e^{2x}</m>.  
+      What is the correct form for a particular solution <m>y_p</m> using the method of undetermined coefficients?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y_p = A x e^{x}</m></p></statement>
+      <feedback>
+        <p>
+          Correct.  
+          Because <m>e^{x}</m> is already part of the complementary solution, the trial function 
+          <m>A e^{x}</m> would duplicate a homogeneous solution and produce only the zero result.  
+          In this situation the trial form must be multiplied by <m>x</m> 
+          to avoid resonance, giving <m>y_p = A x e^{x}</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = A e^{x}</m></p></statement>
+      <feedback>
+        <p>
+          No—<m>e^{x}</m> already appears in <m>y_c</m>, so this choice leads to duplication and cannot
+          produce a valid particular solution.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = A e^{2x}</m></p></statement>
+      <feedback>
+        <p>
+          No—<m>e^{2x}</m> also appears in the complementary solution and is unrelated to the forcing term.
+        </p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-nonhom-8">
+  <title>Finding a Particular Solution Quickly</title>
+
+  <statement>
+    <p>
+      For the equation  
+      <m>y'' + y = 3e^{x},</m>  
+      which of the following is a correct particular solution <m>y_p</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>y_p = \tfrac{3}{2} e^{x}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Substituting <m>y_p = Ae^{x}</m> yields  
+          <m>Ae^{x} + Ae^{x} = 3e^{x}</m>, so <m>2A=3 \longrightarrow A=\tfrac{3}{2}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = 3e^{x}</m></p></statement>
+      <feedback><p>No—this gives <m>y_p'' + y_p = 6e^{x}</m>, which is too large.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y_p = \tfrac{3}{4}e^{x}</m></p></statement>
+      <feedback><p>No—this yields only <m>\tfrac{3}{2} e^{x}</m> on substitution, not <m>3e^{x}</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="nonhom-particular-1">
+  <statement>
+    <p>
+      Find a particular solution of
+    </p>
+    <me>
+      3y'' + y' - 2y = 2\cos x.
+    </me>
+    <p>
+      A reasonable trial is <m>y_p = A\cos x + B\sin x</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Compute derivatives:
+    </p>
+    <me>
+      y_p' = -A\sin x + B\cos x, \qquad
+      y_p'' = -A\cos x - B\sin x.
+    </me>
+
+    <p>Substitute into the ODE:</p>
+
+    <me>
+    3(-A\cos x - B\sin x)
+    + (-A\sin x + B\cos x)
+    - 2(A\cos x + B\sin x)
+    =
+    2\cos x.
+    </me>
+
+    <p>Group cosine and sine terms:</p>
+
+    <me>
+      \cos x\,(-3A + B - 2A) 
+      \;+\;
+      \sin x\,(-3B - A - 2B)
+      =
+      2\cos x.
+    </me>
+
+    <p>
+      So
+    </p>
+    <me>
+      (-5A + B)\cos x + (-6B - A)\sin x = 2\cos x.
+    </me>
+
+    <p>Match coefficients:</p>
+
+    <me>
+      -5A + B = 2, \qquad -A - 6B = 0.
+    </me>
+
+    <p>Solve the second for <m>A=-6B</m>.  
+      Plug into the first:
+    </p>
+
+    <me>
+      -5(-6B) + B = 2
+      \quad\Rightarrow\quad
+      31B = 2
+      \quad\Rightarrow\quad
+      B = \frac{2}{31}.
+    </me>
+
+    <p>
+      Then <m>A = -6B = -\frac{12}{31}</m>.
+    </p>
+
+    <p>
+      Thus a particular solution is
+    </p>
+
+    <me>
+      y_p(x) = 
+      -\frac{12}{31}\cos x 
+      + \frac{2}{31}\sin x.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonhom-particular-2">
+  <statement>
+    <p>
+      Find a particular solution of 
+    </p>
+    <me>
+      y'' - 4y = 2e^{2x}.
+    </me>
+
+    <p>
+      Since <m>e^{2x}</m> is a homogeneous solution, try <m>y_p = A x e^{2x}</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Let <m>y_p = A x e^{2x}</m>.  
+      Compute:
+    </p>
+
+    <me>
+      y_p' = A e^{2x} + 2Ax e^{2x}, \qquad
+      y_p'' = 2A e^{2x} + 4Ax e^{2x} + 2A e^{2x}.
+    </me>
+
+    <p>Simplify:</p>
+
+    <me>
+      y_p'' = 4A e^{2x} + 4Ax e^{2x}.
+    </me>
+
+    <p>
+      Now compute <m>y_p'' - 4y_p</m>:
+    </p>
+
+    <me>
+      y_p'' - 4y_p
+      = (4A e^{2x} + 4Ax e^{2x})
+        - 4(Ax e^{2x})
+      = 4A e^{2x}.
+    </me>
+
+    <p>
+      Set <m>4A e^{2x} = 2 e^{2x}</m>, so <m>A = \tfrac12</m>.  
+      Therefore
+    </p>
+
+    <me>
+      y_p(x) = \frac12\, x e^{2x}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonhom-particular-3">
+  <statement>
+    <p>
+      <ol>
+        <li><p>Determine the appropriate form of a particular solution of</p></li>
+      </ol>
+    </p>
+
+    <me>
+      y'' + 6y' + 13y = e^{-3x}\cos 2x.
+    </me>
+
+    <p>
+      <ol start="2">
+        <li><p>Find the coefficients in your trial solution.</p></li>
+      </ol>
+    </p>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          The forcing term is <m>e^{-3x}\cos 2x</m>.  
+          The complementary solution comes from roots of
+        </p>
+        <me>
+          r^2 + 6r + 13 = 0 \quad\Rightarrow\quad r = -3 \pm 2i.
+        </me>
+
+        <p>
+          Since the forcing term has the same exponential <m>e^{-3x}</m> 
+          and same frequency <m>2</m>, it exactly matches the homogeneous form—
+          so we must multiply by <m>x</m>.
+        </p>
+
+        <p>
+          Appropriate form:
+        </p>
+
+        <me>
+          y_p = x e^{-3x}\bigl(A\cos 2x + B\sin 2x\bigr).
+        </me>
+      </li>
+
+      <li>
+        <p>Differentiate and substitute (CAS recommended).  
+          The resulting coefficients are:</p>
+
+        <me>
+          A = 0,\qquad B = -\frac14.
+        </me>
+
+        <p>
+          Hence a particular solution is
+        </p>
+
+        <me>
+          y_p(x) = -\frac14\, x e^{-3x}\sin 2x.
+        </me>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonhom-particular-4">
+  <statement>
+    <p>
+      Find a particular solution of  
+    </p>
+    <me>
+      y'' - 4y' + 4y = e^{2x}.
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      Characteristic equation: <m>r^2 - 4r + 4 = (r-2)^2</m>.  
+      Since the forcing term is <m>e^{2x}</m>, which corresponds to the repeated root, 
+      try:
+    </p>
+    <me>
+      y_p = A x^2 e^{2x}.
+    </me>
+
+    <p>
+      Compute derivatives:
+    </p>
+
+    <me>
+      y_p' = A(2x e^{2x} + 2x^2 e^{2x}),\\
+      y_p'' = A(2e^{2x} + 8x e^{2x} + 4x^2 e^{2x}).
+    </me>
+
+    <p>Substitute:</p>
+
+    <md>
+      <mrow> y_p'' - 4y_p' + 4y_p
+      \amp = A e^{2x}(2 + 8x + 4x^2) 
+        - 4A e^{2x}(2x + 2x^2)
+        + 4A x^2 e^{2x} </mrow>
+      <mrow> \amp = 2A e^{2x}. </mrow>
+    </md>
+
+    <p>
+      Therefore set <m>2A = 1</m>, so <m>A = \tfrac12</m>.  
+      Thus
+    </p>
+
+    <me>
+      y_p = \tfrac12 x^2 e^{2x}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonhom-ivp-final">
+  <statement>
+    <p>
+      Solve the initial value problem
+    </p>
+    <me>
+      y'' + 9y = \cos 3x + \sin 3x,\qquad y(0)=2,\quad y'(0)=1.
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      Complementary solution:
+    </p>
+    <me>
+      r^2 + 9 = 0 \quad\Rightarrow\quad r = \pm 3i.
+    </me>
+
+    <p>
+      So
+    </p>
+    <me>
+      y_c = C_1 \cos 3x + C_2 \sin 3x.
+    </me>
+
+    <p>
+      For a particular solution, try  
+      <m>y_p = A\cos 3x + B\sin 3x</m>.
+      Substitute:
+    </p>
+
+    <me>
+      y_p'' + 9y_p = 
+      (-9A\cos 3x - 9B\sin 3x)
+      + 9(A\cos 3x + B\sin 3x)
+      = 0.
+    </me>
+
+    <p>
+      This gives zero, so the guess duplicates the homogeneous solution.  
+      Multiply by <m>x</m>:
+    </p>
+
+    <me>
+      y_p = x\bigl(A\cos 3x + B\sin 3x\bigr).
+    </me>
+
+    <p>
+      Compute <m>y_p'' + 9y_p</m>.  
+      After simplification (CAS recommended), one obtains:
+    </p>
+
+    <me>
+      y_p'' + 9y_p = 3A \sin 3x - 3B \cos 3x.
+    </me>
+
+    <p>
+      Match coefficients with the forcing <m>\cos 3x + \sin 3x</m>:
+    </p>
+
+    <me>
+      -3B = 1,\qquad 3A = 1.
+    </me>
+
+    <p>
+      So <m>A = \tfrac13</m>, <m>B = -\tfrac13</m>.
+    </p>
+
+    <p>Thus</p>
+
+    <me>
+      y_p = \frac{x}{3}\bigl(\cos 3x - \sin 3x\bigr).
+    </me>
+
+    <p><strong>Full solution:</strong></p>
+
+    <me>
+      y = C_1 \cos 3x + C_2 \sin 3x 
+        + \frac{x}{3}(\cos 3x - \sin 3x).
+    </me>
+
+    <p>Apply initial conditions:</p>
+
+    <p><strong>At</strong> <m>x=0</m>:</p>
+
+    <me>
+      y(0) = C_1 = 2.
+    </me>
+
+    <p>
+      Derivative:
+    </p>
+
+    <md>
+      <mrow> y' \amp = -3C_1 \sin 3x + 3C_2 \cos 3x </mrow>
+         <mrow> \ \ \amp  + \frac13(\cos 3x - \sin 3x) </mrow>
+         <mrow> \ \ \amp  + \frac{x}{3}(-3\sin 3x - 3\cos 3x). </mrow>
+    </md>
+
+    <p>
+      At <m>x=0</m>:
+    </p>
+
+    <me>
+      y'(0) = 3C_2 + \frac13 = 1
+      \quad\Rightarrow\quad
+      3C_2 = \frac23
+      \quad\Rightarrow\quad
+      C_2 = \frac{2}{9}.
+    </me>
+
+    <p><strong>Final solution:</strong></p>
+
+    <me>
+      y(x)
+      = 2\cos 3x 
+        + \frac{2}{9}\sin 3x
+        + \frac{x}{3}\bigl(\cos 3x - \sin 3x\bigr).
+    </me>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 

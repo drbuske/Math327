@@ -188,13 +188,7 @@ https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#subsection-55">Subsect
         </li>
 
 
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-          </p>
-            <ol>
-
-<li>
+<!-- <li>
 <p>
 If <m>f(t)</m> is defined for <m>t \geq 0</m>, then its <alert>Laplace transform</alert> is defined by <m>{\cal{L}}[f(t)] = ?</m>.
 </p>
@@ -211,7 +205,7 @@ https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#example-52">Example 3.
 <p>
 In your own words, what does it mean for a function to be of <em>exponential order</em>? 
 </p>
-</li>
+</li> 
 
 <li>
   <p>
@@ -228,7 +222,7 @@ https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#example-49">Example 3.
 Compute <m>{\cal{L}}[f(t)]</m>.
 What is the domain of <m>F(s)</m>?
   </p>
-</li>
+</li> 
 
 <li>
   <p>
@@ -272,30 +266,553 @@ https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#lt_table">Table 3.1</u
     </p>
   </li>
 </ol>
-</li>
+</li> 
 
 <li>
   <p>
 Compute the inverse Laplace transform of <m>\displaystyle F(s) = \frac{2s-3}{(s-3)(s+2)}</m> by hand, 
 using partial fractions and tables.  Does AI agree with your result?
   </p>
-</li>
+</li> 
 
 <li>
   <p>
 Compute the inverse Laplace transform of <m>\displaystyle F(s) = \frac{3}{(s^{2}+4)(s^{2}+9)}</m> 
 using partial fractions and tables.  Does AI agree with your result?
   </p>
-</li>
+</li> 
+
 
 <li>
   <p>
-   Use the definition of Laplace transform to compute <m>{\cal{L}}[f(t)]</m> for the 
-   function <m>f</m> graphed in <xref ref="GraphLaplaceTransformA"/>.
+   Find the inverse Laplace transform of <m>\displaystyle F(s) = \frac{2s}{s^{2}-1}</m>.
+  </p>
+</li> -->
 
-   <figure xml:id="GraphLaplaceTransformA">
+
+
+
+<li>
+  <p>
+    <alert>Do</alert> MyOpenMath questions from this section. 
+  </p>
+</li>
+
+
+        
+</ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="laplace-mcq-1">
+  <title>Basic Definition</title>
+
+  <statement>
+    <p>
+      The Laplace transform of a function <m>f(t)</m> is defined by
+      <m>\displaystyle \mathcal{L}\{f(t)\}(s) = \int_{0}^{\infty} e^{-st} f(t)\, dt.</m>
+      For what values of <m>s</m> does this improper integral typically converge?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>For all <m>s</m> sufficiently large so that the integral converges.</p></statement>
+      <feedback>
+        <p>
+          Correct. The transform only exists when the improper integral converges,
+          typically for <m>s</m> in some right half‑plane.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>For all real numbers <m>s</m>.</p></statement>
+      <feedback><p>No—the integral may diverge for small or negative <m>s</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Only for <m>s = 0</m>.</p></statement>
+      <feedback><p>No—the Laplace transform is designed for <m>s</m> in a range of positive values.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-mcq-2">
+  <title>Transform of a Constant</title>
+
+  <statement>
+    <p>  
+      What is the value of the transform <m>\mathcal{L}\{1\}(s)</m> (when it exists)?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\displaystyle \frac{1}{s}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The integral <m>\int_0^{\infty} e^{-st} dt = 1/s</m> for <m>s>0</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p><m>\displaystyle \frac{1}{s^2}</m></p></statement>
+      <feedback><p>No—that is the transform of <m>t</m>, not <m>1</m>.</p></feedback>
+    </choice>
+
+    <choice><statement><p><m>e^{-s}</m></p></statement>
+      <feedback><p>Not correct—the transform is a rational function, not exponential.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-mcq-3">
+  <title>Linearity of the Laplace Transform</title>
+
+  <statement>
+    <p>
+      Which property does the Laplace transform satisfy?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\mathcal{L}\{a f(t) + b g(t)\} = a F(s) + b G(s)</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The Laplace transform is linear.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\mathcal{L}\{f(t)g(t)\} = F(s)G(s)</m></p></statement>
+      <feedback><p>No—there is no simple product rule for Laplace transforms.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\mathcal{L}\{f'(t)\} = f(t)</m></p></statement>
+      <feedback>
+        <p>No—that contradicts the derivative formula introduced later in the section.</p>
+      </feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-mcq-4">
+  <title>Transform of an Exponential</title>
+
+  <statement>
+    <p>
+      Using the definition, what is <m>\mathcal{L}\{ e^{at} \}(s)</m> (for <m>s>a</m>)?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\displaystyle \frac{1}{\,s - a\,}</m></p></statement>
+      <feedback>
+        <p>
+          Correct.  
+          The integral <m>\int_0^\infty e^{-st} e^{at} dt = 1/(s-a)</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\displaystyle \frac{1}{s+a}</m></p></statement>
+      <feedback><p>No—this corresponds to <m>e^{-at}</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>\displaystyle s-a</m></p></statement>
+      <feedback><p>No—the transform should be a rational function in <m>s</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-mcq-5">
+  <title>Conceptual Purpose of the Laplace Transform</title>
+
+  <statement>
+    <p>
+      What is one main advantage of the Laplace transform in solving ODEs?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>It converts differential equations into algebraic equations in the <m>s</m>-domain.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct.  
+          Laplace transforms turn calculus problems into algebra problems.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>It eliminates the need to know initial conditions.</p>
+      </statement>
+      <feedback><p>No—Laplace transforms actually incorporate initial conditions directly.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        <p>It provides exact solutions only for nonlinear differential equations.</p>
+      </statement>
+      <feedback><p>No—it is primarily a tool for linear ODEs with forcing terms.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="laplace-basic-definition">
+  <statement>
+    <p>
+      If <m>f(t)</m> is defined for <m>t \ge 0</m>, then its 
+      <alert>Laplace transform</alert> is defined by 
+      <m>{\cal L}[f(t)] = ?</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The Laplace transform of <m>f(t)</m> is
+    </p>
+    <me>
+      {\cal L}[f(t)](s)
+      = \int_{0}^{\infty} e^{-st} f(t)\, dt.
+    </me>
+    <p>
+      The variable <m>s</m> is generally assumed to satisfy conditions that make the improper integral converge.
+    </p>
+  </solution>
+</exercise>
+
+<!-- <exercise xml:id="laplace-example-graph">
+  <statement>
+    <p>
+      Draw a graph of the functions from <url href="
+      https://web.uvic.ca/~tbazett/diffyqs/laplace_section.html#example-52">Example 3.1.4</url>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Example 3.1.4 graphs several functions (e.g. <m>t</m>, <m>e^{-t}</m>) to illustrate how they behave as 
+      inputs to the Laplace integral. A correct graph resembles:
+    </p>
+
+    <figure>
+      <caption>Typical graphs from Example 3.1.4.</caption>
+      <image width="60%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[axis lines=middle, xmin=0, xmax=4, ymin=0, ymax=3,
+              xlabel={$t$}, ylabel={$f(t)$}]
+              \addplot[blue, thick] {x};
+              \addlegendentry{$f(t)=t$}
+              \addplot[red, thick] {exp(-x)};
+              \addlegendentry{$f(t)=e^{-t}$}
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+        <description>
+          A linearly increasing function f(t)=t and an exponentially decaying function f(t)=e^{-t}
+          for t ≥ 0.
+        </description>
+      </image>
+    </figure>
+ 
+  </solution>
+</exercise> -->
+
+<exercise xml:id="laplace-exponential-order">
+  <statement>
+    <p>
+      In your own words, what does it mean for a function to be of 
+      <em>exponential order</em>?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      A function <m>f(t)</m> is of exponential order if, for large <m>t</m>, 
+      it does not grow faster than some exponential <m>e^{\alpha t}</m>.  
+      More precisely, there exist constants <m>M,\alpha</m> such that 
+      <m>|f(t)| \le M e^{\alpha t}</m> for all sufficiently large <m>t</m>.
+    </p>
+
+    <p>
+      This ensures that the Laplace integral will converge for <m>s &gt; \alpha</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-transform-of-1">
+  <statement>
+    <p>
+      Suppose <m>f(t) \equiv 1</m> on <m>[0,\infty)</m>.  
+      Compute <m>{\cal L}[f(t)]</m>.  
+      What is the domain of <m>F(s)</m>?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Compute directly:
+    </p>
+    <me>
+      {\cal L}[1](s)
+      = \int_{0}^{\infty} e^{-st} dt
+      = \left[ -\frac{1}{s} e^{-st} \right]_{0}^{\infty}
+      = \frac{1}{s}.
+    </me>
+
+    <p>
+      This converges only if <m>s > 0</m>.  
+      Thus:
+    </p>
+    <me>
+      F(s) = \frac{1}{s}, \qquad s > 0.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-transform-exp-at">
+  <statement>
+    <p>
+      Suppose <m>f(t)=e^{at}</m> on <m>[0,\infty)</m>.  
+      Compute <m>{\cal L}[f(t)]</m>.  
+      What is the domain of <m>F(s)</m>?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Compute:
+    </p>
+    <md>
+      <mrow> {\cal L}[e^{at}]s
+      \amp = \int_0^\infty e^{-st} e^{at}\, dt </mrow>
+      <mrow> \amp = \int_0^\infty e^{-(s-a)t}\, dt </mrow>
+      <mrow> \amp = \frac{1}{s-a}, </mrow>
+    </md>
+    <p>
+      which converges if <m>s-a &gt; 0</m>, i.e. <m>s &gt; a</m>.  
+      Thus:
+    </p>
+    <me>
+      F(s) = \frac{1}{s-a}, \qquad s &gt; a.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="unit-step-laplace">
+  <statement>
+    <p>
+      The <alert>unit step function</alert> is
+    </p>
+    <me>
+      u(t) =
+      \begin{cases}
+         0 \amp t &lt; 0,\\[4pt]
+         1 \amp t\ge 0.
+      \end{cases}
+    </me>
+
+    <ol marker="(a)">
+      <li><p>Graph <m>u(t)</m>.</p></li>
+
+      <li><p>Define <m>u_a(t)=u(t-a)</m>.  
+             Write it as a piecewise function and graph it.</p></li>
+
+      <li><p>Compute <m>{\cal L}[u_a(t)]</m>.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          Graph: zero for <m>t &lt; 0</m>, one for <m>t\ge0</m>.  
+          A correct sketch shows a step jump at <m>t=0</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Since <m>u_a(t)=u(t-a)</m>,
+        </p>
+        <me>
+          u_a(t) =
+          \begin{cases}
+            0 \amp t &lt; a,\\[4pt]
+            1 \amp t\ge a.
+          \end{cases}
+        </me>
+        <p>
+          The graph is a horizontal zero line until <m>t=a</m>, then jumps to 1.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute:
+        </p>
+        <md>
+          <mrow> {\cal L}[u_a(t)]
+          \amp = \int_a^\infty e^{-st} dt </mrow>
+          <mrow> \amp = \frac{e^{-as}}{s},
+          \qquad s &gt; 0. </mrow>
+        </md>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="inverse-laplace-1">
+  <statement>
+    <p>
+      Compute the inverse Laplace transform of
+    </p>
+    <me>
+      F(s) = \frac{2s-3}{(s-3)(s+2)}.
+    </me>
+    <p>
+      Use partial fractions and tables.  
+      Does AI agree with your result?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Write:
+    </p>
+    <me>
+      \frac{2s-3}{(s-3)(s+2)} 
+      = \frac{A}{s-3} + \frac{B}{s+2}.
+    </me>
+
+    <p>
+      Solve:
+    </p>
+    <me>
+      2s-3 = A(s+2) + B(s-3).
+    </me>
+
+    <p>
+      Matching coefficients:
+      <br/><m>A+B=2</m>,  
+      <br/><m>2A - 3B = -3</m>.
+    </p>
+
+    <p>
+      Solve:
+    </p>
+    <me>
+      A=1,\qquad B=1.
+    </me>
+
+    <p>
+      Therefore:
+    </p>
+    <me>
+      F(s) = \frac{1}{s-3} + \frac{1}{s+2}.
+    </me>
+
+    <p>
+      Inverse Laplace:
+    </p>
+    <me>
+      {\cal L}^{-1}[F] = e^{3t} + e^{-2t}.
+    </me>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="inverse-laplace-2">
+  <statement>
+    <p>
+      Compute the inverse Laplace transform of
+    </p>
+    <me>
+      F(s) = \frac{3}{(s^{2}+4)(s^{2}+9)}.
+    </me>
+    <p>
+      Use partial fractions and tables.  
+      Does AI agree with your result?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Use the identity:
+    </p>
+    <me>
+      \frac{1}{(s^2+a^2)(s^2+b^2)}
+      = \frac{1}{b^2-a^2}\!
+        \left( \frac{1}{s^2+a^2} - \frac{1}{s^2+b^2} \right).
+    </me>
+
+    <p>
+      Here <m>a=2</m>, <m>b=3</m>, so <m>b^2-a^2 = 9-4 = 5</m>.
+    </p>
+
+    <md>
+      <mrow> F(s)
+      \amp = 3\cdot \frac{1}{5}
+        \left( \frac{1}{s^2+4} - \frac{1}{s^2+9} \right) </mrow>
+      <mrow> \amp = \frac{3}{5}\frac{1}{s^2+4}
+        - \frac{3}{5}\frac{1}{s^2+9}. </mrow>
+    </md>
+
+    <p>Inverse Laplace:</p>
+
+    <me>
+      {\cal L}^{-1}[1/(s^2+4)] = \frac{1}{2}\sin(2t),\\
+      {\cal L}^{-1}[1/(s^2+9)] = \frac{1}{3}\sin(3t).
+    </me>
+
+    <p>
+      Therefore:
+    </p>
+
+    <md>
+      <mrow> {\cal L}^{-1}[F]
+      \amp = \frac{3}{5}\cdot \frac{1}{2}\sin(2t)
+        - \frac{3}{5}\cdot \frac{1}{3}\sin(3t) </mrow>
+      <mrow> \amp = \frac{3}{10}\sin(2t)
+        - \frac{1}{5}\sin(3t). </mrow>
+    </md>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-of-piecewise-f">
+  <statement>
+    <p>
+      Use the definition of Laplace transform to compute <m>{\cal L}[f(t)](s)</m> 
+      for the function <m>f(t)</m> graphed in <xref ref="GraphLaplaceTransformA"/>.
+    </p>
+    <figure xml:id="GraphLaplaceTransformA">
     <caption>Function <m>f(t)</m>.</caption>
-    <image width="50%">
+    <image width="35%">
       <description>A graph of a piecewise function f(t). For t less than 1, the function 
         equals 0, shown by a horizontal line on the t-axis with a filled dot at t = 0 and an 
         open circle at t = 1. For t greater than or equal to 1, the function increases linearly, 
@@ -319,16 +836,64 @@ using partial fractions and tables.  Does AI agree with your result?
       </latex-image>
     </image>
    </figure>
-  </p>
-</li>
+  </statement>
 
-<li>
-  <p>
-Use the definition of Laplace transform to compute <m>{\cal{L}}[g(t)]</m> for the function 
-<m>g</m> graphed in <xref ref="GraphLaplaceTransformB"/>.
-<figure xml:id="GraphLaplaceTransformB">
+  <solution>
+    <p>
+      From the graph:
+    </p>
+    <me>
+      f(t)=
+      \begin{cases}
+        0, \amp 0\le t &lt; 1,\\
+        t, \amp t\ge 1.
+      \end{cases}
+    </me>
+
+    <p>
+      Then:
+    </p>
+    <md>
+      <mrow> {\cal L}[f(t)](s)
+      \amp = \int_{0}^{1} 0\cdot e^{-st}dt
+        + \int_{1}^{\infty} t e^{-st} dt </mrow>
+      <mrow> \amp = \int_{1}^{\infty} t e^{-st} dt. </mrow>
+    </md>
+
+    <p>
+      Compute using integration by parts (or a table):
+    </p>
+    <me>
+      \int t e^{-st}dt
+      = -\frac{t}{s}e^{-st} - \frac{1}{s^2}e^{-st}.
+    </me>
+
+    <p>Evaluate from 1 to <m>\infty</m>:</p>
+
+    <me>
+      {\cal L}[f(t)](s)
+      = \left[ -\frac{t}{s}e^{-st} - \frac{1}{s^2}e^{-st} \right]_{1}^{\infty}
+      = \frac{1}{s}e^{-s} + \frac{1}{s^2}e^{-s}.
+    </me>
+
+    <p>
+      So:
+    </p>
+    <me>
+      {\cal L}[f(t)](s) = e^{-s}\left(\frac{1}{s} + \frac{1}{s^{2}}\right),\qquad s &gt; 0.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-of-piecewise-g">
+  <statement>
+    <p>
+      Use the definition of Laplace transform to compute <m>{\cal L}[g(t)](s)</m> 
+      for the function <m>g(t)</m> graphed in <xref ref="GraphLaplaceTransformB"/>.
+    </p>
+    <figure xml:id="GraphLaplaceTransformB">
     <caption>Function <m>g(t)</m>.</caption>
-    <image width="50%">
+    <image width="35%">
       <description>A graph of a piecewise function g(t). Along the t‑axis, the function is 0 
         from the origin up to t=a, shown by a horizontal line with a filled dot at t=0 
         and an open circle at t=a. From t=a to t=b, the function jumps to a 
@@ -357,28 +922,65 @@ Use the definition of Laplace transform to compute <m>{\cal{L}}[g(t)]</m> for th
       </latex-image>
     </image>
    </figure>
-  </p>
-</li>
+  </statement>
 
-<li>
-  <p>
-   Find the inverse Laplace transform of <m>\displaystyle F(s) = \frac{2s}{s^{2}-1}</m>.
-  </p>
-</li>
+  <solution>
+    <p>
+      From the graph:
+    </p>
+    <me>
+      g(t)=
+      \begin{cases}
+        0, \amp 0\le t &lt; a,\\
+        c, \amp a \le t &lt; b,\\
+        0, \amp t \ge b.
+      \end{cases}
+    </me>
 
-</ol>
-</li>
+    <p>
+      Then:
+    </p>
+    <md>
+      <mrow> {\cal L}[g(t)](s)
+      \amp = \int_{a}^{b} c\, e^{-st}\, dt </mrow>
+      <mrow> \amp = c\left[ -\frac{1}{s}e^{-st} \right]_{a}^{b} </mrow>
+      <mrow> \amp = \frac{c}{s}\bigl( e^{-as} - e^{-bs}\bigr),
+      \quad s &gt; 0. </mrow>
+    </md>
+  </solution>
+</exercise>
 
+<exercise xml:id="inverse-laplace-3">
+  <statement>
+    <p>
+      Find the inverse Laplace transform of
+    </p>
+    <me>
+      F(s) = \frac{2s}{s^{2}-1}.
+    </me>
+  </statement>
 
-<li>
-  <p>
-    <alert>Do</alert> MyOpenMath questions from this section. 
-  </p>
-</li>
+  <solution>
+    <p>
+      Factor denominator: <m>s^{2}-1 = (s-1)(s+1)</m>.
+      Note:
+    </p>
 
+    <md>
+      <mrow> \frac{2s}{s^{2}-1}
+      \amp = \frac{2s}{(s-1)(s+1)} </mrow>
+      <mrow> \amp = \frac{1}{s-1} + \frac{1}{s+1}. </mrow>
+    </md>
 
-        
-</ul>
+    <p>Thus:</p>
+    <me>
+      {\cal L}^{-1}[F]
+      = e^{t} + e^{-t}.
+    </me>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 

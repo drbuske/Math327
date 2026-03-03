@@ -62,7 +62,7 @@ Use the exponential <em>ansatz</em> <m>y=e^{rx}</m> to derive the characteristic
 <li>
 <p>
 <alert>Watch</alert> video <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#constantcoefficients">Video 2.2.1: Constant Coefficients (Distinct Roots)</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#constantcoefficients">Video 2.2.1: Constant Coefficients (Distinct Roots) (6:25)</url> by Trevor Bazett.
 </p>
 </li>
 
@@ -99,7 +99,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#subsection-33">Subsection 2.
 <p>
 <alert>Watch</alert> video <url href=" 
 https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#constantcoefficients2">Video 2.2.2: The Constant 
-Coefficient Method (all cases)</url> by Trevor Bazett.
+Coefficient Method (all cases) (11:25)</url> by Trevor Bazett.
 </p>
 </li>
 
@@ -145,13 +145,13 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#subsection-35">Subsection 2.
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/6wWr73Ho3vU?si=zBIbtpnNGpOTRm3I">Constant Coefficient Second Order Linear ODEs, part 1 (17:30)</url> for a lecture on section 2.2.  
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/6wWr73Ho3vU?si=zBIbtpnNGpOTRm3I">Constant Coefficient Second Order Linear ODEs, part 1 (17:30)</url> for a lecture on section 2.2.  
     </p>
   </li>
 
       <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/obHFZpHSddI?si=gGvneMBOr4LZXdXe">Constant Coefficient Second Order Linear ODEs, part 2 (25:21)</url> for a lecture on section 2.2.  
+      (Optional) <alert>Watch</alert> <url href="https://youtu.be/obHFZpHSddI?si=gGvneMBOr4LZXdXe">Constant Coefficient Second Order Linear ODEs, part 2 (25:21)</url> for a lecture on section 2.2.  
     </p>
   </li>
 
@@ -165,7 +165,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_ccsol.html#subsection-36">Subsection 2.
         </li>
 
 
-<li>
+<!-- <li>
   <p>
     Try these additional questions.  If necessary, use AI to guide your thinking. 
   </p>
@@ -215,16 +215,401 @@ general solution.
 </li>
 
   </ol>
-</li>
+</li> -->
 
 
 <li>
   <p>
     <alert>Do</alert> MyOpenMath questions from this section. 
   </p>
-</li>
+</li> 
         
-        </ul>
+ </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="mcq-ccsol-1">
+  <title>Characteristic Equation</title>
+
+  <statement>
+    <p>
+      What is the characteristic equation associated with the differential equation  
+      <m>y'' - 6y' + 8y = 0</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>r^{2} - 6r + 8 = 0</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The characteristic equation comes from substituting <m>y=e^{rx}</m> and dividing by 
+          <m>e^{rx}</m>. 
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>r^{2} + 6r + 8 = 0</m></p></statement>
+      <feedback><p>Sign error: the coefficient of <m>y'</m> is <m>-6</m>, not <m>+6</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>r - 6 + 8 = 0</m></p></statement>
+      <feedback><p>This omits the quadratic term required for a second-order equation.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-ccsol-2">
+  <title>Distinct Real Roots</title>
+
+  <statement>
+    <p>
+      The characteristic equation <m>r^{2} - 5r + 6 = 0</m> has distinct real roots.  
+      What is the general solution of the corresponding ODE <m>y'' - 5y' + 6y = 0</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y = C_{1} e^{2x} + C_{2} e^{3x}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The roots are <m>r=2</m> and <m>r=3</m>. Distinct real roots yield  
+          <m>y=C_{1}e^{r_{1}x}+C_{2}e^{r_{2}x}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_{1}e^{5x} + C_{2}e^{6x}</m></p></statement>
+      <feedback><p>Incorrect: those are not the roots of the quadratic.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_{1}\cos x + C_{2}\sin x</m></p></statement>
+      <feedback><p>This form is for complex roots, not real distinct roots.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-ccsol-3">
+  <title>Checking a Proposed Solution</title>
+
+  <statement>
+    <p>
+      Does <m>y = e^{4x}</m> solve the ODE <m>y'' - 8y' + 16y = 0</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>Yes, because <m>y'' - 8y' + 16y = (16e^{4x}) - 8(4e^{4x}) + 16e^{4x} = 0</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This ODE corresponds to the characteristic polynomial  
+          <m>(r-4)^{2}=0</m>, whose root <m>r=4</m> matches <m>e^{4x}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>No, because <m>y'' - 8y' + 16y = 8e^{4x}</m>.</p></statement>
+      <feedback><p>Re-check the derivatives and the coefficients.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>No, because <m>e^{4x}</m> only solves first-order equations.</p></statement>
+      <feedback><p>Incorrect—exponentials are standard solutions for constant-coefficient ODEs.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-ccsol-4">
+  <title>Repeated Root Case</title>
+
+  <statement>
+    <p>
+      If the characteristic equation has a repeated root <m>r</m>, what is the correct form of the 
+      general solution?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y = C_{1} e^{rx} + C_{2} \, x e^{rx}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. When the characteristic root is repeated, the second 
+          solution is <m>x e^{rx}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_{1} e^{rx} + C_{2} e^{-rx}</m></p></statement>
+      <feedback><p>This form corresponds to distinct real or complex roots, not repeated roots.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_{1} + C_{2}e^{rx}</m></p></statement>
+      <feedback><p>No—this omits the necessary <m>x e^{rx}</m> term.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-ccsol-5">
+  <title>Solving a Constant-Coefficient ODE</title>
+
+  <statement>
+    <p>
+      Solve the ODE <m>y'' + 4y' + 4y = 0</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y = C_{1} e^{-2x} + C_{2} x e^{-2x}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The characteristic equation <m>(r+2)^{2}=0</m> has repeated root <m>r=-2</m>, so the 
+          solution is <m>C_{1}e^{-2x} + C_{2} x e^{-2x}</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_{1}e^{-2x} + C_{2}e^{2x}</m></p></statement>
+      <feedback><p>This corresponds to two distinct real roots, which is not the case here.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_{1}\cos 2x + C_{2}\sin 2x</m></p></statement>
+      <feedback><p>This corresponds to complex roots, not a repeated negative real root.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="ccsol-ivp-particular-homogeneous">
+  <statement>
+    <p>
+      Consider the IVP
+    </p>
+    <me>
+      y'' - 2y' + 2y = 2x, 
+      \qquad 
+      y(0)=4, \quad y'(0)=8.
+    </me>
+
+    <ol marker="(a)">
+      <li><p>Show that <m>y_p(x) = x + 1</m> solves the differential equation.</p></li>
+
+      <li><p>Verify that <m>y_1(x)=e^{x}\cos x</m> and <m>y_2(x)=e^{x}\sin x</m> solve the associated homogeneous equation.</p></li>
+
+      <li><p>Use (a) and (b) to find a solution to the IVP.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+
+      <li>
+        <p>
+          For <m>y_p = x+1</m>, we compute:
+        </p>
+        <me>
+          y_p' = 1, y_p'' = 0.
+        </me>
+        <p>Insert into the ODE:</p>
+        <md>
+          <mrow> y_p'' - 2y_p' + 2y_p 
+          \amp = 0 - 2(1) + 2(x+1) </mrow>
+          <mrow> \amp = -2 + 2x + 2 </mrow>
+          <mrow> \amp = 2x. </mrow>
+        </md>
+        <p>
+          Hence <m>y_p</m> is indeed a particular solution.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          For <m>y_1(x)=e^{x}\cos x</m>:
+        </p>
+        <me>
+          y_1' = e^{x}(\cos x - \sin x),\\
+          y_1'' = e^{x}(\!-2\sin x).
+        </me>
+        <p>Substitute into the homogeneous equation <m>y'' - 2y' + 2y = 0</m>:</p>
+        <md>
+          <mrow> y_1'' - 2y_1' + 2y_1 
+          \amp = e^{x}(-2\sin x)
+          - 2e^{x}(\cos x - \sin x)
+          + 2e^{x}\cos x </mrow>
+          <mrow> \amp = 0. </mrow>
+        </md>
+
+        <p>
+          For <m>y_2(x)=e^{x}\sin x</m>:
+        </p>
+        <me>
+          y_2' = e^{x}(\sin x + \cos x),\\
+          y_2'' = e^{x}(2\cos x).
+        </me>
+
+        <p>Substitute:</p>
+        <md>
+          <mrow> y_2'' - 2y_2' + 2y_2
+          \amp = e^{x}(2\cos x) 
+          - 2e^{x}(\sin x + \cos x)
+          + 2e^{x}\sin x </mrow>
+          <mrow> \amp = 0. </mrow>
+        </md>
+
+        <p>
+          Thus both <m>y_1</m> and <m>y_2</m> solve the homogeneous equation.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The general solution is:
+        </p>
+        <md>
+          <mrow> y(x) \amp = y_p(x) + C_1 y_1(x) + C_2 y_2(x) </mrow>
+          <mrow>  \amp   = (x+1) + C_1 e^{x}\cos x + C_2 e^{x}\sin x. </mrow>
+        </md>
+
+        <p>Apply the initial conditions.</p>
+        <p><strong>First:</strong></p>
+        <me>
+          y(0) = 1 + C_1 = 4 
+          \quad\Rightarrow\quad C_1 = 3.
+        </me>
+
+        <p><strong>Next compute </strong> <m>y'</m>:</p>
+        <me>
+          y' = 1 
+              + C_1 e^{x}(\cos x - \sin x)
+              + C_2 e^{x}(\sin x + \cos x).
+        </me>
+
+        <p>Evaluate at <m>x=0</m>:</p>
+        <me>
+          y'(0) = 1 + C_1 + C_2 = 8.
+        </me>
+        <p>
+          Using <m>C_1=3</m> gives:
+        </p>
+        <me>
+          1 + 3 + C_2 = 8 \quad\Longrightarrow\quad C_2 = 4.
+        </me>
+
+        <p>
+          Therefore, the solution to the IVP is:
+        </p>
+        <me>
+          y(x) = x + 1 + 3 e^{x}\cos x + 4 e^{x}\sin x.
+        </me>
+      </li>
+
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ccsol-general-solution-6-13">
+  <statement>
+    <p>
+      Find the general solution to the differential equation
+      <me>
+        y'' + 6y' + 13y = 0.
+      </me>
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The characteristic equation is
+    </p>
+    <me>
+      r^{2} + 6r + 13 = 0.
+    </me>
+
+    <p>
+      Thus the roots are
+    </p>
+    <me>
+      r = \frac{-6 \pm \sqrt{-16}}{2}
+        = -3 \pm 2i.
+    </me>
+
+    <p>
+      So the general solution is
+    </p>
+
+    <me>
+      y(x) = e^{-3x}\bigl(C_1 \cos 2x + C_2 \sin 2x\bigr).
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="ccsol-construct-ode">
+  <statement>
+    <p>
+      Construct a differential equation whose general solution is
+      <me>
+        y = C_{1} e^{-2x}\cos(3x) \;+\; C_{2} e^{-2x}\sin(3x).
+      </me>
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      This solution corresponds to characteristic roots 
+      <m>r = -2 \pm 3i</m>.
+    </p>
+
+    <p>
+      Therefore the characteristic equation is
+    </p>
+
+    <me>
+      (r + 2 - 3i)(r + 2 + 3i)
+      = (r + 2)^{2} + 9
+      = r^{2} + 4r + 13.
+    </me>
+
+    <p>
+      Hence the corresponding differential equation is
+    </p>
+
+    <me>
+      y'' + 4y' + 13y = 0.
+    </me>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 

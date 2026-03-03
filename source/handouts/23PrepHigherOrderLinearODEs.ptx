@@ -73,7 +73,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#sec_hol">Section 2.3 Introduct
 <li>
 <p>
 <alert>Watch</alert> <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherlinear">Video 2.3.1: Linear Independence</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherlinear">Video 2.3.1: Linear Independence (9:42)</url> by Trevor Bazett.
 </p>
 </li>
 
@@ -102,7 +102,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-37">Subsection 2.3.
 <p>
 <alert>Watch</alert> <url href=" 
 https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#highertheory">
-Video 2.3.2: Theory of Higher Order ODEs</url> by Trevor Bazett.
+Video 2.3.2: Theory of Higher Order ODEs (8:43)</url> by Trevor Bazett.
 </p>
 </li>
 
@@ -117,7 +117,7 @@ Subsection 2.3.2: Theory of Higher Order ODEs</url>.
     <li>
 <p>
 <alert>Watch</alert> <url href=" 
-https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherorderconstant">Video 2.3.3: Higher Order Constant Coefficient ODEs</url> by Trevor Bazett.
+https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#higherorderconstant">Video 2.3.3: Higher Order Constant Coefficient ODEs (10:56)</url> by Trevor Bazett.
 </p>
 </li>
 
@@ -146,7 +146,7 @@ This is Herbert Gross.  Black and white video and old school!
 
     <li>
     <p>
-      <alert>Watch</alert> <url href="https://youtu.be/AzshfIf-qCA?si=Md6nEF685UYRiRTy">
+      (Optional) <alert>Watch</alert> video <url href="https://youtu.be/AzshfIf-qCA?si=Md6nEF685UYRiRTy">
         Higher Order Linear ODEs (36:16)</url> for a lecture on section 2.3.  
     </p>
   </li>
@@ -161,7 +161,7 @@ https://web.uvic.ca/~tbazett/diffyqs/sec_hol.html#subsection-40">Subsection 2.3.
         </li>
 
 
-        <li>
+ <!--        <li>
           <p>
             Try these additional questions.  If necessary, use AI to guide your thinking. 
           </p>
@@ -188,7 +188,7 @@ Find the general solution to <m>y^{(v)}+18y'''+81y'=0</m>.
 </li>
 
 </ol>
-</li>
+</li> -->
 
 
 <li>
@@ -200,6 +200,513 @@ Find the general solution to <m>y^{(v)}+18y'''+81y'=0</m>.
 
         
 </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="mcq-hol-1">
+  <title>Definition of Higher-Order Linear ODEs</title>
+
+  <statement>
+    <p>
+      Which of the following is a fourth‑order <em>linear</em> differential equation?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y^{(4)} + p(x)y'' + q(x)y' + r(x)y = 0</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. An <m>n</m>th‑order linear ODE may be written as  
+          <m>A_n(x)y^{(n)} + \dots + A_0(x)y = F(x)</m>, with no nonlinear functions of <m>y</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y^{(4)} + (y')^{2} = 0</m></p></statement>
+      <feedback><p>Not linear: <m>(y')^{2}</m> is nonlinear.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y'' + p(x)y = 0</m></p></statement>
+      <feedback><p>This is linear but only second‑order, not higher‑order.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-hol-2">
+  <title>Superposition Principle</title>
+
+  <statement>
+    <p>
+      For the homogeneous equation <m>L[y] = 0</m>, where <m>L</m> is a linear differential operator
+      of order <m>n</m>, which statement is true?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>If <m>y_1,\dots,y_k</m> are solutions, then any linear combination of them is also a solution.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Linear operators satisfy  
+          <m>L(c_1y_1 + \dots + c_ky_k) = c_1L(y_1) + \dots + c_kL(y_k)</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The product <m>y_1 y_2</m> is always a solution.</p></statement>
+      <feedback><p>No—products do not preserve linearity.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Only <m>y_1</m> can be used; other solutions are irrelevant.</p></statement>
+      <feedback><p>No—higher‑order ODEs require multiple independent solutions.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-hol-3">
+  <title>Characteristic Polynomial for a 3rd-Order ODE</title>
+
+  <statement>
+    <p>
+      What is the characteristic polynomial for the ODE  
+      <m>y''' - 2y'' + y' = 0</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>r^{3} - 2r^{2} + r = 0</m></p></statement>
+      <feedback>
+        <p>
+          Correct. Substituting <m>y=e^{rx}</m> gives <m>r^3 - 2r^2 + r = 0</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>r^{2} - 2r + 1 = 0</m></p></statement>
+      <feedback><p>This is only quadratic; the ODE is third‑order.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>r^{3} + r^{2} - 2r = 0</m></p></statement>
+      <feedback><p>The sign of the <m>r^2</m> term is incorrect.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-hol-4">
+  <title>Independent Solutions and Order</title>
+
+  <statement>
+    <p>
+      How many linearly independent solutions are needed to describe the general solution of an 
+      <m>n</m>th‑order linear homogeneous ODE?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>Exactly <m>n</m> linearly independent solutions.</p></statement>
+      <feedback>
+        <p>
+          Correct. An <m>n</m>th‑order linear ODE requires <m>n</m> fundamental solutions to span the
+          solution space.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Only one solution is needed.</p></statement>
+      <feedback><p>No—this works only for first‑order equations.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Infinitely many solutions must be listed individually.</p></statement>
+      <feedback><p>Incorrect—only <m>n</m> independent ones are required.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="mcq-hol-5">
+  <title>Solving a 3rd-Order ODE</title>
+
+  <statement>
+    <p>
+      Solve the homogeneous ODE  
+      <m>y''' - 3y'' + 3y' = 0</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>y = C_1 + C_2 x + C_3 x^{2}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The characteristic polynomial is  
+          <m>r^3 - 3r^2 + 3r = r(r-1)^2</m>,  
+          giving roots <m>0</m> and <m>1</m> (double).  
+          Solutions are <m>e^{0x}=1</m>, <m>e^{x}</m>, and <m>xe^{x}</m>; rewritten in polynomial form,
+          this yields <m>C_1 + C_2 x + C_3 x^{2}</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_1 e^{x} + C_2 e^{-x} + C_3 e^{2x}</m></p></statement>
+      <feedback><p>Those roots do not satisfy the characteristic polynomial.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>y = C_1 e^{x} + C_2 x e^{x}</m></p></statement>
+      <feedback><p>Missing the third independent solution.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="higherorder-1">
+  <statement>
+    <p>
+      Find the general solution to  
+      <m>y''' + 2y'' - y' - 2y = 0.</m>
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Write the characteristic equation:
+    </p>
+
+    <me>
+      r^{3} + 2r^{2} - r - 2 = 0.
+    </me>
+
+    <p>
+      Factor by grouping:
+    </p>
+
+    <md>
+      <mrow> r^{2}(r+2) - 1(r+2) \amp = (r^{2} - 1)(r+2) </mrow>
+                     <mrow> \amp    = (r-1)(r+1)(r+2). </mrow>
+    </md>
+
+    <p>
+      Thus the roots are <m>r=1</m>, <m>r=-1</m>, and <m>r=-2</m>.  
+      The general solution is:
+    </p>
+
+    <me>
+      y(x) = C_{1} e^{x} + C_{2} e^{-x} + C_{3} e^{-2x}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="higherorder-2">
+  <statement>
+    <p>
+      Find the general solution to  
+      <m>y^{(iv)} - y''' + 2y' = 0.</m>  
+      <em>Hint:</em> The characteristic polynomial factors as  
+      <m>r(r+1)(r^{2} - 2r + 2) = 0.</m>
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Using the factorization:
+    </p>
+
+    <me>
+      r(r+1)(r^{2} - 2r + 2) = 0.
+    </me>
+
+    <p>
+      The real roots are <m>r=0</m> and <m>r=-1</m>.  
+      The quadratic factor gives:
+    </p>
+
+    <me>
+      r^{2} - 2r + 2 = 0
+      \quad\Longrightarrow\quad
+      r = 1 \pm i.
+    </me>
+
+    <p>
+      Thus the solution pieces are:
+    </p>
+
+    <ul>
+      <li><m>e^{0x} = 1</m></li>
+      <li><m>e^{-x}</m></li>
+      <li><m>e^{x}\cos x</m>, <m>e^{x}\sin x</m> (from <m>1 \pm i</m>)</li>
+    </ul>
+
+    <p>
+      Therefore the general solution is:
+    </p>
+
+    <me>
+       y(x)
+      = C_{1}
+        + C_{2} e^{-x}
+        + C_{3} e^{x} \cos x
+        + C_{4} e^{x} \sin x.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="higherorder-3">
+  <statement>
+    <p>
+      Find the general solution to  
+      <m>y^{(v)} + 18y''' + 81y' = 0.</m>  
+      <em>Hint:</em> The characteristic polynomial factors as  
+      <m>r(r^{2} + 9)^{2} = 0.</m>
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      From the factorization:
+    </p>
+
+    <me>
+      r(r^{2}+9)^{2} = 0,
+    </me>
+
+    <p>
+      the roots are:
+    </p>
+
+    <ul>
+      <li><m>r = 0</m></li>
+      <li><m>r = 3i</m> (double root)</li>
+      <li><m>r = -3i</m> (double root)</li>
+    </ul>
+
+    <p>
+      For <m>r=0</m>, the solution term is <m>1</m>.  
+      For the repeated complex roots <m>\pm 3i</m>, the general solution includes:
+    </p>
+
+    <me>
+      \cos 3x,\quad \sin 3x,\quad x\cos 3x,\quad x\sin 3x.
+    </me>
+
+    <p>
+      Therefore the general solution is:
+    </p>
+
+    <me>
+      y(x)
+      = C_{1}
+        + C_{2}\cos(3x)
+        + C_{3}\sin(3x)
+        + C_{4}x\cos(3x)
+        + C_{5}x\sin(3x).
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec23-wronskian-1">
+  <statement>
+    <p>
+      Consider the functions
+      <m>y_{1}(x) = e^{x}</m>,  
+      <m>y_{2}(x) = e^{2x}</m>, and  
+      <m>y_{3}(x) = e^{3x}</m>.
+      Compute their Wronskian
+      <m>W(y_{1},y_{2},y_{3})(x)</m>.  
+      What does the result tell you about linear independence?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The Wronskian of three functions is
+    </p>
+
+    <me>
+      W =
+      \begin{vmatrix}
+        y_1 \amp y_2 \amp y_3 \\
+        y_1' \amp y_2' \amp y_3' \\
+        y_1'' \amp y_2'' \amp y_3''
+      \end{vmatrix}
+      =
+      \begin{vmatrix}
+        e^{x} \amp e^{2x} \amp e^{3x} \\
+        e^{x} \amp 2e^{2x} \amp 3e^{3x} \\
+        e^{x} \amp 4e^{2x} \amp 9e^{3x}
+      \end{vmatrix}.
+    </me>
+
+    <p>
+      Factor out <m>e^{x}, e^{2x}, e^{3x}</m> from each column:
+    </p>
+
+    <me>
+      W = e^{x} e^{2x} e^{3x}
+      \begin{vmatrix}
+        1 \amp 1 \amp 1 \\
+        1 \amp 2 \amp 3 \\
+        1 \amp 4 \amp 9
+      \end{vmatrix}
+      = e^{6x}
+      \begin{vmatrix}
+        1 \amp 1 \amp 1 \\
+        1 \amp 2 \amp 3 \\
+        1 \amp 4 \amp 9
+      \end{vmatrix}.
+    </me>
+
+    <p>
+      Compute the 3×3 determinant:
+    </p>
+
+    <md>
+      <mrow> \begin{vmatrix}
+        1 \amp 1 \amp 1 \\
+        1 \amp 2 \amp 3 \\
+        1 \amp 4 \amp 9
+      \end{vmatrix}
+      \amp =
+      1(2\cdot 9 - 3\cdot 4)
+      -1(1\cdot 9 - 3\cdot 1)
+      +1(1\cdot 4 - 2\cdot 1) </mrow>
+      <mrow> \amp = (18 - 12) - (9 - 3) + (4 - 2) </mrow>
+      <mrow> \amp = 6 - 6 + 2 </mrow>
+      <mrow> \amp = 2. </mrow>
+    </md>
+
+    <p>
+      Therefore:
+    </p>
+
+    <me>
+      W(y_{1},y_{2},y_{3})(x) = 2 e^{6x}.
+    </me>
+
+    <p>
+      Since <m>W(x) \neq 0</m> for all <m>x</m>, the functions are
+      <strong>linearly independent</strong> on every interval.  
+      They therefore form a fundamental set of solutions for a third‑order linear homogeneous ODE.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec23-wronskian-2">
+  <statement>
+    <p>
+      Let
+      <m>y_{1}(x) = x</m>,  
+      <m>y_{2}(x) = x^{2}</m>,  
+      <m>y_{3}(x) = x^{3}</m>.  
+      Compute the Wronskian <m>W(y_{1},y_{2},y_{3})(x)</m> and determine whether the functions are
+      linearly independent.  
+      Are they valid as a fundamental solution set for a third‑order linear homogeneous ODE?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Compute the Wronskian:
+    </p>
+
+    <me>
+      W =
+      \begin{vmatrix}
+        x \amp x^{2} \amp x^{3} \\
+        1 \amp 2x \amp 3x^{2} \\
+        0 \amp 2 \amp 6x
+      \end{vmatrix}.
+    </me>
+
+    <p>Expand along the first row:</p>
+
+    <me>
+      W
+      =
+      x
+      \begin{vmatrix}
+        2x \amp 3x^{2} \\
+        2 \amp 6x
+      \end{vmatrix}
+      - x^{2}
+      \begin{vmatrix}
+        1 \amp 3x^{2} \\
+        0 \amp 6x
+      \end{vmatrix}
+      + x^{3}
+      \begin{vmatrix}
+        1 \amp 2x \\
+        0 \amp 2
+      \end{vmatrix}.
+    </me>
+
+    <p>Compute each 2×2 determinant:</p>
+
+    <md>
+      <mrow> x[(2x)(6x) - (3x^{2})(2)]
+        - x^{2}[6x]
+        + x^{3}[2]
+      \amp =
+      x(12x^{2} - 6x^{2})
+        - 6x^{3}
+        + 2x^{3} </mrow>
+      <mrow> \amp =
+      x(6x^{2})
+        - 4x^{3} </mrow>
+      <mrow> \amp =
+      6x^{3} - 4x^{3} </mrow>
+      <mrow> \amp =
+      2x^{3}. </mrow>
+    </md>
+
+    <p>
+      Thus:
+    </p>
+
+    <me>
+      W(y_1,y_2,y_3)(x) = 2 x^{3}.
+    </me>
+
+    <p>
+      The Wronskian is zero only at <m>x=0</m>, but nonzero for <m>x \neq 0</m>.  
+      Therefore, the functions are <strong>linearly independent</strong> on any interval not containing 0  
+      (e.g., <m>(0,\infty)</m> or <m>(-\infty,0)</m>).
+    </p>
+
+    <p>
+      Hence they form a valid fundamental solution set for a third‑order homogeneous linear ODE  
+      on any such interval.
+    </p>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 
@@ -225,11 +732,11 @@ Find the general solution to <m>y^{(v)}+18y'''+81y'=0</m>.
             </p>
           </li>
 
-          <li>
+          <!-- <li>
             <p>
       Relate higher‑order ODE theory to system‑based methods (e.g., rewriting higher‑order equations as first‑order systems) as referenced later in the text.
             </p>
-          </li>
+          </li> -->
 
         </ul>
 
