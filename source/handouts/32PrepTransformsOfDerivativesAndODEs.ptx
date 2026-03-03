@@ -181,94 +181,9 @@ https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#subsection-61
         </li>
 
 
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-          </p>
-            <ol>
 
-<li>
-  <p>
-    What is the next line in <url href="https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#ltd_table">Table 3.2.1</url>? 
-  </p>
-</li>
 
-<li>
-  <p>
-<p>
-  Plot the following functions mentioned in the text.
-</p>
-
-<ol>
-  <li>
-    <p>
-      <m>f(t) = u(t-\pi) \sin t</m>
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <m>u(t-1) - u(t-2)</m>
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <m>t(u(t) - u(t-1)) + (-t+2)(u(t-1)-u(t-2))</m>
-    </p>
-  </li>
-</ol>  
-  </p>
-</li>
-
-<li>
-<p>
-Using the Laplace transform, solve the IVP
-<me>
-  y'' + 4y = \sin 3t, \ y(0) = y'(0) = 0.
-</me>
-</p>
-</li>
-
-<li>
-<p>
-Consider the IVP
-<me>
-  y''-y'-6y=0, \ y(0)=2, \ y'(0)=-1.
-</me>
-Solve using the Laplace transform.
-</p>
-</li>
-
-<li>
-<p>
-  (Shifting Theorem) Suppose <m>{\cal{L}}[f(t)] = F(s)</m> for <m>s > c</m>.
-  For any real number <m>a</m> and <m>s>a+c</m>,
-  <me>
-    {\cal{L}}[e^{at}f(t)] = F(s-a).
-  </me>
-</p>
-</li>
-
-<li>
-  <p>
-We know that <m>\displaystyle{\cal{L}}[t^{2}] = \frac{2}{s^{3}}</m>.
-Compute <m>\displaystyle{\cal{L}}^{-1}\left[\frac{2}{(s-2)^{3}}\right]</m>.
-  </p>
-</li>
-
-<li>
-  <p>
-Define
-<me>
-  f(t) = \left\{ \begin{array}{cr}1 &#x26; 0 \leq t &#x3C; 1 \\ 3 &#x26; 1 \leq t &#x3C; 2 \\ t &#x26; 2 \leq t &#x3C; \infty\end{array} \right\}.
-</me>
-Compute the Laplace transform <m>{\cal{L}}[f(t)]</m>.
-<em>Hint:</em> Write <m>f(t) = [1-1\cdot u(t-1)] + [3\cdot u(t-1) - 3\cdot u(t-2)] + [t\cdot u(t-2)]</m>.
-  </p>
-</li>
-
-<li>
+<!-- <li>
   <p>
 Solve the IVP
 <me>
@@ -279,9 +194,9 @@ where
   f(t) = \left\{ \begin{array}{cr}0 &#x26; 0 \leq t &#x3C; 1 \\ 1 &#x26; 1 \leq t &#x3C; 2 \\ -1 &#x26; 2 \leq t &#x3C; 3 \\ 0 &#x26; 3 \leq t &#x3C; \infty\end{array} \right\}.
 </me>
   </p>
-</li>
+</li> -->
 
-<li>
+<!-- <li>
   <p>
 A mass that weighs 32 lb (<m>m=1</m>) is attached to the free end of a spring that is stretched 1 ft by a force of 4 lb (<m>k=4</m> lb/ft).
 The mass is initially at rest in its equilibrium position.
@@ -297,38 +212,8 @@ dashpot).] Find the resulting position function <m>x(t)</m> of the mass.
     connects to a dashpot (damper) attached to another wall. </description>
 </image>
 </figure>
-</li>
-
-<li>
-  <p>
-Use the definition of Laplace transform to compute (by hand) <m>{\cal{L}}[f(t)]</m> for the function 
-<m>f</m> graphed in <xref ref="GraphLaplaceTransformC"/>. 
-  </p>
-  <figure xml:id="GraphLaplaceTransformC">
-    <caption>Function <m>f(t)</m>.</caption>
-    <image width="50%">
-      <description>A graph of a function f(t). The function is 0 up to t=1, shown by a horizontal 
-        line on the t‑axis ending at a filled dot at t=1. From that point, the graph rises 
-        linearly, passing through the point (2,2), and continues upward to the right with an arrow.
-      </description>
-      <latex-image>
-        \begin{tikzpicture}   
-   \draw [black!60,line width=0.3pt,-latex] (-1,0) -- (3,0) node [below] at (2.75,0) {$t$};
-   \draw [black!60,line width=0.3pt,-latex] (0,-1) -- (0,3) node [left] at (0,2.75) {$f(t)$};
-   \draw [linecolor,line width=2pt] (0,0) -- (1,0); 
-   \draw [linecolor,line width=2pt,-latex] (1,0) -- (2.5,3); 
-   \fill [linecolor] (0,0) circle (3pt);
-\fill [linecolor] (2,2) circle (3pt) node [right] at (2.3,2,1) {$(2,2)$};
-\foreach \x/\xtext in {1/1, 2/2}
-    \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
-\foreach \y/\ytext in {1/1, 2/2}
-    \draw[shift={(0,\y)}] (-2pt,0pt) -- (2pt,0pt) node[left] {$\ytext$};
-        \end{tikzpicture}
-      </latex-image>
-    </image>
-   </figure>
-   <p>Use technology to verify this result.  </p>
-</li>
+</li> 
+  
 
 <li>
   <p>
@@ -336,20 +221,11 @@ Use the definition of Laplace transform to compute (by hand) <m>{\cal{L}}[f(t)]<
     <m>\displaystyle{\cal{L}}^{-1}\left\{ \frac{s^{2} + 6s+ 9}{(s-1)(s-2)(s+4)}\right\}</m> by hand.  Use 
     technology to verify the result.
   </p>
-</li>
+</li> -->
 
-<li>
-  <p>
-Keeping the result of the above problem in mind, solve (by hand) the IVP
-<me>
-  y'' - 3y' + 2y = e^{-4t}, \ \ y(0) = 1, y'(0) = 5
-</me>
-using the Laplace transform.  Verify the result using appropriate technology.  
-  </p>
-</li>
 
-</ol>
-</li>
+
+
 
 
 <li>
@@ -530,6 +406,1153 @@ using the Laplace transform.  Verify the result using appropriate technology.
     </choice>
 
   </choices>
+</exercise>
+
+<exercise xml:id="laplace-next-line-table321">
+  <statement>
+    <p>
+      What is the next line in 
+      <url href="https://web.uvic.ca/~tbazett/diffyqs/transformsofders_section.html#ltd_table">
+        Table 3.2.1
+      </url>?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Table 3.2.1 lists transforms of derivatives.  
+      After the line
+    </p>
+    <me>
+      {\cal L}\{y'''(t)\} = s^3G(s) - s^2g(0)-sg'(0)-g''(0),
+    </me>
+    <p>
+      the next line is the transform of the second derivative:
+    </p>
+    <me>
+      {\cal L}\{y''''(t)\} = s^{4}G(s) - s^3g(0) - s^2g'(0)-sg''(0)-g'''(0).
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-plot-step-shifted">
+  <statement>
+    <p>Plot the following functions.</p>
+
+    <ol marker="(a)">
+      <li><p><m>f(t) = u(t-\pi)\sin t</m></p></li>
+      <li><p><m>u(t-1) - u(t-2)</m></p></li>
+      <li><p><m>t(u(t)-u(t-1)) + (-t+2)(u(t-1)-u(t-2))</m></p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <p>
+      <strong>(a)</strong>  
+      <m>u(t-\pi)\sin t</m> is <m>0</m> for <m>t &lt; \pi</m> and equals <m>\sin t</m> for <m>t\ge \pi</m>.
+    </p>
+    <figure>
+      <caption>Graph of <m>u(t-\pi)\sin t</m></caption>
+      <image width="60%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[xmin=0,xmax=8,ymin=-1.5,ymax=1.5,axis lines=middle]
+              \addplot[domain=0:3.14,thick] {0};
+              \addplot[domain=3.14:8,samples=200,very thick, blue] {sin(deg(x))};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      <strong>(b)</strong>  
+      <m>u(t-1)-u(t-2)</m> equals <m>1</m> on <m>[1,2)</m> and <m>0</m> elsewhere.
+    </p>
+    <figure>
+      <caption>Graph of <m>u(t-1)-u(t-2)</m></caption>
+      <image width="60%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[xmin=0,xmax=4,ymin=0,ymax=1.5,axis lines=middle]
+              \addplot[domain=0:1,thick] {0};
+              \addplot[domain=1:2,very thick, blue] {1};
+              \addplot[domain=2:4,thick] {0};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      <strong>(c)</strong>  
+      This describes a “piecewise linear bump” between <m>0</m> and <m>2</m>:
+    </p>
+    <me>
+      f(t)=
+      \begin{cases}
+        t, \amp 0\le t &lt; 1,\\
+        -t+2, \amp 1\le t &lt; 2,\\
+        0, \amp t\ge 2.
+      \end{cases}
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-ivp-sin3t">
+  <statement>
+    <p>
+      Using the Laplace transform, solve the IVP
+    </p>
+    <me>
+      y'' + 4y = \sin 3t, \quad y(0)=0,\; y'(0)=0.
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      Laplace transforming:
+    </p>
+    <me>
+      s^{2}Y(s) + 4Y(s) = \frac{3}{s^{2}+9}.
+    </me>
+
+    <p>
+      Solve for <m>Y(s)</m>:
+    </p>
+    <me>
+      Y(s) = \frac{3}{(s^{2}+4)(s^{2}+9)}.
+    </me>
+
+    <p>
+      Use partial fractions:
+    </p>
+    <me>
+      \frac{3}{(s^{2}+4)(s^{2}+9)}
+      = \frac{3}{5}\frac{1}{s^{2}+4}
+        - \frac{3}{5}\frac{1}{s^{2}+9}.
+    </me>
+
+    <p>Invert term‑by‑term:</p>
+    <md>
+      <mrow> y(t)
+      \amp = \frac{3}{5}\cdot \frac12\sin 2t
+        - \frac{3}{5}\cdot \frac13\sin 3t </mrow>
+      <mrow> \amp = \frac{3}{10}\sin 2t - \frac{1}{5}\sin 3t. </mrow>
+    </md>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-ivp-homogeneous">
+  <statement>
+    <p>
+      Solve the IVP
+    </p>
+    <me>
+      y'' - y' - 6y = 0, \qquad y(0) = 2, \; y'(0) = -1.
+    </me>
+    <p>
+      using the Laplace transform.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Take Laplace transforms term-by-term:
+    </p>
+
+    <me>
+      \mathcal{L}\{y''\} = s^{2}Y(s) - s y(0) - y'(0)
+      = s^{2}Y - 2s + 1,
+    </me>
+
+    <me>
+      \mathcal{L}\{y'\} = sY - y(0) = sY - 2,
+    </me>
+
+    <me>
+      \mathcal{L}\{y\} = Y.
+    </me>
+
+    <p>
+      Substitute into <m>y'' - y' - 6y = 0</m>:
+    </p>
+
+    <me>
+      (s^{2}Y - 2s + 1) - (sY - 2) - 6Y = 0.
+    </me>
+
+    <p>
+      Combine like terms:
+    </p>
+
+    <me>
+      (s^{2} - s - 6)Y - 2s + 3 = 0.
+    </me>
+
+    <p>
+      Solve for <m>Y(s)</m>:
+    </p>
+
+    <me>
+      Y(s) = \frac{2s - 3}{(s - 3)(s + 2)}.
+    </me>
+
+    <p>
+      Use partial fractions:
+    </p>
+
+    <me>
+      \frac{2s - 3}{(s - 3)(s + 2)}
+      = \frac{3/5}{s - 3} + \frac{7/5}{s + 2}.
+    </me>
+
+    <p>
+      Invert term-by-term:
+    </p>
+
+    <me>
+      y(t)
+      = \frac{3}{5} e^{3t} + \frac{7}{5} e^{-2t}.
+    </me>
+
+    <p>
+      This satisfies the differential equation and initial conditions, so it is the correct solution.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-shifting-theorem">
+  <statement>
+    <p>
+      (Shifting Theorem)  
+      Suppose <m>{\cal L}[f(t)] = F(s)</m> for <m>s>c</m>.  
+      Show that for any real <m>a</m> and <m>s>a+c</m>,
+    </p>
+    <me>
+      {\cal L}[e^{at} f(t)](s) = F(s-a).
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      This follows directly because
+    </p>
+    <md>
+      <mrow> {\cal L}[e^{at}f(t)](s)
+      \amp = \int_0^\infty e^{-st} e^{at}f(t)\,dt </mrow>
+      <mrow> \amp = \int_0^\infty e^{-(s-a)t}f(t)\,dt </mrow>
+      <mrow> \amp = F(s-a). </mrow>
+    </md>
+
+    <p>
+      The domain shifts by replacing <m>s</m> with <m>s-a</m>, requiring <m>s-a>c</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-inverse-shifted-t2">
+  <statement>
+    <p>
+      We know that 
+      <m>{\cal L}[t^{2}](s) = \frac{2}{s^{3}}</m>.  
+      Compute 
+      <m>{\cal L}^{-1}\!\left[\frac{2}{(s-2)^{3}}\right]</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      We start from the known transform
+    </p>
+    <me>
+      {\cal L}[t^{2}](s) = \frac{2}{s^{3}}.
+    </me>
+
+    <p>
+      The expression 
+      <m>\dfrac{2}{(s-2)^{3}}</m>
+      is obtained by replacing <m>s</m> with <m>s-2</m> in 
+      <m>\dfrac{2}{s^{3}}</m>.  
+      By the (exponential) shifting theorem,
+    </p>
+
+    <me>
+      {\cal L}[e^{at}f(t)] = F(s-a).
+    </me>
+
+    <p>
+      Here, <m>F(s) = \dfrac{2}{s^{3}}</m> corresponds to <m>f(t)=t^{2}</m>,  
+      and we need <m>F(s-2)</m>.  
+      Therefore
+    </p>
+
+    <me>
+      {\cal L}^{-1}\!\left[\frac{2}{(s-2)^{3}}\right]
+      = e^{2t} \, t^{2}.
+    </me>
+
+    <p>
+      Thus the inverse Laplace transform is
+    </p>
+
+    <me>
+      {\cal L}^{-1}\!\left[\frac{2}{(s-2)^{3}}\right]
+      = t^{2} e^{2t}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-piecewise-f-transform-2">
+  <statement>
+    <p>
+      Define
+    </p>
+    <me>
+      f(t) =
+      \left\{
+      \begin{array}{cr}
+        1 \amp 0 \le t &lt; 1 \\
+        3 \amp 1 \le t &lt; 2 \\
+        t \amp 2 \le t &lt; \infty
+      \end{array}
+      \right\}.
+    </me>
+
+    <p>
+      Compute the Laplace transform <m>{\cal L}[f(t)]</m>.  
+      <em>Hint:</em> Write
+    </p>
+
+    <me>
+      f(t)
+      =
+      \bigl[1 - 1\cdot u(t-1)\bigr]
+      +
+      \bigl[3u(t-1) - 3u(t-2)\bigr]
+      +
+      \bigl[t\,u(t-2)\bigr].
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      Using the decomposition:
+    </p>
+
+    <ol marker="(1)">
+      <li>
+        <p>
+          <strong>First term:</strong>
+        </p>
+        <me>
+          {\cal L}[\,1 - u(t-1)\,](s)
+          = \frac{1}{s} - \frac{e^{-s}}{s}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          <strong>Second term:</strong>
+        </p>
+        <me>
+          {\cal L}[\,3u(t-1) - 3u(t-2)\,](s)
+          = \frac{3e^{-s}}{s} - \frac{3e^{-2s}}{s}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          <strong>Third term:</strong>
+          We use the shifting rule
+          <m>{\cal L}[\,t\,u(t-a)\,] = e^{-as}\Bigl(\frac{1}{s^{2}} + \frac{a}{s}\Bigr)</m>.
+        </p>
+
+        <p>
+          Here <m>a=2</m>, so
+        </p>
+
+        <me>
+          {\cal L}[\,t\,u(t-2)\,](s)
+          = e^{-2s}\!\left(\frac{1}{s^{2}} + \frac{2}{s}\right).
+        </me>
+      </li>
+    </ol>
+
+    <p>
+      Now sum all terms:
+    </p>
+
+    <me>
+      {\cal L}[f(t)](s)
+      =
+      \left(\frac{1}{s} - \frac{e^{-s}}{s}\right)
+      +
+      \left(\frac{3e^{-s}}{s} - \frac{3e^{-2s}}{s}\right)
+      +
+      e^{-2s}\!\left(\frac{1}{s^{2}} + \frac{2}{s}\right).
+    </me>
+
+    <p>
+      Combine like terms:
+    </p>
+
+    <me>
+      {\cal L}[f(t)]
+      =
+      \frac{1}{s}
+      +
+      \frac{2e^{-s}}{s}
+      +
+      e^{-2s}\!\left(
+        \frac{1}{s^{2}}
+        + \frac{2}{s}
+        - \frac{3}{s}
+      \right).
+    </me>
+
+    <p>
+      Simplify the expression inside the final brackets:
+    </p>
+
+    <me>
+      \frac{1}{s^{2}} + \frac{2}{s} - \frac{3}{s}
+      = \frac{1}{s^{2}} - \frac{1}{s}.
+    </me>
+
+    <p>
+      Thus the Laplace transform is
+    </p>
+
+    <me>
+      {\cal L}[f(t)](s)
+      = \frac{1}{s}
+        + \frac{2e^{-s}}{s}
+        + e^{-2s}\!\left(\frac{1}{s^{2}} - \frac{1}{s}\right).
+    </me>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-mass-spring-piecwise-force">
+  <statement>
+    <p>
+      A mass that weighs 32 lb (<m>m=1</m> slug) is attached to a spring that is stretched 
+      1 ft by a force of 4 lb (<m>k=4</m> lb/ft).  
+      The mass is initially at rest in equilibrium.  
+      A forcing function <m>f(t)=1</m> is applied for <m>0 \le t &lt; \pi</m> and then turned off for <m>t\ge \pi</m>.  
+      (Assume no damping.)  
+      Find the resulting position <m>x(t)</m>.
+    </p>
+
+    <figure xml:id="SpringMass4b" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>A dashpot (not active here, since <m>c=0</m>).</caption>
+      <image source="SpringMass4.jpg" width="50%">
+        <description>
+          A mass–spring–dashpot system: a wall on the left is connected to a spring 
+          which attaches to a block of mass m; a dashpot is attached on the right side.
+        </description>
+      </image>
+    </figure>
+  </statement>
+
+  <solution>
+
+    <p><strong>1. Model the equation.</strong></p>
+
+    <p>
+      No damping → equation is
+    </p>
+    <me>
+      x'' + 4x = f(t).
+    </me>
+
+    <p>
+      Since the forcing is 1 for <m>0\le t &lt; \pi</m> and 0 afterward,
+    </p>
+
+    <me>
+      f(t)
+      = 1 - u(t-\pi).
+    </me>
+
+    <p>
+      Initial conditions: <m>x(0)=0</m>, <m>x'(0)=0</m>.
+    </p>
+
+    <p><strong>2. Laplace transform.</strong></p>
+
+    <p>
+      Transform the ODE:
+    </p>
+
+    <me>
+      s^{2}X(s) + 4X(s) = \frac{1}{s} - \frac{e^{-\pi s}}{s}.
+    </me>
+
+    <p>
+      Solve:
+    </p>
+
+    <me>
+      X(s)
+      = \frac{1}{s(s^{2}+4)} - \frac{e^{-\pi s}}{s(s^{2}+4)}.
+    </me>
+
+    <p><strong>3. Inverse transform of the unshifted term.</strong></p>
+
+    <p>
+      Use the known identity:
+    </p>
+    <me>
+      \mathcal{L}^{-1}\!\left[\frac{1}{s(s^{2}+a^{2})}\right]
+      = \frac{1}{a^{2}}\bigl(1 - \cos(at)\bigr).
+    </me>
+
+    <p>
+      Here <m>a=2</m>, so
+    </p>
+    <me>
+      \mathcal{L}^{-1}\!\left[\frac{1}{s(s^{2}+4)}\right]
+      = \frac{1}{4}\bigl(1 - \cos(2t)\bigr).
+    </me>
+
+    <p><strong>4. Inverse transform of the shifted piece.</strong></p>
+
+    <p>
+      Use the shifting theorem:
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\!\left[
+      e^{-a s} F(s)
+      \right]
+      = u(t-a)\, f(t-a),
+    </me>
+
+    <p>
+      where <m>f(t)=\mathcal{L}^{-1}[F(s)]</m>.  
+      In our case:
+    </p>
+
+    <me>
+      F(s)=\frac{1}{s(s^{2}+4)},\qquad
+      f(t)=\frac{1}{4}\bigl(1 - \cos(2t)\bigr).
+    </me>
+
+    <p>
+      Thus:
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\!\left[
+      \frac{e^{-\pi s}}{s(s^{2}+4)}
+      \right]
+      =
+      u(t-\pi)\,
+      \frac{1}{4}
+      \bigl(1 - \cos(2(t-\pi))\bigr).
+    </me>
+
+    <p><strong>5. Final solution.</strong></p>
+
+    <p>
+      Combining the pieces:
+    </p>
+
+    <me>
+      x(t)
+      =
+      \frac14\bigl(1 - \cos(2t)\bigr)
+      \;-\;
+      u(t-\pi)
+      \frac14\bigl(1 - \cos(2(t-\pi))\bigr).
+    </me>
+
+    <p>
+      Since <m>\cos(2(t-\pi))=\cos(2t)</m>, the expression simplifies nicely:
+    </p>
+
+    <me>
+      x(t)
+      =
+      \frac14\bigl(1 - \cos(2t)\bigr)
+      -
+      u(t-\pi)\frac14\bigl(1 - \cos(2t)\bigr).
+    </me>
+
+    <p>
+      Factor:
+    </p>
+
+    <me>
+      x(t)
+      =
+      \frac14\bigl(1 - \cos(2t)\bigr)\,
+      \bigl[1 - u(t-\pi)\bigr].
+    </me>
+
+    <p>
+      In piecewise form:
+    </p>
+
+    <me>
+      x(t)
+      =
+      \begin{cases}
+        \frac14\bigl(1 - \cos(2t)\bigr), \amp 0 \le t &lt; \pi,\\[6pt]
+        0, \amp t \ge \pi.
+      \end{cases}
+    </me>
+
+    <p>
+      Physically: the system oscillates between 0 and <m>\pi</m>, then returns to equilibrium once the forcing stops.
+    </p>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-definition-piecewiseC">
+  <statement>
+    <p>
+      Use the definition of the Laplace transform to compute (by hand)
+      <m>{\cal L}[f(t)]</m> for the function <m>f</m> graphed in 
+      <xref ref="GraphLaplaceTransformC"/>.
+      Then use technology to verify your result.
+    </p>
+    <figure xml:id="GraphLaplaceTransformC">
+    <caption>Function <m>f(t)</m>.</caption>
+    <image width="35%">
+      <description>A graph of a function f(t). The function is 0 up to t=1, shown by a horizontal 
+        line on the t‑axis ending at a filled dot at t=1. From that point, the graph rises 
+        linearly, passing through the point (2,2), and continues upward to the right with an arrow.
+      </description>
+      <latex-image>
+        \begin{tikzpicture}   
+   \draw [black!60,line width=0.3pt,-latex] (-1,0) -- (3,0) node [below] at (2.75,0) {$t$};
+   \draw [black!60,line width=0.3pt,-latex] (0,-1) -- (0,3) node [left] at (0,2.75) {$f(t)$};
+   \draw [linecolor,line width=2pt] (0,0) -- (1,0); 
+   \draw [linecolor,line width=2pt,-latex] (1,0) -- (2.5,3); 
+   \fill [linecolor] (0,0) circle (3pt);
+\fill [linecolor] (2,2) circle (3pt) node [right] at (2.3,2,1) {$(2,2)$};
+\foreach \x/\xtext in {1/1, 2/2}
+    \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
+\foreach \y/\ytext in {1/1, 2/2}
+    \draw[shift={(0,\y)}] (-2pt,0pt) -- (2pt,0pt) node[left] {$\ytext$};
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+   </figure>
+  </statement>
+
+  <solution>
+    <p>
+      From the graph, the function is piecewise-defined:
+    </p>
+
+    <me>
+      f(t) =
+      \begin{cases}
+        0 \amp 0 \le t &lt; 1,\\[4pt]
+        t-1 \amp t \ge 1.
+      \end{cases}
+    </me>
+
+    <p>
+      Therefore the Laplace transform is
+    </p>
+
+    <me>
+      {\cal L}[f(t)](s)
+      = \int_{0}^{1} 0 \cdot e^{-st}\, dt
+        + \int_{1}^{\infty} (t-1)e^{-st}\, dt
+      = \int_{1}^{\infty} (t-1)e^{-st}\, dt.
+    </me>
+
+    <p><strong>Compute the integral.</strong></p>
+
+    <p>
+      Substitute <m>u=t-1</m>, hence <m>t=u+1</m> and when <m>t=1</m>, <m>u=0</m>.
+      Then
+    </p>
+
+    <me>
+      \int_{1}^{\infty} (t-1)e^{-st}\, dt
+      =
+      \int_{0}^{\infty} u\, e^{-s(u+1)}\, du
+      =
+      e^{-s}
+      \int_{0}^{\infty} u\, e^{-su}\, du.
+    </me>
+
+    <p>
+      Compute the remaining integral:
+    </p>
+
+    <me>
+      \int_{0}^{\infty} u\, e^{-su}\, du
+      = \frac{1}{s^{2}}.
+    </me>
+
+    <p>
+      Hence
+    </p>
+
+    <me>
+      {\cal L}[f(t)](s)
+      = e^{-s}\, \frac{1}{s^{2}}
+      = \frac{e^{-s}}{s^{2}}.
+    </me>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="laplace-inverse-partialfractions-big">
+  <statement>
+    <p>
+      Use partial fractions to evaluate
+    </p>
+
+    <me>
+      {\cal L}^{-1}\!\left\{
+        \frac{s^{2} + 6s + 9}{(s-1)(s-2)(s+4)}
+      \right\}
+    </me>
+
+    <p>
+      by hand.  Use technology to verify the result.
+    </p>
+  </statement>
+
+  <solution>
+
+    <p><strong>1. Set up partial fractions.</strong></p>
+
+    <p>
+      We want to write
+    </p>
+
+    <me>
+      \frac{s^{2}+6s+9}{(s-1)(s-2)(s+4)}
+      =
+      \frac{A}{s-1} + \frac{B}{s-2} + \frac{C}{s+4}.
+    </me>
+
+    <p>Multiply through:</p>
+
+    <me>
+      s^{2}+6s+9
+      =
+      A(s-2)(s+4)
+      + B(s-1)(s+4)
+      + C(s-1)(s-2).
+    </me>
+
+    <p><strong>2. Evaluate at convenient values.</strong></p>
+
+    <ul>
+      <li>
+        <p>
+          <m>s=1</m>:
+        </p>
+        <me>
+          1+6+9 = A(1-2)(1+4)
+          \quad\Longrightarrow\quad
+          16 = -5A \quad\Longrightarrow\quad A = -\frac{16}{5}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          <m>s=2</m>:
+        </p>
+        <me>
+          4 + 12 + 9 = B(2-1)(2+4)
+          \quad\Longrightarrow\quad
+          25 = 6B
+          \quad\Longrightarrow\quad
+          B = \frac{25}{6}.
+        </me>
+      </li>
+
+      <li>
+        <p>
+          <m>s=-4</m>:
+        </p>
+        <me>
+          16 - 24 + 9 = C(-4-1)(-4-2)
+          \\[4pt]
+          1 = C( -5)( -6 )
+          \quad\Longrightarrow\quad
+          C = \frac{1}{30}.
+        </me>
+      </li>
+    </ul>
+
+    <p><strong>3. Write the decomposition.</strong></p>
+
+    <me>
+      \frac{s^{2}+6s+9}{(s-1)(s-2)(s+4)}
+      =
+      -\frac{16}{5}\frac{1}{s-1}
+      + \frac{25}{6}\frac{1}{s-2}
+      + \frac{1}{30}\frac{1}{s+4}.
+    </me>
+
+    <p><strong>4. Inverse Laplace transform term‑by‑term.</strong></p>
+
+    <p>
+      Use <m>{\cal L}^{-1}\{1/(s-a)\} = e^{at}</m>.  
+      Thus:
+    </p>
+
+    <me>
+      y(t)
+      =
+      -\frac{16}{5} e^{t}
+      + \frac{25}{6} e^{2t}
+      + \frac{1}{30} e^{-4t}.
+    </me>
+
+  </solution>
+</exercise>
+
+<!-- <exercise xml:id="laplace-ivp-e-4t">
+  <statement>
+    <p>
+      Keeping the result of the previous problem in mind, solve (by hand) the IVP
+    </p>
+
+    <me>
+      y'' - 3y' + 2y = e^{-4t}, 
+      \qquad 
+      y(0)=1,\; y'(0)=5
+    </me>
+
+    <p>
+      using the Laplace transform.  
+      Verify the result using appropriate technology.
+    </p>
+  </statement>
+
+  <solution>
+
+    <p><strong>1. Take Laplace transforms.</strong></p>
+
+    <p>
+      Use the formulas:
+    </p>
+
+    <me>
+      {\cal L}[y''] = s^{2}Y - s\,y(0) - y'(0),
+      \quad
+      {\cal L}[y'] = sY - y(0).
+    </me>
+
+    <p>
+      Substitute <m>y(0)=1</m>, <m>y'(0)=5</m>:
+    </p>
+
+    <me>
+      s^{2}Y - s - 5 
+      \;-\; 3(sY - 1)
+      \;+\; 2Y
+      \;=\;
+      \frac{1}{s+4}.
+    </me>
+
+    <p><strong>2. Simplify the left side.</strong></p>
+
+    <me>
+      s^{2}Y - s - 5 - 3sY + 3 + 2Y
+      =
+      (s^{2} - 3s + 2)Y \;-\; s \;-\; 2.
+    </me>
+
+    <p>
+      But 
+      <m>s^{2}-3s+2 = (s-1)(s-2)</m>,  
+      so the equation becomes:
+    </p>
+
+    <me>
+      (s^{2}-3s+2)Y - s - 2 = \frac{1}{s+4}.
+    </me>
+
+    <p>
+      Solve for <m>Y(s)</m>:
+    </p>
+
+    <me>
+      Y(s)
+      =
+      \frac{1}{(s+4)(s-1)(s-2)}
+      +
+      \frac{s+2}{(s-1)(s-2)}.
+    </me>
+
+    <p><strong>3. Split into two pieces.</strong></p>
+
+    <p>
+      First write:
+    </p>
+
+    <me>
+      Y(s)
+      =
+      \underbrace{\frac{1}{(s+4)(s-1)(s-2)}}_{\text{forced term}}
+      \;+\;
+      \underbrace{\frac{s+2}{(s-1)(s-2)}}_{\text{homogeneous term}}.
+    </me>
+
+    <p><strong>4. Invert the homogeneous part.</strong></p>
+
+    <p>
+      Decompose:
+    </p>
+
+    <me>
+      \frac{s+2}{(s-1)(s-2)}
+      =
+      \frac{-3}{s-1}
+      +
+      \frac{4}{s-2}.
+    </me>
+
+    <p>
+      Thus
+    </p>
+
+    <me>
+      {\cal L}^{-1}\!\left[\frac{s+2}{(s-1)(s-2)}\right]
+      =
+      -3 e^{t} + 4 e^{2t}.
+    </me>
+
+    <p><strong>5. Invert the forced part using the Shift Theorem.</strong></p>
+
+    <p>
+      We want 
+      <m>
+      {\cal L}^{-1}\!\left[\dfrac{1}{(s+4)(s-1)(s-2)}\right].
+      </m>
+    </p>
+
+    <p>
+      Factor out the shift:
+    </p>
+
+    <me>
+      \frac{1}{(s+4)(s-1)(s-2)}
+      =
+      \frac{1}{s+4}
+      \cdot
+      \frac{1}{(s-1)(s-2)}
+      =
+      e^{-4t}
+      * 
+      {\cal L}^{-1}\!\left[\frac{1}{(s-1)(s-2)}\right].
+    </me>
+
+    <p>
+      Compute the simpler inverse:
+    </p>
+
+    <me>
+      \frac{1}{(s-1)(s-2)}
+      =
+      \frac{-1}{s-1} + \frac{1}{s-2}.
+    </me>
+
+    <p>
+      Hence
+    </p>
+
+    <me>
+      g(t)
+      =
+      -e^{t} + e^{2t}.
+    </me>
+
+    <p>
+      By the shifting theorem:
+    </p>
+
+    <me>
+      {\cal L}^{-1}\!\left[\frac{1}{(s+4)(s-1)(s-2)}\right]
+      =
+      e^{-4(t-0)}\,g(t)
+      =
+      e^{-4t}\bigl(-e^{t} + e^{2t}\bigr).
+    </me>
+
+    <p><strong>6. Combine both parts.</strong></p>
+
+    <me>
+      y(t)
+      =
+      (-3e^{t} + 4e^{2t})
+      \;+\;
+      e^{-4t}\bigl(-e^{t} + e^{2t}\bigr).
+    </me>
+
+    <p>
+      That is the final closed‑form solution.
+    </p>
+
+  </solution>
+</exercise> -->
+
+<exercise xml:id="laplace-ivp-piecewise-force-again">
+  <statement>
+    <p>
+      Solve the IVP
+    </p>
+
+    <me>
+      y'' + 2y' + y = f(t), 
+      \qquad 
+      y(0)=0,\; y'(0)=0,
+    </me>
+
+    <p>
+      where
+    </p>
+
+    <me>
+      f(t) =
+      \left\{
+      \begin{array}{cr}
+        0 \amp 0 \le t &lt; 1 \\[4pt]
+        1 \amp 1 \le t &lt; 2 \\[4pt]
+       -1 \amp 2 \le t &lt; 3 \\[4pt]
+        0 \amp 3 \le t &lt; \infty
+      \end{array}
+      \right\}.
+    </me>
+  </statement>
+
+  <solution>
+
+    <p><strong>1. Rewrite the forcing using step functions.</strong></p>
+
+    <p>
+      The piecewise function becomes:
+    </p>
+
+    <me>
+      f(t) = u(t-1) - 2u(t-2) + u(t-3).
+    </me>
+
+    <p>
+      (Check:  
+      On <m>[1,2)</m> it equals <m>1</m>;  
+      on <m>[2,3)</m> it equals <m>-1</m>;  
+      for <m>t\ge 3</m> it returns to <m>0</m>.)
+    </p>
+
+    <p><strong>2. Apply the Laplace transform.</strong></p>
+
+    <p>
+      With <m>y(0)=0</m>, <m>y'(0)=0</m>:
+    </p>
+
+    <me>
+      \mathcal{L}\{y''\} = s^{2}Y(s),\qquad
+      \mathcal{L}\{2y'\} = 2sY(s),\qquad
+      \mathcal{L}\{y\} = Y(s).
+    </me>
+
+    <p>
+      So the ODE becomes:
+    </p>
+
+    <me>
+      (s^{2} + 2s + 1) Y(s)
+      = \frac{e^{-s}}{s} - \frac{2e^{-2s}}{s} + \frac{e^{-3s}}{s}.
+    </me>
+
+    <p>
+      Since <m>s^{2} + 2s + 1 = (s+1)^{2}</m>, we have:
+    </p>
+
+    <me>
+      Y(s)
+      =
+      \frac{e^{-s}}{s(s+1)^{2}}
+      - \frac{2e^{-2s}}{s(s+1)^{2}}
+      + \frac{e^{-3s}}{s(s+1)^{2}}.
+    </me>
+
+    <p><strong>3. Invert the non‑shifted kernel.</strong></p>
+
+    <p>
+      First compute
+    </p>
+
+    <me>
+      h(t) = \mathcal{L}^{-1}\!\left[\frac{1}{s(s+1)^{2}}\right].
+    </me>
+
+    <p>
+      Do partial fractions:
+    </p>
+
+    <me>
+      \frac{1}{s(s+1)^{2}}
+      =
+      \frac{1}{s}
+      - \frac{1}{s+1}
+      - \frac{1}{(s+1)^{2}}.
+    </me>
+
+    <p>Thus:</p>
+
+    <me>
+      h(t)
+      =
+      1 - e^{-t} - t e^{-t}.
+    </me>
+
+    <p><strong>4. Apply the shifting theorem.</strong></p>
+
+    <p>
+      Using
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\!\left[\frac{e^{-as}}{s(s+1)^{2}}\right]
+      = u(t-a)\,h(t-a),
+    </me>
+
+    <p>
+      the solution becomes:
+    </p>
+
+    <me>
+      y(t)
+      = u(t-1)h(t-1)
+      - 2u(t-2)h(t-2)
+      + u(t-3)h(t-3),
+    </me>
+
+    <p>
+      with <m>h(t) = 1 - e^{-t} - t e^{-t}</m>.
+    </p>
+
+    <p><strong>5. Final explicit form.</strong></p>
+
+    <md>
+      <mrow> y(t)
+      \amp =
+      u(t-1)\!\left[\,1 - e^{-(t-1)} - (t-1)e^{-(t-1)}\right] </mrow>
+      
+      <mrow> \ \ \amp - 2u(t-2)\!\left[\,1 - e^{-(t-2)} - (t-2)e^{-(t-2)}\right] </mrow>
+      
+      <mrow> \ \ \amp + u(t-3)\!\left[\,1 - e^{-(t-3)} - (t-3)e^{-(t-3)}\right]. </mrow>
+    </md>
+
+  </solution>
 </exercise>
 
 </exercises>
