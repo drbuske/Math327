@@ -130,7 +130,7 @@ https://web.uvic.ca/~tbazett/diffyqs/diracdelta_section.html#subsection-71">Subs
         </li>
 
 
-        <li>
+ <!--      <li>
           <p>
             Try these additional questions.  If necessary, use AI to guide your thinking. 
           </p>
@@ -150,7 +150,7 @@ Solve (find the impulse response) <m>x'' + x' + x = \delta(t)</m>, <m>x(0) = 0</
 
 
 </ol>
-</li>
+</li> -->
 
 
 <li>
@@ -162,6 +162,395 @@ Solve (find the impulse response) <m>x'' + x' + x = \delta(t)</m>, <m>x(0) = 0</
 
         
 </ul>
+
+<exercises>
+  <title>Exercises</title>
+
+<exercise xml:id="delta-vs-distribution">
+  <statement>
+    <p>
+      Sometimes the Dirac delta function introduced in Section 3.4 is called a <em>distribution</em>.
+      Which terminology do you prefer, and why?
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Mathematically, the Dirac delta cannot be treated as an ordinary function, because it does not
+      have a pointwise value and its defining property
+      <m>\int_{-\infty}^{\infty} \delta(t)\,\varphi(t)\,dt = \varphi(0)</m>
+      holds only when understood in the sense of linear functionals acting on test functions.
+      Calling <m>\delta(t)</m> a <em>distribution</em> emphasizes this correct mathematical nature.
+    </p>
+
+    <p>
+      On the other hand, in engineering, physics, and applied differential equations, the word
+      <em>delta function</em> is often more intuitive: it suggests an “impulse concentrated at a single moment.”
+      When solving ODEs via Laplace transforms, thinking of <m>\delta(t)</m> as an impulse is often the
+      most natural way to interpret it.
+    </p>
+
+    <p>
+      Your personal preference may depend on context:
+      <ul>
+        <li><strong>“Distribution”</strong> — when emphasizing rigor or explaining why
+          <m>\delta(t)</m> is not an ordinary function.</li>
+        <li><strong>“Delta function”</strong> — when working on applied problems, impulse response,
+          or Laplace transforms, where the operational meaning is clear and useful.</li>
+      </ul>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="delta-mcq-1">
+  <title>Interpretation of the Dirac Delta</title>
+
+  <statement>
+    <p>
+      How is the Dirac delta <m>\delta(t)</m> interpreted?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>A concentrated unit impulse at <m>t=0</m> that inputs “1 unit of area” instantaneously.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Section 3.4 treats <m>\delta(t)</m> as an idealized impulse with total area 1.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A function equal to infinity for all <m>t</m>.</p></statement>
+      <feedback><p>No—it is zero everywhere except at a single instant.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>An ordinary continuous function.</p></statement>
+      <feedback><p>No—the delta is not a classical function; it is a distribution.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="delta-mcq-2">
+  <title>Laplace Transform of <m>\delta(t)</m></title>
+
+  <statement>
+    <p>
+      What is the Laplace transform of <m>\delta(t)</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>{\cal L}[\delta(t)](s) = 1</m></p></statement>
+      <feedback>
+        <p>
+          Correct.  <m>{\cal L}[\delta(t)](s) = 1</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>{\cal L}[\delta(t)](s) = s</m></p></statement>
+      <feedback><p>No—the delta transform is constant, not growing with <m>s</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>{\cal L}[\delta(t)](s) = e^{-s}</m></p></statement>
+      <feedback><p>No—that is the transform of <m>\delta(t-1)</m>, not <m>\delta(t)</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="delta-mcq-3">
+  <title>Transform of a Shifted Delta</title>
+
+  <statement>
+    <p>
+      What is the Laplace transform of the shifted delta <m>\delta(t-a)</m> for <m>a &gt; 0</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>{\cal L}[\delta(t-a)](s) = e^{-as}</m></p></statement>
+      <feedback>
+        <p>
+          Correct. The delta "picks out" the value at <m>t=a</m>, giving <m>e^{-as}</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p><m>{\cal L}[\delta(t-a)](s) = s e^{-as}</m></p></statement>
+      <feedback><p>No—the factor <m>s</m> does not appear.</p></feedback>
+    </choice>
+
+    <choice><statement><p><m>{\cal L}[\delta(t-a)](s) = \delta(s-a)</m></p></statement>
+      <feedback><p>No—the Laplace transform is not another delta distribution.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="delta-mcq-4">
+  <title>Meaning of Impulse Response</title>
+
+  <statement>
+    <p>
+      What does the <em>impulse response</em> of a linear ODE represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>The solution of the ODE when the input is a delta impulse <m>\delta(t)</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The impulse response is the solution when the forcing is <m>\delta(t)</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The solution for an arbitrary forcing <m>f(t)</m>.</p></statement>
+      <feedback><p>No—that is the general forced solution, not specifically the impulse response.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The steady-state response only.</p></statement>
+      <feedback><p>No—the impulse response includes transient behavior as well.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="delta-mcq-5">
+  <title>Simple Impulse‑Driven ODE</title>
+
+  <statement>
+    <p>
+      Consider the IVP  
+      <m>x'' + x = \delta(t)</m>, <m>x(0)=0</m>, <m>x'(0)=0</m>.  
+      What is <m>X(s)</m>, the Laplace transform of the solution?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>X(s) = \dfrac{1}{s^{2}+1}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Laplace transforming gives  
+          <m>s^{2}X(s) + X(s) = 1</m>, hence <m>X(s)=1/(s^{2}+1)</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>X(s) = \dfrac{s}{s^{2}+1}</m></p></statement>
+      <feedback><p>No—that corresponds to initial velocity, not a delta input.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>X(s)=1</m></p></statement>
+      <feedback><p>No—the transform must include the system’s denominator <m>s^{2}+1</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="delta-open-1">
+  <statement>
+    <p>
+      Compute the Laplace transform of <m>\delta(t-3)</m>.  
+      Then, compute the Laplace transform of <m>5\,\delta(t-3)</m>.
+    </p>
+  </statement>
+
+  <solution>
+We have
+    <me>
+      {\cal L}[\delta(t-a)](s) = e^{-as}.   
+    </me>
+    <p>
+      Therefore:
+    </p>
+    <me>
+      {\cal L}[\delta(t-3)](s) = e^{-3s}.   
+    </me>
+
+    <p>
+      Linearity of the Laplace transform gives:
+    </p>
+    <md>
+      <mrow> {\cal L}[5\,\delta(t-3)](s)
+        \amp = 5\,{\cal L}[\delta(t-3)] </mrow>
+        <mrow> \amp = 5 e^{-3s}.    </mrow>
+    </md>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="delta-open-2">
+  <statement>
+    <p>
+      Solve the IVP
+    </p>
+    <me>
+      x' + 2x = \delta(t), \qquad x(0)=0.
+    </me>
+    <p>
+      (This solution is the impulse response of the system.)
+    </p>
+  </statement>
+
+  <solution>
+
+    <p><strong>1. Take Laplace transforms.</strong></p>
+
+    <p>
+      The Laplace transform of <m>x'</m> is <m>sX(s) - x(0) = sX(s)</m>.  
+      Also, <m>{\cal L}[\delta(t)](s) = 1</m>.   
+    </p>
+
+    <me>
+      sX(s) + 2X(s) = 1.
+    </me>
+
+    <p>
+      Solve for <m>X(s)</m>:
+    </p>
+
+    <me>
+      X(s) = \frac{1}{s+2}.
+    </me>
+
+    <p><strong>2. Invert the transform.</strong></p>
+
+    <p>
+      The inverse Laplace transform of <m>1/(s+2)</m> is <m>x(t)=e^{-2t}</m>.
+    </p>
+
+    <p>
+      This satisfies the jump condition created by the delta impulse at <m>t=0</m>,
+      and it obeys the initial condition <m>x(0)=0</m> in the appropriate distributional sense.
+    </p>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="impulse-response-delta">
+  <statement>
+    <p>
+      Solve the IVP (find the impulse response)
+    </p>
+
+    <me>
+      x'' + x' + x = \delta(t), 
+      \qquad
+      x(0)=0,\; x'(0)=0.
+    </me>
+  </statement>
+
+  <solution>
+
+    <p><strong>1. Take the Laplace transform of the ODE.</strong></p>
+
+    <p>
+      Using the formulas  
+      <m>{\cal L}\{x''\} = s^{2}X(s) - sx(0) - x'(0)</m> and  
+      <m>{\cal L}\{x'\} = sX(s) - x(0)</m>,  
+      and given <m>x(0)=0</m>, <m>x'(0)=0</m>, we obtain:
+    </p>
+
+    <me>
+      s^{2}X(s) + sX(s) + X(s) = {\cal L}\{\delta(t)\} = 1.
+    </me>
+
+    <p>
+      Factor the left-hand side:
+    </p>
+
+    <me>
+      (s^{2} + s + 1)X(s) = 1.
+    </me>
+
+    <p>
+      Hence
+    </p>
+
+    <me>
+      X(s) = \frac{1}{s^{2} + s + 1}.
+    </me>
+
+    <p><strong>2. Complete the square.</strong></p>
+
+    <me>
+      s^{2} + s + 1
+      =
+      \left(s + \tfrac{1}{2}\right)^{2}
+      + \tfrac{3}{4}.
+    </me>
+
+    <p>
+      Therefore
+    </p>
+
+    <me>
+      X(s)
+      = 
+      \frac{1}{\left(s + \tfrac12\right)^{2} + \left(\tfrac{\sqrt{3}}{2}\right)^{2}}.
+    </me>
+
+    <p><strong>3. Use the standard inverse Laplace transform</strong></p>
+
+    <p>
+      The formula
+      <m>{\cal L}^{-1}\!\left\{
+         \dfrac{1}{(s+a)^{2} + b^{2}}
+       \right\}
+       =
+       e^{-at}\,\dfrac{1}{b}\sin(bt)</m>
+      applies with
+      <m>a = \tfrac12</m> and <m>b = \tfrac{\sqrt{3}}{2}</m>.
+    </p>
+
+    <md>
+      <mrow> x(t)
+      \amp =
+      e^{-t/2}
+      \cdot
+      \frac{1}{\tfrac{\sqrt{3}}{2}}
+      \sin\!\left(\tfrac{\sqrt{3}}{2}t\right) </mrow>
+      <mrow> \amp =
+      \frac{2}{\sqrt{3}}\,e^{-t/2}
+      \sin\!\left(\tfrac{\sqrt{3}}{2}t\right). </mrow>
+    </md>
+
+    <p>
+      This satisfies the ODE in the distributional sense and obeys 
+      the initial conditions exactly.
+    </p>
+
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 
