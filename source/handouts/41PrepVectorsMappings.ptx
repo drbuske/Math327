@@ -118,13 +118,7 @@ A.1.1, A.1.3, A.1.4, A.1.5, A.1.6, A.1.7, A.1.8, A.1.10, A.1.11</url>.
         </li>
 
 
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-          </p>
-            <ol>
-
-<li>
+<!-- <li>
 <p>
   In your own words, describe what a linear operator is.  
 </p>
@@ -156,9 +150,9 @@ and linear mappings being matrices.</em>.  He is quick to correct this.  Thinkin
 mapping <m>L(f) = f'</m>, do you see why? Extra Credit: Can you describe an infinite-dimensional matrix
   that could represent <m>L</m> for smooth functions <m>f</m>? Hint: Think Taylor series.
 </p>
-</li>
+</li> -->
 
-<li>
+<!-- <li>
   <p>
 <p>
   Label the vectors <m>{\mathbf{u}}= \left[ \begin{array}{c}1 \\ 3\end{array} \right]</m>, 
@@ -175,9 +169,9 @@ mapping <m>L(f) = f'</m>, do you see why? Extra Credit: Can you describe an infi
 </image>
 </figure>
   </p>
-</li>
+</li> -->
 
-<li>
+<!-- <li>
   <p>
 Let <m>\displaystyle{\mathbf{u}}= \left[ \begin{array}{c}1 \\ 2\end{array} \right]</m>.
 Express <m>{\mathbf{u}}</m>, <m>2{\mathbf{u}}</m>, and <m>-\frac{3}{2}{\mathbf{u}}</m> on the graph.
@@ -190,9 +184,9 @@ Express <m>{\mathbf{u}}</m>, <m>2{\mathbf{u}}</m>, and <m>-\frac{3}{2}{\mathbf{u
   Tick marks along both axes show integer values. </description>
 </image>
 </figure>
-</li>
+</li> -->
 
-<li>
+<!-- <li>
   <p>
 Let <m>\displaystyle{\mathbf{v}}_{1} = \left[ \begin{array}{c}2 \\ 1\end{array} \right]</m> and <m>\displaystyle{\mathbf{v}}_{2} = \left[ \begin{array}{c}-2 \\ 2\end{array} \right]</m>.
 Express each of the following as a linear combination of <m>{\mathbf{v}}_{1}</m> and <m>{\mathbf{v}}_{2}</m>.
@@ -224,17 +218,14 @@ Express each of the following as a linear combination of <m>{\mathbf{v}}_{1}</m>
     </p>
   </li>
 </ol>
-</li>
+</li> -->
 
-<li>
+<!-- <li>
   <p>
     Suppose a linear mapping <m>F: \mathbb{R}^{2} \rightarrow \mathbb{R}^{3}</m> takes <m>(1,0)</m> to <m>(1,2,3)</m> and it takes
   <m>(0,1)</m> to <m>(4,5,6)</m>. Write down the matrix representing the mapping <m>F</m>.
   </p>
-</li>
-
-</ol>
-</li>
+</li>-->
 
 
 <li>
@@ -246,6 +237,890 @@ Express each of the following as a linear combination of <m>{\mathbf{v}}_{1}</m>
 
         
 </ul>
+
+<exercises>
+  <title>Exercises</title>
+  
+<exercise xml:id="vec-mcq-1">
+  <title>Meaning of a Vector</title>
+
+  <statement>
+    <p>
+      An expression like 
+      <m>\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}</m>
+      represents:
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>A point or vector in <m>\mathbb{R}^n</m>.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. An <m>n</m>-tuple as a vector in <m>\mathbb{R}^n</m>.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A single real number.</p></statement>
+      <feedback><p>No—this notation represents multiple components.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>A 2‑dimensional point only.</p></statement>
+      <feedback><p>No—it generalizes to any dimension.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="vec-mcq-2">
+  <title>Adding Vectors</title>
+
+  <statement>
+    <p>
+      Let  
+      <m>\vec{u}=\begin{bmatrix}1\\2\\3\end{bmatrix}</m>  
+      and  
+      <m>\vec{v}=\begin{bmatrix}4\\0\\-1\end{bmatrix}</m>.  
+      Compute <m>\vec{u}+\vec{v}</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>\begin{bmatrix}5\\2\\2\end{bmatrix}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Vectors are added component‑wise.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p><m>\begin{bmatrix}5\\2\\-1\end{bmatrix}</m></p></statement>
+      <feedback><p>Incorrect third component.</p></feedback>
+    </choice>
+
+    <choice><statement><p><m>\begin{bmatrix}3\\2\\4\end{bmatrix}</m></p></statement>
+      <feedback><p>No—this is not componentwise addition.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="vec-mcq-3">
+  <title>Scalar Multiplication</title>
+
+  <statement>
+    <p>
+      Compute <m>3\vec{w}</m> where  
+      <m>\vec{w}=\begin{bmatrix}2\\-1\\4\end{bmatrix}</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p><m>\begin{bmatrix}6\\-3\\12\end{bmatrix}</m></p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Multiply each component by the scalar.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p><m>\begin{bmatrix}3\\-1\\4\end{bmatrix}</m></p></statement>
+      <feedback><p>Only the first component was scaled.</p></feedback>
+    </choice>
+
+    <choice><statement><p><m>\begin{bmatrix}6\\2\\8\end{bmatrix}</m></p></statement>
+      <feedback><p>Incorrect scaling of the second and third components.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="vec-mcq-4">
+  <title>Definition of a Linear Mapping</title>
+
+  <statement>
+    <p>
+      A mapping <m>T:\mathbb{R}^n\to\mathbb{R}^m</m> is linear if:
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>T(\vec{u}+\vec{v}) = T(\vec{u}) + T(\vec{v})</m>  
+          and  
+          <m>T(c\vec{u}) = c\,T(\vec{u})</m>.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. This is the definition of linearity.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p>T must preserve vector lengths.</p></statement>
+      <feedback><p>No—only orthogonal mappings do that.</p></feedback>
+    </choice>
+
+    <choice><statement><p>T must output a scalar.</p></statement>
+      <feedback><p>No—it outputs vectors in <m>\mathbb{R}^m</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="vec-mcq-5">
+  <title>Columns of a Matrix</title>
+
+  <statement>
+    <p>
+      For a linear mapping <m>T(\vec{x})=A\vec{x}</m>, what does each column of <m>A</m> represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>The vector <m>T(\vec{e}_i)</m>, the image of the <m>i</m>-th standard basis vector.</p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. Columns of <m>A</m> are <m>T(\vec{e}_1),\dots,T(\vec{e}_n)</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p>The eigenvalues of <m>A</m>.</p></statement>
+      <feedback><p>No—eigenvalues are not arranged as columns.</p></feedback>
+    </choice>
+
+    <choice><statement><p>Randomly chosen vectors.</p></statement>
+      <feedback><p>No—each column encodes <m>T</m> fully.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="vec-mcq-6">
+  <title>Matrix–Vector Multiplication</title>
+
+  <statement>
+    <p>
+      Let  
+      <m>A=\begin{bmatrix}1 \amp 2\\3 \amp 1\end{bmatrix}</m>  
+      and  
+      <m>\vec{x}=\begin{bmatrix}1\\4\end{bmatrix}</m>.  
+      Compute <m>A\vec{x}</m>.
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>\begin{bmatrix}9\\7\end{bmatrix}</m></p></statement>
+      <feedback>
+        <p>
+          Correct:  
+          <m>1\cdot 1 + 2\cdot 4 = 9</m>,  
+          <m>3\cdot 1 + 1\cdot 4 = 7</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p><m>\begin{bmatrix}3\\4\end{bmatrix}</m></p></statement>
+      <feedback><p>No—these are row sums, not <m>A\vec{x}</m>.</p></feedback>
+    </choice>
+
+    <choice><statement><p><m>\begin{bmatrix}1\\4\end{bmatrix}</m></p></statement>
+      <feedback><p>No—that is just <m>\vec{x}</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="vec-mcq-7">
+  <title>Writing a System as <m>A\vec{x}=\vec{b}</m></title>
+
+  <statement>
+    <p>
+      The system  
+      <m>x + y = 2</m>,  
+      <m>2x + y = 4</m>  
+      can be written as <m>A\vec{x}=\vec{b}</m>.  
+      What is <m>A</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          <m>A=\begin{bmatrix}1 \amp 1\\2 \amp 1\end{bmatrix}</m>
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct. The rows contain the coefficients of the system.   
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>A=\begin{bmatrix}2 \amp 4\\1 \amp 1\end{bmatrix}</m></p></statement>
+      <feedback><p>No—the coefficients are incorrect.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>A=\begin{bmatrix}1 \amp 0\\0 \amp 1\end{bmatrix}</m></p></statement>
+      <feedback><p>No—that would yield the trivial system <m>x=\vec{b}</m>.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="vec-mcq-8">
+  <title>Dimension of <m>\mathbb{R}^n</m></title>
+
+  <statement>
+    <p>
+      What is the dimension of <m>\mathbb{R}^5</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>5</p></statement>
+      <feedback>
+        <p>
+          Correct. <m>\mathbb{R}^n</m> consists of all <m>n</m>-tuples of real numbers.  
+        </p>
+      </feedback>
+    </choice>
+
+    <choice><statement><p>4</p></statement>
+      <feedback><p>No—there are five components.</p></feedback>
+    </choice>
+
+    <choice><statement><p>10</p></statement>
+      <feedback><p>No—this might be confused with combinations; not relevant here.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="linop-definition">
+  <statement>
+    <p>
+      In your own words, describe what a <term>linear operator</term> is.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      A <term>linear operator</term> is a function that takes a vector as input and outputs another
+      vector, while preserving the two key properties of linearity:
+    </p>
+    <me>
+      L(\vec{u}+\vec{v}) = L(\vec{u}) + L(\vec{v}), 
+      \qquad 
+      L(c\vec{u}) = c\,L(\vec{u}),
+    </me>
+    <p>
+      for all vectors <m>\vec{u}, \vec{v}</m> and scalars <m>c</m>.
+      If the operator maps a vector space to itself (for example,
+      <m>L:\mathbb{R}^n \to \mathbb{R}^n</m>), then it is called a linear <em>operator</em>
+      rather than just a linear <em>mapping</em>.
+      In finite dimensions, these are exactly the operations that can be represented by matrices.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="magnitude-synonym">
+  <statement>
+    <p>
+      Give another word for the <term>magnitude</term> of a vector.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Another common word for the magnitude of a vector is its <em>length</em>.
+      In linear algebra, magnitude is also called the <em>norm</em> of the vector.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="basis-error-explanation">
+  <statement>
+    <p>
+      In the text, the author writes the (incorrect) statement:
+      <em>“The reason these are called a basis is that every other vector can be written as a linear
+      combination of them.”</em>
+      Explain precisely what is wrong with this statement, using the correct definitions of
+      <term>basis</term>, <term>span</term>, and <term>linear independence</term>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      What the author wrote is only <em>half</em> of the definition of a basis.
+      For a set of vectors <m>\{ \vec{v}_1,\dots,\vec{v}_k\}</m> to be a basis for a vector space, two
+      things must be true:
+    </p>
+
+    <ol>
+      <li>
+        <p><strong>Span:</strong> Every vector in the space can be written as a linear combination
+        of <m>\vec{v}_1,\dots,\vec{v}_k</m>.</p>
+      </li>
+
+      <li>
+        <p><strong>Linear independence:</strong> No nontrivial linear combination of the vectors
+        equals the zero vector.</p>
+      </li>
+    </ol>
+
+    <p>
+      The author’s sentence mentions only the spanning property, but not the requirement of linear
+      independence.
+      Without linear independence, a spanning set is just a <em>spanning set</em>, not a basis.
+      For example, in <m>\mathbb{R}^2</m>, the vectors
+    </p>
+
+    <me>
+      \vec{u}_1=\begin{bmatrix}1\\0\end{bmatrix},\qquad
+      \vec{u}_2=\begin{bmatrix}1\\0\end{bmatrix},\qquad
+      \vec{u}_3=\begin{bmatrix}0\\1\end{bmatrix},
+    </me>
+
+    <p>
+      span <m>\mathbb{R}^2</m> but are not linearly independent, so they <em>do not</em> form a basis.
+      A correct definition requires both spanning and linear independence.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="linmap-vs-matrix">
+  <statement>
+    <p>
+      The textbook says: <em>“Hence, we may think of matrices being linear mappings, and linear
+      mappings being matrices.”</em>  
+      Then it immediately warns this is not always true.  
+      Using the linear operator <m>L(f)=f'</m> on smooth functions, explain why a general linear
+      mapping is <em>not</em> always representable by a finite matrix.  
+      Extra credit: Describe an infinite-dimensional “matrix” that represents <m>L</m> using Taylor
+      series ideas.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      On a finite-dimensional vector space such as <m>\mathbb{R}^n</m>, every linear mapping can be
+      represented by some <m>n\times n</m> matrix.  
+      But the mapping <m>L(f)=f'</m> acts on a space of smooth functions, which is
+      <em>infinite-dimensional</em>.  
+      There is no finite list of basis vectors, so there is no finite matrix that could represent
+      <m>L</m>.
+    </p>
+
+    <p>
+      <strong>Extra credit idea:</strong>  
+      If a smooth function <m>f</m> is written as a Taylor series
+    </p>
+
+    <me>
+      f(t)=\sum_{k=0}^{\infty} a_k t^k,
+    </me>
+
+    <p>
+      then
+    </p>
+
+    <me>
+      f'(t)=\sum_{k=1}^{\infty} k\,a_k\,t^{\,k-1}.
+    </me>
+
+    <p>
+      In the basis <m>\{1, t, t^2, t^3,\dots\}</m>, differentiation is represented by an
+      infinite matrix:
+    </p>
+
+    <me>
+      L \ \leftrightarrow \
+      \begin{bmatrix}
+      0 \amp 1 \amp 0 \amp 0 \amp \cdots\\
+      0 \amp 0 \amp 2 \amp 0 \amp \cdots\\
+      0 \amp 0 \amp 0 \amp 3 \amp \cdots\\
+      \vdots \amp \vdots \amp \vdots \amp \vdots \amp \ddots
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      This “matrix” is infinite in extent, reflecting the fact that the underlying vector space is
+      infinite-dimensional.  
+      That is why not all linear mappings are representable by finite matrices.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="parallelogram-rule-labeling">
+  <statement>
+    <p>
+      Label the vectors 
+      <m>\vec{u}= \begin{bmatrix}1\\3\end{bmatrix}</m>, 
+      <m>\vec{v}= \begin{bmatrix}2\\1\end{bmatrix}</m>, and 
+      <m>\vec{u}+\vec{v}</m> in <xref ref="ParallelogramRule"/>.
+    </p>
+
+    <figure xml:id="ParallelogramRule" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>Vectors <m>\vec{u}</m> and <m>\vec{v}</m> (unlabeled for the exercise).</caption>
+      <image width="60%">
+        <description>
+          A 2D coordinate plot showing three arrows from the origin to (1,3), (2,1), and (3,4),
+          with light auxiliary segments forming the parallelogram rule construction.
+          Axes are labeled <m>x_1</m> (horizontal) and <m>x_2</m> (vertical); ticks 0–4.
+        </description>
+        <latex-image>
+\begin{tikzpicture}
+  \begin{axis}[
+    axis lines = middle,
+    xmin=0, xmax=4.2, ymin=0, ymax=4.2,
+    xtick={0,1,2,3,4}, ytick={0,1,2,3,4},
+    tick style={black!60},
+    xlabel={$x_1$}, ylabel={$x_2$},
+    width=9.2cm, height=7.0cm,
+    xlabel style={yshift=0.3em}, ylabel style={yshift=-0.3em}
+  ]
+    % Unlabeled vectors from the origin:
+    \addplot[->, very thick,blue] coordinates {(0,0) (1,3)};  % u
+    \addplot[->, very thick,blue] coordinates {(0,0) (2,1)};  % v
+    \addplot[->, very thick,blue] coordinates {(0,0) (3,4)};  % u+v
+
+    % Auxiliary edges to illustrate the parallelogram rule:
+    \addplot[black!55] coordinates {(1,3) (3,4)};
+    \addplot[black!55] coordinates {(2,1) (3,4)};
+
+    % Endpoints as dots:
+    \addplot[only marks, mark=*, mark size=1.8pt] coordinates {(1,3) (2,1) (3,4)};
+  \end{axis}
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </statement>
+
+  <solution>
+    <p><strong>Computation.</strong> We have</p>
+    <me>
+      \vec{u}=\begin{bmatrix}1\\3\end{bmatrix}, \qquad
+      \vec{v}=\begin{bmatrix}2\\1\end{bmatrix}, \qquad
+      \vec{u}+\vec{v}=\begin{bmatrix}1+2\\3+1\end{bmatrix}
+      =\begin{bmatrix}3\\4\end{bmatrix}.
+    </me>
+
+    <p>
+      The sum <m>\vec{u}+\vec{v}</m> is drawn from the origin to <m>(3,4)</m>.
+      <xref ref="ParallelogramRule-labeled"/> shows the labels placed along each arrow.
+    </p>
+
+    <figure xml:id="ParallelogramRule-labeled">
+      <caption>Labeled vectors <m>\vec{u}</m>, <m>\vec{v}</m>, and <m>\vec{u}+\vec{v}</m>.</caption>
+      <image width="60%">
+        <latex-image>
+\begin{tikzpicture}
+  \begin{axis}[
+    axis lines = middle,
+    xmin=0, xmax=4.2, ymin=0, ymax=4.2,
+    xtick={0,1,2,3,4}, ytick={0,1,2,3,4},
+    tick style={black!60},
+    xlabel={$x_1$}, ylabel={$x_2$},
+    width=9.2cm, height=7.0cm,
+    xlabel style={yshift=0.3em}, ylabel style={yshift=-0.3em}
+  ]
+    % Vectors from the origin:
+    \addplot[->, very thick,blue] coordinates {(0,0) (1,3)};  % u
+    \addplot[->, very thick,blue] coordinates {(0,0) (2,1)};  % v
+    \addplot[->, very thick,blue] coordinates {(0,0) (3,4)};  % u+v
+
+    % Auxiliary edges:
+    \addplot[black!55] coordinates {(1,3) (3,4)};
+    \addplot[black!55] coordinates {(2,1) (3,4)};
+
+    % Endpoints as dots:
+    \addplot[only marks, mark=*, mark size=1.8pt] coordinates {(1,3) (2,1) (3,4)};
+
+    % Labels near the vectors (positions tuned for clarity):
+    \node[fill=white, inner sep=1pt] at (axis cs:0.35,1.85) {\(\vec{u}\)};
+    \node[fill=white, inner sep=1pt] at (axis cs:1.35,0.62) {\(\vec{v}\)};
+    \node[fill=white, inner sep=1pt] at (axis cs:2.35,3.05) {\(\vec{u}+\vec{v}\)};
+  \end{axis}
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      Thus the required labels are:
+      <ul>
+        <li><m>\vec{u}</m> along the arrow to <m>(1,3)</m>,</li>
+        <li><m>\vec{v}</m> along the arrow to <m>(2,1)</m>, and</li>
+        <li><m>\vec{u}+\vec{v}</m> along the arrow to <m>(3,4)</m>.</li>
+      </ul>
+      The faint segments complete the parallelogram rule construction.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="vectors-scale-plot">
+  <statement>
+    <p>
+      Let <m>\displaystyle \vec{u}=\begin{bmatrix}1\\2\end{bmatrix}</m>.  
+      Express (draw) <m>\vec{u}</m>, <m>2\vec{u}</m>, and <m>-\tfrac{3}{2}\vec{u}</m> on the graph in <xref ref="Vectors1"/>.
+    </p>
+
+    <figure xml:id="Vectors1" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <caption>Sketch vectors <m>\vec{u}</m>, <m>2\vec{u}</m>, and <m>-\tfrac{3}{2}\vec{u}</m> on this grid.</caption>
+      <image width="62%">
+        <description>
+          A square grid for <m>x_1</m> from −2 to 2 and <m>x_2</m> from −3 to 4 with axes crossing at the origin. 
+          Ticks mark each integer; no vectors are drawn here (students add them).
+        </description>
+        <latex-image>
+\begin{tikzpicture}
+  \begin{axis}[
+    width=9.2cm, height=9.2cm,
+    xmin=-2.2, xmax=2.2, ymin=-3.2, ymax=4.2,
+    axis lines=middle,
+    xlabel={$x_1$}, ylabel={$x_2$},
+    xtick={-2,-1,0,1,2}, ytick={-3,-2,-1,0,1,2,3,4},
+    tick style={black!70},
+    minor x tick num=3, minor y tick num=3,
+    grid=both, grid style={black!20}, minor grid style={black!10},
+    axis line style={black},
+    enlargelimits=false
+  ]
+    % Empty grid only (students will draw vectors).
+  \end{axis}
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </statement>
+
+  <solution>
+    <p>
+      Compute the scaled vectors:
+    </p>
+    <me>
+      \vec{u}=\begin{bmatrix}1\\2\end{bmatrix}, \qquad
+      2\vec{u}=\begin{bmatrix}2\\4\end{bmatrix}, \qquad
+      -\tfrac{3}{2}\vec{u}=\begin{bmatrix}-\tfrac{3}{2}\\-3\end{bmatrix}.
+    </me>
+
+    <p>
+      The figure below places arrows from the origin to the endpoints 
+      <m>(1,2)</m>, <m>(2,4)</m>, and <m>\bigl(-\tfrac{3}{2},-3\bigr)</m>, and labels each vector.
+    </p>
+
+    <figure xml:id="Vectors1-labeled">
+      <caption>Labeled plot of <m>\vec{u}</m>, <m>2\vec{u}</m>, and <m>-\tfrac{3}{2}\vec{u}</m>.</caption>
+      <image width="62%">
+        <latex-image>
+\begin{tikzpicture}
+  \begin{axis}[
+    width=9.2cm, height=9.2cm,
+    xmin=-2.2, xmax=2.2, ymin=-3.2, ymax=4.2,
+    axis lines=middle,
+    xlabel={$x_1$}, ylabel={$x_2$},
+    xtick={-2,-1,0,1,2}, ytick={-3,-2,-1,0,1,2,3,4},
+    tick style={black!70},
+    minor x tick num=3, minor y tick num=3,
+    grid=both, grid style={black!20}, minor grid style={black!10},
+    axis line style={black},
+    enlargelimits=false
+  ]
+    % --- vectors from the origin ---
+    % u = (1,2)
+    \addplot[->, very thick, color=blue] coordinates {(0,0) (1,2)};
+    % 2u = (2,4)
+    \addplot[->, very thick, color=teal!70!black] coordinates {(0,0) (2,4)};
+    % -3/2 u = (-1.5, -3)
+    \addplot[->, very thick, color=red!80!black] coordinates {(0,0) (-1.5,-3)};
+
+    % endpoints as filled dots
+    \addplot[only marks, mark=*, mark size=1.8pt, color=blue] coordinates {(1,2)};
+    \addplot[only marks, mark=*, mark size=1.8pt, color=teal!70!black] coordinates {(2,4)};
+    \addplot[only marks, mark=*, mark size=1.8pt, color=red!80!black] coordinates {(-1.5,-3)};
+
+    % labels placed near each arrow
+    \node[fill=white, inner sep=1pt] at (axis cs:0.6,1.2) {\(\vec{u}\)};
+    \node[fill=white, inner sep=1pt] at (axis cs:1.3,3.0) {\(2\vec{u}\)};
+    \node[fill=white, inner sep=1pt] at (axis cs:-1.4,-1.7) {\(-\tfrac{3}{2}\vec{u}\)};
+  \end{axis}
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      Hence the three vectors are correctly drawn to the points  
+      <m>(1,2)</m>, <m>(2,4)</m>, and <m>\bigl(-\tfrac{3}{2},-3\bigr)</m>, respectively.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="vectors2-linear-combinations">
+  <statement>
+    <p>
+      Let 
+      <m>\displaystyle \vec{v}_{1}=\begin{bmatrix}2\\1\end{bmatrix}</m> 
+      and 
+      <m>\displaystyle \vec{v}_{2}=\begin{bmatrix}-2\\2\end{bmatrix}</m>.  
+      Express each of the following vectors as a linear combination of 
+      <m>\vec{v}_{1}</m> and <m>\vec{v}_{2}</m>.  
+    </p>
+
+    <figure xml:id="Vectors2">
+      <caption>An interesting grid for plotting vectors.</caption>
+      <image width="75%">
+        <description>
+          A coordinate plane on x1,x2 from -8 to 8.  
+          The grid consists of evenly spaced parallel lines in two directions:
+          one set with slope 1/2 (parallel to v1) and one set with slope -1 (parallel to v2).
+        </description>
+        <latex-image>
+\begin{tikzpicture}
+  \begin{axis}[
+    width=14cm, height=10.5cm,
+    xmin=-8.5, xmax=8.5, ymin=-8.5, ymax=8.5,
+    axis lines=middle,
+    xlabel={$x_1$}, ylabel={$x_2$},
+    xtick={-8,-6,-4,-2,0,2,4,6,8},
+    ytick={-8,-6,-4,-2,0,1,2,3,4,5,6,7,8},
+    tick style={black}
+  ]
+
+    % --- parallel lines to v1 (direction  (2,1)  slope = 1/2 ) ---
+    \foreach \c in {-16,-14,...,16} {
+      \addplot[black!40, thin, domain=-12:12] ({x}, {0.5*x + \c});
+    }
+
+    % --- parallel lines to v2 (direction (-2,2) slope = -1 ) ---
+    \foreach \c in {-16,-14,...,16} {
+      \addplot[black!40, thin, domain=-12:12] ({x}, {-x + \c});
+    }
+
+  \end{axis}
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <ol>
+      <li><p><m>\vec{a}=\begin{bmatrix}0\\3\end{bmatrix}</m></p></li>
+      <li><p><m>\vec{b}=\begin{bmatrix}-4\\1\end{bmatrix}</m></p></li>
+      <li><p><m>\vec{c}=\begin{bmatrix}6\\6\end{bmatrix}</m></p></li>
+    </ol>
+  </statement>
+
+  <solution>
+
+    <p>We solve for scalars <m>\alpha,\beta</m> such that:</p>
+
+    <me>
+      \alpha\vec{v}_{1}+\beta\vec{v}_{2}
+      =
+      \alpha\begin{bmatrix}2\\1\end{bmatrix}
+      +\beta\begin{bmatrix}-2\\2\end{bmatrix}
+      =
+      \begin{bmatrix}2\alpha - 2\beta \\ \alpha + 2\beta\end{bmatrix}.
+    </me>
+
+    <!-- ======================================================== -->
+    <!-- 1. Solve for a = [0; 3]                                  -->
+    <!-- ======================================================== -->
+
+    <p><strong>1) For <m>\vec{a}=\begin{bmatrix}0\\3\end{bmatrix}</m></strong></p>
+
+    <me>
+      2\alpha - 2\beta = 0,\qquad \alpha + 2\beta = 3.
+    </me>
+
+    <p>
+      From the first equation <m>\alpha=\beta</m>.  
+      Substitute:
+    </p>
+
+    <me>
+      \alpha + 2\alpha = 3 \Rightarrow 3\alpha = 3 \Rightarrow \alpha = 1.
+    </me>
+
+    <p>
+      Thus <m>\beta=1</m>.
+    </p>
+
+    <me>
+      \boxed{\vec{a} = \vec{v}_{1} + \vec{v}_{2}}.
+    </me>
+
+    <!-- ======================================================== -->
+    <!-- 2. Solve for b = [-4; 1]                                 -->
+    <!-- ======================================================== -->
+
+    <p><strong>2) For <m>\vec{b}=\begin{bmatrix}-4\\1\end{bmatrix}</m></strong></p>
+
+    <me>
+      2\alpha - 2\beta = -4,\qquad \alpha + 2\beta = 1.
+    </me>
+
+    <p>Divide first eqn by 2: <m>\alpha - \beta = -2</m>.</p>
+
+    <me>
+      \alpha - \beta = -2,\qquad \alpha + 2\beta = 1.
+    </me>
+
+    <p>
+      Subtract the first from the second:
+      <m>3\beta = 3</m> so <m>\beta=1</m>.  
+      Then <m>\alpha - 1 = -2</m>, so <m>\alpha=-1</m>.
+    </p>
+
+    <me>
+      \boxed{\vec{b} = -\vec{v}_{1} + \vec{v}_{2}}.
+    </me>
+
+    <!-- ======================================================== -->
+    <!-- 3. Solve for c = [6; 6]                                  -->
+    <!-- ======================================================== -->
+
+    <p><strong>3) For <m>\vec{c}=\begin{bmatrix}6\\6\end{bmatrix}</m></strong></p>
+
+    <me>
+      2\alpha - 2\beta = 6,\qquad \alpha + 2\beta = 6.
+    </me>
+
+    <p>
+      Divide first eqn: <m>\alpha - \beta = 3</m>.
+    </p>
+
+    <me>
+      \alpha - \beta = 3,\qquad \alpha + 2\beta = 6.
+    </me>
+
+    <p>
+      Subtract:
+      <m>3\beta = 3</m> → <m>\beta=1</m>.  
+      Then <m>\alpha - 1 = 3</m> → <m>\alpha=4</m>.
+    </p>
+
+    <me>
+      \boxed{\vec{c} = 4\vec{v}_{1} + \vec{v}_{2}}.
+    </me>
+
+    <!-- ======================================================== -->
+    <!-- GRAPHICAL SOLUTION PLOT -->
+    <!-- ======================================================== -->
+
+    <p>The following plot shows the three vectors placed on the same lattice:</p>
+
+    <figure xml:id="Vectors2-labeled">
+      <caption>Vectors <m>\vec{a},\vec{b},\vec{c}</m> expressed in the basis <m>\{\vec{v}_1,\vec{v}_2\}</m>.</caption>
+      <image width="75%">
+        <latex-image>
+\begin{tikzpicture}
+  \begin{axis}[
+    width=14cm, height=10.5cm,
+    xmin=-8.5, xmax=8.5, ymin=-8.5, ymax=8.5,
+    axis lines=middle,
+    xlabel={$x_1$}, ylabel={$x_2$},
+    xtick={-8,-6,-4,-2,0,2,4,6,8},
+    ytick={-8,-6,-4,-2,0,2,4,6,8},
+    tick style={black}
+  ]
+
+    % --- slanted grid: parallel to v1 and v2 ---
+    \foreach \c in {-16,-14,...,16} {
+      \addplot[black!35, thin, domain=-12:12] ({x}, {0.5*x + \c});
+      \addplot[black!35, thin, domain=-12:12] ({x}, {-x + \c});
+    }
+
+    % --- vectors ---
+    % a = v1 + v2 = (0,3)
+    \addplot[->, very thick, color=blue] coordinates {(0,0) (0,3)};
+    \node[fill=white, inner sep=1pt] at (axis cs:0.3,1.7) {$\vec{a}$};
+
+    % b = -v1 + v2 = (-4,1)
+    \addplot[->, very thick, color=red] coordinates {(0,0) (-4,1)};
+    \node[fill=white, inner sep=1pt] at (axis cs:-2.3,0.6) {$\vec{b}$};
+
+    % c = 4v1 + v2 = (6,6)
+    \addplot[->, very thick, color=green!60!black] coordinates {(0,0) (6,6)};
+    \node[fill=white, inner sep=1pt] at (axis cs:3.7,3.2) {$\vec{c}$};
+
+  \end{axis}
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="matrix-from-images-of-basis">
+  <statement>
+    <p>
+      Suppose a linear mapping <m>F:\mathbb{R}^{2}\to\mathbb{R}^{3}</m> takes 
+      <m>(1,0)</m> to <m>(1,2,3)</m> and takes <m>(0,1)</m> to <m>(4,5,6)</m>. 
+      Write down the matrix representing <m>F</m> (with respect to the standard bases).
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      In the standard bases, the matrix of a linear map has as its columns the images of the standard
+      basis vectors <m>\vec e_1=(1,0)</m> and <m>\vec e_2=(0,1)</m>. Therefore,
+    </p>
+    <me>
+      F(\vec e_1) = \begin{bmatrix}1\\2\\3\end{bmatrix}, 
+      \qquad 
+      F(\vec e_2) = \begin{bmatrix}4\\5\\6\end{bmatrix}.
+    </me>
+    <p>
+      Hence the matrix of <m>F</m> (with respect to the standard bases of <m>\mathbb{R}^2</m> and 
+      <m>\mathbb{R}^3</m>) is
+    </p>
+    <me>
+      [F] \;=\;
+      \begin{bmatrix}
+        1 \amp 4\\
+        2 \amp 5\\
+        3 \amp 6
+      \end{bmatrix}.
+    </me>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 
