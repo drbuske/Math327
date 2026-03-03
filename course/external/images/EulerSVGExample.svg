@@ -1,0 +1,15 @@
+<svg width="360" height="220" viewBox="0 0 360 220">
+        <!-- Exact curve -->
+        <path d="M20 180 Q 150 40 340 60" stroke="blue" stroke-width="3" fill="none"/>
+        <!-- Tangent line approximation -->
+        <line x1="80" y1="130" x2="200" y2="90"
+              stroke="red" stroke-width="3" stroke-dasharray="6,4"/>
+        <!-- Points -->
+        <circle cx="80" cy="130" r="4" fill="black"/>
+        <circle cx="200" cy="90" r="4" fill="black"/>
+        <!-- Labels -->
+        <text x="60" y="150" font-size="14">$(x_0,y_0)$</text>
+        <text x="190" y="115" font-size="14">Euler step</text>
+        <text x="240" y="45" font-size="14" fill="blue">Exact $y(x)$</text>
+        <text x="205" y="75" font-size="14" fill="red">Tangent line</text>
+      </svg>

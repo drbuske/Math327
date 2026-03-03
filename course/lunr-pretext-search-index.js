@@ -466,7 +466,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 1.4 - Linear Equations and the Integrating Factor",
-  "body": " Daily Prep 1.4 - Linear Equations and the Integrating Factor   Overview  This section introduces first-order linear differential equations of the form and develops the integrating factor method for solving them. By multiplying the equation by a specially chosen function , the left-hand side becomes the derivative of a product, allowing the equation to be integrated directly. The integrating factor turns out to be , and this method provides a systematic way to solve any linear first-order ODE, leading to an explicit formula for the solution when the required integrals can be computed.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize when an equation is a first-order linear ODE of the form .    Understand the purpose of an integrating factor and how it is used to rewrite the equation as the derivative of a product.    Apply the integrating factor method to obtain a solvable integrated equation.      Learn!  Complete the actions listed below.     Watch video Introduction to Solving a First Order Linear Differential Equation Using an Integrating Factor (5:43) by Mathispower4u.     Watch  Video 1.4.1: Linear Equations and Integrating Factors by Trevor Bazett.     Read  Section 1.4: Linear equations and the integrating factor .     Watch  Video 1.4.2: Integrating Factor Examples by Trevor Bazett.    Try these additional questions. If necessary, use AI to guide your thinking.   There is a `trick' to solving linear first order differential equations described in this section that involves multiplying by a function . What differentiation rule lies at the heart of this trick? [Hint: It is not the power rule.]    In Example 1.4.1 , . Note that . However, the text simply writes and does not write the arbitrary constant of integration ? Why is this not necessary?    Multiply on both sides by by .   What is the left-hand side?  Compute .  How should $I(x)$ be chosen so that (a) and (b) are always equal? That is, what (differential) equation must it solve?  Solve for in terms of using separation of variables.     Here, we solve the initial value problem    Identify the integrating factor .  Upon multiplying both sides of the differential equation by , the left-hand side can be written as .  What is the general solution to the differential equation?         Watch  Integrating Factor to Solve a Differential Equation (3:29) by Patrick JMT.     Watch  Linear equations and the integrating factor (28:49) for a lecture on section 1.4.     Do  Subsection 1.4.1: Exercises 1.4.1, 1.4.2, 1.4.12, 1.4.13. .    Try these additional questions. If necessary, use AI to guide your thinking.   A nitric acid solution flows at a constant rate of 6 L\/min into a large tank that initially held 200 L of a 0.5% nitric acid solution. The solution inside the tank remains stirred and flows out at a rate of 8 L\/min. If the solution entering the tank is 20% nitric acid, determine the volume of nitric acid in the tank after minutes.   Nitric acid in a tank.   Diagram of a mixing tank showing a 20% acid solution flowing in at 6 liters per minute on the left, and a mixture flowing out at 8 liters per minute on the right. Inside the tank, the variable V(t) represents the volume of nitric acid after t minutes, with the initial condition V(0) = 1 liter.    Here, . Also,    Show that the solution to the initial value problem using an integrating factor is   After how many minutes is the tank empty?  It stands to reason that should hold and our model should be valid for . Does the graph of suggest this to be true?     At noon, a tank contains 100 L of solution in which 10 kg of chemical is dissolved. Solution containing 2 kg of the chemical per liter flows into the tank at 5 L\/min. The mixture is well-stirred and drawn off at a rate of 4 L\/min. If the tank holds 500 L, when does it overflow? If measures the number of minutes after noon, what is the mass of chemical, , in the tank (in kg) at any time ? [Set up an linear initial-value problem and solve.]    Consider a tank initially containing 200 gallons of pure water, and start adding saltwater (containing 3 ounces of salt per gallon of water) at a rate of 1\/2 gallon per minute. At the same time, the resulting mixture in the tank is drained at the rate of 1\/2 gallon per minute. As usual, the mixture in the tank is thoroughly and uniformly mixed at all times. Assume also that a device (similar to a human liver) is attached to the tank that each minute filters out half the salt in a single gallon from the mixture in the tank.  Let denote the number of ounces of salt in the tank at minutes after we start adding saltwater.   Find an initial-value problem that models this situation.  Use technology to sketch a slope field ( ) for this differential equation. Do any equilibrium solutions appear to exist? If so, where?  Solve the IVP to determine . Plot for the first 24 hours using the technology.  Compute .        (Optional) Watch video The Integrating Factor Method (9:55) from a friend of mine, Matthew Wright, at St. Olaf College.     Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Derive the integrating factor by requiring that the left-hand side become a product derivative.    Solve linear ODEs explicitly and check solutions using differentiation, including solutions involving initial conditions.    Explain why the constant of integration inside the integrating factor does not affect the final solution.     "
+  "body": " Daily Prep 1.4 - Linear Equations and the Integrating Factor   Overview  This section introduces first-order linear differential equations of the form and develops the integrating factor method for solving them. By multiplying the equation by a specially chosen function , the left-hand side becomes the derivative of a product, allowing the equation to be integrated directly. The integrating factor turns out to be , and this method provides a systematic way to solve any linear first-order ODE, leading to an explicit formula for the solution when the required integrals can be computed.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize when an equation is a first-order linear ODE of the form .    Understand the purpose of an integrating factor and how it is used to rewrite the equation as the derivative of a product.    Apply the integrating factor method to obtain a solvable integrated equation.      Learn!  Complete the actions listed below.    (Optional) Watch video Introduction to Solving a First Order Linear Differential Equation Using an Integrating Factor (5:43) by Mathispower4u.     Watch  Video 1.4.1: Linear Equations and Integrating Factors (11:27) by Trevor Bazett.     Read  Section 1.4: Linear equations and the integrating factor .     Watch  Video 1.4.2: Integrating Factor Examples (4:39) by Trevor Bazett.    (Optional) Watch  Integrating Factor to Solve a Differential Equation (3:29) by Patrick JMT.    (Optional) Watch  Linear equations and the integrating factor (28:49) for a lecture on section 1.4.     Do  Subsection 1.4.1: Exercises 1.4.1, 1.4.2, 1.4.12, 1.4.13. .     (Optional) Watch video The Integrating Factor Method (9:55) from a friend of mine, Matthew Wright, at St. Olaf College.     Do MyOpenMath questions from this section.     Exercises   The Integrating Factor   For the linear ODE , what is the integrating factor?       Correct. The integrating factor is . Here .      Incorrect sign in the exponent.     Not of the correct exponential form .      Solving a Linear ODE   Solve the ODE . What is the general solution?         Correct. With , the integrating factor is . Multiply to get ; integrate to obtain , giving .      Incorrect steady‑state value; check the integral of .     Misses the particular solution term.      Solving an IVP   Solve the IVP What is ?         Correct. Write the ODE as , so and . Multiply through to obtain , integrate to get , and use to find .      This choice uses an incorrect constant.     This does not satisfy the ODE; recompute the integrating‑factor step.      Understanding the Integrating Factor Method   Why do we multiply both sides of by the integrating factor ?      Because it turns the left-hand side into , making the equation directly integrable.    Correct. The integrating factor is chosen so that , enabling immediate integration.     Because it eliminates from the equation.  No— remains on the right-hand side.    Because it ensures the solution will always be exponential.  No—only the integrating factor itself is exponential.       There is a “trick” to solving linear first-order differential equations described in this section that involves multiplying by a function . What differentiation rule lies at the heart of this trick? [Hint: It is not the power rule.]    The trick relies on the product rule :   We use this identity to rewrite the left-hand side of a linear equation as the derivative of a product after multiplying by the integrating factor . The key idea is to choose so that , causing the left-hand side to collapse into a single derivative.      In Example 1.4.1 , . Note that . However, the text simply writes and does not include the constant . Why is this not necessary?    Because adding a constant to the exponent simply multiplies the integrating factor by a nonzero constant:   Multiplying the entire linear equation by a nonzero constant does not change the set of solutions, since that factor cancels when solving for . Therefore, any constant of integration is irrelevant in the integrating factor.      Multiply on both sides by a function .   What is the left-hand side?  Compute .  How should be chosen so that (a) and (b) are always equal? That is, what differential equation must it satisfy?  Solve for using separation of variables.       Multiplying both sides of the equation by gives the left-hand side     Using the product rule,     For the expressions in (a) and (b) to match for all , we need   which simplifies (assuming ) to the differential equation     Solve the differential equation using separation of variables:   Integrate both sides:   Exponentiate:   Since is a nonzero constant and irrelevant to the method, we write the integrating factor simply as         Here we solve the initial value problem    Identify the integrating factor .  After multiplying both sides by , the left-hand side can be written as . What expression belongs inside the parentheses?  Find the general solution .       Rewrite the ODE as , so . The integrating factor is:     Multiplying the ODE by gives   By Section 1.4’s product‑rule identity, this equals   So the missing expression is .    The equation becomes   Integrate both sides:   Multiply by :   Apply the initial condition :   Therefore, the specific solution is         A nitric acid solution flows at a constant rate of 6 L\/min into a large tank that initially held 200 L of a 0.5% nitric acid solution. The solution inside the tank remains stirred and flows out at a rate of 8 L\/min. If the solution entering the tank is 20% nitric acid, determine the volume of nitric acid in the tank after minutes.   Nitric acid in a tank.   Diagram of a mixing tank showing a 20% acid solution entering at 6 L\/min, and a mixed solution leaving at 8 L\/min. Inside the tank, is the amount of nitric acid, and the initial condition is liter.    Initially, The tank volume decreases because more flows out than in: liters after minutes. The differential equation is     Show that the solution to the IVP obtained using an integrating factor, is     After how many minutes is the tank empty?    Since the tank empties at time , one expects and that the model is valid for . Does the graph of support this?         Rewrite the ODE in linear form:   The integrating factor is   Multiply both sides of the ODE by :   The left-hand side is the derivative of the product:   Integrate both sides:   Let , so . Then   Hence:   Multiply both sides by :   Apply :   Therefore,   The solution is thus      The tank is empty when its total volume becomes zero. Since the tank starts with 200 L and loses 2 L\/min (because outflow is 8 L\/min and inflow is 6 L\/min), we solve:   Thus the tank becomes empty after minutes.     Evaluate at :   as expected. On the interval , the expression remains nonnegative, so the graph of looks physically reasonable: it starts at , rises initially (since the inflow is very concentrated relative to tank volume), and eventually decreases as the tank drains. The graph approaches 0 smoothly as . The behavior is fully consistent with the mixing model.        At noon, a tank contains 100 L of solution in which 10 kg of chemical is dissolved. Solution containing 2 kg of the chemical per liter flows into the tank at 5 L\/min. The mixture is well-stirred and drawn off at a rate of 4 L\/min. If the tank holds 500 L, when does it overflow? If measures minutes after noon, find the mass of chemical (in kg) in the tank at time . (Set up and solve a linear initial-value problem.)    Step 1. Tank volume.  Inflow is 5 L\/min, outflow is 4 L\/min, so volume increases at .   The tank overflows when :   Step 2. Differential equation for mass of chemical.  Chemical entering: .  Chemical leaving: concentration in tank is , so outflow chemical rate is   Therefore,   Step 3. Solve the linear ODE using an integrating factor.  Write in standard form:   Integrating factor:   Multiply the ODE by :   Integrate:   Divide by :   Use :   Final expression:   Answer summary:   The tank overflows at minutes after noon.  The mass of chemical is        A tank initially contains 200 gallons of pure water. Saltwater with concentration 3 ounces of salt per gallon enters at gallon per minute. The mixture drains at the same rate. Additionally, a filtering device removes half the salt contained in one gallon of the mixture per minute.  Let be the number of ounces of salt in the tank at time minutes.   Find the initial-value problem (IVP) modeling this situation.   Use technology to sketch a slope field ( ). Do any equilibrium solutions appear? If so, where?    Solve the IVP for . Plot for the first 24 hours.    Compute .        Modeling the IVP.  Inflow salt rate:   Outflow salt rate: volume stays 200 gallons, so concentration is , and outflow rate gal\/min gives   Filtering device removes “half the salt in one gallon per minute”:   Total removal rate is .  Therefore, the initial-value problem is     Equilibrium solution.  Set :   Thus an equilibrium appears at ounces. The slope field (using any technology) will show horizontal segments near .    Solve the IVP.  Rewrite:   Integrating factor:   Multiply through:   Integrate:   Divide by :   Use :   Final expression:   A 24‑hour plot (over ) shows a rising curve approaching 300.    Long-term behavior.  Compute the limit:   The amount of salt approaches the equilibrium value 300 ounces.         Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Derive the integrating factor by requiring that the left-hand side become a product derivative.    Solve linear ODEs explicitly and check solutions using differentiation, including solutions involving initial conditions.    Explain why the constant of integration inside the integrating factor does not affect the final solution.     "
 },
 {
   "id": "ch-Textbook-6-2-2",
@@ -478,13 +478,103 @@ var ptx_lunr_docs = [
   "body": "linear differential equations integrating factor method "
 },
 {
-  "id": "BrineTank1",
+  "id": "mcq-intfactor-2",
   "level": "2",
-  "url": "ch-Textbook-6.html#BrineTank1",
-  "type": "Figure",
+  "url": "ch-Textbook-6.html#mcq-intfactor-2",
+  "type": "Exercise",
+  "number": "1",
+  "title": "The Integrating Factor.",
+  "body": " The Integrating Factor   For the linear ODE , what is the integrating factor?       Correct. The integrating factor is . Here .      Incorrect sign in the exponent.     Not of the correct exponential form .    "
+},
+{
+  "id": "mcq-intfactor-3",
+  "level": "2",
+  "url": "ch-Textbook-6.html#mcq-intfactor-3",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Solving a Linear ODE.",
+  "body": " Solving a Linear ODE   Solve the ODE . What is the general solution?         Correct. With , the integrating factor is . Multiply to get ; integrate to obtain , giving .      Incorrect steady‑state value; check the integral of .     Misses the particular solution term.    "
+},
+{
+  "id": "mcq-intfactor-4",
+  "level": "2",
+  "url": "ch-Textbook-6.html#mcq-intfactor-4",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Solving an IVP.",
+  "body": " Solving an IVP   Solve the IVP What is ?         Correct. Write the ODE as , so and . Multiply through to obtain , integrate to get , and use to find .      This choice uses an incorrect constant.     This does not satisfy the ODE; recompute the integrating‑factor step.    "
+},
+{
+  "id": "mcq-intfactor-5",
+  "level": "2",
+  "url": "ch-Textbook-6.html#mcq-intfactor-5",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Understanding the Integrating Factor Method.",
+  "body": " Understanding the Integrating Factor Method   Why do we multiply both sides of by the integrating factor ?      Because it turns the left-hand side into , making the equation directly integrable.    Correct. The integrating factor is chosen so that , enabling immediate integration.     Because it eliminates from the equation.  No— remains on the right-hand side.    Because it ensures the solution will always be exponential.  No—only the integrating factor itself is exponential.    "
+},
+{
+  "id": "intfactor-concept-1",
+  "level": "2",
+  "url": "ch-Textbook-6.html#intfactor-concept-1",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  There is a “trick” to solving linear first-order differential equations described in this section that involves multiplying by a function . What differentiation rule lies at the heart of this trick? [Hint: It is not the power rule.]    The trick relies on the product rule :   We use this identity to rewrite the left-hand side of a linear equation as the derivative of a product after multiplying by the integrating factor . The key idea is to choose so that , causing the left-hand side to collapse into a single derivative.   "
+},
+{
+  "id": "intfactor-concept-2",
+  "level": "2",
+  "url": "ch-Textbook-6.html#intfactor-concept-2",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  In Example 1.4.1 , . Note that . However, the text simply writes and does not include the constant . Why is this not necessary?    Because adding a constant to the exponent simply multiplies the integrating factor by a nonzero constant:   Multiplying the entire linear equation by a nonzero constant does not change the set of solutions, since that factor cancels when solving for . Therefore, any constant of integration is irrelevant in the integrating factor.   "
+},
+{
+  "id": "intfactor-derivation",
+  "level": "2",
+  "url": "ch-Textbook-6.html#intfactor-derivation",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Multiply on both sides by a function .   What is the left-hand side?  Compute .  How should be chosen so that (a) and (b) are always equal? That is, what differential equation must it satisfy?  Solve for using separation of variables.       Multiplying both sides of the equation by gives the left-hand side     Using the product rule,     For the expressions in (a) and (b) to match for all , we need   which simplifies (assuming ) to the differential equation     Solve the differential equation using separation of variables:   Integrate both sides:   Exponentiate:   Since is a nonzero constant and irrelevant to the method, we write the integrating factor simply as      "
+},
+{
+  "id": "intfactor-IVP",
+  "level": "2",
+  "url": "ch-Textbook-6.html#intfactor-IVP",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Here we solve the initial value problem    Identify the integrating factor .  After multiplying both sides by , the left-hand side can be written as . What expression belongs inside the parentheses?  Find the general solution .       Rewrite the ODE as , so . The integrating factor is:     Multiplying the ODE by gives   By Section 1.4’s product‑rule identity, this equals   So the missing expression is .    The equation becomes   Integrate both sides:   Multiply by :   Apply the initial condition :   Therefore, the specific solution is      "
+},
+{
+  "id": "nitric-acid-tank",
+  "level": "2",
+  "url": "ch-Textbook-6.html#nitric-acid-tank",
+  "type": "Exercise",
   "number": "9",
   "title": "",
-  "body": " Nitric acid in a tank.   Diagram of a mixing tank showing a 20% acid solution flowing in at 6 liters per minute on the left, and a mixture flowing out at 8 liters per minute on the right. Inside the tank, the variable V(t) represents the volume of nitric acid after t minutes, with the initial condition V(0) = 1 liter.   "
+  "body": "  A nitric acid solution flows at a constant rate of 6 L\/min into a large tank that initially held 200 L of a 0.5% nitric acid solution. The solution inside the tank remains stirred and flows out at a rate of 8 L\/min. If the solution entering the tank is 20% nitric acid, determine the volume of nitric acid in the tank after minutes.   Nitric acid in a tank.   Diagram of a mixing tank showing a 20% acid solution entering at 6 L\/min, and a mixed solution leaving at 8 L\/min. Inside the tank, is the amount of nitric acid, and the initial condition is liter.    Initially, The tank volume decreases because more flows out than in: liters after minutes. The differential equation is     Show that the solution to the IVP obtained using an integrating factor, is     After how many minutes is the tank empty?    Since the tank empties at time , one expects and that the model is valid for . Does the graph of support this?         Rewrite the ODE in linear form:   The integrating factor is   Multiply both sides of the ODE by :   The left-hand side is the derivative of the product:   Integrate both sides:   Let , so . Then   Hence:   Multiply both sides by :   Apply :   Therefore,   The solution is thus      The tank is empty when its total volume becomes zero. Since the tank starts with 200 L and loses 2 L\/min (because outflow is 8 L\/min and inflow is 6 L\/min), we solve:   Thus the tank becomes empty after minutes.     Evaluate at :   as expected. On the interval , the expression remains nonnegative, so the graph of looks physically reasonable: it starts at , rises initially (since the inflow is very concentrated relative to tank volume), and eventually decreases as the tank drains. The graph approaches 0 smoothly as . The behavior is fully consistent with the mixing model.     "
+},
+{
+  "id": "tank-mixing-changing-volume",
+  "level": "2",
+  "url": "ch-Textbook-6.html#tank-mixing-changing-volume",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  At noon, a tank contains 100 L of solution in which 10 kg of chemical is dissolved. Solution containing 2 kg of the chemical per liter flows into the tank at 5 L\/min. The mixture is well-stirred and drawn off at a rate of 4 L\/min. If the tank holds 500 L, when does it overflow? If measures minutes after noon, find the mass of chemical (in kg) in the tank at time . (Set up and solve a linear initial-value problem.)    Step 1. Tank volume.  Inflow is 5 L\/min, outflow is 4 L\/min, so volume increases at .   The tank overflows when :   Step 2. Differential equation for mass of chemical.  Chemical entering: .  Chemical leaving: concentration in tank is , so outflow chemical rate is   Therefore,   Step 3. Solve the linear ODE using an integrating factor.  Write in standard form:   Integrating factor:   Multiply the ODE by :   Integrate:   Divide by :   Use :   Final expression:   Answer summary:   The tank overflows at minutes after noon.  The mass of chemical is     "
+},
+{
+  "id": "salt-filtering-tank",
+  "level": "2",
+  "url": "ch-Textbook-6.html#salt-filtering-tank",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  A tank initially contains 200 gallons of pure water. Saltwater with concentration 3 ounces of salt per gallon enters at gallon per minute. The mixture drains at the same rate. Additionally, a filtering device removes half the salt contained in one gallon of the mixture per minute.  Let be the number of ounces of salt in the tank at time minutes.   Find the initial-value problem (IVP) modeling this situation.   Use technology to sketch a slope field ( ). Do any equilibrium solutions appear? If so, where?    Solve the IVP for . Plot for the first 24 hours.    Compute .        Modeling the IVP.  Inflow salt rate:   Outflow salt rate: volume stays 200 gallons, so concentration is , and outflow rate gal\/min gives   Filtering device removes “half the salt in one gallon per minute”:   Total removal rate is .  Therefore, the initial-value problem is     Equilibrium solution.  Set :   Thus an equilibrium appears at ounces. The slope field (using any technology) will show horizontal segments near .    Solve the IVP.  Rewrite:   Integrating factor:   Multiply through:   Integrate:   Divide by :   Use :   Final expression:   A 24‑hour plot (over ) shows a rising curve approaching 300.    Long-term behavior.  Compute the limit:   The amount of salt approaches the equilibrium value 300 ounces.     "
 },
 {
   "id": "ch-Textbook-7",
@@ -493,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 1.6 - Autonomous Equations",
-  "body": " Daily Prep 1.6 - Autonomous Equations   Overview  This section introduces autonomous differential equations , equations of the form whose rate of change depends only on the dependent variable and not on the indpendent variable (which is often time ). Because of this simplification, autonomous equations allow powerful qualitative analysis: identifying equilibrium (constant) solutions, determining critical points where , and analyzing the stability of these equilibria by observing how nearby solutions behave. Using examples such as Newton’s law of cooling and the logistic population model, the section shows how slope fields reveal long‑term behavior—such as convergence to a stable equilibrium or divergence from an unstable one—even without solving the ODE explicitly.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize an autonomous equation as one of the form where the derivative depends only on the dependent variable.    Identify equilibrium (constant) solutions by finding critical points where .    Use slope fields to sketch and interpret basic qualitative behaviors of solutions over time.      Learn!  Complete the actions listed below.     Watch video Introduction to Autonomous Differential Equations (8:14) by Mathispower4u.     Watch  Video 1.6.1: Autonomous Equations by Trevor Bazett.     Read  Section 1.6: Autonomous equations .     Watch  Video 1.6.2: Logistic Equation by Trevor Bazett.    Try these additional questions. If necessary, use AI to guide your thinking.    In section 1.6 , you read the following sentence: Note also, by looking at the graph, that the solution is ``stable” in that small perturbations in do not lead to substantially different solutions as grows. What is meant by the word `perturbation' in this context?       Watch  Autonomous equations (39:07) for a lecture on section 1.6.     Do  Subsection 1.6.1: Exercises 1.6.1, 1.6.6, 1.6.9. .    Try these additional questions. If necessary, use AI to guide your thinking.   How does the solution to the autonomous IVP compare to the solution of the IVP ? Can you generalize this idea for any autonomous equation? A slope field for is given in .   A slope field for .   A slope field on a square coordinate grid, with short line segments slanting downward to the right above the x‑axis and slanting upward to the right below the x‑axis. Along the horizontal line y = 3 the segments are nearly horizontal. Slopes become steeper as y moves farther away from 3.      Values of for which are called critical points . They provide equilibrium solutions of the autonomous equation . That is, are constant solutions.  Why are equilibrium solutions constant solutions? Hint: Remember the result of the previous problem.      Determine the equilibrium solutions to Use the slope field shown in to confirm your finding.   A slope field for .   A slope field on a square grid showing short line segments that tilt downward to the right above the x‑axis and tilt upward to the right below the x‑axis. Near the horizontal line y = 2, the segments are nearly horizontal. The slopes become steeper as y moves away from 2 in either direction.     Solution curves often approach equilibrium solutions as increases, or move away as increases. This is called stability .   If all nearby solution curves approach , then the equilibrium is called a sink ( stable ).  If at least some nearby solution curves do not approach , then the equilibrium is called unstable .  If all nearby solution curves move away from , then the equilibrium is called a source (unstable).   Determine the stability of the two equilibrium solutions and to the equation       A disease is spreading through the country. Let be the number of people infected. Let the constant be the number of people susceptible to infection. The infection rate is proportional to the product of already infected people, , and the number of susceptible but uninfected people, .   Write down the differential equation.  Supposing , that is, some people are infected at time , what is .  Does the solution to part (b) agree with your intuition? Why or why not?        (Optional) Watch video Autonomous First-Order ODEs (32:30) from Understand to Learn.     Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze stability of equilibrium points by determining whether nearby solutions move toward or away from them.    Describe long‑term behavior of solutions (e.g., convergence to stable equilibria, divergence from unstable ones) using graphical evidence alone.    Interpret models such as Newton’s cooling law and the logistic equation to understand how nonlinear autonomous equations can produce qualitatively different dynamics.     "
+  "body": " Daily Prep 1.6 - Autonomous Equations   Overview  This section introduces autonomous differential equations , equations of the form whose rate of change depends only on the dependent variable and not on the indpendent variable (which is often time ). Because of this simplification, autonomous equations allow powerful qualitative analysis: identifying equilibrium (constant) solutions, determining critical points where , and analyzing the stability of these equilibria by observing how nearby solutions behave. Using examples such as Newton’s law of cooling and the logistic population model, the section shows how slope fields reveal long‑term behavior—such as convergence to a stable equilibrium or divergence from an unstable one—even without solving the ODE explicitly.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize an autonomous equation as one of the form where the derivative depends only on the dependent variable.    Identify equilibrium (constant) solutions by finding critical points where .    Use slope fields to sketch and interpret basic qualitative behaviors of solutions over time.      Learn!  Complete the actions listed below.     Watch video Introduction to Autonomous Differential Equations (8:14) by Mathispower4u.     Watch  Video 1.6.1: Autonomous Equations (10:12) by Trevor Bazett.     Read  Section 1.6: Autonomous equations .     Watch  Video 1.6.2: Logistic Equation (8:56) by Trevor Bazett.     (Optional) Watch  Autonomous equations (39:07) for a lecture on section 1.6.     Do  Subsection 1.6.1: Exercises 1.6.1, 1.6.6, 1.6.9. .     (Optional) Watch video Autonomous First-Order ODEs (32:30) from Understand to Learn.     Do MyOpenMath questions from this section.     Exercises    In Section 1.6 , you read the following sentence:    is “stable” in that small perturbations in do not lead to substantially different solutions as grows.   What is meant by the word perturbation in this context?    In this context, a perturbation means a small change in the initial value of the solution. That is, instead of starting exactly at the equilibrium value , we begin with a nearby initial condition such as for some small number . The question is how this small deviation affects the long‑term behavior of the solution curve.  When an equilibrium is described as “stable,” it means that these small perturbations—small changes to the starting value—do not lead to solutions that drift far away from as increases. The nearby solutions remain close to the equilibrium curve, reflecting the intuitive idea that the system “pulls” the solution back toward     Identifying an Autonomous Equation   Which of the following differential equations is autonomous ?       Correct. An autonomous equation has the form , depending only on .      This depends explicitly on , so it is not autonomous.     Not autonomous because of the factor.      Equilibrium Solutions   For the autonomous equation , which of the following are equilibrium solutions?     and   Correct. Equilibria occur where , so gives .      At , , so it is not an equilibrium.    No equilibrium solutions  Incorrect—two exist.      Stability From the Sign of   Consider . Determine the stability of the equilibrium . Use the sign of .     Stable, because is negative.   Correct. For autonomous equations, an equilibrium is stable if . Here gives , so .     Unstable, because  No—this computes the derivative incorrectly.    Neither stable nor unstable  Incorrect—its stability is determined by .      Solving a Simple Autonomous ODE   Solve the IVP , .       Correct. Integrate to get , then apply .      Incorrect exponent.     Incorrect constant and exponent.      Interpreting a Phase Line   For an autonomous equation , suppose the phase line shows arrows pointing toward from both above and below. What does this indicate?     is a stable equilibrium.   Correct. When trajectories move toward an equilibrium from both sides, that equilibrium is stable.     is an unstable equilibrium.  No—unstable equilibria repel nearby solutions.    There is no equilibrium at .  No—the phase line arrows imply an equilibrium there.       How does the solution to the autonomous IVP compare to the solution of the IVP ? Can you generalize this idea for any autonomous equation? A slope field for is given in .   A slope field for .   A slope field with horizontal direction depending only on ; slopes vary by the vertical position but are constant along horizontal lines, as is typical for autonomous equations.      Because the equation is autonomous (the slope depends only on and not on ), the two solutions differ only by a horizontal shift. Both IVPs start with , and all solution curves through follow exactly the same shape in the slope field. The only difference is where on the -axis the solution meets that level.  In general, for any autonomous equation , if two initial values share the same -coordinate but occur at different -values, then the corresponding solutions are identical up to horizontal translation. This is because the slope at each point depends only on , so moving left or right simply shifts the solution curve without changing its shape.      Values of for which are called critical points . They provide equilibrium solutions of the autonomous equation , i.e. .  Why are equilibrium solutions constant solutions? (Hint: Remember the result of the previous problem.)    If , then substituting gives   This differential equation says the slope is zero for all , so the function must remain constant. Geometrically (as in the previous problem), the slope field has horizontal segments at that -value, and any solution starting there stays on that horizontal line for all time. Thus equilibrium solutions are constant solutions.         Determine the equilibrium solutions to Use the slope field shown in to confirm your finding.   A slope field for .   A slope field with nearly horizontal slopes at the equilibrium levels, and steeper slopes further away, typical of a cubic‑like autonomous ODE.      Solution curves often approach or move away from equilibrium solutions as increases; this is called stability .   If nearby solutions approach , the equilibrium is a sink (stable).  If some nearby solutions do not approach , the equilibrium is unstable .  If all nearby solutions move away, the equilibrium is a source (unstable).   Determine the stability of the two equilibrium solutions and for          Solve :   Thus the equilibrium solutions are and . In the slope field, horizontal segments occur at exactly these values.    Stability analysis.  Let . Then .    At :   Negative derivative means nearby solutions move toward  ; thus is a stable equilibrium (sink).    At :   Positive derivative means nearby solutions move away from ; thus is an unstable equilibrium (source).          A disease is spreading through a country. Let be the number of infected people, and the number of susceptible people. The infection rate is proportional to the product of the number of infected people and the number of susceptible people .   Write down the differential equation.  Suppose . Compute .  Does this result agree with your intuition? Explain.       The rate is proportional to , so the model is   where is the infection constant.    This logistic‑type equation has equilibria at and . For , the solution increases and approaches the carrying capacity .     Yes—this matches intuition. As long as some people are initially infected, eventually everyone susceptible becomes infected in this simplified model, so the number of infected tends toward . Real disease dynamics can be more complicated, but in this autonomous model the infection saturates the susceptible population.         Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze stability of equilibrium points by determining whether nearby solutions move toward or away from them.    Describe long‑term behavior of solutions (e.g., convergence to stable equilibria, divergence from unstable ones) using graphical evidence alone.    Interpret models such as Newton’s cooling law and the logistic equation to understand how nonlinear autonomous equations can produce qualitatively different dynamics.     "
 },
 {
   "id": "ch-Textbook-7-2-2",
@@ -505,13 +595,94 @@ var ptx_lunr_docs = [
   "body": "autonomous differential equations "
 },
 {
-  "id": "sec-Toprepareforclass16-3-8-1",
+  "id": "perturbation-definition",
   "level": "2",
-  "url": "ch-Textbook-7.html#sec-Toprepareforclass16-3-8-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
+  "url": "ch-Textbook-7.html#perturbation-definition",
+  "type": "Exercise",
+  "number": "1",
   "title": "",
-  "body": "critical points equilibrium stability sink stable unstable source "
+  "body": "  In Section 1.6 , you read the following sentence:    is “stable” in that small perturbations in do not lead to substantially different solutions as grows.   What is meant by the word perturbation in this context?    In this context, a perturbation means a small change in the initial value of the solution. That is, instead of starting exactly at the equilibrium value , we begin with a nearby initial condition such as for some small number . The question is how this small deviation affects the long‑term behavior of the solution curve.  When an equilibrium is described as “stable,” it means that these small perturbations—small changes to the starting value—do not lead to solutions that drift far away from as increases. The nearby solutions remain close to the equilibrium curve, reflecting the intuitive idea that the system “pulls” the solution back toward   "
+},
+{
+  "id": "mcq-autonomous-1",
+  "level": "2",
+  "url": "ch-Textbook-7.html#mcq-autonomous-1",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Identifying an Autonomous Equation.",
+  "body": " Identifying an Autonomous Equation   Which of the following differential equations is autonomous ?       Correct. An autonomous equation has the form , depending only on .      This depends explicitly on , so it is not autonomous.     Not autonomous because of the factor.    "
+},
+{
+  "id": "mcq-autonomous-2",
+  "level": "2",
+  "url": "ch-Textbook-7.html#mcq-autonomous-2",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Equilibrium Solutions.",
+  "body": " Equilibrium Solutions   For the autonomous equation , which of the following are equilibrium solutions?     and   Correct. Equilibria occur where , so gives .      At , , so it is not an equilibrium.    No equilibrium solutions  Incorrect—two exist.    "
+},
+{
+  "id": "mcq-autonomous-3",
+  "level": "2",
+  "url": "ch-Textbook-7.html#mcq-autonomous-3",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Stability From the Sign of <span class=\"process-math\">\\(f'(y)\\)<\/span>.",
+  "body": " Stability From the Sign of   Consider . Determine the stability of the equilibrium . Use the sign of .     Stable, because is negative.   Correct. For autonomous equations, an equilibrium is stable if . Here gives , so .     Unstable, because  No—this computes the derivative incorrectly.    Neither stable nor unstable  Incorrect—its stability is determined by .    "
+},
+{
+  "id": "mcq-autonomous-4",
+  "level": "2",
+  "url": "ch-Textbook-7.html#mcq-autonomous-4",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Solving a Simple Autonomous ODE.",
+  "body": " Solving a Simple Autonomous ODE   Solve the IVP , .       Correct. Integrate to get , then apply .      Incorrect exponent.     Incorrect constant and exponent.    "
+},
+{
+  "id": "mcq-autonomous-5",
+  "level": "2",
+  "url": "ch-Textbook-7.html#mcq-autonomous-5",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Interpreting a Phase Line.",
+  "body": " Interpreting a Phase Line   For an autonomous equation , suppose the phase line shows arrows pointing toward from both above and below. What does this indicate?     is a stable equilibrium.   Correct. When trajectories move toward an equilibrium from both sides, that equilibrium is stable.     is an unstable equilibrium.  No—unstable equilibria repel nearby solutions.    There is no equilibrium at .  No—the phase line arrows imply an equilibrium there.    "
+},
+{
+  "id": "autonomous-compare-solns",
+  "level": "2",
+  "url": "ch-Textbook-7.html#autonomous-compare-solns",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  How does the solution to the autonomous IVP compare to the solution of the IVP ? Can you generalize this idea for any autonomous equation? A slope field for is given in .   A slope field for .   A slope field with horizontal direction depending only on ; slopes vary by the vertical position but are constant along horizontal lines, as is typical for autonomous equations.      Because the equation is autonomous (the slope depends only on and not on ), the two solutions differ only by a horizontal shift. Both IVPs start with , and all solution curves through follow exactly the same shape in the slope field. The only difference is where on the -axis the solution meets that level.  In general, for any autonomous equation , if two initial values share the same -coordinate but occur at different -values, then the corresponding solutions are identical up to horizontal translation. This is because the slope at each point depends only on , so moving left or right simply shifts the solution curve without changing its shape.   "
+},
+{
+  "id": "autonomous-equilibrium-constant",
+  "level": "2",
+  "url": "ch-Textbook-7.html#autonomous-equilibrium-constant",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Values of for which are called critical points . They provide equilibrium solutions of the autonomous equation , i.e. .  Why are equilibrium solutions constant solutions? (Hint: Remember the result of the previous problem.)    If , then substituting gives   This differential equation says the slope is zero for all , so the function must remain constant. Geometrically (as in the previous problem), the slope field has horizontal segments at that -value, and any solution starting there stays on that horizontal line for all time. Thus equilibrium solutions are constant solutions.   "
+},
+{
+  "id": "autonomous-equilibria-stability",
+  "level": "2",
+  "url": "ch-Textbook-7.html#autonomous-equilibria-stability",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "     Determine the equilibrium solutions to Use the slope field shown in to confirm your finding.   A slope field for .   A slope field with nearly horizontal slopes at the equilibrium levels, and steeper slopes further away, typical of a cubic‑like autonomous ODE.      Solution curves often approach or move away from equilibrium solutions as increases; this is called stability .   If nearby solutions approach , the equilibrium is a sink (stable).  If some nearby solutions do not approach , the equilibrium is unstable .  If all nearby solutions move away, the equilibrium is a source (unstable).   Determine the stability of the two equilibrium solutions and for          Solve :   Thus the equilibrium solutions are and . In the slope field, horizontal segments occur at exactly these values.    Stability analysis.  Let . Then .    At :   Negative derivative means nearby solutions move toward  ; thus is a stable equilibrium (sink).    At :   Positive derivative means nearby solutions move away from ; thus is an unstable equilibrium (source).       "
+},
+{
+  "id": "infection-model-autonomous",
+  "level": "2",
+  "url": "ch-Textbook-7.html#infection-model-autonomous",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  A disease is spreading through a country. Let be the number of infected people, and the number of susceptible people. The infection rate is proportional to the product of the number of infected people and the number of susceptible people .   Write down the differential equation.  Suppose . Compute .  Does this result agree with your intuition? Explain.       The rate is proportional to , so the model is   where is the infection constant.    This logistic‑type equation has equilibria at and . For , the solution increases and approaches the carrying capacity .     Yes—this matches intuition. As long as some people are initially infected, eventually everyone susceptible becomes infected in this simplified model, so the number of infected tends toward . Real disease dynamics can be more complicated, but in this autonomous model the infection saturates the susceptible population.     "
 },
 {
   "id": "ch-Textbook-8",
@@ -520,7 +691,70 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 1.7 - Numerical Methods: Euler’s Method",
-  "body": " Daily Prep 1.7 - Numerical Methods: Euler's Method   Overview  Many differential equations cannot be solved exactly, yet we still need to understand how their solutions behave. Numerical methods provide a way to approximate solutions by replacing the continuous differential equation with a sequence of discrete steps that can be carried out by hand, by calculator, or by computer. In earlier chapters, slope fields offered a qualitative sense of how solutions evolve. Numerical methods build on this idea by giving a systematic procedure for constructing approximate solution curves.  The foundational idea is simple: if we know a point on a solution curve and its slope, then we can follow that slope a short distance to obtain an approximate value of the solution at a nearby point. Euler’s method, the first and simplest numerical technique introduced in this section, does exactly this. Although Euler’s method is only a rough approximation, it reveals the key principles that underlie more accurate methods and helps establish good computational habits.  This section emphasizes how to implement numerical procedures, how to interpret their results, and how to understand their limitations. Students learn how step size affects accuracy, how numerical instability can appear, and why different methods may behave differently even when applied to the same differential equation. By the end of the section, readers will have a practical toolkit for approximating solutions and for connecting analytic, graphical, and numerical viewpoints.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the motivation for numerical methods when exact solutions to differential equations cannot be found easily or at all.    Explain the idea behind approximating a solution curve by following the slope given by a differential equation.    Use Euler’s method to generate approximate solution values for a first-order initial value problem with a given step size.   Interpret numerical approximations graphically and compare them with qualitative slope-field behavior.  Describe how step size affects the quality and accuracy of numerical approximations.     Learn!  Complete the actions listed below.     Watch video Introduction to Euler's Method to Approximate a Solution to an Initial Value Problem (6:40) by Mathispower4u.     Watch  Euler's Method (10:07) from Khan Academy.     Read  Section 1.7: Numerical methods: Euler’s method .     Watch  Euler's Method (Introduction and Example) (12:22) from blackpenredpen.     Experiment with an Euler's Method GeoGebra Applet from Juan Carlos Ponce Campuzano.    (Optional) Experiment with another Euler's Method Applet from MIT.     Watch  Numerical methods: Euler's method (50:33) for a lecture on section 1.7.     Watch  Euler's Method (20:49) by The Organic Chemistry Tutor.     Do  Subsection 1.7.1: Exercises 1.7.3, 1.7.4 .    (Optional) Watch video The Integrating Factor Method (9:55) from a friend of mine, Matthew Wright, at St. Olaf College.     Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze sources of numerical error in Euler’s method, including local truncation error and the accumulation of global error.    Explain why some numerical methods may be unstable even when the analytic solution behaves well.    Compare Euler’s method with higher-order or improved methods in terms of accuracy and stability.   Evaluate how changing the step size influences numerical stability and identify when a numerical solution may no longer be reliable.    "
+  "body": " Daily Prep 1.7 - Numerical Methods: Euler's Method   Overview  Many differential equations cannot be solved exactly, yet we still need to understand how their solutions behave. Numerical methods provide a way to approximate solutions by replacing the continuous differential equation with a sequence of discrete steps that can be carried out by hand, by calculator, or by computer. In earlier chapters, slope fields offered a qualitative sense of how solutions evolve. Numerical methods build on this idea by giving a systematic procedure for constructing approximate solution curves.  The foundational idea is simple: if we know a point on a solution curve and its slope, then we can follow that slope a short distance to obtain an approximate value of the solution at a nearby point. Euler’s method, the first and simplest numerical technique introduced in this section, does exactly this. Although Euler’s method is only a rough approximation, it reveals the key principles that underlie more accurate methods and helps establish good computational habits.  This section emphasizes how to implement numerical procedures, how to interpret their results, and how to understand their limitations. Students learn how step size affects accuracy, how numerical instability can appear, and why different methods may behave differently even when applied to the same differential equation. By the end of the section, readers will have a practical toolkit for approximating solutions and for connecting analytic, graphical, and numerical viewpoints.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the motivation for numerical methods when exact solutions to differential equations cannot be found easily or at all.    Explain the idea behind approximating a solution curve by following the slope given by a differential equation.    Use Euler’s method to generate approximate solution values for a first-order initial value problem with a given step size.   Interpret numerical approximations graphically and compare them with qualitative slope-field behavior.  Describe how step size affects the quality and accuracy of numerical approximations.     Learn!  Complete the actions listed below.     Watch video Introduction to Euler's Method to Approximate a Solution to an Initial Value Problem (6:40) by Mathispower4u.    (Optional) Watch  Euler's Method (10:07) from Khan Academy.     Read  Section 1.7: Numerical methods: Euler’s method .    (Optional) Watch  Euler's Method (Introduction and Example) (12:22) from blackpenredpen.     Experiment with an Euler's Method GeoGebra Applet from Juan Carlos Ponce Campuzano.    (Optional) Experiment with another Euler's Method Applet from MIT.    (Optional) Watch  Numerical methods: Euler's method (50:33) for a lecture on section 1.7.    (Optional) Watch  Euler's Method (20:49) by The Organic Chemistry Tutor.     Do  Subsection 1.7.1: Exercises 1.7.3, 1.7.4 .    (Optional) Watch video The Integrating Factor Method (9:55) from a friend of mine, Matthew Wright, at St. Olaf College.     Do MyOpenMath questions from this section.     Exercises   What Euler’s Method Does   What is the basic idea behind Euler’s method for approximating solutions to ?      Use the slope to take a small step along the tangent line to approximate the next point.    Correct. Euler’s method approximates the solution by following short tangent-line segments: .      Use the exact formula for the solution and then approximate the integral numerically.    No—Euler’s method does not require an explicit solution.      Choose randomly within a tolerance interval.    No—Euler’s method is deterministic.       One Euler Step   Use Euler’s method with step size to approximate for the IVP , .         Correct. , so . Then , and the linear step predicts for the first step forward; standard single‑step Euler gives . But the problem asks for the approximation at from the first update: if using ? Actually the correct first update is .       Not correct for this combined‑slope computation.      Too large—recheck .      Euler’s Update Formula   Which formula correctly gives the Euler update for and ?      ,    Correct. This is exactly Euler’s method as given in the text.      ,   No—this does not use the slope .     ,   No—Euler always changes both and .      Two Euler Steps   Use Euler’s method with step size to approximate for the IVP , . Perform two steps.       Correct. Step 1: . Step 2: . Rounded to the nearest integer, .      That is only the first Euler step.     Too large—slope grows only modestly.      Error in Euler’s Method   According to the text, which of the following statements best describes the error in Euler’s method?      The error is the absolute difference between the true value and Euler’s approximation.    Correct. The text defines .     The error is always zero for autonomous equations.  No—Euler’s method is approximate regardless of the type of ODE.    The error is always negative.  No—the text emphasizes we care only about the magnitude, not sign.       Euler’s method uses the slope to produce the next approximation . Explain conceptually why the tangent line at a point provides a reasonable approximation to the true solution near that point. Why does this idea break down when the slope of the solution curve changes rapidly?    At each point , the differential equation tells us the exact slope of the true solution curve. The tangent line is the linear function with exactly that slope and value at the point. Because a differentiable curve is locally linear, the tangent line matches the actual curve extremely well for very small changes in . Thus taking a short step along the tangent gives a reasonable estimate for the next point.  However, if the slope changes rapidly, then the tangent line quickly becomes inaccurate. The real solution “bends away” from the tangent line much faster, and the method fails unless we reduce the step size . This explains why Euler’s method performs poorly when the curvature of the true solution is large and why decreasing reduces the error.      Use Euler’s method with step size to approximate for the initial value problem Compute three Euler steps and report the approximate value of .    Euler’s method uses the update formulas   where . Start with and step size .  Step 1:    Step 2:    Step 3:    Therefore, the Euler approximation for is        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze sources of numerical error in Euler’s method, including local truncation error and the accumulation of global error.    Explain why some numerical methods may be unstable even when the analytic solution behaves well.    Compare Euler’s method with higher-order or improved methods in terms of accuracy and stability.   Evaluate how changing the step size influences numerical stability and identify when a numerical solution may no longer be reliable.    "
+},
+{
+  "id": "mcq-euler-1",
+  "level": "2",
+  "url": "ch-Textbook-8.html#mcq-euler-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "What Euler’s Method Does.",
+  "body": " What Euler’s Method Does   What is the basic idea behind Euler’s method for approximating solutions to ?      Use the slope to take a small step along the tangent line to approximate the next point.    Correct. Euler’s method approximates the solution by following short tangent-line segments: .      Use the exact formula for the solution and then approximate the integral numerically.    No—Euler’s method does not require an explicit solution.      Choose randomly within a tolerance interval.    No—Euler’s method is deterministic.     "
+},
+{
+  "id": "mcq-euler-2",
+  "level": "2",
+  "url": "ch-Textbook-8.html#mcq-euler-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "One Euler Step.",
+  "body": " One Euler Step   Use Euler’s method with step size to approximate for the IVP , .         Correct. , so . Then , and the linear step predicts for the first step forward; standard single‑step Euler gives . But the problem asks for the approximation at from the first update: if using ? Actually the correct first update is .       Not correct for this combined‑slope computation.      Too large—recheck .    "
+},
+{
+  "id": "mcq-euler-3",
+  "level": "2",
+  "url": "ch-Textbook-8.html#mcq-euler-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Euler’s Update Formula.",
+  "body": " Euler’s Update Formula   Which formula correctly gives the Euler update for and ?      ,    Correct. This is exactly Euler’s method as given in the text.      ,   No—this does not use the slope .     ,   No—Euler always changes both and .    "
+},
+{
+  "id": "mcq-euler-4",
+  "level": "2",
+  "url": "ch-Textbook-8.html#mcq-euler-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Two Euler Steps.",
+  "body": " Two Euler Steps   Use Euler’s method with step size to approximate for the IVP , . Perform two steps.       Correct. Step 1: . Step 2: . Rounded to the nearest integer, .      That is only the first Euler step.     Too large—slope grows only modestly.    "
+},
+{
+  "id": "mcq-euler-5",
+  "level": "2",
+  "url": "ch-Textbook-8.html#mcq-euler-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Error in Euler’s Method.",
+  "body": " Error in Euler’s Method   According to the text, which of the following statements best describes the error in Euler’s method?      The error is the absolute difference between the true value and Euler’s approximation.    Correct. The text defines .     The error is always zero for autonomous equations.  No—Euler’s method is approximate regardless of the type of ODE.    The error is always negative.  No—the text emphasizes we care only about the magnitude, not sign.    "
+},
+{
+  "id": "euler-concept-theory",
+  "level": "2",
+  "url": "ch-Textbook-8.html#euler-concept-theory",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Euler’s method uses the slope to produce the next approximation . Explain conceptually why the tangent line at a point provides a reasonable approximation to the true solution near that point. Why does this idea break down when the slope of the solution curve changes rapidly?    At each point , the differential equation tells us the exact slope of the true solution curve. The tangent line is the linear function with exactly that slope and value at the point. Because a differentiable curve is locally linear, the tangent line matches the actual curve extremely well for very small changes in . Thus taking a short step along the tangent gives a reasonable estimate for the next point.  However, if the slope changes rapidly, then the tangent line quickly becomes inaccurate. The real solution “bends away” from the tangent line much faster, and the method fails unless we reduce the step size . This explains why Euler’s method performs poorly when the curvature of the true solution is large and why decreasing reduces the error.   "
+},
+{
+  "id": "euler-computation-simple",
+  "level": "2",
+  "url": "ch-Textbook-8.html#euler-computation-simple",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Use Euler’s method with step size to approximate for the initial value problem Compute three Euler steps and report the approximate value of .    Euler’s method uses the update formulas   where . Start with and step size .  Step 1:    Step 2:    Step 3:    Therefore, the Euler approximation for is    "
 },
 {
   "id": "ch-Textbook-9",
@@ -529,7 +763,79 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 2.1 - Second Order Linear ODEs",
-  "body": " Daily Prep 2.1 - Second Order Linear ODEs   Overview  In this section, we will learn how to recognize, interpret, and solve second‑order linear ordinary differential equations, which take the general form . After rewriting such equations in the standardized form , we will explore the foundational structure of linear ODEs, including the distinction between homogeneous and nonhomogeneous equations and the crucial fact that no powers or nonlinear functions of , , or appear. A major focus is understanding the principle of superposition, which allows solutions of homogeneous equations to be combined into new solutions, and learning how this principle, along with existence and uniqueness results, gives linear ODEs a powerful and predictable solution theory. We will also be introduced to the operator viewpoint , which provides an elegant framework for understanding why linear equations behave so systematically.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize the standard form of a second‑order linear ODE and identify its components.    Explain the difference between homogeneous and nonhomogeneous linear equations.    Describe the principle of superposition for solutions of linear homogeneous ODEs.      Learn!  Complete the actions listed below.     Watch video Video 2.1.1: 2nd Order Linear Equations by Trevor Bazett.     Read  Section 2.1: Second order linear ODEs .     Watch  Intro to Second Order Linear ODEs: Superposition, Existence\/Uniqueness\/Linear Independence (6:20) by Mathispower4u.     Watch  Determine if Two Functions are Linearly Dependent or Linearly Independent (5:05) by Mathispower4u.    (Optional) Watch  Ex 2.1B Find a General Solution to a 2nd Order Linear Homogeneous DE (Reduction of Order) (8:03) by Mathispower4u.     Watch  Second order linear ODEs (45:12) for a lecture on section 2.1.     Do  Subsection 2.1.1: Exercises 2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.7 .    Try these additional questions. If necessary, use AI to guide your thinking.   Define by . Let and .    Compute .    Compute .    Compute .    How does your answer to (c) compare to the sum of your answers to (a) and (b)? Is linear?      Consider the differential equation Define the operator by .    Show that and both solve the differential equation by computing and .    For any constants and , compute the value of .    Does solve the differential equation?      Consider the differential equation .    Are and linearly dependent or linearly independent? How do you know?    Describe the general solution to this DE. That is, describe every solution to this DE.          Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use linearity to verify that a linear combination of solutions to a homogeneous equation is again a solution.    Explain the operator viewpoint and how linear operators encode the structure of ODEs.    Interpret the existence and uniqueness theorem in the context of second‑order linear ODEs.     "
+  "body": " Daily Prep 2.1 - Second Order Linear ODEs   Overview  In this section, we will learn how to recognize, interpret, and solve second‑order linear ordinary differential equations, which take the general form . After rewriting such equations in the standardized form , we will explore the foundational structure of linear ODEs, including the distinction between homogeneous and nonhomogeneous equations and the crucial fact that no powers or nonlinear functions of , , or appear. A major focus is understanding the principle of superposition, which allows solutions of homogeneous equations to be combined into new solutions, and learning how this principle, along with existence and uniqueness results, gives linear ODEs a powerful and predictable solution theory. We will also be introduced to the operator viewpoint , which provides an elegant framework for understanding why linear equations behave so systematically.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize the standard form of a second‑order linear ODE and identify its components.    Explain the difference between homogeneous and nonhomogeneous linear equations.    Describe the principle of superposition for solutions of linear homogeneous ODEs.      Learn!  Complete the actions listed below.     Watch video Video 2.1.1: 2nd Order Linear Equations by Trevor Bazett.     Read  Section 2.1: Second order linear ODEs .     Watch  Intro to Second Order Linear ODEs: Superposition, Existence\/Uniqueness\/Linear Independence (6:20) by Mathispower4u.     Watch  Determine if Two Functions are Linearly Dependent or Linearly Independent (5:05) by Mathispower4u.    (Optional) Watch  Ex 2.1B Find a General Solution to a 2nd Order Linear Homogeneous DE (Reduction of Order) (8:03) by Mathispower4u.    (Optional) Watch  Second order linear ODEs (45:12) for a lecture on section 2.1.     Do  Subsection 2.1.1: Exercises 2.1.2, 2.1.3, 2.1.4, 2.1.5, 2.1.7 .      Do MyOpenMath questions from this section.     Exercises   Definition of a Second-Order Linear ODE   Which of the following differential equations is linear and second‑order?         Correct. A general second‑order linear ODE is defined as .      Not linear: it contains .     This is first‑order, not second‑order.      Homogeneous vs. Nonhomogeneous   Which of the following is a homogeneous second‑order linear equation?       Correct. A homogeneous equation has on the right-hand side.      Not homogeneous: is a forcing term.     Also nonhomogeneous due to the “+1”.      Recognizing Solutions of a Homogeneous Equation   Suppose . Which pair of functions forms a fundamental set of solutions?     and   Correct. and are two solutions of this equation.     and  This pair does not satisfy .    and   These solve , not .       The Superposition Principle   If and are solutions to the homogeneous equation , what else must be a solution?     for any constants   Correct. The superposition principle states that any linear combination of solutions is also a solution.      Products of solutions do not generally solve the equation.     Nonlinear combinations break linearity of the operator.      Checking a Proposed Solution   Check whether is a solution of .     Yes, because .   Correct. Differentiating twice gives , and the equation is satisfied.     No, because .  Incorrect computation of the derivatives.    No, exponentials cannot solve homogeneous equations.  False—exponentials are key solutions in Section 2.1.       Define by . Let and .   Compute .  Compute .  Compute .  How does your answer to (c) compare to the sum of your answers to (a) and (b)? Is linear?       Compute . Since and ,     For , we have and . So   Therefore,     Compute .      The answer to (c) equals the sum of (a) and (b):   Thus satisfies , showing that is linear.        Consider the differential equation Define the operator by .   Show that and solve the equation by computing and .  For constants , compute .  Does solve the differential equation?       For , . Thus:   For , . So:   Both functions satisfy the differential equation.    Use linearity of derivatives:     Yes. Because for any constants , the general solution of this linear second‑order homogeneous equation is .        Consider the differential equation .   Are and linearly dependent or independent? Explain.  Describe the general solution to this differential equation.       The functions and cannot be constant multiples of each other, since for all . Therefore they are linearly independent .    For a second‑order homogeneous linear ODE, any two linearly independent solutions form a basis. Hence the general solution is   This describes every solution to .         Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use linearity to verify that a linear combination of solutions to a homogeneous equation is again a solution.    Explain the operator viewpoint and how linear operators encode the structure of ODEs.    Interpret the existence and uniqueness theorem in the context of second‑order linear ODEs.     "
+},
+{
+  "id": "mcq-sol2-1",
+  "level": "2",
+  "url": "ch-Textbook-9.html#mcq-sol2-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Definition of a Second-Order Linear ODE.",
+  "body": " Definition of a Second-Order Linear ODE   Which of the following differential equations is linear and second‑order?         Correct. A general second‑order linear ODE is defined as .      Not linear: it contains .     This is first‑order, not second‑order.    "
+},
+{
+  "id": "mcq-sol2-2",
+  "level": "2",
+  "url": "ch-Textbook-9.html#mcq-sol2-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Homogeneous vs. Nonhomogeneous.",
+  "body": " Homogeneous vs. Nonhomogeneous   Which of the following is a homogeneous second‑order linear equation?       Correct. A homogeneous equation has on the right-hand side.      Not homogeneous: is a forcing term.     Also nonhomogeneous due to the “+1”.    "
+},
+{
+  "id": "mcq-sol2-3",
+  "level": "2",
+  "url": "ch-Textbook-9.html#mcq-sol2-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Recognizing Solutions of a Homogeneous Equation.",
+  "body": " Recognizing Solutions of a Homogeneous Equation   Suppose . Which pair of functions forms a fundamental set of solutions?     and   Correct. and are two solutions of this equation.     and  This pair does not satisfy .    and   These solve , not .     "
+},
+{
+  "id": "mcq-sol2-4",
+  "level": "2",
+  "url": "ch-Textbook-9.html#mcq-sol2-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "The Superposition Principle.",
+  "body": " The Superposition Principle   If and are solutions to the homogeneous equation , what else must be a solution?     for any constants   Correct. The superposition principle states that any linear combination of solutions is also a solution.      Products of solutions do not generally solve the equation.     Nonlinear combinations break linearity of the operator.    "
+},
+{
+  "id": "mcq-sol2-5",
+  "level": "2",
+  "url": "ch-Textbook-9.html#mcq-sol2-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Checking a Proposed Solution.",
+  "body": " Checking a Proposed Solution   Check whether is a solution of .     Yes, because .   Correct. Differentiating twice gives , and the equation is satisfied.     No, because .  Incorrect computation of the derivatives.    No, exponentials cannot solve homogeneous equations.  False—exponentials are key solutions in Section 2.1.    "
+},
+{
+  "id": "secondorder-linear-operator-1",
+  "level": "2",
+  "url": "ch-Textbook-9.html#secondorder-linear-operator-1",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Define by . Let and .   Compute .  Compute .  Compute .  How does your answer to (c) compare to the sum of your answers to (a) and (b)? Is linear?       Compute . Since and ,     For , we have and . So   Therefore,     Compute .      The answer to (c) equals the sum of (a) and (b):   Thus satisfies , showing that is linear.     "
+},
+{
+  "id": "secondorder-linear-operator-2",
+  "level": "2",
+  "url": "ch-Textbook-9.html#secondorder-linear-operator-2",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Consider the differential equation Define the operator by .   Show that and solve the equation by computing and .  For constants , compute .  Does solve the differential equation?       For , . Thus:   For , . So:   Both functions satisfy the differential equation.    Use linearity of derivatives:     Yes. Because for any constants , the general solution of this linear second‑order homogeneous equation is .     "
+},
+{
+  "id": "secondorder-linear-operator-3",
+  "level": "2",
+  "url": "ch-Textbook-9.html#secondorder-linear-operator-3",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Consider the differential equation .   Are and linearly dependent or independent? Explain.  Describe the general solution to this differential equation.       The functions and cannot be constant multiples of each other, since for all . Therefore they are linearly independent .    For a second‑order homogeneous linear ODE, any two linearly independent solutions form a basis. Hence the general solution is   This describes every solution to .     "
 },
 {
   "id": "ch-Textbook-10",
@@ -538,7 +844,79 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 2.2 - Constant Coefficient Second Order ODEs",
-  "body": " Daily Prep 2.2 - Constant Coefficient Second Order ODEs   Overview  In this section, we learn how to solve homogeneous second‑order linear differential equations with constant coefficients by assuming exponential solutions and reducing the problem to solving a characteristic quadratic equation. Depending on whether the quadratic has distinct real roots, repeated roots, or complex roots, we will see how each case leads to a different form of the general solution. This method provides a unified and efficient way to analyze many physical systems, setting the stage for deeper exploration of applied models in later sections.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize when a differential equation is a second‑order linear ODE with constant coefficients .    Use the exponential ansatz  to derive the characteristic equation.    Classify solutions according to whether the characteristic equation has distinct real roots, repeated roots, or complex roots.      Learn!  Complete the actions listed below.     Watch video Video 2.2.1: Constant Coefficients (Distinct Roots) by Trevor Bazett.    (Optional) Watch  Solve 2nd Order Linear Homogeneous ODEs with Constant Coefficients (8:23) by Mathispower4u.    (Optional) Watch  Linear Second Order Homogeneous Differential Equations (two distinct real roots) (7:22) by Mathispower4u.    (Optional) Watch  Ex 1: Solve a Linear Second Order Homogeneous Differential Equation Initial Value Problem (7:12) by Mathispower4u.     Read  Subsection 2.2.1: Solving constant coefficient equations .     Watch video Video 2.2.2: The Constant Coefficient Method (all cases) by Trevor Bazett.    (Optional) Watch  Linear Second Order Homogeneous Differential Equations (two real equal roots) (9:09) by Mathispower4u.     Read  Subsection 2.2.2: Complex numbers and Euler’s formula .    (Optional) Watch  Linear Second Order Homogeneous Differential Equations (complex roots) (8:58) by Mathispower4u.    (Optional) Watch  Ex: Solve a Linear Second Order Homogeneous Differential Equation Initial Value Problem (complex) (8:49) by Mathispower4u.     Read  Subsection 2.2.3: Complex roots .     Watch  Constant Coefficient Second Order Linear ODEs, part 1 (17:30) for a lecture on section 2.2.     Watch  Constant Coefficient Second Order Linear ODEs, part 2 (25:21) for a lecture on section 2.2.     Do  Subsection 2.2.4: Exercises 2.2.1, 2.2.2, 2.2.4, 2.2.6, 2.2.7 2.2.8, 2.2.13, 2.2.18 .    Try these additional questions. If necessary, use AI to guide your thinking.    Consider the IVP     Show that solves the differential equation.    Verify that and solve the associated homogeneous equation.    Use (a) and (b) to find a solution to the given IVP.      Find the general solution to .    Construct an equation such that is the general solution.       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Construct the full general solution for each root type and understand why these functions are linearly independent.    Apply initial conditions to solve for unknown constants using algebraic or matrix methods.    Interpret the mathematical structure of solutions in applications such as mechanical or electrical systems, building intuition for later modeling chapters.     "
+  "body": " Daily Prep 2.2 - Constant Coefficient Second Order ODEs   Overview  In this section, we learn how to solve homogeneous second‑order linear differential equations with constant coefficients by assuming exponential solutions and reducing the problem to solving a characteristic quadratic equation. Depending on whether the quadratic has distinct real roots, repeated roots, or complex roots, we will see how each case leads to a different form of the general solution. This method provides a unified and efficient way to analyze many physical systems, setting the stage for deeper exploration of applied models in later sections.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize when a differential equation is a second‑order linear ODE with constant coefficients .    Use the exponential ansatz  to derive the characteristic equation.    Classify solutions according to whether the characteristic equation has distinct real roots, repeated roots, or complex roots.      Learn!  Complete the actions listed below.     Watch video Video 2.2.1: Constant Coefficients (Distinct Roots) (6:25) by Trevor Bazett.    (Optional) Watch  Solve 2nd Order Linear Homogeneous ODEs with Constant Coefficients (8:23) by Mathispower4u.    (Optional) Watch  Linear Second Order Homogeneous Differential Equations (two distinct real roots) (7:22) by Mathispower4u.    (Optional) Watch  Ex 1: Solve a Linear Second Order Homogeneous Differential Equation Initial Value Problem (7:12) by Mathispower4u.     Read  Subsection 2.2.1: Solving constant coefficient equations .     Watch video Video 2.2.2: The Constant Coefficient Method (all cases) (11:25) by Trevor Bazett.    (Optional) Watch  Linear Second Order Homogeneous Differential Equations (two real equal roots) (9:09) by Mathispower4u.     Read  Subsection 2.2.2: Complex numbers and Euler’s formula .    (Optional) Watch  Linear Second Order Homogeneous Differential Equations (complex roots) (8:58) by Mathispower4u.    (Optional) Watch  Ex: Solve a Linear Second Order Homogeneous Differential Equation Initial Value Problem (complex) (8:49) by Mathispower4u.     Read  Subsection 2.2.3: Complex roots .    (Optional) Watch  Constant Coefficient Second Order Linear ODEs, part 1 (17:30) for a lecture on section 2.2.    (Optional) Watch  Constant Coefficient Second Order Linear ODEs, part 2 (25:21) for a lecture on section 2.2.     Do  Subsection 2.2.4: Exercises 2.2.1, 2.2.2, 2.2.4, 2.2.6, 2.2.7 2.2.8, 2.2.13, 2.2.18 .      Do MyOpenMath questions from this section.     Exercises   Characteristic Equation   What is the characteristic equation associated with the differential equation ?       Correct. The characteristic equation comes from substituting and dividing by .      Sign error: the coefficient of is , not .     This omits the quadratic term required for a second-order equation.      Distinct Real Roots   The characteristic equation has distinct real roots. What is the general solution of the corresponding ODE ?         Correct. The roots are and . Distinct real roots yield .      Incorrect: those are not the roots of the quadratic.     This form is for complex roots, not real distinct roots.      Checking a Proposed Solution   Does solve the ODE ?      Yes, because .    Correct. This ODE corresponds to the characteristic polynomial , whose root matches .     No, because .  Re-check the derivatives and the coefficients.    No, because only solves first-order equations.  Incorrect—exponentials are standard solutions for constant-coefficient ODEs.      Repeated Root Case   If the characteristic equation has a repeated root , what is the correct form of the general solution?         Correct. When the characteristic root is repeated, the second solution is .      This form corresponds to distinct real or complex roots, not repeated roots.     No—this omits the necessary term.      Solving a Constant-Coefficient ODE   Solve the ODE .         Correct. The characteristic equation has repeated root , so the solution is .      This corresponds to two distinct real roots, which is not the case here.     This corresponds to complex roots, not a repeated negative real root.       Consider the IVP    Show that solves the differential equation.  Verify that and solve the associated homogeneous equation.  Use (a) and (b) to find a solution to the IVP.       For , we compute:   Insert into the ODE:   Hence is indeed a particular solution.    For :   Substitute into the homogeneous equation :   For :   Substitute:   Thus both and solve the homogeneous equation.    The general solution is:   Apply the initial conditions.  First:   Next compute  :   Evaluate at :   Using gives:   Therefore, the solution to the IVP is:         Find the general solution to the differential equation     The characteristic equation is   Thus the roots are   So the general solution is       Construct a differential equation whose general solution is     This solution corresponds to characteristic roots .  Therefore the characteristic equation is   Hence the corresponding differential equation is        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Construct the full general solution for each root type and understand why these functions are linearly independent.    Apply initial conditions to solve for unknown constants using algebraic or matrix methods.    Interpret the mathematical structure of solutions in applications such as mechanical or electrical systems, building intuition for later modeling chapters.     "
+},
+{
+  "id": "mcq-ccsol-1",
+  "level": "2",
+  "url": "ch-Textbook-10.html#mcq-ccsol-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Characteristic Equation.",
+  "body": " Characteristic Equation   What is the characteristic equation associated with the differential equation ?       Correct. The characteristic equation comes from substituting and dividing by .      Sign error: the coefficient of is , not .     This omits the quadratic term required for a second-order equation.    "
+},
+{
+  "id": "mcq-ccsol-2",
+  "level": "2",
+  "url": "ch-Textbook-10.html#mcq-ccsol-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Distinct Real Roots.",
+  "body": " Distinct Real Roots   The characteristic equation has distinct real roots. What is the general solution of the corresponding ODE ?         Correct. The roots are and . Distinct real roots yield .      Incorrect: those are not the roots of the quadratic.     This form is for complex roots, not real distinct roots.    "
+},
+{
+  "id": "mcq-ccsol-3",
+  "level": "2",
+  "url": "ch-Textbook-10.html#mcq-ccsol-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Checking a Proposed Solution.",
+  "body": " Checking a Proposed Solution   Does solve the ODE ?      Yes, because .    Correct. This ODE corresponds to the characteristic polynomial , whose root matches .     No, because .  Re-check the derivatives and the coefficients.    No, because only solves first-order equations.  Incorrect—exponentials are standard solutions for constant-coefficient ODEs.    "
+},
+{
+  "id": "mcq-ccsol-4",
+  "level": "2",
+  "url": "ch-Textbook-10.html#mcq-ccsol-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Repeated Root Case.",
+  "body": " Repeated Root Case   If the characteristic equation has a repeated root , what is the correct form of the general solution?         Correct. When the characteristic root is repeated, the second solution is .      This form corresponds to distinct real or complex roots, not repeated roots.     No—this omits the necessary term.    "
+},
+{
+  "id": "mcq-ccsol-5",
+  "level": "2",
+  "url": "ch-Textbook-10.html#mcq-ccsol-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Solving a Constant-Coefficient ODE.",
+  "body": " Solving a Constant-Coefficient ODE   Solve the ODE .         Correct. The characteristic equation has repeated root , so the solution is .      This corresponds to two distinct real roots, which is not the case here.     This corresponds to complex roots, not a repeated negative real root.    "
+},
+{
+  "id": "ccsol-ivp-particular-homogeneous",
+  "level": "2",
+  "url": "ch-Textbook-10.html#ccsol-ivp-particular-homogeneous",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Consider the IVP    Show that solves the differential equation.  Verify that and solve the associated homogeneous equation.  Use (a) and (b) to find a solution to the IVP.       For , we compute:   Insert into the ODE:   Hence is indeed a particular solution.    For :   Substitute into the homogeneous equation :   For :   Substitute:   Thus both and solve the homogeneous equation.    The general solution is:   Apply the initial conditions.  First:   Next compute  :   Evaluate at :   Using gives:   Therefore, the solution to the IVP is:      "
+},
+{
+  "id": "ccsol-general-solution-6-13",
+  "level": "2",
+  "url": "ch-Textbook-10.html#ccsol-general-solution-6-13",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Find the general solution to the differential equation     The characteristic equation is   Thus the roots are   So the general solution is    "
+},
+{
+  "id": "ccsol-construct-ode",
+  "level": "2",
+  "url": "ch-Textbook-10.html#ccsol-construct-ode",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Construct a differential equation whose general solution is     This solution corresponds to characteristic roots .  Therefore the characteristic equation is   Hence the corresponding differential equation is    "
 },
 {
   "id": "ch-Textbook-11",
@@ -547,7 +925,97 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 2.3 - Higher Order Linear ODEs",
-  "body": " Daily Prep 2.3 - Higher Order Linear ODEs   Overview  In this section, we introduce the theory of higher‑order linear homogeneous differential equations , extending familiar second‑order ideas to the general th‑order case. We learn that while most real‑world models are second order, the same foundational principles—linearity, superposition, and linear independence—carry over directly to higher order. The section emphasizes how solutions are built from sets of linearly independent functions and introduces the Wronskian as a computational tool for verifying independence, preparing us to analyze more complex systems using methods that generalize the second‑order theory.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the general form of an th‑order linear homogeneous ODE and how it extends the second‑order case.    Recognize the role of linear independence in constructing general solutions involving fundamental functions.    Learn the definition and purpose of the Wronskian as a test for linear independence.      Learn!  Complete the actions listed below.     Read  Section 2.3 Introduction: Higher order linear ODEs .     Watch  Video 2.3.1: Linear Independence by Trevor Bazett.    (Optional) Watch video Introduction to Higher Order Linear Differential Equations (7:44) by Mathispower4u.     Read  Subsection 2.3.1: Linear independence .    (Optional) Watch video Determine if Four Functions are Linearly Independent or Linearly Dependent (3:42) by Mathispower4u.     Watch  Video 2.3.2: Theory of Higher Order ODEs by Trevor Bazett.     Read  Subsection 2.3.2: Theory of Higher Order ODEs .     Watch  Video 2.3.3: Higher Order Constant Coefficient ODEs by Trevor Bazett.     Read  Subsection 2.3.3: Constant coefficient higher order ODEs .    (Optional) Watch  Intro to Higher Order Linear Homogeneous Differential Equations with Constant Coefficients (7:29) by Mathispower4u.    (Optional) Watch  Solving the Linear Equations L(y)=0 (19:47) from MIT OpenCourseWare. This is Herbert Gross. Black and white video and old school!     Watch  Higher Order Linear ODEs (36:16) for a lecture on section 2.3.     Do  Subsection 2.3.4: Exercises 2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.3.6, 2.3.7, 2.3.9, 2.3.13, 2.3.14 .    Try these additional questions. If necessary, use AI to guide your thinking.    Find the general solution to     Find the general solution to . Hint : The characteristic equation factors as .    Find the general solution to . Hint : The characteristic equation factors as .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Apply the Wronskian to determine whether a given set of functions forms a fundamental solution set on an interval.    Analyze how computational challenges increase when moving from second‑order equations to higher‑order equations and compare available solution methods.    Relate higher‑order ODE theory to system‑based methods (e.g., rewriting higher‑order equations as first‑order systems) as referenced later in the text.     "
+  "body": " Daily Prep 2.3 - Higher Order Linear ODEs   Overview  In this section, we introduce the theory of higher‑order linear homogeneous differential equations , extending familiar second‑order ideas to the general th‑order case. We learn that while most real‑world models are second order, the same foundational principles—linearity, superposition, and linear independence—carry over directly to higher order. The section emphasizes how solutions are built from sets of linearly independent functions and introduces the Wronskian as a computational tool for verifying independence, preparing us to analyze more complex systems using methods that generalize the second‑order theory.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the general form of an th‑order linear homogeneous ODE and how it extends the second‑order case.    Recognize the role of linear independence in constructing general solutions involving fundamental functions.    Learn the definition and purpose of the Wronskian as a test for linear independence.      Learn!  Complete the actions listed below.     Read  Section 2.3 Introduction: Higher order linear ODEs .     Watch  Video 2.3.1: Linear Independence (9:42) by Trevor Bazett.    (Optional) Watch video Introduction to Higher Order Linear Differential Equations (7:44) by Mathispower4u.     Read  Subsection 2.3.1: Linear independence .    (Optional) Watch video Determine if Four Functions are Linearly Independent or Linearly Dependent (3:42) by Mathispower4u.     Watch  Video 2.3.2: Theory of Higher Order ODEs (8:43) by Trevor Bazett.     Read  Subsection 2.3.2: Theory of Higher Order ODEs .     Watch  Video 2.3.3: Higher Order Constant Coefficient ODEs (10:56) by Trevor Bazett.     Read  Subsection 2.3.3: Constant coefficient higher order ODEs .    (Optional) Watch  Intro to Higher Order Linear Homogeneous Differential Equations with Constant Coefficients (7:29) by Mathispower4u.    (Optional) Watch  Solving the Linear Equations L(y)=0 (19:47) from MIT OpenCourseWare. This is Herbert Gross. Black and white video and old school!    (Optional) Watch video Higher Order Linear ODEs (36:16) for a lecture on section 2.3.     Do  Subsection 2.3.4: Exercises 2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.3.6, 2.3.7, 2.3.9, 2.3.13, 2.3.14 .      Do MyOpenMath questions from this section.     Exercises   Definition of Higher-Order Linear ODEs   Which of the following is a fourth‑order linear differential equation?         Correct. An th‑order linear ODE may be written as , with no nonlinear functions of .      Not linear: is nonlinear.     This is linear but only second‑order, not higher‑order.      Superposition Principle   For the homogeneous equation , where is a linear differential operator of order , which statement is true?      If are solutions, then any linear combination of them is also a solution.    Correct. Linear operators satisfy .     The product is always a solution.  No—products do not preserve linearity.    Only can be used; other solutions are irrelevant.  No—higher‑order ODEs require multiple independent solutions.      Characteristic Polynomial for a 3rd-Order ODE   What is the characteristic polynomial for the ODE ?       Correct. Substituting gives .      This is only quadratic; the ODE is third‑order.     The sign of the term is incorrect.      Independent Solutions and Order   How many linearly independent solutions are needed to describe the general solution of an th‑order linear homogeneous ODE?     Exactly linearly independent solutions.   Correct. An th‑order linear ODE requires fundamental solutions to span the solution space.     Only one solution is needed.  No—this works only for first‑order equations.    Infinitely many solutions must be listed individually.  Incorrect—only independent ones are required.      Solving a 3rd-Order ODE   Solve the homogeneous ODE .         Correct. The characteristic polynomial is , giving roots and (double). Solutions are , , and ; rewritten in polynomial form, this yields .      Those roots do not satisfy the characteristic polynomial.     Missing the third independent solution.       Find the general solution to     Write the characteristic equation:   Factor by grouping:   Thus the roots are , , and . The general solution is:       Find the general solution to  Hint: The characteristic polynomial factors as     Using the factorization:   The real roots are and . The quadratic factor gives:   Thus the solution pieces are:     , (from )   Therefore the general solution is:       Find the general solution to  Hint: The characteristic polynomial factors as     From the factorization:   the roots are:    (double root)  (double root)   For , the solution term is . For the repeated complex roots , the general solution includes:   Therefore the general solution is:       Consider the functions , , and . Compute their Wronskian . What does the result tell you about linear independence?    The Wronskian of three functions is   Factor out from each column:   Compute the 3×3 determinant:   Therefore:   Since for all , the functions are linearly independent on every interval. They therefore form a fundamental set of solutions for a third‑order linear homogeneous ODE.      Let , , . Compute the Wronskian and determine whether the functions are linearly independent. Are they valid as a fundamental solution set for a third‑order linear homogeneous ODE?    Compute the Wronskian:   Expand along the first row:   Compute each 2×2 determinant:   Thus:   The Wronskian is zero only at , but nonzero for . Therefore, the functions are linearly independent on any interval not containing 0 (e.g., or ).  Hence they form a valid fundamental solution set for a third‑order homogeneous linear ODE on any such interval.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Apply the Wronskian to determine whether a given set of functions forms a fundamental solution set on an interval.    Analyze how computational challenges increase when moving from second‑order equations to higher‑order equations and compare available solution methods.      "
+},
+{
+  "id": "mcq-hol-1",
+  "level": "2",
+  "url": "ch-Textbook-11.html#mcq-hol-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Definition of Higher-Order Linear ODEs.",
+  "body": " Definition of Higher-Order Linear ODEs   Which of the following is a fourth‑order linear differential equation?         Correct. An th‑order linear ODE may be written as , with no nonlinear functions of .      Not linear: is nonlinear.     This is linear but only second‑order, not higher‑order.    "
+},
+{
+  "id": "mcq-hol-2",
+  "level": "2",
+  "url": "ch-Textbook-11.html#mcq-hol-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Superposition Principle.",
+  "body": " Superposition Principle   For the homogeneous equation , where is a linear differential operator of order , which statement is true?      If are solutions, then any linear combination of them is also a solution.    Correct. Linear operators satisfy .     The product is always a solution.  No—products do not preserve linearity.    Only can be used; other solutions are irrelevant.  No—higher‑order ODEs require multiple independent solutions.    "
+},
+{
+  "id": "mcq-hol-3",
+  "level": "2",
+  "url": "ch-Textbook-11.html#mcq-hol-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Characteristic Polynomial for a 3rd-Order ODE.",
+  "body": " Characteristic Polynomial for a 3rd-Order ODE   What is the characteristic polynomial for the ODE ?       Correct. Substituting gives .      This is only quadratic; the ODE is third‑order.     The sign of the term is incorrect.    "
+},
+{
+  "id": "mcq-hol-4",
+  "level": "2",
+  "url": "ch-Textbook-11.html#mcq-hol-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Independent Solutions and Order.",
+  "body": " Independent Solutions and Order   How many linearly independent solutions are needed to describe the general solution of an th‑order linear homogeneous ODE?     Exactly linearly independent solutions.   Correct. An th‑order linear ODE requires fundamental solutions to span the solution space.     Only one solution is needed.  No—this works only for first‑order equations.    Infinitely many solutions must be listed individually.  Incorrect—only independent ones are required.    "
+},
+{
+  "id": "mcq-hol-5",
+  "level": "2",
+  "url": "ch-Textbook-11.html#mcq-hol-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Solving a 3rd-Order ODE.",
+  "body": " Solving a 3rd-Order ODE   Solve the homogeneous ODE .         Correct. The characteristic polynomial is , giving roots and (double). Solutions are , , and ; rewritten in polynomial form, this yields .      Those roots do not satisfy the characteristic polynomial.     Missing the third independent solution.    "
+},
+{
+  "id": "higherorder-1",
+  "level": "2",
+  "url": "ch-Textbook-11.html#higherorder-1",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Find the general solution to     Write the characteristic equation:   Factor by grouping:   Thus the roots are , , and . The general solution is:    "
+},
+{
+  "id": "higherorder-2",
+  "level": "2",
+  "url": "ch-Textbook-11.html#higherorder-2",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Find the general solution to  Hint: The characteristic polynomial factors as     Using the factorization:   The real roots are and . The quadratic factor gives:   Thus the solution pieces are:     , (from )   Therefore the general solution is:    "
+},
+{
+  "id": "higherorder-3",
+  "level": "2",
+  "url": "ch-Textbook-11.html#higherorder-3",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Find the general solution to  Hint: The characteristic polynomial factors as     From the factorization:   the roots are:    (double root)  (double root)   For , the solution term is . For the repeated complex roots , the general solution includes:   Therefore the general solution is:    "
+},
+{
+  "id": "sec23-wronskian-1",
+  "level": "2",
+  "url": "ch-Textbook-11.html#sec23-wronskian-1",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Consider the functions , , and . Compute their Wronskian . What does the result tell you about linear independence?    The Wronskian of three functions is   Factor out from each column:   Compute the 3×3 determinant:   Therefore:   Since for all , the functions are linearly independent on every interval. They therefore form a fundamental set of solutions for a third‑order linear homogeneous ODE.   "
+},
+{
+  "id": "sec23-wronskian-2",
+  "level": "2",
+  "url": "ch-Textbook-11.html#sec23-wronskian-2",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Let , , . Compute the Wronskian and determine whether the functions are linearly independent. Are they valid as a fundamental solution set for a third‑order linear homogeneous ODE?    Compute the Wronskian:   Expand along the first row:   Compute each 2×2 determinant:   Thus:   The Wronskian is zero only at , but nonzero for . Therefore, the functions are linearly independent on any interval not containing 0 (e.g., or ).  Hence they form a valid fundamental solution set for a third‑order homogeneous linear ODE on any such interval.   "
 },
 {
   "id": "ch-Textbook-12",
@@ -556,97 +1024,61 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 2.4 - Mechanical Vibrations",
-  "body": " Daily Prep 2.4 - Mechanical Vibrations   Overview  In this section, we explore how second‑order linear constant‑coefficient differential equations model real‑world physical systems, especially mechanical vibrations. The text introduces the mass‑spring‑damper system, explains how forces such as stiffness, damping, and external inputs shape the motion, and shows how Newton’s laws lead naturally to differential equations of the form . We then see how similar mathematical structures appear in electrical RLC circuits and pendulum motion, highlighting the unifying theme that diverse physical phenomena can be modeled and analyzed using the same ODE framework.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Identify how mass–spring–damper systems give rise to second‑order linear constant‑coefficient ODEs.    Distinguish between forced\/unforced and damped\/undamped motions in mechanical systems.    Recognize that electrical RLC circuits follow the same mathematical form as mechanical vibration models.      Learn!  Complete the actions listed below.     Read  Subsection 2.4.1: Some examples .     Watch  Video 2.4.1: Frictionless Mechanical Vibrations (8:02) by Trevor Bazett.    (Optional) Watch video Introduction to Mechanical Vibrations and Related Applications (6:39) by Mathispower4u.     Read  Subsection 2.4.2: Free undamped motion .    (Optional) Watch video Introduction to Free Undamped Motion (6:56) by Mathispower4u.     Watch  Video 2.4.2: Damped Mechanical Vibrations (10:41) by Trevor Bazett.     Watch  Introduction to Free Damped Motion: Overdamping, Critical Damping, and Underdamping (6:38) by Mathispower4u.     Read  Subsection 2.4.3: Free damped motion .     Watch  Introduction to Free Undamped Motion (Spring System) (10:57) by Mathispower4u.    (Optional) Watch  Ex 1: Undamped Motion IVP Problem (Spring System) (9:31) by Mathispower4u.     Watch  Mechanical Vibrations, part 1: free undamped motion (40:22) and Mechanical Vibrations, part 2: free damped motion (40:22) for a lecture on section 2.4.     Do  Subsection 2.4.4: Exercises 2.4.3, 2.4.6 .    Try these additional questions. If necessary, use AI to guide your thinking.    Consider the spring-mass system shown below. Here, an object of mass is attached to a spring which exerts a linear restorative force with spring constant . Assume also a damping coefficient (perhaps due to friction). Then, if denotes the displacement from equilibrium , we have    A dashpot.   A mass–spring–dashpot system: a wall on the left is connected to a zig‑zag spring, which is attached to a rectangular block labeled “m”; on the right side of the block a rod connects to a dashpot (damper) attached to another wall.    Note: A dashpot is a device (like a shock absorber) designed to exert a resistive force proportional to the velocity of the object. We study the different types of solutions which depend on the values of , and .     Undamped Motion. Suppose there is no friction or other damping factors (i.e. no dashpot). Then in equation  above. That is, . Since , define .     Determine a characteristic equation and roots for the resulting DE (when ).    Find a general solution to the DE. Try to state it in terms of rather than and .        Undamped Motion. A body with mass kilogram is attached to the end of a spring that is stretched 2 meters by a force of 100 newtons. It is set in motion with initial position meter and initial velocity meters per second.     Determine the value of the spring constant and the resulting DE that guides the motion of the mass.    Describe a DE that governs the motion of the mass.    Describe in words the meaning of these initial conditions.    With , the solution to this IVP is . This means the mass will oscillate (simple harmonic motion) with frequency  (measured in hertz; cycles per second). What is the frequency ? What is the period  ?    A solution in the form can be written into the more useful amplitude-phase form  where the amplitude  and the phase shift  .      . Determine the value of .     . Estimate the value of . [Careful: is in the fourth quadrant.]       The first peak in the graph of occurs at (called the time lag . Determine the time lag for the solution to this problem and sketch a graph of the motion .     With damping ( ), in equation  , we investigate the characteristic roots of . These are We have three cases:     Overdamped.  two distinct real roots.     Critically damped.  one repeated real root.     Underdamped.  two complex conjugate roots.       Overdamped Motion. If , the value of is relatively large and we are dealing with strong resistance in comparison to a relatively weak spring or a small mass. Note also that      The two (real, distinct) roots and solve . Explain why these roots are both negative.    Give a general solution to the DE     Compute .        Critically Damped Motion. Here, .     Explain why the one (real, repeated) root to is . Why this root is negative?    Give a general solution to the DE     Compute .        Underdamped Motion. If , the value of is relatively small and we are dealing with very little resistance in comparison to a relatively strong spring or a large mass. For example, suppose , , and .     The roots to the characteristic equation complex. What are they?    Given initial conditions of and , the solution to the DE is Compute . What does the plot of look like?            Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze how changing parameters  affects system behavior, including oscillations and decay rates.    Translate physical laws (Newton’s second law or Kirchhoff’s laws) into corresponding differential equations for mechanical and electrical systems.    Extend the vibration framework to approximate models such as pendulum motion and interpret when linearization is appropriate.     "
+  "body": " Daily Prep 2.4 - Mechanical Vibrations   Overview  In this section, we explore how second‑order linear constant‑coefficient differential equations model real‑world physical systems, especially mechanical vibrations. The text introduces the mass‑spring‑damper system, explains how forces such as stiffness, damping, and external inputs shape the motion, and shows how Newton’s laws lead naturally to differential equations of the form . We then see how similar mathematical structures appear in electrical RLC circuits and pendulum motion, highlighting the unifying theme that diverse physical phenomena can be modeled and analyzed using the same ODE framework.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Identify how mass–spring–damper systems give rise to second‑order linear constant‑coefficient ODEs.    Distinguish between forced\/unforced and damped\/undamped motions in mechanical systems.    Recognize that electrical RLC circuits follow the same mathematical form as mechanical vibration models.      Learn!  Complete the actions listed below.     Read  Subsection 2.4.1: Some examples .     Watch  Video 2.4.1: Frictionless Mechanical Vibrations (8:02) by Trevor Bazett.    (Optional) Watch video Introduction to Mechanical Vibrations and Related Applications (6:39) by Mathispower4u.     Read  Subsection 2.4.2: Free undamped motion .    (Optional) Watch video Introduction to Free Undamped Motion (6:56) by Mathispower4u.     Watch  Video 2.4.2: Damped Mechanical Vibrations (10:41) by Trevor Bazett.     Watch  Introduction to Free Damped Motion: Overdamping, Critical Damping, and Underdamping (6:38) by Mathispower4u.     Read  Subsection 2.4.3: Free damped motion .     Watch  Introduction to Free Undamped Motion (Spring System) (10:57) by Mathispower4u.    (Optional) Watch  Ex 1: Undamped Motion IVP Problem (Spring System) (9:31) by Mathispower4u.     Watch  Mechanical Vibrations, part 1: free undamped motion (40:22) and Mechanical Vibrations, part 2: free damped motion (40:22) for a lecture on section 2.4.     Do  Subsection 2.4.4: Exercises 2.4.3, 2.4.6 .      Do MyOpenMath questions from this section.     Exercises   Understanding the Basic Model   The differential equation for a mass–spring–damper system is . What does the constant represent?     The damping coefficient.   Correct. is the friction\/damping term.     The spring stiffness.  No—that is .    The external forcing strength.  No—forcing is represented by .      Forced vs. Unforced Motion   In the model , when is the motion called unforced ?     When .   Correct. If is identically zero, the motion is unforced (free).     When .  No—that corresponds to undamped, not unforced.    When .  No—that would eliminate the spring.      Damped vs. Undamped   In the ODE , how do we know whether the system is damped?     If , the motion is damped.   Correct. means damping is present.     If .  No—a mass must be positive in the model.    If .  No—the spring constant has nothing to do with damping.      Qualitative Behavior of Undamped Motion   Consider the unforced, undamped equation . What type of motion does it describe?     Simple harmonic oscillations with constant amplitude.   Correct. With and , the solution is sinusoidal. This is undamped harmonic motion.     Damped oscillations that decay over time.  No—that requires .    Exponential growth without oscillations.  No—the restoring force prevents runaway motion.      Natural Frequency   For the undamped, unforced system , the angular frequency of oscillation is . If and , what is ?       Correct.       This corresponds to forgetting the division by .     Incorrect substitution into the formula.       Consider the spring–mass system shown in . An object of mass is attached to a spring with spring constant , and a dashpot provides damping with coefficient . If denotes displacement from equilibrium, then    A dashpot.   A mass–spring–dashpot system: a wall on the left, a spring attached to a block of mass m, and a damper connected from the block to another wall.    A dashpot exerts a resistive force proportional to the velocity. We investigate several cases of the equation depending on , , and .     Undamped Motion. Suppose . Then the model becomes   With :    Find the characteristic equation and its roots.    Find the general solution written in terms of .       Undamped Motion (Example). A mass kg is attached to a spring that is stretched 2 m by a force of 100 N. Initial conditions: , .   Find the spring constant and write the resulting DE.  Interpret the differential equation in words.  Explain what the initial conditions mean physically.   Given , the solution is . Compute the frequency and the period .    Convert into .   Compute .  Compute from (noting it lies in quadrant IV).     The first peak occurs at . Determine and describe\/sketch the motion.      With damping ( ), the characteristic equation is   with roots    Overdamped:   Critically damped:   Underdamped:      Overdamped Motion. Assume .    Explain why both roots are negative.    Give the general solution.    Compute .      Critically Damped Motion. Assume .    Explain why the repeated root is and why it is negative.   Give the general solution.  Compute .      Underdamped Motion. Suppose , , .   Find the complex roots of the characteristic equation.   Given the solution   Compute and describe the qualitative shape of the graph.        (a) Undamped Motion (c = 0)    The DE is . Characteristic equation:   Thus .    The general solution is     (b) Undamped Example    Hooke’s law: a force of 100 N stretches the spring 2 m, so   The DE is     The DE states: acceleration is proportional to displacement toward equilibrium.    The initial conditions mean the mass starts 1 m to the right of equilibrium and moving left at 5 m\/s.    Frequency:   Period:     Here , .        . Quadrant IV → radians or equivalently .      Time lag:   The graph is a cosine‑like oscillation of amplitude and frequency , shifted right.    (c) Overdamped Motion    For , . Since , both numerator terms are negative ⇒ both roots negative.    General solution:     Limit:     (d) Critically Damped Motion    If , . Since , the root is negative.    General solution:     Limit:     (e) Underdamped Motion    Characteristic equation:   Multiply by 2: . Roots:     For the solution   the exponential factor dominates:   Qualitatively, the plot shows oscillations whose amplitude decays exponentially.         Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze how changing parameters  affects system behavior, including oscillations and decay rates.    Translate physical laws (Newton’s second law or Kirchhoff’s laws) into corresponding differential equations for mechanical and electrical systems.    Extend the vibration framework to approximate models such as pendulum motion and interpret when linearization is appropriate.     "
 },
 {
-  "id": "SpringMass4",
+  "id": "mv-mcq-1",
   "level": "2",
-  "url": "ch-Textbook-12.html#SpringMass4",
-  "type": "Figure",
-  "number": "12",
-  "title": "",
-  "body": " A dashpot.   A mass–spring–dashpot system: a wall on the left is connected to a zig‑zag spring, which is attached to a rectangular block labeled “m”; on the right side of the block a rod connects to a dashpot (damper) attached to another wall.   "
+  "url": "ch-Textbook-12.html#mv-mcq-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Understanding the Basic Model.",
+  "body": " Understanding the Basic Model   The differential equation for a mass–spring–damper system is . What does the constant represent?     The damping coefficient.   Correct. is the friction\/damping term.     The spring stiffness.  No—that is .    The external forcing strength.  No—forcing is represented by .    "
 },
 {
-  "id": "sec-Toprepareforclass24-3-13-2-1-4",
+  "id": "mv-mcq-2",
   "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-4",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "dashpot "
+  "url": "ch-Textbook-12.html#mv-mcq-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Forced vs. Unforced Motion.",
+  "body": " Forced vs. Unforced Motion   In the model , when is the motion called unforced ?     When .   Correct. If is identically zero, the motion is unforced (free).     When .  No—that corresponds to undamped, not unforced.    When .  No—that would eliminate the spring.    "
 },
 {
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-2",
+  "id": "mv-mcq-3",
   "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "frequency period amplitude-phase form amplitude phase shift time lag "
+  "url": "ch-Textbook-12.html#mv-mcq-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Damped vs. Undamped.",
+  "body": " Damped vs. Undamped   In the ODE , how do we know whether the system is damped?     If , the motion is damped.   Correct. means damping is present.     If .  No—a mass must be positive in the model.    If .  No—the spring constant has nothing to do with damping.    "
 },
 {
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-3",
+  "id": "mv-mcq-4",
   "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-3",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "damping "
+  "url": "ch-Textbook-12.html#mv-mcq-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Qualitative Behavior of Undamped Motion.",
+  "body": " Qualitative Behavior of Undamped Motion   Consider the unforced, undamped equation . What type of motion does it describe?     Simple harmonic oscillations with constant amplitude.   Correct. With and , the solution is sinusoidal. This is undamped harmonic motion.     Damped oscillations that decay over time.  No—that requires .    Exponential growth without oscillations.  No—the restoring force prevents runaway motion.    "
 },
 {
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-4-1-1",
+  "id": "mv-mcq-5",
   "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-4-1-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Overdamped. "
+  "url": "ch-Textbook-12.html#mv-mcq-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Natural Frequency.",
+  "body": " Natural Frequency   For the undamped, unforced system , the angular frequency of oscillation is . If and , what is ?       Correct.       This corresponds to forgetting the division by .     Incorrect substitution into the formula.    "
 },
 {
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-4-2-1",
+  "id": "spring-mass-dashpot",
   "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-4-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
+  "url": "ch-Textbook-12.html#spring-mass-dashpot",
+  "type": "Exercise",
+  "number": "6",
   "title": "",
-  "body": "Critically damped. "
-},
-{
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-2-4-3-1",
-  "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-2-4-3-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Underdamped. "
-},
-{
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-3-1",
-  "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-3-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Overdamped Motion. "
-},
-{
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-4-1",
-  "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-4-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Critically Damped Motion. "
-},
-{
-  "id": "sec-Toprepareforclass24-3-13-2-1-5-5-1",
-  "level": "2",
-  "url": "ch-Textbook-12.html#sec-Toprepareforclass24-3-13-2-1-5-5-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Underdamped Motion. "
+  "body": "  Consider the spring–mass system shown in . An object of mass is attached to a spring with spring constant , and a dashpot provides damping with coefficient . If denotes displacement from equilibrium, then    A dashpot.   A mass–spring–dashpot system: a wall on the left, a spring attached to a block of mass m, and a damper connected from the block to another wall.    A dashpot exerts a resistive force proportional to the velocity. We investigate several cases of the equation depending on , , and .     Undamped Motion. Suppose . Then the model becomes   With :    Find the characteristic equation and its roots.    Find the general solution written in terms of .       Undamped Motion (Example). A mass kg is attached to a spring that is stretched 2 m by a force of 100 N. Initial conditions: , .   Find the spring constant and write the resulting DE.  Interpret the differential equation in words.  Explain what the initial conditions mean physically.   Given , the solution is . Compute the frequency and the period .    Convert into .   Compute .  Compute from (noting it lies in quadrant IV).     The first peak occurs at . Determine and describe\/sketch the motion.      With damping ( ), the characteristic equation is   with roots    Overdamped:   Critically damped:   Underdamped:      Overdamped Motion. Assume .    Explain why both roots are negative.    Give the general solution.    Compute .      Critically Damped Motion. Assume .    Explain why the repeated root is and why it is negative.   Give the general solution.  Compute .      Underdamped Motion. Suppose , , .   Find the complex roots of the characteristic equation.   Given the solution   Compute and describe the qualitative shape of the graph.        (a) Undamped Motion (c = 0)    The DE is . Characteristic equation:   Thus .    The general solution is     (b) Undamped Example    Hooke’s law: a force of 100 N stretches the spring 2 m, so   The DE is     The DE states: acceleration is proportional to displacement toward equilibrium.    The initial conditions mean the mass starts 1 m to the right of equilibrium and moving left at 5 m\/s.    Frequency:   Period:     Here , .        . Quadrant IV → radians or equivalently .      Time lag:   The graph is a cosine‑like oscillation of amplitude and frequency , shifted right.    (c) Overdamped Motion    For , . Since , both numerator terms are negative ⇒ both roots negative.    General solution:     Limit:     (d) Critically Damped Motion    If , . Since , the root is negative.    General solution:     Limit:     (e) Underdamped Motion    Characteristic equation:   Multiply by 2: . Roots:     For the solution   the exponential factor dominates:   Qualitatively, the plot shows oscillations whose amplitude decays exponentially.     "
 },
 {
   "id": "ch-Textbook-13",
@@ -655,7 +1087,160 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 2.5 - Nonhomogeneous Equations",
-  "body": " Daily Prep 2.5 - Nonhomogeneous Equations   Overview  In this section, we learn how to solve nonhomogeneous linear differential equations by building on our knowledge of homogeneous equations. The core idea is that the general solution to a nonhomogeneous equation is obtained by adding any particular solution to the complementary (homogeneous) solution. We then explore why any two particular solutions differ by a homogeneous solution, and introduce the method of undetermined coefficients as a practical way to guess particular solutions when the forcing function has a familiar algebraic form.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the structure of a nonhomogeneous linear ODE and how it relates to its associated homogeneous equation.    Explain why the general solution is the sum of the complementary solution and any particular solution.    Recognize when the method of undetermined coefficients can be used to guess a particular solution.      Learn!  Complete the actions listed below.     Watch  Video 2.5.1: Solving Nonhomogeneous Equations using Undetermined Coefficients (12:25) by Trevor Bazett.     Read  Subsection 2.5.1: Solving nonhomogeneous equations .    (Optional) Watch video Prove the Form of he General Solution to a Linear Second Order Nonhomogeneous DE (7:32) by Mathispower4u.     Read  Subsection 2.5.2: Undetermined coefficients .    (Optional) Watch video The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 1 (7:25) by Mathispower4u.    (Optional) Watch video The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 2 (9:14) by Mathispower4u.    (Optional) Watch video Method of Undetermine Coefficients to Find a Particular Solution (trig) (9:23) by Mathispower4u.    (Optional) Watch  Ex 1: Method of Undetermined Coefficients to Find the the General Solution (exponential) (7:03) by Mathispower4u.    (Optional) Watch  Ex 2: Method of Undetermined Coefficients to Find the the General Solution (quadratic) (10:08) by Mathispower4u.    (Optional) Watch  Find a General Solution to a Nonhomogeneous DE Using Undetermined Coefficients (repeat term) (9:48) by Mathispower4u.     Read  Subsection 2.5.3: Variation of parameters .     Watch  Derive the Variation of Parameters Formula to Solve Linear Second Order Nonhomogeneous DEs (6:59) by Mathispower4u.    (Optional) Watch  Ex 1: General Solution to a Second Order DE Using Variation of Parameters (8:26) by Mathispower4u.     Watch  Nonhomogeneous Equations, part 1: Undetermined Coefficients (30:41) and Nonhomogeneous Equations, part 2: Variation of Parameters (17:33) for a lecture on section 2.5.     Do  Subsection 2.5.4: Exercises 2.5.1, 2.5.5, 2.5.7, 2.5.8, 2.5.9 .    Try these additional questions. If necessary, use AI to guide your thinking.    Respond to the following questions about the reading.     is called a complementary solution . What do you think it complements?    In your own words, summarize Theorem 2.5.1 .     Subsection 2.5.2 , on Undetermined Coefficients, mentions a hiccup . In a sentence or two, what is this hiccup? Can it be managed? If so, how?    Give an example of a second-order, linear, constant-coefficient, nonhomogeneous ODE for which Undetermined Coefficients will not work.      Find a particular solution of  Note: A first guess might be . However, the presence of on the left-hand side, signals that we probably need a term involving as well. So try .    Suppose we wish to find a particular solution to If we try , we find that no matter how the value of is chosen. Using a trial solution in which we multiple by , find a particular solution to .       Determine the appropriate form for a particular solution of     Determine the coefficients in the particular solution you guessed in (a). Use a computer algebra system such as Wolfram Alpha if you wish to do less algebra.       Find a particular solution of .    Solve the initial value problem for , .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Demonstrate, using operator notation, why any two particular solutions differ by a solution to the homogeneous equation.    Construct appropriate ansatz forms for particular solutions in polynomial forcing cases and justify parameter choices.    Analyze how different methods (guessing, undetermined coefficients, or other techniques) can yield equivalent general solutions despite producing different intermediate formulas.     "
+  "body": " Daily Prep 2.5 - Nonhomogeneous Equations   Overview  In this section, we learn how to solve nonhomogeneous linear differential equations by building on our knowledge of homogeneous equations. The core idea is that the general solution to a nonhomogeneous equation is obtained by adding any particular solution to the complementary (homogeneous) solution. We then explore why any two particular solutions differ by a homogeneous solution, and introduce the method of undetermined coefficients as a practical way to guess particular solutions when the forcing function has a familiar algebraic form.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the structure of a nonhomogeneous linear ODE and how it relates to its associated homogeneous equation.    Explain why the general solution is the sum of the complementary solution and any particular solution.    Recognize when the method of undetermined coefficients can be used to guess a particular solution.      Learn!  Complete the actions listed below.     Watch  Video 2.5.1: Solving Nonhomogeneous Equations using Undetermined Coefficients (12:25) by Trevor Bazett.     Read  Subsection 2.5.1: Solving nonhomogeneous equations .    (Optional) Watch video Prove the Form of the General Solution to a Linear Second Order Nonhomogeneous DE (7:32) by Mathispower4u.     Read  Subsection 2.5.2: Undetermined coefficients .    (Optional) Watch video The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 1 (7:25) by Mathispower4u.    (Optional) Watch video The Form of the Particular Solution Using the Method of Undetermined Coefficients - Part 2 (9:14) by Mathispower4u.    (Optional) Watch video Method of Undetermine Coefficients to Find a Particular Solution (trig) (9:23) by Mathispower4u.    (Optional) Watch  Ex 1: Method of Undetermined Coefficients to Find the the General Solution (exponential) (7:03) by Mathispower4u.    (Optional) Watch  Ex 2: Method of Undetermined Coefficients to Find the the General Solution (quadratic) (10:08) by Mathispower4u.    (Optional) Watch  Find a General Solution to a Nonhomogeneous DE Using Undetermined Coefficients (repeat term) (9:48) by Mathispower4u.     Read  Subsection 2.5.3: Variation of parameters .     Watch  Derive the Variation of Parameters Formula to Solve Linear Second Order Nonhomogeneous DEs (6:59) by Mathispower4u.    (Optional) Watch  Ex 1: General Solution to a Second Order DE Using Variation of Parameters (8:26) by Mathispower4u.    (Optional) Watch  Undetermined Coefficients (29:26) and Variation of Parameters (24:53) from MIT OpenCourseWare. Yes, from 1971, but gold from Herb Gross.    (Optional) Watch  Nonhomogeneous Equations, part 1: Undetermined Coefficients (30:41) and Nonhomogeneous Equations, part 2: Variation of Parameters (17:33) for a lecture on section 2.5.     Do  Subsection 2.5.4: Exercises 2.5.1, 2.5.5, 2.5.7, 2.5.8, 2.5.9 .      Do MyOpenMath questions from this section.     Exercises     is called a complementary solution . What do you think it complements?    The complementary solution solves the associated homogeneous equation . It is called “complementary” because it complements a single particular solution to produce the full general solution to the nonhomogeneous equation:   In other words, fills in all the homogeneous pieces required to describe every possible solution, complementing the specific contribution coming from the forcing term.      In your own words, summarize Theorem 2.5.1 .    Theorem 2.5.1 says that to solve a linear nonhomogeneous ODE :   Find , the general solution of the homogeneous equation .  Find , any single particular solution of .   Then the full general solution is simply   The theorem also guarantees that any two solutions differ by a homogeneous solution, so this formula captures all solutions.       Subsection 2.5.2 , on Undetermined Coefficients, mentions a hiccup . What is this hiccup? Can it be managed? If so, how?    The “hiccup” occurs when the forcing term is itself a solution of the homogeneous equation. In that case, the usual trial function for gives zero when substituted into the left‑hand side.  Yes, it can be managed: multiply the entire trial solution by (or by if one multiplication still conflicts) until the guess is no longer a solution of the homogeneous equation. This ensures a valid particular solution.      Give an example of a second‑order, linear, constant‑coefficient, nonhomogeneous ODE for which Undetermined Coefficients will not work.    Undetermined coefficients works only for forcing terms that are exponentials, polynomials, sines, and cosines (or finite sums\/products of these).  A forcing term like or does not fit that pattern. For example:   cannot be solved by undetermined coefficients. We would need variation of parameters instead.     Structure of the General Solution   For a nonhomogeneous linear ODE , which formula describes the general solution?      , where solves and is any particular solution.    Correct. Every solution is the sum of the complementary solution and any particular solution.      No—solutions are added, not multiplied.    only  No—the complementary solution is needed for the full family of solutions.      Why the Method Works   Suppose and are both particular solutions to . What can be said about ?     solves the associated homogeneous equation .   Correct. The difference of two particular solutions always satisfies .     is another particular solution.  No—its right‑hand side is zero, not .    always.  Not true—different particular solutions differ by a homogeneous solution, not necessarily zero.      Undetermined Coefficients for a Polynomial   Consider . Using undetermined coefficients, what form should you try for ?       Correct. When is a polynomial, we try a polynomial of the same degree.      No—that form is for exponential forcing.     No—this corresponds to sinusoidal forcing.      Complementary Solution Identification   For the equation , what is the complementary solution ?         Correct. Solve → .      No—that form is for a polynomial forcing, not the homogeneous solution.     No—this form corresponds to complex roots.      Determining a Particular Solution Coefficient   In solving , suppose you try . Plugging into the left side gives . What must equal?       Correct, because matching coefficients requires .      No—this would give , not .     No—plugging in yields , not .      Avoiding Resonance in Undetermined Coefficients   Consider the ODE When using the method of undetermined coefficients, what form should you try for the particular solution ?         Correct. Because and already solve the homogeneous equation (the system is in resonance), we multiply the usual guess by . We shift the guess when it conflicts with the complementary solution.      No—this duplicates the complementary solution, yielding no new information.     No—this form is used for polynomial forcing, not trigonometric forcing.      Choosing a Particular Solution for an Exponential Forcing   Consider the equation The complementary solution is . What is the correct form for a particular solution using the method of undetermined coefficients?       Correct. Because is already part of the complementary solution, the trial function would duplicate a homogeneous solution and produce only the zero result. In this situation the trial form must be multiplied by to avoid resonance, giving .       No— already appears in , so this choice leads to duplication and cannot produce a valid particular solution.       No— also appears in the complementary solution and is unrelated to the forcing term.       Finding a Particular Solution Quickly   For the equation which of the following is a correct particular solution ?       Correct. Substituting yields , so .      No—this gives , which is too large.     No—this yields only on substitution, not .       Find a particular solution of   A reasonable trial is .    Compute derivatives:   Substitute into the ODE:   Group cosine and sine terms:   So   Match coefficients:   Solve the second for . Plug into the first:   Then .  Thus a particular solution is       Find a particular solution of   Since is a homogeneous solution, try .    Let . Compute:   Simplify:   Now compute :   Set , so . Therefore         Determine the appropriate form of a particular solution of       Find the coefficients in your trial solution.        The forcing term is . The complementary solution comes from roots of   Since the forcing term has the same exponential and same frequency , it exactly matches the homogeneous form— so we must multiply by .  Appropriate form:     Differentiate and substitute (CAS recommended). The resulting coefficients are:   Hence a particular solution is         Find a particular solution of     Characteristic equation: . Since the forcing term is , which corresponds to the repeated root, try:   Compute derivatives:   Substitute:   Therefore set , so . Thus       Solve the initial value problem     Complementary solution:   So   For a particular solution, try . Substitute:   This gives zero, so the guess duplicates the homogeneous solution. Multiply by :   Compute . After simplification (CAS recommended), one obtains:   Match coefficients with the forcing :   So , .  Thus   Full solution:   Apply initial conditions:  At  :   Derivative:   At :   Final solution:        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Demonstrate, using operator notation, why any two particular solutions differ by a solution to the homogeneous equation.    Construct appropriate ansatz forms for particular solutions in polynomial forcing cases and justify parameter choices.    Analyze how different methods (guessing, undetermined coefficients, or other techniques) can yield equivalent general solutions despite producing different intermediate formulas.     "
+},
+{
+  "id": "nonhom-concept-1",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-concept-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "   is called a complementary solution . What do you think it complements?    The complementary solution solves the associated homogeneous equation . It is called “complementary” because it complements a single particular solution to produce the full general solution to the nonhomogeneous equation:   In other words, fills in all the homogeneous pieces required to describe every possible solution, complementing the specific contribution coming from the forcing term.   "
+},
+{
+  "id": "nonhom-concept-2",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-concept-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  In your own words, summarize Theorem 2.5.1 .    Theorem 2.5.1 says that to solve a linear nonhomogeneous ODE :   Find , the general solution of the homogeneous equation .  Find , any single particular solution of .   Then the full general solution is simply   The theorem also guarantees that any two solutions differ by a homogeneous solution, so this formula captures all solutions.   "
+},
+{
+  "id": "nonhom-concept-3",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-concept-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "   Subsection 2.5.2 , on Undetermined Coefficients, mentions a hiccup . What is this hiccup? Can it be managed? If so, how?    The “hiccup” occurs when the forcing term is itself a solution of the homogeneous equation. In that case, the usual trial function for gives zero when substituted into the left‑hand side.  Yes, it can be managed: multiply the entire trial solution by (or by if one multiplication still conflicts) until the guess is no longer a solution of the homogeneous equation. This ensures a valid particular solution.   "
+},
+{
+  "id": "nonhom-concept-4",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-concept-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Give an example of a second‑order, linear, constant‑coefficient, nonhomogeneous ODE for which Undetermined Coefficients will not work.    Undetermined coefficients works only for forcing terms that are exponentials, polynomials, sines, and cosines (or finite sums\/products of these).  A forcing term like or does not fit that pattern. For example:   cannot be solved by undetermined coefficients. We would need variation of parameters instead.   "
+},
+{
+  "id": "mcq-nonhom-1",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-1",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Structure of the General Solution.",
+  "body": " Structure of the General Solution   For a nonhomogeneous linear ODE , which formula describes the general solution?      , where solves and is any particular solution.    Correct. Every solution is the sum of the complementary solution and any particular solution.      No—solutions are added, not multiplied.    only  No—the complementary solution is needed for the full family of solutions.    "
+},
+{
+  "id": "mcq-nonhom-2",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-2",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Why the Method Works.",
+  "body": " Why the Method Works   Suppose and are both particular solutions to . What can be said about ?     solves the associated homogeneous equation .   Correct. The difference of two particular solutions always satisfies .     is another particular solution.  No—its right‑hand side is zero, not .    always.  Not true—different particular solutions differ by a homogeneous solution, not necessarily zero.    "
+},
+{
+  "id": "mcq-nonhom-3",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-3",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Undetermined Coefficients for a Polynomial.",
+  "body": " Undetermined Coefficients for a Polynomial   Consider . Using undetermined coefficients, what form should you try for ?       Correct. When is a polynomial, we try a polynomial of the same degree.      No—that form is for exponential forcing.     No—this corresponds to sinusoidal forcing.    "
+},
+{
+  "id": "mcq-nonhom-4",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-4",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Complementary Solution Identification.",
+  "body": " Complementary Solution Identification   For the equation , what is the complementary solution ?         Correct. Solve → .      No—that form is for a polynomial forcing, not the homogeneous solution.     No—this form corresponds to complex roots.    "
+},
+{
+  "id": "mcq-nonhom-5",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-5",
+  "type": "Exercise",
+  "number": "9",
+  "title": "Determining a Particular Solution Coefficient.",
+  "body": " Determining a Particular Solution Coefficient   In solving , suppose you try . Plugging into the left side gives . What must equal?       Correct, because matching coefficients requires .      No—this would give , not .     No—plugging in yields , not .    "
+},
+{
+  "id": "mcq-nonhom-6",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-6",
+  "type": "Exercise",
+  "number": "10",
+  "title": "Avoiding Resonance in Undetermined Coefficients.",
+  "body": " Avoiding Resonance in Undetermined Coefficients   Consider the ODE When using the method of undetermined coefficients, what form should you try for the particular solution ?         Correct. Because and already solve the homogeneous equation (the system is in resonance), we multiply the usual guess by . We shift the guess when it conflicts with the complementary solution.      No—this duplicates the complementary solution, yielding no new information.     No—this form is used for polynomial forcing, not trigonometric forcing.    "
+},
+{
+  "id": "mcq-nonhom-7",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-7",
+  "type": "Exercise",
+  "number": "11",
+  "title": "Choosing a Particular Solution for an Exponential Forcing.",
+  "body": " Choosing a Particular Solution for an Exponential Forcing   Consider the equation The complementary solution is . What is the correct form for a particular solution using the method of undetermined coefficients?       Correct. Because is already part of the complementary solution, the trial function would duplicate a homogeneous solution and produce only the zero result. In this situation the trial form must be multiplied by to avoid resonance, giving .       No— already appears in , so this choice leads to duplication and cannot produce a valid particular solution.       No— also appears in the complementary solution and is unrelated to the forcing term.     "
+},
+{
+  "id": "mcq-nonhom-8",
+  "level": "2",
+  "url": "ch-Textbook-13.html#mcq-nonhom-8",
+  "type": "Exercise",
+  "number": "12",
+  "title": "Finding a Particular Solution Quickly.",
+  "body": " Finding a Particular Solution Quickly   For the equation which of the following is a correct particular solution ?       Correct. Substituting yields , so .      No—this gives , which is too large.     No—this yields only on substitution, not .    "
+},
+{
+  "id": "nonhom-particular-1",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-particular-1",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  Find a particular solution of   A reasonable trial is .    Compute derivatives:   Substitute into the ODE:   Group cosine and sine terms:   So   Match coefficients:   Solve the second for . Plug into the first:   Then .  Thus a particular solution is    "
+},
+{
+  "id": "nonhom-particular-2",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-particular-2",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  Find a particular solution of   Since is a homogeneous solution, try .    Let . Compute:   Simplify:   Now compute :   Set , so . Therefore    "
+},
+{
+  "id": "nonhom-particular-3",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-particular-3",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "    Determine the appropriate form of a particular solution of       Find the coefficients in your trial solution.        The forcing term is . The complementary solution comes from roots of   Since the forcing term has the same exponential and same frequency , it exactly matches the homogeneous form— so we must multiply by .  Appropriate form:     Differentiate and substitute (CAS recommended). The resulting coefficients are:   Hence a particular solution is      "
+},
+{
+  "id": "nonhom-particular-4",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-particular-4",
+  "type": "Exercise",
+  "number": "16",
+  "title": "",
+  "body": "  Find a particular solution of     Characteristic equation: . Since the forcing term is , which corresponds to the repeated root, try:   Compute derivatives:   Substitute:   Therefore set , so . Thus    "
+},
+{
+  "id": "nonhom-ivp-final",
+  "level": "2",
+  "url": "ch-Textbook-13.html#nonhom-ivp-final",
+  "type": "Exercise",
+  "number": "17",
+  "title": "",
+  "body": "  Solve the initial value problem     Complementary solution:   So   For a particular solution, try . Substitute:   This gives zero, so the guess duplicates the homogeneous solution. Multiply by :   Compute . After simplification (CAS recommended), one obtains:   Match coefficients with the forcing :   So , .  Thus   Full solution:   Apply initial conditions:  At  :   Derivative:   At :   Final solution:    "
 },
 {
   "id": "ch-Textbook-14",
@@ -664,25 +1249,142 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 3.1 - The Laplace Transform",
-  "body": " Daily Prep 3.1 - The Laplace Transform   Overview  In this section, we introduce the Laplace transform as a powerful method for solving differential equations by converting them into algebraic equations. We explain how the transform takes a function of time and produces a new function of a frequency-like variable , allowing difficult ODEs to become simpler algebraic expressions that can be solved and then inverted. We also see motivating examples, including its usefulness for handling discontinuous inputs and modeling physical systems such as forced oscillators and electrical circuits.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the definition of the Laplace transform and how it converts a time-domain function into an -domain function.    Explain how solving ODEs becomes easier by transforming them into algebraic equations.    Recognize common Laplace transforms through simple examples such as constants and exponentials.      Learn!  Complete the actions listed below.     Watch  Video 3.1.1: Intro to Laplace Transform (11:52) by Trevor Bazett.     Read  Subsection 3.1.1: The transform .     Watch  Video 3.1.2: Linearity, Existence, and Inverses of the Laplace Transform (7:14) by Trevor Bazett.    (Optional) Watch video Introduction to The Laplace Transform (8:31) by Mathispower4u.    (Optional) Watch video Introduction Laplace Transforms (3:47) by Mathispower4u.    (Optional) Watch video The Laplace Transform of the Unit Step Function (3:50) by Mathispower4u.     Read  Subsection 3.1.2: Existence and uniqueness .     Watch video The Existence and Uniqueness of a Laplace Transform (5:34) by Mathispower4u.     Watch video Introduction to Inverse Laplace Transforms (8:56) by Mathispower4u.     Read  Subsection 3.1.3: The inverse transform .     Watch  Video 3.1.3: Translation and Inverse Laplace Transforms of Irreducible Factors (12:10) by Trevor Bazett.     Watch  Video 3.1.4: Inverse Laplace Transform with Repeated Factors (8:29) by Trevor Bazett.     Watch  Find Basic Inverse Laplace Transforms (5:04) by Mathispower4u.    (Optional) Watch  Laplace Transforms (38:34) from MIT OpenCourseWare. This is Herbert Gross. Black and white video and old school but still quite good!    For an absolutely beautiful and insightful introduction to the subject via MIT, watch  MIT 18.03 Differential Equations, Spring 2006 (47:40) . The basic idea of this transform is to replace a DE with an algebraic equation, solve the algebraic equation, and then transform back to identify a solution. It is particularly useful when solving IVPs having discontinuous terms.    (Optional) Watch  Laplace Transform, part 1 (34:15) and Laplace Transform, part 2 (24:32) for a lecture on section 3.1.     Do  Subsection 3.1.4: Exercises 3.1.5, 3.1.7, 3.1.9, 3.1.10, 3.1.12, 3.1.14, 3.1.15, 3.1.16, 3.1.19 .    Try these additional questions. If necessary, use AI to guide your thinking.    If is defined for , then its Laplace transform is defined by .    Draw a graph of the functions from Example 3.1.4 .    In your own words, what does it mean for a function to be of exponential order ?    Suppose on . Compute . What is the domain of ? [Try not using Example 3.1.1 as a crutch.]    Suppose on . Compute . What is the domain of ?    Using a table of Laplace transforms ( Table 3.1 ), compute   What is the domain of ? Hint:  .    The unit step function is defined by     Graph the unit step function, .    Define . Write as a piecewise-defined function and graph it.    Compute .      Compute the inverse Laplace transform of by hand, using partial fractions and tables. Does AI agree with your result?    Compute the inverse Laplace transform of using partial fractions and tables. Does AI agree with your result?    Use the definition of Laplace transform to compute for the function graphed in .  Function .   A graph of a piecewise function f(t). For t less than 1, the function equals 0, shown by a horizontal line on the t-axis with a filled dot at t = 0 and an open circle at t = 1. For t greater than or equal to 1, the function increases linearly, passing through the points (1, 1) and (2, 2), and continues upward with an arrow.        Use the definition of Laplace transform to compute for the function graphed in .  Function .   A graph of a piecewise function g(t). Along the t‑axis, the function is 0 from the origin up to t=a, shown by a horizontal line with a filled dot at t=0 and an open circle at t=a. From t=a to t=b, the function jumps to a constant value c, represented by a horizontal line at height c, with a filled dot at t=a and an open circle at t=b. For t greater than b, the function returns to 0, indicated by a horizontal line on the t‑axis starting at a filled dot at t=b and extending to the right with an arrow.        Find the inverse Laplace transform of .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Interpret the Laplace transform as moving between time and frequency domains, especially for systems governed by equations like .    Analyze why the Laplace method handles discontinuities and piecewise-defined inputs effectively.    Apply the Laplace transform framework to understand applications in areas such as signal processing, electrical circuits, and physical modeling.     "
+  "body": " Daily Prep 3.1 - The Laplace Transform   Overview  In this section, we introduce the Laplace transform as a powerful method for solving differential equations by converting them into algebraic equations. We explain how the transform takes a function of time and produces a new function of a frequency-like variable , allowing difficult ODEs to become simpler algebraic expressions that can be solved and then inverted. We also see motivating examples, including its usefulness for handling discontinuous inputs and modeling physical systems such as forced oscillators and electrical circuits.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the definition of the Laplace transform and how it converts a time-domain function into an -domain function.    Explain how solving ODEs becomes easier by transforming them into algebraic equations.    Recognize common Laplace transforms through simple examples such as constants and exponentials.      Learn!  Complete the actions listed below.     Watch  Video 3.1.1: Intro to Laplace Transform (11:52) by Trevor Bazett.     Read  Subsection 3.1.1: The transform .     Watch  Video 3.1.2: Linearity, Existence, and Inverses of the Laplace Transform (7:14) by Trevor Bazett.    (Optional) Watch video Introduction to The Laplace Transform (8:31) by Mathispower4u.    (Optional) Watch video Introduction Laplace Transforms (3:47) by Mathispower4u.    (Optional) Watch video The Laplace Transform of the Unit Step Function (3:50) by Mathispower4u.     Read  Subsection 3.1.2: Existence and uniqueness .     Watch video The Existence and Uniqueness of a Laplace Transform (5:34) by Mathispower4u.     Watch video Introduction to Inverse Laplace Transforms (8:56) by Mathispower4u.     Read  Subsection 3.1.3: The inverse transform .     Watch  Video 3.1.3: Translation and Inverse Laplace Transforms of Irreducible Factors (12:10) by Trevor Bazett.     Watch  Video 3.1.4: Inverse Laplace Transform with Repeated Factors (8:29) by Trevor Bazett.     Watch  Find Basic Inverse Laplace Transforms (5:04) by Mathispower4u.    (Optional) Watch  Laplace Transforms (38:34) from MIT OpenCourseWare. This is Herbert Gross. Black and white video and old school but still quite good!    For an absolutely beautiful and insightful introduction to the subject via MIT, watch  MIT 18.03 Differential Equations, Spring 2006 (47:40) . The basic idea of this transform is to replace a DE with an algebraic equation, solve the algebraic equation, and then transform back to identify a solution. It is particularly useful when solving IVPs having discontinuous terms.    (Optional) Watch  Laplace Transform, part 1 (34:15) and Laplace Transform, part 2 (24:32) for a lecture on section 3.1.     Do  Subsection 3.1.4: Exercises 3.1.5, 3.1.7, 3.1.9, 3.1.10, 3.1.12, 3.1.14, 3.1.15, 3.1.16, 3.1.19 .      Do MyOpenMath questions from this section.     Exercises   Basic Definition   The Laplace transform of a function is defined by For what values of does this improper integral typically converge?     For all sufficiently large so that the integral converges.   Correct. The transform only exists when the improper integral converges, typically for in some right half‑plane.     For all real numbers .  No—the integral may diverge for small or negative .    Only for .  No—the Laplace transform is designed for in a range of positive values.      Transform of a Constant   What is the value of the transform (when it exists)?       Correct. The integral for .     No—that is the transform of , not .    Not correct—the transform is a rational function, not exponential.      Linearity of the Laplace Transform   Which property does the Laplace transform satisfy?       Correct. The Laplace transform is linear.      No—there is no simple product rule for Laplace transforms.      No—that contradicts the derivative formula introduced later in the section.       Transform of an Exponential   Using the definition, what is (for )?       Correct. The integral .      No—this corresponds to .     No—the transform should be a rational function in .      Conceptual Purpose of the Laplace Transform   What is one main advantage of the Laplace transform in solving ODEs?      It converts differential equations into algebraic equations in the -domain.    Correct. Laplace transforms turn calculus problems into algebra problems.      It eliminates the need to know initial conditions.   No—Laplace transforms actually incorporate initial conditions directly.     It provides exact solutions only for nonlinear differential equations.   No—it is primarily a tool for linear ODEs with forcing terms.       If is defined for , then its Laplace transform is defined by .    The Laplace transform of is   The variable is generally assumed to satisfy conditions that make the improper integral converge.       In your own words, what does it mean for a function to be of exponential order ?    A function is of exponential order if, for large , it does not grow faster than some exponential . More precisely, there exist constants such that for all sufficiently large .  This ensures that the Laplace integral will converge for .      Suppose on . Compute . What is the domain of ?    Compute directly:   This converges only if . Thus:       Suppose on . Compute . What is the domain of ?    Compute:   which converges if , i.e. . Thus:       The unit step function is    Graph .  Define . Write it as a piecewise function and graph it.  Compute .       Graph: zero for , one for . A correct sketch shows a step jump at .    Since ,   The graph is a horizontal zero line until , then jumps to 1.    Compute:         Compute the inverse Laplace transform of   Use partial fractions and tables. Does AI agree with your result?    Write:   Solve:   Matching coefficients: , .  Solve:   Therefore:   Inverse Laplace:       Compute the inverse Laplace transform of   Use partial fractions and tables. Does AI agree with your result?    Use the identity:   Here , , so .   Inverse Laplace:   Therefore:       Use the definition of Laplace transform to compute for the function graphed in .   Function .   A graph of a piecewise function f(t). For t less than 1, the function equals 0, shown by a horizontal line on the t-axis with a filled dot at t = 0 and an open circle at t = 1. For t greater than or equal to 1, the function increases linearly, passing through the points (1, 1) and (2, 2), and continues upward with an arrow.       From the graph:   Then:   Compute using integration by parts (or a table):   Evaluate from 1 to :   So:       Use the definition of Laplace transform to compute for the function graphed in .   Function .   A graph of a piecewise function g(t). Along the t‑axis, the function is 0 from the origin up to t=a, shown by a horizontal line with a filled dot at t=0 and an open circle at t=a. From t=a to t=b, the function jumps to a constant value c, represented by a horizontal line at height c, with a filled dot at t=a and an open circle at t=b. For t greater than b, the function returns to 0, indicated by a horizontal line on the t‑axis starting at a filled dot at t=b and extending to the right with an arrow.       From the graph:   Then:       Find the inverse Laplace transform of     Factor denominator: . Note:   Thus:        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Interpret the Laplace transform as moving between time and frequency domains, especially for systems governed by equations like .    Analyze why the Laplace method handles discontinuities and piecewise-defined inputs effectively.    Apply the Laplace transform framework to understand applications in areas such as signal processing, electrical circuits, and physical modeling.     "
 },
 {
-  "id": "GraphLaplaceTransformA",
+  "id": "laplace-mcq-1",
   "level": "2",
-  "url": "ch-Textbook-14.html#GraphLaplaceTransformA",
-  "type": "Figure",
+  "url": "ch-Textbook-14.html#laplace-mcq-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Basic Definition.",
+  "body": " Basic Definition   The Laplace transform of a function is defined by For what values of does this improper integral typically converge?     For all sufficiently large so that the integral converges.   Correct. The transform only exists when the improper integral converges, typically for in some right half‑plane.     For all real numbers .  No—the integral may diverge for small or negative .    Only for .  No—the Laplace transform is designed for in a range of positive values.    "
+},
+{
+  "id": "laplace-mcq-2",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-mcq-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Transform of a Constant.",
+  "body": " Transform of a Constant   What is the value of the transform (when it exists)?       Correct. The integral for .     No—that is the transform of , not .    Not correct—the transform is a rational function, not exponential.    "
+},
+{
+  "id": "laplace-mcq-3",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-mcq-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Linearity of the Laplace Transform.",
+  "body": " Linearity of the Laplace Transform   Which property does the Laplace transform satisfy?       Correct. The Laplace transform is linear.      No—there is no simple product rule for Laplace transforms.      No—that contradicts the derivative formula introduced later in the section.     "
+},
+{
+  "id": "laplace-mcq-4",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-mcq-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Transform of an Exponential.",
+  "body": " Transform of an Exponential   Using the definition, what is (for )?       Correct. The integral .      No—this corresponds to .     No—the transform should be a rational function in .    "
+},
+{
+  "id": "laplace-mcq-5",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-mcq-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Conceptual Purpose of the Laplace Transform.",
+  "body": " Conceptual Purpose of the Laplace Transform   What is one main advantage of the Laplace transform in solving ODEs?      It converts differential equations into algebraic equations in the -domain.    Correct. Laplace transforms turn calculus problems into algebra problems.      It eliminates the need to know initial conditions.   No—Laplace transforms actually incorporate initial conditions directly.     It provides exact solutions only for nonlinear differential equations.   No—it is primarily a tool for linear ODEs with forcing terms.    "
+},
+{
+  "id": "laplace-basic-definition",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-basic-definition",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  If is defined for , then its Laplace transform is defined by .    The Laplace transform of is   The variable is generally assumed to satisfy conditions that make the improper integral converge.   "
+},
+{
+  "id": "laplace-exponential-order",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-exponential-order",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  In your own words, what does it mean for a function to be of exponential order ?    A function is of exponential order if, for large , it does not grow faster than some exponential . More precisely, there exist constants such that for all sufficiently large .  This ensures that the Laplace integral will converge for .   "
+},
+{
+  "id": "laplace-transform-of-1",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-transform-of-1",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Suppose on . Compute . What is the domain of ?    Compute directly:   This converges only if . Thus:    "
+},
+{
+  "id": "laplace-transform-exp-at",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-transform-exp-at",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Suppose on . Compute . What is the domain of ?    Compute:   which converges if , i.e. . Thus:    "
+},
+{
+  "id": "unit-step-laplace",
+  "level": "2",
+  "url": "ch-Textbook-14.html#unit-step-laplace",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  The unit step function is    Graph .  Define . Write it as a piecewise function and graph it.  Compute .       Graph: zero for , one for . A correct sketch shows a step jump at .    Since ,   The graph is a horizontal zero line until , then jumps to 1.    Compute:      "
+},
+{
+  "id": "inverse-laplace-1",
+  "level": "2",
+  "url": "ch-Textbook-14.html#inverse-laplace-1",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  Compute the inverse Laplace transform of   Use partial fractions and tables. Does AI agree with your result?    Write:   Solve:   Matching coefficients: , .  Solve:   Therefore:   Inverse Laplace:    "
+},
+{
+  "id": "inverse-laplace-2",
+  "level": "2",
+  "url": "ch-Textbook-14.html#inverse-laplace-2",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Compute the inverse Laplace transform of   Use partial fractions and tables. Does AI agree with your result?    Use the identity:   Here , , so .   Inverse Laplace:   Therefore:    "
+},
+{
+  "id": "laplace-of-piecewise-f",
+  "level": "2",
+  "url": "ch-Textbook-14.html#laplace-of-piecewise-f",
+  "type": "Exercise",
   "number": "13",
   "title": "",
-  "body": " Function .   A graph of a piecewise function f(t). For t less than 1, the function equals 0, shown by a horizontal line on the t-axis with a filled dot at t = 0 and an open circle at t = 1. For t greater than or equal to 1, the function increases linearly, passing through the points (1, 1) and (2, 2), and continues upward with an arrow.    "
+  "body": "  Use the definition of Laplace transform to compute for the function graphed in .   Function .   A graph of a piecewise function f(t). For t less than 1, the function equals 0, shown by a horizontal line on the t-axis with a filled dot at t = 0 and an open circle at t = 1. For t greater than or equal to 1, the function increases linearly, passing through the points (1, 1) and (2, 2), and continues upward with an arrow.       From the graph:   Then:   Compute using integration by parts (or a table):   Evaluate from 1 to :   So:    "
 },
 {
-  "id": "GraphLaplaceTransformB",
+  "id": "laplace-of-piecewise-g",
   "level": "2",
-  "url": "ch-Textbook-14.html#GraphLaplaceTransformB",
-  "type": "Figure",
+  "url": "ch-Textbook-14.html#laplace-of-piecewise-g",
+  "type": "Exercise",
   "number": "14",
   "title": "",
-  "body": " Function .   A graph of a piecewise function g(t). Along the t‑axis, the function is 0 from the origin up to t=a, shown by a horizontal line with a filled dot at t=0 and an open circle at t=a. From t=a to t=b, the function jumps to a constant value c, represented by a horizontal line at height c, with a filled dot at t=a and an open circle at t=b. For t greater than b, the function returns to 0, indicated by a horizontal line on the t‑axis starting at a filled dot at t=b and extending to the right with an arrow.    "
+  "body": "  Use the definition of Laplace transform to compute for the function graphed in .   Function .   A graph of a piecewise function g(t). Along the t‑axis, the function is 0 from the origin up to t=a, shown by a horizontal line with a filled dot at t=0 and an open circle at t=a. From t=a to t=b, the function jumps to a constant value c, represented by a horizontal line at height c, with a filled dot at t=a and an open circle at t=b. For t greater than b, the function returns to 0, indicated by a horizontal line on the t‑axis starting at a filled dot at t=b and extending to the right with an arrow.       From the graph:   Then:    "
+},
+{
+  "id": "inverse-laplace-3",
+  "level": "2",
+  "url": "ch-Textbook-14.html#inverse-laplace-3",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "  Find the inverse Laplace transform of     Factor denominator: . Note:   Thus:    "
 },
 {
   "id": "ch-Textbook-15",
@@ -691,25 +1393,151 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 3.2 - Transforms of Derivatives and ODEs",
-  "body": " Daily Prep 3.2 - Transforms of Derivatives and ODEs   Overview  In this section, we learn how the Laplace transform interacts with derivatives and how this property becomes the key tool for solving ordinary differential equations in the -domain. The text shows that differentiation in time becomes multiplication by (with corrections coming from initial conditions), and provides a table of Laplace transforms for first, second, and third derivatives. Students then see how this framework converts an ODE into an algebraic equation, which can be solved for the transformed function and inverted to obtain the solution in the time domain.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand how the Laplace transform handles derivatives, including the formulas for first, second, and third derivatives.    Recognize that taking the Laplace transform of an ODE converts it into an algebraic equation in .    Learn how initial conditions appear naturally in the transformed equation.      Learn!  Complete the actions listed below.     Watch  Video 3.2.1: Transforms of Derivatives and integrals (7:47) by Trevor Bazett.     Read  Subsection 3.2.1: Transforms of derivatives .     Watch  Video 3.2.3: Solving an ODE using Laplace Transforms Example (7:31) by Trevor Bazett.     Watch  Video 3.2.2: How to solve ODEs with the Laplace Transform by Trevor Bazett.     Read  Subsection 3.2.2: Solving ODEs with the Laplace transform .    (Optional) Watch video Laplace Transforms of Derivatives \/ Using Laplace Transforms to Solve Differential Equations (8:51) by Mathispower4u.     Watch  Video 3.2.4: The Laplace Transform of Piecewise Functions (11:20) by Trevor Bazett.     Read  Subsection 3.2.3: Using the Heaviside function .     Watch  Video 3.2.5: Solving an IVP with a piecewise nonhomogeneity (10:13) by Trevor Bazett.    (Optional) Watch video Laplace Transforms: Solving Differential Equations containing Heaviside Functions (9:27) by Mathispower4u.     Read  Subsection 3.2.4: Transfer functions .    (Optional) Watch  Laplace Transforms: Determining a Transfer Function (4:41) by Mathispower4u.     Read  Subsection 3.2.5: Transforms of integrals .    (Optional) Watch  Laplace Transforms of Integrals (5:34) by Mathispower4u.    (Optional) Watch  Transforms of Derivatives and ODEs, part 1 (29:43) and Transforms of Derivatives and ODEs, part 2 (21:35) for a lecture on section 3.2.     Do  Subsection 3.2.6: Exercises 3.2.2, 3.2.4, 3.2.13, 3.2.18, 3.2.20 .    Try these additional questions. If necessary, use AI to guide your thinking.    What is the next line in Table 3.2.1 ?     Plot the following functions mentioned in the text.                      Using the Laplace transform, solve the IVP     Consider the IVP Solve using the Laplace transform.    (Shifting Theorem) Suppose for . For any real number and ,     We know that . Compute .    Define Compute the Laplace transform . Hint: Write .    Solve the IVP where     A mass that weighs 32 lb ( ) is attached to the free end of a spring that is stretched 1 ft by a force of 4 lb ( lb\/ft). The mass is initially at rest in its equilibrium position. Beginning at time (seconds), an external force is applied to the mass-spring system, but at time this force is turned off (abruptly) and the mass is allowed to continue its motion unimpeded. [Assume no friction (i.e. dashpot).] Find the resulting position function of the mass.   A dashpot.   A mass–spring–dashpot system: a wall on the left is connected to a zig‑zag spring, which is attached to a rectangular block labeled “m”; on the right side of the block a rod connects to a dashpot (damper) attached to another wall.      Use the definition of Laplace transform to compute (by hand) for the function graphed in .   Function .   A graph of a function f(t). The function is 0 up to t=1, shown by a horizontal line on the t‑axis ending at a filled dot at t=1. From that point, the graph rises linearly, passing through the point (2,2), and continues upward to the right with an arrow.     Use technology to verify this result.    Use partial fractions to evaluate by hand. Use technology to verify the result.    Keeping the result of the above problem in mind, solve (by hand) the IVP using the Laplace transform. Verify the result using appropriate technology.       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Apply the full set of derivative-transform formulas to solve higher‑order linear ODEs with given initial conditions.    Use algebraic manipulation in the -domain—including partial fractions—to prepare expressions for inverse Laplace transforms.    Interpret the Laplace‑domain solution in terms of the structure of the original differential equation, including forced responses and natural modes.     "
+  "body": " Daily Prep 3.2 - Transforms of Derivatives and ODEs   Overview  In this section, we learn how the Laplace transform interacts with derivatives and how this property becomes the key tool for solving ordinary differential equations in the -domain. The text shows that differentiation in time becomes multiplication by (with corrections coming from initial conditions), and provides a table of Laplace transforms for first, second, and third derivatives. Students then see how this framework converts an ODE into an algebraic equation, which can be solved for the transformed function and inverted to obtain the solution in the time domain.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand how the Laplace transform handles derivatives, including the formulas for first, second, and third derivatives.    Recognize that taking the Laplace transform of an ODE converts it into an algebraic equation in .    Learn how initial conditions appear naturally in the transformed equation.      Learn!  Complete the actions listed below.     Watch  Video 3.2.1: Transforms of Derivatives and integrals (7:47) by Trevor Bazett.     Read  Subsection 3.2.1: Transforms of derivatives .     Watch  Video 3.2.2: How to solve ODEs with the Laplace Transform (9:15) by Trevor Bazett.     Watch  Video 3.2.3: Solving an ODE using Laplace Transforms Example (7:31) by Trevor Bazett.     Read  Subsection 3.2.2: Solving ODEs with the Laplace transform .    (Optional) Watch video Laplace Transforms of Derivatives \/ Using Laplace Transforms to Solve Differential Equations (8:51) by Mathispower4u.     Watch  Video 3.2.4: The Laplace Transform of Piecewise Functions (11:20) by Trevor Bazett.     Read  Subsection 3.2.3: Using the Heaviside function .     Watch  Video 3.2.5: Solving an IVP with a piecewise nonhomogeneity (10:13) by Trevor Bazett.    (Optional) Watch video Laplace Transforms: Solving Differential Equations containing Heaviside Functions (9:27) by Mathispower4u.     Read  Subsection 3.2.4: Transfer functions .    (Optional) Watch  Laplace Transforms: Determining a Transfer Function (4:41) by Mathispower4u.     Read  Subsection 3.2.5: Transforms of integrals .    (Optional) Watch  Laplace Transforms of Integrals (5:34) by Mathispower4u.    (Optional) Watch  Transforms of Derivatives and ODEs, part 1 (29:43) and Transforms of Derivatives and ODEs, part 2 (21:35) for a lecture on section 3.2.     Do  Subsection 3.2.6: Exercises 3.2.2, 3.2.4, 3.2.13, 3.2.18, 3.2.20 .       Do MyOpenMath questions from this section.     Exercises   Laplace Transform of a First Derivative   What is the Laplace transform of ?       Correct. , which is crucial when solving ODEs with initial conditions.      Missing the important term .     Incorrect scaling—the factor is essential.      Laplace Transform of a Second Derivative   What is in terms of , , and ?       Correct. , used directly when turning ODEs into algebraic equations in .      Missing the critical and terms.     This is the formula for first derivatives, not second.      Converting an ODE to an Algebraic Equation   Consider the IVP with , . After taking Laplace transforms and using derivative rules, which algebraic equation in results?         Correct. Using and . So .      Initial conditions were not incorporated.     Incorrect signs and missing -term.      Solve for   From the algebraic equation , what is ?       Correct. Divide both sides by . This corresponds to the transform of .      Missing a factor of in the numerator.     Incorrect denominator.      Inverse Laplace Identification   Which of the following time‑domain functions have Laplace transforms equal to ?       Correct. Since , multiplying by 2 gives the target transform.      No—its transform is , not .     No—its transform is .       What is the next line in Table 3.2.1 ?    Table 3.2.1 lists transforms of derivatives. After the line   the next line is the transform of the second derivative:       Plot the following functions.          (a)  is for and equals for .   Graph of       (b)  equals on and elsewhere.   Graph of       (c) This describes a “piecewise linear bump” between and :       Using the Laplace transform, solve the IVP     Laplace transforming:   Solve for :   Use partial fractions:   Invert term‑by‑term:       Solve the IVP   using the Laplace transform.    Take Laplace transforms term-by-term:     Substitute into :   Combine like terms:   Solve for :   Use partial fractions:   Invert term-by-term:   This satisfies the differential equation and initial conditions, so it is the correct solution.      (Shifting Theorem) Suppose for . Show that for any real and ,     This follows directly because   The domain shifts by replacing with , requiring .      We know that . Compute .    We start from the known transform   The expression is obtained by replacing with in . By the (exponential) shifting theorem,   Here, corresponds to , and we need . Therefore   Thus the inverse Laplace transform is       Define   Compute the Laplace transform . Hint: Write     Using the decomposition:     First term:       Second term:       Third term: We use the shifting rule .  Here , so     Now sum all terms:   Combine like terms:   Simplify the expression inside the final brackets:   Thus the Laplace transform is       A mass that weighs 32 lb ( slug) is attached to a spring that is stretched 1 ft by a force of 4 lb ( lb\/ft). The mass is initially at rest in equilibrium. A forcing function is applied for and then turned off for . (Assume no damping.) Find the resulting position .   A dashpot (not active here, since ).   A mass–spring–dashpot system: a wall on the left is connected to a spring which attaches to a block of mass m; a dashpot is attached on the right side.      1. Model the equation.  No damping → equation is   Since the forcing is 1 for and 0 afterward,   Initial conditions: , .  2. Laplace transform.  Transform the ODE:   Solve:   3. Inverse transform of the unshifted term.  Use the known identity:   Here , so   4. Inverse transform of the shifted piece.  Use the shifting theorem:   where . In our case:   Thus:   5. Final solution.  Combining the pieces:   Since , the expression simplifies nicely:   Factor:   In piecewise form:   Physically: the system oscillates between 0 and , then returns to equilibrium once the forcing stops.      Use the definition of the Laplace transform to compute (by hand) for the function graphed in . Then use technology to verify your result.   Function .   A graph of a function f(t). The function is 0 up to t=1, shown by a horizontal line on the t‑axis ending at a filled dot at t=1. From that point, the graph rises linearly, passing through the point (2,2), and continues upward to the right with an arrow.       From the graph, the function is piecewise-defined:   Therefore the Laplace transform is   Compute the integral.  Substitute , hence and when , . Then   Compute the remaining integral:   Hence       Use partial fractions to evaluate   by hand. Use technology to verify the result.    1. Set up partial fractions.  We want to write   Multiply through:   2. Evaluate at convenient values.     :      :      :     3. Write the decomposition.   4. Inverse Laplace transform term‑by‑term.  Use . Thus:        Solve the IVP   where     1. Rewrite the forcing using step functions.  The piecewise function becomes:   (Check: On it equals ; on it equals ; for it returns to .)  2. Apply the Laplace transform.  With , :   So the ODE becomes:   Since , we have:   3. Invert the non‑shifted kernel.  First compute   Do partial fractions:   Thus:   4. Apply the shifting theorem.  Using   the solution becomes:   with .  5. Final explicit form.        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Apply the full set of derivative-transform formulas to solve higher‑order linear ODEs with given initial conditions.    Use algebraic manipulation in the -domain—including partial fractions—to prepare expressions for inverse Laplace transforms.    Interpret the Laplace‑domain solution in terms of the structure of the original differential equation, including forced responses and natural modes.     "
 },
 {
-  "id": "SpringMass4b",
+  "id": "laplace-deriv-mcq-1",
   "level": "2",
-  "url": "ch-Textbook-15.html#SpringMass4b",
-  "type": "Figure",
+  "url": "ch-Textbook-15.html#laplace-deriv-mcq-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Laplace Transform of a First Derivative.",
+  "body": " Laplace Transform of a First Derivative   What is the Laplace transform of ?       Correct. , which is crucial when solving ODEs with initial conditions.      Missing the important term .     Incorrect scaling—the factor is essential.    "
+},
+{
+  "id": "laplace-deriv-mcq-2",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-deriv-mcq-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Laplace Transform of a Second Derivative.",
+  "body": " Laplace Transform of a Second Derivative   What is in terms of , , and ?       Correct. , used directly when turning ODEs into algebraic equations in .      Missing the critical and terms.     This is the formula for first derivatives, not second.    "
+},
+{
+  "id": "laplace-deriv-mcq-3",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-deriv-mcq-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Converting an ODE to an Algebraic Equation.",
+  "body": " Converting an ODE to an Algebraic Equation   Consider the IVP with , . After taking Laplace transforms and using derivative rules, which algebraic equation in results?         Correct. Using and . So .      Initial conditions were not incorporated.     Incorrect signs and missing -term.    "
+},
+{
+  "id": "laplace-deriv-mcq-4",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-deriv-mcq-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Solve for <span class=\"process-math\">\\(Y(s)\\)<\/span>.",
+  "body": " Solve for   From the algebraic equation , what is ?       Correct. Divide both sides by . This corresponds to the transform of .      Missing a factor of in the numerator.     Incorrect denominator.    "
+},
+{
+  "id": "laplace-deriv-mcq-5",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-deriv-mcq-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Inverse Laplace Identification.",
+  "body": " Inverse Laplace Identification   Which of the following time‑domain functions have Laplace transforms equal to ?       Correct. Since , multiplying by 2 gives the target transform.      No—its transform is , not .     No—its transform is .    "
+},
+{
+  "id": "laplace-next-line-table321",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-next-line-table321",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  What is the next line in Table 3.2.1 ?    Table 3.2.1 lists transforms of derivatives. After the line   the next line is the transform of the second derivative:    "
+},
+{
+  "id": "laplace-plot-step-shifted",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-plot-step-shifted",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Plot the following functions.          (a)  is for and equals for .   Graph of       (b)  equals on and elsewhere.   Graph of       (c) This describes a “piecewise linear bump” between and :    "
+},
+{
+  "id": "laplace-ivp-sin3t",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-ivp-sin3t",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Using the Laplace transform, solve the IVP     Laplace transforming:   Solve for :   Use partial fractions:   Invert term‑by‑term:    "
+},
+{
+  "id": "laplace-ivp-homogeneous",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-ivp-homogeneous",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Solve the IVP   using the Laplace transform.    Take Laplace transforms term-by-term:     Substitute into :   Combine like terms:   Solve for :   Use partial fractions:   Invert term-by-term:   This satisfies the differential equation and initial conditions, so it is the correct solution.   "
+},
+{
+  "id": "laplace-shifting-theorem",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-shifting-theorem",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  (Shifting Theorem) Suppose for . Show that for any real and ,     This follows directly because   The domain shifts by replacing with , requiring .   "
+},
+{
+  "id": "laplace-inverse-shifted-t2",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-inverse-shifted-t2",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  We know that . Compute .    We start from the known transform   The expression is obtained by replacing with in . By the (exponential) shifting theorem,   Here, corresponds to , and we need . Therefore   Thus the inverse Laplace transform is    "
+},
+{
+  "id": "laplace-piecewise-f-transform-2",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-piecewise-f-transform-2",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Define   Compute the Laplace transform . Hint: Write     Using the decomposition:     First term:       Second term:       Third term: We use the shifting rule .  Here , so     Now sum all terms:   Combine like terms:   Simplify the expression inside the final brackets:   Thus the Laplace transform is    "
+},
+{
+  "id": "laplace-mass-spring-piecwise-force",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-mass-spring-piecwise-force",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  A mass that weighs 32 lb ( slug) is attached to a spring that is stretched 1 ft by a force of 4 lb ( lb\/ft). The mass is initially at rest in equilibrium. A forcing function is applied for and then turned off for . (Assume no damping.) Find the resulting position .   A dashpot (not active here, since ).   A mass–spring–dashpot system: a wall on the left is connected to a spring which attaches to a block of mass m; a dashpot is attached on the right side.      1. Model the equation.  No damping → equation is   Since the forcing is 1 for and 0 afterward,   Initial conditions: , .  2. Laplace transform.  Transform the ODE:   Solve:   3. Inverse transform of the unshifted term.  Use the known identity:   Here , so   4. Inverse transform of the shifted piece.  Use the shifting theorem:   where . In our case:   Thus:   5. Final solution.  Combining the pieces:   Since , the expression simplifies nicely:   Factor:   In piecewise form:   Physically: the system oscillates between 0 and , then returns to equilibrium once the forcing stops.   "
+},
+{
+  "id": "laplace-definition-piecewiseC",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-definition-piecewiseC",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  Use the definition of the Laplace transform to compute (by hand) for the function graphed in . Then use technology to verify your result.   Function .   A graph of a function f(t). The function is 0 up to t=1, shown by a horizontal line on the t‑axis ending at a filled dot at t=1. From that point, the graph rises linearly, passing through the point (2,2), and continues upward to the right with an arrow.       From the graph, the function is piecewise-defined:   Therefore the Laplace transform is   Compute the integral.  Substitute , hence and when , . Then   Compute the remaining integral:   Hence    "
+},
+{
+  "id": "laplace-inverse-partialfractions-big",
+  "level": "2",
+  "url": "ch-Textbook-15.html#laplace-inverse-partialfractions-big",
+  "type": "Exercise",
   "number": "15",
   "title": "",
-  "body": " A dashpot.   A mass–spring–dashpot system: a wall on the left is connected to a zig‑zag spring, which is attached to a rectangular block labeled “m”; on the right side of the block a rod connects to a dashpot (damper) attached to another wall.   "
+  "body": "  Use partial fractions to evaluate   by hand. Use technology to verify the result.    1. Set up partial fractions.  We want to write   Multiply through:   2. Evaluate at convenient values.     :      :      :     3. Write the decomposition.   4. Inverse Laplace transform term‑by‑term.  Use . Thus:    "
 },
 {
-  "id": "GraphLaplaceTransformC",
+  "id": "laplace-ivp-piecewise-force-again",
   "level": "2",
-  "url": "ch-Textbook-15.html#GraphLaplaceTransformC",
-  "type": "Figure",
+  "url": "ch-Textbook-15.html#laplace-ivp-piecewise-force-again",
+  "type": "Exercise",
   "number": "16",
   "title": "",
-  "body": " Function .   A graph of a function f(t). The function is 0 up to t=1, shown by a horizontal line on the t‑axis ending at a filled dot at t=1. From that point, the graph rises linearly, passing through the point (2,2), and continues upward to the right with an arrow.    "
+  "body": "  Solve the IVP   where     1. Rewrite the forcing using step functions.  The piecewise function becomes:   (Check: On it equals ; on it equals ; for it returns to .)  2. Apply the Laplace transform.  With , :   So the ODE becomes:   Since , we have:   3. Invert the non‑shifted kernel.  First compute   Do partial fractions:   Thus:   4. Apply the shifting theorem.  Using   the solution becomes:   with .  5. Final explicit form.    "
 },
 {
   "id": "ch-Textbook-16",
@@ -770,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch-Textbook-18.html#ParallelogramRule",
   "type": "Figure",
-  "number": "17",
+  "number": "19",
   "title": "",
   "body": " Vectors and .   A 2‑dimensional coordinate plot showing three arrows (vectors) originating from the origin. Each arrow points to a different point in the plane. The endpoints of the three arrows are connected with light line segments, forming a triangular shape. The horizontal axis is labeled x1x_1x1​ and the vertical axis is labeled x2x_2x2​. Tick marks along the axes show values from 1 to 4.   "
 },
@@ -779,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch-Textbook-18.html#Vectors1",
   "type": "Figure",
-  "number": "18",
+  "number": "20",
   "title": "",
   "body": " Sketch vectors , , and on the graph.   A square grid covering the region from −2 to 2 on the horizontal axis labeled x1​ and from −3 to 4 on the vertical axis labeled x2​. The grid lines form evenly spaced horizontal and vertical lines. The axes intersect at the origin, which is centered in the image. Tick marks along both axes show integer values.   "
 },
@@ -788,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch-Textbook-18.html#Vectors2",
   "type": "Figure",
-  "number": "19",
+  "number": "21",
   "title": "",
   "body": " An interesting grid for plotting vectors.   A coordinate plane labeled x1​ horizontally and x2​ vertically, extending from −8 to 8 on both axes. The grid is overlaid with a series of diagonal, evenly spaced parallel lines slanting upward from left to right, forming a diamond‑shaped lattice pattern across the plane.   "
 },
