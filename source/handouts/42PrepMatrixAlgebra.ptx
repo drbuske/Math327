@@ -112,7 +112,7 @@ A.2.2, A.2.3, A.2.4, A.2.5, A.2.103, A.2.105</url>.
         </li>
 
 
-        <li>
+ <!--       <li>
           <p>
             Try these additional questions.  If necessary, use AI to guide your thinking. 
           </p>
@@ -176,7 +176,7 @@ Compute <m>AB</m>, <m>(AB)^{T}</m>, <m>A^{T}B^{T}</m>, and <m>B^{T}A^{T}</m>.
 </li>
 
 </ol>
-</li>
+</li> -->
 
 
 <li>
@@ -420,6 +420,271 @@ Compute <m>AB</m>, <m>(AB)^{T}</m>, <m>A^{T}B^{T}</m>, and <m>B^{T}A^{T}</m>.
     </choice>
 
   </choices>
+</exercise>
+
+<exercise xml:id="matrix-dotproduct-relationship">
+  <statement>
+    <p>
+      What is the relationship between the dot product and matrix multiplication?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      If we regard vectors as column vectors, then for <m>\vec{x},\vec{y}\in\mathbb{R}^n</m> the dot product is
+    </p>
+    <me>
+      \vec{x}\cdot\vec{y} \;=\; \vec{x}^{\,T}\vec{y},
+    </me>
+    <p>
+      i.e., it is the matrix product of the row vector <m>\vec{x}^{\,T}</m> with the column vector <m>\vec{y}</m>.
+      More generally, the <m>(i,j)</m> entry of a product <m>AB</m> is the dot product of row <m>i</m> of <m>A</m> with column <m>j</m> of <m>B</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="matrix-column-vs-matrix-multiplication">
+  <statement>
+    <p>
+      What is the relationship between the product of a matrix <m>A</m> and a column vector and the product of <m>A</m> with another matrix <m>B</m>?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      If <m>\vec{x}</m> is a column vector, we can treat it as a matrix with one column, so <m>A\vec{x} = A[\vec{x}]</m> is just a special case of matrix multiplication.
+      More generally, if <m>B=[\vec{b}_1\ \vec{b}_2\ \cdots\ \vec{b}_k]</m>, then
+    </p>
+    <me>
+      AB \;=\; \big[\,A\vec{b}_1\ \ A\vec{b}_2\ \ \cdots\ \ A\vec{b}_k\,\big],
+    </me>
+    <p>
+      i.e., the columns of <m>AB</m> are the images of the columns of <m>B</m> under multiplication by <m>A</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="nonzero-not-necessarily-invertible">
+  <statement>
+    <p>
+      Are all <em>nonzero</em> matrices invertible? If not, give an example.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      No. A nonzero matrix can be singular (noninvertible). For example,
+    </p>
+    <me>
+      \begin{bmatrix}
+      1 \amp 0\\
+      0 \amp 0
+      \end{bmatrix}
+    </me>
+    <p>
+      is nonzero but not invertible (its determinant is <m>0</m>).
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="scale-and-add-matrices">
+  <statement>
+    <p>
+      Define
+      <m>A=\begin{bmatrix}4 \amp -2\\ 3 \amp -5\\ 0 \amp 1\end{bmatrix}</m>
+      and
+      <m>B=\begin{bmatrix}-4 \amp 2\\ -24 \amp 26\\ 6 \amp -7\end{bmatrix}</m>.
+      Compute <m>3A</m> and <m>A+B</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Scalar multiplication:
+    </p>
+    <me>
+      3A
+      =
+      \begin{bmatrix}
+      12 \amp -6\\
+      9 \amp -15\\
+      0 \amp 3
+      \end{bmatrix}.
+    </me>
+    <p>
+      Entry‑wise addition:
+    </p>
+    <md>
+      <mrow> A+B
+      \amp =
+      \begin{bmatrix}
+      4+(-4) \amp -2+2\\
+      3+(-24) \amp -5+26\\
+      0+6 \amp 1+(-7)
+      \end{bmatrix} </mrow>
+      <mrow> \amp =
+      \begin{bmatrix}
+      0 \amp 0\\
+      -21 \amp 21\\
+      6 \amp -6
+      \end{bmatrix}.</mrow>
+    </md>
+  </solution>
+</exercise>
+
+
+
+<exercise xml:id="sizes-of-AB-and-BA">
+  <statement>
+    <p>
+      If <m>A</m> is <m>4\times 3</m> and <m>B</m> is <m>3\times 2</m>, what are the sizes of <m>AB</m> and <m>BA</m>?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The product <m>AB</m> is defined (inner dimensions match: 3) and has size <m>4\times 2</m>.
+      The product <m>BA</m> is <em>not defined</em> because the inner dimensions would be <m>2</m> (from <m>B</m>) and <m>4</m> (from <m>A</m>), which do not match.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="compute-AB-2x3-by-3x2">
+  <statement>
+    <p>
+      Suppose
+      <m>A=\begin{bmatrix}2 \amp 3 \amp 6\\ -1 \amp 0 \amp 1\end{bmatrix}</m>
+      and
+      <m>B=\begin{bmatrix}2 \amp -3\\ 0 \amp 1\\ 4 \amp -7\end{bmatrix}</m>.
+      Compute <m>AB</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Multiply (2×3) by (3×2) to obtain a (2×2) matrix:
+    </p>
+    <md>
+      <mrow> AB
+      \amp =
+      \begin{bmatrix}
+      2\cdot 2 + 3\cdot 0 + 6\cdot 4 \amp 2\cdot(-3) + 3\cdot 1 + 6\cdot(-7)\\
+      (-1)\cdot 2 + 0\cdot 0 + 1\cdot 4 \amp (-1)\cdot(-3) + 0\cdot 1 + 1\cdot(-7)
+      \end{bmatrix} </mrow>
+      <mrow> \amp =
+      \begin{bmatrix}
+      28 \amp -45\\
+      2 \amp -4
+      \end{bmatrix}. </mrow>
+    </md>
+  </solution>
+</exercise>
+
+<exercise xml:id="AB-not-equal-BA-example">
+  <statement>
+    <p>
+      Use
+      <m>A=\begin{bmatrix}1 \amp 2 \amp 3\\ 4 \amp 5 \amp 6\end{bmatrix}</m>
+      and
+      <m>B=\begin{bmatrix}1 \amp 0\\ 1 \amp 0\\ -1 \amp -1\end{bmatrix}</m>
+      to demonstrate that <m>AB \ne BA</m> can happen.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, compute
+    </p>
+    <md>
+      <mrow> AB
+      \amp =
+      \begin{bmatrix}
+      1\cdot 1 + 2\cdot 1 + 3\cdot(-1) \amp 1\cdot 0 + 2\cdot 0 + 3\cdot(-1)\\
+      4\cdot 1 + 5\cdot 1 + 6\cdot(-1) \amp 4\cdot 0 + 5\cdot 0 + 6\cdot(-1)
+      \end{bmatrix} </mrow>
+      <mrow> \amp =
+      \begin{bmatrix}
+      0 \amp -3\\
+      3 \amp -6
+      \end{bmatrix}. </mrow>
+    </md>
+    <p>
+      Next, compute
+    </p>
+    <md>
+      <mrow> BA
+      \amp =
+      \begin{bmatrix}
+      1 \amp 0\\ 1 \amp 0\\ -1 \amp -1
+      \end{bmatrix}
+      \begin{bmatrix}
+      1 \amp 2 \amp 3\\ 4 \amp 5 \amp 6
+      \end{bmatrix} </mrow>
+      <mrow> \amp =
+      \begin{bmatrix}
+      1 \amp 2 \amp 3\\
+      1 \amp 2 \amp 3\\
+      -5 \amp -7 \amp -9
+      \end{bmatrix}. </mrow>
+    </md>
+    <p>
+      Since <m>AB</m> is <m>2\times 2</m> while <m>BA</m> is <m>3\times 3</m> (and the entries differ), clearly <m>AB\ne BA</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="transpose-and-product-check">
+  <statement>
+    <p>
+      Let
+      <m>A=\begin{bmatrix}1 \amp 2 \amp 0\\ 3 \amp 0 \amp 1\end{bmatrix}</m>
+      and
+      <m>B=\begin{bmatrix}1 \amp 2\\ 0 \amp 1\\ -2 \amp 4\end{bmatrix}</m>.
+      Compute <m>AB</m>, <m>(AB)^{T}</m>, <m>A^{T}B^{T}</m>, and <m>B^{T}A^{T}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p><strong>Product</strong> (2×3 by 3×2 gives 2×2):</p>
+    <md>
+      <mrow> AB
+      \amp =
+      \begin{bmatrix}
+      1\cdot 1 + 2\cdot 0 + 0\cdot(-2) \amp 1\cdot 2 + 2\cdot 1 + 0\cdot 4\\
+      3\cdot 1 + 0\cdot 0 + 1\cdot(-2) \amp 3\cdot 2 + 0\cdot 1 + 1\cdot 4
+      \end{bmatrix} </mrow>
+      <mrow> \amp =
+      \begin{bmatrix}
+      1 \amp 4\\
+      1 \amp 10
+      \end{bmatrix}.</mrow>
+    </md>
+    <p><strong>Transpose:</strong></p>
+    <me>
+      (AB)^{T} = 
+      \begin{bmatrix}
+      1 \amp 1\\
+      4 \amp 10
+      \end{bmatrix}.
+    </me>
+    <p><strong>Compute</strong> <m>A^{T}</m> and <m>B^{T}</m>:</p>
+    <me>
+      A^{T}=\begin{bmatrix}1 \amp 3\\ 2 \amp 0\\ 0 \amp 1\end{bmatrix},\qquad
+      B^{T}=\begin{bmatrix}1 \amp 0 \amp -2\\ 2 \amp 1 \amp 4\end{bmatrix}.
+    </me>
+    <p><strong>Products</strong> <m>A^{T}B^{T}</m> and <m>B^{T}A^{T}</m>:</p>
+    <me>
+       A^{T}B^{T}
+        =
+      \begin{bmatrix}
+      7 \amp 3 \amp 10\\
+      2 \amp 0 \amp -4\\
+      2 \amp 1 \amp 4
+      \end{bmatrix},
+      \qquad
+      B^{T}A^{T}
+      =
+      \begin{bmatrix}
+      1 \amp 1\\
+      4 \amp 10
+      \end{bmatrix}.
+    </me>
+    <p>
+      Note that <m>B^{T}A^{T}=(AB)^{T}</m>, illustrating the identity <m>(AB)^{T}=B^{T}A^{T}</m>.
+    </p>
+  </solution>
 </exercise>
 
 </exercises>
