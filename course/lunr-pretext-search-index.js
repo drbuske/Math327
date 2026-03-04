@@ -1546,7 +1546,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 3.3 - Convolution",
-  "body": " Daily Prep 3.3 - Convolution   Overview  In this section we learn about the convolution of two functions, a construction that lets us combine functions in a way that behaves very much like a product while being compatible with the Laplace transform. The section introduces the definition of convolution as an integral from 0 to , works through examples such as convolving exponentials or trigonometric functions, and highlights key algebraic properties including commutativity and associativity. Most importantly, we will see that the Laplace transform of a convolution is the product of the individual Laplace transforms, a fact that allows us to compute inverse Laplace transforms and solve differential equations involving general forcing functions.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the definition of the convolution  .    Compute simple convolutions using integration techniques such as integration by parts.    Recognize and apply the basic algebraic properties of convolution (commutativity, scalar multiplication, associativity).      Learn!  Complete the actions listed below.     Watch  Video 3.3.1: Convolutions (10:31) by Trevor Bazett.    (Optional) Watch video Intro to the Convolution and Using the Convolution to Find an Inverse Laplace Transform (10:56) by Mathispower4u.     Read  Subsection 3.3.1: The convolution .    (Optional) Watch video Find the Convolution of Two Functions (Integration by Parts Twice) (5:47) by Mathispower4u.    (Optional) Watch  Introduction to Using a Convolution to Solve an Initial Value Problem (5:58) by Mathispower4u.     Read  Subsection 3.3.2: Solving ODEs .    (Optional) Watch  Solve an Initial Value Problem Using Convolution (4:51) by Mathispower4u.    (Optional) Watch  Solving a Volterra Integral Equation (5:58) by Mathispower4u.     Read  Subsection 3.3.3: Volterra integral equation .    (Optional) Watch  Convolution (18:46) for a lecture on section 3.3.    (Optional) Watch  Using the Convolution Theorem to Do Laplace Transforms (18:09) from Math Al lDay by Dr. George Sweeney.     Do  Subsection 3.3.4: Exercises 3.3.1, 3.3.3, 3.3.7, 3.3.14, 3.3.16 .    Try these additional questions. If necessary, use AI to guide your thinking.     Theorem 3.3.1 sheds light on why we care to bother defining the convolution. In your own words, describe the purpose of defining a convolution product.    Let for , and . Compute the convolution product .     Solve the Volterra Integral Equation         Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use the convolution theorem to compute inverse Laplace transforms.    Apply convolution to solve linear ODEs with general forcing functions expressed through Laplace transforms.    Decompose rational expressions into Laplace-transformable factors and interpret solutions as convolutions of known functions.     "
+  "body": " Daily Prep 3.3 - Convolution   Overview  In this section we learn about the convolution of two functions, a construction that lets us combine functions in a way that behaves very much like a product while being compatible with the Laplace transform. The section introduces the definition of convolution as an integral from 0 to , works through examples such as convolving exponentials or trigonometric functions, and highlights key algebraic properties including commutativity and associativity. Most importantly, we will see that the Laplace transform of a convolution is the product of the individual Laplace transforms, a fact that allows us to compute inverse Laplace transforms and solve differential equations involving general forcing functions.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand the definition of the convolution  .    Compute simple convolutions using integration techniques such as integration by parts.    Recognize and apply the basic algebraic properties of convolution (commutativity, scalar multiplication, associativity).      Learn!  Complete the actions listed below.     Watch  Video 3.3.1: Convolutions (10:31) by Trevor Bazett.    (Optional) Watch video Intro to the Convolution and Using the Convolution to Find an Inverse Laplace Transform (10:56) by Mathispower4u.     Read  Subsection 3.3.1: The convolution .    (Optional) Watch video Find the Convolution of Two Functions (Integration by Parts Twice) (5:47) by Mathispower4u.    (Optional) Watch  Introduction to Using a Convolution to Solve an Initial Value Problem (5:58) by Mathispower4u.     Read  Subsection 3.3.2: Solving ODEs .    (Optional) Watch  Solve an Initial Value Problem Using Convolution (4:51) by Mathispower4u.    (Optional) Watch  Solving a Volterra Integral Equation (5:58) by Mathispower4u.     Read  Subsection 3.3.3: Volterra integral equation .    (Optional) Watch  Convolution (18:46) for a lecture on section 3.3.    (Optional) Watch  Using the Convolution Theorem to Do Laplace Transforms (18:09) from Math Al lDay by Dr. George Sweeney.     Do  Subsection 3.3.4: Exercises 3.3.1, 3.3.3, 3.3.7, 3.3.14, 3.3.16 .      Do MyOpenMath questions from this section.     Exercises   Definition of Convolution   The convolution of two functions and (for ) is defined as:         Correct. This is exactly the definition of convolution.      No—convolution is not pointwise multiplication.     No—this describes an inner product, not convolution.      Understanding Example 3.3.1   In Example 3.3.1 , the convolution of and is computed. Which statement below is true about ?      It equals after evaluating the integral.    Correct. Example 3.3.1 shows that .     It equals with no subtraction.  No—an integration by parts yields a correction term.    It equals .  No—there is no polynomial result here.      Laplace Transform of a Convolution   What does the Convolution Theorem state?       Correct. The Laplace transform of a convolution is the product of the transforms.      No—the theorem involves multiplication, not addition.     No—division does not appear in the convolution theorem.      Basic Properties of Convolution   Which of the following is a true property of convolution?       Correct. Convolution is commutative.     .  No—this is false unless is a delta function.     No—convolution distributes over addition with a plus, not a minus.      Using the Convolution Theorem   To compute , we can recognize the expression as      The product , whose inverse transform is the convolution of and .    Correct. .     The sum of two transforms.  No—it is a product of transforms.    A quotient .  No—we do not use division for convolution.        Theorem 3.3.1 sheds light on why we care to bother defining the convolution. In your own words, describe the purpose of defining a convolution product.    The convolution is defined so that its Laplace transform becomes the product of the Laplace transforms of the original functions. In other words,   which is Theorem 3.3.1 . This is extremely useful because it lets us take an inverse Laplace transform of a product by converting that product into a convolution integral of simpler functions whose inverse transforms we already know. The convolution therefore provides a way to solve differential equations and compute inverse transforms that would be very difficult otherwise.      Let for and . Compute the convolution product .    By definition of convolution,   The factor equals 1 exactly when , i.e. . Therefore the integral becomes:   Compute the integral:   Therefore,       Solve the Volterra integral equation     1. Apply the Laplace transform.  Let . Using the convolution theorem:   Also . Taking the Laplace transform of the entire equation gives   2. Solve for .   Compute the factor:   Thus:   3. Invert the transform.  Rewrite to match the denominator:   Therefore:   The inverse Laplace transform of is .  4. Invert the second term.  Note that . Thus the denominator corresponds to a damped sinusoid:    Carefully decomposing the fraction and inverting gives the final solution:   One may check directly (by differentiating and substituting) that this function satisfies the original integral equation.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use the convolution theorem to compute inverse Laplace transforms.    Apply convolution to solve linear ODEs with general forcing functions expressed through Laplace transforms.    Decompose rational expressions into Laplace-transformable factors and interpret solutions as convolutions of known functions.     "
 },
 {
   "id": "ch-Textbook-16-2-2",
@@ -1558,13 +1558,85 @@ var ptx_lunr_docs = [
   "body": "convolution "
 },
 {
+  "id": "conv-mcq-1",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-mcq-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Definition of Convolution.",
+  "body": " Definition of Convolution   The convolution of two functions and (for ) is defined as:         Correct. This is exactly the definition of convolution.      No—convolution is not pointwise multiplication.     No—this describes an inner product, not convolution.    "
+},
+{
+  "id": "conv-mcq-2",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-mcq-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Understanding Example 3.3.1.",
+  "body": " Understanding Example 3.3.1   In Example 3.3.1 , the convolution of and is computed. Which statement below is true about ?      It equals after evaluating the integral.    Correct. Example 3.3.1 shows that .     It equals with no subtraction.  No—an integration by parts yields a correction term.    It equals .  No—there is no polynomial result here.    "
+},
+{
+  "id": "conv-mcq-3",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-mcq-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Laplace Transform of a Convolution.",
+  "body": " Laplace Transform of a Convolution   What does the Convolution Theorem state?       Correct. The Laplace transform of a convolution is the product of the transforms.      No—the theorem involves multiplication, not addition.     No—division does not appear in the convolution theorem.    "
+},
+{
+  "id": "conv-mcq-4",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-mcq-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Basic Properties of Convolution.",
+  "body": " Basic Properties of Convolution   Which of the following is a true property of convolution?       Correct. Convolution is commutative.     .  No—this is false unless is a delta function.     No—convolution distributes over addition with a plus, not a minus.    "
+},
+{
+  "id": "conv-mcq-5",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-mcq-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Using the Convolution Theorem.",
+  "body": " Using the Convolution Theorem   To compute , we can recognize the expression as      The product , whose inverse transform is the convolution of and .    Correct. .     The sum of two transforms.  No—it is a product of transforms.    A quotient .  No—we do not use division for convolution.    "
+},
+{
+  "id": "conv-purpose",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-purpose",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "   Theorem 3.3.1 sheds light on why we care to bother defining the convolution. In your own words, describe the purpose of defining a convolution product.    The convolution is defined so that its Laplace transform becomes the product of the Laplace transforms of the original functions. In other words,   which is Theorem 3.3.1 . This is extremely useful because it lets us take an inverse Laplace transform of a product by converting that product into a convolution integral of simpler functions whose inverse transforms we already know. The convolution therefore provides a way to solve differential equations and compute inverse transforms that would be very difficult otherwise.   "
+},
+{
+  "id": "conv-ft2-ut1",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-ft2-ut1",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Let for and . Compute the convolution product .    By definition of convolution,   The factor equals 1 exactly when , i.e. . Therefore the integral becomes:   Compute the integral:   Therefore,    "
+},
+{
+  "id": "conv-volterra",
+  "level": "2",
+  "url": "ch-Textbook-16.html#conv-volterra",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Solve the Volterra integral equation     1. Apply the Laplace transform.  Let . Using the convolution theorem:   Also . Taking the Laplace transform of the entire equation gives   2. Solve for .   Compute the factor:   Thus:   3. Invert the transform.  Rewrite to match the denominator:   Therefore:   The inverse Laplace transform of is .  4. Invert the second term.  Note that . Thus the denominator corresponds to a damped sinusoid:    Carefully decomposing the fraction and inverting gives the final solution:   One may check directly (by differentiating and substituting) that this function satisfies the original integral equation.   "
+},
+{
   "id": "ch-Textbook-17",
   "level": "1",
   "url": "ch-Textbook-17.html",
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 3.4 - Dirac Delta and Impulse Response",
-  "body": " Daily Prep 3.4 - Dirac Delta and Impulse Response   Overview  In this section we explore the idea of modeling instantaneous “impulses” using the Dirac delta, a generalized function that concentrates all its mass at a single point. The section begins by examining short rectangular pulses and their Laplace transforms, then shows how letting the pulse width approach zero leads to the definition of the delta function, an object meaningful only under an integral sign. You will learn how captures the effect of a sudden input—analogous to striking a system with a hammer—and how its Laplace transform allows us to analyze impulse responses of differential‑equation models.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand how a short rectangular pulse is defined and how its Laplace transform is computed.    Explain why the Dirac delta is not a classical function but a generalized function defined via integrals.    Recognize that the delta function represents a unit‑mass impulse concentrated at a single point in time.      Learn!  Complete the actions listed below.     Watch  Video 3.4.1: The Delta Function (9:25) by Trevor Bazett.     Read  Subsection 3.4.1: Rectangular pulse .     Read  Subsection 3.4.2: The delta function .    (Optional) Watch video Dirac Delta Function (17:47) from Khan Academy.     Read  Subsection 3.4.3: Impulse response .     Watch  Video 3.4.2: Laplace Transform of Periodic Functions (7:48) by Trevor Bazett.     Watch  Video 3.4.3: The Laplace Transform of IVPs with Periodic Delta Functions (10:19) by Trevor Bazett.     Read  Subsection 3.4.3: Impulse response .     Do  Subsection 3.4.6: Exercises 3.4.1, 3.4.2, 3.4.4, 3.4.8 .    Try these additional questions. If necessary, use AI to guide your thinking.    Sometimes the dirac delta function of section 3.4 is called a distribution. Which terminology do you prefer and why?    Solve (find the impulse response) , , .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use limits of shrinking rectangular pulses to justify the formal properties of .    Apply the Laplace transform of the Dirac delta to solve differential equations with impulsive forcing.    Interpret impulse responses to understand how a system reacts to instantaneous inputs and generalize this to more complex inputs.     "
+  "body": " Daily Prep 3.4 - Dirac Delta and Impulse Response   Overview  In this section we explore the idea of modeling instantaneous “impulses” using the Dirac delta, a generalized function that concentrates all its mass at a single point. The section begins by examining short rectangular pulses and their Laplace transforms, then shows how letting the pulse width approach zero leads to the definition of the delta function, an object meaningful only under an integral sign. You will learn how captures the effect of a sudden input—analogous to striking a system with a hammer—and how its Laplace transform allows us to analyze impulse responses of differential‑equation models.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand how a short rectangular pulse is defined and how its Laplace transform is computed.    Explain why the Dirac delta is not a classical function but a generalized function defined via integrals.    Recognize that the delta function represents a unit‑mass impulse concentrated at a single point in time.      Learn!  Complete the actions listed below.     Watch  Video 3.4.1: The Delta Function (9:25) by Trevor Bazett.     Read  Subsection 3.4.1: Rectangular pulse .     Read  Subsection 3.4.2: The delta function .    (Optional) Watch video Dirac Delta Function (17:47) from Khan Academy.     Read  Subsection 3.4.3: Impulse response .     Watch  Video 3.4.2: Laplace Transform of Periodic Functions (7:48) by Trevor Bazett.     Watch  Video 3.4.3: The Laplace Transform of IVPs with Periodic Delta Functions (10:19) by Trevor Bazett.     Read  Subsection 3.4.3: Impulse response .     Do  Subsection 3.4.6: Exercises 3.4.1, 3.4.2, 3.4.4, 3.4.8 .      Do MyOpenMath questions from this section.     Exercises    Sometimes the Dirac delta function introduced in Section 3.4 is called a distribution . Which terminology do you prefer, and why?    Mathematically, the Dirac delta cannot be treated as an ordinary function, because it does not have a pointwise value and its defining property holds only when understood in the sense of linear functionals acting on test functions. Calling a distribution emphasizes this correct mathematical nature.  On the other hand, in engineering, physics, and applied differential equations, the word delta function is often more intuitive: it suggests an “impulse concentrated at a single moment.” When solving ODEs via Laplace transforms, thinking of as an impulse is often the most natural way to interpret it.  Your personal preference may depend on context:  “Distribution” — when emphasizing rigor or explaining why is not an ordinary function.  “Delta function” — when working on applied problems, impulse response, or Laplace transforms, where the operational meaning is clear and useful.       Interpretation of the Dirac Delta   How is the Dirac delta interpreted?      A concentrated unit impulse at that inputs “1 unit of area” instantaneously.    Correct. Section 3.4 treats as an idealized impulse with total area 1.     A function equal to infinity for all .  No—it is zero everywhere except at a single instant.    An ordinary continuous function.  No—the delta is not a classical function; it is a distribution.      Laplace Transform of   What is the Laplace transform of ?       Correct. .      No—the delta transform is constant, not growing with .     No—that is the transform of , not .      Transform of a Shifted Delta   What is the Laplace transform of the shifted delta for ?       Correct. The delta \"picks out\" the value at , giving .     No—the factor does not appear.    No—the Laplace transform is not another delta distribution.      Meaning of Impulse Response   What does the impulse response of a linear ODE represent?      The solution of the ODE when the input is a delta impulse .    Correct. The impulse response is the solution when the forcing is .     The solution for an arbitrary forcing .  No—that is the general forced solution, not specifically the impulse response.    The steady-state response only.  No—the impulse response includes transient behavior as well.      Simple Impulse‑Driven ODE   Consider the IVP , , . What is , the Laplace transform of the solution?         Correct. Laplace transforming gives , hence .      No—that corresponds to initial velocity, not a delta input.     No—the transform must include the system’s denominator .       Compute the Laplace transform of . Then, compute the Laplace transform of .   We have  Therefore:   Linearity of the Laplace transform gives:       Solve the IVP   (This solution is the impulse response of the system.)    1. Take Laplace transforms.  The Laplace transform of is . Also, .   Solve for :   2. Invert the transform.  The inverse Laplace transform of is .  This satisfies the jump condition created by the delta impulse at , and it obeys the initial condition in the appropriate distributional sense.      Solve the IVP (find the impulse response)     1. Take the Laplace transform of the ODE.  Using the formulas and , and given , , we obtain:   Factor the left-hand side:   Hence   2. Complete the square.   Therefore   3. Use the standard inverse Laplace transform  The formula applies with and .   This satisfies the ODE in the distributional sense and obeys the initial conditions exactly.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use limits of shrinking rectangular pulses to justify the formal properties of .    Apply the Laplace transform of the Dirac delta to solve differential equations with impulsive forcing.    Interpret impulse responses to understand how a system reacts to instantaneous inputs and generalize this to more complex inputs.     "
 },
 {
   "id": "ch-Textbook-17-3-3-2-1",
@@ -1576,49 +1648,238 @@ var ptx_lunr_docs = [
   "body": "generalized function "
 },
 {
+  "id": "delta-vs-distribution",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-vs-distribution",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Sometimes the Dirac delta function introduced in Section 3.4 is called a distribution . Which terminology do you prefer, and why?    Mathematically, the Dirac delta cannot be treated as an ordinary function, because it does not have a pointwise value and its defining property holds only when understood in the sense of linear functionals acting on test functions. Calling a distribution emphasizes this correct mathematical nature.  On the other hand, in engineering, physics, and applied differential equations, the word delta function is often more intuitive: it suggests an “impulse concentrated at a single moment.” When solving ODEs via Laplace transforms, thinking of as an impulse is often the most natural way to interpret it.  Your personal preference may depend on context:  “Distribution” — when emphasizing rigor or explaining why is not an ordinary function.  “Delta function” — when working on applied problems, impulse response, or Laplace transforms, where the operational meaning is clear and useful.     "
+},
+{
+  "id": "delta-mcq-1",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-mcq-1",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Interpretation of the Dirac Delta.",
+  "body": " Interpretation of the Dirac Delta   How is the Dirac delta interpreted?      A concentrated unit impulse at that inputs “1 unit of area” instantaneously.    Correct. Section 3.4 treats as an idealized impulse with total area 1.     A function equal to infinity for all .  No—it is zero everywhere except at a single instant.    An ordinary continuous function.  No—the delta is not a classical function; it is a distribution.    "
+},
+{
+  "id": "delta-mcq-2",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-mcq-2",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Laplace Transform of <span class=\"process-math\">\\(\\delta(t)\\)<\/span>.",
+  "body": " Laplace Transform of   What is the Laplace transform of ?       Correct. .      No—the delta transform is constant, not growing with .     No—that is the transform of , not .    "
+},
+{
+  "id": "delta-mcq-3",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-mcq-3",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Transform of a Shifted Delta.",
+  "body": " Transform of a Shifted Delta   What is the Laplace transform of the shifted delta for ?       Correct. The delta \"picks out\" the value at , giving .     No—the factor does not appear.    No—the Laplace transform is not another delta distribution.    "
+},
+{
+  "id": "delta-mcq-4",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-mcq-4",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Meaning of Impulse Response.",
+  "body": " Meaning of Impulse Response   What does the impulse response of a linear ODE represent?      The solution of the ODE when the input is a delta impulse .    Correct. The impulse response is the solution when the forcing is .     The solution for an arbitrary forcing .  No—that is the general forced solution, not specifically the impulse response.    The steady-state response only.  No—the impulse response includes transient behavior as well.    "
+},
+{
+  "id": "delta-mcq-5",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-mcq-5",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Simple Impulse‑Driven ODE.",
+  "body": " Simple Impulse‑Driven ODE   Consider the IVP , , . What is , the Laplace transform of the solution?         Correct. Laplace transforming gives , hence .      No—that corresponds to initial velocity, not a delta input.     No—the transform must include the system’s denominator .    "
+},
+{
+  "id": "delta-open-1",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-open-1",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Compute the Laplace transform of . Then, compute the Laplace transform of .   We have  Therefore:   Linearity of the Laplace transform gives:    "
+},
+{
+  "id": "delta-open-2",
+  "level": "2",
+  "url": "ch-Textbook-17.html#delta-open-2",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Solve the IVP   (This solution is the impulse response of the system.)    1. Take Laplace transforms.  The Laplace transform of is . Also, .   Solve for :   2. Invert the transform.  The inverse Laplace transform of is .  This satisfies the jump condition created by the delta impulse at , and it obeys the initial condition in the appropriate distributional sense.   "
+},
+{
+  "id": "impulse-response-delta",
+  "level": "2",
+  "url": "ch-Textbook-17.html#impulse-response-delta",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Solve the IVP (find the impulse response)     1. Take the Laplace transform of the ODE.  Using the formulas and , and given , , we obtain:   Factor the left-hand side:   Hence   2. Complete the square.   Therefore   3. Use the standard inverse Laplace transform  The formula applies with and .   This satisfies the ODE in the distributional sense and obeys the initial conditions exactly.   "
+},
+{
   "id": "ch-Textbook-18",
   "level": "1",
   "url": "ch-Textbook-18.html",
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 4.1 - Vectors, Mappings, and Matrices",
-  "body": " Daily Prep 4.1 - Vectors, Mappings, and Matrices   Overview  In this section we will learn how vectors, linear mappings, and matrices provide a systematic way to organize and solve problems involving many variables. The text motivates linear algebra by showing how even simple systems of equations generalize to high‑dimensional settings, where matrices and vector operations become essential tools. You will explore n‑dimensional space, interpret vectors as geometric arrows, and see how linear equations, functions, and differential‑equation models all benefit from a unified matrix‑based framework.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand vectors as n‑tuples representing points or arrows in n‑dimensional space.    Recognize how systems of linear equations can be organized and solved more systematically using matrices .    Interpret basic vector operations such as addition and scalar multiplication .      Learn!  Complete the actions listed below.    (Optional) Watch  What is a Vector? (4:40) by David Huynh.     Read  Subsection A.1.1: Vectors and operations on vectors .    (Optional) Do interact with the applet Adding Vectors Geometrically by Tim Brzezinski.    (Optional) Do interact with the applet Scalar Multiplication by Peter Sassman.    (Optional) Watch  Linear Transformations and Matrices (10:58) by 3Blue1Brown.     Read  Subsection A.1.2: Linear mappings and matrices .    (Optional) Watch video Linear Tranformations on Vector Spaces (9:10) by Professor Dave Explains.     Do  Subsection A.1.3: Exercises A.1.1, A.1.3, A.1.4, A.1.5, A.1.6, A.1.7, A.1.8, A.1.10, A.1.11 .    Try these additional questions. If necessary, use AI to guide your thinking.    In your own words, describe what a linear operator is.    Give another word for magnitude (as it pertains to vectors).     Here the author makes a completely false statement in the text: The reason these are called a basis is that every other vector can be written as a linear combination of them. Use AI or do a Google search on `basis', `linearly independent', and `span' and attempt to explain what is wrong with this sentence in the textbook.     At one point in the reading , the author states: Hence, we may think of matrices being linear mappings, and linear mappings being matrices. . He is quick to correct this. Thinking of the linear mapping , do you see why? Extra Credit: Can you describe an infinite-dimensional matrix that could represent for smooth functions ? Hint: Think Taylor series.     Label the vectors , , and in .   Vectors and .   A 2‑dimensional coordinate plot showing three arrows (vectors) originating from the origin. Each arrow points to a different point in the plane. The endpoints of the three arrows are connected with light line segments, forming a triangular shape. The horizontal axis is labeled x1x_1x1​ and the vertical axis is labeled x2x_2x2​. Tick marks along the axes show values from 1 to 4.       Let . Express , , and on the graph.   Sketch vectors , , and on the graph.   A square grid covering the region from −2 to 2 on the horizontal axis labeled x1​ and from −3 to 4 on the vertical axis labeled x2​. The grid lines form evenly spaced horizontal and vertical lines. The axes intersect at the origin, which is centered in the image. Tick marks along both axes show integer values.      Let and . Express each of the following as a linear combination of and .   An interesting grid for plotting vectors.   A coordinate plane labeled x1​ horizontally and x2​ vertically, extending from −8 to 8 on both axes. The grid is overlaid with a series of diagonal, evenly spaced parallel lines slanting upward from left to right, forming a diamond‑shaped lattice pattern across the plane.                       Suppose a linear mapping takes to and it takes to . Write down the matrix representing the mapping .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze how linear mappings transform vectors and how these mappings can be represented using matrices.    Apply matrix methods to organize and simplify large systems, including those arising from differential equations.    Develop geometric and algebraic intuition for high‑dimensional vector spaces and the role of linear structure in modeling real‑world problems.     "
+  "body": " Daily Prep 4.1 - Vectors, Mappings, and Matrices   Overview  In this section we will learn how vectors, linear mappings, and matrices provide a systematic way to organize and solve problems involving many variables. The text motivates linear algebra by showing how even simple systems of equations generalize to high‑dimensional settings, where matrices and vector operations become essential tools. You will explore n‑dimensional space, interpret vectors as geometric arrows, and see how linear equations, functions, and differential‑equation models all benefit from a unified matrix‑based framework.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand vectors as n‑tuples representing points or arrows in n‑dimensional space.    Recognize how systems of linear equations can be organized and solved more systematically using matrices .    Interpret basic vector operations such as addition and scalar multiplication .      Learn!  Complete the actions listed below.    (Optional) Watch  What is a Vector? (4:40) by David Huynh.     Read  Subsection A.1.1: Vectors and operations on vectors .    (Optional) Do interact with the applet Adding Vectors Geometrically by Tim Brzezinski.    (Optional) Do interact with the applet Scalar Multiplication by Peter Sassman.    (Optional) Watch  Linear Transformations and Matrices (10:58) by 3Blue1Brown.     Read  Subsection A.1.2: Linear mappings and matrices .    (Optional) Watch video Linear Tranformations on Vector Spaces (9:10) by Professor Dave Explains.     Do  Subsection A.1.3: Exercises A.1.1, A.1.3, A.1.4, A.1.5, A.1.6, A.1.7, A.1.8, A.1.10, A.1.11 .          Do MyOpenMath questions from this section.     Exercises   Meaning of a Vector   An expression like represents:      A point or vector in .    Correct. An -tuple as a vector in .     A single real number.  No—this notation represents multiple components.    A 2‑dimensional point only.  No—it generalizes to any dimension.      Adding Vectors   Let and . Compute .         Correct. Vectors are added component‑wise.     Incorrect third component.    No—this is not componentwise addition.      Scalar Multiplication   Compute where .         Correct. Multiply each component by the scalar.     Only the first component was scaled.    Incorrect scaling of the second and third components.      Definition of a Linear Mapping   A mapping is linear if:       and .    Correct. This is the definition of linearity.    T must preserve vector lengths.  No—only orthogonal mappings do that.   T must output a scalar.  No—it outputs vectors in .      Columns of a Matrix   For a linear mapping , what does each column of represent?      The vector , the image of the -th standard basis vector.    Correct. Columns of are .    The eigenvalues of .  No—eigenvalues are not arranged as columns.   Randomly chosen vectors.  No—each column encodes fully.      Matrix–Vector Multiplication   Let and . Compute .       Correct: , .     No—these are row sums, not .    No—that is just .      Writing a System as   The system , can be written as . What is ?           Correct. The rows contain the coefficients of the system.      No—the coefficients are incorrect.     No—that would yield the trivial system .      Dimension of   What is the dimension of ?     5   Correct. consists of all -tuples of real numbers.    4  No—there are five components.   10  No—this might be confused with combinations; not relevant here.       In your own words, describe what a linear operator is.    A linear operator is a function that takes a vector as input and outputs another vector, while preserving the two key properties of linearity:   for all vectors and scalars . If the operator maps a vector space to itself (for example, ), then it is called a linear operator rather than just a linear mapping . In finite dimensions, these are exactly the operations that can be represented by matrices.      Give another word for the magnitude of a vector.    Another common word for the magnitude of a vector is its length . In linear algebra, magnitude is also called the norm of the vector.      In the text, the author writes the (incorrect) statement: “The reason these are called a basis is that every other vector can be written as a linear combination of them.” Explain precisely what is wrong with this statement, using the correct definitions of basis , span , and linear independence .    What the author wrote is only half of the definition of a basis. For a set of vectors to be a basis for a vector space, two things must be true:    Span: Every vector in the space can be written as a linear combination of .    Linear independence: No nontrivial linear combination of the vectors equals the zero vector.    The author’s sentence mentions only the spanning property, but not the requirement of linear independence. Without linear independence, a spanning set is just a spanning set , not a basis. For example, in , the vectors   span but are not linearly independent, so they do not form a basis. A correct definition requires both spanning and linear independence.      The textbook says: “Hence, we may think of matrices being linear mappings, and linear mappings being matrices.” Then it immediately warns this is not always true. Using the linear operator on smooth functions, explain why a general linear mapping is not always representable by a finite matrix. Extra credit: Describe an infinite-dimensional “matrix” that represents using Taylor series ideas.    On a finite-dimensional vector space such as , every linear mapping can be represented by some matrix. But the mapping acts on a space of smooth functions, which is infinite-dimensional . There is no finite list of basis vectors, so there is no finite matrix that could represent .   Extra credit idea: If a smooth function is written as a Taylor series   then   In the basis , differentiation is represented by an infinite matrix:   This “matrix” is infinite in extent, reflecting the fact that the underlying vector space is infinite-dimensional. That is why not all linear mappings are representable by finite matrices.      Label the vectors , , and in .   Vectors and (unlabeled for the exercise).   A 2D coordinate plot showing three arrows from the origin to (1,3), (2,1), and (3,4), with light auxiliary segments forming the parallelogram rule construction. Axes are labeled (horizontal) and (vertical); ticks 0–4.       Computation. We have   The sum is drawn from the origin to . shows the labels placed along each arrow.   Labeled vectors , , and .      Thus the required labels are:  along the arrow to ,  along the arrow to , and  along the arrow to .  The faint segments complete the parallelogram rule construction.      Let . Express (draw) , , and on the graph in .   Sketch vectors , , and on this grid.   A square grid for from −2 to 2 and from −3 to 4 with axes crossing at the origin. Ticks mark each integer; no vectors are drawn here (students add them).       Compute the scaled vectors:   The figure below places arrows from the origin to the endpoints , , and , and labels each vector.   Labeled plot of , , and .      Hence the three vectors are correctly drawn to the points , , and , respectively.      Let and . Express each of the following vectors as a linear combination of and .   An interesting grid for plotting vectors.   A coordinate plane on x1,x2 from -8 to 8. The grid consists of evenly spaced parallel lines in two directions: one set with slope 1\/2 (parallel to v1) and one set with slope -1 (parallel to v2).            We solve for scalars such that:      1) For   From the first equation . Substitute:   Thus .      2) For   Divide first eqn by 2: .   Subtract the first from the second: so . Then , so .      3) For   Divide first eqn: .   Subtract: → . Then → .      The following plot shows the three vectors placed on the same lattice:   Vectors expressed in the basis .          Suppose a linear mapping takes to and takes to . Write down the matrix representing (with respect to the standard bases).    In the standard bases, the matrix of a linear map has as its columns the images of the standard basis vectors and . Therefore,   Hence the matrix of (with respect to the standard bases of and ) is        Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Analyze how linear mappings transform vectors and how these mappings can be represented using matrices.    Apply matrix methods to organize and simplify large systems, including those arising from differential equations.    Develop geometric and algebraic intuition for high‑dimensional vector spaces and the role of linear structure in modeling real‑world problems.     "
 },
 {
-  "id": "sec-Toprepareforclass41-3-9-2-2-1",
+  "id": "vec-mcq-1",
   "level": "2",
-  "url": "ch-Textbook-18.html#sec-Toprepareforclass41-3-9-2-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "magnitude "
+  "url": "ch-Textbook-18.html#vec-mcq-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Meaning of a Vector.",
+  "body": " Meaning of a Vector   An expression like represents:      A point or vector in .    Correct. An -tuple as a vector in .     A single real number.  No—this notation represents multiple components.    A 2‑dimensional point only.  No—it generalizes to any dimension.    "
 },
 {
-  "id": "ParallelogramRule",
+  "id": "vec-mcq-2",
   "level": "2",
-  "url": "ch-Textbook-18.html#ParallelogramRule",
-  "type": "Figure",
-  "number": "19",
-  "title": "",
-  "body": " Vectors and .   A 2‑dimensional coordinate plot showing three arrows (vectors) originating from the origin. Each arrow points to a different point in the plane. The endpoints of the three arrows are connected with light line segments, forming a triangular shape. The horizontal axis is labeled x1x_1x1​ and the vertical axis is labeled x2x_2x2​. Tick marks along the axes show values from 1 to 4.   "
+  "url": "ch-Textbook-18.html#vec-mcq-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Adding Vectors.",
+  "body": " Adding Vectors   Let and . Compute .         Correct. Vectors are added component‑wise.     Incorrect third component.    No—this is not componentwise addition.    "
 },
 {
-  "id": "Vectors1",
+  "id": "vec-mcq-3",
   "level": "2",
-  "url": "ch-Textbook-18.html#Vectors1",
-  "type": "Figure",
-  "number": "20",
-  "title": "",
-  "body": " Sketch vectors , , and on the graph.   A square grid covering the region from −2 to 2 on the horizontal axis labeled x1​ and from −3 to 4 on the vertical axis labeled x2​. The grid lines form evenly spaced horizontal and vertical lines. The axes intersect at the origin, which is centered in the image. Tick marks along both axes show integer values.   "
+  "url": "ch-Textbook-18.html#vec-mcq-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Scalar Multiplication.",
+  "body": " Scalar Multiplication   Compute where .         Correct. Multiply each component by the scalar.     Only the first component was scaled.    Incorrect scaling of the second and third components.    "
 },
 {
-  "id": "Vectors2",
+  "id": "vec-mcq-4",
   "level": "2",
-  "url": "ch-Textbook-18.html#Vectors2",
-  "type": "Figure",
-  "number": "21",
+  "url": "ch-Textbook-18.html#vec-mcq-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Definition of a Linear Mapping.",
+  "body": " Definition of a Linear Mapping   A mapping is linear if:       and .    Correct. This is the definition of linearity.    T must preserve vector lengths.  No—only orthogonal mappings do that.   T must output a scalar.  No—it outputs vectors in .    "
+},
+{
+  "id": "vec-mcq-5",
+  "level": "2",
+  "url": "ch-Textbook-18.html#vec-mcq-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Columns of a Matrix.",
+  "body": " Columns of a Matrix   For a linear mapping , what does each column of represent?      The vector , the image of the -th standard basis vector.    Correct. Columns of are .    The eigenvalues of .  No—eigenvalues are not arranged as columns.   Randomly chosen vectors.  No—each column encodes fully.    "
+},
+{
+  "id": "vec-mcq-6",
+  "level": "2",
+  "url": "ch-Textbook-18.html#vec-mcq-6",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Matrix–Vector Multiplication.",
+  "body": " Matrix–Vector Multiplication   Let and . Compute .       Correct: , .     No—these are row sums, not .    No—that is just .    "
+},
+{
+  "id": "vec-mcq-7",
+  "level": "2",
+  "url": "ch-Textbook-18.html#vec-mcq-7",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Writing a System as <span class=\"process-math\">\\(A\\vec{x}=\\vec{b}\\)<\/span>.",
+  "body": " Writing a System as   The system , can be written as . What is ?           Correct. The rows contain the coefficients of the system.      No—the coefficients are incorrect.     No—that would yield the trivial system .    "
+},
+{
+  "id": "vec-mcq-8",
+  "level": "2",
+  "url": "ch-Textbook-18.html#vec-mcq-8",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Dimension of <span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span>.",
+  "body": " Dimension of   What is the dimension of ?     5   Correct. consists of all -tuples of real numbers.    4  No—there are five components.   10  No—this might be confused with combinations; not relevant here.    "
+},
+{
+  "id": "linop-definition",
+  "level": "2",
+  "url": "ch-Textbook-18.html#linop-definition",
+  "type": "Exercise",
+  "number": "9",
   "title": "",
-  "body": " An interesting grid for plotting vectors.   A coordinate plane labeled x1​ horizontally and x2​ vertically, extending from −8 to 8 on both axes. The grid is overlaid with a series of diagonal, evenly spaced parallel lines slanting upward from left to right, forming a diamond‑shaped lattice pattern across the plane.   "
+  "body": "  In your own words, describe what a linear operator is.    A linear operator is a function that takes a vector as input and outputs another vector, while preserving the two key properties of linearity:   for all vectors and scalars . If the operator maps a vector space to itself (for example, ), then it is called a linear operator rather than just a linear mapping . In finite dimensions, these are exactly the operations that can be represented by matrices.   "
+},
+{
+  "id": "magnitude-synonym",
+  "level": "2",
+  "url": "ch-Textbook-18.html#magnitude-synonym",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Give another word for the magnitude of a vector.    Another common word for the magnitude of a vector is its length . In linear algebra, magnitude is also called the norm of the vector.   "
+},
+{
+  "id": "basis-error-explanation",
+  "level": "2",
+  "url": "ch-Textbook-18.html#basis-error-explanation",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  In the text, the author writes the (incorrect) statement: “The reason these are called a basis is that every other vector can be written as a linear combination of them.” Explain precisely what is wrong with this statement, using the correct definitions of basis , span , and linear independence .    What the author wrote is only half of the definition of a basis. For a set of vectors to be a basis for a vector space, two things must be true:    Span: Every vector in the space can be written as a linear combination of .    Linear independence: No nontrivial linear combination of the vectors equals the zero vector.    The author’s sentence mentions only the spanning property, but not the requirement of linear independence. Without linear independence, a spanning set is just a spanning set , not a basis. For example, in , the vectors   span but are not linearly independent, so they do not form a basis. A correct definition requires both spanning and linear independence.   "
+},
+{
+  "id": "linmap-vs-matrix",
+  "level": "2",
+  "url": "ch-Textbook-18.html#linmap-vs-matrix",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  The textbook says: “Hence, we may think of matrices being linear mappings, and linear mappings being matrices.” Then it immediately warns this is not always true. Using the linear operator on smooth functions, explain why a general linear mapping is not always representable by a finite matrix. Extra credit: Describe an infinite-dimensional “matrix” that represents using Taylor series ideas.    On a finite-dimensional vector space such as , every linear mapping can be represented by some matrix. But the mapping acts on a space of smooth functions, which is infinite-dimensional . There is no finite list of basis vectors, so there is no finite matrix that could represent .   Extra credit idea: If a smooth function is written as a Taylor series   then   In the basis , differentiation is represented by an infinite matrix:   This “matrix” is infinite in extent, reflecting the fact that the underlying vector space is infinite-dimensional. That is why not all linear mappings are representable by finite matrices.   "
+},
+{
+  "id": "parallelogram-rule-labeling",
+  "level": "2",
+  "url": "ch-Textbook-18.html#parallelogram-rule-labeling",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  Label the vectors , , and in .   Vectors and (unlabeled for the exercise).   A 2D coordinate plot showing three arrows from the origin to (1,3), (2,1), and (3,4), with light auxiliary segments forming the parallelogram rule construction. Axes are labeled (horizontal) and (vertical); ticks 0–4.       Computation. We have   The sum is drawn from the origin to . shows the labels placed along each arrow.   Labeled vectors , , and .      Thus the required labels are:  along the arrow to ,  along the arrow to , and  along the arrow to .  The faint segments complete the parallelogram rule construction.   "
+},
+{
+  "id": "vectors-scale-plot",
+  "level": "2",
+  "url": "ch-Textbook-18.html#vectors-scale-plot",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  Let . Express (draw) , , and on the graph in .   Sketch vectors , , and on this grid.   A square grid for from −2 to 2 and from −3 to 4 with axes crossing at the origin. Ticks mark each integer; no vectors are drawn here (students add them).       Compute the scaled vectors:   The figure below places arrows from the origin to the endpoints , , and , and labels each vector.   Labeled plot of , , and .      Hence the three vectors are correctly drawn to the points , , and , respectively.   "
+},
+{
+  "id": "vectors2-linear-combinations",
+  "level": "2",
+  "url": "ch-Textbook-18.html#vectors2-linear-combinations",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "  Let and . Express each of the following vectors as a linear combination of and .   An interesting grid for plotting vectors.   A coordinate plane on x1,x2 from -8 to 8. The grid consists of evenly spaced parallel lines in two directions: one set with slope 1\/2 (parallel to v1) and one set with slope -1 (parallel to v2).            We solve for scalars such that:      1) For   From the first equation . Substitute:   Thus .      2) For   Divide first eqn by 2: .   Subtract the first from the second: so . Then , so .      3) For   Divide first eqn: .   Subtract: → . Then → .      The following plot shows the three vectors placed on the same lattice:   Vectors expressed in the basis .       "
+},
+{
+  "id": "matrix-from-images-of-basis",
+  "level": "2",
+  "url": "ch-Textbook-18.html#matrix-from-images-of-basis",
+  "type": "Exercise",
+  "number": "16",
+  "title": "",
+  "body": "  Suppose a linear mapping takes to and takes to . Write down the matrix representing (with respect to the standard bases).    In the standard bases, the matrix of a linear map has as its columns the images of the standard basis vectors and . Therefore,   Hence the matrix of (with respect to the standard bases of and ) is    "
 },
 {
   "id": "ch-Textbook-19",
@@ -1627,7 +1888,124 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 4.2 - Matrix Algebra",
-  "body": " Daily Prep 4.2 - Matrix Algebra   Overview  This section introduces matrix algebra by beginning with the simplest case: 1×1 matrices, which behave just like real numbers under addition, scalar multiplication, and composition. From this starting point, we see how these familiar operations naturally generalize to larger matrices.  We emphasize that matrices represent linear mappings between vector spaces, and that matrix operations—such as addition, scalar multiplication, and composition (matrix multiplication)—are defined so that they behave consistently with the way linear mappings act on vectors.  We learn how to add matrices element‑wise, how scalar multiplication applies uniformly to every entry, and how matrix multiplication corresponds to composing linear transformations. Throughout, concrete numerical examples illustrate how these algebraic rules connect to the action of matrices on vectors and why mismatched matrix sizes make certain operations undefined.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand that matrices represent linear mappings and that 1×1 matrices behave like real numbers.    Perform matrix addition and scalar multiplication when matrix sizes match.    Recognize when matrix operations are undefined due to incompatible dimensions.      Learn!  Complete the actions listed below.     Read  Section A.2: Matrix algebra .    (Optional) Do interact with the applet Matrix Addition and Scalar Multiplication by Heather Pierce for practice.    (Optional) Do interact with the applet Multiplying Two Matrices by Mathiyalagan.    (Optional) Watch  Matrix Multiplication as Composition (10:03) by 3Blue1Brown.     Do  Subsection A.2.8: Exercises A.2.2, A.2.3, A.2.4, A.2.5, A.2.103, A.2.105 .    Try these additional questions. If necessary, use AI to guide your thinking.    What is the relationship between dot product and matrix multiplication?    What is the relationship between the product of a matrix and a column vector and the product of matrix with another matrix ?    Are all nonzero matrices invertible? If not, can you give an example?    Define and . Compute and .    Compute where and .    If is and is , then what are the sizes of and ?    Suppose and . Compute .    Use and to demonstrate that can happen.    Let and . Compute , , , and .       Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Explain conceptually how matrix multiplication corresponds to composition of linear mappings.    Analyze examples illustrating how matrix operations affect the resulting action on vectors, using algebraic structure to justify results rather than computation alone.    Relate familiar 1×1 mappings to higher‑dimensional cases and generalize the underlying algebraic principles to arbitrary matrix sizes.     "
+  "body": " Daily Prep 4.2 - Matrix Algebra   Overview  This section introduces matrix algebra by beginning with the simplest case: 1×1 matrices, which behave just like real numbers under addition, scalar multiplication, and composition. From this starting point, we see how these familiar operations naturally generalize to larger matrices.  We emphasize that matrices represent linear mappings between vector spaces, and that matrix operations—such as addition, scalar multiplication, and composition (matrix multiplication)—are defined so that they behave consistently with the way linear mappings act on vectors.  We learn how to add matrices element‑wise, how scalar multiplication applies uniformly to every entry, and how matrix multiplication corresponds to composing linear transformations. Throughout, concrete numerical examples illustrate how these algebraic rules connect to the action of matrices on vectors and why mismatched matrix sizes make certain operations undefined.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Understand that matrices represent linear mappings and that 1×1 matrices behave like real numbers.    Perform matrix addition and scalar multiplication when matrix sizes match.    Recognize when matrix operations are undefined due to incompatible dimensions.      Learn!  Complete the actions listed below.     Read  Section A.2: Matrix algebra .    (Optional) Do interact with the applet Matrix Addition and Scalar Multiplication by Heather Pierce for practice.    (Optional) Do interact with the applet Multiplying Two Matrices by Mathiyalagan.    (Optional) Watch  Matrix Multiplication as Composition (10:03) by 3Blue1Brown.     Do  Subsection A.2.8: Exercises A.2.2, A.2.3, A.2.4, A.2.5, A.2.103, A.2.105 .      Do MyOpenMath questions from this section.     Exercises   Matrix Addition   Matrices of the same size can be added entry‑wise. Compute            Correct — addition is performed entry‑wise.      No — the (1,1) and (2,1) entries are incorrect.     No — this is just the second matrix replaced incorrectly.      Scalar Multiplication   Compute          Correct — scalar multiplication multiplies each entry by the scalar.      No — each entry must be multiplied by 3.     No — only some entries were scaled.      Matrix Multiplication (2×2)   Matrix multiplication is not entry‑wise but uses row‑by‑column combinations. Compute          Correct. Row 1 · Col 1: 1·2 + 2·1 = 4. Row 1 · Col 2: 1·0 + 2·4 = 8. Row 2 · Col 1: 3·2 + 1·1 = 7. Row 2 · Col 2: 3·0 + 1·4 = 4. This follows the matrix‑product rule.        No — the (1,1) and (2,1) entries are wrong.       No — this incorrectly mixes entry‑wise multiplication.      Identity Matrix   The identity matrix is the matrix that leaves any vector unchanged. Which of the following is the 3×3 identity matrix?           Correct. The identity matrix has 1s on the diagonal and 0s elsewhere.          No — that matrix does not act as an identity.         No — this is not the identity matrix.      When Is Matrix Multiplication Defined?   The product is defined only when:      The number of columns of equals the number of rows of .    Correct — matrix multiplication requires the inner dimensions to match.     and must be square matrices.  No — multiplication does not require square matrices.    The number of rows of must equal the number of rows of .  No — rows do not determine the rule.       What is the relationship between the dot product and matrix multiplication?    If we regard vectors as column vectors, then for the dot product is   i.e., it is the matrix product of the row vector with the column vector . More generally, the entry of a product is the dot product of row of with column of .      What is the relationship between the product of a matrix and a column vector and the product of with another matrix ?    If is a column vector, we can treat it as a matrix with one column, so is just a special case of matrix multiplication. More generally, if , then   i.e., the columns of are the images of the columns of under multiplication by .      Are all nonzero matrices invertible? If not, give an example.    No. A nonzero matrix can be singular (noninvertible). For example,   is nonzero but not invertible (its determinant is ).      Define and . Compute and .    Scalar multiplication:   Entry‑wise addition:       If is and is , what are the sizes of and ?    The product is defined (inner dimensions match: 3) and has size . The product is not defined because the inner dimensions would be (from ) and (from ), which do not match.      Suppose and . Compute .    Multiply (2×3) by (3×2) to obtain a (2×2) matrix:       Use and to demonstrate that can happen.    First, compute   Next, compute   Since is while is (and the entries differ), clearly .      Let and . Compute , , , and .    Product (2×3 by 3×2 gives 2×2):   Transpose:   Compute  and :   Products  and :   Note that , illustrating the identity .       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Explain conceptually how matrix multiplication corresponds to composition of linear mappings.    Analyze examples illustrating how matrix operations affect the resulting action on vectors, using algebraic structure to justify results rather than computation alone.    Relate familiar 1×1 mappings to higher‑dimensional cases and generalize the underlying algebraic principles to arbitrary matrix sizes.     "
+},
+{
+  "id": "matalg-mcq-1",
+  "level": "2",
+  "url": "ch-Textbook-19.html#matalg-mcq-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Matrix Addition.",
+  "body": " Matrix Addition   Matrices of the same size can be added entry‑wise. Compute            Correct — addition is performed entry‑wise.      No — the (1,1) and (2,1) entries are incorrect.     No — this is just the second matrix replaced incorrectly.    "
+},
+{
+  "id": "matalg-mcq-2",
+  "level": "2",
+  "url": "ch-Textbook-19.html#matalg-mcq-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Scalar Multiplication.",
+  "body": " Scalar Multiplication   Compute          Correct — scalar multiplication multiplies each entry by the scalar.      No — each entry must be multiplied by 3.     No — only some entries were scaled.    "
+},
+{
+  "id": "matalg-mcq-3",
+  "level": "2",
+  "url": "ch-Textbook-19.html#matalg-mcq-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Matrix Multiplication (2×2).",
+  "body": " Matrix Multiplication (2×2)   Matrix multiplication is not entry‑wise but uses row‑by‑column combinations. Compute          Correct. Row 1 · Col 1: 1·2 + 2·1 = 4. Row 1 · Col 2: 1·0 + 2·4 = 8. Row 2 · Col 1: 3·2 + 1·1 = 7. Row 2 · Col 2: 3·0 + 1·4 = 4. This follows the matrix‑product rule.        No — the (1,1) and (2,1) entries are wrong.       No — this incorrectly mixes entry‑wise multiplication.    "
+},
+{
+  "id": "matalg-mcq-4",
+  "level": "2",
+  "url": "ch-Textbook-19.html#matalg-mcq-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Identity Matrix.",
+  "body": " Identity Matrix   The identity matrix is the matrix that leaves any vector unchanged. Which of the following is the 3×3 identity matrix?           Correct. The identity matrix has 1s on the diagonal and 0s elsewhere.          No — that matrix does not act as an identity.         No — this is not the identity matrix.    "
+},
+{
+  "id": "matalg-mcq-5",
+  "level": "2",
+  "url": "ch-Textbook-19.html#matalg-mcq-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "When Is Matrix Multiplication Defined?",
+  "body": " When Is Matrix Multiplication Defined?   The product is defined only when:      The number of columns of equals the number of rows of .    Correct — matrix multiplication requires the inner dimensions to match.     and must be square matrices.  No — multiplication does not require square matrices.    The number of rows of must equal the number of rows of .  No — rows do not determine the rule.    "
+},
+{
+  "id": "matrix-dotproduct-relationship",
+  "level": "2",
+  "url": "ch-Textbook-19.html#matrix-dotproduct-relationship",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  What is the relationship between the dot product and matrix multiplication?    If we regard vectors as column vectors, then for the dot product is   i.e., it is the matrix product of the row vector with the column vector . More generally, the entry of a product is the dot product of row of with column of .   "
+},
+{
+  "id": "matrix-column-vs-matrix-multiplication",
+  "level": "2",
+  "url": "ch-Textbook-19.html#matrix-column-vs-matrix-multiplication",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  What is the relationship between the product of a matrix and a column vector and the product of with another matrix ?    If is a column vector, we can treat it as a matrix with one column, so is just a special case of matrix multiplication. More generally, if , then   i.e., the columns of are the images of the columns of under multiplication by .   "
+},
+{
+  "id": "nonzero-not-necessarily-invertible",
+  "level": "2",
+  "url": "ch-Textbook-19.html#nonzero-not-necessarily-invertible",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Are all nonzero matrices invertible? If not, give an example.    No. A nonzero matrix can be singular (noninvertible). For example,   is nonzero but not invertible (its determinant is ).   "
+},
+{
+  "id": "scale-and-add-matrices",
+  "level": "2",
+  "url": "ch-Textbook-19.html#scale-and-add-matrices",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Define and . Compute and .    Scalar multiplication:   Entry‑wise addition:    "
+},
+{
+  "id": "sizes-of-AB-and-BA",
+  "level": "2",
+  "url": "ch-Textbook-19.html#sizes-of-AB-and-BA",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  If is and is , what are the sizes of and ?    The product is defined (inner dimensions match: 3) and has size . The product is not defined because the inner dimensions would be (from ) and (from ), which do not match.   "
+},
+{
+  "id": "compute-AB-2x3-by-3x2",
+  "level": "2",
+  "url": "ch-Textbook-19.html#compute-AB-2x3-by-3x2",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  Suppose and . Compute .    Multiply (2×3) by (3×2) to obtain a (2×2) matrix:    "
+},
+{
+  "id": "AB-not-equal-BA-example",
+  "level": "2",
+  "url": "ch-Textbook-19.html#AB-not-equal-BA-example",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Use and to demonstrate that can happen.    First, compute   Next, compute   Since is while is (and the entries differ), clearly .   "
+},
+{
+  "id": "transpose-and-product-check",
+  "level": "2",
+  "url": "ch-Textbook-19.html#transpose-and-product-check",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  Let and . Compute , , , and .    Product (2×3 by 3×2 gives 2×2):   Transpose:   Compute  and :   Products  and :   Note that , illustrating the identity .   "
 },
 {
   "id": "ch-Textbook-20",
@@ -1636,7 +2014,187 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Daily Prep 4.3 - Elimination",
-  "body": " Daily Prep 4.3 - Elimination   Overview  In this section we learn how systems of linear equations can be solved systematically using elimination , a method that rewrites equations in ways that preserve their solutions. You will see how a system can be expressed compactly as a matrix equation , why elimination helps even when the matrix is not invertible or not square, and how a small set of simple operations— swapping equations, scaling equations, and adding multiples of one equation to another— can always be used to reduce a system to a form where solutions can be read off directly. These ideas also motivate the construction of the augmented matrix, which provides a compact way to organize the elimination process and serves as the starting point for many linear-algebra algorithms.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize how a system of linear equations can be written in matrix form as .    Identify the three elementary equation operations: swapping equations, scaling an equation by a nonzero number, and adding a multiple of one equation to another.    Understand the purpose of the augmented matrix as a compact representation of a linear system.      Learn!  Complete the actions listed below.     Read  Subsection A.3.1: Linear systems of equations .    (Optional) Watch  Elementary Row Operations, Row Echelon Form, and Reduced Row Echelon Form (53:47) by Christopher Lum.     Read  Subsection A.3.2: Row echelon form and elementary operations .     Read  Subsection A.3.3: Non-unique solutions and inconsistent systems .    (Optional) Do interact with the applet The Reduced Row Echelon Form of a Matrix by Ewan Kummel to visualize row reduction.    (Optional) Watch  Determining Linear Independence vs Linear Dependence (6:38) by Trevor Bazett.     Read  Subsection A.3.4: Linear independence and rank .    (Optional) Watch  Introduction to Linear Independent and Linearly Dependent Sets of Vectors (8:49) by Mathispower4u.     Read  Subsection A.3.5: Computing the inverse .     Watch  Determining Inverse Matrices Using Augmented Matrices (9:57) by Mathispower4u.    (Optional) Watch  Ex 1: Inverse of a 3x3 Matrix Using an Augmented Matrix (7:09) by Mathispower4u.     Do  Subsection A.3.6: Exercises A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108 .    Try these additional questions. If necessary, use AI to guide your thinking.    List the three elementary row operations . What do these row operations preserve?    If a linear system has a free variable , what does that tell you about the solution space?    Is this system consistent? If so, why? If not, why not? This system can be reduced to the triangular form: It can be written in augmented matrix form as     Determine if the system below is consistent. If so, why? If not, why not? The augmented matrix for this system can be row reduced to produce     For what values of will the following system be consistent?     In this exercise, we reduce to row-echelon form (REF) and then to reduced row-echelon form (RREF). State the row operations that do this. Cover the top row and look at the remaining two rows for the left-most nonzero column.  Final step to create the reduced row echelon form: Beginning with the rightmost leading entry, and working upwards to the left, create zeros at each leading entry and scale rows to transform each leading entry into 1.     Identify the pivot columns, the basic variables, and the free variables for the system: which can also be written as     For the linear system we obtain the REF Is this system consistent? If so, identify any free variables and state the number of solutions.    Let and . We determine whether is in the plane spanned by the columns of .   Finish rewriting this question in vector form: Do weights and exists so that...    The corresponding augmented matrix can be put in REF: Is in the plane spanned by the columns of ?       Consider the augmented matrix below.    Write down the corresponding system of equations.    Fill in the missing elements of the corresponding vector equation:     Write this in the form of a matrix equation .       The equation has a solution if and only if is a  of the columns of .    Use the inverse of to solve     Use the augmented matrix below to determine the inverse of , if it exists.        Do MyOpenMath questions from this section.      Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use elimination logically and systematically to reduce a system to a form where one can read off variables, such as reaching an equation like .    Explain how elimination is connected to finding matrix inverses by solving multiple systems for different right-hand sides.     Analyze how elimination applies even when is non-invertible or non-square, and interpret what this implies about the possible solution sets of the system.      "
+  "body": " Daily Prep 4.3 - Elimination   Overview  In this section we learn how systems of linear equations can be solved systematically using elimination , a method that rewrites equations in ways that preserve their solutions. You will see how a system can be expressed compactly as a matrix equation , why elimination helps even when the matrix is not invertible or not square, and how a small set of simple operations— swapping equations, scaling equations, and adding multiples of one equation to another— can always be used to reduce a system to a form where solutions can be read off directly. These ideas also motivate the construction of the augmented matrix, which provides a compact way to organize the elimination process and serves as the starting point for many linear-algebra algorithms.    Basic learning objectives  These are the tasks you should be able to perform with reasonable fluency when you arrive at our next class meeting. Important new vocabulary words are indicated in italics .    Recognize how a system of linear equations can be written in matrix form as .    Identify the three elementary equation operations: swapping equations, scaling an equation by a nonzero number, and adding a multiple of one equation to another.    Understand the purpose of the augmented matrix as a compact representation of a linear system.      Learn!  Complete the actions listed below.     Read  Subsection A.3.1: Linear systems of equations .    (Optional) Watch  Elementary Row Operations, Row Echelon Form, and Reduced Row Echelon Form (53:47) by Christopher Lum.     Read  Subsection A.3.2: Row echelon form and elementary operations .     Read  Subsection A.3.3: Non-unique solutions and inconsistent systems .    (Optional) Do interact with the applet The Reduced Row Echelon Form of a Matrix by Ewan Kummel to visualize row reduction.    (Optional) Watch  Determining Linear Independence vs Linear Dependence (6:38) by Trevor Bazett.     Read  Subsection A.3.4: Linear independence and rank .    (Optional) Watch  Introduction to Linear Independent and Linearly Dependent Sets of Vectors (8:49) by Mathispower4u.     Read  Subsection A.3.5: Computing the inverse .     Watch  Determining Inverse Matrices Using Augmented Matrices (9:57) by Mathispower4u.    (Optional) Watch  Ex 1: Inverse of a 3x3 Matrix Using an Augmented Matrix (7:09) by Mathispower4u.     Do  Subsection A.3.6: Exercises A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108 .      Do MyOpenMath questions from this section.     Exercises   Meaning of an Elementary Row Operation   Which of the following is an elementary row operation used in elimination?     Replacing a row by that row plus a multiple of another row.   Correct — this is one of the three fundamental row operations.     Multiplying two rows together.  No — row multiplication is not allowed.    Raising a row to a power.  No — this has nothing to do with row operations.      First Step of Elimination   Consider the system represented by the augmented matrix What is a valid first elimination step?     Replace Row 2 with Row 2 − 2·Row 1.   Correct — this eliminates the beneath the leading .     Replace Row 1 with Row 1 × Row 2.  No — rows may not be multiplied together.    Replace Row 1 with Row 1 + Row 1.  No — that does not help eliminate any entry.      Pivot Identification   In the row‑echelon matrix where are the pivots located?     The entries 1, 1, and 7 on the diagonal.   Correct — these are the first nonzero entries of each row.     The entries 3, 1, and −5.  No — those are not the first nonzero entries of their rows.    The entries 2, −5, and 7.  No — not all of these are pivots.      Meaning of a Row Swap   Why might one perform a row swap during elimination?     To move a nonzero entry into a pivot position.   Correct — swapping helps ensure each pivot is nonzero.     To change the solution set of the system.  No — row operations must preserve the solution set.    To make the matrix symmetric.  No — symmetry is not relevant to elimination.      Interpreting an Inconsistent System   After performing elimination, you obtain the augmented row What does this indicate?     The system is inconsistent and has no solution.   Correct — the equation cannot be satisfied.     There are infinitely many solutions.  No — that would arise from a row of all zeros including the augmented entry.    There is exactly one solution.  No — contradiction rows mean no solution.      Back‑Substitution Step   After elimination, a system is reduced to: What is the value of ?       Correct — substitute into .      No — substitution gives .     No — that would satisfy incorrectly.      Meaning of Matrix Rank   What is the rank of a matrix?      The number of pivot columns in its row‑echelon form.    Correct — rank equals the number of leading 1s, which is also the dimension of the column space.     The number of nonzero rows before row reduction.  No — rank must be computed after row reduction, not before.    The number of columns of the matrix.  No — only pivot columns count.      Interpreting Span   Let be vectors in . What does represent?     The set of all linear combinations of and .  Correct — span is defined as all linear combinations.    Only the vectors and themselves.  No — the span contains infinitely many vectors.    The set of all vectors perpendicular to and .  No — that describes the orthogonal complement, not the span.      Rank and Solutions   For a system , when is the system consistent?      The system is consistent exactly when .   Correct — equality of ranks is the standard consistency criterion.    When has at least one pivot in every row.  No — what matters is comparing the two ranks, not pivot count alone.    When .  No — homogeneous systems are always consistent, but this is not the general criterion.       List the three elementary row operations . What do these row operations preserve?    The three elementary row operations are:   Swap two rows.  Multiply a row by a nonzero scalar.  Replace a row by itself plus a multiple of another row.   These operations preserve the solution set of the linear system. That is, performing any sequence of these operations does not change the set of solutions.      If a linear system has a free variable , what does that tell you about the solution space?    A free variable means the system has infinitely many solutions . Free variables correspond to directions in which the solution can vary, giving a solution space that forms a line, plane, or higher-dimensional affine subset.      Is this system consistent? If so, why? If not, why not?   This system reduces to:   The augmented matrix is:     The system is consistent because no row reduces to a contradiction of the form with . The last equation is solvable ( ), and the others follow.      Determine if the system is consistent. If so, why? If not, why not?   Row reduction gives:     The last row corresponds to , a contradiction. Therefore, the system is inconsistent and has no solution .      Let and . We want to determine whether lies in the plane spanned by the columns of .    Finish rewriting this question in vector form: “Do weights and exist so that …?”    The augmented matrix row‑reduces as follows:   Is in the plane spanned by the columns of ?      (a) The vector‑form question is:   (b) The final row of the REF matrix is:   which corresponds to the equation , a contradiction. Therefore the system has **no solution**, and       Consider the augmented matrix:    Write the corresponding system of equations.   Fill in the missing coefficients in the vector equation:    Write this in the form .     (a) System of equations:   (b) The completed vector equation already appears correct (no blanks remain).  (c) Matrix equation:       The equation has a solution if and only if is a  of the columns of .    The correct phrase is:   Thus the filled‑in blanks are: linear and combination .      Use the inverse of to solve:     1. Compute the inverse.  For , .  Here , , , .    2. Compute .   Thus the solution is .      Use the augmented matrix below to determine the inverse of , if it exists.     The final augmented matrix has the form . Therefore:   Since we completed the reduction successfully, is invertible.      Compute the rank of . Then describe .    Row‑reduce:   There are 2 pivot columns, so .  Thus the columns of span a 2‑dimensional plane in .      Let , , and . Determine whether is in .    Solve :   Component equations:   From the third equation, . Substitute into the first: → . Check the second:   Therefore , so  is in the span.       Advanced learning objectives  In addition to mastering the basic objectives, here are the tasks you should be able to perform, with practice:    Use elimination logically and systematically to reduce a system to a form where one can read off variables, such as reaching an equation like .    Explain how elimination is connected to finding matrix inverses by solving multiple systems for different right-hand sides.     Analyze how elimination applies even when is non-invertible or non-square, and interpret what this implies about the possible solution sets of the system.      "
+},
+{
+  "id": "elim-mcq-1",
+  "level": "2",
+  "url": "ch-Textbook-20.html#elim-mcq-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Meaning of an Elementary Row Operation.",
+  "body": " Meaning of an Elementary Row Operation   Which of the following is an elementary row operation used in elimination?     Replacing a row by that row plus a multiple of another row.   Correct — this is one of the three fundamental row operations.     Multiplying two rows together.  No — row multiplication is not allowed.    Raising a row to a power.  No — this has nothing to do with row operations.    "
+},
+{
+  "id": "elim-mcq-2",
+  "level": "2",
+  "url": "ch-Textbook-20.html#elim-mcq-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "First Step of Elimination.",
+  "body": " First Step of Elimination   Consider the system represented by the augmented matrix What is a valid first elimination step?     Replace Row 2 with Row 2 − 2·Row 1.   Correct — this eliminates the beneath the leading .     Replace Row 1 with Row 1 × Row 2.  No — rows may not be multiplied together.    Replace Row 1 with Row 1 + Row 1.  No — that does not help eliminate any entry.    "
+},
+{
+  "id": "elim-mcq-3",
+  "level": "2",
+  "url": "ch-Textbook-20.html#elim-mcq-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Pivot Identification.",
+  "body": " Pivot Identification   In the row‑echelon matrix where are the pivots located?     The entries 1, 1, and 7 on the diagonal.   Correct — these are the first nonzero entries of each row.     The entries 3, 1, and −5.  No — those are not the first nonzero entries of their rows.    The entries 2, −5, and 7.  No — not all of these are pivots.    "
+},
+{
+  "id": "elim-mcq-4",
+  "level": "2",
+  "url": "ch-Textbook-20.html#elim-mcq-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Meaning of a Row Swap.",
+  "body": " Meaning of a Row Swap   Why might one perform a row swap during elimination?     To move a nonzero entry into a pivot position.   Correct — swapping helps ensure each pivot is nonzero.     To change the solution set of the system.  No — row operations must preserve the solution set.    To make the matrix symmetric.  No — symmetry is not relevant to elimination.    "
+},
+{
+  "id": "elim-mcq-5",
+  "level": "2",
+  "url": "ch-Textbook-20.html#elim-mcq-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Interpreting an Inconsistent System.",
+  "body": " Interpreting an Inconsistent System   After performing elimination, you obtain the augmented row What does this indicate?     The system is inconsistent and has no solution.   Correct — the equation cannot be satisfied.     There are infinitely many solutions.  No — that would arise from a row of all zeros including the augmented entry.    There is exactly one solution.  No — contradiction rows mean no solution.    "
+},
+{
+  "id": "elim-mcq-6",
+  "level": "2",
+  "url": "ch-Textbook-20.html#elim-mcq-6",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Back‑Substitution Step.",
+  "body": " Back‑Substitution Step   After elimination, a system is reduced to: What is the value of ?       Correct — substitute into .      No — substitution gives .     No — that would satisfy incorrectly.    "
+},
+{
+  "id": "rank-mcq-1",
+  "level": "2",
+  "url": "ch-Textbook-20.html#rank-mcq-1",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Meaning of Matrix Rank.",
+  "body": " Meaning of Matrix Rank   What is the rank of a matrix?      The number of pivot columns in its row‑echelon form.    Correct — rank equals the number of leading 1s, which is also the dimension of the column space.     The number of nonzero rows before row reduction.  No — rank must be computed after row reduction, not before.    The number of columns of the matrix.  No — only pivot columns count.    "
+},
+{
+  "id": "rank-mcq-2",
+  "level": "2",
+  "url": "ch-Textbook-20.html#rank-mcq-2",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Interpreting Span.",
+  "body": " Interpreting Span   Let be vectors in . What does represent?     The set of all linear combinations of and .  Correct — span is defined as all linear combinations.    Only the vectors and themselves.  No — the span contains infinitely many vectors.    The set of all vectors perpendicular to and .  No — that describes the orthogonal complement, not the span.    "
+},
+{
+  "id": "rank-mcq-3",
+  "level": "2",
+  "url": "ch-Textbook-20.html#rank-mcq-3",
+  "type": "Exercise",
+  "number": "9",
+  "title": "Rank and Solutions.",
+  "body": " Rank and Solutions   For a system , when is the system consistent?      The system is consistent exactly when .   Correct — equality of ranks is the standard consistency criterion.    When has at least one pivot in every row.  No — what matters is comparing the two ranks, not pivot count alone.    When .  No — homogeneous systems are always consistent, but this is not the general criterion.    "
+},
+{
+  "id": "a3-elem-row-ops",
+  "level": "2",
+  "url": "ch-Textbook-20.html#a3-elem-row-ops",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  List the three elementary row operations . What do these row operations preserve?    The three elementary row operations are:   Swap two rows.  Multiply a row by a nonzero scalar.  Replace a row by itself plus a multiple of another row.   These operations preserve the solution set of the linear system. That is, performing any sequence of these operations does not change the set of solutions.   "
+},
+{
+  "id": "a3-free-variable",
+  "level": "2",
+  "url": "ch-Textbook-20.html#a3-free-variable",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  If a linear system has a free variable , what does that tell you about the solution space?    A free variable means the system has infinitely many solutions . Free variables correspond to directions in which the solution can vary, giving a solution space that forms a line, plane, or higher-dimensional affine subset.   "
+},
+{
+  "id": "a3-consistency-1",
+  "level": "2",
+  "url": "ch-Textbook-20.html#a3-consistency-1",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Is this system consistent? If so, why? If not, why not?   This system reduces to:   The augmented matrix is:     The system is consistent because no row reduces to a contradiction of the form with . The last equation is solvable ( ), and the others follow.   "
+},
+{
+  "id": "a3-consistency-2",
+  "level": "2",
+  "url": "ch-Textbook-20.html#a3-consistency-2",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  Determine if the system is consistent. If so, why? If not, why not?   Row reduction gives:     The last row corresponds to , a contradiction. Therefore, the system is inconsistent and has no solution .   "
+},
+{
+  "id": "span-plane-a",
+  "level": "2",
+  "url": "ch-Textbook-20.html#span-plane-a",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  Let and . We want to determine whether lies in the plane spanned by the columns of .    Finish rewriting this question in vector form: “Do weights and exist so that …?”    The augmented matrix row‑reduces as follows:   Is in the plane spanned by the columns of ?      (a) The vector‑form question is:   (b) The final row of the REF matrix is:   which corresponds to the equation , a contradiction. Therefore the system has **no solution**, and    "
+},
+{
+  "id": "aug-to-system",
+  "level": "2",
+  "url": "ch-Textbook-20.html#aug-to-system",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "  Consider the augmented matrix:    Write the corresponding system of equations.   Fill in the missing coefficients in the vector equation:    Write this in the form .     (a) System of equations:   (b) The completed vector equation already appears correct (no blanks remain).  (c) Matrix equation:    "
+},
+{
+  "id": "span-fillins",
+  "level": "2",
+  "url": "ch-Textbook-20.html#span-fillins",
+  "type": "Exercise",
+  "number": "16",
+  "title": "",
+  "body": "  The equation has a solution if and only if is a  of the columns of .    The correct phrase is:   Thus the filled‑in blanks are: linear and combination .   "
+},
+{
+  "id": "inverse-solve-2x2",
+  "level": "2",
+  "url": "ch-Textbook-20.html#inverse-solve-2x2",
+  "type": "Exercise",
+  "number": "17",
+  "title": "",
+  "body": "  Use the inverse of to solve:     1. Compute the inverse.  For , .  Here , , , .    2. Compute .   Thus the solution is .   "
+},
+{
+  "id": "inverse-3x3",
+  "level": "2",
+  "url": "ch-Textbook-20.html#inverse-3x3",
+  "type": "Exercise",
+  "number": "18",
+  "title": "",
+  "body": "  Use the augmented matrix below to determine the inverse of , if it exists.     The final augmented matrix has the form . Therefore:   Since we completed the reduction successfully, is invertible.   "
+},
+{
+  "id": "rank-open-1",
+  "level": "2",
+  "url": "ch-Textbook-20.html#rank-open-1",
+  "type": "Exercise",
+  "number": "19",
+  "title": "",
+  "body": "  Compute the rank of . Then describe .    Row‑reduce:   There are 2 pivot columns, so .  Thus the columns of span a 2‑dimensional plane in .   "
+},
+{
+  "id": "rank-open-2",
+  "level": "2",
+  "url": "ch-Textbook-20.html#rank-open-2",
+  "type": "Exercise",
+  "number": "20",
+  "title": "",
+  "body": "  Let , , and . Determine whether is in .    Solve :   Component equations:   From the third equation, . Substitute into the first: → . Check the second:   Therefore , so  is in the span.   "
 },
 {
   "id": "ch-Textbook-21",
