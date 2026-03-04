@@ -151,14 +151,7 @@ A.3.1, A.3.2, A.3.5, A.3.8, A.3.101, A.3.102, A.3.103, A.3.104, A.3.105, A.3.108
           </p>
         </li>
 
-
-        <li>
-          <p>
-            Try these additional questions.  If necessary, use AI to guide your thinking. 
-          </p>
-            <ol>
-
-<li>
+<!-- <li>
 <p>
 List the three <em>elementary row operations</em>.  What do these row operations preserve?  
 </p>
@@ -253,7 +246,7 @@ we obtain the REF
 </me> 
 Is this system consistent?  If so, identify any free variables and state the number of solutions. 
   </p>
-</li>
+</li> 
 
 <li>
   <p>
@@ -322,10 +315,9 @@ We determine whether <m>{\mathbf{b}}</m> is in the plane spanned by the columns 
     Use the augmented matrix below to determine the inverse of <m>\displaystyle A = \left[ \begin{array}{ccc}2 &#x26; 0 &#x26; 0 \\ -3 &#x26; 0 &#x26; 1 \\ 0 &#x26; 1 &#x26; 0\end{array}\right]</m>, if it exists.
     <me> \begin{bmatrix} A \amp I \end{bmatrix} = \begin{bmatrix} 2 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\ -3 \amp 0 \amp 1 \amp 0 \amp 1 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1 \end{bmatrix} \sim \dots \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp \frac{1}{2} \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 1 \amp \frac{1}{2} \amp 1 \amp 0 \end{bmatrix} </me>
   </p>
-</li>
+</li> -->
 
-</ol>
-</li>
+
 
 
 <li>
@@ -337,6 +329,855 @@ We determine whether <m>{\mathbf{b}}</m> is in the plane spanned by the columns 
 
         
 </ul>
+
+<exercises xml:id="exercises-section43">
+  <title>Exercises</title>
+
+<exercise xml:id="elim-mcq-1">
+  <title>Meaning of an Elementary Row Operation</title>
+
+  <statement>
+    <p>
+      Which of the following <em>is</em> an elementary row operation used in elimination?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>Replacing a row by that row plus a multiple of another row.</p></statement>
+      <feedback>
+        <p>
+          Correct — this is one of the three fundamental row operations.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Multiplying two rows together.</p></statement>
+      <feedback><p>No — row multiplication is not allowed.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Raising a row to a power.</p></statement>
+      <feedback><p>No — this has nothing to do with row operations.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="elim-mcq-2">
+  <title>First Step of Elimination</title>
+
+  <statement>
+    <p>
+      Consider the system represented by the augmented matrix
+      <me>
+        \left[\begin{array}{cc|c}
+        2 \amp 1 \amp 5\\
+        4 \amp -2 \amp 6
+        \end{array}\right].
+      </me>
+      What is a valid first elimination step?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>Replace Row 2 with Row 2 − 2·Row 1.</p></statement>
+      <feedback>
+        <p>
+          Correct — this eliminates the <m>4</m> beneath the leading <m>2</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Replace Row 1 with Row 1 × Row 2.</p></statement>
+      <feedback><p>No — rows may not be multiplied together.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Replace Row 1 with Row 1 + Row 1.</p></statement>
+      <feedback><p>No — that does not help eliminate any entry.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="elim-mcq-3">
+  <title>Pivot Identification</title>
+
+  <statement>
+    <p>
+      In the row‑echelon matrix
+      <me>
+        \begin{bmatrix}
+        1 \amp 3 \amp 2\\
+        0 \amp 1 \amp -5\\
+        0 \amp 0 \amp 7
+        \end{bmatrix},
+      </me>
+      where are the pivots located?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>The entries 1, 1, and 7 on the diagonal.</p></statement>
+      <feedback>
+        <p>
+          Correct — these are the first nonzero entries of each row.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The entries 3, 1, and −5.</p></statement>
+      <feedback><p>No — those are not the first nonzero entries of their rows.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The entries 2, −5, and 7.</p></statement>
+      <feedback><p>No — not all of these are pivots.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="elim-mcq-4">
+  <title>Meaning of a Row Swap</title>
+
+  <statement>
+    <p>
+      Why might one perform a row swap during elimination?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>To move a nonzero entry into a pivot position.</p></statement>
+      <feedback>
+        <p>
+          Correct — swapping helps ensure each pivot is nonzero.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>To change the solution set of the system.</p></statement>
+      <feedback><p>No — row operations must preserve the solution set.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>To make the matrix symmetric.</p></statement>
+      <feedback><p>No — symmetry is not relevant to elimination.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="elim-mcq-5">
+  <title>Interpreting an Inconsistent System</title>
+
+  <statement>
+    <p>
+      After performing elimination, you obtain the augmented row
+      <me>
+        \begin{bmatrix}0 \amp 0 \amp 0 \amp | \amp 5\end{bmatrix}.
+      </me>
+      What does this indicate?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>The system is inconsistent and has no solution.</p></statement>
+      <feedback>
+        <p>
+          Correct — the equation <m>0=5</m> cannot be satisfied.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>There are infinitely many solutions.</p></statement>
+      <feedback><p>No — that would arise from a row of all zeros <em>including</em> the augmented entry.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>There is exactly one solution.</p></statement>
+      <feedback><p>No — contradiction rows mean no solution.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="elim-mcq-6">
+  <title>Back‑Substitution Step</title>
+
+  <statement>
+    <p>
+      After elimination, a system is reduced to:
+      <me>
+        \begin{aligned}
+          x + 2y \amp= 5,\\
+          y \amp= 1.
+        \end{aligned}
+      </me>
+      What is the value of <m>x</m>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p><m>x = 3</m></p></statement>
+      <feedback>
+        <p>
+          Correct — substitute <m>y=1</m> into <m>x+2y=5</m>.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>x = 2</m></p></statement>
+      <feedback><p>No — substitution gives <m>x=5-2=3</m>.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p><m>x = -1</m></p></statement>
+      <feedback><p>No — that would satisfy <m>x+2=5</m> incorrectly.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="rank-mcq-1">
+  <title>Meaning of Matrix Rank</title>
+
+  <statement>
+    <p>
+      What is the rank of a matrix?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>
+          The number of pivot columns in its row‑echelon form.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          Correct — rank equals the number of leading 1s, which is also the dimension of the column space.
+        </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The number of nonzero rows before row reduction.</p></statement>
+      <feedback><p>No — rank must be computed after row reduction, not before.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The number of columns of the matrix.</p></statement>
+      <feedback><p>No — only pivot columns count.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="rank-mcq-2">
+  <title>Interpreting Span</title>
+
+  <statement>
+    <p>
+      Let <m>\vec{v}_1, \vec{v}_2</m> be vectors in <m>\mathbb{R}^3</m>.  
+      What does <m>\operatorname{span}\{\vec{v}_1,\vec{v}_2\}</m> represent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement><p>The set of all linear combinations of <m>\vec{v}_1</m> and <m>\vec{v}_2</m>.</p></statement>
+      <feedback><p>Correct — span is defined as all linear combinations.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>Only the vectors <m>\vec{v}_1</m> and <m>\vec{v}_2</m> themselves.</p></statement>
+      <feedback><p>No — the span contains infinitely many vectors.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>The set of all vectors perpendicular to <m>\vec{v}_1</m> and <m>\vec{v}_2</m>.</p></statement>
+      <feedback><p>No — that describes the orthogonal complement, not the span.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="rank-mcq-3">
+  <title>Rank and Solutions</title>
+
+  <statement>
+    <p>
+      For a system <m>A\vec{x}=\vec{b}</m>, when is the system consistent?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+
+    <choice correct="yes">
+      <statement>
+        <p>The system is consistent exactly when <m>\operatorname{rank}(A)=\operatorname{rank}([A\mid \vec{b}])</m>.</p>
+      </statement>
+      <feedback><p>Correct — equality of ranks is the standard consistency criterion.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>When <m>A</m> has at least one pivot in every row.</p></statement>
+      <feedback><p>No — what matters is comparing the two ranks, not pivot count alone.</p></feedback>
+    </choice>
+
+    <choice>
+      <statement><p>When <m>\vec{b}=\vec{0}</m>.</p></statement>
+      <feedback><p>No — homogeneous systems are always consistent, but this is not the general criterion.</p></feedback>
+    </choice>
+
+  </choices>
+</exercise>
+
+<exercise xml:id="a3-elem-row-ops">
+  <statement>
+    <p>List the three <em>elementary row operations</em>. What do these row operations preserve?</p>
+  </statement>
+
+  <solution>
+    <p>The three elementary row operations are:</p>
+    <ul>
+      <li>Swap two rows.</li>
+      <li>Multiply a row by a nonzero scalar.</li>
+      <li>Replace a row by itself plus a multiple of another row.</li>
+    </ul>
+
+    <p>
+      These operations <em>preserve the solution set</em> of the linear system.  
+      That is, performing any sequence of these operations does not change the set of solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="a3-free-variable">
+  <statement>
+    <p>If a linear system has a <em>free variable</em>, what does that tell you about the solution space?</p>
+  </statement>
+
+  <solution>
+    <p>
+      A free variable means the system has <em>infinitely many solutions</em>.  
+      Free variables correspond to directions in which the solution can vary, giving a solution space
+      that forms a line, plane, or higher-dimensional affine subset.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="a3-consistency-1">
+  <statement>
+    <p>Is this system consistent? If so, why? If not, why not?</p>
+
+    <md>
+      <mrow> x_1 - 2x_2 + x_3 \amp = 0 </mrow>
+      <mrow> 2x_2 - 8x_3 \amp = 8 </mrow>
+      <mrow> -4x_1 + 5x_2 + 9x_3 \amp = -9 </mrow>
+    </md>
+
+    <p>This system reduces to:</p>
+
+    <md>
+      <mrow> x_1 - 2x_2 + x_3 \amp = 0 </mrow>
+      <mrow> x_2 - 4x_3 \amp = 4 </mrow>
+      <mrow> x_3 \amp = 3 </mrow>
+    </md>
+
+    <p>The augmented matrix is:</p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|c}
+        1 \amp -2 \amp 1 \amp 0\\
+        0 \amp 1 \amp -4 \amp 4\\
+        0 \amp 0 \amp 3 \amp 3
+      \end{array}
+      \right]
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      The system is <strong>consistent</strong> because no row reduces to a contradiction of the form  
+      <m>[0\ 0\ 0\ |\ c]</m> with <m>c\neq 0</m>.  
+      The last equation <m>3x_3 = 3</m> is solvable (<m>x_3 = 1</m>), and the others follow.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="a3-consistency-2">
+  <statement>
+    <p>Determine if the system is consistent. If so, why? If not, why not?</p>
+
+    <md>
+      <mrow>3x_2 - 6x_3 \amp = 8 </mrow>
+      <mrow> x_1 - 2x_2 + 3x_3 \amp = -1 </mrow>
+      <mrow> 5x_1 - 7x_2 + 9x_3 \amp = 0 </mrow>
+    </md>
+
+    <p>Row reduction gives:</p>
+
+    <md>
+      <mrow> \left[
+      \begin{array}{ccc|c}
+        0 \amp 3 \amp -6 \amp 8\\
+        1 \amp -2 \amp 3 \amp -1\\
+        5 \amp -7 \amp 9 \amp 0
+      \end{array}
+      \right]
+      \amp \sim
+      \left[
+      \begin{array}{ccc|c}
+        1 \amp -2 \amp 3 \amp -1\\
+        0 \amp 3 \amp -6 \amp 8\\
+        0 \amp 3 \amp -6 \amp 5
+      \end{array}
+      \right] </mrow>
+      <mrow> \amp \sim
+      \left[
+      \begin{array}{ccc|c}
+        1 \amp -2 \amp 3 \amp -1\\
+        0 \amp 3 \amp -6 \amp 8\\
+        0 \amp 0 \amp 0 \amp -3
+      \end{array}
+      \right] </mrow>
+    </md>
+  </statement>
+
+  <solution>
+    <p>
+      The last row corresponds to <m>0 = -3</m>, a contradiction.  
+      Therefore, the system is <strong>inconsistent</strong> and has <em>no solution</em>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="span-plane-a">
+  <statement>
+    <p>
+      Let 
+      <m>A=\begin{bmatrix}1 \amp 2\\[4pt] 3 \amp 1\\[4pt] 0 \amp 5\end{bmatrix}</m> 
+      and 
+      <m>\vec{b}=\begin{bmatrix}8\\3\\17\end{bmatrix}</m>.
+      We want to determine whether <m>\vec{b}</m> lies in the plane spanned by the columns of <m>A</m>.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Finish rewriting this question in vector form:  
+          “Do weights <m>x_1</m> and <m>x_2</m> exist so that …?”
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The augmented matrix row‑reduces as follows:
+        </p>
+
+        <md>
+          <mrow> \left[
+          \begin{array}{cc|c}
+            1 \amp 2 \amp 8\\
+            3 \amp 1 \amp 3\\
+            0 \amp 5 \amp 17
+          \end{array}
+          \right]
+          \amp \sim
+          \left[
+          \begin{array}{cc|c}
+            1 \amp 2 \amp 8\\
+            0 \amp -5 \amp -21\\
+            0 \amp 5 \amp 17
+          \end{array}
+          \right] </mrow>
+          <mrow> \amp \sim
+          \left[
+          \begin{array}{cc|c}
+            1 \amp 2 \amp 8\\
+            0 \amp -5 \amp -21\\
+            0 \amp 0 \amp -4
+          \end{array}
+          \right]. </mrow>
+        </md>
+
+        <p>
+          Is <m>\vec{b}</m> in the plane spanned by the columns of <m>A</m>?
+        </p>
+      </li>
+    </ol>
+  </statement>
+
+  <solution>
+    <p><strong>(a)</strong> The vector‑form question is:</p>
+
+    <me>
+      \text{Do there exist }x_1,x_2\text{ such that }
+      x_1\begin{bmatrix}1\\3\\0\end{bmatrix}
+      +
+      x_2\begin{bmatrix}2\\1\\5\end{bmatrix}
+      =
+      \begin{bmatrix}8\\3\\17\end{bmatrix} ?
+    </me>
+
+    <p><strong>(b)</strong> The final row of the REF matrix is:</p>
+
+    <me>
+      \left[0\ \ 0\ \ |\ -4\right],
+    </me>
+
+    <p>
+      which corresponds to the equation <m>0=-4</m>, a contradiction.  
+      Therefore the system has **no solution**, and
+    </p>
+
+    <me>
+      \vec{b} \text{ is NOT in } \operatorname{span}\{ \text{columns of }A\}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="aug-to-system">
+  <statement>
+    <p>
+      Consider the augmented matrix:
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|c}
+        2 \amp 3 \amp 4 \amp 9\\
+        -3 \amp 1 \amp 0 \amp -2
+      \end{array}
+      \right].
+    </me>
+
+    <ol marker="(a)">
+      <li><p>Write the corresponding system of equations.</p></li>
+
+      <li>
+        <p>
+          Fill in the missing coefficients in the vector equation:
+        </p>
+
+        <me>
+          x_1\begin{bmatrix}2\\-3\end{bmatrix}
+          \;+\;
+          x_2\begin{bmatrix}3\\1\end{bmatrix}
+          \;+\;
+          x_3\begin{bmatrix}4\\0\end{bmatrix}
+          \;=\;
+          \begin{bmatrix}9\\-2\end{bmatrix}.
+        </me>
+      </li>
+
+      <li><p>Write this in the form <m>A\vec{x}=\vec{b}</m>.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <p><strong>(a) System of equations:</strong></p>
+
+    <md>
+      <mrow>2x_1 + 3x_2 + 4x_3 \amp = 9</mrow>
+      <mrow>-3x_1 + 1x_2 + 0x_3 \amp = -2</mrow>
+    </md>
+
+    <p><strong>(b)</strong> The completed vector equation already appears correct (no blanks remain).</p>
+
+    <p><strong>(c) Matrix equation:</strong></p>
+
+    <me>
+      \begin{bmatrix}
+        2 \amp 3 \amp 4\\
+        -3 \amp 1 \amp 0
+      \end{bmatrix}
+      \begin{bmatrix}
+        x_1\\x_2\\x_3
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        9\\-2
+      \end{bmatrix}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="span-fillins">
+  <statement>
+    <p>
+      The equation <m>A\vec{x}=\vec{b}</m> has a solution if and only if <m>\vec{b}</m> is a
+      <fillin characters="10"/> <fillin characters="10"/> 
+      of the columns of <m>A</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      The correct phrase is:
+    </p>
+
+    <me>
+      \vec{b}\text{ is a linear combination of the columns of }A.
+    </me>
+
+    <p>Thus the filled‑in blanks are: <strong>linear</strong> and <strong>combination</strong>.</p>
+  </solution>
+</exercise>
+
+<exercise xml:id="inverse-solve-2x2">
+  <statement>
+    <p>
+      Use the inverse of 
+      <m>
+        A=\begin{bmatrix}-7 \amp 3\\ 5 \amp -2\end{bmatrix}
+      </m>
+      to solve:
+    </p>
+
+    <md>
+      <mrow> -7x_1 + 3x_2 \amp = 2 </mrow>
+      <mrow> 5x_1 - 2x_2 \amp = 1 </mrow>
+    </md>
+  </statement>
+
+  <solution>
+    <p><strong>1. Compute the inverse.</strong></p>
+
+    <p>
+      For 
+      <m>A=\begin{bmatrix}a \amp b\\ c \amp d\end{bmatrix}</m>,
+      <m>A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}d \amp -b\\ -c \amp a\end{bmatrix}</m>.
+    </p>
+
+    <p>
+      Here <m>a=-7</m>, <m>b=3</m>, <m>c=5</m>, <m>d=-2</m>.
+    </p>
+
+    <me>
+      ad-bc = (-7)(-2) - (3)(5) = 14 - 15 = -1.
+    </me>
+
+    <me>
+      A^{-1}
+      =
+      -1^{-1}
+      \begin{bmatrix}
+        -2 \amp -3\\
+        -5 \amp -7
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        2 \amp 3\\
+        5 \amp 7
+      \end{bmatrix}.
+    </me>
+
+    <p><strong>2. Compute <m>\vec{x}=A^{-1}\vec{b}</m>.</strong></p>
+
+    <me>
+      \vec{b}=\begin{bmatrix}2\\1\end{bmatrix},
+      \qquad
+      \vec{x}
+      =
+      \begin{bmatrix}
+        2 \amp 3\\
+        5 \amp 7
+      \end{bmatrix}
+      \begin{bmatrix}
+        2\\1
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        2\cdot 2 + 3\cdot 1\\
+        5\cdot 2 + 7\cdot 1
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        7\\17
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Thus the solution is 
+      <m>x_1=7,\; x_2=17</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="inverse-3x3">
+  <statement>
+    <p>
+      Use the augmented matrix below to determine the inverse of
+      <m>A=\begin{bmatrix}2 \amp 0 \amp 0\\ -3 \amp 0 \amp 1\\ 0 \amp 1 \amp 0\end{bmatrix}</m>, 
+      if it exists.
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        2 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0\\
+        -3 \amp 0 \amp 1 \amp 0 \amp 1 \amp 0\\
+        0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1
+      \end{array}
+      \right]
+      \sim \dots \sim
+      \left[
+      \begin{array}{ccc|ccc}
+        1 \amp 0 \amp 0 \amp \tfrac12 \amp 0 \amp 0\\
+        0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 1\\
+        0 \amp 0 \amp 1 \amp \tfrac12 \amp 1 \amp 0
+      \end{array}
+      \right]
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      The final augmented matrix has the form <m>[I\mid A^{-1}]</m>.  
+      Therefore:
+    </p>
+
+    <me>
+      A^{-1}
+      =
+      \begin{bmatrix}
+        \tfrac12 \amp 0 \amp 0\\
+        0 \amp 0 \amp 1\\
+        \tfrac12 \amp 1 \amp 0
+      \end{bmatrix}.
+    </me>
+
+    <p>Since we completed the reduction successfully, <m>A</m> is invertible.</p>
+  </solution>
+</exercise>
+
+<exercise xml:id="rank-open-1">
+  <statement>
+    <p>
+      Compute the rank of  
+      <m>
+      A=\begin{bmatrix}
+      1 \amp 2 \amp 3\\
+      2 \amp 4 \amp 6\\
+      1 \amp 1 \amp 0
+      \end{bmatrix}
+      </m>.
+      Then describe <m>\operatorname{span}\{\text{columns of }A\}</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Row‑reduce:
+    </p>
+
+    <md>
+      <mrow> \begin{bmatrix}
+      1 \amp 2 \amp 3\\
+      2 \amp 4 \amp 6\\
+      1 \amp 1 \amp 0
+      \end{bmatrix}
+      \amp \sim
+      \begin{bmatrix}
+      1 \amp 2 \amp 3\\
+      0 \amp 0 \amp 0\\
+      0 \amp -1 \amp -3
+      \end{bmatrix} </mrow>
+      <mrow> \amp \sim
+      \begin{bmatrix}
+      1 \amp 2 \amp 3\\
+      0 \amp 1 \amp 3\\
+      0 \amp 0 \amp 0
+      \end{bmatrix}. </mrow>
+    </md>
+
+    <p>
+      There are 2 pivot columns, so
+      <m>\operatorname{rank}(A)=2</m>.
+    </p>
+
+    <p>
+      Thus the columns of <m>A</m> span a <strong>2‑dimensional plane</strong> in <m>\mathbb{R}^3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="rank-open-2">
+  <statement>
+    <p>
+      Let  
+      <m>\vec{u}=\begin{bmatrix}1\\2\\1\end{bmatrix}</m>,  
+      <m>\vec{v}=\begin{bmatrix}-1\\1\\0\end{bmatrix}</m>,  
+      and  
+      <m>\vec{w}=\begin{bmatrix}3\\3\\2\end{bmatrix}</m>.  
+      Determine whether <m>\vec{w}</m> is in <m>\operatorname{span}\{\vec{u},\vec{v}\}</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Solve <m>a\vec{u} + b\vec{v} = \vec{w}</m>:
+    </p>
+
+    <me>
+      a\begin{bmatrix}1\\2\\1\end{bmatrix}
+      + b\begin{bmatrix}-1\\1\\0\end{bmatrix}
+      =
+      \begin{bmatrix}3\\3\\2\end{bmatrix}.
+    </me>
+
+    <p>Component equations:</p>
+
+    <md>
+      <mrow>a - b \amp = 3</mrow>
+      <mrow>2a + b \amp = 3</mrow>
+      <mrow>a \amp = 2</mrow>
+    </md>
+
+    <p>
+      From the third equation, <m>a=2</m>.  
+      Substitute into the first: <m>2 - b = 3</m> → <m>b=-1</m>.  
+      Check the second:
+    </p>
+
+    <me>
+      2(2) + (-1) = 3 \quad \text{✓}
+    </me>
+
+    <p>
+      Therefore
+      <m>\vec{w} = 2\vec{u} - \vec{v}</m>,
+      so <m>\vec{w}</m> <strong>is</strong> in the span.
+    </p>
+  </solution>
+</exercise>
+
+</exercises>
 
 </section>
 
