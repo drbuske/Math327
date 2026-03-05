@@ -1,6 +1,78 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
+  "id": "sec-course-info",
+  "level": "1",
+  "url": "sec-course-info.html",
+  "type": "Subsection",
+  "number": "",
+  "title": "Course Information",
+  "body": " Course Information  This is the syllabus for Differential Equations with Linear Algebra (MATH 327) for Summer 2026. It is a 4-credit course offered through St. Cloud State University.    Instructor  Dr. Dale Buske, CH 367A, drbuske@stcloudstate.edu .    Student Hours  Available via Zoom by appointment. Meetings on campus are also possible. Email to set up a day, time, and method to meet.    Accessibility Services  Please contact Student Accessibility Services (SAS), sas@stcloudstate.edu or 320-308-4080, Centennial Hall 202, to meet and discuss reasonable and appropriate accommodations.    Class meets  The course is asynchronous; however, following the suggested schedule is strongly advised in order to be successful and prepared for proctored, on-campus exams. There are 5 dates on which we will meet on campus.   Meeting Dates on Campus (CH 301)     Date    Time     June 2  9:00-10:30 AM    June 16  9:00-10:30 AM    June 30  9:00-10:30 AM    July 14  9:00-10:30 AM    July 23  9:00-11:15 AM       Course Description  Matrices and matrix operations, Gaussian elimination, determinants, Euclidean n-space and subspaces, dependence, eigenvalues, eigenvectors, diagonalization. Separable and first-order linear equations, second-order linear equations having constant coefficients, applications, systems of linear ODE's with constant coefficients, nonhomogenous linear systems, Laplace transforms.    Prerequisite  MATH 222 - Calculus II    Academic Integrity  There is nothing more important in this class than academic integrity . Sure, you want to master the topics in the course (and perhaps earn a good grade). Sure, you want to enjoy doing it. And, it is also important to know that your instructor intends to play his part in helping you be successful. Succeeding, as you know, will require hard work and significant effort. Cutting corners will not serve you well.  University policy is clear: Work submitted by an individual as her\/his\/their own course work in connection with an application for a position, promotion, tenure, salary increase, or other academic activity must be academically honest and a product of his or her own efforts. (A.II, 2.4, SUB.d.2, Professional and Ethical Standards for Employees and Students).    Cheating cannot be tolerated. All work must be your own. Suspected incidents of academic dishonesty will be aggressively managed via the procedure found in the SCSU student handbook .    In this course, students are likely to use AI tools to enhance their learning experience. However, it is essential to use these tools ethically and responsibly. AI can be a valuable resource for understanding complex concepts and solving problems, but it should not replace your own critical thinking and problem-solving efforts. All submitted work must be your own, and any assistance from AI tools must be properly acknowledged on written work. The use of AI is forbidden on assessments of your knowledge (e.g. exams, MyOpenMath). Using AI to complete work without acknowledgment will be considered a violation of academic integrity policies. In mathematics, AI often gives incorrect responses (i.e. hallucinations) and large language models such as ChatGPT are widely deemed “unreliable” in doing mathematics. Relaying AI responses that are incorrect will earn no credit. However, not acknowledging the use of AI in a response is far worse – it is academic misconduct.    Textbook and course materials   Introduction to Differential Equations by Trevor Bazett. The text is freely available at https:\/\/web.uvic.ca\/~tbazett\/diffyqs\/ .  Though most of course materials can be found at https:\/\/drbuske.github.io\/Math327\/course , D2L Brightspace will be the learning management tool used to organize the course. Grades and reminders on due dates of assessments as well as announcements we be posted on D2L. Visit http:\/\/myhuskynet.stcloudstate.edu and login to your account using your Huskynet ID and password.  Electronic homework will be done via the MyOpenMath platform located at http:\/\/www.myopenmath.com .       Course Overview  People learn mathematics by doing mathematics. For this reason, you will be doing a substantial amount of mathematics each day. Though the course is asynchronous and hence flexible, you would be well-advised to do a little mathematics each day. The course calendar has suggested dates for each topic. Daily Prep assignments guide you through videos, readings, and practice exercises to prepare you for each assessment. Procrastination will not serve you well. A number of tools are available to support you, but the most important tool will be your dedicated effort.   "
+},
+{
+  "id": "sec-course-info-2",
+  "level": "2",
+  "url": "sec-course-info.html#sec-course-info-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Differential Equations with Linear Algebra (MATH 327) "
+},
+{
+  "id": "syllabus-4",
+  "level": "1",
+  "url": "syllabus-4.html",
+  "type": "Subsection",
+  "number": "",
+  "title": "Topics and Learning Outcomes",
+  "body": " Topics and Learning Outcomes     Topics  Introduction: Introduction to differential equations; Classification of differential equations  First-order equations: Integrals as solutions; slope fields; separable equations; first-order linear equations; autonomous equations; numerical methods (Euler's method)  Higher-order equations: Second-order linear ODEs; constant coefficient second-order linear ODEs; higher-order linear ODEs; mechanical vibrations; nonhomogeneous equations (including undetermined coefficients and variation of parameters)  The Laplace transform: The Laplace transform; transforms of derivatives and ODEs; convolution; dirac delta and impulse response  Linear algebra: Vectors, mappings, and matrices; matrix algebra; elimination; subspaces, dimension and the kernel  Systems of ODEs: Introduction to systems of ODEs; matrices and linear systems; linear systems of ODEs; eigenvalue method; two-dimensional systems and their vector fields; second-order systems and applications; multiple eigenvalues; matrix exponentials; nonhomogeneous systems    Learning Outcomes    Perform elementary row operations on matrices; determine and analyze solutions of a system of linear equations.  Perform matrix arithmetic, calculate determinants, and determine inverses to given matrices.  Compute the eigenvalues and eigenvectors of a matrix and diagonalize matrices.  Identify Euclidean spaces and subspaces.  Distinguish between dependent and linearly independent sets of vectors.  Recognize various types of differential equations and execute an appropriate method to arrive at an analytical or approximate solution.  Solve systems of linear first-order differential equations.  Use Laplace transforms to solve differential equations.  Apply appropriate technology to analyze differential equations.  Communicate quantitative ideas clearly and accurately.       "
+},
+{
+  "id": "subsec-calendar",
+  "level": "1",
+  "url": "subsec-calendar.html",
+  "type": "Subsection",
+  "number": "",
+  "title": "Calendar",
+  "body": " Calendar  Below is a calendar with dates you should study each topic and dates for in-class exams. Depending on your schedule, you may wish to do some of the work on weekends. Just be sure to not fall behind and be prepared for exams on the prescribed dates.   Course Schedule    Week Starting  Monday  Tuesday  Wednesday  Thursday    5\/18  0.2-0.3 Introduction  1.1 Integrals as solutions  1.2 Slope fields  1.3 Separable equations    5\/25  No Class  1.4 First-order linear equations  1.6 Autonomous equations  1.7 Numerical methods    6\/1  2.1 Second-order linear ODEs  Exam 1  2.2 Constant coefficient second-order linear ODEs  2.3 Higher order linear ODEs    6\/8  2.4 Mechanical vibrations  2.5 Nonhomogeneous equations  Review  3.1 The Laplace transform    6\/15  3.2 Transforms of derivatives and ODEs  Exam 2  3.3 Convolution  3.4 Dirac delta and impulse response    6\/22  4.1 Vectors, mappings, and matrices  4.2 Matrix algebra  4.3 Elimination  4.4 Subspaces, dimension, and the kernel    6\/29  Review  Exam 3  5.1 Introduction to systems of ODEs  5.2 Matrices and linear systems    7\/6  5.3 Linear systems of ODEs  5.4 Eigenvalue method  5.5 Two-dimensional systems and their vector fields  5.6 Second-order systems and applications    7\/13  Review  Exam 4  5.7 Multiple eigenvalues  5.8 Matrix exponentials    7\/20  5.8 Matrix exponentials  5.9 Nonhomogeneous systems  Review  Final Exam     Exams will cover the following material from the course.   Exam dates and topics     Exam    Date    Topics     Exam 1  June 2  Sections 0.2, 0.3, 1.1-1.7    Exam 2  June 16  Sections 2.1-2.5    Exam 3  June 30  Sections 3.1-3.4, 4.1-4.4    Exam 4  July 14  Sections 5.1-5.6    Final Exam  July 23  Comprehensive (to include 5.7-5.9)     "
+},
+{
+  "id": "schedule-table",
+  "level": "2",
+  "url": "subsec-calendar.html#schedule-table",
+  "type": "Table",
+  "number": "2",
+  "title": "Course Schedule",
+  "body": " Course Schedule    Week Starting  Monday  Tuesday  Wednesday  Thursday    5\/18  0.2-0.3 Introduction  1.1 Integrals as solutions  1.2 Slope fields  1.3 Separable equations    5\/25  No Class  1.4 First-order linear equations  1.6 Autonomous equations  1.7 Numerical methods    6\/1  2.1 Second-order linear ODEs  Exam 1  2.2 Constant coefficient second-order linear ODEs  2.3 Higher order linear ODEs    6\/8  2.4 Mechanical vibrations  2.5 Nonhomogeneous equations  Review  3.1 The Laplace transform    6\/15  3.2 Transforms of derivatives and ODEs  Exam 2  3.3 Convolution  3.4 Dirac delta and impulse response    6\/22  4.1 Vectors, mappings, and matrices  4.2 Matrix algebra  4.3 Elimination  4.4 Subspaces, dimension, and the kernel    6\/29  Review  Exam 3  5.1 Introduction to systems of ODEs  5.2 Matrices and linear systems    7\/6  5.3 Linear systems of ODEs  5.4 Eigenvalue method  5.5 Two-dimensional systems and their vector fields  5.6 Second-order systems and applications    7\/13  Review  Exam 4  5.7 Multiple eigenvalues  5.8 Matrix exponentials    7\/20  5.8 Matrix exponentials  5.9 Nonhomogeneous systems  Review  Final Exam    "
+},
+{
+  "id": "ExamDates",
+  "level": "2",
+  "url": "subsec-calendar.html#ExamDates",
+  "type": "Table",
+  "number": "3",
+  "title": "Exam dates and topics",
+  "body": " Exam dates and topics     Exam    Date    Topics     Exam 1  June 2  Sections 0.2, 0.3, 1.1-1.7    Exam 2  June 16  Sections 2.1-2.5    Exam 3  June 30  Sections 3.1-3.4, 4.1-4.4    Exam 4  July 14  Sections 5.1-5.6    Final Exam  July 23  Comprehensive (to include 5.7-5.9)    "
+},
+{
+  "id": "sec-assessments",
+  "level": "1",
+  "url": "sec-assessments.html",
+  "type": "Subsection",
+  "number": "",
+  "title": "Assessments and Grades",
+  "body": " Assessments and Grades     MOMwork  Associated with the course is an open source (FREE) electronic homework system (MyOpenMath). We will use this for MOMwork. To access this, use the link https:\/\/www.myopenmath.com\/ .  Course ID: 320379  Enrollment Key: Buske327Summer26    Concept Maps  There will be four short “concept map” assignments—one each on (1) first‑order differential equations, (2) higher‑order linear ODEs, (3) Laplace transforms, and (4) systems of differential equations. A concept map is a hand‑drawn visual diagram that shows how key ideas in a topic connect, such as methods, definitions, relationships, and big‑picture structures. Each map should include the major concepts from the unit and arrows or labeled links showing how those ideas relate to one another. The goal is not artistic quality but clarity of thinking and organization. These assignments are graded on a simple credit\/no‑credit basis for completeness, effort, and meaningful connections—not correctness of the mathematical details. Because the maps must be hand‑drawn and reflect your own understanding, they are naturally individualized and are excellent preparation for the written exams. The due dates for these concept maps will be aligned with exam dates so that you may hand them in at that time.   Concept map due dates     Concept Map    Due Date     first‑order differential equations  June 2 (at Exam 1)    higher‑order linear ODEs  June 15 (at Exam 2)    Laplace transforms  June 30 (at Exam 3)    systems of differential equations  July 14 (at Exam 4)       Written Exams  There will be five (5) proctored, written exams. One of the written exams will be a comprehensive final. All exams are to be independent assessments of your knowledge. These will be given in CH 301 on campus on dates and times listed elsewhere on the syllabus.    Grading  I will use my best professional judgment in determining grades. While many courses utilize 90%, 80%, 70%, and 60% as cutoffs for A, B, C, and D grades, these will serve only as guidelines. Averages above these marks will guarantee these grades but lower marks may earn higher final grades.   Grade weighting     Item    Weighting     MOMwork (MyOpenMath)  30%    Concept Maps  5%    Exams  65%        "
+},
+{
+  "id": "sec-assessments-2",
+  "level": "2",
+  "url": "sec-assessments.html#sec-assessments-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "concept map "
+},
+{
   "id": "ch-Textbook-2",
   "level": "1",
   "url": "ch-Textbook-2.html",
@@ -3059,6 +3131,60 @@ var ptx_lunr_docs = [
   "number": "8",
   "title": "Interpreting the Forcing Term Through the Matrix Exponential.",
   "body": " Interpreting the Forcing Term Through the Matrix Exponential   Consider the nonhomogeneous system where .    Describe qualitatively how the forcing term influences the motion using the matrix exponential .    Compute .       (a) The forcing enters through the integral   where “propagates” the contribution of forward from time to . Since is a rotation matrix, is a rotation by . Thus the forcing term (a vertical oscillation) gets rotated and accumulated over time. The net effect is that the system experiences a continuously rotating contribution from , producing a driven rotational motion.   (b) Because represents a 90-degree rotation, its exponential is the usual rotation matrix:   This follows from the Taylor series expansion and is used directly inside the nonhomogeneous integral.   "
+},
+{
+  "id": "root-1-2-6",
+  "level": "1",
+  "url": "root-1-2-6.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Concept Maps",
+  "body": " Concept Maps    Instructions: Below are general guidelines for the concept maps assignments that you will put together and bring to each exam.    All concept map assignments share a common purpose: to help you organize the major ideas from each unit and understand how those ideas relate to one another. Each concept map must be hand-drawn and must show meaningful relationships between concepts using arrows, labels, or grouping. Your work should reflect your personal understanding and should include a sufficient number of correctly connected ideas to convey the structure of the topic. Concept maps are graded credit\/no-credit on the basis of completeness, effort, and clarity of conceptual connections, not artistic detail or perfect mathematical precision. You will bring a copy of each completed map to an exam.    Concept Map: First-Order Differential Equations   Construct a concept map that captures the core ideas involved in analyzing and solving first-order differential equations. Your map should include 8–12 key concepts and show how they relate to each other through labeled arrows or directional connections.  Possible concepts to include:   Direction fields \/ slope fields  Separable equations  Linear first-order equations  Integrating factors  Autonomous equations  Equilibrium solutions  Qualitative analysis    Your concept map should highlight differences among the main types of first-order equations and indicate when each method is appropriate.      Concept Map: Higher-Order Linear ODEs   Create a concept map that shows how the techniques for solving higher-order linear differential equations with constant coefficients fit together. Your map should include 10–15 concepts and make clear the relationships among solution methods, characteristic equations, and the structure of general solutions.  Possible concepts to include:   Homogeneous vs. nonhomogeneous equations  Characteristic polynomial  Real, complex, and repeated roots  Fundamental set of solutions  Wronskian   Undetermined coefficients  Variation of parameters  Superposition principle   Your concept map should make the flow of solution techniques clear and indicate how the nature of the roots of the characteristic equation determines the structure of solutions.      Concept Map: Laplace Transforms   Create a concept map describing how Laplace transforms are used to solve differential equations. Your map should include 8–12 major concepts from the Laplace unit and show how these ideas interact to form a complete solution method.  Possible concepts to include:   Laplace transform  Inverse Laplace transform  Transform tables  Linearity  Convolution  Step functions (Heaviside)  Dirac delta (impulse)  Partial fractions  Solving IVPs   Your concept map should highlight the main pathway for solving initial value problems using Laplace transforms, including how transforms convert differential equations into algebraic ones.      Concept Map: Systems of Differential Equations   Construct a concept map showing how linear algebra and differential equation ideas combine to analyze linear systems. Your map should include 5–10 concepts and illustrate how algebraic tools determine the qualitative and quantitative behavior of solutions.  Possible concepts to include:   Matrix form of a system  Eigenvalues and eigenvectors  Complex eigenvalues  Repeated eigenvalues  Generalized eigenvectors  Diagonalization     Your concept map should clearly show how the classification of eigenvalues shapes solution behavior and how matrix methods lead to qualitative understanding of trajectories in the phase plane.     "
+},
+{
+  "id": "root-1-2-6-2-1",
+  "level": "2",
+  "url": "root-1-2-6.html#root-1-2-6-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "concept maps "
+},
+{
+  "id": "cm-first-order",
+  "level": "2",
+  "url": "root-1-2-6.html#cm-first-order",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Concept Map: First-Order Differential Equations.",
+  "body": " Concept Map: First-Order Differential Equations   Construct a concept map that captures the core ideas involved in analyzing and solving first-order differential equations. Your map should include 8–12 key concepts and show how they relate to each other through labeled arrows or directional connections.  Possible concepts to include:   Direction fields \/ slope fields  Separable equations  Linear first-order equations  Integrating factors  Autonomous equations  Equilibrium solutions  Qualitative analysis    Your concept map should highlight differences among the main types of first-order equations and indicate when each method is appropriate.   "
+},
+{
+  "id": "cm-higher-order",
+  "level": "2",
+  "url": "root-1-2-6.html#cm-higher-order",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Concept Map: Higher-Order Linear ODEs.",
+  "body": " Concept Map: Higher-Order Linear ODEs   Create a concept map that shows how the techniques for solving higher-order linear differential equations with constant coefficients fit together. Your map should include 10–15 concepts and make clear the relationships among solution methods, characteristic equations, and the structure of general solutions.  Possible concepts to include:   Homogeneous vs. nonhomogeneous equations  Characteristic polynomial  Real, complex, and repeated roots  Fundamental set of solutions  Wronskian   Undetermined coefficients  Variation of parameters  Superposition principle   Your concept map should make the flow of solution techniques clear and indicate how the nature of the roots of the characteristic equation determines the structure of solutions.   "
+},
+{
+  "id": "cm-laplace",
+  "level": "2",
+  "url": "root-1-2-6.html#cm-laplace",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Concept Map: Laplace Transforms.",
+  "body": " Concept Map: Laplace Transforms   Create a concept map describing how Laplace transforms are used to solve differential equations. Your map should include 8–12 major concepts from the Laplace unit and show how these ideas interact to form a complete solution method.  Possible concepts to include:   Laplace transform  Inverse Laplace transform  Transform tables  Linearity  Convolution  Step functions (Heaviside)  Dirac delta (impulse)  Partial fractions  Solving IVPs   Your concept map should highlight the main pathway for solving initial value problems using Laplace transforms, including how transforms convert differential equations into algebraic ones.   "
+},
+{
+  "id": "cm-systems",
+  "level": "2",
+  "url": "root-1-2-6.html#cm-systems",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Concept Map: Systems of Differential Equations.",
+  "body": " Concept Map: Systems of Differential Equations   Construct a concept map showing how linear algebra and differential equation ideas combine to analyze linear systems. Your map should include 5–10 concepts and illustrate how algebraic tools determine the qualitative and quantitative behavior of solutions.  Possible concepts to include:   Matrix form of a system  Eigenvalues and eigenvectors  Complex eigenvalues  Repeated eigenvalues  Generalized eigenvectors  Diagonalization     Your concept map should clearly show how the classification of eigenvalues shapes solution behavior and how matrix methods lead to qualitative understanding of trajectories in the phase plane.   "
 }
 ]
 
