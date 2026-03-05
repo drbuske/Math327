@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Concept Maps</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Below are general guidelines for the <term>concept maps</term> assignments that you will put together and bring to each exam.  
+    </p>
+  </introduction>
+
+  <!-- <page> -->
+
+  <p>
+    All concept map assignments share a common purpose: to help you organize the major ideas from each
+    unit and understand how those ideas relate to one another. Each concept map must be <em>hand-drawn</em>
+    and must show meaningful relationships between concepts using arrows, labels, or grouping. Your work
+    should reflect your personal understanding and should include a sufficient number of correctly connected
+    ideas to convey the structure of the topic. Concept maps are graded credit/no-credit on the basis of
+    completeness, effort, and clarity of conceptual connections, not artistic detail or perfect mathematical
+    precision. You will bring a copy of each completed map to an exam.
+  </p>
+
+
+  <!-- =======================
+       1. First-Order DEs
+       ======================= -->
+  <exercise xml:id="cm-first-order">
+    <title>Concept Map: First-Order Differential Equations</title>
+    <statement>
+      <p>
+        Construct a concept map that captures the core ideas involved in analyzing and solving first-order
+        differential equations. Your map should include <em>8–12 key concepts</em> and show how they relate
+        to each other through labeled arrows or directional connections.
+      </p>
+      <p>Possible concepts to include:</p>
+      <ul>
+        <li>Direction fields / slope fields</li>
+        <li>Separable equations</li>
+        <li>Linear first-order equations</li>
+        <li>Integrating factors</li>
+        <li>Autonomous equations</li>
+        <li>Equilibrium solutions</li>
+        <li>Qualitative analysis</li>
+        <!-- <li>Existence and uniqueness</li> -->
+      </ul>
+      <p>
+        Your concept map should highlight differences among the main types of first-order equations and
+        indicate when each method is appropriate.
+      </p>
+    </statement>
+  </exercise>
+
+
+  <!-- =======================
+       2. Higher-Order Linear ODEs
+       ======================= -->
+  <exercise xml:id="cm-higher-order">
+    <title>Concept Map: Higher-Order Linear ODEs</title>
+    <statement>
+      <p>
+        Create a concept map that shows how the techniques for solving higher-order linear differential
+        equations with constant coefficients fit together. Your map should include <em>10–15 concepts</em>
+        and make clear the relationships among solution methods, characteristic equations, and the structure
+        of general solutions.
+      </p>
+      <p>Possible concepts to include:</p>
+      <ul>
+        <li>Homogeneous vs. nonhomogeneous equations</li>
+        <li>Characteristic polynomial</li>
+        <li>Real, complex, and repeated roots</li>
+        <li>Fundamental set of solutions</li>
+        <li>Wronskian</li>
+        <!-- <li>Reduction of order</li> -->
+        <li>Undetermined coefficients</li>
+        <li>Variation of parameters</li>
+        <li>Superposition principle</li>
+      </ul>
+      <p>
+        Your concept map should make the flow of solution techniques clear and indicate how the nature of
+        the roots of the characteristic equation determines the structure of solutions.
+      </p>
+    </statement>
+  </exercise>
+
+
+  <!-- =======================
+       3. Laplace Transforms
+       ======================= -->
+  <exercise xml:id="cm-laplace">
+    <title>Concept Map: Laplace Transforms</title>
+    <statement>
+      <p>
+        Create a concept map describing how Laplace transforms are used to solve differential equations.
+        Your map should include <em>8–12 major concepts</em> from the Laplace unit and show how these ideas
+        interact to form a complete solution method.
+      </p>
+      <p>Possible concepts to include:</p>
+      <ul>
+        <li>Laplace transform</li>
+        <li>Inverse Laplace transform</li>
+        <li>Transform tables</li>
+        <li>Linearity</li>
+        <li>Convolution</li>
+        <li>Step functions (Heaviside)</li>
+        <li>Dirac delta (impulse)</li>
+        <li>Partial fractions</li>
+        <li>Solving IVPs</li>
+      </ul>
+      <p>
+        Your concept map should highlight the main pathway for solving initial value problems using
+        Laplace transforms, including how transforms convert differential equations into algebraic ones.
+      </p>
+    </statement>
+  </exercise>
+
+
+  <!-- =======================
+       4. Systems of Differential Equations
+       ======================= -->
+  <exercise xml:id="cm-systems">
+    <title>Concept Map: Systems of Differential Equations</title>
+    <statement>
+      <p>
+        Construct a concept map showing how linear algebra and differential equation ideas combine to
+        analyze linear systems. Your map should include <em>5–10 concepts</em> and illustrate how algebraic
+        tools determine the qualitative and quantitative behavior of solutions.
+      </p>
+      <p>Possible concepts to include:</p>
+      <ul>
+        <li>Matrix form of a system</li>
+        <li>Eigenvalues and eigenvectors</li>
+        <li>Complex eigenvalues</li>
+        <li>Repeated eigenvalues</li>
+        <li>Generalized eigenvectors</li>
+        <li>Diagonalization</li>
+        <!-- <li>Matrix exponentials</li>
+        <li>Fundamental matrix</li> -->
+        <!-- <li>Phase portraits</li>
+        <li>Stability of equilibria</li> -->
+      </ul>
+      <p>
+        Your concept map should clearly show how the classification of eigenvalues shapes solution behavior
+        and how matrix methods lead to qualitative understanding of trajectories in the phase plane.
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- </page> -->
+</worksheet>

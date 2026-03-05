@@ -12,15 +12,15 @@
     <title>Course Information</title>
 
     <p>
-      This is the syllabus for <term>course name (MATH xxx, section xxx)</term> for [term] 20xx.
-      It is a [n] credit course.
+      This is the syllabus for <term>Differential Equations with Linear Algebra (MATH 327)</term> for Summer 2026.
+      It is a 4-credit course offered through St. Cloud State University.
       <!-- use a description list (dl) for short items -->
       <dl>
         <li>
           <title>Instructor</title>
 
           <p>
-            Prof. Lastname, Office Location, <url href="mailto:prof.lastname@example.edu">prof.lastname@example.edu</url>.
+            Dr. Dale Buske, CH 367A, <url href="mailto:drbuske@stcloudstate.edu">drbuske@stcloudstate.edu</url>.
           </p>
         </li>
 
@@ -28,7 +28,13 @@
           <title>Student Hours</title>
 
           <p>
-            TBD
+            Available via Zoom by appointment.  Meetings on campus are also possible.  Email to set up a day, time, and method to meet.  
+          </p>
+        </li>
+
+        <li>
+          <title>Accessibility Services</title>
+          <p>Please contact Student Accessibility Services (SAS), <url href="mailto:sas@stcloudstate.edu">sas@stcloudstate.edu</url> or 320-308-4080, Centennial Hall 202, to meet and discuss reasonable and appropriate accommodations.
           </p>
         </li>
 
@@ -36,15 +42,51 @@
           <title>Class meets</title>
 
           <p>
-            course times and location.
+            The course is asynchronous; however, following the suggested schedule is strongly advised in order to be successful and prepared for proctored, on-campus exams.  There are 5 dates on which we will meet on campus. 
           </p>
+
+          <table xml:id="MeetingDates" >
+<title>Meeting Dates on Campus (CH 301)</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Date</alert> </cell>
+<cell> <alert>Time</alert> </cell>
+</row>
+
+<row>
+<cell> June 2 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
+
+<row>
+<cell> June 16 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
+
+<row>
+<cell> June 30 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
+
+<row>
+<cell> July 14 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
+
+<row>
+<cell> July 23 </cell> 
+<cell> 9:00-11:15 AM </cell>  
+</row>
+
+</tabular>
+</table>
         </li>
 
         <li>
           <title>Course Description</title>
 
           <p>
-            course description from catalog
+            Matrices and matrix operations, Gaussian elimination, determinants, Euclidean n-space and subspaces, dependence, eigenvalues, eigenvectors, diagonalization. Separable and first-order linear equations, second-order linear equations having constant coefficients, applications, systems of linear ODE's with constant coefficients, nonhomogenous linear systems, Laplace transforms.
           </p>
         </li>
 
@@ -52,7 +94,27 @@
           <title>Prerequisite</title>
 
           <p>
-            list of prerequisites
+            MATH 222 - Calculus II
+          </p>
+        </li>
+
+        <li>
+          <title>Academic Integrity</title>
+          <p>There is nothing more important in this class than <em>academic integrity</em>.  Sure, you want to master the topics in the course (and perhaps earn a good grade).  Sure, you want to enjoy doing it.  And, it is also important to know that your instructor intends to play his part in helping you be successful.  Succeeding, as you know, will require hard work and significant effort.  Cutting corners will not serve you well.  
+          </p>
+
+          <p>University policy is clear:  
+            <blockquote><p><em>Work submitted by an individual as her/his/their own course work in connection with an application for a position, promotion, tenure, salary increase, or other academic activity must be academically honest and a product of his or her own efforts. (A.II, 2.4, SUB.d.2, Professional and Ethical Standards for Employees and Students).</em></p>
+            </blockquote>
+          </p>
+
+          <p>Cheating cannot be tolerated. All work must be your own.  Suspected incidents of academic dishonesty will be aggressively managed via the <url href="https://policies.stcloudstate.edu/SCSU/Viewer.aspx?id=6">procedure found in the SCSU student handbook</url>.  
+          </p>
+        </li>
+
+        <li>
+          <p>
+            In this course, students are likely to use AI tools to enhance their learning experience. However, it is essential to use these tools ethically and responsibly. AI can be a valuable resource for understanding complex concepts and solving problems, but it should not replace your own critical thinking and problem-solving efforts. All submitted work must be your own, and any assistance from AI tools must be properly acknowledged on written work.  The use of AI is forbidden on assessments of your knowledge (e.g. exams, MyOpenMath). Using AI to complete work without acknowledgment will be considered a violation of academic integrity policies.  In mathematics, AI often gives incorrect responses (i.e. hallucinations) and large language models such as ChatGPT are widely deemed “unreliable” in doing mathematics.  Relaying AI responses that are incorrect will earn no credit.  However, not acknowledging the use of AI in a response is far worse – it is academic misconduct.   
           </p>
         </li>
 
@@ -60,8 +122,16 @@
           <title>Textbook and course materials</title>
 
           <p>
-            <pubtitle>textbook name</pubtitle>
-            by textbook author.
+            <pubtitle>Introduction to Differential Equations</pubtitle>
+            by Trevor Bazett.  The text is freely available at <url href="https://web.uvic.ca/~tbazett/diffyqs/">https://web.uvic.ca/~tbazett/diffyqs/</url>.  
+          </p>
+
+          <p>
+            Though most of course materials can be found at <url href="https://drbuske.github.io/Math327/course/frontmatter.html">https://drbuske.github.io/Math327/course</url>, D2L Brightspace will be the learning management tool used to organize the course.  Grades and reminders on due dates of assessments as well as announcements we be posted on D2L.  Visit <url href="http://myhuskynet.stcloudstate.edu">http://myhuskynet.stcloudstate.edu</url> and login to your account using your Huskynet ID and password.  
+          </p>
+
+          <p>
+            Electronic homework will be done via the <url href="http://www.myopenmath.com">MyOpenMath</url> platform located at <url href="http://www.myopenmath.com">http://www.myopenmath.com</url>.  
           </p>
         </li>
       </dl>
@@ -72,15 +142,306 @@
       <title>Course Overview</title>
 
       <p>
+        People learn mathematics by <em>doing</em> mathematics.  For this reason, you will be doing a substantial amount of mathematics each day.  Though the course is asynchronous and hence flexible, you would be well-advised to do a little mathematics each day.  The course calendar has suggested dates for each topic.  Daily Prep assignments guide you through videos, readings, and practice exercises to prepare you for each assessment.  Procrastination will not serve you well.  A number of tools are available to support you, but the most important tool will be your dedicated effort.  
       </p>
     </paragraphs>
   </subsection>
+
+
+
+  <subsection>
+    <title>Topics and Learning Outcomes</title>
+    <p>
+      <dl>
+        <li>
+          <title>Topics</title>
+          <p>
+            Introduction: Introduction to differential equations; Classification of differential equations
+          </p>
+
+          <p>
+            First-order equations: Integrals as solutions; slope fields; separable equations; first-order linear equations; autonomous equations; numerical methods (Euler's method)
+          </p>
+
+          <p> Higher-order equations: Second-order linear ODEs; constant coefficient second-order linear ODEs; higher-order linear ODEs; mechanical vibrations; nonhomogeneous equations (including undetermined coefficients and variation of parameters)
+          </p>
+
+          <p> The Laplace transform: The Laplace transform; transforms of derivatives and ODEs; convolution; dirac delta and impulse response
+          </p>
+
+          <p> Linear algebra: Vectors, mappings, and matrices; matrix algebra; elimination; subspaces, dimension and the kernel
+          </p>
+
+          <p> Systems of ODEs: Introduction to systems of ODEs; matrices and linear systems; linear systems of ODEs; eigenvalue method; two-dimensional systems and their vector fields; second-order systems and applications; multiple eigenvalues; matrix exponentials; nonhomogeneous systems
+          </p>
+        </li>
+
+        <li>
+          <title>Learning Outcomes</title>
+          <p>
+            <ul>
+  <li>Perform elementary row operations on matrices; determine and analyze solutions of a system of linear equations.</li>
+  <li>Perform matrix arithmetic, calculate determinants, and determine inverses to given matrices.</li>
+  <li>Compute the eigenvalues and eigenvectors of a matrix and diagonalize matrices.</li>
+  <li>Identify Euclidean spaces and subspaces.</li>
+  <li>Distinguish between dependent and linearly independent sets of vectors.</li>
+  <li>Recognize various types of differential equations and execute an appropriate method to arrive at an analytical or approximate solution.</li>
+  <li>Solve systems of linear first-order differential equations.</li>
+  <li>Use Laplace transforms to solve differential equations.</li>
+  <li>Apply appropriate technology to analyze differential equations.</li>
+  <li>Communicate quantitative ideas clearly and accurately.</li>
+</ul>
+          </p>
+        </li>
+      </dl>
+    </p>
+  </subsection>
+  
+  <subsection xml:id="subsec-calendar">
+    <title>Calendar</title>
+    <p>
+      Below is a calendar with dates you should study each topic and dates for in-class exams.  Depending on your schedule, you may wish to do some of the work on weekends.  Just be sure to not fall behind and be prepared for exams on the prescribed dates.  
+    </p>
+
+<table xml:id="schedule-table">
+  <title>Course Schedule</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+      <cell><alert>Week Starting</alert></cell>
+      <cell><alert>Monday</alert></cell>
+      <cell><alert>Tuesday</alert></cell>
+      <cell><alert>Wednesday</alert></cell>
+      <cell><alert>Thursday</alert></cell>
+    </row>
+
+    <row>
+      <cell><alert>5/18</alert></cell>
+      <cell>0.2-0.3 Introduction</cell>
+      <cell>1.1 Integrals as solutions</cell>
+      <cell>1.2 Slope fields</cell>
+      <cell>1.3 Separable equations</cell>
+    </row>
+
+    <row>
+      <cell><alert>5/25</alert></cell>
+      <cell><em>No Class</em></cell>
+      <cell>1.4 First-order linear equations</cell>
+      <cell>1.6 Autonomous equations</cell>
+      <cell>1.7 Numerical methods</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/1</alert></cell>
+      <cell>2.1 Second-order linear ODEs</cell>
+      <cell><alert>Exam 1</alert></cell>
+      <cell>2.2 Constant coefficient second-order linear ODEs</cell>
+      <cell>2.3 Higher order linear ODEs</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/8</alert></cell>
+      <cell>2.4 Mechanical vibrations</cell>
+      <cell>2.5 Nonhomogeneous equations</cell>
+      <cell>Review</cell>
+      <cell>3.1 The Laplace transform</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/15</alert></cell>
+      <cell>3.2 Transforms of derivatives and ODEs</cell>
+      <cell><alert>Exam 2</alert></cell>
+      <cell>3.3 Convolution</cell>
+      <cell>3.4 Dirac delta and impulse response</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/22</alert></cell>
+      <cell>4.1 Vectors, mappings, and matrices</cell>
+      <cell>4.2 Matrix algebra</cell>
+      <cell>4.3 Elimination</cell>
+      <cell>4.4 Subspaces, dimension, and the kernel</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/29</alert></cell>
+      <cell>Review</cell>
+      <cell><alert>Exam 3</alert></cell>
+      <cell>5.1 Introduction to systems of ODEs</cell>
+      <cell>5.2 Matrices and linear systems</cell>
+    </row>
+
+    <row>
+      <cell><alert>7/6</alert></cell>
+      <cell>5.3 Linear systems of ODEs</cell>
+      <cell>5.4 Eigenvalue method</cell>
+      <cell>5.5 Two-dimensional systems and their vector fields</cell>
+      <cell>5.6 Second-order systems and applications</cell>
+    </row>
+
+    <row>
+      <cell><alert>7/13</alert></cell>
+      <cell>Review</cell>
+      <cell><alert>Exam 4</alert></cell>
+      <cell>5.7 Multiple eigenvalues</cell>
+      <cell>5.8 Matrix exponentials</cell>
+    </row>
+
+    <row>
+      <cell><alert>7/20</alert></cell>
+      <cell>5.8 Matrix exponentials</cell>
+      <cell>5.9 Nonhomogeneous systems</cell>
+      <cell>Review</cell>
+      <cell><alert>Final Exam</alert></cell>
+    </row>
+  </tabular>
+</table>
+
+
+    <p>
+      Exams will cover the following material from the course.
+    </p>
+
+    <table xml:id="ExamDates" >
+<title>Exam dates and topics</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Exam</alert> </cell>
+<cell> <alert>Date</alert> </cell>
+<cell> <alert>Topics</alert> </cell>
+</row>
+
+<row>
+<cell> Exam 1 </cell> 
+<cell> June 2 </cell> 
+<cell> Sections 0.2, 0.3, 1.1-1.7 </cell>     
+</row>
+
+<row>
+<cell> Exam 2 </cell> 
+<cell> June 16 </cell>  
+<cell> Sections 2.1-2.5 </cell>  
+</row>
+
+<row>
+<cell> Exam 3 </cell> 
+<cell> June 30 </cell> 
+<cell> Sections 3.1-3.4, 4.1-4.4 </cell>  
+</row>
+
+<row>
+<cell> Exam 4 </cell> 
+<cell> July 14 </cell> 
+<cell> Sections 5.1-5.6 </cell>   
+</row>
+
+<row>
+<cell> Final Exam </cell> 
+<cell> July 23 </cell> 
+<cell> Comprehensive (to include 5.7-5.9) </cell> 
+</row>
+
+</tabular>
+</table>
+
+  </subsection> 
 
   <!-- Other subsections for larger dividers -->
   <subsection xml:id="sec-assessments">
     <title>Assessments and Grades</title>
 
     <p>
+<dl>
+  <li>
+    <title>
+      MOMwork
+    </title>
+  
+  <p> Associated with the course is an open source (FREE) electronic homework system (MyOpenMath).  We will use this for MOMwork.  To access this, use the link <url href="https://www.myopenmath.com/">https://www.myopenmath.com/</url>.
+  </p> 
+
+      <p>Course ID: <alert>320379</alert></p>
+      <p>Enrollment Key: <alert>Buske327Summer26</alert></p>
+      </li>
+
+      <li>
+        <title>Concept Maps</title>
+        <p>
+          There will be four short “concept map” assignments—one each on (1) first‑order differential equations, (2) higher‑order linear ODEs, (3) Laplace transforms, and (4) systems of differential equations. A <term>concept map</term> is a hand‑drawn visual diagram that shows how key ideas in a topic connect, such as methods, definitions, relationships, and big‑picture structures. Each map should include the major concepts from the unit and arrows or labeled links showing how those ideas relate to one another. The goal is not artistic quality but clarity of thinking and organization. These assignments are graded on a simple credit/no‑credit basis for completeness, effort, and meaningful connections—not correctness of the mathematical details.  Because the maps must be hand‑drawn and reflect your own understanding, they are naturally individualized and are excellent preparation for the written exams.  The due dates for these concept maps will be aligned with exam dates so that you may hand them in at that time.  
+        </p>
+
+        <table xml:id="ConceptMaps" >
+<title>Concept map due dates</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Concept Map</alert> </cell>
+<cell> <alert>Due Date</alert> </cell>
+</row>
+
+<row>
+<cell> first‑order differential equations </cell> 
+<cell> June 2 (at Exam 1) </cell>     
+</row>
+
+<row>
+<cell> higher‑order linear ODEs </cell> 
+<cell> June 15 (at Exam 2) </cell>    
+</row>
+
+<row>
+<cell> Laplace transforms </cell> 
+<cell> June 30 (at Exam 3) </cell>  
+</row>
+
+<row>
+<cell> systems of differential equations </cell> 
+<cell> July 14 (at Exam 4) </cell>  
+</row>
+
+</tabular>
+</table>
+      </li>
+
+      <li>
+        <title>Written Exams</title>
+        <p>
+          There will be five (5) proctored, written exams.  One of the written exams will be a comprehensive final.  All exams are to be independent assessments of your knowledge.  These will be given in CH 301 on campus on dates and times listed elsewhere on the syllabus.  
+        </p>
+      </li>
+
+      <li>
+        <title>Grading</title>
+        <p>
+          I will use my best professional judgment in determining grades. While many courses utilize 90%, 80%, 70%, and 60% as cutoffs for A, B, C, and D grades, these will serve only as guidelines.  Averages above these marks will guarantee these grades but lower marks may earn higher final grades.  
+        </p>
+
+        <table xml:id="GradeWeights" >
+<title>Grade weighting</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Item</alert> </cell>
+<cell> <alert>Weighting</alert> </cell>
+</row>
+
+<row>
+<cell> MOMwork (MyOpenMath) </cell> 
+<cell> 30% </cell>     
+</row>
+
+<row>
+<cell> Concept Maps </cell> 
+<cell> 5% </cell>    
+</row>
+
+<row>
+<cell> Exams </cell> 
+<cell> 65% </cell>  
+</row>
+
+</tabular>
+</table>
+      </li>
+</dl>
     </p>
+
   </subsection>
 </section>
