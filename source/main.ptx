@@ -55,7 +55,11 @@
               <!-- Concept Maps -->
       <xi:include href="./homework/conceptmaps.ptx" /> 
   
-
+      <chapter xml:id="ch-practice-exams">
+      <title>Practice Exams</title>
+      <xi:include href="./handouts/PracticeExam1a.ptx" /> 
+      <xi:include href="./handouts/PracticeExam2a.ptx" /> 
+      </chapter>
     <!-- <chapter xml:id="course-documents">
       <title>Course Documents</title> -->
 

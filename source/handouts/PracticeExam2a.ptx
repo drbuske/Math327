@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Practice Exam 2</title>
+
+<section>
+<title>Topics</title>
+
+    <p workspace="1in">
+      Sections 2.1, 2.2, 2.3, 2.4, 2.5 
+    </p>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam2">
+    <title>Questions</title>
+    
+ <exercise xml:id="sec21-linear-verification">
+  <!-- <title>Classification and Verification for a Second-Order Linear ODE</title> -->
+
+  <statement>
+    <p>
+      Consider the differential equation
+    </p>
+    <me>
+      y'' - 3y' + 2y = 0.
+    </me>
+
+    <p>
+      <ol>
+        <li>
+          Explain why this differential equation is a 
+          <em>second-order linear homogeneous</em> differential equation.
+        </li>
+
+        <li>
+          Verify directly that 
+          <m>y_1(x) = e^{x}</m> 
+          and 
+          <m>y_2(x) = e^{2x}</m> 
+          are solutions.
+        </li>
+
+        <li>
+          Using (b), explain how you know that 
+          <m>y(x) = 5e^{x} - 3e^{2x}</m>
+          is also a solution.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      For part (a), recall the definitions.
+    </p>
+
+
+    <p>
+      For parts (b) and (c), compute <m>y'</m> and <m>y''</m> and substitute into 
+      the ODE to check whether the left-hand side equals zero.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The equation is second‑order linear homogeneous.
+      <ul>
+      <li>“Second order” means <m>y''</m> appears.</li>
+      <li>
+        “Linear” means <m>y</m>, <m>y'</m>, <m>y''</m> appear only to the first power 
+        and are not multiplied together.
+      </li>
+      <li>“Homogeneous” means the right-hand side is zero.</li>
+    </ul>  
+      Substitution shows that both <m>e^{x}</m> and <m>e^{2x}</m> satisfy the ODE.  
+      By the <em>superposition principle</em>, any linear combination such as 
+      <m>5e^{x} - 3e^{2x}</m> is also a solution.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      (a)  The equation
+    </p>
+    <me>
+      y'' - 3y' + 2y = 0
+    </me>
+    <p>
+      is <em>second order</em> because it involves <m>y''</m>.  
+      It is <em>linear</em> because <m>y</m>, <m>y'</m>, and <m>y''</m> appear only 
+      to the first power and are not multiplied by one another or placed inside 
+      nonlinear functions.  
+      It is <em>homogeneous</em> because the right-hand side is zero.
+    </p>
+
+    <p>
+      (b)  Verify that <m>y_1(x)=e^{x}</m> is a solution.  
+      Compute derivatives:
+    </p>
+    <me>
+      y_1' = e^{x}, \qquad y_1'' = e^{x}.
+    </me>
+    <p>
+      Substitute into the left-hand side of the ODE:
+    </p>
+    <me>
+      y_1'' - 3y_1' + 2y_1
+      = e^{x} - 3e^{x} + 2e^{x}
+      = 0.
+    </me>
+    <p>
+      Thus <m>e^{x}</m> is a solution.
+    </p>
+
+    <p>
+      Now verify <m>y_2(x)=e^{2x}</m>.  
+      Compute derivatives:
+    </p>
+    <me>
+      y_2' = 2e^{2x}, \qquad y_2'' = 4e^{2x}.
+    </me>
+    <p>
+      Substitute:
+    </p>
+    <me>
+      y_2'' - 3y_2' + 2y_2
+      = 4e^{2x} - 6e^{2x} + 2e^{2x}
+      = 0.
+    </me>
+    <p>
+      Thus <m>e^{2x}</m> is also a solution.
+    </p>
+
+    <p>
+      (c)  Because the equation is linear and homogeneous, 
+      any linear combination of solutions is again a solution.  
+      Therefore,
+    </p>
+    <me>
+      y(x) = 5e^{x} - 3e^{2x}
+    </me>
+    <p>
+      must satisfy the ODE.  
+      For completeness, substitute:
+    </p>
+    <md>
+      <mrow> y'' - 3y' + 2y
+      \amp = 5( e^{x} - 3e^{x} + 2e^{x} )
+        \;-\; 3( 4e^{2x} - 6e^{2x} + 2e^{2x} ) </mrow>
+      <mrow> \amp = 5 \cdot 0 - 3 \cdot 0 </mrow>
+      <mrow> \amp = 0. </mrow>
+    </md>
+
+    <p>
+      Hence <m>y(x)=5e^{x} - 3e^{2x}</m> is indeed a solution of the differential equation.
+    </p>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="ccsol-real-roots-example">
+  <!-- <title>Second-Order Linear ODE with Real Distinct Roots</title> -->
+
+  <statement>
+    <p>
+      Consider the differential equation
+    </p>
+    <me>
+      y'' - y' - 6y = 0.
+    </me>
+
+    <p>
+      <ol>
+        <li>
+          Form the characteristic equation and find its roots.
+        </li>
+
+        <li>
+          Write down the general solution of the differential equation.
+        </li>
+
+        <li>
+          Find the particular solution satisfying the initial conditions
+          <m>y(0)=3</m> and <m>y'(0)=0</m>.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      The associated characteristic equation is <m>
+      r^2 - r - 6 = 0.
+    </m>
+    </p>
+
+
+    <p>
+      Factor the quadratic to find two distinct real roots.  
+      When the characteristic roots are <m>r_1</m> and <m>r_2</m>, the general solution is
+    </p>
+    <me>
+      y(x) = C_1 e^{r_1 x} + C_2 e^{r_2 x}.
+    </me>
+
+    <p>
+      To apply initial conditions, compute <m>y'(x)</m> and substitute
+      <m>x=0</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The characteristic equation is <m>r^2 - r - 6 = 0</m>, which factors to
+      <m>(r-3)(r+2)=0</m>, giving roots <m>r_1=3</m> and <m>r_2=-2</m>.
+    </p>
+    <p>
+      The general solution is
+      <me>
+        y(x) = C_1 e^{3x} + C_2 e^{-2x}.
+      </me>
+    </p>
+    <p>
+      The initial conditions give <m>C_1 = \tfrac{6}{5}</m> and <m>C_2 = \tfrac{9}{5}</m>, so
+      </p>
+      <me>
+        y(x) = \frac{6}{5}e^{3x} + \frac{9}{5}e^{-2x}.
+      </me>
+  </answer>
+
+  <solution>
+    <p>
+      (a)  
+      We form the characteristic equation by replacing
+      <m>y''</m> with <m>r^2</m>, <m>y'</m> with <m>r</m>, and <m>y</m> with <m>1</m>:
+    </p>
+    <me>
+      r^2 - r - 6 = 0.
+    </me>
+
+    <p>
+      This quadratic factors as <m>
+      (r - 3)(r + 2) = 0,
+    </m>
+      giving the real distinct roots
+      <m>r_1 = 3</m> and <m>r_2 = -2</m>.
+    </p>
+
+    <p>
+      (b)  
+      When the characteristic equation has real distinct roots, the general solution is
+    </p>
+    <me>
+      y(x) = C_1 e^{3x} + C_2 e^{-2x}.
+    </me>
+
+    <p>
+      (c)  
+      Apply the initial condition <m>y(0)=3</m>:
+    </p>
+    <me>
+      y(0) = C_1 + C_2 = 3.
+    </me>
+
+    <p>
+      Compute <m>y'(x)</m>:
+    </p>
+    <me>
+      y'(x) = 3C_1 e^{3x} - 2C_2 e^{-2x}.
+    </me>
+
+    <p>
+      Apply <m>y'(0)=0</m>:
+    </p>
+    <me>
+      3C_1 - 2C_2 = 0.
+    </me>
+
+    <p>
+      We now solve the system:
+    </p>
+    <me>
+      C_1 + C_2 = 3,
+      \qquad
+      3C_1 - 2C_2 = 0.
+    </me>
+
+    <p>Solving:</p>
+    <me>
+      C_1 = \frac{6}{5}, \quad C_2 =  \frac{9}{5}.
+    </me>
+
+    <p>
+      Therefore the particular solution is
+    </p>
+    <me>
+      y(x) = \frac{6}{5}e^{3x} + \frac{9}{5}e^{-2x}.
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="second-order-linear-ode-exam">
+  <!-- <title>Second-Order Linear Homogeneous Differential Equation</title> -->
+
+  <statement>
+    <p>
+      Consider the differential equation
+    </p>
+    <me>
+      y'' - 4y' + 5y = 0.
+    </me>
+
+    <p>
+      <ol>
+        <li>
+          Find the general solution.
+        </li>
+        <li>
+          Determine the particular solution satisfying the initial conditions
+          <m>y(0) = 2</m> and <m>y'(0) = 1</m>.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Form the characteristic equation associated with
+      <m>y'' - 4y' + 5y = 0</m>:
+    </p>
+    <me>
+      r^{2} - 4r + 5 = 0.
+    </me>
+    <p>
+      Solve this quadratic to obtain complex roots of the form
+      <m>r = \alpha \pm \beta i</m>.  
+      When the roots are complex, the general solution has the form
+    </p>
+    <me>
+      y(x) = e^{\alpha x}\big(C_{1}\cos(\beta x) + C_{2}\sin(\beta x)\big).
+    </me>
+    <p>
+      Then apply the initial conditions to solve for <m>C_{1}</m> and <m>C_{2}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The general solution is
+      <me>
+        y(x) = e^{2x}\big(C_{1}\cos x + C_{2}\sin x\big).
+      </me>
+      The initial conditions give <m>C_{1}=2</m> and <m>C_{2}=-3</m>, so the
+      particular solution is
+      <me>
+        y(x) = e^{2x}\big(2\cos x - 3\sin x\big).
+      </me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      (a)  To solve the differential equation
+    </p>
+    <me>
+      y'' - 4y' + 5y = 0,
+    </me>
+    <p>
+      we form the characteristic equation 
+    <m>
+      r^{2} - 4r + 5 = 0.
+    </m>
+    </p>
+
+    <p>
+      Solving this quadratic:
+    </p>
+    <md>
+      <mrow> r \amp = \frac{4 \pm \sqrt{(-4)^{2} - 4(1)(5)}}{2} </mrow>
+        <mrow> \amp = \frac{4 \pm \sqrt{16 - 20}}{2} </mrow>
+        <mrow> \amp = \frac{4 \pm \sqrt{-4}}{2} </mrow>
+        <mrow> \amp = \frac{4 \pm 2i}{2} </mrow>
+        <mrow> \amp = 2 \pm i. </mrow>
+    </md>
+
+    <p>
+      Since the roots are complex with real part <m>2</m> and imaginary part
+      <m>1</m>, the general solution is
+    </p>
+    <me>
+      y(x) = e^{2x}\big(C_{1}\cos x + C_{2}\sin x\big).
+    </me>
+
+    <p>
+      (b)  Apply the initial conditions.  
+      First evaluate <m>y(0)</m>:
+    </p>
+    <me>
+      y(0) = e^{0}\big(C_{1}\cos 0 + C_{2}\sin 0\big)
+           = C_{1}.
+    </me>
+    <p>
+      Since <m>y(0)=2</m>, we obtain <m>C_{1}=2</m>.
+    </p>
+
+    <p>
+      Next compute <m>y'(x)</m>.  
+      Differentiating,
+    </p>
+    <me>
+      y'(x)
+      = e^{2x}\big[2(C_{1}\cos x + C_{2}\sin x)
+                   - C_{1}\sin x + C_{2}\cos x\big].
+    </me>
+
+    <p>
+      Evaluate at <m>x=0</m>:
+    </p>
+    <md>
+      <mrow> y'(0)
+      \amp = e^{0}\big[2(C_{1}\cos 0 + C_{2}\sin 0)
+                   - C_{1}\sin 0 + C_{2}\cos 0\big] </mrow>
+      <mrow> \amp = 2C_{1} + C_{2}. </mrow>
+    </md>
+
+    <p>
+      Using <m>y'(0)=1</m> and <m>C_{1}=2</m>,
+    </p>
+    <me>
+      1 = 2(2) + C_{2}
+        = 4 + C_{2},
+    </me>
+    <p>
+      so <m>C_{2} = -3</m>.
+    </p>
+
+    <p>
+      Therefore the solution satisfying the initial conditions is
+    </p>
+    <me>
+      y(x) = e^{2x}\big(2\cos x - 3\sin x\big).
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="higher-order-given-roots">
+  <!-- <title>General Solution from Given Characteristic Roots</title> -->
+
+  <statement>
+    <p>
+      A fourth-order linear homogeneous differential equation has the 
+      characteristic equation with roots
+    </p>
+    <me>
+      r = 4,\quad r = 1,\quad r = 1,\quad r = -2.
+    </me>
+
+    <p>
+      Write down the general solution of the differential equation.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      If <m>r</m> is a simple root of the characteristic equation, then 
+      <m>e^{rx}</m> is a solution.
+    </p>
+    <p>
+      If <m>r</m> is a repeated root of multiplicity <m>m</m>, then the 
+      corresponding solutions are
+    </p>
+    <me>
+      e^{rx},\quad x e^{rx},\quad x^{2} e^{rx},\;\ldots,\; x^{m-1} e^{rx}.
+    </me>
+    <p>
+      Combine all corresponding terms with arbitrary constants.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The general solution is
+    </p>
+    <me>
+      y(x)
+      = C_{1} e^{4x}
+      + C_{2} e^{x}
+      + C_{3} x e^{x}
+      + C_{4} e^{-2x}.
+    </me>
+  </answer>
+
+  <solution>
+    <p>
+      The given roots of the characteristic equation are:
+    </p>
+    <ul>
+      <li><m>r=4</m> (simple root),</li>
+      <li><m>r=1</m> (repeated twice),</li>
+      <li><m>r=-2</m> (simple root).</li>
+    </ul>
+
+    <p>
+      For the simple roots <m>r=4</m> and <m>r=-2</m>, the solutions are
+    </p>
+    <me>
+      e^{4x},\qquad e^{-2x}.
+    </me>
+
+    <p>
+      For the repeated root <m>r=1</m> of multiplicity 2, we take
+    </p>
+    <me>
+      e^{x},\qquad x e^{x}.
+    </me>
+
+    <p>
+      Combining all four linearly independent solutions, the general solution is
+    </p>
+    <me>
+      y(x)
+      = C_{1} e^{4x}
+      + C_{2} e^{x}
+      + C_{3} x e^{x}
+      + C_{4} e^{-2x},
+    </me>
+    <p>
+      where <m>C_1, C_2, C_3, C_4</m> are arbitrary constants.
+    </p>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="cc-hol-complex-repeated">
+  <!-- <title>General Solution from a Factored Characteristic Polynomial</title> -->
+
+  <statement>
+    <p>
+      A fifth-order linear nonhomogeneous differential equation has
+      homogeneous part associated with the factored characteristic equation
+    </p>
+
+    <me>
+      (r - 2)\,\bigl( (r + 1 - 3i)(r + 1 + 3i) \bigr)^{2} = 0.
+    </me>
+
+ <!--   <p>
+      Thus the homogeneous equation has:
+    </p>
+    <ul>
+      <li>one real root <m>r = 2</m> (simple),</li>
+      <li>a repeated complex conjugate pair <m>-1 \pm 3i</m> of multiplicity <m>2</m>.</li>
+    </ul> -->
+
+    <p>
+      You are told that a particular solution to the full nonhomogeneous 
+      equation is <m>
+      y_p(x) = x^3.
+      </m>
+    </p>
+
+    <p>
+      Write down the <em>general solution</em> of the nonhomogeneous differential equation.
+    </p>
+
+  </statement>
+
+  <hint>
+    <p>
+      For a simple real root <m>r</m>, the homogeneous solution includes <m>e^{rx}</m>.
+    </p>
+
+    <p>
+      For a complex root <m>\alpha \pm \beta i</m> of multiplicity <m>m</m>, the real
+      homogeneous solutions are
+    </p>
+
+    <me>
+      e^{\alpha x}\cos(\beta x), \quad e^{\alpha x}\sin(\beta x),
+      \quad x e^{\alpha x}\cos(\beta x), \quad x e^{\alpha x}\sin(\beta x),
+      \quad \ldots,
+    </me>
+
+    <p>
+      with <m>m</m> pairs of such terms.  
+      Here the repeated complex roots <m>-1 \pm 3i</m> have multiplicity <m>2</m>,
+      so you will have <m>4</m> real homogeneous terms generated by them.
+    </p>
+
+    <p>
+      The general solution of the nonhomogeneous equation is
+    </p>
+
+    <me>
+      y(x) = y_h(x) + y_p(x).
+    </me>
+  </hint>
+
+  <answer>
+    <p>
+      The general solution is
+    </p>
+
+    <md>
+      <mrow> y(x) \amp =
+      C_{1} e^{2x}
+      + C_{2} e^{-x}\cos(3x)
+      + C_{3} e^{-x}\sin(3x) </mrow>
+      <mrow> \amp + C_{4} x e^{-x}\cos(3x)
+      + C_{5} x e^{-x}\sin(3x)
+      + x^{3}. </mrow>
+    </md>
+  </answer>
+
+  <solution>
+    <p>
+      The given factored characteristic equation for the homogeneous part is
+    </p>
+
+    <me>
+      (r - 2)\,\bigl( (r + 1 - 3i)(r + 1 + 3i) \bigr)^{2} = 0.
+    </me>
+
+    <p>
+      This yields:
+    </p>
+    <ul>
+      <li>a simple real root <m>r = 2</m>, and</li>
+      <li>a repeated complex conjugate pair <m>-1 \pm 3i</m> of multiplicity <m>2</m>.</li>
+    </ul>
+
+    <p>
+      The real solution corresponding to the simple real root is <m>
+      e^{2x}.
+    </m>
+    </p>
+
+    <p>
+      For the repeated complex pair with real part <m>-1</m> and imaginary part <m>3</m>,
+      multiplicity <m>2</m> produces four real linearly independent solutions:
+    </p>
+
+    <me>
+      e^{-x}\cos(3x), \qquad
+      e^{-x}\sin(3x), \qquad
+      x e^{-x}\cos(3x), \qquad
+      x e^{-x}\sin(3x).
+    </me>
+
+    <p>
+      Thus the homogeneous solution is
+    </p>
+
+    <md>
+      <mrow> y_h(x) \amp =
+      C_{1} e^{2x}
+      + C_{2} e^{-x}\cos(3x)
+      + C_{3} e^{-x}\sin(3x) </mrow>
+      <mrow> \amp + C_{4} x e^{-x}\cos(3x)
+      + C_{5} x e^{-x}\sin(3x) </mrow>
+    </md>
+
+    <p>
+      We are given a particular solution to the full nonhomogeneous equation to be <m>
+      y_p(x) = x^{3}.
+    </m>
+    </p>
+
+    <p>
+      So the general solution of the nonhomogeneous differential equation is
+    </p>
+
+    <md>
+      <mrow> y(x) \amp =
+      C_{1} e^{2x}
+      + C_{2} e^{-x}\cos(3x)
+      + C_{3} e^{-x}\sin(3x) </mrow>
+      <mrow> \amp + C_{4} x e^{-x}\cos(3x)
+      + C_{5} x e^{-x}\sin(3x)
+      + x^{3}. </mrow>
+    </md>
+
+  </solution>
+
+</exercise>
+
+<exercise xml:id="mechanical-vibrations-basic">
+  <!-- <title>Undamped Mechanical Vibrations</title> -->
+
+  <statement>
+    <p>
+      A mass–spring system has mass <m>m = 4</m> kg and spring constant 
+      <m>k = 25</m> N/m.  
+      The motion of the mass satisfies the differential equation
+    </p>
+
+    <me>
+      4x'' + 25x = 0.
+    </me>
+
+    <p>
+      Suppose the mass is released from rest at a displacement of 
+      <m>x(0) = 2</m> meters, so that <m>x'(0) = 0</m>.
+      Find the equation of motion <m>x(t)</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Divide the equation by <m>4</m> to obtain the standard form
+    </p>
+    <me>
+      x'' + \omega^{2} x = 0.
+    </me>
+
+    <p>
+      Here <m>\omega = \sqrt{k/m}</m>.  
+      The general solution of <m>x'' + \omega^{2}x = 0</m> is
+    </p>
+    <me>
+      x(t) = C_1 \cos(\omega t) + C_2 \sin(\omega t).
+    </me>
+
+    <p>
+      Apply the initial conditions <m>x(0)=2</m> and <m>x'(0)=0</m> to find 
+      <m>C_1</m> and <m>C_2</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The angular frequency is <m>\omega = 5/2</m>, and the equation of motion is
+    </p>
+    <me>
+      x(t) = 2\cos\!\left(\frac{5}{2} t\right).
+    </me>
+  </answer>
+
+  <solution>
+    <p>
+      We begin with the equation of motion:
+    </p>
+
+    <me>
+      4x'' + 25x = 0.
+    </me>
+
+    <p>
+      Divide through by <m>4</m>:
+    </p>
+
+    <me>
+      x'' + \frac{25}{4} x = 0.
+    </me>
+
+    <p>
+      Thus
+    </p>
+
+    <me>
+      \omega^{2} = \frac{25}{4},
+      \qquad
+      \omega = \frac{5}{2}.
+    </me>
+
+    <p>
+      The general solution of <m>x'' + \omega^{2}x = 0</m> is
+    </p>
+
+    <me>
+      x(t) = C_1 \cos\!\left(\frac{5}{2} t\right)
+           + C_2 \sin\!\left(\frac{5}{2} t\right).
+    </me>
+
+    <p>
+      Apply the initial condition <m>x(0) = 2</m>:
+    </p>
+
+    <me>
+      x(0) = C_1 = 2.
+    </me>
+
+    <p>
+      Now compute the derivative:
+    </p>
+
+    <me>
+      x'(t) 
+      = - C_1 \frac{5}{2} \sin\!\left(\frac{5}{2} t\right)
+        + C_2 \frac{5}{2} \cos\!\left(\frac{5}{2} t\right).
+    </me>
+
+    <p>
+      Apply <m>x'(0)=0</m>:
+    </p>
+
+    <me>
+      x'(0) = C_2 \frac{5}{2} = 0,
+      \qquad
+      \text{so }
+      C_2 = 0.
+    </me>
+
+    <p>
+      Therefore the equation of motion is
+    </p>
+
+    <me>
+      x(t) = 2\cos\!\left(\frac{5}{2} t\right).
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="mv-classification-easy">
+  <!-- <title>Classifying Damped Mechanical Vibrations</title> -->
+
+  <statement>
+    <p>
+      A mass–spring–damper system is governed by the differential equation
+    </p>
+
+    <me>
+      4x'' + 12x' + 9x = 0.
+    </me>
+
+    <p>
+      Classify the motion of the system as 
+      <em>underdamped</em>,  
+      <em>critically damped</em>, or  
+      <em>overdamped</em>.
+    </p>
+  </statement>
+
+  <hint>
+
+    <p>
+      Consider the characteristic equation:
+    </p>
+    <me>
+      r^{2} + 3r + \tfrac{9}{4} = 0.
+    </me>
+
+    <p>
+      Compute the discriminant <m>
+      \Delta = b^{2} - 4ac.
+    </m>
+    </p>
+
+
+    <ul>
+      <li>If <m>\Delta &gt; 0</m>: overdamped.</li>
+      <li>If <m>\Delta = 0</m>: critically damped.</li>
+      <li>If <m>\Delta &lt; 0</m>: underdamped.</li>
+    </ul>
+  </hint>
+
+  <answer>
+    <p>
+      The motion is <em>critically damped</em>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Begin with the equation
+    </p>
+    <me>
+      4x'' + 12x' + 9x = 0.
+    </me>
+
+    <p>
+      Divide by <m>4</m> to obtain the standard form:
+    </p>
+    <me>
+      x'' + 3x' + \tfrac{9}{4}x = 0.
+    </me>
+
+    <p>
+      The corresponding characteristic equation is <m>
+      r^{2} + 3r + \tfrac{9}{4} = 0.
+    </m>
+    </p>
+
+
+    <p>
+      Compute the discriminant:
+    </p>
+    <me>
+      \Delta = 3^{2} - 4\cdot 1 \cdot \tfrac{9}{4}
+             = 9 - 9
+             = 0.
+    </me>
+
+    <p>
+      Since the discriminant is zero, the equation has a repeated real root.
+      Therefore the motion is <strong>critically damped</strong>.
+    </p>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="undetermined-coefficients-easy">
+  <!--<title>Finding a Particular Solution by Undetermined Coefficients</title> -->
+
+  <statement>
+    <p>
+      Consider the differential equation
+    </p>
+
+    <me>
+      y'' - 3y' + 2y = e^{x}.
+    </me>
+
+    <p>
+      <ol>
+        <li>
+          Find the general solution <m>y_h</m> of the associated homogeneous equation.
+        </li>
+
+        <li>
+          Use the method of undetermined coefficients to find a particular
+          solution <m>y_p</m> to the nonhomogeneous equation.
+        </li>
+
+        <li>
+          Write the general solution <m>y = y_h + y_p</m>.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      For part (a), solve the characteristic equation
+    </p>
+    <me>
+      r^2 - 3r + 2 = 0.
+    </me>
+
+    <p>
+      For part (b), note that the forcing term is <m>e^{x}</m>.  
+      Check whether <m>e^{x}</m> is a solution of the homogeneous equation.  
+      If it is not, try a particular solution of the form
+    </p>
+
+    <me>
+      y_p = A e^{x}.
+    </me>
+
+    <p>
+      Substitute this guess into the left-hand side to solve for <m>A</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>y_h = C_1 e^{x} + C_2 e^{2x}</m>.  
+      A particular solution is <m>y_p = -xe^{x}</m>.  
+      The general solution is
+    </p>
+    <me>
+      y(x) = C_1 e^{x} + C_2 e^{2x} - xe^{x}.
+    </me>
+  </answer>
+
+  <solution>
+    <p>
+      (a)  Solve the homogeneous equation
+    </p>
+
+    <me>
+      y'' - 3y' + 2y = 0.
+    </me>
+
+    <p>
+      Its characteristic equation is
+    </p>
+
+    <me>
+      r^2 - 3r + 2 = 0.
+    </me>
+
+    <p>
+      This factors as
+    </p>
+
+    <me>
+      (r - 1)(r - 2) = 0,
+    </me>
+
+    <p>
+      giving roots <m>r = 1</m> and <m>r = 2</m>.  
+      Therefore,
+    </p>
+
+    <me>
+      y_h = C_1 e^{x} + C_2 e^{2x}.
+    </me>
+
+    <p>
+      (b)  To find a particular solution, try the form <m>y_p = A e^{x}</m>.
+      Compute derivatives:
+    </p>
+
+    <me>
+      y_p' = A e^{x}, \qquad y_p'' = A e^{x}.
+    </me>
+
+    <p>
+      Substitute into the differential equation:
+    </p>
+
+    <me>
+      (A e^{x}) - 3(A e^{x}) + 2(A e^{x}) = e^{x}.
+    </me>
+
+    <p>
+      The left-hand side simplifies to
+    </p>
+
+    <me>
+      0 \cdot A e^{x} = e^{x}.
+    </me>
+
+    <p>
+      Since this yields <m>0 = 1</m>, our guess fails because <m>e^{x}</m> is 
+      already a solution of the homogeneous equation.
+    </p>
+
+    <p>
+      Therefore we multiply our guess by <m>x</m> and instead try
+    </p>
+
+    <me>
+      y_p = A x e^{x}.
+    </me>
+
+    <p>
+      Compute derivatives:
+    </p>
+
+    <me>
+      y_p' = A e^{x} + A x e^{x}, \qquad
+      y_p'' = A e^{x} + A e^{x} + A x e^{x}.
+    </me>
+
+    <p>
+      Substitute into the left-hand side:
+    </p>
+
+    <me>
+      y_p'' - 3 y_p' + 2 y_p
+      =
+      (2A e^{x} + A x e^{x})
+      - 3(A e^{x} + A x e^{x})
+      + 2(A x e^{x}).
+    </me>
+
+    <p>
+      Simplify:
+    </p>
+
+    <me>
+      = (2A - 3A)e^{x}
+        + (A - 3A + 2A)x e^{x}
+      = -A e^{x}.
+    </me>
+
+    <p>
+      Set this equal to the forcing term <m>e^{x}</m>:
+    </p>
+
+    <me>
+      -A e^{x} = e^{x} \quad \Longrightarrow \quad A = -1.
+    </me>
+
+    <p>
+      Thus a particular solution is
+    </p>
+
+    <me>
+      y_p = -x e^{x}.
+    </me>
+
+    <p>
+      (c)  The general solution is
+    </p>
+
+    <me>
+      y(x) = y_h + y_p
+           = C_1 e^{x} + C_2 e^{2x} - x e^{x}.
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="nonhom-vop-easy">
+  <!-- <title>Variation of Parameters for a Nonhomogeneous Equation</title> -->
+
+  <statement>
+    <p>
+      Consider the nonhomogeneous differential equation
+    </p>
+
+    <me>
+      y'' - y = e^{x}.
+    </me>
+
+    <p>
+      <ol>
+        <li>
+          Find the general solution <m>y_h</m> to the corresponding homogeneous equation.
+        </li>
+
+        <li>
+          Use <em>variation of parameters</em> to find a particular solution 
+          <m>y_p</m> of the nonhomogeneous equation.
+        </li>
+
+        <li>
+          Write the general solution <m>y = y_h + y_p</m>.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      For the homogeneous equation <m>y'' - y = 0</m>, the characteristic equation is <m>
+      r^2 - 1 = 0,
+    </m>
+      with roots <m>r = 1</m> and <m>r = -1</m>.  
+      Thus a fundamental set of solutions is <m>y_1 = e^{x}</m> and <m>y_2 = e^{-x}</m>.
+    </p>
+
+    <p>
+      For variation of parameters, use the formulas
+    </p>
+
+    <me>
+      y_p = -y_1 \int \frac{y_2 f(x)}{W} \, dx
+            \;+\;
+            y_2 \int \frac{y_1 f(x)}{W} \, dx,
+    </me>
+
+    <p>
+      where <m>W</m> is the Wronskian and <m>f(x) = e^{x}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      A homogeneous solution is
+      <me>
+        y_h = C_1 e^{x} + C_2 e^{-x}.
+      </me>
+      A particular solution is
+      <me>
+        y_p = \tfrac{1}{2} x e^{x}.
+      </me>
+      Thus the general solution is
+      <me>
+        y(x) = C_1 e^{x} + C_2 e^{-x} + \tfrac{1}{2} x e^{x}.
+      </me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      (a)  Solve the homogeneous equation
+    </p>
+    <me>
+      y'' - y = 0.
+    </me>
+    <p>
+      The characteristic equation is <m>
+      r^2 - 1 = 0,
+    </m>
+      which factors as <m>(r-1)(r+1)=0</m>, giving <m>r=1</m> and <m>r=-1</m>.
+      Therefore,
+    </p>
+    <me>
+      y_h = C_1 e^{x} + C_2 e^{-x}.
+    </me>
+
+    <p>
+      (b)  Apply variation of parameters.  
+      Let
+    </p>
+    <me>
+      y_1 = e^{x}, \qquad y_2 = e^{-x}.
+    </me>
+
+    <p>
+      Compute the Wronskian:
+    </p>
+
+    <me>
+      W =
+      \begin{vmatrix}
+      e^{x} \amp e^{-x} \\
+      e^{x} \amp -e^{-x}
+      \end{vmatrix}
+      = -e^{x} e^{-x} - e^{x} e^{-x}
+      = -2.
+    </me>
+
+    <p>
+      The forcing function is <m>f(x) = e^{x}</m>.  
+      Use the formula
+    </p>
+
+    <me>
+      y_p = -y_1 \int \frac{y_2 f(x)}{W} \, dx 
+            + y_2 \int \frac{y_1 f(x)}{W} \, dx.
+    </me>
+
+    <p>
+      Compute each integral:
+    </p>
+
+    <me>
+      \frac{y_2 f(x)}{W}
+      = \frac{e^{-x} e^{x}}{-2}
+      = -\tfrac{1}{2},
+    </me>
+    <me>
+      -y_1 \int \left(-\tfrac{1}{2}\right) \, dx
+      = -e^{x} \left(-\tfrac{1}{2} x\right)
+      = \tfrac{1}{2} x e^{x}.
+    </me>
+
+    <p>Next,</p>
+
+    <me>
+      \frac{y_1 f(x)}{W}
+      = \frac{e^{x} e^{x}}{-2}
+      = -\tfrac{1}{2} e^{2x}.
+    </me>
+
+    <p>
+      Compute the integral:
+    </p>
+
+    <me>
+      y_2 \int \left(-\tfrac{1}{2} e^{2x}\right) dx
+      = e^{-x} \left( -\tfrac{1}{4} e^{2x} \right)
+      = -\tfrac{1}{4} e^{x}.
+    </me>
+
+    <p>
+      Combine both contributions:
+    </p>
+
+    <me>
+      y_p
+      = \tfrac{1}{2} x e^{x} - \tfrac{1}{4} e^{x}.
+    </me>
+
+    <p>
+      Since a particular solution is needed, we can absorb constant multiples
+      of <m>e^{x}</m> into the homogeneous term.  
+      Thus we may take the simpler equivalent form
+    </p>
+
+    <me>
+      y_p = \tfrac{1}{2} x e^{x}.
+    </me>
+
+    <p>
+      (c)  
+      The general solution of the nonhomogeneous differential equation is
+    </p>
+
+    <me>
+      y(x) = C_1 e^{x} + C_2 e^{-x} + \tfrac{1}{2} x e^{x}.
+    </me>
+  </solution>
+
+</exercise>
+
+  </exercises>
+
+</section>
+</handout>

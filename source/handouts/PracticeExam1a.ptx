@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Practice Exam 1</title>
+
+<section>
+<title>Topics</title>
+
+    <p workspace="1in">
+      Sections 0.2, 0.3, 1.1, 1.2, 1.3, 1.4, 1.6, 1.7 
+    </p>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam1">
+    <title>Questions</title> 
+
+    <exercise xml:id="classifying-des-exam">
+  <!-- <title>Classifying Differential Equations</title> -->
+
+  <statement>
+    <p>
+      For each of the following differential equations, classify it according to the following criteria:
+    </p>
+    <ul>
+      <li>whether it is <em>ordinary</em> or <em>partial</em>,</li>
+      <li>its <em>order</em>,</li>
+      <li>whether it is <em>linear</em> or <em>nonlinear</em>,</li>
+      <li>and, if applicable, whether it is <em>homogeneous</em> or <em>non‑homogeneous</em>.</li>
+    </ul>
+
+    <p>Classify the differential equation:</p>
+
+    <me>
+      y'' + 5y' - 6y = \sin x.
+    </me>
+  </statement>
+
+  <hint>
+    <p>
+      Recall the key definitions:
+    </p>
+    <ul>
+      <li>
+        An <em>ordinary differential equation</em> (ODE) involves a function of a single variable and its ordinary derivatives.  
+      </li>
+      <li>
+        The <em>order</em> is the highest derivative present.  
+      </li>
+      <li>
+        A differential equation is <em>linear</em> if the dependent variable and all its derivatives appear to the first power and are not multiplied together.  
+      </li>
+      <li>
+        A linear differential equation is <em>homogeneous</em> if the right-hand side is zero; otherwise it is <em>non-homogeneous</em>.
+      </li>
+    </ul>
+  </hint>
+
+  <answer>
+    <p>
+      The equation is an <em>ordinary</em> differential equation of <em>second order</em>, it is <em>linear</em>, and it is <em>non-homogeneous</em>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We analyze the equation
+    </p>
+    <me>
+      y'' + 5y' - 6y = \sin x.
+    </me>
+    <p>
+      First, because the unknown function is <m>y(x)</m>, a function of a single variable, and all derivatives are ordinary derivatives with respect to <m>x</m>,this is an <em>ordinary differential equation</em>.
+    </p>
+    <p>
+      The highest derivative appearing is <m>y''</m>, so the <em>order</em> of the equation is <m>2</m>.
+    </p>
+    <p>
+      Each occurrence of <m>y</m>, <m>y'</m>, and <m>y''</m> appears to the first power, and none are multiplied together or appear inside nonlinear expressions such as trigonometric, exponential, or power functions.
+Therefore the equation is <em>linear</em>.
+    </p>
+    <p>
+      A linear differential equation is homogeneous only when the right-hand side is identically zero.  Here the right-hand side is <m>\sin x</m>, which is not zero; hence the equation is <em>non-homogeneous</em>.
+    </p>
+    <p>
+      Putting everything together: the equation is an <em>ordinary, second-order, linear, non-homogeneous differential equation</em>.
+    </p>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="integrals-as-solutions-example">
+  <!-- <title>Integrals as Solutions</title> -->
+
+  <statement>
+    <p>
+      Consider the differential equation
+    </p>
+    <me>
+      y'(x) = 3x^2 - 4x + 1.
+    </me>
+    <p>
+      <ol>
+        <li>Find the general solution using an integral expression.</li>
+        <li>Determine the particular solution satisfying the initial condition 
+          <m>y(1)=2</m>.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Recall that if <m>y'(x)=f(x)</m>, then any solution must satisfy
+    </p>
+    <me>
+      y(x) = \int f(x)\,dx + C.
+    </me>
+    <p>
+      Integrate term‑by‑term.  
+      After finding the general solution, substitute <m>x=1</m> and <m>y=2</m> 
+      to determine <m>C</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The general solution is 
+      <m>y(x)=x^3 - 2x^2 + x + C</m>.  
+      The initial condition <m>y(1)=2</m> gives <m>C=2</m>,  
+      so the particular solution is 
+      <m>y(x)=x^3 - 2x^2 + x + 2</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We begin with the differential equation
+    </p>
+    <me>
+      y'(x) = 3x^2 - 4x + 1.
+    </me>
+    <p>
+      By the fundamental theorem of calculus, a solution must satisfy
+    </p>
+    <me>
+      y(x) = \int (3x^2 - 4x + 1)\,dx + C.
+    </me>
+    <p>
+      Integrating term‑by‑term:
+    </p>
+    <me>
+      \int 3x^2\,dx = x^3,\qquad 
+      \int (-4x)\,dx = -2x^2,\qquad
+      \int 1\,dx = x.
+    </me>
+    <p>
+      Therefore the general solution is
+    </p>
+    <me>
+      y(x) = x^3 - 2x^2 + x + C.
+    </me>
+    <p>
+      To find the particular solution satisfying <m>y(1)=2</m>, substitute 
+      <m>x=1</m> into the general solution:
+    </p>
+    <me>
+      2 = 1^3 - 2\cdot 1^2 + 1 + C = 1 - 2 + 1 + C = 0 + C.
+    </me>
+    <p>
+      Thus <m>C = 2</m>, and the particular solution is
+    </p>
+    <me>
+      y(x) = x^3 - 2x^2 + x + 2.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="slope-field-exam-problem">
+  <!-- <title>Slope Field Interpretation</title> -->
+
+  <statement>
+    <p>
+      Consider the differential equation
+    </p>
+    <me>
+      y' = x - y.
+    </me>
+    <p>
+      Sketch a small portion of the slope field in the region 
+      <m>-1 \le x \le 2</m>, <m>-1 \le y \le 2</m> by hand.  
+      Then answer the following questions:
+    </p>
+    <ol>
+      <li>
+        Determine whether the solution curve through the point 
+        <m>(0,1)</m> is initially increasing or decreasing.  
+        Justify your answer using the slope field.
+      </li>
+      <li>
+        Without solving the differential equation explicitly,  
+        describe the qualitative long–term behavior of solutions.  
+        Do they tend toward a particular line, diverge, or behave  
+        in some other way?
+      </li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      Remember that the slope field is built from small line segments 
+      whose slope equals <m>y' = x - y</m> at each point <m>(x,y)</m>.  
+      For part (a), compute <m>y'</m> at the given point to determine 
+      whether the local slope is positive or negative.  
+      For part (b), think about values of <m>x - y</m> along the line 
+      <m>y = x-1</m> and whether slopes push trajectories toward or away 
+      from that line.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      (a) The solution through <m>(0,1)</m> is initially 
+      <em>decreasing</em> because <m>y' = 0 - 1 = -1</m>.  
+      (b) Solutions tend toward the line <m>y = x-1</m>, which acts as a 
+      stable equilibrium line for the differential equation.
+    </p>
+  </answer>
+
+  <solution>
+  <p>
+    We are given the differential equation
+  </p>
+  <me>
+    y' = x - y.
+  </me>
+
+  <p>
+    To understand the qualitative behavior of solutions, we begin by noting
+    that the slope field at each point <m>(x,y)</m> is determined by the value
+    of <m>x - y</m>.  In particular:
+  </p>
+
+  <ul>
+    <li>
+      When <m>x - y = 0</m>, the slope is horizontal.
+    </li>
+    <li>
+      When <m>x - y &gt; 0</m>, solution curves locally increase.
+    </li>
+    <li>
+      When <m>x - y &lt; 0</m>, solution curves locally decrease.
+    </li>
+  </ul>
+
+  <p>
+    (a) At the point <m>(0,1)</m> we compute
+  </p>
+  <me>
+    y' = x - y = 0 - 1 = -1.
+  </me>
+  <p>
+    Because the slope is negative, the solution curve passing through 
+    <m>(0,1)</m> initially decreases as <m>x</m> increases.
+  </p>
+
+    <figure xml:id="slopefield-x-minus-y">
+  <caption>Slope field for <m>y' = x - y</m> on <m>-1 \le x \le 2</m>, <m>-1 \le y \le 2</m> together with a solution curve through <m>(0,1)</m>.</caption>
+  <image width="50%">
+    <latex-image>
+\begin{tikzpicture}[scale=1.2]
+  % Ensure a stable bounding box
+  \draw[white] (-1.25,-1.25) rectangle (2.25,2.25);
+
+  % Axes
+  \draw[->] (-1.1,0) -- (2.1,0) node[below right] {$x$};
+  \draw[->] (0,-1.1) -- (0,2.1) node[above left] {$y$};
+
+  
+  % Tick marks and labels on x-axis at -1, 1, 2
+  \foreach \xx/\lbl in {-1/{$-1$}, 1/{$1$}, 2/{$2$}}{
+    \draw (\xx,0.06) -- (\xx,-0.06) node[below=1pt] {\lbl};
+  }
+  % Tick marks and labels on y-axis at -1, 1, 2
+  \foreach \yy/\lbl in {-1/{$-1$}, 1/{$1$}, 2/{$2$}}{
+    \draw (0.06,\yy) -- (-0.06,\yy) node[left=1pt] {\lbl};
+  }
+
+  % Window frame and light grid
+  \draw[gray!40] (-1,-1) rectangle (2,2);
+  \draw[help lines,gray!20] (-1,-1) grid[step=0.5] (2,2);
+
+  
+  % The line y = x (in red), clipped to window
+  \begin{scope}
+    \clip (-1,-1) rectangle (2,2);
+    \draw[very thick,red,dashed] (0,-1) -- (2,1);
+  \end{scope}
+  \node[red,above right] at (0.5,-0.75) {$y=x$};
+
+  % Slope field for y' = x - y
+  % Segment half-length parameter (adjust for density/visibility)
+  \def\L{0.22}
+
+  
+ % Particular solution through (0,1): y = x - 1 + 2 e^{-x}
+  % Draw it bold, clipped to the window
+  \begin{scope}
+    \clip (-1,-1) rectangle (2,2);
+    \draw[very thick,black,domain=-1:2,samples=400]
+      plot (\x, { \x - 1 + 2*exp(-\x) });
+  \end{scope}
+  % Mark and label the initial point (0,1)
+  \fill (0,1) circle (1.3pt);
+  \node[above right] at (0,1) {$(0,1)$};
+
+
+  % Sample points (step = 0.25) over the window
+  \foreach \x in {-1,-0.75,-0.5,-0.25,0,0.25,0.5,0.75,1,1.25,1.5,1.75,2}{%
+    \foreach \y in {-1,-0.75,-0.5,-0.25,0,0.25,0.5,0.75,1,1.25,1.5,1.75,2}{%
+      % Slope m = x - y, draw a short segment centered at (x,y) with angle atan(m)
+      \pgfmathsetmacro{\m}{\x - \y}
+      \pgfmathsetmacro{\ang}{atan(\m)}
+      \pgfmathsetmacro{\dx}{0.5*\L*cos(\ang)}
+      \pgfmathsetmacro{\dy}{0.5*\L*sin(\ang)}
+      \draw[blue!70] (\x-\dx,\y-\dy) -- (\x+\dx,\y+\dy);
+    }%
+  }%
+\end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+  <p>
+    (b) To analyze long–term behavior, we solve the differential equation.
+    Rewriting it in linear form,
+  </p>
+  <me>
+    y' + y = x,
+  </me>
+  <p>
+    the integrating factor is <m>e^x</m>, and multiplying both sides yields
+  </p>
+  <me>
+    (e^x y)' = x e^x.
+  </me>
+  <p>
+    Integrating,
+  </p>
+  <me>
+    e^x y = x e^x - e^x + C,
+  </me>
+  <p>
+    and dividing by <m>e^x</m> gives the general solution
+  </p>
+  <me>
+    y(x) = x - 1 + C e^{-x}.
+  </me>
+
+  <p>
+    As <m>x \to \infty</m>, the exponential term <m>C e^{-x}</m> decays to zero.
+    Therefore every solution approaches the straight line
+  </p>
+  <me>
+    y = x - 1,
+  </me>
+  <p>
+    which serves as the asymptotic line that solutions follow for large <m>x</m>.
+    In particular, this line is an attracting solution curve: trajectories above it
+    are pushed downward, and trajectories below it are
+    pushed upward.
+  </p>
+
+  <p>
+    The qualitative picture is that
+    <em>all solutions to <m>y' = x - y</m> approach the line <m>y = x - 1</m> 
+    as <m>x</m> increases.</em>
+  </p>
+</solution>
+
+</exercise>
+
+<exercise xml:id="separable-equation-corrected">
+  <!-- <title>Solving a Separable Differential Equation</title> -->
+
+  <statement>
+    <p>
+      Consider the differential equation
+    </p>
+    <me>
+      \dfrac{dy}{dx} = x(y+1).
+    </me>
+    <p>
+      <ol>
+        <li>Separate variables and find the general solution.</li>
+        <li>Find the particular solution satisfying the initial condition 
+          <m>y(0) = 2</m>.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      First rewrite the equation so that all <m>y</m>-terms are on one side 
+      and all <m>x</m>-terms on the other:
+    </p>
+    <me>
+      \dfrac{1}{y+1}\,dy = x\,dx.
+    </me>
+    <p>
+      Then integrate both sides.  
+      After integrating, exponentiate to solve for <m>y</m>, and finally use 
+      the initial condition to determine the constant.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The general solution is
+      <me>y = C e^{x^{2}/2} - 1.</me>
+      The initial condition <m>y(0)=2</m> gives <m>C=3</m>, so the particular
+      solution is
+      <me>y = 3 e^{x^{2}/2} - 1.</me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Starting with the differential equation
+    </p>
+    <me>
+      \dfrac{dy}{dx} = x(y+1),
+    </me>
+    <p>
+      we separate variables by dividing both sides by <m>(y+1)</m> and 
+      multiplying by <m>dx</m>:
+    </p>
+    <me>
+      \dfrac{1}{y+1}\,dy = x\,dx.
+    </me>
+
+    <p>Integrate both sides:</p>
+    <me>
+      \int \dfrac{1}{y+1}\,dy = \int x\,dx.
+    </me>
+
+    <p>Compute the integrals:</p>
+    <me>
+      \ln|y+1| = \dfrac{x^{2}}{2} + C.
+    </me>
+
+    <p>
+      Exponentiating,
+    </p>
+    <me>
+      |y+1| = e^{\,x^{2}/2 + C}.
+    </me>
+
+    <p>
+      Write <m>e^{C}</m> as a new positive constant <m>C_1</m>, giving
+    </p>
+    <me>
+      y + 1 = C_1 e^{x^{2}/2}.
+    </me>
+
+    <p>
+      Solving for <m>y</m> produces the general solution:
+    </p>
+    <me>
+      y = C_1 e^{x^{2}/2} - 1.
+    </me>
+
+    <p>
+      Apply the initial condition <m>y(0)=2</m>:
+    </p>
+    <me>
+      2 = C_1 e^{0} - 1 = C_1 - 1.
+    </me>
+
+    <p>
+      Hence <m>C_1 = 3</m>, and the particular solution is
+    </p>
+    <me>
+      y(x) = 3 e^{x^{2}/2} - 1.
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="integrating-factor-no-absorption">
+  <!-- <title>Solving a First-Order Linear Differential Equation</title> -->
+
+  <statement>
+    <p>
+      Consider the linear differential equation
+    </p>
+    <me>
+      y' - 3y = 6e^{2x}.
+    </me>
+    <p>
+      <ol>
+        <li>Find the general solution using the integrating factor method.</li>
+        <li>Find the particular solution satisfying the initial condition <m>y(0)=4</m>.</li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Rewrite the equation in the standard linear form
+      <me>y' + p(x)y = q(x)</me>
+      and identify <m>p(x)=-3</m>.  
+      The integrating factor is
+    </p>
+    <me>
+      \mu(x) = e^{\int -3\,dx} = e^{-3x}.
+    </me>
+    <p>
+      Multiply both sides of the equation by this integrating factor.  
+      The left-hand side becomes <m>(e^{-3x}y)'</m>.  
+      Integrate both sides, then multiply by <m>e^{3x}</m> to solve for <m>y</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The general solution is
+      <me>
+        y(x) = -6e^{2x} + C e^{3x}.
+      </me>
+      Using <m>y(0)=4</m> gives <m>C=10</m>, so the particular solution is
+      <me>
+        y(x) = -6e^{2x} + 10 e^{3x}.
+      </me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We begin with the linear differential equation
+    </p>
+    <me>
+      y' - 3y = 6e^{2x}.
+    </me>
+    <p>
+      In linear form <m>y' + p(x)y = q(x)</m>, we have <m>p(x)=-3</m> and <m>q(x)=6e^{2x}</m>.
+    </p>
+
+    <p>
+      The integrating factor is
+    </p>
+    <me>
+      \mu(x) = e^{\int -3\,dx} = e^{-3x}.
+    </me>
+
+    <p>
+      Multiply the entire differential equation by <m>e^{-3x}</m>:
+    </p>
+    <me>
+      e^{-3x} y' - 3 e^{-3x} y = 6 e^{2x} e^{-3x}.
+    </me>
+
+    <p>
+      The left-hand side is the derivative of <m>e^{-3x}y</m>:
+    </p>
+    <me>
+      (e^{-3x}y)' = 6 e^{-x}.
+    </me>
+
+    <p>
+      Integrate both sides:
+    </p>
+    <me>
+      e^{-3x} y = \int 6 e^{-x}\,dx = -6 e^{-x} + C.
+    </me>
+
+    <p>
+      Multiply both sides by <m>e^{3x}</m> to solve for <m>y</m>:
+    </p>
+    <me>
+      y = -6 e^{-x} e^{3x} + C e^{3x}.
+    </me>
+
+    <p>
+      Simplifying the exponential:
+    </p>
+    <me>
+      y(x) = -6 e^{2x} + C e^{3x}.
+    </me>
+
+    <p>
+      To find the constant <m>C</m>, apply the initial condition <m>y(0)=4</m>:
+    </p>
+    <me>
+      4 = -6 e^{0} + C e^{0} = -6 + C.
+    </me>
+
+    <p>
+      Thus <m>C = 10</m>.
+    </p>
+
+    <p>
+      Therefore the particular solution is
+    </p>
+    <me>
+      y(x) = -6 e^{2x} + 10 e^{3x}.
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="autonomous-phase-diagram-correct">
+  <!-- <title>Phase Diagram for an Autonomous Equation</title> -->
+
+  <statement>
+    <p>
+      Consider the autonomous differential equation
+    </p>
+    <me>
+      x' = (1 - x)(3 - x)^2.
+    </me>
+
+    <p>
+      <ol>
+        <li>
+          Find all equilibrium solutions.
+        </li>
+
+        <li>
+          Construct a <em>phase diagram</em> for this differential 
+          equation. 
+        </li>
+
+        <li>
+          Classify each equilibrium as stable, unstable, or semi-stable based 
+          on your phase diagram.
+        </li>
+
+        <li>
+          Describe the long-term behavior of solutions with 
+          <m>x(0)=0</m>, <m>x(0)=2</m>, and <m>x(0)=4</m>.
+        </li>
+      </ol>
+    </p>
+
+  </statement>
+
+
+  <hint>
+    <p>
+      Compute the sign of 
+      <m>f(x) = (1-x)(3-x)^2</m> 
+      in each region:
+    </p>
+    <ul>
+      <li><m>x &lt; 1</m></li>
+      <li><m>1 &lt; x &lt; 3</m></li>
+      <li><m>x &gt; 3</m></li>
+    </ul>
+
+    <p>
+      Note that <m>(3-x)^2 \ge 0</m> for all <m>x</m>, and equals zero only when 
+      <m>x=3</m>.  
+      So the <em>sign</em> of <m>f(x)</m> is entirely determined by <m>(1-x)</m>.
+    </p>
+
+    <p>
+      Stability comes from arrow directions:
+    </p>
+    <ul>
+      <li>Arrows pointing toward the equilibrium implies stable.</li>
+      <li>Arrows pointing away implies unstable.</li>
+      <li>Arrows pointing toward on one side and away on the other implies semi-stable.</li>
+    </ul>
+  </hint>
+
+
+  <answer>
+    <p>
+      Equilibria: <m>x = 1</m> and <m>x = 3</m>.  
+      The phase diagram has arrows up for <m>x&lt;1</m>, 
+      arrows down for <m>1&lt;x&lt;3</m>, and arrows down for <m>x&gt;3</m>.  
+      Thus <m>x=1</m> is <em>stable</em>, and <m>x=3</m> is <em>semi-stable</em>.  
+      Long-term behavior:
+      <ul>
+        <li><m>x(0)=0</m>: solution increases toward <m>x=1</m> from below.</li>
+        <li><m>x(0)=2</m>: solution decreases toward <m>x=1</m> from above.</li>
+        <li><m>x(0)=4</m>: solution decreases toward <m>x=3</m>.</li>
+      </ul>
+    </p>
+  </answer>
+
+
+  <solution>
+    <p>
+      (a)  Equilibria occur where
+    </p>
+    <me>
+      (1-x)(3-x)^2 = 0,
+    </me>
+    <p>
+      giving <m>x = 1</m> and <m>x = 3</m>.
+    </p>
+
+    <p>
+      (b)  To determine the sign of 
+      <m>f(x) = (1-x)(3-x)^2</m>, 
+      note that the squared factor <m>(3-x)^2</m> is always nonnegative and 
+      equals zero only at <m>x = 3</m>.  
+      Therefore the sign of <m>f(x)</m> is the sign of <m>(1-x)</m>.
+    </p>
+
+    <ul>
+      <li>
+        If <m>x &lt; 1</m>, then <m>1-x &gt; 0</m>, so <m>x' &gt; 0</m>.  
+        Arrow: <em>up</em>.
+      </li>
+
+      <li>
+        If <m>1 &lt; x &lt; 3</m>, then <m>1-x &lt; 0</m>, so <m>x' &lt; 0</m>.  
+        Arrow: <em>down</em>.
+      </li>
+
+      <li>
+        If <m>x &gt; 3</m>, then <m>1-x &lt; 0</m>, so <m>x' &lt; 0</m>.  
+        Arrow: <em>down</em>.
+      </li>
+    </ul>
+
+    <p>
+      (c)  Therefore the phase diagram is as in <xref ref="phasediagramPE1N5"/>. 
+    </p>
+
+    <figure xml:id="phasediagramPE1N5">
+      <caption>Phase diagram for <m>x'=(1-x)(3-x)^2</m>.</caption>
+    <image width="10%">
+      <latex-image>
+\begin{tikzpicture}[scale=1]
+
+  % Vertical axis
+  \draw[thick] (0,-1) -- (0,4);
+
+  % Equilibria x = 1 and x = 3
+  \fill (0,1) circle (2pt);
+  \node[right] at (0,1) {$x = 1$};
+
+  \fill (0,3) circle (2pt);
+  \node[right] at (0,3) {$x = 3$};
+
+  % Arrows:
+  % x &lt; 1
+  \draw[->, thick] (0,0.3) -- (0,0.9);
+
+  % 1 &lt; x &lt; 3
+  \draw[->, thick] (0,1.7) -- (0,1.1);
+
+  % x &gt; 3
+  \draw[->, thick] (0,3.7) -- (0,3.1);
+
+\end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+
+    <p>
+      Stability analysis:
+    </p>
+
+    <ul>
+      <li>
+        <m>x = 1</m>: arrows point <em>towards</em> <m>x=1</m> on both sides so the equilibrium is 
+        <em>stable</em>.
+      </li>
+
+      <li>
+        <m>x = 3</m>: arrow from below points <em>away</em> from <m>x=3</m>, but arrow 
+        from above points <em>downward</em> towards <m>x=3</m>.  
+        Thus <m>x=3</m> is <em>semi-stable</em> equilibrium.
+      </li>
+    </ul>
+
+    <p>
+      (d)  Long–term behavior:
+    </p>
+
+    <ul>
+      <li>
+        If <m>x(0)=0</m>, then the arrow is upward; the solution moves toward 
+        the stable equilibrium <m>x = 1</m>.
+      </li>
+
+      <li>
+        If <m>x(0)=2</m>, the arrow is downward; the solution decreases toward 
+        the stable equilibrium <m>x=1</m>.
+      </li>
+
+      <li>
+        If <m>x(0)=4</m>, the arrow is downward; the solution decreases toward 
+        the equilibrium <m>x=3</m>.
+      </li>
+    </ul>
+
+  </solution>
+
+</exercise>
+
+<exercise xml:id="eulers-method-exam">
+  <!-- <title>Euler's Method</title> -->
+
+  <statement>
+    <p>
+      Consider the initial value problem
+    </p>
+    <me>
+      y' = x + y,  \qquad y(0) = 1.
+    </me>
+
+    <p>
+      Use Euler’s method with step size <m>h = 0.1</m> to approximate the
+      value of <m>y(0.3)</m>.  
+      Show your intermediate computations for each Euler step.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Recall that Euler’s method updates the approximate solution by
+    </p>
+    <me>
+      y_{n+1} = y_n + h \, f(x_n, y_n),
+    </me>
+    <p>
+      where <m>f(x,y) = x + y</m>.  
+      Starting at <m>(x_0,y_0) = (0,1)</m> and using <m>h=0.1</m>,
+      compute successively:
+    </p>
+    <ul>
+      <li><m>y_1</m> at <m>x_1 = 0.1</m>,</li>
+      <li><m>y_2</m> at <m>x_2 = 0.2</m>,</li>
+      <li><m>y_3</m> at <m>x_3 = 0.3</m>.</li>
+    </ul>
+  </hint>
+
+  <answer>
+    <p>
+      Using Euler’s method with <m>h=0.1</m>,
+      <m>y(0.3)</m> is approximately
+      <me>y_3 = 1.462.</me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We apply Euler’s method with <m>f(x,y) = x + y</m> and
+      <m>h=0.1</m>.  
+      The starting point is
+    </p>
+    <me>
+      x_0 = 0, \qquad y_0 = 1.
+    </me>
+
+    <p><strong>Step 1:</strong>  Compute <m>y_1</m> at <m>x_1 = 0.1</m>.</p>
+    <me>
+      f(x_0,y_0) = 0 + 1 = 1,
+    </me>
+    <me>
+      y_1 = y_0 + h f(x_0,y_0)
+          = 1 + 0.1(1)
+          = 1.1.
+    </me>
+
+    <p><strong>Step 2:</strong>  Compute <m>y_2</m> at <m>x_2 = 0.2</m>.</p>
+    <me>
+      f(x_1,y_1) = 0.1 + 1.1 = 1.2,
+    </me>
+    <me>
+      y_2 = y_1 + h f(x_1,y_1)
+          = 1.1 + 0.1(1.2)
+          = 1.22.
+    </me>
+
+    <p><strong>Step 3:</strong>  Compute <m>y_3</m> at <m>x_3 = 0.3</m>.</p>
+    <me>
+      f(x_2,y_2) = 0.2 + 1.22 = 1.42,
+    </me>
+    <me>
+      y_3 = y_2 + h f(x_2,y_2)
+          = 1.22 + 0.1(1.42)
+          = 1.22 + 0.142
+          = 1.462.
+    </me>
+
+    <p>
+      Therefore, the Euler approximation of <m>y(0.3)</m> with 
+      <m>h=0.1</m> is
+    </p>
+    <me>
+      y(0.3) \approx 1.462.
+    </me>
+  </solution>
+
+</exercise>
+
+</exercises>
+
+</section>
+</handout>
