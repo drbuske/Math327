@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Practice Exam 3</title>
+
+<section>
+<title>Topics</title>
+
+    <p workspace="1in">
+      Sections 3.1, 3.2, 3.3, 3.4, 4.1, 4.2, 4.3, 4.4
+    </p>
+
+    <p>
+      You will have a short table of Laplace tranforms to use during the exam.  Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam3">
+    <title>Questions</title>
+
+ <exercise xml:id="laplace-direct-integral">
+  <!-- <title>Computing a Laplace Transform Directly from the Definition</title> -->
+
+  <statement>
+    <p>
+      Using only the definition,
+    </p>
+
+    <me>
+      \mathcal{L}\{f(t)\}(s) = \int_{0}^{\infty} e^{-st} f(t)\, dt,
+    </me>
+
+    <p>
+      compute the Laplace transform of the function
+    <m>
+      f(t) = t e^{-2t}.
+    </m>
+    </p>
+
+
+    <p>
+      Do <em>not</em> use a Laplace transform table; evaluate the integral by hand.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      You should compute
+    </p>
+
+    <me>
+      \int_{0}^{\infty} t e^{-st} e^{-2t}\, dt
+      =
+      \int_{0}^{\infty} t e^{-(s+2)t}\, dt.
+    </me>
+
+    <p>
+      Recall the standard integral (integration by parts):
+    </p>
+
+    <me>
+      \int_{0}^{\infty} t e^{-a t}\, dt = \frac{1}{a^{2}},
+      \qquad \text{for } a &gt; 0.
+    </me>
+
+    <p>
+      Here, <m>a = s+2</m>.  
+      Make sure to justify why <m>s+2 &gt; 0</m> is required for convergence.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      For <m>s &gt; -2</m>,
+      <me>
+        \mathcal{L}\{t e^{-2t}\}(s)
+        = \frac{1}{(s+2)^{2}}.
+      </me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      By definition of the Laplace transform,
+    </p>
+
+    <md>
+      <mrow> \mathcal{L}\{t e^{-2t}\}(s)
+      \amp =
+      \int_{0}^{\infty} t e^{-st} e^{-2t}\, dt </mrow>
+      <mrow> \amp =
+      \int_{0}^{\infty} t e^{-(s+2)t}\, dt. </mrow>
+    </md>
+
+    <p>
+      For the integral to converge, we require
+      <m>s+2 &gt; 0</m>.
+      Let <m>a = s+2</m>.  
+      Then the integral becomes
+    </p>
+
+    <me>
+      \int_{0}^{\infty} t e^{-a t}\, dt.
+    </me>
+
+    <p>
+      Integrate by parts:
+    </p>
+
+    <me>
+      \begin{aligned}
+      \int_{0}^{\infty} t e^{-a t}\, dt
+    \amp = \left[ -\frac{t}{a} e^{-a t} \right]_{0}^{\infty}
+         + \frac{1}{a} \int_{0}^{\infty} e^{-a t}\, dt \\[1ex]
+      \amp = 0 + \frac{1}{a} \left[ -\frac{1}{a} e^{-a t} \right]_{0}^{\infty} \\[1ex]
+      \amp = \frac{1}{a^{2}}.
+      \end{aligned}
+    </me>
+
+    <p>
+      Substituting <m>a = s+2</m>, we obtain
+    </p>
+
+    <me>
+      \mathcal{L}\{t e^{-2t}\}(s)
+      = \frac{1}{(s+2)^{2}}.
+    </me>
+
+    <p>
+      This is valid for <m>s &gt; -2</m>.
+    </p>
+  </solution>
+
+</exercise>   
+
+<exercise xml:id="inverse-laplace-basic">
+  <!-- <title>Computing an Inverse Laplace Transform</title> -->
+
+  <statement>
+    <p>
+      Compute the inverse Laplace transform of
+    </p>
+
+    <me>
+      F(s) = \frac{3}{s-2} \;+\; \frac{5}{s^{2}+4}.
+    </me>
+    
+  </statement>
+
+  <hint>
+    <p>
+      Recall the standard Laplace transform identities.
+    </p>
+
+    <ul>
+      <li>
+        <m>\mathcal{L}\{e^{at}\} = \dfrac{1}{s-a}</m> for <m>s &gt; a</m>.
+      </li>
+
+      <li>
+        <m>\mathcal{L}\{\sin(bt)\} = \dfrac{b}{s^{2}+b^{2}}</m>.
+      </li>
+    </ul>
+
+    <p>
+      Match each term of <m>F(s)</m> with one of these standard forms.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>f(t) = \mathcal{L}^{-1}\{F(s)\}(t)
+      = 3e^{2t} + \tfrac{5}{2}\sin(2t).</m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We compute the inverse Laplace transform term by term.
+    </p>
+
+    <p>
+      First,
+    </p>
+
+    <me>
+      \frac{3}{s-2}
+      \quad\longrightarrow\quad
+      3e^{2t},
+    </me>
+
+    <p>
+      since <m>\mathcal{L}\{e^{2t}\} = \dfrac{1}{s-2}</m>.
+    </p>
+
+    <p>
+      Next,
+    </p>
+
+    <me>
+      \frac{5}{s^{2}+4}.
+    </me>
+
+    <p>
+      Note that
+    </p>
+
+    <me>
+      \mathcal{L}\{\sin(2t)\}
+      = \frac{2}{s^{2}+4}.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      \frac{5}{s^{2}+4}
+      = \frac{5}{2} \cdot \frac{2}{s^{2}+4}
+      \quad\longrightarrow\quad
+      \frac{5}{2}\sin(2t).
+    </me>
+
+    <p>
+      Combining both parts gives
+    </p>
+
+    <me>
+      f(t) = \mathcal{L}^{-1}\{F(s)\}(t)
+      = 3e^{2t} + \frac{5}{2}\sin(2t).
+    </me>
+
+  </solution>
+
+</exercise>
+
+<exercise xml:id="laplace-derivatives-ode">
+  <!-- <title>Solving an ODE Using Laplace Transforms of Derivatives</title> -->
+
+  <statement>
+    <p>
+      Use the Laplace transform to solve the initial value problem
+    </p>
+
+    <me>
+      y' + 3y = e^{-2t}, \qquad y(0) = 5.
+    </me>
+
+  </statement>
+
+  <hint>
+    <p>
+      Recall the Laplace transform of a first derivative:
+    </p>
+
+    <me>
+      \mathcal{L}\{y'\}(s) = sY(s) - y(0).
+    </me>
+
+    <p>
+      Also use that
+    </p>
+
+    <me>
+      \mathcal{L}\{e^{-2t}\}(s) = \frac{1}{s+2}.
+    </me>
+
+    <p>
+      After applying the Laplace transform, solve for <m>Y(s)</m> and 
+      rewrite it in a form suitable for taking an inverse transform.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The solution to the IVP is
+    </p>
+
+    <me>
+      y(t) = 4e^{-3t} + e^{-2t}.
+    </me>
+  </answer>
+
+  <solution>
+    <p>
+      Take the Laplace transform of both sides of
+    </p>
+
+    <me>
+      y' + 3y = e^{-2t},
+    </me>
+
+    <p>
+      using <m>y(0)=5</m>.
+    </p>
+
+    <p>
+      First compute <m>\mathcal{L}\{y'\}</m>:
+    </p>
+
+    <me>
+      \mathcal{L}\{y'\}(s) = sY(s) - y(0) = sY(s) - 5.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      sY(s) - 5 + 3Y(s) = \frac{1}{s+2}.
+    </me>
+
+    <p>
+      Combine terms:
+    </p>
+
+    <me>
+      (s + 3)Y(s) - 5 = \frac{1}{s+2}.
+    </me>
+
+    <p>
+      Solve for <m>Y(s)</m>:
+    </p>
+
+    <me>
+      (s+3)Y(s)
+      = \frac{1}{s+2} + 5
+      = \frac{1 + 5(s+2)}{s+2}
+      = \frac{5s + 11}{s+2}.
+    </me>
+
+    <p>
+      Thus,
+    </p>
+
+    <me>
+      Y(s)
+      = \frac{5s + 11}{(s+3)(s+2)}.
+    </me>
+
+    <p>
+      Perform partial fraction decomposition.  
+      Write
+    </p>
+
+    <me>
+      \frac{5s + 11}{(s+3)(s+2)}
+      = \frac{A}{s+3} + \frac{B}{s+2}.
+    </me>
+
+    <p>
+      Then
+    </p>
+
+    <me>
+      5s + 11 = A(s+2) + B(s+3).
+    </me>
+
+    <p>
+      Expand:
+    </p>
+
+    <me>
+      5s + 11 = (A+B)s + (2A + 3B).
+    </me>
+
+    <p>
+      Match coefficients:
+    </p>
+
+    <me>
+      A + B = 5, \qquad 2A + 3B = 11.
+    </me>
+
+    <p>
+      Solve the system:
+    </p>
+
+    <me>
+      A = 4, \qquad B = 1.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      Y(s) = \frac{4}{s+3} + \frac{1}{s+2}.
+    </me>
+
+    <p>
+      Take inverse Laplace transforms term by term:
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\left\{\frac{4}{s+3}\right\} = 4e^{-3t},
+      \qquad
+      \mathcal{L}^{-1}\left\{\frac{1}{s+2}\right\} = e^{-2t}.
+    </me>
+
+    <p>
+      Therefore the solution is
+    </p>
+
+    <me>
+      y(t) = 4e^{-3t} + e^{-2t}.
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="laplace-convolution-easy">
+  <!-- <title>Computing a Convolution via the Inverse Laplace Transform</title> -->
+
+  <statement>
+    <p>
+      Using the convolution theorem, compute the inverse Laplace transform of
+    </p>
+
+    <me>
+      F(s) = \frac{1}{s(s+2)}.
+    </me>
+
+    <p>
+      Do <em>not</em> use partial fractions.  
+      Instead, express <m>F(s)</m> as a product of simpler transforms and use
+      the convolution formula.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Recall that
+    </p>
+
+    <me>
+      \mathcal{L}\{1\}(s) = \frac{1}{s},
+      \qquad
+      \mathcal{L}\{e^{-2t}\}(s) = \frac{1}{s+2}.
+    </me>
+
+    <p>
+      The convolution theorem states:
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\{F(s)G(s)\}
+      = (f * g)(t)
+      = \int_{0}^{t} f(\tau)\, g(t-\tau)\, d\tau.
+    </me>
+
+    <p>
+      Use <m>f(t)=1</m> and <m>g(t)=e^{-2t}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>\mathcal{L}^{-1}\!\left\{\dfrac{1}{s(s+2)}\right\}(t)
+      = \frac{1 - e^{-2t}}{2}.</m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We begin by writing
+    </p>
+
+    <me>
+      F(s) = \frac{1}{s} \cdot \frac{1}{s+2}.
+    </me>
+
+    <p>
+      Then
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\left\{\frac{1}{s}\right\} = 1,
+      \qquad
+      \mathcal{L}^{-1}\left\{\frac{1}{s+2}\right\} = e^{-2t}.
+    </me>
+
+    <p>
+      By the convolution theorem,
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\{F(s)\}(t)
+      = (1 * e^{-2t})(t)
+      = \int_{0}^{t} 1 \cdot e^{-2(t-\tau)}\, d\tau.
+    </me>
+
+    <p>
+      Compute the integral:
+    </p>
+
+    <me>
+      \int_{0}^{t} e^{-2(t-\tau)}\, d\tau
+      = e^{-2t} \int_{0}^{t} e^{2\tau}\, d\tau.
+    </me>
+
+    <me>
+      = e^{-2t} \left[\frac{1}{2} e^{2\tau}\right]_{0}^{t}
+      = e^{-2t} \left(\frac{1}{2}e^{2t} - \frac{1}{2}\right)
+      = \frac{1 - e^{-2t}}{2}.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\!\left\{\frac{1}{s(s+2)}\right\}(t)
+      = \frac{1 - e^{-2t}}{2}.
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="dirac-delta-impulse-response">
+  <!-- <title>Impulse Response with the Dirac Delta Function</title> -->
+
+  <statement>
+    <p>
+      Consider the initial value problem
+    </p>
+
+    <me>
+      y'' + 4y = \delta(t - \pi), 
+      \qquad 
+      y(0) = 0,\;
+      y'(0) = 0.
+    </me>
+
+    <p>
+      Use the Laplace transform and the identity
+    </p>
+
+    <me>
+      \mathcal{L}\{\delta(t-a)\} = e^{-as},
+    </me>
+
+    <p>
+      to find the solution <m>y(t)</m>.  
+      Your final answer should be written using a unit step function 
+      <m>u(t-\pi)</m>.
+    </p>
+
+  </statement>
+
+  <hint>
+    <p>
+      Let <m>Y(s) = \mathcal{L}\{y(t)\}</m>.  
+      Use the Laplace transform formulas:
+    </p>
+
+    <ul>
+      <li><m>\mathcal{L}\{y''\} = s^{2}Y(s) - s y(0) - y'(0)</m></li>
+      <li><m>\mathcal{L}\{y\} = Y(s)</m></li>
+      <li><m>\mathcal{L}\{\delta(t-\pi)\} = e^{-\pi s}</m></li>
+    </ul>
+
+    <p>
+      After solving for <m>Y(s)</m>, recall that
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\!\left\{\frac{1}{s^{2}+4}\right\} = \frac{1}{2}\sin(2t)
+    </me>
+
+    <p>
+      and apply the time‑shift rule
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\{e^{-as}F(s)\} 
+      = u(t-a)\, f(t-a).
+    </me>
+  </hint>
+
+  <answer>
+    <p>
+      The solution is
+    </p>
+
+    <me>
+      y(t) = 
+      \tfrac{1}{2}\, u(t-\pi)\, \sin\!\bigl(2(t-\pi)\bigr).
+    </me>
+  </answer>
+
+  <solution>
+    <p>
+      Apply the Laplace transform to both sides of
+    </p>
+
+    <me>
+      y'' + 4y = \delta(t-\pi),
+      \qquad
+      y(0)=0,\; y'(0)=0.
+    </me>
+
+    <p>
+      Compute <m>\mathcal{L}\{y''\}</m> using the initial conditions:
+    </p>
+
+    <me>
+      \mathcal{L}\{y''\}
+      = s^{2}Y(s) - s y(0) - y'(0)
+      = s^{2}Y(s).
+    </me>
+
+    <p>
+      Thus the transformed equation is
+    </p>
+
+    <me>
+      s^{2}Y(s) + 4Y(s) = e^{-\pi s}.
+    </me>
+
+    <p>
+      Factor out <m>Y(s)</m>:
+    </p>
+
+    <me>
+      (s^{2} + 4) Y(s) = e^{-\pi s}.
+    </me>
+
+    <p>
+      So
+    </p>
+
+    <me>
+      Y(s) = \frac{e^{-\pi s}}{s^{2} + 4}.
+    </me>
+
+    <p>
+      Now apply the inverse Laplace transform.  
+      We use the time‑shift rule:
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\!\left\{\frac{1}{s^{2}+4}\right\}
+      = \frac{1}{2}\sin(2t),
+    </me>
+
+    <p>
+      hence
+    </p>
+
+    <me>
+      \mathcal{L}^{-1}\!\left\{\frac{e^{-\pi s}}{s^{2}+4}\right\}
+      = u(t-\pi)\,\frac{1}{2}\sin\!\bigl(2(t-\pi)\bigr).
+    </me>
+
+    <p>
+      Therefore, the solution to the IVP is
+    </p>
+
+    <me>
+      y(t) 
+      = 
+      \tfrac{1}{2}\, u(t-\pi)\, \sin\!\bigl(2(t-\pi)\bigr).
+    </me>
+
+    <p>
+    <figure xml:id="dirac-impulse-plot">
+  <caption>Response to a Dirac Delta Impulse at <m>t=\pi</m>.</caption>
+  <image width="75%">
+                  <description>
+The graph shows a function that stays at zero until time t equals pi, where a vertical dashed line marks an impulse. After that point, the graph becomes a small sine wave that rises to about one‑half, then falls to about negative one‑half, repeating in a smooth oscillation.
+  </description>
+    <latex-image>
+\begin{tikzpicture}[scale=1.0]
+
+  % Axis limits
+  \begin{axis}[
+      width=13cm,
+      height=7cm,
+      xmin=0, xmax=6.5,
+      ymin=-0.6, ymax=0.6,
+      axis lines=middle,
+      xlabel={$t$},
+      ylabel={$y(t)$},
+      xtick={0,1.5708,3.1416,4.7124,6.2832},
+      xticklabels={$0$, $\pi/2$, $\pi$, $3\pi/2$, $2\pi$},
+      ytick={-0.5,0,0.5},
+      grid=both,
+      grid style={gray!20},
+      major grid style={gray!30},
+      domain=0:6.2832,
+      samples=400
+    ]
+
+    % Blue response curve: y(t) = 0 for t &lt; pi, = 0.5*sin(2*(t-pi)) for t>=pi
+    \addplot[blue, very thick, domain=0:3.1416] {0};
+    \addplot[blue, very thick, domain=3.1416:6.2832] {0.5*sin(deg(2*(x-3.1416)))};
+
+    % Vertical dashed red line at t = pi
+    \addplot[red, dashed, very thick] coordinates {(3.1416,-0.6) (3.1416,0.6)};
+
+    % Legend
+    \addlegendentry{$y(t)=\tfrac12\sin(2(t-\pi))u(t-\pi)$}
+    % \addlegendentry{Impulse at $t=\pi$}
+
+  \end{axis}
+
+\end{tikzpicture}
+    </latex-image>
+  </image>
+
+</figure>
+</p>
+
+  </solution>
+
+</exercise>
+
+  </exercises>
+
+</section>
+</handout>
