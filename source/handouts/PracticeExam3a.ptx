@@ -6,7 +6,9 @@
 <section>
 <title>Topics</title>
 
-    <p workspace="1in">
+
+
+    <p>
       Sections 3.1, 3.2, 3.3, 3.4, 4.1, 4.2, 4.3, 4.4
     </p>
 
@@ -17,10 +19,12 @@
   <exercises xml:id="exercises-practiceexam3">
     <title>Questions</title>
 
+<page>
+
  <exercise xml:id="laplace-direct-integral">
   <!-- <title>Computing a Laplace Transform Directly from the Definition</title> -->
 
-  <statement>
+  <statement workspace="1in">
     <p>
       Using only the definition,
     </p>
@@ -516,6 +520,9 @@
 
 </exercise>
 
+</page>
+<page>
+
 <exercise xml:id="dirac-delta-impulse-response">
   <!-- <title>Impulse Response with the Dirac Delta Function</title> -->
 
@@ -715,7 +722,964 @@ The graph shows a function that stays at zero until time t equals pi, where a ve
 
 </exercise>
 
-  </exercises>
+</page>
+
+<exercise xml:id="vector-geometry-one-task">
+  <!-- <title>Constructing \(\vec{u} - \tfrac12\,\vec{v}\) from a Diagram</title> -->
+
+  <statement>
+    <p>
+      Vectors <m>\vec{u}</m> (blue) and <m>\vec{v}</m> (red) appear in <xref ref="fig-uv-largegrid"/>. 
+      Draw the vector
+      <m>\vec{u} - \tfrac12\,\vec{v}</m> on the same grid. 
+      
+    </p>
+
+    <p>
+    <figure xml:id="fig-uv-largegrid">
+      <caption>Use the grid to construct <m>\vec{u} - \tfrac12\,\vec{v}</m>.</caption>
+      <image width="80%">
+             <description>
+        Large coordinate grid with two vectors from the origin: u in blue points up-and-right; v in red points up and slightly more steeply.
+      </description>
+        <latex-image>
+\begin{tikzpicture}[scale=1]
+
+  % --- Large grid and axes ---
+  \draw[gray!50] (-1.5,-2.5) grid (8.5,6.5);
+  \draw[->] (-1.5,0) -- (8.8,0) node[right] {$x$};
+  \draw[->] (0,-2.5) -- (0,6.8) node[above] {$y$};
+
+  % --- Given vectors (diagram-only; no coordinates shown in text) ---
+  % u (blue): choose a clear up-right vector
+  \draw[->, very thick, blue] (0,0) -- (5,2)
+    node[midway, below right] {$\vec{u}$};
+
+  % v (red): a steeper up-left-ish than u? Keep tail at origin; up-and-left would cross origin; 
+  % we instead choose up and a bit left relative to u's direction but still in first quadrant.
+  \draw[->, very thick, red] (0,0) -- (2,6)
+    node[midway, left] {$\vec{v}$};
+
+  % Axis tick marks (light)
+  \foreach \x in {-1,0,1,2,3,4,5,6,7,8}
+    \draw[gray!80] (\x,0.1)--(\x,-0.1);
+  \foreach \y in {-2,-1,0,1,2,3,4,5,6}
+    \draw[gray!80] (0.1,\y)--(-0.1,\y);
+
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </p>
+  </statement>
+
+  <hint>
+    <p>
+      First construct <m>\tfrac12\,\vec{v}</m> (same direction as <m>\vec{v}</m> but half the length). 
+      Then reverse it to obtain <m>-\tfrac12\,\vec{v}</m>.
+      Place the tail of <m>-\tfrac12\,\vec{v}</m> at the tip of <m>\vec{u}</m>; 
+      the vector from the origin to the new tip is <m>\vec{u} - \tfrac12\,\vec{v}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The requested vector is <m>\vec{w}=\vec{u} - \tfrac12\,\vec{v}</m>; 
+      it can be drawn from the origin to the tip of <m>\vec{u} + \bigl(-\tfrac12\,\vec{v}\bigr)</m>, as illustrated in <xref ref="fig-uv-solution"/>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We sketch <m>\tfrac12\,\vec{v}</m> (half the red vector in the same direction), reverse it to get <m>-\tfrac12\,\vec{v}</m>, 
+      and place its tail at the tip of <m>\vec{u}</m>.  
+      The vector from the origin to that final tip is <m>\vec{w}=\vec{u} - \tfrac12\,\vec{v}</m>, drawn here in black.
+    </p>
+
+    <figure xml:id="fig-uv-solution">
+      <caption>Construction of <m>\vec{w}=\vec{u} - \tfrac12\,\vec{v}</m> (black) using a tip-to-tail method.</caption>
+      <image width="80%">
+              <description>
+        Same grid with u (blue) and v (red) from the origin, plus the constructed vector w = u minus one-half v in purple from the origin to the appropriate tip.
+      </description>
+        <latex-image>
+\begin{tikzpicture}[scale=0.9]
+
+  % --- Large grid and axes ---
+  \draw[gray!50] (-1.5,-2.5) grid (8.5,6.5);
+  \draw[->] (-1.5,0) -- (8.8,0) node[right] {$x$};
+  \draw[->] (0,-2.5) -- (0,6.8) node[above] {$y$};
+
+  % --- Given vectors ---
+  \draw[->, very thick, blue] (0,0) -- (5,2)
+    node[midway, below right] {$\vec{u}$};
+  \draw[->, very thick, red] (0,0) -- (2,6)
+    node[midway, left] {$\vec{v}$};
+
+  % --- Helper:  (1/2) v, shown faint (not required but helps visualize)
+  \draw[->, thick, red!40!black!40] (0,0) -- (1,3)
+    node[pos=0.65, right, text=red!40!black!60] {$\tfrac12\,\vec{v}$};
+
+  % --- Place - (1/2) v at tip of u (dashed helper from tip of u)
+  \draw[->, very thick, red!50!black, dashed] (5,2) -- (4,-1)
+    node[midway, right, text=red!60!black] {$-\tfrac12\,\vec{v}$};
+
+  % --- Resultant w = u - (1/2) v in purple from origin to the tip of the dashed helper
+  \draw[->, ultra thick, black] (0,0) -- (4,-1)
+    node[below right, text=black] {$\vec{w}$};
+
+  % Tick marks
+  \foreach \x in {-1,0,1,2,3,4,5,6,7,8}
+    \draw[gray!80] (\x,0.1)--(\x,-0.1);
+  \foreach \y in {-2,-1,0,1,2,3,4,5,6}
+    \draw[gray!80] (0.1,\y)--(-0.1,\y);
+
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="vector-magnitude-3d">
+  <!-- <title>Magnitude of a Three-Dimensional Vector</title> -->
+
+  <statement>
+    <p>
+      Compute the magnitude of the vector     <m>
+      \vec{w} = \begin{bmatrix} 3 \\ -4 \\ 12 \end{bmatrix}.
+    </m>
+    </p>
+
+  </statement>
+
+  <hint>
+    <p>
+      Recall that the magnitude of a vector in <m>\mathbb{R}^3</m> is
+    </p>
+
+    <me>
+      \|\vec{w}\| = \sqrt{w_1^2 + w_2^2 + w_3^2}.
+    </me>
+  </hint>
+
+  <answer>
+    <p>
+      <m>\|\vec{w}\| = 13.</m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Using the formula
+    </p>
+    <me>
+      \|\vec{w}\| = \sqrt{3^2 + (-4)^2 + 12^2},
+    </me>
+
+    <p>
+      compute:
+    </p>
+
+    <me>
+      3^2 = 9,\qquad (-4)^2 = 16,\qquad 12^2 = 144.
+    </me>
+
+    <p>
+      Sum the squares:
+    </p>
+
+    <me>
+      9 + 16 + 144 = 169.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      \|\vec{w}\| = \sqrt{169} = 13.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="matrix-algebra-basics-with-inverse">
+  <!-- <title>Basic Matrix Algebra and Computing an Inverse</title> -->
+
+  <statement>
+    <p>
+      Let
+    </p>
+
+    <me>
+      A =
+      \begin{bmatrix}
+      2 \amp -1 \\
+      3 \amp 4
+      \end{bmatrix},
+      \qquad
+      B =
+      \begin{bmatrix}
+      1 \amp 5 \\
+      -2 \amp 0
+      \end{bmatrix},
+      \qquad
+      \vec{v} =
+      \begin{bmatrix}
+      3 \\
+      -1
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Compute each of the following:
+    </p>
+
+    <ol>
+      <li><m>A + B</m></li>
+      <li><m>2A - B</m></li>
+      <li><m>A\vec{v}</m></li>
+      <li>Compute the inverse <m>A^{-1}</m>.</li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      For matrix addition, subtraction, or scalar multiplication, work entry‑wise.  
+      For <m>A\vec{v}</m>, use
+    </p>
+
+    <me>
+      A\vec{v}
+      =
+      \begin{bmatrix}
+      a_{11}v_1 + a_{12}v_2 \\
+      a_{21}v_1 + a_{22}v_2
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      For the inverse of a <m>2\times 2</m> matrix
+    </p>
+
+    <me>
+      \begin{bmatrix}
+      a \amp b \\
+      c \amp d
+      \end{bmatrix},
+    </me>
+
+    <p>
+      use the formula
+    </p>
+
+    <me>
+      \dfrac{1}{ad - bc}
+      \begin{bmatrix}
+      d \amp -b \\
+      -c \amp a
+      \end{bmatrix},
+      \qquad
+      \text{provided } ad - bc \neq 0.
+    </me>
+
+  </hint>
+
+  <answer>
+    <p>
+      <m>A + B =
+      \begin{bmatrix}
+      3 \amp 4 \\
+      1 \amp 4
+      \end{bmatrix}</m>,
+      <m>2A - B =
+      \begin{bmatrix}
+      3 \amp -7 \\
+      8 \amp 8
+      \end{bmatrix}</m>,
+      <m>A\vec{v} =
+      \begin{bmatrix}
+      7 \\
+      5
+      \end{bmatrix}</m>,
+      and
+      </p>
+
+      <me>
+      A^{-1} =
+      \frac{1}{11}
+      \begin{bmatrix}
+      4 \amp 1 \\
+      -3 \amp 2
+      \end{bmatrix}.
+      </me>
+  </answer>
+
+  <solution>
+    <p>
+      (a)  Add matrices entry‑wise:
+    </p>
+
+    <me>
+      A + B
+      =
+      \begin{bmatrix}
+      2+1 \amp -1+5 \\
+      3+(-2) \amp 4+0
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      3 \amp 4 \\
+      1 \amp 4
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      (b)  Compute <m>2A</m> then subtract <m>B</m>:
+    </p>
+
+    <me>
+      2A =
+      \begin{bmatrix}
+      4 \amp -2 \\
+      6 \amp 8
+      \end{bmatrix},
+    </me>
+
+    <me>
+      2A - B
+      =
+      \begin{bmatrix}
+      4-1 \amp -2-5 \\
+      6-(-2) \amp 8-0
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      3 \amp -7 \\
+      8 \amp 8
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      (c)  Multiply <m>A</m> by <m>\vec{v}</m>:
+    </p>
+
+    <me>
+      A\vec{v}
+      =
+      \begin{bmatrix}
+      2(3) + (-1)(-1) \\
+      3(3) + 4(-1)
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      6+1 \\
+      9-4
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      7 \\
+      5
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      (d)  Compute <m>A^{-1}</m>.  
+      For
+    </p>
+
+    <me>
+      A =
+      \begin{bmatrix}
+      2 \amp -1 \\
+      3 \amp 4
+      \end{bmatrix},
+    </me>
+
+    <p>
+      the determinant is
+    </p>
+
+    <me>
+      \det(A) = 2\cdot 4 - (-1)\cdot 3 = 8 + 3 = 11.
+    </me>
+
+    <p>
+      Thus,
+    </p>
+
+    <me>
+      A^{-1}
+      =
+      \frac{1}{11}
+      \begin{bmatrix}
+      4 \amp 1 \\
+      -3 \amp 2
+      \end{bmatrix}.
+    </me>
+
+  </solution>
+
+</exercise>
+
+<exercise xml:id="elimination-corrected">
+  <!-- <title>Solving a System by Elimination</title> -->
+
+  <statement>
+    <p>
+      Solve the following linear system using elimination:
+    </p>
+
+    <me>
+      \begin{aligned}
+      2x + 3y \amp= 7, \\
+      4x - y \amp= 1.
+      \end{aligned}
+    </me>
+
+    <p>Show all elimination steps clearly.</p>
+  </statement>
+
+  <hint>
+    <p>
+      Eliminate <m>x</m> by multiplying the first equation by <m>-2</m> and adding it to the second.  
+      After that, solve for <m>y</m> and substitute back to find <m>x</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>x = \frac{5}{7}</m> and <m>y = \frac{13}{7}</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>The system is:</p>
+
+    <me>
+      \begin{aligned}
+      2x + 3y \amp= 7, \\
+      4x - y \amp= 1.
+      \end{aligned}
+    </me>
+
+    <p>Multiply the second equation by <m>3</m> to eliminate <m>y</m>:</p>
+
+    <me>
+      12x - 3y = 3.
+    </me>
+
+    <p>Add this to the first equation:</p>
+
+    <me>
+      \begin{aligned}
+      (12x - 3y) + (2x + 3y) \amp= 3 + 7, \\
+      14x \amp= 10.
+      \end{aligned}
+    </me>
+
+    <p>Thus,</p>
+
+    <me>
+      x = \frac{10}{14} = \frac{5}{7}.
+    </me>
+
+    <p>Substitute into <m>4x - y = 1</m>:</p>
+
+    <me>
+      4\left(\frac{5}{7}\right) - y = 1.
+    </me>
+
+    <p>Solve for <m>y</m>:</p>
+
+    <me>
+      \frac{20}{7} - y = 1, \\
+      -y = 1 - \frac{20}{7}
+           = -\frac{13}{7}, \\
+      y = \frac{13}{7}.
+    </me>
+
+    <p>
+      Therefore, the solution is:
+    </p>
+
+    <me>
+      x = \frac{5}{7}, \qquad y = \frac{13}{7}.
+    </me>
+  </solution>
+
+</exercise>
+
+<exercise xml:id="inverse-3x3-row-reduction">
+  <!-- <title>Computing a \(3\times 3\) Inverse via Row Reduction</title> -->
+
+  <statement>
+    <p>
+      Use elementary row operations on the augmented matrix <m>(A \mid I)</m> to compute <m>A^{-1}</m>, where
+    </p>
+
+    <me>
+      A =
+      \begin{bmatrix}
+        2 \amp 0 \amp 1 \\
+        1 \amp 1 \amp 0 \\
+        0 \amp 1 \amp 1
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Show your row operations clearly and stop when you reach <m>(I \mid A^{-1})</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Form the augmented matrix <m>(A \mid I)</m> and use row operations to reduce the left block to the identity:
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        2 \amp 0 \amp 1 \amp 1 \amp 0 \amp 0 \\
+        1 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0 \\
+        0 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1
+      \end{array}
+      \right].
+    </me>
+
+    <p>
+      Aim for leading <m>1</m>s down the diagonal on the left, clearing above and below each pivot.
+(Swapping rows early can simplify getting a pivot <m>1</m> in the first row.)
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The inverse is
+    </p>
+
+    <me>
+      A^{-1} =
+      \begin{bmatrix}
+        \tfrac{1}{3} \amp \tfrac{1}{3} \amp -\tfrac{1}{3} \\
+        -\tfrac{1}{3} \amp \tfrac{2}{3} \amp \tfrac{1}{3} \\
+        \tfrac{1}{3} \amp -\tfrac{2}{3} \amp \tfrac{2}{3}
+      \end{bmatrix}.
+    </me>
+  </answer>
+
+  <solution>
+    <p>
+      Start with the augmented matrix:
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        2 \amp 0 \amp 1 \amp 1 \amp 0 \amp 0 \\
+        1 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0 \\
+        0 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1
+      \end{array}
+      \right].
+    </me>
+
+    <p>
+      Swap <m>R_{1} \leftrightarrow R_{2}</m> to get a pivot <m>1</m> in the upper left:
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        1 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0 \\
+        2 \amp 0 \amp 1 \amp 1 \amp 0 \amp 0 \\
+        0 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1
+      \end{array}
+      \right].
+    </me>
+
+    <p>
+      Eliminate below the pivot in column <m>1</m>: <m>R_{2} \leftarrow R_{2} - 2R_{1}</m>.
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        1 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0 \\
+        0 \amp -2 \amp 1 \amp 1 \amp -2 \amp 0 \\
+        0 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1
+      \end{array}
+      \right].
+    </me>
+
+    <p>
+      Make a pivot <m>1</m> in row <m>2</m> column <m>2</m> by swapping <m>R_{2} \leftrightarrow R_{3}</m>:
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        1 \amp 1 \amp 0 \amp 0 \amp 1 \amp 0 \\
+        0 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1 \\
+        0 \amp -2 \amp 1 \amp 1 \amp -2 \amp 0
+      \end{array}
+      \right].
+    </me>
+
+    <p>
+      Clear column <m>2</m> above and below the pivot: <m>R_{1} \leftarrow R_{1} - R_{2}</m>, <m>R_{3} \leftarrow R_{3} + 2R_{2}</m>.
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        1 \amp 0 \amp -1 \amp 0 \amp 1 \amp -1 \\
+        0 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1 \\
+        0 \amp 0 \amp 3 \amp 1 \amp -2 \amp 2
+      \end{array}
+      \right].
+    </me>
+
+    <p>
+      Make the pivot in row <m>3</m> column <m>3</m> a <m>1</m>: <m>R_{3} \leftarrow \tfrac{1}{3}R_{3}</m>.
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        1 \amp 0 \amp -1 \amp 0 \amp 1 \amp -1 \\
+        0 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1 \\
+        0 \amp 0 \amp 1 \amp \tfrac{1}{3} \amp -\tfrac{2}{3} \amp \tfrac{2}{3}
+      \end{array}
+      \right].
+    </me>
+
+    <p>
+      Clear column <m>3</m> above the pivot: <m>R_{1} \leftarrow R_{1} + R_{3}</m>, <m>R_{2} \leftarrow R_{2} - R_{3}</m>.
+    </p>
+
+    <me>
+      \left[
+      \begin{array}{ccc|ccc}
+        1 \amp 0 \amp 0 \amp \tfrac{1}{3} \amp \tfrac{1}{3} \amp -\tfrac{1}{3} \\
+        0 \amp 1 \amp 0 \amp -\tfrac{1}{3} \amp \tfrac{2}{3} \amp \tfrac{1}{3} \\
+        0 \amp 0 \amp 1 \amp \tfrac{1}{3} \amp -\tfrac{2}{3} \amp \tfrac{2}{3}
+      \end{array}
+      \right]
+      \;=\;
+      \left( I \;\middle|\;
+      \begin{array}{ccc}
+        \tfrac{1}{3} \amp \tfrac{1}{3} \amp -\tfrac{1}{3} \\
+        -\tfrac{1}{3} \amp \tfrac{2}{3} \amp \tfrac{1}{3} \\
+        \tfrac{1}{3} \amp -\tfrac{2}{3} \amp \tfrac{2}{3}
+      \end{array}
+      \right).
+    </me>
+
+    <p>
+      Hence,
+    </p>
+
+    <me>
+      A^{-1} =
+      \begin{bmatrix}
+        \tfrac{1}{3} \amp \tfrac{1}{3} \amp -\tfrac{1}{3} \\
+        -\tfrac{1}{3} \amp \tfrac{2}{3} \amp \tfrac{1}{3} \\
+        \tfrac{1}{3} \amp -\tfrac{2}{3} \amp \tfrac{2}{3}
+      \end{bmatrix}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="column-space-independent-set">
+  <!-- <title>Finding Independent Columns that Span the Column Space</title> -->
+
+  <statement>
+    <p>
+      Consider the matrix
+    </p>
+
+    <me>
+      A =
+      \begin{bmatrix}
+      2 \amp 4 \amp 6 \\
+      1 \amp 3 \amp 5 \\
+      0 \amp 1 \amp 2
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Use elimination to find a <em>linearly independent</em> set of columns of <m>A</m> 
+      that still spans the column space.  
+      (Your answer should list which columns form such a set.)
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Perform row‑reduction on <m>A</m> and identify the <em>pivot columns</em>.  
+      These columns form a linearly independent set that spans the column space.
+    </p>
+
+    <p>
+      You may row‑reduce the entire matrix at once, or you may augment with 
+      column labels and track which columns contain pivots.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      Columns <m>1</m> and <m>2</m> form a linearly independent set that spans 
+      the column space of <m>A</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Start with <m>A</m>:
+    </p>
+
+    <me>
+      \begin{bmatrix}
+      2 \amp 4 \amp 6 \\
+      1 \amp 3 \amp 5 \\
+      0 \amp 1 \amp 2
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      First, swap <m>R_1</m> and <m>R_2</m> so that the top-left pivot is <m>1</m>:
+    </p>
+
+    <me>
+      \begin{bmatrix}
+      1 \amp 3 \amp 5 \\
+      2 \amp 4 \amp 6 \\
+      0 \amp 1 \amp 2
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Eliminate below the pivot in column 1: <m>R_2 \leftarrow R_2 - 2R_1</m>:
+    </p>
+
+    <me>
+      \begin{bmatrix}
+      1 \amp 3 \amp 5 \\
+      0 \amp -2 \amp -4 \\
+      0 \amp 1 \amp 2
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Make a pivot in column 2 by swapping <m>R_2</m> and <m>R_3</m>:
+    </p>
+
+    <me>
+      \begin{bmatrix}
+      1 \amp 3 \amp 5 \\
+      0 \amp 1 \amp 2 \\
+      0 \amp -2 \amp -4
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Now eliminate below: <m>R_3 \leftarrow R_3 + 2R_2</m>:
+    </p>
+
+    <me>
+      \begin{bmatrix}
+      1 \amp 3 \amp 5 \\
+      0 \amp 1 \amp 2 \\
+      0 \amp 0 \amp 0
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      The row‑reduced form shows pivots in columns 1 and 2.  
+      Column 3 has no pivot, so it is a linear combination of the first two.
+    </p>
+
+    <p>
+      Therefore, the first two columns of <m>A</m> form a linearly independent
+      set that spans the column space.
+    </p>
+
+    <me>
+      \{\text{column }1,\; \text{column }2\}.
+    </me>
+  </solution>
+</exercise>
+
+<exercise xml:id="kernel-dimension-exam">
+  <!-- <title>Finding the Kernel and Its Dimension</title> -->
+
+  <statement>
+    <p>
+      Consider the matrix
+    </p>
+
+    <me>
+      A =
+      \begin{bmatrix}
+      1 \amp 2 \amp -1 \\
+      2 \amp 4 \amp -2 \\
+      3 \amp 6 \amp -3
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      <ol>
+        <li>Use row reduction to find a basis for the kernel of <m>A</m>.</li>
+        <li>Determine the dimension of the kernel.</li>
+        <li>Is the kernel a subspace of <m>\mathbb{R}^3</m>?  Briefly justify your answer.</li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Row‑reduce <m>A</m>.  
+      You should find that the rows are multiples of one another.  
+      After reducing, express the solution to <m>A\vec{x} = \vec{0}</m> in parametric vector form.
+    </p>
+
+    <p>
+      Remember: the kernel of a matrix is always a subspace of the domain.  
+      Once you have the parametric form, count the number of free variables to determine the dimension.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      A basis for the kernel is
+    </p>
+
+    <me>
+      \left\{
+      \begin{bmatrix}
+      -2 \\
+      1 \\
+      0
+      \end{bmatrix},
+      \begin{bmatrix}
+      1 \\
+      0 \\
+      1
+      \end{bmatrix}
+      \right\}.
+    </me>
+
+    <p>
+      The kernel has dimension <m>2</m>.  
+      Yes, it is a subspace of <m>\mathbb{R}^3</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Begin with
+    </p>
+
+    <me>
+      A =
+      \begin{bmatrix}
+      1 \amp 2 \amp -1 \\
+      2 \amp 4 \amp -2 \\
+      3 \amp 6 \amp -3
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Notice that <m>R_2 = 2R_1</m> and <m>R_3 = 3R_1</m>.  
+      Perform row reduction:
+    </p>
+
+    <me>
+      \begin{bmatrix}
+      1 \amp 2 \amp -1 \\
+      2 \amp 4 \amp -2 \\
+      3 \amp 6 \amp -3
+      \end{bmatrix}
+      \xrightarrow{R_2 - 2R_1,\; R_3 - 3R_1}
+      \begin{bmatrix}
+      1 \amp 2 \amp -1 \\
+      0 \amp 0 \amp 0 \\
+      0 \amp 0 \amp 0
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Solve <m>A\vec{x}=0</m> from the single non‑zero equation:
+    </p>
+
+    <me>
+      x_1 + 2x_2 - x_3 = 0
+      \quad\Rightarrow\quad
+      x_1 = -2x_2 + x_3.
+    </me>
+
+    <p>
+      Let <m>x_2 = s</m> and <m>x_3 = t</m> (free variables).  
+      Then
+    </p>
+
+    <me>
+      \vec{x}
+      =
+      \begin{bmatrix}
+      -2s + t \\
+      s \\
+      t
+      \end{bmatrix}
+      =
+      s
+      \begin{bmatrix}
+      -2 \\
+      1 \\
+      0
+      \end{bmatrix}
+      +
+      t
+      \begin{bmatrix}
+      1 \\
+      0 \\
+      1
+      \end{bmatrix}.
+    </me>
+
+    <p>
+      Therefore a basis for the kernel is
+    </p>
+
+    <me>
+      \left\{
+      \begin{bmatrix}
+      -2 \\
+      1 \\
+      0
+      \end{bmatrix},
+      \begin{bmatrix}
+      1 \\
+      0 \\
+      1
+      \end{bmatrix}
+      \right\}.
+    </me>
+
+    <p>
+      Since there are two free variables, the dimension of the kernel is <m>2</m>.
+    </p>
+
+    <p>
+      The kernel of any linear transformation (and therefore any matrix) is always a subspace of its domain, 
+      so here it is a subspace of <m>\mathbb{R}^3</m>.
+    </p>
+  </solution>
+
+</exercise>
+
+</exercises>
 
 </section>
 </handout>

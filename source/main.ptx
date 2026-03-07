@@ -59,7 +59,8 @@
       <title>Practice Exams</title>
       <xi:include href="./handouts/PracticeExam1a.ptx" /> 
       <xi:include href="./handouts/PracticeExam2a.ptx" /> 
-      <xi:include href="./handouts/PracticeExam3a.ptx" /> 
+      <xi:include href="./handouts/PracticeExam3a.ptx" />
+      <xi:include href="./handouts/PracticeExam4a.ptx" /> 
 
       </chapter>
     <!-- <chapter xml:id="course-documents">

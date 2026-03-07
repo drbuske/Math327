@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Practice Exam 4</title>
+
+<section>
+<title>Topics</title>
+
+    <p>
+      Sections 5.1, 5.2, 5.3, 5.4, 5.5, 5.6
+    </p>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam4">
+    <title>Questions</title>
+
+ <exercise xml:id="intro-systems-exam">
+  <!-- <title>Rewriting a Higher-Order ODE as a First-Order System</title> -->
+
+  <statement>
+    <p>
+      Consider the second-order differential equation
+    </p>
+
+    <me>
+      y'' - 3y' + 2y = 0.
+    </me>
+
+    <p>
+      <ol>
+        <li>
+          Introduce new variables to rewrite this equation as an equivalent
+          first-order system in two variables.
+        </li>
+
+        <li>
+          Express the resulting system using vector notation
+          <m>\vec{x}' = A\vec{x}</m> for some matrix <m>A</m>.
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Let <m>x_1 = y</m> and <m>x_2 = y'</m>.  
+      Then compute <m>x_1'</m> and <m>x_2'</m> using the original equation.
+      Remember that <m>x_1' = y'</m> and that <m>y''</m> can be replaced with an
+      expression involving <m>x_1</m> and <m>x_2</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      One possible system is
+      </p>
+      <me>
+      \begin{aligned}
+      x_1' \amp= x_2, \\
+      x_2' \amp= -2x_1 + 3x_2.
+      \end{aligned}
+      </me>
+
+      <p>
+      In vector form,
+      </p>
+
+      <me>
+      \vec{x}' =
+      \begin{bmatrix}
+      0 \amp 1 \\
+      -2 \amp 3
+      \end{bmatrix}
+      \vec{x}.
+      </me>
+  </answer>
+
+  <solution>
+    <p>
+      (a)  
+      We introduce the standard substitution for converting a second-order ODE
+      into a first-order system:
+    </p>
+
+    <me>
+      x_1 = y, \qquad x_2 = y'.
+    </me>
+
+    <p>
+      Then
+    </p>
+
+    <me>
+      x_1' = y' = x_2.
+    </me>
+
+    <p>
+      To compute <m>x_2'</m>, use the original equation:
+    </p>
+
+    <me>
+      y'' - 3y' + 2y = 0
+      \quad\Rightarrow\quad
+      y'' = 3y' - 2y.
+    </me>
+
+    <p>
+      Substituting <m>x_1 = y</m> and <m>x_2 = y'</m> gives
+    </p>
+
+    <me>
+      x_2' = 3x_2 - 2x_1.
+    </me>
+
+    <p>
+      Therefore the first-order system is
+    </p>
+
+    <me>
+      \begin{aligned}
+      x_1' \amp= x_2, \\
+      x_2' \amp= -2x_1 + 3x_2.
+      \end{aligned}
+    </me>
+
+    <p>
+      (b)
+      In vector–matrix notation, with
+    </p>
+
+    <me>
+      \vec{x} =
+      \begin{bmatrix}
+      x_1 \\
+      x_2
+      \end{bmatrix},
+    </me>
+
+    <p>
+      the system becomes
+    </p>
+
+    <me>
+      \vec{x}' =
+      \begin{bmatrix}
+      0 \amp 1 \\
+      -2 \amp 3
+      \end{bmatrix}
+      \vec{x}.
+    </me>
+
+    <p>
+      This is the standard first-order vector representation of the original
+      second-order equation.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="two-tank-mixing-system">
+  <!-- <title>Setting Up a System for a Two-Tank Mixing Problem</title> -->
+
+  <statement>
+    <p>
+      Two tanks are connected in such a way that fluid flows between them.
+      Tank A contains 200 liters of brine, and Tank B contains 150 liters.
+      At time <m>t=0</m>, Tank A contains 30 kg of salt and Tank B contains 5 kg.
+    </p>
+
+    <p>
+      A pump moves well‑stirred brine from Tank A into Tank B at a rate of
+      <m>5 \text{ L/min}</m>.  
+      Another pump moves well‑stirred brine from Tank B back into Tank A at a rate of
+      <m>3 \text{ L/min}</m>.  
+      There are no other inflows or outflows, so volumes remain constant.
+    </p>
+
+    <p>
+      Let <m>x(t)</m> be the amount of salt (in kg) in Tank A at time <m>t</m>,
+      and let <m>y(t)</m> be the amount of salt in Tank B at time <m>t</m>.
+    </p>
+
+    <p>
+      <strong>Task:</strong>  
+      Derive a system of differential equations for <m>x(t)</m> and <m>y(t)</m>.
+    </p>
+
+    <p>
+    <figure xml:id="two-tank-diagram">
+      <caption>
+        Two interconnected mixing tanks with flow rates.
+      </caption>
+
+      <image width="80%">
+       <description>
+        Diagram showing two tanks, Tank A on the left and Tank B on the right
+        with arrows indicating 5 liters per minute from A to B and
+        3 liters per minute from B to A.
+      </description>
+        <latex-image>
+\begin{tikzpicture}[scale=1.0]
+
+% Tank A
+\draw[thick] (0,0) rectangle (3,2);
+\node at (1.5,2.3) {Tank A};
+\node at (1.5,1) {200 L};
+
+% Tank B
+\draw[thick] (6,0) rectangle (9,2);
+\node at (7.5,2.3) {Tank B};
+\node at (7.5,1) {150 L};
+
+% Arrow A -> B (5 L/min)
+\draw[->, thick] (3,1.5) -- (6,1.5);
+\node at (4.5,1.8) {5 L/min};
+
+% Arrow B -> A (3 L/min)
+\draw[->, thick] (6,0.5) -- (3,0.5);
+\node at (4.5,0.2) {3 L/min};
+
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+</p>
+
+  </statement>
+
+  <hint>
+    <p>
+      Use the standard “rate in minus rate out” principle.
+      The concentration in each tank is “amount of salt divided by volume.”
+      For example, the concentration in Tank A is <m>x(t)/200</m>.
+    </p>
+
+    <p>
+      Multiply each concentration by its respective flow rate to obtain
+      salt transport rates.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The system is
+    </p>
+
+    <me>
+      \begin{aligned}
+      x' \amp= \frac{3}{150}y - \frac{5}{200}x, \\
+      y' \amp= \frac{5}{200}x - \frac{3}{150}y.
+      \end{aligned}
+    </me>
+  </answer>
+
+  <solution>
+    <p>
+      The concentration in Tank A is <m>x/200</m> (kg/L),
+      and Tank B has concentration <m>y/150</m>.
+    </p>
+
+    <p>
+      <strong>Tank A:</strong>  
+      Salt flows <em>in</em> from Tank B at rate
+    </p>
+
+    <me>
+      (\text{flow rate from B to A}) \cdot (\text{concentration in B})
+      = 3 \cdot \frac{y}{150}.
+    </me>
+
+    <p>
+      Salt flows <em>out</em> to Tank B at rate
+    </p>
+
+    <me>
+      5 \cdot \frac{x}{200}.
+    </me>
+
+    <p>
+      So
+    </p>
+
+    <me>
+      x' = 3\frac{y}{150} - 5\frac{x}{200}.
+    </me>
+
+    <p>
+      <strong>Tank B:</strong>  
+      Salt flows <em>in</em> from Tank A at
+    </p>
+
+    <me>
+      5 \cdot \frac{x}{200},
+    </me>
+
+    <p>
+      and flows <em>out</em> to Tank A at
+    </p>
+
+    <me>
+      3 \cdot \frac{y}{150}.
+    </me>
+
+    <p>
+      Therefore
+    </p>
+
+    <me>
+      y' = 5\frac{x}{200} - 3\frac{y}{150}.
+    </me>
+
+    <p>
+      This yields the system:
+    </p>
+
+    <me>
+      \begin{aligned}
+      x' \amp= \frac{3}{150}y - \frac{5}{200}x, \\
+      y' \amp= \frac{5}{200}x - \frac{3}{150}y,
+      \end{aligned}
+    </me>
+
+    <p>
+      which correctly models the exchange of salt between the two tanks.
+    </p>
+  </solution>
+
+</exercise>
+
+
+
+  </exercises>
+
+</section>
+</handout>
